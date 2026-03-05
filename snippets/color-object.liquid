@@ -1,0 +1,49 @@
+{%- liquid
+    if value.swatch == blank
+        assign file_name = value | handle | append: '.' | append: 'png'
+        assign swatch_fallback = value | split: ' ' | last | handle
+        assign swatch_fallback_override = false
+
+        if settings.swatch_config != blank
+            assign value_downcase = value | downcase
+            assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />'
+            for swatch in swatch_config
+                assign swatch_parts = swatch | strip | split: ':'
+                assign swatch_name = swatch_parts.first | downcase | strip
+
+                if swatch_name == value_downcase
+                    assign swatch_value = swatch_parts.last | strip
+                    if swatch_value contains '#'
+                        assign swatch_fallback = swatch_value
+                        assign swatch_fallback_override = true
+                    else
+                        assign file_name = swatch_value
+                    endif
+                    break
+                endif
+            endfor
+        endif
+
+        assign swatch_image = blank
+        if images[file_name] != blank
+            assign swatch_image = images[file_name] | image_url: width: 72
+        elsif file_name contains '//cdn.shopify.com/'
+            assign swatch_image = file_name
+        endif
+    else
+        assign swatch_image = blank
+        assign swatch_fallback = value | split: ' ' | last | handle
+        if value.swatch.image
+            assign swatch_image = value.swatch.image | image_url: width: 72
+            assign swatch_fallback_override = false
+        elsif value.swatch.color
+            assign swatch_fallback = value.swatch.color
+        endif
+    endif
+    echo 'color: "' | append: swatch_fallback | append: '",'
+    if swatch_fallback_override == false and swatch_image != blank
+        echo 'color_image: "' | append: swatch_image | append: '",'
+    else
+        echo 'color_image: "",'
+    endif
+-%}

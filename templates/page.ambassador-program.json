@@ -1,0 +1,475 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center",
+        "heading_tag": "h2",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_xfYUqw": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_ypW6y6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_db3b46ac-9bf3-485f-b468-8c1135be8faf.png",
+            "image_mobile": "shopify://shop_images/1_M.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "https://www.facebook.com/groups/1187749846789493",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_ypW6y6"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "400px",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_HJzXAC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dGkAFT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>JasionBike Retrovolt Pro Ambassador Program</strong>",
+            "heading_size": "title-md",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_LAL8QP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to the JasionBike Retrovolt Pro Ambassador Program!<br/>This isn’t just a customer loyalty campaign — it’s an invitation to become part of our story.<br/>We’re transforming our valued riders from consumers into co-creators and content partners.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "image_GXJWW3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12_eb288611-5677-49c3-8928-46b7b0be6165.jpg",
+            "image_width": "custom",
+            "image_max_width": 800,
+            "image_max_width_mobile": 460
+          }
+        },
+        "text_ekjGFP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you already own a Retrovolt Pro, you know the thrill of the ride. Now, it’s time to share your story — and get rewarded for your passion.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_QDt7MG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_dGkAFT",
+        "text_LAL8QP",
+        "image_GXJWW3",
+        "text_ekjGFP",
+        "button_QDt7MG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_CXbC3i": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TtHAwC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>How to Join & Get Started</strong></p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_BU83Xc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re building our ambassador community in a dedicated Facebook group. Once you’re in, the fun begins! Here’s all you need to do:<br><br>\nCreate a video featuring your Retrovolt Pro.  We do not limit the number of posts participants may share. Any post that meets our reward criteria will be eligible for the corresponding prizes.<br><br>\nPost it on TikTok.<br><br>\n1. Use our official hashtags:<br> #jasionbike #retrovoltpro #jasionbikeretrovolt #retrovolt<br><br>\n2. Tag our official <br>account: @jasionbike_official</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_enHdfy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join us",
+            "button_link": "https://www.facebook.com/groups/1187749846789493",
+            "button_style": "primary",
+            "button_size": "sm",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_TtHAwC",
+        "text_BU83Xc",
+        "button_enHdfy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/3_48bbdeac-2146-4a87-9fe5-973facf94c47.png",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "multicolumn_with_icons_jUVPtf": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "column_eMLLED": {
+          "type": "column",
+          "settings": {
+            "icon": "gift",
+            "custom_icon": "",
+            "heading": "<strong>Direct Performance Rewards</strong>",
+            "text": "<p>Your content earns you instant rewards based on its reach:</p><ul><li><strong>1200+ views in 14 days:</strong> Receive an <strong>exclusive JasionBike gift</strong> <em>(value $79)</em></li><li><strong>10,000+ views in 14 days:</strong> Receive a <strong>$200 cash reward</strong></li><li>Note: These rewards are cumulative — if a single video reaches both milestones, you’ll receive both rewards.</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_J4HJ6a": {
+          "type": "column",
+          "settings": {
+            "icon": "award",
+            "custom_icon": "",
+            "heading": "<strong>Hot Creator Rankings</strong>",
+            "text": "<p>Every month, we’ll rank creators based on a combination of likes, comments, and shares.<br/>Climb the leaderboard for even bigger prizes!</p><p>🥇 1st Place: $300<br/>🥈 2nd Place: $200<br/>🥉 3rd Place: $100<br/>🏅 4th–10th: Exclusive prizes or gift cards</p><p>All ranking rewards are distributed monthly.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_nx8hkE": {
+          "type": "column",
+          "settings": {
+            "icon": "shield",
+            "custom_icon": "",
+            "heading": "Reward Criteria Explained",
+            "text": "<ul><li>Become a Member of Our Community</li><li>Create and Share Content Following Our Guidelines</li><li>Only Genuine Data Will Be Accepted</li><li>No Limit on Posts—Any Eligible Post Can Win</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_eMLLED",
+        "column_J4HJ6a",
+        "column_nx8hkE"
+      ],
+      "name": "t:sections.multicolumn-with-icons.presets.name",
+      "settings": {
+        "style": "with-border",
+        "columns": 3,
+        "text_alignment": "center",
+        "heading": "Discover Your Rewards",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>We believe in rewarding your creativity and effort directly. Our incentive system is simple, transparent, and exciting!</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_qPxgzq": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_gEMDNx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_5bacc4ca-da73-4e64-bbb1-d10ea2ad619b.png",
+            "image_mobile": "shopify://shop_images/3_M_76a0fc0e-f699-4ede-b688-ca331179c3b3.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "https://www.facebook.com/groups/1187749846789493",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_gEMDNx"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "faq_NmYcqM": {
+      "type": "faq",
+      "blocks": {
+        "question_89Ldfb": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Eligibility</strong>",
+            "text": "<p>Open to verified owners of the JasionBike Retrovolt Pro who are members of our official ambassador Facebook group.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_AAHiaX": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Content Ownership</strong>",
+            "text": "<p>By posting and tagging us, you grant JasionBike a non-exclusive, royalty-free, worldwide license to use your content across our official channels for promotional purposes. JasionBike reserves the right to edit and repurpose your videos for promotional use.</p><p>You always retain ownership.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_YbXjzz": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Content Standards</strong>",
+            "text": "<p>Videos must be original, created by you, and feature the Retrovolt Pro. All content must be appropriate for general audiences. JasionBike reserves the right to disqualify any content deemed offensive, dangerous, or misleading.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cqPHjH": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Reward Fulfillment</strong>",
+            "text": "<p>Rewards are distributed after verifying performance metrics and compliance. Your TikTok account must be public for us to track engagement. JasionBike’s decisions on eligibility are final.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_bMrJcB": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Safety First</strong>",
+            "text": "<p>Always film responsibly. Follow local traffic laws, wear safety gear, and avoid filming while operating the bike in unsafe conditions.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_89Ldfb",
+        "question_AAHiaX",
+        "question_YbXjzz",
+        "question_cqPHjH",
+        "question_bMrJcB"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "Important Guidelines",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Welcome to our Important Guidelines section! Here, you'll find everything you need to know about joining our program, sharing your content, earning rewards, and staying safe. Just follow these simple guidelines, and you're all set to get started!</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "slideshow_hb_xfYUqw",
+    "rich_text_HJzXAC",
+    "image_with_text_CXbC3i",
+    "multicolumn_with_icons_jUVPtf",
+    "slideshow_hb_qPxgzq",
+    "faq_NmYcqM"
+  ]
+}

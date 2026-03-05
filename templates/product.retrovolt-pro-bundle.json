@@ -1,0 +1,2156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "tag_qyRk3U": {
+          "type": "tag",
+          "disabled": true,
+          "settings": {
+            "bg_color": "linear-gradient(180deg, rgba(127, 18, 0, 1), rgba(191, 0, 0, 1) 100%, rgba(110, 107, 115, 1) 100%, rgba(29, 213, 230, 1) 100%)",
+            "radius": 10,
+            "title": "Pre-order Deal",
+            "tag_color": "#ffffff",
+            "top": 0,
+            "bottom": 12,
+            "mb_top": 0,
+            "mb_bottom": 12
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": false,
+            "pr_info": "<p><strong>{{ product.metafields.custom.short_text.value }}</strong></p>",
+            "line": true,
+            "line_top": "md:tw-mt-2",
+            "line_bottom": "md:tw-mb-2"
+          }
+        },
+        "inventory_FgCihQ": {
+          "type": "inventory",
+          "settings": {
+            "custom_text": "Pre-order，ships in 15 business days",
+            "inventory_threshold": 10,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "judge_me_reviews_preview_badge_rVgtgR": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "cycle_countdown_WPzr7e": {
+          "type": "cycle_countdown",
+          "settings": {
+            "countdown_lbl": "Hurry up!",
+            "countdown_lbl_content": "Sale Ends In",
+            "countdown_start_date": "2024-12-02T00:00:00",
+            "duration": 1,
+            "countdown_days": "DAYS",
+            "countdown_hours": "HRS",
+            "countdown_minutes": "MIN",
+            "countdown_seconds": "SEC",
+            "background": "#ff9b2b",
+            "background_gradient": "linear-gradient(345deg, rgba(255, 210, 123, 1), rgba(255, 120, 0, 1) 90%)",
+            "text_color": "#ffffff"
+          }
+        },
+        "countdown_NPztC6": {
+          "type": "countdown",
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#171717",
+            "color_background": "#ffac00",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "bundled_sale_m69hF9": {
+          "type": "bundled_sale",
+          "settings": {
+            "heading": "Compatible Accessories",
+            "gift_list": [
+              "soulmate-2-0-touch-braceletssilver-cuban-chain-silver-figaro-chain",
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7"
+            ],
+            "product_list": [
+              "bracketed-u-lock",
+              "anti-slip-rear-seat",
+              "copy-of-jasion®bike-rack-pannier-bag",
+              "bag"
+            ]
+          }
+        },
+        "quantity_selector_d6GJ77": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "show_payment_icons_RbYfHc": {
+          "type": "show_payment_icons",
+          "settings": {}
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "image_UjxLjp": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/lQLPJwAyx4sGyBPMpc0CObC-ClQjoJKYqAkoLE0qtf8C_569_165.png",
+            "image_mb": "shopify://shop_images/lQLPKHOXiWSESRPNAZHNBFWwhszSzBZebfYJKCxNK0fTAA_1109_401.png"
+          }
+        },
+        "highlights_icons_kU88Jz": {
+          "type": "highlights_icons",
+          "settings": {
+            "bg_color": ""
+          }
+        },
+        "help_desk_LK3HNi": {
+          "type": "help_desk",
+          "settings": {
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": ""
+          }
+        },
+        "anchor_DWTAQW": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "Specifications",
+            "anchor_id": "Specification (img)"
+          }
+        },
+        "drawer_NiEjcP": {
+          "type": "drawer",
+          "settings": {
+            "title": "Specifications",
+            "content": ""
+          }
+        },
+        "anchor_8VjwmL": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box",
+            "anchor_id": "whats-in-the-box-txt"
+          }
+        },
+        "collapsible_tab_Lt8myP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "RetroVolt Pro Pre-Sale😲",
+            "content": "<p>Stock is sold out! Pre-order now for <strong>delivery in 15 business days </strong>and lock in the <strong>Black Friday price of $899</strong> before Mar 2. Prices may rise anytime—secure yours today!<br/><br/></p>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "liquid_Riat9U": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "🌸Women’s Day Special: Ride & Connect Bundle\n<br>\n🎁Purchase any e-bike between <strong>Feb 15 and Mar 8</strong> for a chance to <strong>win a Walmart Gift Card</strong>.<br>\n⚡<strong>UP TO $1036 OFF<br> ⚡Extra $50 OFF $999+ |Code: HERPOWER</strong><br>\n🎁Buy 2 Get 2 <strong>Free Rear Seat</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Women’s Day Deal Before It’s Gone!"
+          }
+        },
+        "text_wt9CQN": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "tag_qyRk3U",
+        "title",
+        "inventory_FgCihQ",
+        "judge_me_reviews_preview_badge_rVgtgR",
+        "cycle_countdown_WPzr7e",
+        "countdown_NPztC6",
+        "variant_picker",
+        "bundled_sale_m69hF9",
+        "quantity_selector_d6GJ77",
+        "buy_buttons",
+        "show_payment_icons_RbYfHc",
+        "sticky_buy_button",
+        "image_UjxLjp",
+        "highlights_icons_kU88Jz",
+        "help_desk_LK3HNi",
+        "anchor_DWTAQW",
+        "drawer_NiEjcP",
+        "anchor_8VjwmL",
+        "collapsible_tab_Lt8myP",
+        "liquid_Riat9U",
+        "text_wt9CQN"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {.product__gallery {top: 100px; }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_specs": true,
+        "specs_limit": "6",
+        "media_size": 60,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 64,
+        "padding_bottom": 84,
+        "divider": true,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "multicolumn_slide_hb_QEk8x8": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "video_ddPNFB": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NPTUhfRDBzY",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY",
+            "image_height_mobile": "auto",
+            "date": "2025/10/22",
+            "title": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_33.jpg",
+            "author": "IMBruceECLECTIC"
+          }
+        },
+        "video_CdhUFd": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "image_height_mobile": "auto",
+            "date": "2025/10/12",
+            "title": "Like A Super73.. But a THIRD of The Price?! | Jasion Retrovolt Pro Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_31.jpg",
+            "author": "Raspy Rides"
+          }
+        },
+        "video_h66XiD": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Wda0tRjKCcs",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=Wda0tRjKCcs",
+            "image_height_mobile": "auto",
+            "date": "2025/10/20",
+            "title": "This 2000W Ebike Hits 30+MPH in Under 5 Seconds?! | Jasion Retrovolt Pro Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_34.jpg",
+            "author": "Hazers"
+          }
+        },
+        "video_CcDmH9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=pnUJqQTKgj4",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=pnUJqQTKgj4",
+            "image_height_mobile": "auto",
+            "date": "2025/11/21",
+            "title": "BEST CHEAP FAST Electric Bike of 2025 UNDER $900 - Jasion RetroVolt Pro Review FULL SUSPENSION Cargo",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_41.jpg",
+            "author": "HeroesNStuff"
+          }
+        },
+        "video_nAJUWq": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ElsEXtz4Bn0",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=ElsEXtz4Bn0",
+            "image_height_mobile": "auto",
+            "date": "2025/10/19",
+            "title": "JASION RetroVolt Pro 52V Ebike Review | UPGRADED | 52V 20AH 2000W PEAK",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_35.jpg",
+            "author": "Papa`s Product Reviews"
+          }
+        },
+        "video_4tbFaF": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iZ7fe7s1lU4",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=iZ7fe7s1lU4",
+            "image_height_mobile": "auto",
+            "date": "2025/6/1",
+            "title": "Jasion Hunter Pro Ebike - Forget the X-Hunter",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_22.jpg",
+            "author": "Hazers"
+          }
+        },
+        "video_Ma77wA": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=bL2orWUzOvg",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=bL2orWUzOvg",
+            "image_height_mobile": "auto",
+            "date": "2025/7/3",
+            "title": "E-Bike for RVers - Jasion Hunter Pro Review - Is It Worth It?",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_23.jpg",
+            "author": "Our Everyday Getaway"
+          }
+        },
+        "video_7qRYXQ": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=WRYvMbd3zf8",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=WRYvMbd3zf8",
+            "image_height_mobile": "auto",
+            "date": "2025/6/5",
+            "title": "Jasion Hunter Pro: The Best E-Bike Value Yet?",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_24.jpg",
+            "author": "EASYHEIMER"
+          }
+        },
+        "video_VDMNBx": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=oBbD0_9K5cE",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=oBbD0_9K5cE",
+            "image_height_mobile": "auto",
+            "date": "2025/6/6",
+            "title": "BEST CHEAP FAST Folding Electric Bike of 2025? Jasion Hunter Pro EBike Review Full Suspension",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_25.jpg",
+            "author": "HeroesNStuff"
+          }
+        },
+        "video_DBRc7W": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ryxnoH06F6k",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=ryxnoH06F6k",
+            "image_height_mobile": "auto",
+            "date": "2025/6/1",
+            "title": "Jasion Hunter Pro Ebike Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_26.jpg",
+            "author": "Low Dough Tech"
+          }
+        },
+        "video_cEcxhM": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=O1PB6yfqPg8",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=O1PB6yfqPg8",
+            "image_height_mobile": "auto",
+            "date": "2025/6/2",
+            "title": "Testing the Jasion Hunter Pro’s Power and Speed!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_27.jpg",
+            "author": "The Frickin' Shredder"
+          }
+        }
+      },
+      "block_order": [
+        "video_ddPNFB",
+        "video_CdhUFd",
+        "video_h66XiD",
+        "video_CcDmH9",
+        "video_nAJUWq",
+        "video_4tbFaF",
+        "video_Ma77wA",
+        "video_7qRYXQ",
+        "video_VDMNBx",
+        "video_DBRc7W",
+        "video_cEcxhM"
+      ],
+      "settings": {
+        "pw-overflow-hidden": true,
+        "columns": 3,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Rider Reviews",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "#171717",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "drawer_content_hb_qzp8WX": {
+      "type": "drawer-content-hb",
+      "blocks": {
+        "content_9grYEm": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "content": "<h1><strong>Please note: </strong></h1><p><br/>There may be a difference of 0~5 cm between measured and actual data.</p>"
+          }
+        },
+        "table_aCTBik": {
+          "type": "table",
+          "disabled": true,
+          "settings": {
+            "list": "A--Wheelbase|113.5 cm\nB--Total Length|170 cm\nC--Reach|46 cm\nD--Standover Height|69 cm\nE--Minimum Saddle Height|86 cm\nF--Maximum Saddle Height|102 cm\nG--Minimum Handlebar Height|120 cm\nH--Maximum Handlebar Height|130 cm"
+          }
+        },
+        "table_4CpLLg": {
+          "type": "table",
+          "settings": {
+            "list": "Motor|2000W Brushless Hub Motor\nSuspension|Full Suspension\nBrake|Dual Hydraulic Brakes\nShift Lever|Shimano 7 Speed\nThrottle|Twist Throttle\nSebsor|Cadence Sensor\nPedal assist|0-5 Level\nTorque|99 Nm\nTop Speed|38 Mph\nRange| Up To 90 Miles\nCharging Time|5-6 Hours\nBattery|52V 20Ah\nController|52V 30A\nTires|20 x 4'' Fat Tire\nRider Height|5'4 - 6'2''\nWeight|82 Lbs\nMax Payload|330 Lbs\nMode|PAS+Throttle\nDisplay|Color Display\nFolding| No"
+          }
+        },
+        "img_rmqdEK": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "img_1": "shopify://shop_images/1_6.png",
+            "img_3": "shopify://shop_images/1_8.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_9grYEm",
+        "table_aCTBik",
+        "table_4CpLLg",
+        "img_rmqdEK"
+      ],
+      "settings": {
+        "heading": "Specifications"
+      }
+    },
+    "help-drawer": {
+      "type": "help-drawer",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "icon": "rocket",
+            "heading": "Local Warehouse",
+            "text": "<p>On your doorstep in just 2-4 days across 49 states.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#b45309",
+            "color_background": "#fffbeb",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-2": {
+          "type": "content",
+          "settings": {
+            "icon": "headphone",
+            "heading": "A+ Customer Service",
+            "text": "<p>24-Hour Online Customer Service.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#0369a1",
+            "color_background": "#f0f9ff",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-3": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "FAQ’s",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#be123c",
+            "color_background": "#fff1f2",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content_M44gqX": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Information",
+            "text": "<p>Share contact information, store details, and brand content with your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#fafafa",
+            "color_background": "#1f1f1f",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-4": {
+          "type": "content",
+          "settings": {
+            "icon": "phone",
+            "heading": "Contact Us",
+            "text": "<ul><li><strong>Contact Email: </strong>support@jasionbike.com</li><li><strong>Contact Phone：</strong>(+1) 888-825-6366</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#4d7c0f",
+            "color_background": "#f7fee7",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content-2",
+        "content-3",
+        "content_M44gqX",
+        "content-4"
+      ],
+      "settings": {
+        "heading": "Need help?",
+        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
+      }
+    },
+    "large_header_slider_NDH3Xx": {
+      "type": "large-header-slider-hb",
+      "blocks": {
+        "item_A4zK3m": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/1_3bef6557-bc1e-4781-ac49-88d64df8465b.jpg",
+            "tab_con": "Establishment",
+            "title": "Your Ultimate Retro Power",
+            "content": "Retrovolt Pro was born from a clear vision: to preserve the iconic spirit of the original Retrovolt while pushing the boundaries of performance. With upgraded hydraulic disc brakes, a powerful 2000W peak motor, and a 52V 20Ah battery for extended range, our mission was to create a ride that’s stronger, safer, and longer-lasting—an evolution for every rider who demands more."
+          }
+        },
+        "item_pphRKd": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/1_3bef6557-bc1e-4781-ac49-88d64df8465b.jpg",
+            "tab_con": "Design",
+            "title": "Smooth Rides, Confident Stops",
+            "content": "The Retrovolt Pro is engineered for comfort and safety on every ride. Its dual suspension system absorbs bumps and vibrations with ease, delivering a smoother, more stable experience whether you’re cruising city streets or tackling rough terrain. Paired with upgraded hydraulic disc brakes, you get precise, all-weather stopping power that inspires confidence at any speed. Together, these enhancements ensure every journey feels controlled, cushioned, and secure."
+          }
+        },
+        "item_6WGyaR": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/3_5bfd13f8-3e05-418b-b57c-cd98bd2a2b95.jpg",
+            "tab_con": "Craftsmanship",
+            "title": "Strength Meets Versatility",
+            "content": "The Retrovolt Pro is equipped with a reinforced rear rack, engineered from high-strength materials for lasting durability. Its robust design not only ensures reliable cargo capacity but also makes room for a second passenger—without compromising stability or balance. Built with precision and strength, this rack turns every ride into a versatile, two-seater adventure."
+          }
+        },
+        "item_nKfTj6": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/4_ca3edd0b-7ef2-41e4-8e4a-8c62ef81335e.jpg",
+            "tab_con": "Finished Product",
+            "title": "",
+            "content": "Retrovolt Pro isn’t just an update—it’s a bold reinvention. With a 2000W peak motor, extended-range 52V 20Ah battery, dual suspension, and upgraded hydraulic brakes, it blends raw power with refined comfort. All of this comes wrapped in Retrovolt’s timeless design, creating a ride that feels both iconic and unstoppable. Whether you’re cruising the city or exploring new horizons, Retrovolt Pro is built to go further, faster, and stronger.\n\nRetrovolt Pro — Your Ultimate Retro Power."
+          }
+        },
+        "item_Y4Ak7p": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "tab_con": "Design",
+            "title": "Establishment：Specially designed for off - road adventures.",
+            "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
+          }
+        }
+      },
+      "block_order": [
+        "item_A4zK3m",
+        "item_pphRKd",
+        "item_6WGyaR",
+        "item_nKfTj6",
+        "item_Y4Ak7p"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_Br6nVq": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_aMh4iA": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_WJ4qky": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_G4jjW7": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_aMh4iA",
+        "heading_WJ4qky",
+        "text_G4jjW7"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/1_1432b818-4225-4196-8f8a-0f072327f7fe.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "center",
+        "image_mobile": "shopify://shop_images/M1_ce2c9de7-1765-46f4-a66f-63b4785dd592.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-center justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_UyaqiW": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_d8wieP": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_qQDR7p": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Your First Supreme Ebike",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_McTWyp": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Built with an 1800W peak motor, 48V 15Ah battery, and hydraulic brakes, Hunter Pro is ready for powerful and safe off-road adventures.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 16,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_d8wieP",
+        "heading_qQDR7p",
+        "text_McTWyp"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/PC_B_cc572d10-9701-400e-856b-abfb13347185.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/PC_M_29ea9af9-7a6b-478b-b76f-4df3e9d14aeb.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>85Nm High Torque <br/>Folding Fat Tire E-Bike</p><p></p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "basic-underline"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The X-Hunter is more than just an electric bike; it's your adventure companion. Seamlessly blending ultimate performance and durability, it opens the door to a world of off-road adventure.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_BbLhqQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "50% <span style=\"font-size: 50%;\n    font-weight: normal;\">\nLighter</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "text_BbLhqQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "img_placeholder": true,
+        "image": "shopify://shop_images/1920_800-3.jpg",
+        "image_height": "750px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": true,
+        "image_mobile": "shopify://shop_images/test_3_e6c0b476-0555-4add-a62d-53d42b49100d.png",
+        "image_height_mobile": "300px",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "bg_img": "shopify://shop_images/1920_800-3.jpg",
+        "bg_img_mb": "shopify://shop_images/390_600.jpg",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_mFYwAt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AwQUyV": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Enjoy Longer Adventures</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_Lg8THC": {
+          "type": "text",
+          "settings": {
+            "text": "Upgraded with a robust 1040Wh battery, the RetroVolt Pro is built to take you further than ever before. With a maximum range of up to 90 miles on a single charge, it’s perfect for long commutes, weekend cruises, or all-day adventures. Spend less time worrying about charging and more time enjoying the open road—freedom, power, and endurance all in one ride.",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_cHMnAd": {
+          "type": "text",
+          "settings": {
+            "text": "52V 20Ah <span style=\"font-size: 50%;\n    font-weight: normal;\">\nBattery</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AwQUyV",
+        "text_Lg8THC",
+        "text_cHMnAd"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da.webp",
+        "video": "shopify://files/videos/电池1440-1.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_WTzzHX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NQN9Un": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Instant Power Boost</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_rA7CmC": {
+          "type": "text",
+          "settings": {
+            "text": "The RetroVolt Pro packs a 2000W peak brushless motor with 99 N·m of torque, delivering the strength to dominate steep hills and rough terrain with ease. Paired with 20x4\" wide tires, it provides unbeatable traction and stability, whether you’re cruising city streets or exploring off-road trails. Experience explosive acceleration—going from 0 to 30 mph in just 5 seconds—and reach up to 38 mph with Pedal Assist, giving you thrilling speed with total control.",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_P7YzCp": {
+          "type": "text",
+          "settings": {
+            "text": "2000W <span style=\"font-size: 50%;\n    font-weight: normal;\">\nPeak</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NQN9Un",
+        "text_rA7CmC",
+        "text_P7YzCp"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da.webp",
+        "video": "shopify://files/videos/电机-1.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 120,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_GB3cRU": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_bfB6Yx": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_EbEbxD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_nNAqHg": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_bfB6Yx",
+        "heading_EbEbxD",
+        "text_nNAqHg"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/1_11bc54ac-8ee9-484e-9466-8e510d85eaed.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/M1_b7517e4e-d717-4cf4-aa01-4d1d3b1280a2.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "video_HQ6NDF": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/800高.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "image_height": "adapt",
+        "video_mobile": "shopify://files/videos/800高.mp4",
+        "video_url_mobile": "",
+        "image_height_mobile": "adapt",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_V8ncGj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_B8qMNz": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_4pjGBx": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_AkwDTN": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_B8qMNz",
+        "heading_4pjGBx",
+        "text_AkwDTN"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/2_f024f517-66e8-4dc1-94dd-e127d4e2f812.png",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/M2_76c6de2f-caab-4bd5-ba75-9b903ed4fd35.png",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_WTx6NX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_r4mdLQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All-weather Stopping Power<br/><br/></p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_XLF8UP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The RetroVolt Pro takes braking to the next level with its new hydraulic disc system. Delivering instant, reliable stopping power in any weather, the upgraded brakes provide riders with the confidence to push further. Engineered for smooth precision and total control, the RetroVolt Pro ensures every ride feels powerful, responsive, and secure.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_r4mdLQ",
+        "text_XLF8UP"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da.webp",
+        "video": "shopify://files/videos/hydraulic-1920_8f9864cc-c50b-46cb-a6e3-e843da10f832.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_G7VzRF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4mWDW7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Precision Dual Suspension</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_7fT8T3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Equipped with a Horst-Link rear suspension and hydraulic front suspension, the RetroVolt Pro expertly absorbs shocks from rough roads, gravel, and uneven trails. This advanced system delivers buttery-smooth rides, ensuring rider comfort and stability while maintaining full handling precision across any terrain.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_KYqACh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_4mWDW7",
+        "text_7fT8T3",
+        "button_KYqACh"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da.webp",
+        "video": "shopify://files/videos/yousha_ad152a71-eae8-4a5d-b3f4-22731f05b065.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_NJm9gL": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_kyyDEw": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_Qg3iDY": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_8gjLXf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kyyDEw",
+        "heading_Qg3iDY",
+        "text_8gjLXf"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/4_2a68865c-a037-49e7-8686-31170fe03cdc.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/M_4dfb054d-d70a-463d-a7dc-8cdbca6f9f00.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-center justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_ffkPjp": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_rqzQmR": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_aPBJk3": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Stylish Colors",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_3YxDz6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_rqzQmR",
+        "heading_aPBJk3",
+        "text_3YxDz6"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/3_a_a2f8d429-d978-4719-97a4-c88f1dfcba55.gif",
+        "image_height": "adapt",
+        "content_width": "medium",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/M3_8e504a1d-c190-406b-adcb-fd3490ef105f.gif",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "multicolumn_slide_hb_GKkqHc": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "item_UQU9h3": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/2_6591455e-a5b0-4133-bf20-401d3f0ab1d0.jpg",
+            "date": "",
+            "title": "20\" x 4\" Puncture-Resistant Tires",
+            "title_sz": "h4",
+            "content": "20\"x4\" fat tires offer enhanced grip and traction, ensuring superior control and stability on rugged roads and challenging terrains.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_bbFPRL": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/5_3989c93d-1388-418e-bd91-a83ddc24a301.jpg",
+            "date": "",
+            "title": "Headlight&Taillight",
+            "title_sz": "h4",
+            "content": "Integrated headlight, turn signals, and parking lights offer easy signaling at the touch of a button—day or night—for enhanced visibility and safer riding.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_BEWmqD": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/3_bdd1036f-bcdc-4b67-b677-16e9f299f096.jpg",
+            "date": "",
+            "title": "Half Twist Throttle",
+            "title_sz": "h4",
+            "content": "The intuitive half-twist throttle offers instant acceleration for smooth navigation through traffic and tough roads, while reducing the risk of accidental activation for added safety and control.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_efmfGR": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/6_2d794ff1-6d69-4b93-89ca-b27b551ed20e.jpg",
+            "date": "",
+            "title": "Double the Fun",
+            "title_sz": "h4",
+            "content": "Ride solo or with a co-pilot. The RetroVolt Pro's dual saddle design offers a comfortable passenger seat and footrests, ensuring a smooth and secure ride for both you and your companion.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_97kqG3": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/7_34e2c0d2-2f05-4681-a088-b583663573c2.jpg",
+            "date": "",
+            "title": "Multifunctional Color Display",
+            "title_sz": "h4",
+            "content": "The backlit color display provides essential ride data like speed, mileage, and battery life, ensuring clear visibility and easy monitoring in any lighting condition, day or night.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_ewmnnU": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/460x460_75a7591e-7c35-465f-9fe0-12c20e23f645.jpg",
+            "date": "",
+            "title": "Carry More than Before",
+            "title_sz": "h4",
+            "content": "The Hunter Pro’s sturdy rear rack adds serious utility for every ride; whether it's hauling groceries, outdoor gear, or even an extra passenger.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_Utejdt": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/460x460_995cfad4-3fc0-4d51-8488-b566f23666df.jpg",
+            "date": "",
+            "title": "Easy Storage & Portability",
+            "title_sz": "h4",
+            "content": "A compact, foldable design makes storage and transport effortless. Ideal for city living, travel, or tight spaces, the Hunter Pro has full-sized power that tucks away in seconds.",
+            "author": "RVdaydream"
+          }
+        }
+      },
+      "block_order": [
+        "item_UQU9h3",
+        "item_bbFPRL",
+        "item_BEWmqD",
+        "item_efmfGR",
+        "item_97kqG3",
+        "item_ewmnnU",
+        "item_Utejdt"
+      ],
+      "settings": {
+        "pw-overflow-hidden": true,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Quality in Details",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "#171717",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "product_modal_popup_hb_exNHwH": {
+      "type": "product-modal-popup-hb",
+      "blocks": {
+        "hotspot_t7dNQN": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 50,
+            "horizontal": 50,
+            "vertical_mobile": 22,
+            "horizontal_mobile": 17,
+            "modal_img": "shopify://shop_images/test_1.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        },
+        "hotspot_RtLe4E": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 25,
+            "horizontal": 37,
+            "vertical_mobile": 50,
+            "horizontal_mobile": 50,
+            "modal_img": "shopify://shop_images/test_3_e6c0b476-0555-4add-a62d-53d42b49100d.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_t7dNQN",
+        "hotspot_RtLe4E"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/test_311e598a-8549-410a-b440-07d4d5d2ac38.png",
+        "image_mobile": "shopify://shop_images/test.png",
+        "heading": "Details you’ll fall in love with",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Every detail has been carefully crafted to captivate</p>",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "specifications_parameters_hb_84CbEA": {
+      "type": "specifications-parameters-hb",
+      "blocks": {
+        "img_list_tUDfBK": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Geometry",
+            "img": "shopify://shop_images/3_e874e8f5-8760-4f87-a15e-7623cea6355f.png",
+            "img_w": 40,
+            "list": "|SIZE (inch)|One Size\nA|Seat Tube|22.8''\nB|Chainstay|19.5''\nC|Effective Top Tube|25.6''\nD|Head Tubee|5.9''\nE|Handlebar Height|46''\nF|Maximun Seat Height|33''\nG|Wheelbase|44.5''\nH|Total Length|68''",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "2"
+          }
+        },
+        "img_list_QVkBjk": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Specifications",
+            "img_w": 50,
+            "list": "|Motor|2000W Brushless Hub Motor\n|Throttle |Twist Throttle\n|Charger US |Standard 2.0 A\n|Range |Up To 90 Miles\n|Battery |52V 20Ah\n|Controller |52V / 30A\n|Tires|20'' x 4'' Fat Tire\n|Rider Height|5'4'' - 6'2''\n|Pedal Assist|0-5 Level\n|Weight|82 Lbs\n|Max Payload|330 Lbs\n|Display|Color Display\n|Lights |Turning Lights & Brake Lights\n|Suspension|With Locking and Adjustment",
+            "item_justify": "tw-justify-left",
+            "list_border": false,
+            "list_col": "2"
+          }
+        },
+        "img_list_LHUEbm": {
+          "type": "img_list",
+          "disabled": true,
+          "settings": {
+            "order_title": "What's In The Box (img)",
+            "img": "shopify://shop_images/Valentine_s-Day1.png",
+            "img_w": 50,
+            "list": "",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "1"
+          }
+        },
+        "package_FmwCMD": {
+          "type": "package",
+          "settings": {
+            "order_title": "What's In The Box？",
+            "cols": "8",
+            "cols_mb": "3",
+            "use_text": true,
+            "img_1": "shopify://shop_images/1_02d490b5-dd6c-4031-95e8-8d6b31159f17.jpg",
+            "img_2": "shopify://shop_images/3_f2825db9-b5a7-4323-a83a-53b7734e520c.jpg",
+            "img_3": "shopify://shop_images/2_8e7a1b41-558a-40f4-8f2c-089740354237.jpg",
+            "img_4": "shopify://shop_images/5_51fc1fea-ec1e-485b-9329-9c7c228910c3.jpg",
+            "img_5": "shopify://shop_images/7_b59add12-bb81-40a2-82e9-b8b4895bf208.jpg",
+            "img_6": "shopify://shop_images/6_c6e3febf-ef1f-4d64-9185-9ef9585c0ac8.jpg",
+            "img_8": "shopify://shop_images/4_c4818c06-5658-40b5-830a-4b7967074fac.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "img_list_tUDfBK",
+        "img_list_QVkBjk",
+        "img_list_LHUEbm",
+        "package_FmwCMD"
+      ],
+      "settings": {
+        "heading": "Specs & Geometry",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Didn’t find your answer?",
+            "text": "<p>Don't hestitate to contact us</p>",
+            "show_phone": false,
+            "avatar_height": 60,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "with-background",
+        "heading": "FAQs",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Please read our <a href=\"#\" title=\"FAQ's\">FAQs</a> page to find out more.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#ffffff",
+        "color_background": "#171717",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recommended for you",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "1754645058bbf75ec9": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_jVwnwq": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_jVwnwq"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "faq_LAqHrA": {
+      "type": "faq",
+      "blocks": {
+        "question_VkiK8E": {
+          "type": "question",
+          "settings": {
+            "title": "1. What's your shipping policy?",
+            "title_tag": "span",
+            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_WydWCH": {
+          "type": "question",
+          "settings": {
+            "title": "2. What's your warranty policy?",
+            "title_tag": "span",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_RxbMnX": {
+          "type": "question",
+          "settings": {
+            "title": "3. What's your return&refund policy?",
+            "title_tag": "span",
+            "text": "<p>We provide exchange service within 14 days. If the product is defective or damaged, Send damaged photos or videos to customer service within 14 days after receiving the goods, and the damaged parts can be replaced or compensated. We will cover the return (exchange) shipping costs.</p><p>In the case of non-quality returns, the customer will be responsible for the return shipping costs.</p><p>You can always contact us for any return questions at <strong>support@jasionbike.com</strong>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_8w3AJM": {
+          "type": "question",
+          "settings": {
+            "title": "4. Does my height suit RetroVolt Pro?",
+            "title_tag": "span",
+            "text": "<p>The recommended rider height is 5'4\" to 6'2\".</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_dADpwD": {
+          "type": "question",
+          "settings": {
+            "title": "5. How long does it take to fully charge the battery?",
+            "title_tag": "span",
+            "text": "<p>It will take 5-6 hours.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_qtF3Vm": {
+          "type": "question",
+          "settings": {
+            "title": "6. How long will it take for my shipment to arrive?",
+            "title_tag": "span",
+            "text": "<p>Generally, your order will be shipped within one business day after the order is placed, and package shipping will take approximately 3-5 days.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_gH97gL": {
+          "type": "question",
+          "settings": {
+            "title": "7. Does my Jasion ebike come pre-assembled?",
+            "title_tag": "span",
+            "text": "<p>Your e-bike arrives 85% assembled. There are just a few pieces to put into place once you take the bike out of the box. For unboxing and setup instructions, please follow the guides on our <a href=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\">YouTube Channel</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_jtpKXd": {
+          "type": "question",
+          "settings": {
+            "title": "8. What is the maximum speed of each PAS level?",
+            "title_tag": "span",
+            "text": "<p>PAS1 Top speed 10mph</p><p>PAS2 Top speed 15mph</p><p>PAS3 Top speed 20mph</p><p>PAS4 Top speed 25mph</p><p>PAS5 Top speed 38mph</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_76nQfc": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "<strong>9. JasionBike Retrovolt Pro Ambassador Program</strong>",
+            "title_tag": "span",
+            "text": "<p>Already own RetroVolt Pro? Join the Ambassador Program.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_VkiK8E",
+        "question_WydWCH",
+        "question_RxbMnX",
+        "question_8w3AJM",
+        "question_dADpwD",
+        "question_qtF3Vm",
+        "question_gH97gL",
+        "question_jtpKXd",
+        "question_76nQfc"
+      ],
+      "settings": {
+        "style": "tw-default-faq",
+        "heading": "FAQ",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "multicolumn_slide_hb_QEk8x8",
+    "drawer_content_hb_qzp8WX",
+    "help-drawer",
+    "large_header_slider_NDH3Xx",
+    "image_with_text_overlay_Br6nVq",
+    "image_with_text_overlay_UyaqiW",
+    "image-with-text-1",
+    "image_with_text_mFYwAt",
+    "image_with_text_WTzzHX",
+    "image_with_text_overlay_GB3cRU",
+    "video_HQ6NDF",
+    "image_with_text_overlay_V8ncGj",
+    "image_with_text_WTx6NX",
+    "image_with_text_G7VzRF",
+    "image_with_text_overlay_NJm9gL",
+    "image_with_text_overlay_ffkPjp",
+    "multicolumn_slide_hb_GKkqHc",
+    "product_modal_popup_hb_exNHwH",
+    "specifications_parameters_hb_84CbEA",
+    "faq",
+    "product-recommendations",
+    "recently-viewed",
+    "1754645058bbf75ec9",
+    "faq_LAqHrA"
+  ]
+}

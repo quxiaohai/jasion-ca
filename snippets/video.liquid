@@ -1,0 +1,72 @@
+{%- liquid
+  assign loading = loading | default: 'lazy'
+  assign fetchpriority = fetchpriority | default: 'auto'
+  assign sizes = sizes | default: 'min(100vw, var(--page-width))'
+
+  assign video_id = video.id | default: video_url.id
+  assign video_alt = video.alt | default: description
+  assign alt = 'general.accessibility.load_video' | t: description: video_alt | escape
+  assign preview_image = video.preview_image | default: cover_image
+  -%}
+
+  {% capture poster %}
+    {% if preview_image != blank %}
+      {{ preview_image | image_url: width: preview_image.width | image_tag: loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', is: 'lazy-image', alt: alt }}
+    {% elsif video_url != blank %}
+      {% assign video_id = video_url | split: 'v=' | last | split: '&' | first %}
+      {% assign thumbnail_url = 'https://img.youtube.com/vi/' | append: video_id | append: '/sddefault.jpg' %}
+      <img src="{{ thumbnail_url }}" class="tw-aspect-video tw-object-cover" width="900" height="400" loading="lazy"/>
+    {% else %}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
+    {% endif %}
+  {% endcapture %}
+
+
+{%- if video != blank or video_url != blank -%}
+  <video-media class="media deferred-media{% if is_mobile %} mobile:deferred-media{% endif %} block {{ class }}"
+    style="--aspect-ratio: {{ video.aspect_ratio }}"
+    {%- unless video %} host="{{ video_url.type }}"{% endunless -%}
+    {%- if autoplay %} autoplay{% endif -%}
+  >
+    {{- poster -}}
+
+    <template>
+      {%- if video != blank -%}
+        {{- video | video_tag: playsinline: true, muted: muted, autoplay: true, loop: loop, controls: controls, preload: 'metadata', image_size: '800x' -}}
+      {%- else -%}
+        {%- if video_url.type == 'youtube' -%}
+
+          <iframe src="https://www.youtube.com/embed/{{ video_url.id }}?playsinline=1&controls={% if controls == true %}1{% else %}0{% endif %}{% if autoplay %}&autoplay=1{% endif %}{% if muted %}&mute=1{% endif %}{% if loop %}&loop=1{% endif %}&playlist={{ video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        {%- elsif video_url.type == 'vimeo' -%}
+          <iframe src="https://player.vimeo.com/video/{{ video_url.id }}?autopause=1{% if autoplay %}&autoplay=1{% endif %}{% if muted %}&background=1&muted=1{% endif %}{% if loop %}&loop=1{% endif %}&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.color_text | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+        {%- endif -%}
+      {%- endif -%}
+    </template>
+
+    {%- if show_play_button -%}
+      <button type="button" id="DeferredPoster-{{ video_id }}" class="deferred-poster absolute top-0 left-0 w-full h-full" aria-label="{{ 'general.accessibility.play_video' | t | escape }}">
+        <span class="play-button absolute flex items-center justify-center rounded-full pointer-events-auto z-10">
+          {%- render 'icon', icon: 'play' -%}
+          {%- render 'icon', icon: 'pause' -%}
+        </span>
+      </button>
+    {%- elsif show_youtube_button -%}
+      <button type="button" id="DeferredPoster-{{ video_id }}" class="deferred-poster absolute top-0 left-0 w-full h-full" aria-label="{{ 'general.accessibility.play_video' | t | escape }}">
+        <span class="play-button absolute flex items-center justify-center rounded-full pointer-events-auto z-10">
+           <svg class="icon icon-play icon-md" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M1013.76 307.264s-9.984-70.570667-40.704-101.632c-38.933333-40.789333-82.56-41.002667-102.592-43.392C727.168 151.893333 512.213333 151.893333 512.213333 151.893333h-0.426666s-214.954667 0-358.250667 10.346667c-20.010667 2.389333-63.658667 2.602667-102.613333 43.392C20.245333 236.693333 10.24 307.264 10.24 307.264S0 390.122667 0 473.002667v77.674666c0 82.858667 10.24 165.738667 10.24 165.738667s9.984 70.570667 40.704 101.632c38.933333 40.789333 90.112 39.509333 112.896 43.776 81.92 7.850667 348.16 10.282667 348.16 10.282667s215.168-0.32 358.464-10.666667c20.010667-2.410667 63.658667-2.602667 102.613333-43.392 30.698667-31.061333 40.704-101.632 40.704-101.632S1024 633.536 1024 550.677333v-77.674666c0-82.88-10.24-165.738667-10.24-165.738667z" fill="#FF0000"></path><path d="M406.293333 644.821333l-0.064-287.722666 276.693334 144.362666-276.629334 143.36z" fill="#FFFFFF"></path></svg>
+           <svg class="icon icon-pause icon-md" viewBox="0 0 1415 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M1182.357934 0.010641h-949.084818c-127.72865 0-231.728816 106.494191-231.728816 237.327403v549.407711c0 130.825231 104.000166 237.256905 231.728816 237.256905h949.084818c127.781856 0 231.783352-106.434334 231.783353-237.262226v-549.40505c-0.00133-130.831882-104.001496-237.324743-231.783353-237.324743z" fill=""></path><path d="M623.84537 784.839655c0 9.062288-7.279892 16.410018-16.263701 16.410018h-70.529689c-8.977159 0-16.263702-7.345069-16.263702-16.410018v-545.658028c0-9.068939 7.281222-16.415338 16.263702-16.415338h70.529689c8.98381 0 16.263702 7.346399 16.263701 16.415338v545.658028z m271.054599 0c0 9.062288-7.277232 16.410018-16.266362 16.410018h-70.527029c-8.977159 0-16.254391-7.345069-16.254391-16.410018v-545.658028c0-9.068939 7.277232-16.415338 16.254391-16.415338h70.527029c8.98913 0 16.266362 7.346399 16.266362 16.415338v545.658028z" fill="#FFFFFF"></path></svg>
+        </span>
+      </button>
+    {%- elsif play_icon != blank -%}
+      <button type="button" id="DeferredPoster-{{ video_id }}" class="flex-center custom-play-button deferred-poster absolute top-0 left-0 w-full h-full" aria-label="{{ 'general.accessibility.play_video' | t | escape }}">
+        <span class="play-button flex-center rounded-full pointer-events-auto z-10">
+          {%- render 'global-image', image: play_icon, class: 'icon-play' -%}
+        </span>
+      </button>
+    {%- endif -%}
+  </video-media>
+{%- else -%}
+  <div class="deferred-media{% if is_mobile %} mobile:deferred-media{% endif %} h-full {{ class }}">
+    {{- poster -}}
+  </div>
+{%- endif -%}

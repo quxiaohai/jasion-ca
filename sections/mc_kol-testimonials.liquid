@@ -1,0 +1,624 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_kol-testimonials {
+        background-color: #ffffff;
+        padding: 80px 0;
+    }
+
+    .mc_kol-testimonials .score-items {
+        justify-content: center;
+        padding-bottom: 16px;
+    }
+
+    .mc_kol-testimonials .score-items .score-item {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+
+    .mc_kol-testimonials .slider {
+        padding-inline: 0;
+        margin-inline: 0;
+        scroll-padding-inline: 0;
+        padding-block-end: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .mc_kol-testimonials .card-grid {
+        gap: 0 30px;
+        --slider-item-width: 560px;
+    }
+
+    .mc_kol-testimonials .slider-item {
+        display: grid;
+        gap: 0 15px;
+        height: 100%;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        opacity: 0.3 !important;
+        transition: opacity 0.3s;
+    }
+    .mc_kol-testimonials .slider-item.empty {
+        width: 845px;
+    }
+    .mc_kol-testimonials .slider-item.selected {
+        opacity: 1 !important;
+    }
+
+    .mc_kol-testimonials .media-info,
+    .mc_kol-testimonials .media-image {
+        grid-row: span 1/span 1;
+        padding-right: 10px;
+    }
+
+    .mc_kol-testimonials .media-info .image,
+    .mc_kol-testimonials .media-image .image {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+
+    .mc_kol-testimonials .media-info .button-group,
+    .mc_kol-testimonials .media-image .button-group {
+        padding: 12px 0;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .mc_kol-testimonials .media-info .button-group .button,
+    .mc_kol-testimonials .media-image .button-group .button {
+        padding: 10px 20px;
+        --buttons-radius: 6px;
+        --color-button-text: 255 255 255;
+        --color-button-background: 0 0 0;
+        transition: opacity 0.3s;
+    }
+
+    .mc_kol-testimonials .media-info .button-group .button:hover,
+    .mc_kol-testimonials .media-image .button-group .button:hover {
+        opacity: 0.9;
+    }
+
+    .mc_kol-testimonials .media-info .name,
+    .mc_kol-testimonials .media-image .name {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .mc_kol-testimonials .media-info .intro,
+    .mc_kol-testimonials .media-info .nickname,
+    .mc_kol-testimonials .media-image .intro,
+    .mc_kol-testimonials .media-image .nickname {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .mc_kol-testimonials .media-info .intro,
+    .mc_kol-testimonials .media-image .intro {
+        padding-bottom: 20px;
+    }
+
+    .mc_kol-testimonials .media-video {
+        grid-row: span 2/span 2;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mc_kol-testimonials .media-video .video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 1536px) {
+        .mc_kol-testimonials {
+            padding: 64px 0;
+        }
+
+        .mc_kol-testimonials .card-grid {
+            gap: 0 24px;
+            --slider-item-width: calc((100% - 24px) / 2.5);
+        }
+
+        .mc_kol-testimonials .slider-item.empty {
+            width: 53vw;
+        }
+
+        .mc_kol-testimonials .slider-item {
+            gap: 0 12px;
+        }
+
+        .mc_kol-testimonials .media-info,
+        .mc_kol-testimonials .media-image {
+            padding-right: 8px;
+        }
+
+        .mc_kol-testimonials .media-info .button-group,
+        .mc_kol-testimonials .media-image .button-group {
+            padding: 9.6px 0;
+            gap: 9.6px;
+        }
+
+        .mc_kol-testimonials .media-info .button-group .button,
+        .mc_kol-testimonials .media-image .button-group .button {
+            padding: 8px 16px;
+        }
+
+        .mc_kol-testimonials .media-info .name,
+        .mc_kol-testimonials .media-image .name {
+            font-size: 19.2px;
+            padding-bottom: 8px;
+        }
+
+        .mc_kol-testimonials .media-info .intro,
+        .mc_kol-testimonials .media-info .nickname,
+        .mc_kol-testimonials .media-image .intro,
+        .mc_kol-testimonials .media-image .nickname {
+            padding-bottom: 8px;
+        }
+
+        .mc_kol-testimonials .media-info .intro,
+        .mc_kol-testimonials .media-image .intro {
+            padding-bottom: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_kol-testimonials {
+            padding: 2.5rem 0;
+        }
+
+        .mc_kol-testimonials .score-items {
+            padding-bottom: 1rem;
+        }
+
+        .mc_kol-testimonials .score-items .score-item {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.375rem;
+        }
+
+        .mc_kol-testimonials .slider {
+            padding-inline: 0;
+            margin-inline: 0;
+            scroll-padding-inline: 0;
+            padding-block-end: 0;
+        }
+
+        .mc_kol-testimonials .card-grid {
+            gap: 20px;
+            --slider-item-width: 100%;
+        }
+
+        .mc_kol-testimonials .slider-item {
+            width: 100%;
+            opacity: 1 !important;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .mc_kol-testimonials .media-image {
+            grid-column: auto;
+            grid-row: auto;
+            display: flex;
+            flex-direction: column;
+            padding-right: 0.375rem;
+            width: 50%;
+        }
+
+        .mc_kol-testimonials .media-image .button-group {
+            padding: 8px 0;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mc_kol-testimonials .media-image .button-group .button {
+            --buttons-radius: 4px;
+        }
+
+        .mc_kol-testimonials .media-info {
+            grid-column: auto;
+            grid-row: auto;
+            margin-top: 16px;
+        }
+
+        .mc_kol-testimonials .media-info .name {
+            font-size: 1.25rem;
+            padding-bottom: 0.625rem;
+        }
+
+        .mc_kol-testimonials .media-info .intro,
+        .mc_kol-testimonials .media-info .nickname {
+            padding-bottom: 0.625rem;
+        }
+
+        .mc_kol-testimonials .media-info .intro {
+            padding-bottom: 0.625rem;
+        }
+
+        .mc_kol-testimonials .media-video {
+            grid-column: auto;
+            grid-row: auto;
+            height: auto;
+            aspect-ratio: 14 / 25;
+            width: 50%;
+            padding-left: 0.375rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_kol-testimonials section--page">
+    <div class="page-width">
+        {%- render 'icon-score', score: ss.score, score_color: ss.score_color -%}
+        {%- render 'section-title', info: ss, tag: 'h2' -%}
+        {%- render 'seo-tag', text: 'What Real Riders Are Saying', tag: 'h3' -%}
+        <slider-element id="Slider-{{ section.id }}" class="grid slider slider--desktop slider--tablet"
+                        selector=".card-grid>.slider-item" pre-page="1">
+            <motion-list class="card-grid card-grid--3 mobile:card-grid--1 grid">
+                {%- for block in section.blocks -%}
+                    {%- liquid
+                        assign bs = block.settings
+                        assign index = forloop.index0
+                        assign pc_node = 'pc_kol_' | append: index
+                        assign mb_node = 'mb_kol_' | append: index
+                    -%}
+                    <div data-index="{{ index }}"
+                         class="slider-item card flex-top tw-relative tw-overflow-hidden {% if forloop.first %}selected{% endif %}">
+                        <div class="media-image tw-relative">
+                            {%- render 'global-image', desktop_img: bs.desktop_image, desktop_size: 400, mobile_img: bs.mobile_image, mobile_size: 400 -%}
+                            <div class="button-group flex-left">
+                                {%- if bs.show_button1 -%}
+                                    <a href="{{ bs.button1_url }}"
+                                       style="background: {{ bs.button1_bg_color }}; color: {{ bs.button1_color }};"
+                                       class="button">{{ bs.button1 }}</a>
+                                {%- endif -%}
+                                {%- if bs.show_button2 -%}
+                                    <a href="{{ bs.button2_url }}"
+                                       style="background: {{ bs.button2_bg_color }}; color: {{ bs.button2_color }};"
+                                       class="button">{{ bs.button2 }}</a>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                        <div class="media-video">
+                            {%- render 'global-video',
+                                    desktop_video: bs.video,
+                                    desktop_size: 500,
+                                    desktop_node: pc_node,
+                                    desktop_cover: bs.cover_image,
+                                    mobile_video: bs.video_mobile,
+                                    mobile_cover: bs.cover_image_mobile,
+                                    mobile_size: 500,
+                                    mobile_node: mb_node,
+                                    controls: true,
+                                    loop: true
+                            -%}
+                        </div>
+                        <div class="media-info tw-relative">
+                            <div class="name tw-font-semibold tw-leading-[1.2]"
+                                 style="color: {{ bs.content_color }};">{{ bs.title }}</div>
+                            <div class="intro tw-leading-normal"
+                                 style="color: {{ bs.content_color }};">{{ bs.content }}</div>
+                            <div class="nickname tw-leading-[1.2]"
+                                 style="color: {{ bs.content_color }};">{{ bs.author }}</div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+                <div class="slider-item empty card flex-top tw-relative tw-overflow-hidden desktop-done"></div>
+            </motion-list>
+        </slider-element>
+        {%- render 'slider-button' -%}
+    </div>
+</div>
+<script>
+    (function () {
+        const node = document.getElementById('Slider-{{ section.id }}');
+        const nodeList = $heybike.getNodeList(node);
+        let current = 0;
+        const onPlay = (index) => {
+            const key = $heybike.isMobile ? 'mb' : 'pc';
+            nodeList[`${key}_kol_${index}`]?.play();
+        }
+        const onPause = (index) => {
+            const key = $heybike.isMobile ? 'mb' : 'pc';
+            nodeList[`${key}_kol_${index}`]?.pause();
+        }
+
+        $heybike.inView(node, () => {
+            onPlay(current);
+            return () => {
+                onPause(current);
+            }
+        });
+
+        let timer = null;
+        node.addEventListener('slider:change', (e) => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                onPause(current);
+                current = e.detail.currentPage - 1;
+                onPlay(current);
+            }, 100);
+        });
+    })();
+</script>
+{% schema %}
+{
+  "name": "MC Kol Testimonials",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Kol Testimonials"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "score",
+      "label": "Score",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "s",
+      "default": 5
+    },
+    {
+      "type": "color",
+      "id": "score_color",
+      "label": "Score color",
+      "default": "#FFC107"
+    },
+    {
+      "type": "select",
+      "id": "button_theme",
+      "label": "Button theme",
+      "options": [
+        {
+          "value": "dark",
+          "label": "Dark"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        }
+      ],
+      "default": "dark"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Shopify-hosted video"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Desktop video"
+        },
+        {
+          "type": "video",
+          "id": "video_mobile",
+          "label": "Mobile video"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "Desktop cover image"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image_mobile",
+          "label": "Mobile cover image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Video alt text",
+          "info": "Describe the video for customers using screen readers. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video)"
+        },
+        {
+          "type": "header",
+          "content": "Content settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button1",
+          "label": "Show button1",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button1",
+          "label": "Button1 text",
+          "default": "Button1"
+        },
+        {
+          "type": "color",
+          "id": "button1_color",
+          "label": "Button1 text color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "button1_bg_color",
+          "label": "Button1 text background color",
+          "default": "#000000"
+        },
+        {
+          "type": "url",
+          "id": "button1_url",
+          "label": "Button1 Url"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button2",
+          "label": "Show button2",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button2",
+          "label": "Button2 text",
+          "default": "Button2"
+        },
+        {
+          "type": "color",
+          "id": "button2_color",
+          "label": "Button2 text color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "button2_bg_color",
+          "label": "Button2 text background color",
+          "default": "#000000"
+        },
+        {
+          "type": "url",
+          "id": "button2_url",
+          "label": "Button2 Url"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Content color",
+          "default": "#000000"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "The most comfortable Ebike"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>The most comfortable Ebike</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Electric Revolution"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

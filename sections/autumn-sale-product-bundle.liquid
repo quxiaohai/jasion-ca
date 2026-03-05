@@ -1,0 +1,1078 @@
+{% assign ss = section.settings %}
+<style>
+    .autumn-sale-product-bundle {
+        padding: 40px 0;
+        background-color: #f9f7f6;
+    }
+
+    .autumn-sale-product-bundle.__loading__ .autumn-content {
+        opacity: 0;
+    }
+
+    .autumn-sale-product-bundle .autumn-content {
+        max-width: 1376px;
+        box-sizing: border-box;
+        padding: 0 48px;
+        margin: 0 auto;
+    }
+
+    .autumn-sale-product-bundle .product-bundle {
+        box-sizing: border-box;
+        padding: 27px 30px 29px 25px;
+        background-color: #f5f0ed;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .autumn-sale-product-bundle .banner-info {
+        height: 150px;
+        background-color: #f5f0ed;
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+    }
+
+    .autumn-sale-product-bundle .banner-info .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .autumn-sale-product-bundle .banner-info .info {
+        top: 50%;
+        left: 193px;
+        transform: translateY(-50%);
+    }
+
+    .autumn-sale-product-bundle .banner-info .info .text,
+    .autumn-sale-product-bundle .banner-info .info .discount {
+        line-height: 1.2;
+        color: #ffffff;
+    }
+
+    .autumn-sale-product-bundle .banner-info .info .text {
+        font-size: 24px;
+    }
+
+    .autumn-sale-product-bundle .banner-info .info .discount {
+        padding-top: 15px;
+        font-size: 42px;
+    }
+
+    .autumn-sale-product-bundle .banner-info .info .discount strong {
+        color: #ff981d;
+        font-weight: 900;
+    }
+
+    .autumn-sale-product-bundle .product-box {
+        flex: 1;
+        align-items: stretch;
+    }
+
+    .autumn-sale-product-bundle .product-box .plus-icon {
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .autumn-sale-product-bundle .product-box .plus-icon .svg-icon {
+        width: 23px;
+        height: 23px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap {
+        width: calc(50% - 25px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root {
+        min-height: 51px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap {
+        min-height: 51px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info,
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+        border-radius: 26px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info {
+        height: 51px;
+        padding: 0 25px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info .drop-text {
+        font-size: 18px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+        padding: 60px 0 16px;
+    }
+
+    .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items .drop-item {
+        padding: 6px 25px;
+    }
+
+    .autumn-sale-product-bundle ._product-card {
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 15px;
+        margin-top: 23px;
+        flex: 1;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-cover {
+        height: 290px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-cover > .image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info {
+        box-sizing: border-box;
+        padding: 28px 23px 25px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant {
+        color: #999999;
+        font-size: 18px;
+        line-height: 1.2;
+        padding-bottom: 16px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant .dark {
+        color: #333333;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant.last {
+        padding: 35px 0 11px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items {
+        gap: 10px 24px;
+        flex-wrap: wrap;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item {
+        width: 32px;
+        height: 32px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item .color-swatch {
+        --swatch-size: 22px;
+        --swatch-radius: 9999px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .price-box {
+        margin-top: 35px;
+        height: 32px;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .price-box .price {
+        font-size: 28px;
+        line-height: 1.1;
+        color: #ff981d;
+    }
+
+    .autumn-sale-product-bundle ._product-card .product-info .price-box .original-price {
+        font-size: 16px;
+        color: #6c6c6c;
+        text-decoration: line-through;
+        padding-left: 10px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout {
+        width: 314px;
+        margin-left: 31px;
+        padding-top: 74px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .image {
+        height: 270px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal {
+        padding: 36px 18px 0;
+        box-sizing: border-box;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-text {
+        font-size: 20px;
+        color: #333333;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-price {
+        font-size: 42px;
+        color: #222222;
+        padding: 12px 0 15px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-discount {
+        font-size: 28px;
+        line-height: 54px;
+        width: 100%;
+        color: #ffffff;
+        background-image: linear-gradient(-90deg, rgb(250, 204, 34) 0%, #f83600 100%), linear-gradient(#333333, #333333);
+        border-radius: 10px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal .discount-text {
+        font-size: 18px;
+        color: #333333;
+        padding: 6px 0 30px;
+    }
+
+    .autumn-sale-product-bundle .product-checkout .total-subtotal .button {
+        width: 100%;
+        height: 54px;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1376px) {
+        .autumn-sale-product-bundle {
+            padding: 34px 0;
+        }
+
+        .autumn-sale-product-bundle .autumn-content {
+            padding: 0 36px;
+        }
+
+        .autumn-sale-product-bundle .product-bundle {
+            padding: 22.95px 25.5px 24.65px 21.25px;
+            border-radius: 0 0 13.6px 13.6px;
+        }
+
+        .autumn-sale-product-bundle .banner-info {
+            height: 127.5px;
+            border-radius: 13.6px 13.6px 0 0;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info {
+            left: 164.05px;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info .text {
+            font-size: 20.4px;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info .discount {
+            padding-top: 12.75px;
+            font-size: 35.7px;
+        }
+
+        .autumn-sale-product-bundle .product-box .plus-icon .svg-icon {
+            width: 19.55px;
+            height: 19.55px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root {
+            min-height: 43.35px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap {
+            min-height: 43.35px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info,
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+            border-radius: 22.1px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info {
+            height: 43.35px;
+            padding: 0 21.25px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info .drop-text {
+            font-size: 15.3px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+            padding: 51px 0 13.6px;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items .drop-item {
+            padding: 5.1px 21.25px;
+        }
+
+        .autumn-sale-product-bundle ._product-card {
+            border-radius: 12.75px;
+            margin-top: 19.55px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-cover {
+            height: 246.5px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info {
+            padding: 23.8px 19.55px 21.25px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant {
+            font-size: 15.3px;
+            padding-bottom: 13.6px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant.last {
+            padding: 29.75px 0 9.35px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items {
+            gap: 10px 20.4px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item {
+            width: 27.2px;
+            height: 27.2px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item .color-swatch {
+            --swatch-size: 22px;
+            --swatch-radius: 9999px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box {
+            margin-top: 29.75px;
+            height: 27.2px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box .price {
+            font-size: 23.8px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box .original-price {
+            font-size: 13.6px;
+            padding-left: 8.5px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout {
+            width: 266.9px;
+            margin-left: 26.35px;
+            padding-top: 62.9px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .image {
+            height: 229.5px;
+            border-radius: 8.5px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal {
+            padding: 30.6px 15.3px 0;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-text {
+            font-size: 17px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-price {
+            font-size: 35.7px;
+            padding: 10.2px 0 12.75px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-discount {
+            font-size: 23.8px;
+            line-height: 45.9px;
+            border-radius: 8.5px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .discount-text {
+            font-size: 15.3px;
+            padding: 5.1px 0 25.5px;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .button {
+            height: 45.9px;
+            font-size: 15.3px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-product-bundle {
+            padding: 0.8680555556rem 0;
+        }
+
+        .autumn-sale-product-bundle .autumn-content {
+            max-width: 100%;
+            padding: 0 3.7962962963vw;
+        }
+
+        .autumn-sale-product-bundle .product-bundle {
+            padding: 0.9331597222rem 10vw 1.1284722222rem;
+            border-radius: 0 0 0.4340277778rem 0.4340277778rem;
+            flex-direction: column;
+        }
+
+        .autumn-sale-product-bundle .banner-info {
+            height: 26.2962962963vw;
+            border-radius: 0.4340277778rem 0.4340277778rem 0 0;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info {
+            left: 0.8463541667rem;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info .text {
+            font-size: 0.6076388889rem;
+        }
+
+        .autumn-sale-product-bundle .banner-info .info .discount {
+            padding-top: 0.4340277778rem;
+            font-size: 1.0633680556rem;
+            max-width: 13.4548611111rem;
+            line-height: 1.4;
+        }
+
+        .autumn-sale-product-bundle .product-box {
+            flex: auto;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .autumn-sale-product-bundle .product-box .plus-icon {
+            margin: 0.8246527778rem auto;
+            width: 1.8012152778rem;
+            height: 1.8012152778rem;
+            transform: translate(0, 0);
+            background-color: #000000;
+            border-radius: 50%;
+            position: static;
+        }
+
+        .autumn-sale-product-bundle .product-box .plus-icon .svg-icon {
+            width: 65%;
+            height: 65%;
+        }
+
+        .autumn-sale-product-bundle .product-box .plus-icon .svg-icon path {
+            fill: #fff268;
+        }
+
+        .autumn-sale-product-bundle .product-wrap {
+            width: 100%;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root {
+            min-height: 2.0833333333rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap {
+            min-height: 2.0833333333rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info,
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+            border-radius: 1.0416666667rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info {
+            height: 2.0833333333rem;
+            padding: 0 1.0416666667rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-info .drop-text {
+            font-size: 0.7378472222rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items {
+            padding: 2.0833333333rem 0 0.8680555556rem;
+        }
+
+        .autumn-sale-product-bundle .product-wrap > .dropdown-root .dropdown-wrap .drop-items .drop-item {
+            padding: 0.4340277778rem 0.5425347222rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card {
+            width: 100%;
+            height: auto;
+            border-radius: 0.3472222222rem;
+            margin-top: 0.4774305556rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-cover {
+            height: 50.7407407407vw;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info {
+            padding: 0.5208333333rem 1.7144097222rem 0.9982638889rem 0.6510416667rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant {
+            font-size: 0.7161458333rem;
+            padding-bottom: 0.6944444444rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .current-variant.last {
+            padding: 1.3454861111rem 0 0.5208333333rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items {
+            gap: 10px 1.0633680556rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item {
+            width: 1.2369791667rem;
+            height: 1.2369791667rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .variant-selects .color-items .color-item .color-swatch {
+            --swatch-size: 18px;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box {
+            margin-top: 1.2586805556rem;
+            height: 1.2803819444rem;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box .price {
+            font-size: 1.1501736111rem;
+            color: #000000;
+        }
+
+        .autumn-sale-product-bundle ._product-card .product-info .price-box .original-price {
+            font-size: 0.6510416667rem;
+            padding-left: 0.5208333333rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout {
+            width: 100%;
+            margin-left: 0;
+            padding-top: 1.953125rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .image {
+            display: none;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            align-items: flex-start;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-text {
+            font-size: 0.78125rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-price {
+            font-size: 1.4973958333rem;
+            padding: 0.4340277778rem 0 0.5425347222rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .subtotal-discount {
+            font-size: 0.9982638889rem;
+            line-height: 1.953125rem;
+            width: auto;
+            border-radius: 0.1736111111rem;
+            padding: 0 0.78125rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .discount-text {
+            font-size: 0.6510416667rem;
+            padding: 0.3472222222rem 0 0.78125rem;
+        }
+
+        .autumn-sale-product-bundle .product-checkout .total-subtotal .button {
+            width: auto;
+            height: 1.9748263889rem;
+            font-size: 0.6510416667rem;
+            border-radius: 0.4991319444rem;
+            padding: 0 1.4105902778rem;
+        }
+    }
+
+    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-product-bundle' %}
+</style>
+<section class="autumn-sale-product-bundle __loading__ w-full" id="{{ section.id }}-bundle">
+    <div class="autumn-content w-full">
+        <div class="banner-info tw-relative">
+            {% render 'global-image',
+                desktop_img: ss.pc_discount_url,
+                desktop_size: 1280,
+                mobile_img: ss.mb_discount_url,
+                mobile_size: 750
+            %}
+            <div class="info tw-absolute">
+                <div class="text tw-font-semibold">{{ ss.discount_title }}</div>
+                <div class="discount tw-font-semibold">
+                    {{ ss.discount_text }}
+                </div>
+            </div>
+        </div>
+        <div class="product-bundle flex-top">
+            <div class="product-box tw-relative flex-between-top">
+                <div class="product-wrap">
+                    {% render 'dropdown-select', product_key: 'current1', variant_key: 'product1', variant_list_key: 'productList1' %}
+                    <div class="_product-card flex-col">
+                        <div class="product-cover media tw-relative">
+                            <img :src="variant1.image" alt="" class="image" is="lazy-image" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <div class="variant-selects">
+                                <template v-if="product1.variants.length > 0">
+                                    <div class="current-variant tw-font-semibold">
+                                        Select color <span class="dark">- ${color1.value}</span>
+                                    </div>
+                                    <ul class="color-items flex-left">
+                                        <li class="color-item flex-center" v-for="(item, i) in product1.variants">
+                                            <input :id="`color1-{{ section.id }}-${item.key}`"
+                                                   type="radio"
+                                                   name="Color1"
+                                                   @change="handleDropColor(product1, i)"
+                                                   :checked="color1.value === item.value"
+                                                   class="sr-only"/>
+                                            <label class="color-swatch tw-relative"
+                                                   :for="`color1-{{ section.id }}-${item.key}`"
+                                                   :style="{
+                                                    '--swatch-background': item.color,
+                                                    'background-image': `url(${item.color_image})`
+                                                    }">
+                                                <span
+                                                    class="tooltip opacity-0 pointer-events-none text-xs rounded-full z-10">${item.value}</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </template>
+                                <template v-if="variantList1.length > 0">
+                                    <div class="current-variant last tw-font-semibold">COMBO SALE STYLE</div>
+                                    {% render 'dropdown-select', product_key: 'product1', variant_key: 'variant1', variant_list_key: 'variantList1' %}
+                                </template>
+                            </div>
+                            <div class="price-box flex-left">
+                                <div class="price tw-font-bold">${variant1.price}</div>
+                                <div class="original-price">${variant1.originalPrice}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plus-icon tw-absolute flex-center">
+                    <svg class="svg-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         width="32" height="32">
+                        <path
+                            d="M896 416H608V128c0-35.34-28.66-64-64-64h-64c-35.34 0-64 28.66-64 64v288H128c-35.34 0-64 28.66-64 64v64c0 35.34 28.66 64 64 64h288v288c0 35.34 28.66 64 64 64h64c35.34 0 64-28.66 64-64V608h288c35.34 0 64-28.66 64-64v-64c0-35.34-28.66-64-64-64z"
+                            fill="#000000"
+                        ></path>
+                    </svg>
+                </div>
+                <div class="product-wrap">
+                    {% render 'dropdown-select', product_key: 'current2', variant_key: 'product2', variant_list_key: 'productList2' %}
+                    <div class="_product-card flex-col">
+                        <div class="product-cover tw-relative">
+                            <img :src="variant2.image" alt="" class="image" loading="lazy"/>
+                        </div>
+                        <div class="product-info">
+                            <div class="variant-selects">
+                                <template v-if="product2.variants.length > 0">
+                                    <div class="current-variant tw-font-semibold">
+                                        Select color <span class="dark">- ${color2.value}</span>
+                                    </div>
+                                    <ul class="color-items flex-left">
+                                        <li class="color-item flex-center" v-for="(item, i) in product2.variants">
+                                            <input :id="`color2-{{ section.id }}-${item.key}`"
+                                                   type="radio"
+                                                   name="Color2"
+                                                   @change="handleDropColor(product2, i)"
+                                                   :checked="color2.value === item.value"
+                                                   class="sr-only"/>
+                                            <label class="color-swatch tw-relative"
+                                                   :for="`color2-{{ section.id }}-${item.key}`"
+                                                   :style="{
+                                                    '--swatch-background': item.color,
+                                                    'background-image': `url(${item.color_image})`
+                                                    }">
+                                                <span
+                                                    class="tooltip opacity-0 pointer-events-none text-xs rounded-full z-10">${item.value}</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </template>
+                                <template v-if="variantList2.length > 0">
+                                    <div class="current-variant last tw-font-semibold">COMBO SALE STYLE</div>
+                                    {% render 'dropdown-select', product_key: 'product2', variant_key: 'variant2', variant_list_key: 'variantList2' %}
+                                </template>
+                            </div>
+                            <div class="price-box flex-left">
+                                <div class="price tw-font-bold">${variant2.price}</div>
+                                <div class="original-price">${variant2.originalPrice}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-checkout">
+                {% render 'global-image',
+                    desktop_img: ss.pc_checkout_url,
+                    desktop_size: 500
+                %}
+                <div class="total-subtotal">
+                    <div class="subtotal-text tw-leading-[1.2] tw-font-semibold">Total</div>
+                    <div class="subtotal-price tw-leading-[1.2] tw-font-black">${totalInfo.price}</div>
+                    <div class="subtotal-discount flex-center tw-font-semibold">You Save ${totalInfo.totalDiscount}
+                    </div>
+                    <div class="discount-text tw-leading-[1.2] tw-font-semibold">
+                        <span v-if="totalInfo.originalPrice">(${totalInfo.originalPrice} OFF</span>
+                        <span v-if="totalInfo.originalPrice && totalInfo.discount"> + </span>
+                        <span v-if="totalInfo.discount">EXTRA ${totalInfo.discount})</span>
+                    </div>
+                    <button @click="onAddToCart"
+                            is="hover-button"
+                            class="button tw-leading-[1.2] flex-center tw-font-bold">
+                        <span class="btn-text">Proceed to Checkout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{%- assign productInfo = section.blocks | where: 'type', 'product_item' | first -%}
+{%- if productInfo != blank -%}
+    <script>
+        (function () {
+            $heybike.import("{{ 'product-buy-popup.css' | asset_url }}");
+            const node = document.getElementById('{{ section.id }}-bundle');
+            $heybike.inView(node, () => {
+                $heybike.load({type: 'VUE'}, Vue => {
+                    const discountList = [
+                        {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                        {%- when 'discount_item' -%}
+                        {%- assign bs = block.settings -%}
+                        {%- if bs.full_price != blank and bs.discount_price != blank and bs.full_price >= bs.discount_price -%}
+                        {
+                            price: {{ bs.full_price }},
+                            discount: {{ bs.discount_price }},
+                            code: '{{ bs.discount_code }}'
+                        },
+                        {%- endif -%}
+                        {%- endcase -%}
+                        {%- endfor -%}
+                    ];
+                    const productList = [
+                        {%- for v in (1..2) -%}
+                        {%- assign key = 'product_list' | append: v -%}
+                        {%- assign productList = productInfo.settings[key] -%}
+                        {%- for product in productList -%}
+                        {%- assign index = forloop.index0 -%}
+                        {
+                            cIndex: 0,
+                            vIndex: 0,
+                            on: false,
+                            value: "{{ product.title }}",
+                            id: "{{ product.id }}",
+                            type: "{{ v }}",
+                            variants: [
+                                {%- liquid
+                                    assign options_size = product.options_with_values.size
+                                    assign option = product.options_with_values[0]
+                                -%}
+                                {%- for value in option.values -%}
+                                {%- assign option_value = value | escape -%}
+                                {%- if options_size > 1 -%}
+                                {
+                                    {% render 'color-object', value: value %}
+                                    value: "{{ option_value }}",
+                                    key: "{{ value | handleize }}",
+                                    childList: [
+                                        {%- for variant in product.variants -%}
+                                        {%- if variant.option1 == value -%}
+                                        {
+                                            id: "{{ variant.id }}",
+                                            value: "{{ variant.option2 }}",
+                                            image: "{{ variant.featured_image | image_url: width: 650 }}",
+                                            price: "{{ variant.price | money }}",
+                                            realPrice: {{ variant.price }},
+                                            originalPrice: "{{ variant.compare_at_price | money }}",
+                                            realOriginalPrice: {% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}0{% endif %}
+                                        },
+                                        {%- endif -%}
+                                        {%- endfor -%}
+                                    ]
+                                },
+                                {%- else -%}
+                                {
+                                    id: "{{ value.variant.id }}",
+                                    key: "{{ value | handleize }}",
+                                    {% render 'color-object', value: value %}
+                                    value: "{{ option_value }}",
+                                    image: "{{ value.variant.featured_image | image_url: width: 650 }}",
+                                    price: "{{ value.variant.price | money }}",
+                                    realPrice: {{ value.variant.price }},
+                                    originalPrice: "{{ value.variant.compare_at_price | money }}",
+                                    realOriginalPrice: {% if value.variant.compare_at_price != blank %}{{ value.variant.compare_at_price }}{% else %}0{% endif %}
+                                },
+                                {%- endif -%}
+                                {%- endfor -%}
+                            ]
+                        },
+                        {%- endfor -%}
+                        {%- endfor -%}
+                    ];
+                    const unit = '{{ 0 | money }}'.replace(/[0-9\.]+/, '##');
+                    const filterMoney = (val) => {
+                        return unit.replace('##', val);
+                    };
+                    // 千分位
+                    const toThousands = (num) => {
+                        num = num + '';
+                        if (num === '') {
+                            return num;
+                        }
+                        if (isNaN(num)) {
+                            return num;
+                        }
+                        var index = num.indexOf('.');
+                        var reg = /(-?\d+)(\d{3})/;
+                        if (index === -1) {
+                            while (reg.test(num)) {
+                                num = num.replace(reg, '$1,$2');
+                            }
+                        } else {
+                            var intPart = num.substring(0, index);
+                            var pointPart = num.substring(index + 1, num.length);
+                            while (reg.test(intPart)) {
+                                intPart = intPart.replace(reg, '$1,$2');
+                            }
+                            num = intPart + '.' + pointPart;
+                        }
+                        return num;
+                    };
+
+                    const getTotal = (total, round) => {
+                        const len = total.length;
+                        const start = total.substring(0, len - 2);
+                        const end = total.substring(len - 2);
+                        if (!round || parseInt(end) > 0) {
+                            return filterMoney(`${toThousands(start)}.${end}`);
+                        }
+                        return filterMoney(`${toThousands(start)}`);
+                    };
+                    Vue.createApp({
+                        delimiters: ["${", "}"],
+                        data() {
+                            return {
+                                current1: {
+                                    on: false,
+                                    index: 0
+                                },
+                                current2: {
+                                    on: false,
+                                    index: 0
+                                },
+                                productList1: productList.filter(item => item.type === '1'),
+                                productList2: productList.filter(item => item.type === '2'),
+                            }
+                        },
+                        mounted() {
+                            this.onInit();
+                        },
+                        computed: {
+                            product1() {
+                                return this.productList1[this.current1.index];
+                            },
+                            color1() {
+                                return this.product1.variants[this.product1.cIndex] || {};
+                            },
+                            variantList1() {
+                                return this.color1.childList || [];
+                            },
+                            variant1() {
+                                return this.variantList1.length > 0 ? this.variantList1[this.product1.vIndex] : this.color1;
+                            },
+                            product2() {
+                                return this.productList2[this.current2.index];
+                            },
+                            color2() {
+                                return this.product2.variants[this.product2.cIndex] || {};
+                            },
+                            variantList2() {
+                                return this.color2.childList || [];
+                            },
+                            variant2() {
+                                return this.variantList2.length > 0 ? this.variantList2[this.product2.vIndex] : this.color2;
+                            },
+                            totalInfo() {
+                                const price = this.variant1.realPrice + this.variant2.realPrice;
+                                const originalPrice = (this.variant1.realOriginalPrice > 0 ? this.variant1.realOriginalPrice - this.variant1.realPrice : 0) + (this.variant2.realOriginalPrice > 0 ? this.variant2.realOriginalPrice - this.variant2.realPrice : 0)
+                                const enables = [0];
+                                discountList.forEach(item => {
+                                    if (item.price * 100 <= price) {
+                                        enables.push(item.discount * 100);
+                                    }
+                                });
+                                const maxDiscount = Math.max.apply(null, enables);
+                                return {
+                                    price: getTotal(price - maxDiscount + ''),
+                                    originalPrice: originalPrice > 0 ? getTotal(originalPrice + '', true) : '',
+                                    discount: maxDiscount > 0 ? getTotal(maxDiscount + '', true) : '',
+                                    totalDiscount: getTotal(originalPrice + maxDiscount + '', true),
+                                    code: discountList.find(item => item.discount * 100 === maxDiscount)?.code
+                                }
+                            }
+                        },
+                        methods: {
+                            onInit() {
+                                $heybike.on('click', (ev) => {
+                                    if (!ev.target.closest('.dropdown-root')) {
+                                        this.current1.on = false;
+                                        this.current2.on = false;
+                                        this.product1.on = false;
+                                        this.product2.on = false;
+                                    }
+                                });
+                                node.classList.remove('__loading__');
+                            },
+                            handleDropColor(obj, index) {
+                                obj.cIndex = index;
+                            },
+                            handleDropOpen(obj) {
+                                obj.on = !obj.on;
+                            },
+                            handleChangeDrop(index, obj) {
+                                if (typeof obj.vIndex === 'undefined') {
+                                    obj.index = index;
+                                } else {
+                                    obj.vIndex = index;
+                                }
+                                obj.on = false;
+                            },
+                            onAddToCart(ev) {
+                                $heybike.addToCart({
+                                    items: [{
+                                        quantity: 1,
+                                        id: this.variant1.id,
+                                    }, {
+                                        quantity: 1,
+                                        id: this.variant2.id,
+                                    }],
+                                    button: ev.target,
+                                    discount: this.totalInfo.code
+                                }, true);
+                            }
+                        }
+                    }).mount("#{{ section.id }}-bundle");
+                });
+            }, {margin: "200px 0px 200px 0px"});
+        })();
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Autumn Product Bundle",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-product-bundle"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#f9f7f6"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Discount"
+    },
+    {
+      "label": "Desktop Image",
+      "type": "image_picker",
+      "id": "pc_discount_url"
+    },
+    {
+      "label": "Mobile Image",
+      "type": "image_picker",
+      "id": "mb_discount_url"
+    },
+    {
+      "type": "text",
+      "id": "discount_title",
+      "label": "Discount Title",
+      "default": "Bundle & Save – Stack Your Discounts!"
+    },
+    {
+      "type": "richtext",
+      "id": "discount_text",
+      "label": "Discount Text",
+      "default": "<p>Get <strong>$200</strong> OFF on $1,800, <strong>$500</strong> OFF on $5,000</p>"
+    },
+    {
+      "type": "header",
+      "content": "Checkout"
+    },
+    {
+      "label": "Desktop Image",
+      "type": "image_picker",
+      "id": "pc_checkout_url"
+    },
+    {
+      "type": "text",
+      "id": "checkout_text",
+      "label": "Checkout Text",
+      "default": "Proceed to Checkout"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount_item",
+      "name": "Discount coupon",
+      "settings": [
+        {
+          "type": "number",
+          "id": "full_price",
+          "label": "Full Price",
+          "default": 300
+        },
+        {
+          "type": "number",
+          "id": "discount_price",
+          "label": "Discount Price",
+          "default": 50
+        },
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount Code"
+        }
+      ]
+    },
+    {
+      "type": "product_item",
+      "name": "Product",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product_list",
+          "id": "product_list1",
+          "label": "Combinations Product List 1"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list2",
+          "label": "Combinations Product List 2"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,51 @@
+<form id="collection-menu-form{% if key != blank %}-{{ key }}{% endif %}"
+      class="collection-menu-form"
+      method="GET"
+      action="{{ request.path }}"
+      is="facet-form"
+      data-section-id="{{ section.id }}"
+      data-history
+      update-on-change>
+    <details class="details{% unless collapsed %} active{% endunless %}"
+             is="accordion-details"{% unless collapsed %} open{% endunless %}>
+        <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+            <span class="text-base-xl font-medium">Collections</span>
+            {%- render 'icon', icon: 'chevron-up' -%}
+        </summary>
+        <ul class="tw-mt-3 tw-mb-6 md:tw-mb-8 tw-transition-all tw-duration-500 tw-opacity-0 tw-max-h-[1000px] tw-opacity-100 tw-poiner-events-auto tw-border-b-1 tw-border-gray-300">
+            {%- for block in list -%}
+                {%- assign bs = block.settings -%}
+                <li class="tw-mb-1">
+                    <a href="{{ bs.button_url }}"
+                       class="collection-radio-btn flex-left {% if request.path contains bs.button_url %}active{% endif %}"
+                       data-new-collection-url="{{ bs.button_url }}">
+                        <span class="radio-button tw-inline-block tw-border tw-border-solid tw-border-black tw-rounded-full"></span>
+                        <span class="tw-cursor-pointer tw-text-black tw-text-sm">{{ bs.button_label }}</span>
+                    </a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </details>
+</form>
+<script>
+    (function () {
+        const form = document.getElementById('collection-menu-form{% if key != blank %}-{{ key }}{% endif %}');
+        const collectionRadioBtns = Array.prototype.slice.call(form.querySelectorAll(".collection-radio-btn"), 0);
+        let currentUrl = "{{ request.path }}";
+        collectionRadioBtns.forEach(elem => {
+            elem.addEventListener("click", e => {
+                e.preventDefault();
+                const url = e.currentTarget.getAttribute("data-new-collection-url");
+                if (currentUrl !== url) {
+                    form.setAttribute('action', url);
+                    form.dispatchEvent(new Event('change', {cancelable: true}));
+                    collectionRadioBtns.forEach(elem => {
+                        elem.classList.remove("active");
+                    });
+                    elem.classList.add("active");
+                    currentUrl = url;
+                }
+            });
+        });
+    })();
+</script>

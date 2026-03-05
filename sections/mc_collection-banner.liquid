@@ -1,0 +1,253 @@
+{%- liquid
+    assign ss = section.settings
+    if bs.image_ratio != blank
+        assign aspect_ratio = bs.image_ratio
+    else
+        assign aspect_ratio = bs.pc_image_url.aspect_ratio
+    endif
+
+    if bs.mb_image_ratio != blank
+        assign mb_aspect_ratio = bs.mb_image_ratio
+    else
+        assign mb_aspect_ratio = bs.mb_image_url.aspect_ratio
+    endif
+-%}
+<style>
+    .mc_collection-banner .backdrop-img {
+        object-fit: cover;
+        aspect-ratio: {{ aspect_ratio }};
+    }
+
+    .mc_collection-banner .title {
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #ffffff;
+        z-index: 2;
+    }
+
+    .mc_collection-banner .service-items {
+        height: 100px;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        align-items: flex-end;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        padding-bottom: 8px;
+    }
+
+    .mc_collection-banner .service-items.service-rows {
+        height: 80px;
+    }
+
+    .mc_collection-banner .service-items.service-rows .item {
+        gap: 16px;
+        flex-direction: row;
+    }
+
+    .mc_collection-banner .service-items .item {
+        flex: 1;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .mc_collection-banner .service-items .text {
+        color: #ffffff;
+        line-height: 1.2;
+        font-size: 16px;
+    }
+
+    .mc_collection-banner .service-items .image {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_collection-banner .backdrop-img {
+            aspect-ratio: {{ mb_aspect_ratio }};
+        }
+
+        .mc_collection-banner .service-items {
+            height: auto;
+            padding: 1.25rem 0 0.375rem;
+            align-items: stretch;
+        }
+
+        .mc_collection-banner .service-items.service-rows {
+            height: auto;
+        }
+
+        .mc_collection-banner .service-items.service-rows .item {
+            gap: 0.25rem;
+            flex-direction: column;
+        }
+
+        .mc_collection-banner .service-items .item {
+            height: 100%;
+            gap: 0.25rem;
+        }
+
+        .mc_collection-banner .service-items .text {
+            line-height: 1.1;
+            font-size: 0.5625rem;
+        }
+
+        .mc_collection-banner .service-items .image {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+</style>
+<animate-element data-animate="zoom-out" class="mc_collection-banner block relative">
+{%- if ss.url != blank -%}
+    <a href="{{ ss.url }}" class="block w-full">
+        {%- endif -%}
+        {% render 'global-image',
+            desktop_img: ss.pc_image_url,
+            mobile_img: ss.mb_image_url,
+            desktop_class: 'backdrop-img',
+            mobile_class: 'backdrop-img',
+            fetchpriority: ss.preload,
+            preload: ss.preload
+        %}
+        {%- if ss.url != blank -%}
+    </a>
+    {%- endif -%}
+    {%- if ss.show_title -%}
+        <h1 class="title w-full h1 text-center absolute{% if ss.title_hidden %} sr-only{% endif %}" style="color: {{ ss.title_color }};">{{ ss.title }}</h1>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+        <div class="service-items page-width {{ ss.service_display }} w-full absolute flex-center">
+            {%- for block in section.blocks -%}
+                {%- assign bs = block.settings -%}
+                <div class="item flex-center">
+                    {% render 'global-image', media_type: 'icon', preload: ss.image_preload, desktop_img: bs.image_icon, desktop_size: 200 %}
+                    <span class="text" style="color: {{ ss.service_title_color }};">{{ bs.title }}</span>
+                </div>
+            {%- endfor -%}
+        </div>
+    {%- endif -%}
+</animate-element>
+{% schema %}
+{
+  "name": "MC Collection Banner",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Collection Banner"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "title_hidden",
+      "default": false,
+      "label": "Title hidden"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Jasion Elecrtic Bikes"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "label": "Desktop image",
+      "type": "image_picker",
+      "info": "Please upload an image no larger than 2 megabytes.",
+      "id": "pc_image_url"
+    },
+    {
+      "type": "text",
+      "id": "image_ratio",
+      "label": "Desktop image ratio(w/h)"
+    },
+    {
+      "label": "Mobile image",
+      "type": "image_picker",
+      "info": "Please upload an image no larger than 2 megabytes.",
+      "id": "mb_image_url"
+    },
+    {
+      "type": "text",
+      "id": "mb_image_ratio",
+      "label": "Mobile image ratio(w/h)"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Url"
+    },
+    {
+      "type": "header",
+      "content": "Service"
+    },
+    {
+      "type": "select",
+      "id": "service_display",
+      "label": "Desktop service item display",
+      "options": [
+        {
+          "value": "service-cols",
+          "label": "Column"
+        },
+        {
+          "value": "service-rows",
+          "label": "Row"
+        }
+      ],
+      "default": "service-cols"
+    },
+    {
+      "type": "color",
+      "id": "service_title_color",
+      "label": "Service title Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Service Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Item Name",
+          "default": "14-Day Trial"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Item Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,41 @@
+{%- liquid
+    if product_key == blank
+        assign product_key = 'product'
+    endif
+    if variant_key == blank
+        assign variant_key = 'variant'
+    endif
+    if variant_list_key == blank
+        assign variant_list_key = 'variantList'
+    endif
+-%}
+<div class="dropdown-root">
+    <div class="dropdown-wrap" :class="{on: {{ product_key }}.on}">
+        <div class="drop-info flex-between" @click="handleDropOpen({{ product_key }})">
+            <span class="drop-text tw-font-semibold">${ {{ variant_key }}.value }</span>
+            <div class="arrow-down flex-center">
+                <svg class="svg-img"
+                     viewBox="0 0 1024 1024"
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="32"
+                     height="32">
+                    <path d="M952.16851 329.603857l-61.405535-60.778248c-8.91402-8.840342-23.154349-9.061376-31.774681-0.517793L513.860882 597.050048 161.772942 254.480902c-8.729825-8.655124-23.12058-8.43409-32.108279 0.481977l-61.998029 61.367673c-9.025561 8.951883-9.248641 23.156396-0.517793 31.81152l430.986895 419.334507c8.691963 8.656147 23.083741 8.433066 32.108279-0.518816l61.997006-61.367673c1.418302-1.404999 2.589988-2.952238 3.572362-4.579295l356.838128-339.929016C961.306634 352.539218 961.084577 338.40736 952.16851 329.603857z"
+                          fill="#2c2c2c"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="drop-items">
+            <scroll-area>
+                <div class="scroll-view hide-scroll-bar">
+                    <div v-for="(item, i) in {{ variant_list_key }}"
+                         :key="item.id"
+                         @click="handleChangeDrop(i, {{ product_key }})"
+                         :class="{selected: item.value === {{ variant_key }}.value}"
+                         class="drop-item tw-font-semibold flex-left">
+                        ${item.value}
+                    </div>
+                </div>
+            </scroll-area>
+        </div>
+    </div>
+</div>

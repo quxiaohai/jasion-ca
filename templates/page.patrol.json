@@ -1,0 +1,767 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mc_patrol_font": {
+      "type": "mc_patrol-font",
+      "settings": {
+        "font_name": "rushblade"
+      }
+    },
+    "mc_main_banner_YHyBBN": {
+      "type": "mc_main-banner",
+      "name": "MC Main Banner",
+      "settings": {
+        "page_color": "",
+        "pc_width": 1920,
+        "mb_width": 780,
+        "media_type": "image",
+        "pc_image_url": "shopify://shop_images/banner-patrol-image-new.jpg",
+        "mb_image_url": "shopify://shop_images/mb-banner-patrol-image-new.jpg",
+        "content_pos": "center",
+        "mb_content_pos": "mb_top",
+        "video_play_show": false,
+        "backdrop_link": "shopify://products/heybike-villain",
+        "width_follow_the_theme": true,
+        "pc_left": 145,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 1
+      }
+    },
+    "mc_patrol_gift_card": {
+      "type": "mc_patrol-gift-card",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "position": "1",
+            "gift_image": "shopify://shop_images/card-image-1-new.jpg",
+            "mb_gift_image": "shopify://shop_images/mb-card-image-1.jpg",
+            "title": "<p>Early Bird<br/><strong>Price $1,???{$2,699}</strong></p>",
+            "date": "<p>Date: 3/20 - 3/30</p>",
+            "desc": "<p>Grab an Extra $100 Off Before Prices Rise</p>"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "position": "2",
+            "gift_image": "shopify://shop_images/card-image-2-new.jpg",
+            "mb_gift_image": "shopify://shop_images/mb-card-image-2.jpg",
+            "title": "<p>Patrol Limited<strong>Stickers</strong></p>",
+            "date": "<p>Date: 3/20 - 3/30</p>",
+            "desc": "<p>Every Patrol order includes a set of exclusive Patrol decals.</p>"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "position": "3",
+            "gift_image": "shopify://shop_images/card-image-3-new.jpg",
+            "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
+            "title": "<p><strong>100%</strong> REFUND</p>",
+            "date": "<p>Date: 3/20 - 3/30</p>",
+            "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "position": "4",
+            "gift_image": "shopify://shop_images/card-image-4-new.jpg",
+            "mb_gift_image": "shopify://shop_images/mb-card-image-4.jpg",
+            "title": "<p>BUY & WIN<br/><strong>Insta 360 X1</strong></p>",
+            "date": "<p>Order between<br/>Mar 20 – 23</p>",
+            "desc": "<p>Every Patrol purchase automatically enters you into our exclusive sweepstakes for a chance to win one Insta360 camera—with just one lucky winner to be selected, no extra steps or codes required.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ],
+      "name": "MC Patrol Gift Card",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>Exclusive<br/>Launch <strong>Rewards</strong></p>",
+        "title_pc_size": 75,
+        "title_pc_weight": 400,
+        "title_pc_line": 110,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffd800",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "bottom_image": "shopify://shop_images/title-bottom-image-1-new.png",
+        "mb_bottom_image": "shopify://shop_images/mb-title-bottom-image-1.png",
+        "card_title_color": "#ffffff",
+        "card_title_bold_color": "#ffd800",
+        "card_desc_color": "#707070"
+      }
+    },
+    "mc_patrol_subscribe": {
+      "type": "mc_patrol-subscribe",
+      "settings": {
+        "page_color": "#000000",
+        "page_top": 0,
+        "page_bottom": 0,
+        "show_title": true,
+        "title": "<p>Secure Your<br/>Early Bird Specials</p>",
+        "mb_title": "<p>Secure Your Early Bird Specials</p>",
+        "title_color": "#ffffff",
+        "pc_title_size": 24,
+        "mb_title_size": 12,
+        "image": "shopify://shop_images/subscribe-image-back.png",
+        "mb_image": "shopify://shop_images/mb-subscribe-image-back.png",
+        "alert_duration": 3,
+        "button": "Subscribe",
+        "pc_button_size": 18,
+        "mb_button_size": 10,
+        "button_bg_color": "#df1cf1",
+        "button_bg_hover_color": "#da5ae6",
+        "button_text_color": "#ffffff",
+        "tag": "Sub",
+        "content": "Sub",
+        "placeholder": "Your email",
+        "input_bg_color": "#181818",
+        "input_border_color": "#f8e737",
+        "input_text_color": "#ffffff"
+      }
+    },
+    "mc_media_video_dYQVLb": {
+      "type": "mc_media-video",
+      "disabled": true,
+      "name": "MC Media Video",
+      "settings": {
+        "page_color": "",
+        "show_title": false,
+        "title": "",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30
+      }
+    },
+    "mc_patrol_media": {
+      "type": "mc_patrol-media",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p><strong>Launch on March 20th.</strong><br/>An Icon in the Making...</p>",
+        "title_pc_size": 75,
+        "title_pc_weight": 400,
+        "title_pc_line": 110,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffe500",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "bottom_image": "shopify://shop_images/title-bottom-image-2-new.png",
+        "mb_bottom_image": "shopify://shop_images/mb-title-bottom-image-2.png",
+        "show_border_image": true,
+        "pc_border_image": "shopify://shop_images/image-border-4-new.png",
+        "pc_border_thickness": "28px 50px 40px 50px",
+        "mb_border_image": "shopify://shop_images/mb-image-border-4.png",
+        "mb_border_thickness": "10px 12px 18px 12px",
+        "media_image": "shopify://shop_images/patrol-media-image.jpg",
+        "image_width": 100
+      }
+    },
+    "mc_patrol_param_card": {
+      "type": "mc_patrol-param-card",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "position": "1",
+            "image": "shopify://shop_images/patrol-param-image1-n.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image1.jpg",
+            "title": "<p><strong>Hydraulic</strong><br />Disc Brakes</p>",
+            "desc": "<p>Superior Braking Performance for Total Confidence</p>",
+            "param1_val": "4000 w",
+            "param1_text": "Peak Power",
+            "param2_val": "145 Nm",
+            "param2_text": "Torque"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "position": "4",
+            "image": "shopify://shop_images/patrol-param-image5-new.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image5.jpg",
+            "title": "<p><strong>Superior</strong> Battery Life</p>",
+            "desc": "<p>Superior Battery Life</p>",
+            "param1_val": "1560 Wh",
+            "param1_text": "Battery",
+            "param2_val": "50 Miles",
+            "param2_text": "Max Range"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "position": "2",
+            "image": "shopify://shop_images/patrol-param-image3-new.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image3.jpg",
+            "title": "<p><strong>NFC</strong> Card</p>",
+            "desc": "<p>Superior Braking Performance for Total Confidence</p>",
+            "param1_val": "4000 w",
+            "param1_text": "Peak Power",
+            "param2_val": "145 Nm",
+            "param2_text": "Torque"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "position": "3",
+            "image": "shopify://shop_images/patrol-param-image4-new.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image4.jpg",
+            "title": "<p><strong>Hydraulic</strong><br />Disc Brakes</p>",
+            "desc": "<p>Superior Braking Performance for Total Confidence</p>",
+            "param1_val": "4000 w",
+            "param1_text": "Peak Power",
+            "param2_val": "145 Nm",
+            "param2_text": "Torque"
+          }
+        },
+        "card_5": {
+          "type": "card",
+          "settings": {
+            "position": "5",
+            "image": "shopify://shop_images/patrol-param-image2-new.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image2.jpg",
+            "title": "<p>Superior <strong>Battery Life </strong></p>",
+            "desc": "<p>Superior Battery Life</p>",
+            "param1_val": "4000 w",
+            "param1_text": "Peak Power",
+            "param2_val": "145 Nm",
+            "param2_text": "Torque"
+          }
+        },
+        "card_6": {
+          "type": "card",
+          "settings": {
+            "position": "6",
+            "image": "shopify://shop_images/patrol-param-image6-new.jpg",
+            "mb_image": "shopify://shop_images/mb-patrol-param-image6.jpg",
+            "title": "<p><strong>3.5 Hrs</strong></p>",
+            "desc": "<p>Fast Charging</p>",
+            "param1_val": "4000 w",
+            "param1_text": "Peak Power",
+            "param2_val": "145 Nm",
+            "param2_text": "Torque"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "name": "MC Patrol Param Card",
+      "settings": {
+        "page_color": "",
+        "page_top": 0,
+        "show_title": false,
+        "title": "<p>Title</p>",
+        "title_pc_size": 48,
+        "title_pc_weight": 700,
+        "title_pc_line": 120,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "card_title_color": "#ffffff",
+        "card_title_bold_color": "#ffe500",
+        "card_desc_color": "#9e9e9e"
+      }
+    },
+    "mc_media_image": {
+      "type": "mc_media-image",
+      "settings": {
+        "page_color": "#000000",
+        "page_top": 0,
+        "show_title": true,
+        "title": "<p><strong>Response Is</strong> Everything</p>",
+        "title_font": "rushblade",
+        "title_pc_size": 75,
+        "title_pc_weight": 400,
+        "title_pc_line": 110,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffe500",
+        "title_gradient_color": "",
+        "show_description": true,
+        "description": "<p>With a mid-drive motor at the core, Villain stays planted under hard acceleration, steep climbs, and uneven off-road terrain — delivering precise control when it matters most.</p>",
+        "description_color": "#6e6f66",
+        "description_bold_color": "#000000",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "pc_image": "shopify://shop_images/banner-param-image1.jpg",
+        "mb_image": "shopify://shop_images/mb-banner-param-image.jpg",
+        "image_radius": 0,
+        "mb_image_radius": 0,
+        "image_width": 100,
+        "image_ratio": "",
+        "image_fill": true,
+        "mb_image_ratio": "",
+        "mb_image_fill": true
+      }
+    },
+    "mc_patrol_image_text": {
+      "type": "mc_patrol-image-text",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "pc_image": "shopify://shop_images/patrol-param-text-image1-new.jpg",
+            "image_position": "left",
+            "title": "<p>The all-new <strong>60V40 Ah</strong> lithium battery pack</p>",
+            "title_color": "#ffffff",
+            "title_bold_color": "#ffe500",
+            "title_gradient_color": "",
+            "text": "<p>50S cell, equipped with safe and efficientbattery management module, making its outputpowerful and stable. Distributed multipletemperature sensors and SCM 485communication protocol ensure the batterypack's high power load capacity and servicelife.</p>",
+            "text_color": "#747474"
+          }
+        },
+        "slide_2": {
+          "type": "slide",
+          "settings": {
+            "pc_image": "shopify://shop_images/patrol-param-text-image2-new.jpg",
+            "image_position": "right",
+            "title": "<p>The all-new <strong>60V40 Ah</strong> lithium battery pack</p>",
+            "title_color": "#ffffff",
+            "title_bold_color": "#ffe500",
+            "title_gradient_color": "",
+            "text": "<p>50S cell, equipped with safe and efficientbattery management module, making its outputpowerful and stable. Distributed multipletemperature sensors and SCM 485communication protocol ensure the batterypack's high power load capacity and servicelife.</p>",
+            "text_color": "#747474"
+          }
+        },
+        "slide_3": {
+          "type": "slide",
+          "settings": {
+            "pc_image": "shopify://shop_images/patrol-param-text-image3-new.jpg",
+            "image_position": "left",
+            "title": "<p>The all-new <strong>60V40 Ah</strong> lithium battery pack</p>",
+            "title_color": "#ffffff",
+            "title_bold_color": "#ffe500",
+            "title_gradient_color": "",
+            "text": "<p>50S cell, equipped with safe and efficientbattery management module, making its outputpowerful and stable. Distributed multipletemperature sensors and SCM 485communication protocol ensure the batterypack's high power load capacity and servicelife.</p>",
+            "text_color": "#747474"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3"
+      ],
+      "name": "MC Patrol Image Text",
+      "settings": {
+        "page_color": "",
+        "page_top": 10,
+        "show_title": false,
+        "title": "",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "card_border_image": "shopify://shop_images/image-border-1-new.png",
+        "pc_card_title_size": 46,
+        "mb_card_title_size": 18,
+        "pc_card_text_size": 25,
+        "mb_card_text_size": 12
+      }
+    },
+    "mc_main_banner_SHyBBN": {
+      "type": "mc_main-banner",
+      "blocks": {
+        "text_CeFqzy": {
+          "type": "text",
+          "settings": {
+            "title": "Title",
+            "font_name": "rushblade",
+            "text_show_type": "all",
+            "pc_text": "<p><strong>Response</strong><br/>Is Everything</p>",
+            "pc_align": "left",
+            "pc_color": "#ffffff",
+            "pc_emphasize_color": "#ffe500",
+            "pc_weight": 400,
+            "pc_size": 75,
+            "pc_line": 120,
+            "pc_top": 0,
+            "pc_right": 0,
+            "pc_bottom": 0,
+            "pc_left": 0,
+            "mb_text": "<p><strong>Response</strong> Is Everything</p>",
+            "mb_align": "center",
+            "mb_color": "#ffffff",
+            "mb_emphasize_color": "#ffe500",
+            "mb_weight": 400,
+            "mb_size": 22,
+            "h5_line": 120,
+            "mb_top": 268,
+            "mb_right": 0,
+            "mb_bottom": 0,
+            "mb_left": 0
+          }
+        },
+        "text_aAAfyH": {
+          "type": "text",
+          "settings": {
+            "title": "Intro",
+            "font_name": "",
+            "text_show_type": "all",
+            "pc_text": "<p>With a mid-drive motor at the core, Villain stays </p><p>planted under hard acceleration, steep climbs, </p><p>and uneven off-road terrain — delivering precise</p><p> control when it matters most.</p>",
+            "pc_align": "left",
+            "pc_color": "#ffffff",
+            "pc_emphasize_color": "#181623",
+            "pc_weight": 400,
+            "pc_size": 29,
+            "pc_line": 120,
+            "pc_top": 18,
+            "pc_right": 0,
+            "pc_bottom": 300,
+            "pc_left": 0,
+            "mb_text": "<p>With a mid-drive motor at the core, Villain stays planted under hard acceleration, steep climbs, and uneven off-road terrain — delivering precise control when it matters most.</p>",
+            "mb_align": "center",
+            "mb_color": "#b7b7b7",
+            "mb_emphasize_color": "#181623",
+            "mb_weight": 400,
+            "mb_size": 10,
+            "h5_line": 120,
+            "mb_top": 2,
+            "mb_right": 40,
+            "mb_bottom": 0,
+            "mb_left": 40
+          }
+        }
+      },
+      "block_order": [
+        "text_CeFqzy",
+        "text_aAAfyH"
+      ],
+      "settings": {
+        "page_color": "#000000",
+        "pc_width": 1920,
+        "mb_width": 750,
+        "media_type": "image",
+        "pc_image_url": "shopify://shop_images/banner-response-image-new.jpg",
+        "mb_image_url": "shopify://shop_images/mb-banner-response-image.jpg",
+        "content_pos": "bottom",
+        "mb_content_pos": "mb_top",
+        "video_play_show": false,
+        "backdrop_link": "",
+        "width_follow_the_theme": false,
+        "pc_left": 259,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
+      }
+    },
+    "mc_patrol_card_slide": {
+      "type": "mc_patrol-card-slide",
+      "blocks": {
+        "media_1": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/patrol-slide-image1-new.jpg",
+            "title": "Magnetic Emergency Switch",
+            "intro": "<p>The magnetic emergency switch kills the power the moment you fall or step away. You just go fearless.</p>"
+          }
+        },
+        "media_2": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/patrol-slide-image2.jpg",
+            "title": "Magnetic Emergency Switch",
+            "intro": "<p>The magnetic emergency switch kills the power the moment you fall or step away. You just go fearless.</p>"
+          }
+        },
+        "media_3": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/patrol-slide-image3.jpg",
+            "title": "Magnetic Emergency Switch",
+            "intro": "<p>The magnetic emergency switch kills the power the moment you fall or step away.</p>"
+          }
+        },
+        "media_4": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/patrol-slide-image2-new.jpg",
+            "title": "Magnetic Emergency Switch",
+            "intro": "<p>The magnetic emergency switch kills the power the moment you fall or step away. You just go fearless.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "media_1",
+        "media_2",
+        "media_3",
+        "media_4"
+      ],
+      "name": "MC Patrol Card Slide",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>FREE TO GO <strong>FEARLESS</strong></p>",
+        "title_pc_size": 75,
+        "title_pc_weight": 400,
+        "title_pc_line": 110,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffe500",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30
+      }
+    },
+    "mc_patrol_photo_wall": {
+      "type": "mc_patrol-photo-wall",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image1.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image2.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image3.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image4.jpg"
+          }
+        },
+        "image_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image5.jpg"
+          }
+        },
+        "image_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/patrol-wall-image6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4",
+        "image_5",
+        "image_6"
+      ],
+      "name": "MC Patrol Photo Wall",
+      "settings": {
+        "page_color": "#000000",
+        "page_top": 10,
+        "show_title": true,
+        "title": "<p>FREE TO GO <strong>FEARLESS</strong></p>",
+        "title_pc_size": 75,
+        "title_pc_weight": 400,
+        "title_pc_line": 110,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffe500",
+        "title_gradient_color": "",
+        "show_description": true,
+        "description": "<p>With a mid-drive motor at the core, Villain planted under acceleration, steep climbs, delivering precise control when it matters most.</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "loop_speed": 1,
+        "pc_card_border_image": "shopify://shop_images/image-border-2.png"
+      }
+    },
+    "mc_patrol_param_slide": {
+      "type": "mc_patrol-param-slide",
+      "blocks": {
+        "slide1": {
+          "type": "slide",
+          "settings": {
+            "title": "Geometry",
+            "pc_image": "shopify://shop_images/patrol-bike.jpg",
+            "mb_image": "shopify://shop_images/patrol-bike.jpg",
+            "image_ratio": "5/3",
+            "param_text": "<ul><li><strong>Motor</strong>52V 4160W Mid Drive Motor</li><li><strong>Battery</strong>52V 26Ah Lithium Battery(1352Wh)</li><li><strong>Charger</strong>58.8V 5A Charger</li><li><strong>Charger Voltage</strong>100-220V, 50-60Hz</li><li><strong>Controller</strong>52V 80A Smart Controller</li><li><strong>Display</strong>LED Display</li><li><strong>Light</strong>Front White Headlight</li><li><strong>Bluetooth</strong>Bluetooth Speaker(Optional)</li></ul>"
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "title": "Specifications",
+            "pc_image": "shopify://shop_images/patrol-bike.jpg",
+            "mb_image": "shopify://shop_images/patrol-bike.jpg",
+            "image_ratio": "5/3",
+            "param_text": "<ul><li><strong>Frame</strong>Carbon Steel</li><li><strong>Tires</strong>F:14\"x2.5\" Tire; R:12\"x3.0\" Tire</li><li><strong>Front Suspension</strong>Hydraulic Suspension</li><li><strong>Rear Suspension</strong>Nitrogen Shock Absorber</li><li><strong>Front Shocks Diameter</strong>40 mm Diameter Front Fork, 150 mm Travel</li><li><strong>Brake</strong>Hydraulic Heavy Duty Brakes(4mm thick)</li><li><strong>Drivetrain/Ride Mode</strong>Chain Drive/Three-speed Zero Start</li><li><strong>Chain / Belt</strong>114 links (420 chain) Heavy Duty Chain</li></ul>"
+          }
+        },
+        "slide3": {
+          "type": "slide",
+          "settings": {
+            "title": "What's In The Box?",
+            "pc_image": "shopify://shop_images/patrol-bike.jpg",
+            "mb_image": "shopify://shop_images/patrol-bike.jpg",
+            "image_ratio": "5/3",
+            "param_text": "<ul><li><strong>Max Speed</strong>45MPH (72km/h)</li><li><strong>Max Torque</strong>190N·m</li><li><strong>Range</strong>Up to 50 Miles</li><li><strong>Charging Time</strong>0%-100% 4-6h</li><li><strong>Waterproof</strong>IPX6</li><li><strong>Max Climbing</strong>30 Degrees</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2",
+        "slide3"
+      ],
+      "name": "MC Patrol Param Slide",
+      "settings": {
+        "page_color": "",
+        "pc_image": "shopify://shop_images/patrol-param-bg.jpg",
+        "mb_image": "shopify://shop_images/mb-patrol-param-bg-new.jpg",
+        "page_top": 40,
+        "show_title": true,
+        "title": "<p>Specs & Geometry</p>",
+        "title_pc_size": 75,
+        "title_mb_size": 24,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "tab_color": "#ffffff",
+        "tab_active_color": "#ffffff",
+        "tab_bg_color": "#313131",
+        "tab_active_bg_color": "#ff2501",
+        "param_text_size": 16,
+        "mb_param_text_size": 9,
+        "card_bg_color": "#121212",
+        "param_text_color": "#ffffff",
+        "border_color": "#383838"
+      }
+    }
+  },
+  "order": [
+    "mc_patrol_font",
+    "mc_main_banner_YHyBBN",
+    "mc_patrol_gift_card",
+    "mc_patrol_subscribe",
+    "mc_media_video_dYQVLb",
+    "mc_patrol_media",
+    "mc_patrol_param_card",
+    "mc_media_image",
+    "mc_patrol_image_text",
+    "mc_main_banner_SHyBBN",
+    "mc_patrol_card_slide",
+    "mc_patrol_photo_wall",
+    "mc_patrol_param_slide"
+  ]
+}

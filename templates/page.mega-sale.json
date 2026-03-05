@@ -1,0 +1,1110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_ewRHzP": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_VeqLKj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Collection-pc_d789c6a8-c159-4f2c-953e-bb28dedd04a5.jpg",
+            "image_mobile": "shopify://shop_images/Collection_a5f7a5c8-15ac-4ea2-8ad4-47d2416fc415.jpg",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "shopify://products/hunter-pro-combo",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_Kh6xbr": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1Hunter_Pro_9820e968-2b82-46f6-ba93-38986fa88c74.png",
+            "image_mobile": "shopify://shop_images/1Hunter_Pro_2.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "shopify://products/hunter-pro-combo",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_TKaqTz": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/collection_69eb5e5e-2f5b-4a0a-b0d1-963a3f46c165.jpg",
+            "image_mobile": "shopify://shop_images/collection_M.jpg",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_VeqLKj",
+        "image_Kh6xbr",
+        "image_TKaqTz"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "autumn_sale_service_aPUfdK": {
+      "type": "autumn-sale-service",
+      "blocks": {
+        "item_9eicyF": {
+          "type": "item",
+          "settings": {
+            "title": "30 Day Price Guarantee",
+            "image_icon": "shopify://shop_images/1130.png"
+          }
+        },
+        "item_TrDawr": {
+          "type": "item",
+          "settings": {
+            "title": "Fast & Free Shipping",
+            "image_icon": "shopify://shop_images/14_594130ff-d3a3-42aa-b89d-90ed4efcdac7.png"
+          }
+        },
+        "item_fWpx4j": {
+          "type": "item",
+          "settings": {
+            "title": "Lowest Price",
+            "image_icon": "shopify://shop_images/13_f6c1ebf8-df2e-4b3c-a846-4117a5afc055.png"
+          }
+        },
+        "item_wFPrAm": {
+          "type": "item",
+          "settings": {
+            "title": "Buy Now Pay Later",
+            "image_icon": "shopify://shop_images/12_d6d7ce71-4b90-4486-958c-14d7a72652b0.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_9eicyF",
+        "item_TrDawr",
+        "item_fWpx4j",
+        "item_wFPrAm"
+      ],
+      "name": "autumn-sale-service",
+      "settings": {
+        "page_color": "#000000",
+        "image_preload": true
+      }
+    },
+    "autumn_sale_countdown_rjDi6e": {
+      "type": "autumn-sale-countdown",
+      "blocks": {
+        "countdown_U9myNd": {
+          "type": "countdown",
+          "settings": {
+            "countdown_start_date": "2025-10-30T00:00:00",
+            "duration": 2,
+            "day": "Days",
+            "hour": "Hours",
+            "minute": "Mins",
+            "second": "Secs",
+            "countdown_fill_color": "#000000",
+            "countdown_num_color": "#ffffff",
+            "countdown_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "countdown_U9myNd"
+      ],
+      "name": "autumn-sale-countdown",
+      "settings": {
+        "page_color": "#f5f0ed",
+        "show_heading": true,
+        "heading": "⚡Don't miss out 2-day limited-time Flash Sale!",
+        "heading_color": "#000000"
+      }
+    },
+    "autumn_sale_rules_bbRpn8": {
+      "type": "autumn-sale-rules",
+      "blocks": {
+        "card_YiyUjH": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-rules-icon1.png",
+            "title": "Up to $2039 Off",
+            "text": "<p>Save big on your favorite eBikes<br/>this Events.</p>"
+          }
+        },
+        "card_KdMPhG": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/lQLPJwYbRON3mHdiYrCSa22ltC2ukwj4e3otMQUB_98_98.png",
+            "title": "100% Refund",
+            "text": "<p>Join Our IG Global Community and Win a Full Refund!</p>"
+          }
+        },
+        "card_xtxcfQ": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-rules-icon2.png",
+            "title": "Free Gifts",
+            "text": "<p>Worth Up to $515</p>"
+          }
+        },
+        "card_zt93dr": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-rules-icon3.png",
+            "title": "Double the Deal",
+            "text": "<p>Order <strong>$999+</strong> & Take Extra <strong>$50 </strong>Off<br/>Order <strong>$1200+</strong> & Take Extra <strong>$100 </strong>Off</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_YiyUjH",
+        "card_KdMPhG",
+        "card_xtxcfQ",
+        "card_zt93dr"
+      ],
+      "name": "autumn-sale-rules",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "card_bg_color": "linear-gradient(180deg, rgba(255, 228, 49, 1), rgba(249, 32, 32, 1) 100%)",
+        "card_font_scale": 83,
+        "mb_card_font_scale": 92,
+        "card_text_color": "#222222",
+        "image_preload": true
+      }
+    },
+    "mc_winning_list_iMMihb": {
+      "type": "mc_winning-list",
+      "blocks": {
+        "win_mdqDVd": {
+          "type": "win",
+          "settings": {
+            "title": "<p>Nov. 1 8- k********e@gmail.com: <strong>Won Free Accessory Pack(Worth up to $337!)</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "win_mdqDVd"
+      ],
+      "disabled": true,
+      "name": "Mc Winning List",
+      "settings": {
+        "page_color": "#ffffff",
+        "show_layer_mask": true,
+        "layer_mask_opacity": 55,
+        "title": "<p>Free Order Winner</p>",
+        "title_color": "#ffffff",
+        "description": "<p>All orders placed between November 18 and December 3 will be automatically entered into our exciting Black Friday Giveaway!<br/><br/>We will randomly select three lucky winners to receive a full refund on their JasionBike order!<br/><br/>Stay tuned for the surprise winner announcements, and get ready for the chance to ride your dream Jasion e-bike for FREE!</p>",
+        "description_color": "#ffffff",
+        "content_color": "#ffffff",
+        "content_bold_color": "#f92020",
+        "slide_speed": 2
+      }
+    },
+    "autumn_sale_win_prize_hjgJft": {
+      "type": "autumn-sale-win-prize",
+      "blocks": {
+        "winner_KiUB8d": {
+          "type": "winner",
+          "settings": {
+            "title": "<p>p********y@gmail.com</p>",
+            "prize": "<p>Free Accessory <strong>(Worth $337!)</strong></p>"
+          }
+        },
+        "winner_kJPEQ4": {
+          "type": "winner",
+          "settings": {
+            "title": "<p>m***********r@yahoo.com</p>",
+            "prize": "<p>Free Order <strong>($2,260.09 OFF!)</strong></p>"
+          }
+        },
+        "winner_UzTzkU": {
+          "type": "winner",
+          "settings": {
+            "title": "<p>t********n@gmail.com</p>",
+            "prize": "<p>Free Accessory <strong>(Worth $337!)</strong></p>"
+          }
+        },
+        "winner_HGXGEc": {
+          "type": "winner",
+          "settings": {
+            "title": "<p>s******3@gmail.com</p>",
+            "prize": "<p>Full Refund <strong>($959.24 OFF)</strong></p>"
+          }
+        },
+        "winner_eN4RUC": {
+          "type": "winner",
+          "disabled": true,
+          "settings": {
+            "title": "<p>a*********a.gmail.com</p>",
+            "prize": "<p>Full Refund <strong>($2366.66 OFF)</strong></p>"
+          }
+        },
+        "winner_PWQbHC": {
+          "type": "winner",
+          "disabled": true,
+          "settings": {
+            "title": "<p>a*********a.gmail.com</p>",
+            "prize": "<p>Full Refund <strong>($2366.66 OFF)</strong></p>"
+          }
+        },
+        "second_prize_t4TFdM": {
+          "type": "second_prize",
+          "settings": {
+            "title": "Prizes",
+            "desc": "<p>4 Lucky Winners: <br/>Free Accessory Pack</p>",
+            "prize_image1": "shopify://shop_images/autumn-prize-icon1.png",
+            "prize_image2": "shopify://shop_images/autumn-prize-icon2.png",
+            "prize_image3": "shopify://shop_images/autumn-prize-icon3.png",
+            "prize_image4": "shopify://shop_images/autumn-prize-icon4.png"
+          }
+        },
+        "first_prize_njMgD8": {
+          "type": "first_prize",
+          "settings": {
+            "title": "Prizes",
+            "desc": "<p>3 Lucky Winners:</p><p><strong>Full Refund</strong> on Your JasionBike Order</p>",
+            "prize_image": "shopify://shop_images/11_6ec9c907-325f-4d5f-890d-d6e2d2d7fd95.png"
+          }
+        }
+      },
+      "block_order": [
+        "winner_KiUB8d",
+        "winner_kJPEQ4",
+        "winner_UzTzkU",
+        "winner_HGXGEc",
+        "winner_eN4RUC",
+        "winner_PWQbHC",
+        "second_prize_t4TFdM",
+        "first_prize_njMgD8"
+      ],
+      "name": "autumn-sale-win-prize",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": true,
+        "title": "<p>100% Refund</p>",
+        "description": "<p>What’s the Giveaway?</p><p>Purchase a JasionBike eBike between <strong>Nov 18 and Dec 3</strong>, and you’ll enter for a chance to WIN your dream Jasion e-bike for <strong>FREE</strong>!</p>",
+        "remark": "<p>All orders placed between November 18 and December 3 will be automatically entered into our exciting Black Friday Giveaway! We will randomly select three lucky winners to receive a <strong>full refund</strong> on their JasionBike order!</p><p>*<a href=\"https://www.jasionbike.com/pages/giveaway-terms-and-conditions\" title=\"https://www.jasionbike.com/pages/giveaway-terms-and-conditions\">Terms and Conditions</a></p>",
+        "button_text": "Enter to Win",
+        "button_url": "",
+        "desktop_gift_image": "shopify://shop_images/770_87d88553-4676-43bb-979d-ac3eff79a160.png",
+        "mobile_gift_image": "shopify://shop_images/770.png",
+        "prize_list_name": "Free Order Winner",
+        "slide_speed": 1
+      }
+    },
+    "mc_image_content_itNmYq": {
+      "type": "mc_image-content",
+      "blocks": {
+        "text_J6wq43": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>🎉 What’s the Giveaway?<br/>Purchase a JasionBike eBike between Nov 18 and Dec 3, and you’ll enter for a chance to WIN your dream Jasion e-bike for FREE!<br/><br/>🏆 Prizes<br/>🥇 3 Lucky Winners: Full Refund on Your JasionBike Order<br/>🥈 4 Lucky Winners: Free Accessory Pack<br/>1× Helmet<br/>1× Phone Holder<br/>1× Universal Mirror<br/>1× Rear Basket</p>",
+            "text_color": "#000000",
+            "text_background_color": "#ffffff",
+            "text_gradient_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_J6wq43"
+      ],
+      "disabled": true,
+      "name": "MC Image Content",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "title": "100% Refund",
+        "title_color": "#ffffff",
+        "title_gradient_color": "linear-gradient(180deg, rgba(255, 228, 49, 1) 11%, rgba(249, 32, 32, 1) 87%)",
+        "button": "Learn More",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#ff981d",
+        "button_url": "https://www.instagram.com/jasionbike/p/DROKFtCgVfP/",
+        "rule_text": "<p><br/>🎉 What’s the Giveaway?<br/>Purchase a JasionBike eBike between Nov 18 and Dec 3, and you’ll enter for a chance to WIN your dream Jasion e-bike for FREE!<br/><br/>🏆 Prizes<br/>🥇 3 Lucky Winners: Full Refund on Your JasionBike Order<br/>🥈 4 Lucky Winners: Free Accessory Pack<br/>1× Helmet<br/>1× Phone Holder<br/>1× Universal Mirror<br/>1× Rear Basket</p>",
+        "rule_text_color": "#171717",
+        "pc_product_image": "shopify://shop_images/b09a83a554c9480eb71be402d5887347.gif",
+        "image_position": "left",
+        "intro": "",
+        "intro_color": "#ffffff"
+      }
+    },
+    "image_with_text_6FKf9D": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ekrwcb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>FREE ORDER WINNER</p>",
+            "heading_size": "title-md",
+            "heading_tag": "h3",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_dWd8Mt": {
+          "type": "text",
+          "settings": {
+            "text": "Order placed between Nov 18–Dec 3, get a chance to WIN your dream Jasion e-bike for <strong>FREE!</strong><br>\n🥇 <strong>Three </strong>lucky winner gets a Full Refund JasionBike on your order!<br>\n🥈 Extra Bonus: Jasion Accessory Pack — includes<br>\n1 x Helmet, <br>\n1 x Phone Holder, <br>\n1 x Rearview Mirror, <br>\n1 x Rear Rack<br>\n📅 Five Winner Announcement: <strong>December 4</strong><br>\n* Open to US residents only. JasionBike reserves all rights.",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ekrwcb",
+        "text_dWd8Mt"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/jasion_win_bike.jpg",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "center",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "autumn_sale_product_card_fkC9CE": {
+      "type": "autumn-sale-product-card",
+      "blocks": {
+        "product_item_QrQBVP": {
+          "type": "product_item",
+          "disabled": true,
+          "settings": {
+            "product": "jasion®eb5-roamer-ebike",
+            "product_price_color": "#ff981d",
+            "pc_product_image": "shopify://shop_images/eb5_roame.png",
+            "show_spec": true,
+            "spec_text_color": "dark",
+            "payment_text": "Pay over time with 0% interes",
+            "gift_list": [],
+            "remark": "Now,as part of the Pre-Order, we are offering free Fender Set and a Rear Rack, a total value of $515.",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#ffdb00",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000"
+          }
+        },
+        "product_item_Gx4Utj": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion-x-hunter",
+            "product_price_color": "#fe0000",
+            "pc_product_image": "shopify://shop_images/X-Hunter_5853387f-ac5d-4248-a4f6-7ae96559b92d.jpg",
+            "mb_product_image": "shopify://shop_images/lQLPJxIko0gHvbfNAerNAtCw4qK8mtzrwSEI-w83XItzAQ_720_490.png",
+            "show_spec": false,
+            "spec_text_color": "dark",
+            "payment_text": "Pay over time with 0% interes",
+            "payment_icon1": "shopify://shop_images/autumn-shop-pay.png",
+            "payment_icon2": "shopify://shop_images/autumn-klarna.png",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "jasion-ebike-front-basket-1",
+              "copy-of-jasion®-bicycle-universal-mirrors",
+              "fenders-for-jasion-eb7"
+            ],
+            "remark": "Save $1,397 total! Score $1,040 OFF early + Free Gifts (worth $436) on X-Hunter. Get your eBike now—win a <strong>FULL Refund </strong>!  <strong>Nov 18 to Dec 3 only!</strong>",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#ff981d",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion-x-hunter",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000"
+          }
+        },
+        "product_item_f3BFBR": {
+          "type": "product_item",
+          "disabled": true,
+          "settings": {
+            "product": "thunder",
+            "product_price_color": "#fe0000",
+            "pc_product_image": "shopify://shop_images/Thunder_9f938813-9f16-4ac3-a5a3-1f2da550d1f3.png",
+            "show_spec": false,
+            "spec_text_color": "dark",
+            "payment_text": "Pay over time with 0% interes",
+            "payment_icon1": "shopify://shop_images/autumn-shop-pay_1.png",
+            "payment_icon2": "shopify://shop_images/autumn-klarna_1.png",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7",
+              "copy-of-jasion®-bicycle-universal-mirrors"
+            ],
+            "remark": "Save $1,257 total! Score $900 OFF early + Free Gifts (worth $357) on Thunder. Get your eBike now—win a FULL refund! Nov 18 to Dec 3 only!\"",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#ff981d",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000"
+          }
+        },
+        "product_item_4za3JA": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "product_price_color": "#fe0000",
+            "pc_product_image": "shopify://shop_images/Hunter_Pro.png",
+            "mb_product_image": "shopify://shop_images/lQLPKHERy8r4LrfNAerNAtCw_hgJpyie94AI-w83XItzAA_720_490.png",
+            "show_spec": false,
+            "spec_text_color": "dark",
+            "payment_text": "Pay over time with 0% interes",
+            "payment_icon1": "shopify://shop_images/autumn-shop-pay_167a4bc2-8db0-4715-8d79-c1550e47b29d.png",
+            "payment_icon2": "shopify://shop_images/autumn-klarna_115f18dd-2496-4012-8f07-325da80cbf86.png",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7",
+              "copy-of-jasion®-bicycle-universal-mirrors"
+            ],
+            "remark": "Save <strong>$1,476</strong>total! Score <strong>$900 OFF</strong> early + <strong>Free Gifts</strong> (worth $357) +Extra $50 on Hunter Pro. Get your eBike now—win a <strong>FULL Refund </strong>!  <strong>Nov 18 to Dec 3 only!</strong>",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#ff981d",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "product_item_QrQBVP",
+        "product_item_Gx4Utj",
+        "product_item_f3BFBR",
+        "product_item_4za3JA"
+      ],
+      "name": "autumn-sale-product-card",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": false,
+        "heading": "Don't miss out 2-day limited-time Flash Sale!",
+        "heading_color": "#000000",
+        "tag_color": "#ffffff",
+        "tag_bg_color": "linear-gradient(90deg, rgba(255, 15, 41, 1) 3%, rgba(255, 152, 29, 1) 97%)"
+      }
+    },
+    "autumn_sale_product_list_kb7cx4": {
+      "type": "autumn-sale-product-list",
+      "blocks": {
+        "product_item_AK63Ad": {
+          "type": "product_item",
+          "settings": {
+            "product": "retrovolt-pro",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/retrovolt-pro"
+          }
+        },
+        "product_item_qNkYPg": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro-combo",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro-combo"
+          }
+        },
+        "product_item_44gqyE": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion®-combo-sale-x-hunter-2",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion®-combo-sale-x-hunter-2"
+          }
+        },
+        "product_item_Y7Tb7d": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion-x-hunter",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion-x-hunter"
+          }
+        },
+        "product_item_xPtqMB": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "payment_text": "Pay over time with 0% interes",
+            "payment_icon1": "shopify://shop_images/autumn-shop-pay.png",
+            "payment_icon2": "shopify://shop_images/autumn-klarna.png",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro"
+          }
+        },
+        "product_item_cwqA7b": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder"
+          }
+        },
+        "product_item_dxWPHa": {
+          "type": "product_item",
+          "disabled": true,
+          "settings": {
+            "product": "retrovolt-pro-combo",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion®eb5-roamer-ebike"
+          }
+        }
+      },
+      "block_order": [
+        "product_item_AK63Ad",
+        "product_item_qNkYPg",
+        "product_item_44gqyE",
+        "product_item_Y7Tb7d",
+        "product_item_xPtqMB",
+        "product_item_cwqA7b",
+        "product_item_dxWPHa"
+      ],
+      "name": "autumn-sale-product-list",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": true,
+        "heading": "🔥 Best-Seller Picks for BFCM",
+        "tag_color": "#ffffff",
+        "tag_bg_color": ""
+      }
+    },
+    "autumn_sale_product_bundle_x89AMR": {
+      "type": "autumn-sale-product-bundle",
+      "blocks": {
+        "discount_item_ypc9pt": {
+          "type": "discount_item",
+          "settings": {
+            "full_price": 1200,
+            "discount_price": 100,
+            "discount_code": "BFEX100"
+          }
+        },
+        "discount_item_3EDXAP": {
+          "type": "discount_item",
+          "settings": {
+            "full_price": 3000,
+            "discount_price": 150,
+            "discount_code": "BFCM150"
+          }
+        },
+        "product_item_3XNajb": {
+          "type": "product_item",
+          "settings": {
+            "product_list1": [
+              "retrovolt-pro",
+              "hunter-pro",
+              "jasion-x-hunter",
+              "thunder",
+              "jasion-yr20",
+              "jasion-eb7-electric-bike",
+              "jasion®eb5-st-roamer-ebike",
+              "jasion®eb5-roamer-ebike",
+              "x-hunter-road-trip",
+              "eb5-roamer-st-road-trip",
+              "eb7-2-0-road-trip",
+              "hunter-pro-combo",
+              "retrovolt-pro-combo",
+              "jasion®-combo-sale-x-hunter-2",
+              "thunder-combo",
+              "x-hunter-2-long-range",
+              "jasion-ebike-combo-sale-yr20-2",
+              "combo-sale-eb7-2-0-folding-fat-tire-electric-bike",
+              "jasion-ebike®combo-sale-eb5-roamer-st",
+              "jasion-ebike®combo-sale-eb5-roamer",
+              "jasion-ebike-combo-sale-x-hunter-eb7-2-0",
+              "jasion-ebike®combo-sale-eb5-roamer-eb5-roamer-st",
+              "eb5-roamer-st-2-long-range"
+            ],
+            "product_list2": [
+              "hunter-pro",
+              "retrovolt-pro",
+              "jasion-x-hunter",
+              "thunder",
+              "jasion-yr20",
+              "jasion®eb5-st-roamer-ebike",
+              "jasion®eb5-roamer-ebike",
+              "jasion-eb7-electric-bike",
+              "x-hunter-road-trip",
+              "eb5-roamer-st-road-trip",
+              "eb7-2-0-road-trip",
+              "hunter-pro-combo",
+              "retrovolt-pro-combo",
+              "jasion®-combo-sale-x-hunter-2",
+              "thunder-combo",
+              "x-hunter-2-long-range",
+              "jasion-ebike-combo-sale-yr20-2",
+              "combo-sale-eb7-2-0-folding-fat-tire-electric-bike",
+              "jasion-ebike®combo-sale-eb5-roamer-st",
+              "jasion-ebike®combo-sale-eb5-roamer",
+              "jasion-ebike-combo-sale-x-hunter-eb7-2-0",
+              "jasion-ebike®combo-sale-eb5-roamer-eb5-roamer-st",
+              "eb5-roamer-st-2-long-range"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "discount_item_ypc9pt",
+        "discount_item_3EDXAP",
+        "product_item_3XNajb"
+      ],
+      "name": "autumn-product-bundle",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "pc_discount_url": "shopify://shop_images/autumn-sale-product-bundle-back.png",
+        "discount_title": "Bundle & Save – Stack Your Discounts!",
+        "discount_text": "<p>Extra <strong>$100</strong> OFF on $1200, <strong>$150</strong> OFF on $3,000</p>",
+        "pc_checkout_url": "shopify://shop_images/product-image1.png",
+        "checkout_text": "Proceed to Checkout"
+      }
+    },
+    "autumn_sale_trust_dUP3HQ": {
+      "type": "autumn-sale-trust",
+      "blocks": {
+        "count_9fPfD7": {
+          "type": "count",
+          "settings": {
+            "title": "88888+",
+            "text": "<p>Jasion Riders<br/>Recognition from knights around the world</p>"
+          }
+        },
+        "count_BYt8Gd": {
+          "type": "count",
+          "settings": {
+            "title": "13K+",
+            "text": "<p>5-Star Reviews<br/>The knights give an honest opinion</p>"
+          }
+        },
+        "count_ib6NPK": {
+          "type": "count",
+          "settings": {
+            "title": "1000+",
+            "text": "<p>Professional Review<br/>What the professional media really thinks of us</p>"
+          }
+        },
+        "service_W49x43": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-trust-icon1.png",
+            "title": "14-Day Trial"
+          }
+        },
+        "service_iUzPwi": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-trust-icon2.png",
+            "title": "A+ Customer Service"
+          }
+        },
+        "service_rfFBmf": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-trust-icon3.png",
+            "title": "Local Warehouse"
+          }
+        },
+        "service_bpERwY": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/autumn-sale-trust-icon4.png",
+            "title": "1 Year Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "count_9fPfD7",
+        "count_BYt8Gd",
+        "count_ib6NPK",
+        "service_W49x43",
+        "service_iUzPwi",
+        "service_rfFBmf",
+        "service_bpERwY"
+      ],
+      "name": "autumn-sale-trust",
+      "settings": {
+        "desktop_image": "shopify://shop_images/autumn-sale-trust-back.png",
+        "mobile_image": "shopify://shop_images/autumn-sale-trust-back.png",
+        "show_heading": true,
+        "heading": "Why Thousands Trust Our Ride"
+      }
+    },
+    "autumn_sale_community_video_y9RFFf": {
+      "type": "autumn-sale-community-video",
+      "blocks": {
+        "video_KMnAdR": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": true,
+            "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "date": "2025/10/12",
+            "content": "Like A Super73.. But a THIRD of The Price?! | Jasion Retrovolt Pro Review",
+            "avatar": "shopify://shop_images/channels4_profile_c3e4fbd8-eb7e-4beb-9ab1-493a62b0fcf7.jpg",
+            "author": "Raspy Rides"
+          }
+        },
+        "video_F9ApfL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
+            "date": "2025/6/20",
+            "content": "1,194 people have given this bike a 4.5 star rating",
+            "avatar": "shopify://shop_images/channels4_profile_1_9eb8fbf7-40cd-40cd-937b-641976e15af8.jpg",
+            "author": "Electric Revolution"
+          }
+        },
+        "video_HnB7wB": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
+            "date": "2025/7/29",
+            "content": "The JasionBike Thunder…1,500 Watts and 30 MPH for UNDER $1,000! Get out and Live Electric Life!",
+            "avatar": "shopify://shop_images/channels4_profile_30_936b2579-daaf-489b-8b35-7fea2312569a.jpg",
+            "author": "EbikeProducts"
+          }
+        },
+        "video_QDBpJ6": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Sa0JeRX-YfY&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=5",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=Sa0JeRX-YfY&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=5",
+            "date": "2025/10/29",
+            "content": "JASION X-Hunter Ebike Review - NEWEST UPGRADED VERSION",
+            "avatar": "shopify://shop_images/483484232_122189012252250183_2874798791765895331_n_77a29ba0-51e8-4a73-8e43-28675ac8fb10.jpg",
+            "author": "Papa`s Product Reviews"
+          }
+        },
+        "video_HnB7wB1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=FTCK4ppjSOE",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=FTCK4ppjSOE",
+            "date": "2025/10/29",
+            "content": "BEST CHEAP BUDGET FOLDING EBike WIth Full Suspension?",
+            "avatar": "shopify://shop_images/channels4_profile_3_5fbf7fc2-8df7-4aae-9c0b-e131fba67f55.jpg",
+            "author": "HeroesNStuff"
+          }
+        }
+      },
+      "block_order": [
+        "video_KMnAdR",
+        "video_F9ApfL",
+        "video_HnB7wB",
+        "video_QDBpJ6",
+        "video_HnB7wB1"
+      ],
+      "name": "autumn-sale-video",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": true,
+        "heading": "Real Reviews, Real Riders!"
+      }
+    },
+    "autumn_sale_says_9RUVcG": {
+      "type": "autumn-sale-says",
+      "blocks": {
+        "say_Bd33R8": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>If you're more concerned about safety than commute distance, you'll enjoy the front fork suspension, front and rear mechanical disc brakes, and more.</p>",
+            "image_icon": "shopify://shop_images/17_c7a32e0e-d33f-406e-a52e-077060f12ea3.jpg"
+          }
+        },
+        "say_nbxpaR": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>Users enjoy the long battery life and smooth ride. They also like the compact design, which works well for city commuting. The user-friendly controls make day-to-day operations simple and efficient.</p>",
+            "image_icon": "shopify://shop_images/1_2a200d81-f781-46f2-8779-b9ddb93f59b8.jpg"
+          }
+        },
+        "say_zGMMxf": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>Don't worry about riding at night as this bike has bright LED headlights, rear reflectors and reflective strips on the tires so you'll be seen even in the dark.</p>",
+            "image_icon": "shopify://shop_images/10_02caecc6-8216-4f34-8d7c-2a448a000a7c.jpg"
+          }
+        },
+        "say_p8cfKf": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>This fat tire bike has everything you need to take on your next adventure: integrated lights, shock-absorption fat tires, and a lightning-quick twist throttle for a boost.</p>",
+            "image_icon": "shopify://shop_images/9_d78ce27d-5d1a-430e-80be-2f00617dc1e6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "say_Bd33R8",
+        "say_nbxpaR",
+        "say_zGMMxf",
+        "say_p8cfKf"
+      ],
+      "name": "autumn-sale-trust",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": true,
+        "heading": "What They Say"
+      }
+    },
+    "autumn_sale_media_comments_6dhjFb": {
+      "type": "autumn-sale-media-comments",
+      "blocks": {
+        "media_wbbaeK": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/2_acb06d4f-6c1f-4583-a76d-8c2d9c48c354.png",
+            "mobile_image": "shopify://shop_images/2_acb06d4f-6c1f-4583-a76d-8c2d9c48c354.png",
+            "score": 5,
+            "intro": "<p>Great product. Excellent communication and fast shipping. Bike was exactly as described and did not disappoint from the unpacking to my last ride! Jasionbike is our brand Only fault was mine, should have ordered one for my wife!!</p>",
+            "title": "Michael R."
+          }
+        },
+        "media_6Fq4TE": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/7_162f3256-a6b0-41a7-bb56-55c01b642e94.png",
+            "mobile_image": "shopify://shop_images/7_162f3256-a6b0-41a7-bb56-55c01b642e94.png",
+            "score": 5,
+            "intro": "<p>These bikes are the bomb!!!!!! Completely satisfied with our purchase of two Hunter Pro bikes. Easy to assemble, a very short learning curve - and an intuitive app.</p>",
+            "title": "Hazer"
+          }
+        },
+        "media_EQqnDg": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5_cca13ef3-16b4-4122-bcc8-34f8328b75e2.png",
+            "mobile_image": "shopify://shop_images/5_cca13ef3-16b4-4122-bcc8-34f8328b75e2.png",
+            "score": 5,
+            "intro": "<p>The retro revolt pro bike is the greatest bike I’ve ever ridden I like it so much I’m thinking about becoming a dealer or buying a couple dozen and reselling them!</p>",
+            "title": "Raspy Rides"
+          }
+        },
+        "media_8aA4gV": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
+            "mobile_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
+            "score": 5,
+            "intro": "<p>My new bike was shipped very promptly. Received in excellent condition. Assembly was very easy and intuitive. Riding the Thunder is so much fun. I'm 55 and feel like a kid again. Thank you Jasion!</p>",
+            "title": "Scot R.A."
+          }
+        },
+        "media_aDaPiY": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_fbd9bec1-285d-418d-bf15-f117161676c3.png",
+            "mobile_image": "shopify://shop_images/product-image2.png",
+            "score": 5,
+            "intro": "<p>My husband has enjoyed this e-bike! It’s great for the price point. He likes that it has gears. The seat is very comfortable. The bike came within 2 weeks.</p>",
+            "title": "Annette S. "
+          }
+        },
+        "media_aX9Kyq": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/3_5c036d94-8611-471f-980c-652507a75acb.png",
+            "mobile_image": "shopify://shop_images/3_5c036d94-8611-471f-980c-652507a75acb.png",
+            "score": 5,
+            "intro": "<p>This was a gift bought for my husband. He takes it hunting and to pull deer out of the woods. He said it rides very smooth even on rough terrain.</p>",
+            "title": "Papa"
+          }
+        }
+      },
+      "block_order": [
+        "media_wbbaeK",
+        "media_6Fq4TE",
+        "media_EQqnDg",
+        "media_8aA4gV",
+        "media_aDaPiY",
+        "media_aX9Kyq"
+      ],
+      "name": "autumn-sale-comments",
+      "settings": {
+        "page_color": "#f9f7f6",
+        "show_heading": true,
+        "heading": "Real Riders Speak"
+      }
+    },
+    "autumn_sale_sign_up": {
+      "type": "autumn-sale-sign-up",
+      "blocks": {
+        "pay_Bd33R8": {
+          "type": "pay",
+          "settings": {
+            "image_icon1": "shopify://shop_images/autumn-shop-pay.png",
+            "image_icon2": "shopify://shop_images/autumn-klarna.png",
+            "tag": "Ride Now, Pay Later",
+            "text": "<p>Limited-Time <strong>0% APR</strong> for 4 Months</p>",
+            "remark": "A $1,599 purchase costs $66.62/month for 24 months at 0% APR."
+          }
+        },
+        "form_zGMMxf": {
+          "type": "form",
+          "settings": {
+            "title": "Sign up forthe latest and greatest",
+            "intro": "Subscribe to stay up-to-date with ourlatestnews, promotions, ande-bike tips. Everything you need for happy e-biking!",
+            "button": "Join Us",
+            "placeholder": "Your email"
+          }
+        }
+      },
+      "block_order": [
+        "pay_Bd33R8",
+        "form_zGMMxf"
+      ],
+      "name": "autumn-sale-sign-up",
+      "settings": {
+        "desktop_image": "shopify://shop_images/autumn-sale-sign-up-back-img.jpg",
+        "mobile_image": "shopify://shop_images/autumn-sale-sign-up-back-img.jpg"
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "slideshow_hb_ewRHzP",
+    "autumn_sale_service_aPUfdK",
+    "autumn_sale_countdown_rjDi6e",
+    "autumn_sale_rules_bbRpn8",
+    "mc_winning_list_iMMihb",
+    "autumn_sale_win_prize_hjgJft",
+    "mc_image_content_itNmYq",
+    "image_with_text_6FKf9D",
+    "autumn_sale_product_card_fkC9CE",
+    "autumn_sale_product_list_kb7cx4",
+    "autumn_sale_product_bundle_x89AMR",
+    "autumn_sale_trust_dUP3HQ",
+    "autumn_sale_community_video_y9RFFf",
+    "autumn_sale_says_9RUVcG",
+    "autumn_sale_media_comments_6dhjFb",
+    "autumn_sale_sign_up"
+  ]
+}

@@ -1,0 +1,300 @@
+{% assign ss = section.settings %}
+{%- assign countdown = section.blocks | where: 'type', 'countdown' | first -%}
+{%- assign cs = countdown.settings -%}
+<style>
+    .autumn-sale-countdown {
+        padding: 25px 0;
+    }
+
+    .autumn-sale-countdown .title {
+        color: {{ ss.heading_color }};
+        padding-bottom: 18px;
+    }
+
+    .autumn-sale-countdown .countdown {
+        gap: 43px;
+    }
+
+    .autumn-sale-countdown .countdown .countdown-item {
+        width: 84px;
+    }
+
+    .autumn-sale-countdown .countdown .countdown-item:last-of-type:before {
+        display: none;
+    }
+
+    .autumn-sale-countdown .countdown .countdown-item:before {
+        content: ":";
+        font-size: 48px;
+        font-weight: 900;
+        color: {{ cs.countdown_text_color }};
+        position: absolute;
+        right: -30px;
+        top: 36px;
+        transform: translateY(-50%);
+    }
+
+    .autumn-sale-countdown .countdown .num {
+        width: 100%;
+        height: 82px;
+        background-color: {{ cs.countdown_fill_color }};
+        border-radius: 16px;
+        color: {{ cs.countdown_num_color }};
+        font-size: 49px;
+        font-weight: 900;
+        text-align: center;
+        box-sizing: border-box;
+        line-height: 82px;
+        border: 0 none;
+    }
+    .autumn-sale-countdown .countdown .num:disabled {
+       background-color: {{ cs.countdown_fill_color }} !important;
+       color: {{ cs.countdown_num_color }} !important;
+       opacity: 1 !important;
+    }
+
+    .autumn-sale-countdown .countdown .name {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: {{ cs.countdown_text_color }};
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-countdown {
+            padding: 1.0416666667rem 0;
+        }
+
+        .autumn-sale-countdown .title {
+            font-size: 0.6944444444rem;
+            padding-bottom: 0.78125rem;
+        }
+
+        .autumn-sale-countdown .countdown {
+            gap: 1.4756944444rem;
+        }
+
+        .autumn-sale-countdown .countdown .countdown-item {
+            width: 2.9079861111rem;
+        }
+
+        .autumn-sale-countdown .countdown .countdown-item:before {
+            font-size: 1.6927083333rem;
+            right: -0.9982638889rem;
+            top: 1.2586805556rem;
+        }
+
+        .autumn-sale-countdown .countdown .num {
+            height: 2.8428819444rem;
+            border-radius: 0.2821180556rem;
+            font-size: 1.6927083333rem;
+            line-height: 2.8428819444rem;
+        }
+
+        .autumn-sale-countdown .countdown .name {
+            font-size: 0.5642361111rem;
+            padding-top: 0.3472222222rem;
+        }
+    }
+    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-countdown' %}
+</style>
+<div class="autumn-sale-countdown w-full" id="{{ section.id }}-countdown">
+    {%- if ss.show_heading -%}
+        <div class="title tw-text-center tw-text-base tw-font-bold">{{ ss.heading }}</div>
+    {%- endif -%}
+    {%- if countdown != blank -%}
+        {%- assign bs = countdown.settings -%}
+        <div class="countdown flex-center">
+            <div class="countdown-item tw-relative flex-center-col">
+                <input node-name="day" disabled type="text" class="num" value="00">
+                <div class="name">{{ bs.day }}</div>
+            </div>
+            <div class="countdown-item tw-relative flex-center-col">
+                <input node-name="hour" disabled type="text" class="num" value="00">
+                <div class="name">{{ bs.hour }}</div>
+            </div>
+            <div class="countdown-item tw-relative flex-center-col">
+                <input node-name="minute" disabled type="text" class="num" value="00">
+                <div class="name">{{ bs.minute }}</div>
+            </div>
+            <div class="countdown-item tw-relative flex-center-col">
+                <input node-name="second" disabled type="text" class="num" value="00">
+                <div class="name">{{ bs.second }}</div>
+            </div>
+        </div>
+    {%- endif -%}
+</div>
+{%- if countdown != blank -%}
+    <script>
+        (function () {
+            const node = document.getElementById('{{ section.id }}-countdown');
+            const nodeList = $heybike.getNodeList(node);
+            const MILLISECONDS_SECOND = 1000;
+            const MILLISECONDS_MINUTE = 60 * MILLISECONDS_SECOND;
+            const MILLISECONDS_HOUR = 60 * MILLISECONDS_MINUTE;
+            const MILLISECONDS_DAY = 24 * MILLISECONDS_HOUR;
+            const getDoubleDigit = (val) => {
+                if (val < 10) {
+                    return `0${val}`;
+                }
+                return val;
+            };
+
+            const formatTime = (count) => {
+                const days = Math.max(0, Math.floor(count / MILLISECONDS_DAY));
+                const hours = Math.max(0, Math.floor((count % MILLISECONDS_DAY) / MILLISECONDS_HOUR));
+                const minutes = Math.max(0, Math.floor((count % MILLISECONDS_HOUR) / MILLISECONDS_MINUTE));
+                const seconds = Math.max(0, Math.floor((count % MILLISECONDS_MINUTE) / MILLISECONDS_SECOND));
+                nodeList.day.value = getDoubleDigit(days);
+                nodeList.hour.value = getDoubleDigit(hours);
+                nodeList.minute.value = getDoubleDigit(minutes);
+                nodeList.second.value = getDoubleDigit(seconds);
+            };
+
+            let startDate = new Date("{{ countdown.settings.countdown_start_date }}");// 目标时间
+            const storeNow = new Date("{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}").getTime(); // 初始店铺时间
+            const timeOffset = storeNow - Date.now();
+            const cycleDuration = {{countdown.settings.duration}} * 24 * 60 * 60 * 1000; // 周期长度，单位为毫秒
+
+            const startTimer = () => {
+                const interval = 1000;
+                const timeout = setInterval(() => {
+                    const now = Date.now() + timeOffset;
+                    // 计算从初始时间到当前时间的差值
+                    const elapsedTime = now - startDate;
+                    // 计算当前周期剩余的时间
+                    const remainingTime = cycleDuration - (elapsedTime % cycleDuration);  // 取余数确保倒计时保持周期性
+                    formatTime(remainingTime);
+                    // 如果倒计时完成，重新开始下一个周期
+                    if (remainingTime <= 0) {
+                        // 设置新的开始时间为当前时间
+                        startDate = Date.now();
+                    }
+                }, interval);
+            };
+
+            startTimer();
+        })();
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Autumn Sale Countdown",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-countdown"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "SALE ENDS IN:"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "countdown",
+      "name": "Countdown",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "countdown_start_date",
+          "label": "Select start date for countdown",
+          "default": "2024-12-02T00:00:00",
+          "info": "2024-12-02T00:00:00"
+        },
+        {
+          "type": "range",
+          "id": "duration",
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "unit": "Day",
+          "label": "Duration days",
+          "default": 7
+        },
+        {
+          "type": "text",
+          "id": "day",
+          "label": "Day",
+          "default": "Days"
+        },
+        {
+          "type": "text",
+          "id": "hour",
+          "label": "Hour",
+          "default": "Hours"
+        },
+        {
+          "type": "text",
+          "id": "minute",
+          "label": "Minute",
+          "default": "Mins"
+        },
+        {
+          "type": "text",
+          "id": "second",
+          "label": "Second",
+          "default": "Secs"
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+          "label": "Countdown fill color",
+          "type": "color",
+          "id": "countdown_fill_color",
+          "default": "#000000"
+        },
+        {
+          "label": "countdown num color",
+          "type": "color",
+          "id": "countdown_num_color",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Countdown text color",
+          "type": "color",
+          "id": "countdown_text_color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,18 @@
+{
+  "name": "jasionride",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev --store jasionride",
+    "pull": "shopify theme pull --store jasionride",
+    "prod:push": "shopify theme push --store jasionride",
+    "ug:theme": "terser assets/theme.js -o assets/theme.min.js -c -m",
+    "ug:comm": "terser assets/heybike-common.js -o snippets/heybike-common.liquid -c -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quxiaohai/jasionride.git"
+  },
+  "private": true
+}

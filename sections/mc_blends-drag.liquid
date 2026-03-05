@@ -1,0 +1,400 @@
+{%- liquid
+    assign ss = section.settings
+    assign aspect_ratio = '16 / 9'
+    if ss.pc_before_image_url != blank
+        assign aspect_ratio = ss.pc_before_image_url.aspect_ratio
+    elsif ss.pc_after_image_url != blank
+        assign aspect_ratio = ss.pc_after_image_url.aspect_ratio
+    endif
+    assign mb_aspect_ratio = aspect_ratio
+    if ss.mb_before_image_url != blank
+        assign mb_aspect_ratio = ss.mb_before_image_url.aspect_ratio
+    elsif ss.mb_after_image_url != blank
+        assign mb_aspect_ratio = ss.mb_after_image_url.aspect_ratio
+    endif
+-%}
+<style>
+    .mc_blends-drag {
+        padding: 80px 0;
+        background: #FFFFFF;
+    }
+    .mc_blends-drag .drag-wrap {
+        width: {{ ss.image_width }}%;
+        aspect-ratio: {{ aspect_ratio }};
+        border-radius: {{ ss.image_radius }}px;
+    }
+    .mc_blends-drag .image-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .mc_blends-drag .image-before {
+        z-index: 2;
+        width: 50%;
+    }
+    .mc_blends-drag .drag-move {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+    .mc_blends-drag .image-wrap .cover {
+        width: calc((100vw - var(--page-padding) * 2) * {{ ss.image_width | divided_by: 100.0 }});
+    }
+    .mc_blends-drag .drag-btn {
+        height: 100%;
+    }
+    .mc_blends-drag .drag-btn .line {
+        height: 100%;
+        width: 2px;
+        background: #FFFFFF;
+        cursor: ew-resize;
+        margin: 0 12px;
+    }
+    .mc_blends-drag .drag-btn .move-btn {
+        width: 40px;
+        height: 40px;
+        cursor: ew-resize;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_blends-drag {
+            padding: 2.4038461538rem 0;
+        }
+        .mc_blends-drag .drag-wrap {
+            width: {{ ss.mb_image_width }}%;
+            aspect-ratio: {{ mb_aspect_ratio }};
+            border-radius: {{ ss.mb_image_radius }}px;
+        }
+        .mc_blends-drag .drag-btn .line {
+            margin: 0 0.6009615385rem;
+        }
+        .mc_blends-drag .drag-btn .move-btn {
+            width: 1.2019230769rem;
+            height: 1.2019230769rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_blends-drag section--page" id="{{ section.id }}-drag">
+    {% render 'section-title', info: ss %}
+    <div class="drag-content w-full page-width">
+        <div class="drag-wrap relative overflow-hidden">
+            <div class="image-before image-wrap" node-name="before">
+                <div class="cover h-full">
+                    {% render 'global-image',
+                        desktop_img: ss.pc_before_image_url,
+                        desktop_size: 1440,
+                        mobile_img: ss.mb_before_image_url,
+                        mobile_size: 750
+                    %}
+                </div>
+            </div>
+            <div class="image-after image-wrap">
+                <div class="cover h-full">
+                    {% render 'global-image',
+                        desktop_img: ss.pc_after_image_url,
+                        desktop_size: 1440,
+                        mobile_img: ss.mb_after_image_url,
+                        mobile_size: 750
+                    %}
+                </div>
+            </div>
+            <div class="drag-move flex-center" node-name="dragMove">
+                <div class="drag-btn flex-center" node-name="drag">
+                    <svg
+                        class="move move-btn"
+                        xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M21.4719 25.675C21.0854 26.0615 20.4589 26.0615 20.0724 25.675L11.9088 17.5114C11.3935 16.9961 11.3935 16.1607 11.9088 15.6454L20.0724 7.48182C20.4589 7.09537 21.0854 7.09537 21.4719 7.48182C21.8583 7.86828 21.8583 8.49484 21.4719 8.8813L13.7748 16.5784L21.4719 24.2755C21.8583 24.662 21.8583 25.2885 21.4719 25.675Z"
+                              fill="{{ ss.drop_arrow_color }}"/>
+                    </svg>
+                    <div class="line move"></div>
+                    <svg
+                        class="move move-btn"
+                        xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11.1961 7.12578C11.5825 6.73932 12.2091 6.73932 12.5956 7.12578L20.7592 15.2894C21.2744 15.8047 21.2744 16.6401 20.7592 17.1554L12.5956 25.319C12.2091 25.7054 11.5825 25.7054 11.1961 25.319C10.8096 24.9325 10.8096 24.3059 11.1961 23.9195L18.8932 16.2224L11.1961 8.52525C10.8096 8.1388 10.8096 7.51223 11.1961 7.12578Z"
+                              fill="{{ ss.drop_arrow_color }}"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $heybike.on('DOMContentLoaded', () => {
+        const node = document.getElementById('{{ section.id }}-drag');
+        const nodeList = $heybike.getNodeList(node);
+        let width = nodeList.before.offsetWidth;
+        let startX = 0;
+
+        $heybike.on('resize:width', () => {
+            nodeList.before.style.width = '';
+            nodeList.drag.style.transform = `translateX(0)`;
+            width = nodeList.before.offsetWidth;
+            startX = 0;
+        });
+
+        nodeList.dragMove.addEventListener('mousedown', e => {
+            if ($heybike.isMobile || !e.target.classList.contains('move')) {
+                return false;
+            }
+
+            e.preventDefault();
+            const pageX = e.pageX;
+            let moveX = 0;
+            let _mousemove = (ev) => {
+                ev.preventDefault();
+                moveX = ev.pageX - pageX;
+                nodeList.drag.style.transform = `translateX(${moveX + startX}px)`;
+                nodeList.before.style.width = width + moveX + 'px';
+            };
+
+            let _mouseup = () => {
+                nodeList.dragMove.removeEventListener('mousemove', _mousemove);
+                nodeList.dragMove.removeEventListener('mouseup', _mouseup);
+                width = width + moveX;
+                startX = moveX + startX;
+                _mousemove = undefined;
+                _mouseup = undefined;
+            };
+
+            nodeList.dragMove.addEventListener('mousemove', _mousemove);
+            nodeList.dragMove.addEventListener('mouseup', _mouseup);
+        });
+
+        nodeList.dragMove.addEventListener('touchstart', e => {
+            if (!$heybike.isMobile || e.touches.length > 1 || !e.target.closest('.drag-btn')) {
+                return false;
+            }
+
+            e.preventDefault();
+            const pageX = e.touches[0].pageX;
+            let moveX = 0;
+            let _touchmove = (ev) => {
+                ev.preventDefault();
+                moveX = ev.touches[0].pageX - pageX;
+                nodeList.drag.style.transform = `translateX(${moveX + startX}px)`;
+                nodeList.before.style.width = width + moveX + 'px';
+            };
+
+            let _touchend = () => {
+                nodeList.dragMove.removeEventListener('touchmove', _touchmove, { passive: false });
+                nodeList.dragMove.removeEventListener('touchend', _touchend, { passive: false });
+                width = width + moveX;
+                startX = moveX + startX;
+                _touchmove = undefined;
+                _touchend = undefined;
+            };
+
+            nodeList.dragMove.addEventListener('touchmove', _touchmove, { passive: false });
+            nodeList.dragMove.addEventListener('touchend', _touchend, { passive: false });
+        }, { passive: false });
+    });
+</script>
+{% schema %}
+{
+  "name": "MC Blends Drag",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Blends Drag"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "content": "Image",
+      "type": "header"
+    },
+    {
+      "label": "Drop arrow color",
+      "type": "color",
+      "id": "drop_arrow_color",
+      "default": "#ffffff"
+    },
+    {
+      "label": "Desktop before image",
+      "type": "image_picker",
+      "id": "pc_before_image_url"
+    },
+    {
+      "label": "Desktop after image",
+      "type": "image_picker",
+      "id": "pc_after_image_url"
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Desktop image radius",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "dug",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Desktop image width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "label": "Mobile before image",
+      "type": "image_picker",
+      "id": "mb_before_image_url"
+    },
+    {
+      "label": "Mobile after image",
+      "type": "image_picker",
+      "id": "mb_after_image_url"
+    },
+    {
+      "type": "range",
+      "id": "mb_image_radius",
+      "label": "Mobile image radius",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "dug",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mb_image_width",
+      "label": "Mobile image width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+  ]
+}
+{% endschema %}

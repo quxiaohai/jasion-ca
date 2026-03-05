@@ -1,0 +1,650 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_patrol-gift-card {
+        background-color: #000000;
+        padding: 80px 0;
+    }
+    .mc_patrol-gift-card .border-image {
+        object-fit: contain;
+        margin-bottom: 82px;
+    }
+    .mc_patrol-gift-card .card-items {
+        gap: 0 35px;
+        padding: 0 31px;
+    }
+    .mc_patrol-gift-card .card-items .image {
+        object-fit: contain;
+    }
+    .mc_patrol-gift-card .info .date-tag {
+        font-size: 14px;
+        color: #ffffff;
+        padding: 7px 9px 7px 15px;
+        background: linear-gradient(45deg, transparent 8px, #ff2501 8px);
+    }
+    .mc_patrol-gift-card .info .date-tag:before, .mc_patrol-gift-card .info .date-tag:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 3px solid transparent;
+        position: absolute;
+    }
+    .mc_patrol-gift-card .info .date-tag:before {
+        border-bottom-color: #111111;
+        right: 14px;
+        bottom: 0;
+    }
+    .mc_patrol-gift-card .info .date-tag:after {
+        border-top-color: #ff2501;
+        bottom: -5px;
+        right: 19px;
+    }
+    .mc_patrol-gift-card .info .name {
+        font-size: 50px;
+        color: {{ ss.card_title_color }};
+    }
+    .mc_patrol-gift-card .info .name strong {
+        color: {{ ss.card_title_bold_color }};
+    }
+    .mc_patrol-gift-card .info .name sub {
+        font-size: 23px;
+        padding-left: 12px;
+        transform: translateY(-6px);
+        display: inline-block;
+        text-decoration: line-through;
+    }
+    .mc_patrol-gift-card .info .desc {
+        padding-top: 9px;
+        font-size: 21px;
+        color: {{ ss.card_desc_color }};
+    }
+    .mc_patrol-gift-card .item-1 {
+        width: 66.69%;
+    }
+    .mc_patrol-gift-card .item-1 .info {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
+        width: 51%;
+    }
+    .mc_patrol-gift-card .item-1 .desc {
+        font-size: 29px;
+    }
+    .mc_patrol-gift-card .item-2,
+    .mc_patrol-gift-card .item-3 {
+        position: absolute;
+        bottom: 0;
+        left: 31px;
+        width: 30%;
+    }
+    .mc_patrol-gift-card .item-2 .info,
+    .mc_patrol-gift-card .item-3 .info {
+        width: 80%;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .mc_patrol-gift-card .item-2 .name,
+    .mc_patrol-gift-card .item-3 .name {
+        font-size: 29px;
+        text-align: center;
+    }
+    .mc_patrol-gift-card .item-2 .info,
+    .mc_patrol-gift-card .item-4 .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .mc_patrol-gift-card .item-2 .name,
+    .mc_patrol-gift-card .item-4 .name {
+        padding-top: 4px;
+    }
+    .mc_patrol-gift-card .item-3 {
+        left: 35.8%;
+    }
+    .mc_patrol-gift-card .item-4 {
+        flex: 1;
+    }
+    .mc_patrol-gift-card .item-4 .date-tag {
+        text-align: right;
+        padding: 7px 16px 7px 21px;
+        transform: translateX(-34px);
+        background: linear-gradient(45deg, transparent 12px, #ff2501 12px);
+    }
+    .mc_patrol-gift-card .item-4 .name {
+        text-align: center;
+        line-height: 1;
+        width: 100%;
+        padding-top: 9px;
+    }
+    .mc_patrol-gift-card .item-4 .desc {
+        padding-top: 6px;
+    }
+    .mc_patrol-gift-card .item-4 .info {
+        width: 82%;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width: 1540px) {
+        .mc_patrol-gift-card {
+            padding: 68px 0;
+        }
+        .mc_patrol-gift-card .border-image {
+            margin-bottom: 5.3246753247vw;
+        }
+        .mc_patrol-gift-card .card-items {
+            gap: 0 30px;
+            padding: 0 2.012987013vw;
+        }
+        .mc_patrol-gift-card .info .date-tag {
+            font-size: 12px;
+            padding: 6px 8px 6px 13px;
+            background: linear-gradient(45deg, transparent 7px, #ff2501 7px);
+        }
+        .mc_patrol-gift-card .info .date-tag:before {
+            right: 12px;
+        }
+        .mc_patrol-gift-card .info .date-tag:after {
+            right: 16px;
+        }
+        .mc_patrol-gift-card .info .name {
+            font-size: 3.2467532468vw;
+        }
+        .mc_patrol-gift-card .info .name sub {
+            font-size: 1.4935064935vw;
+            padding-left: 0.7792207792vw;
+            transform: translateY(-0.3896103896vw);
+        }
+        .mc_patrol-gift-card .info .desc {
+            padding-top: 0.5844155844vw;
+            font-size: 1.3636363636vw;
+        }
+        .mc_patrol-gift-card .item-1 .desc {
+            font-size: 1.8831168831vw;
+        }
+        .mc_patrol-gift-card .item-2 {
+            left: 2.012987013vw;
+        }
+        .mc_patrol-gift-card .item-2 .info,
+        .mc_patrol-gift-card .item-3 .info {
+            bottom: 2.5974025974vw;
+        }
+        .mc_patrol-gift-card .item-2 .name,
+        .mc_patrol-gift-card .item-3 .name {
+            font-size: 1.8831168831vw;
+        }
+        .mc_patrol-gift-card .item-2 .name,
+        .mc_patrol-gift-card .item-4 .name {
+            padding-top: 0.2597402597vw;
+        }
+        .mc_patrol-gift-card .item-4 .date-tag {
+            padding: 6px 14px 6px 18px;
+            background: linear-gradient(45deg, transparent 11px, #ff2501 11px);
+        }
+        .mc_patrol-gift-card .item-4 .name {
+            padding-top: 0.5844155844vw;
+        }
+        .mc_patrol-gift-card .item-4 .desc {
+            padding-top: 0.3896103896vw;
+        }
+        .mc_patrol-gift-card .item-4 .info {
+            bottom: 2.5974025974vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_patrol-gift-card {
+            padding: 2.5rem 0;
+        }
+        .mc_patrol-gift-card .page-width {
+            padding: 0;
+        }
+        .mc_patrol-gift-card .border-image {
+            object-fit: contain;
+            margin-bottom: 0.875rem;
+        }
+        .mc_patrol-gift-card .card-items {
+            gap: 0.625rem 0;
+            padding: 0 2.5625rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .mc_patrol-gift-card .info .date-tag {
+            background: linear-gradient(45deg, transparent 5px, #ff2501 5px);
+            font-size: 0.5625rem;
+            padding: 0.1875rem 0.375rem 0.1875rem 0.46875rem;
+            margin: 0 0.25rem 0.125rem 0;
+        }
+        .mc_patrol-gift-card .info .date-tag:before, .mc_patrol-gift-card .info .date-tag:after {
+            border-width: 2px;
+        }
+        .mc_patrol-gift-card .info .date-tag:before {
+            right: 7px;
+        }
+        .mc_patrol-gift-card .info .date-tag:after {
+            bottom: -3px;
+            right: 10px;
+        }
+        .mc_patrol-gift-card .info .name {
+            font-size: 0.75rem;
+        }
+        .mc_patrol-gift-card .info .name sub {
+            font-size: 0.625rem;
+            padding-left: 0.25rem;
+            transform: translateY(-6px);
+        }
+        .mc_patrol-gift-card .info .desc {
+            padding-top: 0.1875rem;
+            font-size: 0.5625rem;
+        }
+        .mc_patrol-gift-card .item-1 {
+            width: 100%;
+        }
+        .mc_patrol-gift-card .item-1 .info {
+            right: 5%;
+            width: 49%;
+        }
+        .mc_patrol-gift-card .item-1 .desc {
+            font-size: 0.625rem;
+        }
+        .mc_patrol-gift-card .item-2,
+        .mc_patrol-gift-card .item-3 {
+            position: relative;
+            left: auto;
+            width: calc(50% - 5px);
+        }
+        .mc_patrol-gift-card .item-2 .info,
+        .mc_patrol-gift-card .item-3 .info {
+            text-align: center;
+            width: 90%;
+            bottom: 6%;
+        }
+        .mc_patrol-gift-card .item-3 {
+            left: auto;
+        }
+        .mc_patrol-gift-card .item-4 {
+            flex: none;
+            width: 100%;
+        }
+        .mc_patrol-gift-card .item-4 .date-tag {
+            padding: 0.1875rem 0.46875rem 0.1875rem 0.375rem;
+            transform: translateX(0);
+            margin: 0 0 0.25rem 0;
+            background: linear-gradient(315deg, transparent 5px, #ff2501 5px);
+        }
+        .mc_patrol-gift-card .item-4 .date-tag br {
+            display: none;
+        }
+        .mc_patrol-gift-card .item-4 .date-tag:before {
+            left: 7px;
+            right: auto;
+        }
+        .mc_patrol-gift-card .item-4 .date-tag:after {
+            left: 10px;
+        }
+        .mc_patrol-gift-card .item-4 .name {
+            text-align: left;
+            width: 100%;
+        }
+        .mc_patrol-gift-card .item-4 .name br {
+            display: none;
+        }
+        .mc_patrol-gift-card .item-4 .desc {
+            padding-top: 6px;
+        }
+        .mc_patrol-gift-card .item-4 .info {
+            width: 50%;
+            bottom: 48%;
+            left: 45%;
+            transform: translate(0, 50%);
+            align-items: flex-start;
+        }
+    }
+    @media screen and (max-width: 374px) {
+        .mc_patrol-gift-card .card-items {
+            padding: 0 var(--page-padding);
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_patrol-gift-card section--page">
+    {%- render 'section-title', info: ss, font: 'rushblade' -%}
+    {%- if ss.bottom_image != blank -%}
+        {%- render 'global-image',
+            desktop_img: ss.bottom_image,
+            mobile_img: ss.mb_bottom_image,
+            desktop_class: 'border-image'
+        -%}
+    {%- endif -%}
+    <div class="page-width">
+        <div class="relative w-full card-items flex-top">
+            {%- assign list = section.blocks | map: 'settings' | sort: 'position' -%}
+            {%- for bs in list -%}
+                <div class="card-item relative item-{{ bs.position }}">
+                    {%- render 'global-image',
+                        desktop_img: bs.gift_image,
+                        mobile_img: bs.mb_gift_image,
+                        sizes: '(min-width: 1024px) 1000px, (max-width: 1023px) 750x'
+                    -%}
+                    <div class="info absolute z-1">
+                        {%- if bs.position == '2' or bs.position == '4' -%}
+                            <div class="date-tag relative flex-center">
+                                <span class="relative text lh-1 z-1">{{ bs.date }}</span>
+                            </div>
+                        {%- endif -%}
+                        {%- liquid
+                            assign title = bs.title | replace: '&lcub;', '{' | replace: '&rcub;', '}'
+                            assign matchs = title | split: '{'
+                            for match in matchs
+                                if forloop.first == false
+                                    assign val = match | split: '}' | first
+                                    assign o = '{' | append: val | append: '}'
+                                    assign n = '<sub>' | append: val | append: '</sub>'
+                                    assign title = title | replace: o, n
+                                endif
+                            endfor
+                        -%}
+                        <div class="name lh-2 fw-700">{{ title }}</div>
+                        <div class="desc lh-2">{{ bs.desc }}</div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Patrol Gift Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Patrol Gift Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Title</p>"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_pc_weight",
+      "label": "Desktop title weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_pc_line",
+      "label": "Desktop title line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "title_mb_weight",
+      "label": "Mobile title weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_mb_line",
+      "label": "Mobile title line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "description_bold_color",
+      "label": "Description bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_pc_line",
+      "label": "Desktop description line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "description_mb_line",
+      "label": "Mobile description line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Banner bottom image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_image",
+      "label": "Desktop banner bottom image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_bottom_image",
+      "label": "mobile banner bottom image"
+    },
+    {
+      "type": "header",
+      "content": "Gift card"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_title_bold_color",
+      "label": "Card title bold color",
+      "default": "#ffd800"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#707070"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Gift card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            {
+              "label": "Left top",
+              "value": "1"
+            },
+            {
+              "label": "Left bottom",
+              "value": "2"
+            },
+            {
+              "label": "Left bottom center",
+              "value": "3"
+            },
+            {
+              "label": "Right",
+              "value": "4"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_image",
+          "label": "Desktop gift image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_gift_image",
+          "label": "Mobile gift image"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Early Bird<br/><strong>Price $1,???{$2,699}</strong></p>"
+        },
+        {
+          "type": "richtext",
+          "id": "date",
+          "label": "Date",
+          "default": "<p>Date: 3/20 - 3/30</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description",
+          "default": "<p>Grab an Extra $100 Off Before Prices Rise</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

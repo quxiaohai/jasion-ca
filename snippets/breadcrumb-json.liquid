@@ -1,0 +1,56 @@
+{%- liquid
+    assign page_type = request.page_type
+    assign start = page_type | slice: 0 | upcase
+    assign end = page_type | slice: 1, page_type.size
+    assign name = start | append: end
+-%}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Homepage",
+                "item": "https://www.jasionbike.com/"
+            }{%- if page_type != 'index' -%},{%- endif -%}
+    {%- if page_type == 'article' -%}
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.jasionbike.com/blogs/blogs"
+            },
+    {%- endif -%}
+    {%- if page_type != 'index' -%}
+            {
+                "@type": "ListItem",
+                "position": {% if page_type == 'article' %}3{% else %}2{% endif %},
+                "name": "{% if page_type == 'article' %}{{ article.title }}{% else %}{{ name }}{% endif %}",
+                "item": "{{ request.origin }}{{ request.path }}"
+            }
+    {%- endif -%}
+        ]
+    }
+</script>
+<script type="application/ld+json">
+{% liquid
+    capture same_as
+        assign arrow = 'social_facebook_link,social_twitter_link,social_instagram_link,social_youtube_link,social_tiktok_link,social_snapchat_link,social_pinterest_link,social_tumblr_link,social_linkedin_link,social_vimeo_link' | split: ','
+        for key in arrow
+            if settings[key] != blank
+                echo settings[key] | json | append: ','
+            endif
+        endfor
+    endcapture
+-%}
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ shop.name }}",
+        "logo": "{{ settings.logo | image_url: width: settings.logo.width | prepend: 'https:' }}",
+        "sameAs": [{{ same_as | remove_last: ',' }}],
+        "url": "{{ shop.url }}"
+    }
+</script>

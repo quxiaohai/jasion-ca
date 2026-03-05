@@ -1,0 +1,462 @@
+<script src="{{ 'modal-select-hb.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-compare-hb.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+</style>
+{% assign th_arr = section.settings.first_list  | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+{% comment %} {%- for content in th_arr -%}
+    {{content}}
+{% endfor %} {% endcomment %}
+
+<div class="products-compare-wrapper section tw-overflow-hidden section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="{% if section.settings.pw-overflow-hidden %}page-width-overflow-hidden{% else %}page-width-sm{% endif %}{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    
+    {%- render 'section-heading', section: section -%}
+    
+    <div class="">
+      
+    <modal-dialog id="modal-product-list">
+      <div class="modal-content tw-modal-default md:tw-p-12 md:tw-pt-16 tw-py-8 tw-max-w-[775px]">
+        <button class="close-btn modal-close-btn"> {%- render 'icon', icon: 'close', size: 'm' -%} </button>
+        <div class="tw-flex tw-flex-wrap compare-option-wrapper md:tw-gap-y-8 tw-gap-y-6">
+          {%- for block in section.blocks -%}
+          {% assign bk_stts = block.settings %}
+          {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
+          {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
+            <div class="tw-flex md:tw-w-1/3 tw-w-1/2 tw-px-4 tw-items-center tw-justify-center tw-flex-col pr-item tw-transition-all tw-cursor-pointer" data-handle="{{ pr_title | handle}}">
+                {{ pr_img | image_url: width: '225' | image_tag: width: '225'}}
+                <p class="md:tw-text-xl tw-mt-2">{{pr_title}}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </modal-dialog>
+
+      <div class="tw-flex -md:tw-gap-4">
+
+        {%- for block in section.blocks  -%}
+        {% assign bk_stts = block.settings %}
+        {% assign content_arr = bk_stts.list  | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+        {% assign pr = bk_stts.pr %}
+        {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
+        {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
+        
+
+        <div class="pr-result-wrapper md:tw-flex-1  {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}" style="background-color:{{ bk_stts.bg_color }}">
+          <div class="tw-text-center tw-relative "> 
+            <div class="md:tw-px-10 pr-header">
+              <div class="md:tw-mb-16 tw-mb-12 ">
+                <a class="compare-select md:tw-p-4 tw-p-2 tw-cursor-pointer tw-border-solid tw-border-viGray-300 tw-flex tw-justify-between tw-items-center tw-border tw-rounded-lg tw-w-full" data-handle="{{ pr_title | handle }}" data-modal-target="modal-product-list">
+                  <h5 class="2xl:tw-text-xl md:tw-text-lg tw-text-base">{{pr_title}}</h5>
+                  {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
+                </a>
+              </div>
+
+
+              {% comment %} <div class="tw-mb-14">
+                {{ pr_img | image_url: width: '500' | image_tag: width: '500',class:'tw-min-h-0 tw-object-contain'}}
+              </div>
+              <div class="tw-grid tw-gap-5"> 
+                <p class="tw-text-4xl tw-font-semibold">
+                  {% if bk_stts.pr_price != blank %}
+                    {{bk_stts.pr_price}}
+                  {% else %}
+                    {{ bk_stts.pr.price | money }}
+                  {% endif %}
+                </p>
+                <p>
+                  <a href="/cart/{{bk_stts.pr.variants.first.id}}" class="button button--primary tw-px-5 tw-py-2 md:tw-text-lg button--blur tw-text-xs tw-font-normal" is="hover-link">
+                    <span class="btn-text">{{- 'products.product.read_more' | t -}}</span>
+                  </a>
+                </p>
+                <p class="">
+                  <a class="tw-text-vi tw-flex tw-items-center tw-justify-center" href="{{ bk_stts.pr.url }}">Learn more 
+                  {%- render 'icon', icon: 'chevron-right', size: 's' -%}</a>
+                </p>
+              </div> {% endcomment %}
+
+
+
+              {%- render 'product-card-compare-hb',
+                product: pr,
+                product_id: pr.id,
+                section_id: section.id,
+                lazy_load: lazy_load,
+                image_ratio: settings.product_image_ratio,
+                image_fill: settings.product_image_fill,
+                show_secondary_image: settings.product_secondary_image,
+                show_vendor: settings.product_vendor,
+                show_color_swatches: settings.product_color_swatches,
+                enable_specs: section.settings.enable_specs,
+                specs_limit: section.settings.specs_limit
+              -%}
+
+
+            </div>
+            <div class="spes-wrapper md:tw-px-9 tw-px-4 md:tw-pt-20 md:tw-my-20 tw-pt-12 tw-my-12 tw-grid md:tw-gap-4 tw-gap-2 tw-font-medium tw-border-viGray-300 tw-border-t tw-border-0 tw-border-solid">
+              {%- for content in content_arr -%}
+              <div class="md:tw-py-4 tw-p-2 md:tw-text-nowrap">
+                <p class="tw-text-viGray-500 tw-mb-1 -md:tw-text-sm" >{{ th_arr[forloop.index0] }}</p>
+                <p class="md:tw-text-lg tw-text-base">{{content}}</p>
+              </div>
+              {% endfor %}
+            </div>
+
+
+            <div class="tw-mt-1 tw-compare-atc">
+              {%- assign product_form_id = 'ProductForm-' | append: section.id | append: '-' | append: pr.id -%}
+              {%- render 'buy-buttons',
+                block: block,
+                product: pr,
+                product_id: pr.id,
+                section_id: section.id,
+                product_form_id: product_form_id
+              -%}
+            </div>
+
+          </div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+
+      
+      <div class="sticky-bikes tw-fixed tw-hidden tw-z-10 tw-top-0 tw-left-0 tw-w-full tw-bg-white tw-border-b tw-border-0 tw-border-solid tw-border-viGray-300">
+        <div class="page-width-sm tw-grid md:tw-grid-cols-3 tw-grid-cols-2 -md:tw-gap-6">
+        {%- for block in section.blocks -%}
+          {% assign bk_stts = block.settings %}
+          {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
+          {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
+          <a class="tw-flex compare-select tw-cursor-pointer tw-items-center tw-justify-between tw-font-medium tw-py-4 md:tw-px-10 tw-px-2 {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}"
+            data-modal-target="modal-product-list">
+                <div class="tw-flex tw-items-center tw-gap-7">
+                  {{ pr_img | image_url: width: '100' | image_tag: width: '100', class:'-md:tw-hidden'}}
+                  <p class="md:tw-text-xl">{{pr_title }}</p>
+                </div>
+                {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
+            </a>
+        {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+<style>
+  {% comment %} .header-scrolled.header-nav-scrolled{
+    display:none!important
+  } {% endcomment %}
+</style>
+
+
+{% schema %}
+  {
+    "name":"Products compare",
+    "settings":[
+      {
+          "type":"header",
+          "content":"Table header settings"
+      },
+      { "id": "first_list", "type": "textarea", "label": "First list" },
+      { "id": "pc_h", "type": "text","default":"300", "label": "Img block height" },
+      { "id": "mb_h", "type": "text","default":"200", "label": "Img block height(mobile)" },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__heading.content"
+      },
+      {
+          "type":"inline_richtext",
+          "id":"heading",
+          "label":"t:sections.global.settings.heading.label",
+          "default":"Product featured"
+      },
+      {
+          "type":"select",
+          "id":"heading_size",
+          "options":[
+            {
+                "value":"title-sm",
+                "label":"t:sections.global.settings.heading_size.options__1.label"
+            },
+            {
+                "value":"title-md",
+                "label":"t:sections.global.settings.heading_size.options__2.label"
+            },
+            {
+                "value":"title-lg tracking-heading",
+                "label":"t:sections.global.settings.heading_size.options__3.label"
+            },
+            {
+                "value":"title-xl tracking-heading",
+                "label":"t:sections.global.settings.heading_size.options__4.label"
+            }
+          ],
+          "default":"title-md",
+          "label":"t:sections.global.settings.heading_size.label"
+      },
+      {
+          "type":"select",
+          "id":"heading_alignment",
+          "label":"t:sections.global.settings.heading_alignment.label",
+          "options":[
+            {
+                "value":"text-left md:items-end md:flex-row",
+                "label":"t:sections.global.settings.heading_alignment.options__1.label"
+            },
+            {
+                "value":"text-center md:items-center",
+                "label":"t:sections.global.settings.heading_alignment.options__2.label"
+            },
+            {
+                "value":"text-right md:items-end md:flex-row-reverse",
+                "label":"t:sections.global.settings.heading_alignment.options__3.label"
+            }
+          ],
+          "default":"text-left md:items-end md:flex-row"
+      },
+      {
+          "type":"select",
+          "id":"heading_tag",
+          "options":[
+            {
+                "value":"h1",
+                "label":"t:sections.global.settings.heading_tag.options__1.label"
+            },
+            {
+                "value":"h2",
+                "label":"t:sections.global.settings.heading_tag.options__2.label"
+            },
+            {
+                "value":"h3",
+                "label":"t:sections.global.settings.heading_tag.options__3.label"
+            },
+            {
+                "value":"h4",
+                "label":"t:sections.global.settings.heading_tag.options__4.label"
+            },
+            {
+                "value":"h5",
+                "label":"t:sections.global.settings.heading_tag.options__5.label"
+            },
+            {
+                "value":"h6",
+                "label":"t:sections.global.settings.heading_tag.options__6.label"
+            },
+            {
+                "value":"div",
+                "label":"t:sections.global.settings.heading_tag.options__7.label"
+            },
+            {
+                "value":"span",
+                "label":"t:sections.global.settings.heading_tag.options__8.label"
+            },
+            {
+                "value":"p",
+                "label":"t:sections.global.settings.heading_tag.options__9.label"
+            }
+          ],
+          "default":"h2",
+          "label":"t:sections.global.settings.heading_tag.label",
+          "info":"t:sections.global.settings.heading_tag.info"
+      },
+      {
+          "type":"text",
+          "id":"subheading",
+          "label":"t:sections.global.settings.subheading.label"
+      },
+      {
+          "type":"richtext",
+          "id":"description",
+          "label":"t:sections.global.settings.description.label"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__highlight.content",
+          "info":"t:sections.global.settings.header__highlight.info"
+      },
+      {
+          "type":"select",
+          "id":"highlighted_text",
+          "options":[
+            {
+                "value":"none",
+                "label":"t:sections.global.settings.highlighted_text.options__1.label"
+            },
+            {
+                "value":"text",
+                "label":"t:sections.global.settings.highlighted_text.options__2.label"
+            },
+            {
+                "value":"full_text",
+                "label":"t:sections.global.settings.highlighted_text.options__3.label"
+            },
+            {
+                "value":"half_text",
+                "label":"t:sections.global.settings.highlighted_text.options__4.label"
+            },
+            {
+                "value":"underline",
+                "label":"t:sections.global.settings.highlighted_text.options__5.label"
+            },
+            {
+                "value":"stencil",
+                "label":"t:sections.global.settings.highlighted_text.options__6.label"
+            },
+            {
+                "value":"scribble",
+                "label":"t:sections.global.settings.highlighted_text.options__7.label"
+            }
+          ],
+          "default":"none",
+          "label":"t:sections.global.settings.highlighted_text.label"
+      },
+      {
+          "type":"select",
+          "id":"highlighted_scribble",
+          "options":[
+            {
+                "value":"circle",
+                "label":"t:sections.global.settings.highlighted_scribble.options__1.label"
+            },
+            {
+                "value":"basic-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__2.label"
+            },
+            {
+                "value":"sketch-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__3.label"
+            },
+            {
+                "value":"squiggle-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__4.label"
+            },
+            {
+                "value":"squiggle-underline-2",
+                "label":"t:sections.global.settings.highlighted_scribble.options__5.label"
+            }
+          ],
+          "default":"circle",
+          "label":"t:sections.global.settings.highlighted_scribble.label",
+          "info":"t:sections.global.settings.highlighted_scribble.info"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__colors.content",
+          "info":"t:sections.global.settings.header__colors.info"
+      },
+      {
+          "type":"color",
+          "id":"color_text",
+          "label":"t:sections.global.settings.color_text.label"
+      },
+      {
+          "type":"color",
+          "id":"color_background",
+          "label":"t:sections.global.settings.color_background.label"
+      },
+      {
+          "type":"color_background",
+          "id":"gradient_background",
+          "label":"t:sections.global.settings.gradient_background.label"
+      },
+      {
+          "type":"color",
+          "id":"color_highlight",
+          "label":"t:sections.global.settings.color_highlight.label"
+      },
+      {
+          "type":"color_background",
+          "id":"gradient_highlight",
+          "label":"t:sections.global.settings.gradient_highlight.label"
+      },
+      {
+          "type":"color",
+          "id":"color_button_text",
+          "label":"t:sections.global.settings.color_button_text.label"
+      },
+      {
+          "type":"color",
+          "id":"color_button_background",
+          "label":"t:sections.global.settings.color_button_background.label"
+      },
+      {
+          "type":"color_background",
+          "id":"color_button_gradient",
+          "label":"t:sections.global.settings.color_button_gradient.label"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__section.content"
+      },
+      {
+          "type":"range",
+          "id":"padding_top",
+          "min":0,
+          "max":120,
+          "step":4,
+          "unit":"px",
+          "label":"t:sections.global.settings.padding_top.label",
+          "default":72
+      },
+      {
+          "type":"range",
+          "id":"padding_bottom",
+          "min":0,
+          "max":120,
+          "step":4,
+          "unit":"px",
+          "label":"t:sections.global.settings.padding_bottom.label",
+          "default":72
+      },
+      {
+          "type":"checkbox",
+          "id":"divider",
+          "label":"t:sections.global.settings.divider.label",
+          "default":false
+      },
+      {
+          "type":"checkbox",
+          "id":"full_width",
+          "label":"t:sections.global.settings.full_width.label",
+          "default":false
+      },
+      {
+          "type":"checkbox",
+          "id":"rounded",
+          "default":false,
+          "label":"t:sections.global.settings.rounded.label"
+      }
+    ],
+    "blocks":[
+      {
+          "type":"item",
+          "name":"Item",
+          "settings":[
+            { "id": "pr", "type": "product", "label": "Product", },
+            { "id": "list", "type": "textarea", "label": "table list", },
+            { "type": "color", "id": "bg_color", "label": "Background color" },
+            { "type": "image_picker", "id": "pr_img", "label": "Product image", "info":"Title use image alt" },
+            { "type": "text", "id": "pr_price", "label": "Product price" },
+          ]
+      }
+    ],
+    "presets":[
+      {
+          "name":"Products compare (hb)"
+      }
+    ],
+    "disabled_on":{
+      "templates":[
+          "password"
+      ]
+    }
+  }
+{% endschema %}

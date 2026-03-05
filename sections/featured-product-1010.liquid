@@ -1,0 +1,234 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %} relative">
+    {% for block in section.blocks %}
+      <div class="featured-product-list__item md:tw-flex tw-rounded-2xl tw-overflow-hidden tw-bg-white">
+        <div class="featured-product-list__item-image md:tw-w-1/2">
+          {{ block.settings.image | image_url: width: 1280 | image_tag: class: 'md:tw-hidden' }}
+          {{ block.settings.image_mb | image_url: width: 1280 | image_tag: class: 'tw-hidden md:tw-block' }}
+        </div>
+        <div class="featured-product-list__item-content md:tw-w-1/2 md:tw-p-12 tw-p-4 tw-flex tw-flex-col tw-justify-between -md:tw-gap-4">
+
+          <div class="product__title" {{ block.shopify_attributes }}>
+            <h1 class="heading tw-font-semibold leading-none {{ block.settings.title_size }} mobile:{{ block.settings.title_size_mobile }} col-span-full">
+              <split-words class="split-words block" data-animate="fade-up">
+                {{ block.settings.product.title }}</split-words>
+            </h1>
+            <div class="product__text tw-text-viGray ">
+              {{block.settings.product_info}}
+            </div>
+
+            <div class="no-js-hidden tw-flex -md:tw-flex-col-reverse md:tw-justify-between md:tw-mt-4">
+                <div id="Price-{{ section.id }}-{{ product.id }}" class="product__price -md:tw-mt-6">
+                  {%- render 'product-price', product: block.settings.product, use_variant: true, class: 'flex items-baseline gap-2' -%}
+                  
+                  {%- if block.settings.product.quantity_price_breaks_configured? -%}
+                    <div class="text-opacity text-sm font-medium leading-tight" id="VolumeNote-{{ section.id }}-{{ product.id }}">
+                      {{- 'products.volume_pricing.note' | t -}}
+                    </div>
+                  {%- endif -%}
+                </div>
+
+                {%- liquid render 'product-rating', product: block.settings.product -%}
+            </div>
+            
+            <div class="featured-product-list__item-content-price-info tw-flex tw-items-center tw-gap-4">
+              <p class=" tw-text-viGray tw-shrink-0">
+                {{ block.settings.price_info }}
+              </p>
+              <div class="tw-max-w-[100px]">
+                {{ block.settings.price_image | image_url: width: 1280 | image_tag }}
+              </div>
+            </div>
+
+          </div>
+
+        
+          <div class="featured-product-list__item-content-giveaway">
+            <div class="featured-product-list__item-content-image">
+              {{ block.settings.giveaway_image | image_url: width: 1280 | image_tag }}
+            </div>
+            <p class="featured-product-list__item-content-info tw-text-viGray tw-mt-4 -md:tw-text-[14px]">
+              {{ block.settings.giveaway_info }}
+            </p>
+          </div>
+
+          <div class="featured-product-list__item-content-buttons tw-grid tw-grid-cols-2 tw-items-center tw-gap-4">
+              {%- render 'buy-buttons',
+                block: block,
+                product: block.settings.product,
+                product_id: block.settings.product.id,
+                section_id: section.id,
+                product_form_id: 'ProductForm-' | append: section.id | append: '-' | append: block.settings.product.id
+              -%}
+              <a href="{{ block.settings.product.url }}" class="button tw-bg-transparent tw-border-solid tw-border-black tw-border product-form-wrapper" is="hover-link">
+                <span class="btn-text">{{ 'general.pagination.show_more' | t }}</span>
+              </a>
+          </div>
+
+
+
+        </div>
+      </div>
+      
+
+
+
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured product list",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__colors.content",
+      "info": "t:sections.global.settings.header__colors.info"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "t:sections.global.settings.color_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "t:sections.global.settings.color_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "t:sections.global.settings.gradient_background.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "t:sections.global.settings.color_button_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "t:sections.global.settings.color_button_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "color_button_gradient",
+      "label": "t:sections.global.settings.color_button_gradient.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_top.label",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_bottom.label",
+      "default": 72
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.global.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow",
+      "label": "t:sections.global.settings.narrow.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "default": false,
+      "label": "t:sections.global.settings.rounded.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mb",
+          "label": "Product image (mobile)"
+        },
+        {
+          "type": "text",
+          "id": "product_info",
+          "label": "Product info"
+        },
+        {
+          "type": "textarea",
+          "id": "price_info",
+          "label": "Price info"
+        },
+        {
+          "type": "image_picker",
+          "id": "price_image",
+          "label": "Price info image"
+        },
+        {
+          "type": "header",
+          "content": "Giveaway settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "giveaway_image",
+          "label": "Giveaway image"
+        },
+        {
+          "type": "textarea",
+          "id": "giveaway_info",
+          "default": "Now,as part of the Pre-Order, we are offering free Fender Set and a Rear Rack, a total value of $515.",
+          "label": "Giveaway info"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product list",
+      "category": "Customize"
+    }
+  ],
+}
+{% endschema %}

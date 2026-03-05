@@ -1,0 +1,278 @@
+{%- comment -%}
+  Renders a header menu drawer component
+
+  Accepts:
+  - section: {Object}
+
+  Usage:
+  {% render 'header-drawer', section: section %}
+{%- endcomment -%}
+
+<menu-drawer id="MenuDrawer" class="menu-drawer drawer drawer--start z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none {% if section.settings.mb_layout == "2" %} menu-drawer-2 {% endif %}"
+  data-section-id="{{ section.id }}"
+  hidden
+>
+  <overlay-element class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none" aria-controls="MenuDrawer" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full tw-overflow-y-auto">
+    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
+      <span class="drawer__title heading lg:text-3xl text-2xl leading-none tracking-tight"></span>
+      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center" type="button" is="hover-button" aria-controls="MenuDrawer" aria-expanded="false" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">
+          {%- render 'icon', icon: 'close', size: 'sm' -%}
+        </span>
+      </button>
+    </gesture-element>
+      <div class="drawer__content opacity-0 invisible flex flex-col h-full grow shrink tw-overflow-auto">
+        <nav class="relative grow" role="navigation">
+          {% assign mb_tabs = section.blocks | where: 'type', 'mobile_tabs' | first %}
+          {%- if mb_tabs -%}
+          <tabs-element class="tw-px-4">
+            <div class="flex gap-4 tw-mb-6 tw-overflow-x-aut tw-items-center tw-px-4">
+              {% for i in (1..3) %}
+                {% assign tab_title = 'tab_title_' | append: i %}
+                {% assign tab_coll = 'tab_coll_' | append: i %}
+                {% assign title = mb_tabs.settings[tab_title] %}
+    
+                {% if mb_tabs.settings[tab_title] != blank and mb_tabs.settings[tab_coll] %}
+                  <button class="tab__item tw-text-xl tw-font-bold tw-py-0 tw-flex-1 {% if forloop.first %} button--primary{% else %} button--secondary{% endif %}" {% if forloop.first %}disabled{% endif %} role="tab" type="button" is="hover-button" anchor-target="{{ title | handle }}_{{ mb_tabs.id }}" aria-controls="TabPanel-{{ title | handle }}_{{ mb_tabs.id }}" >
+                    {{title}}
+                  </button>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div >
+            {% for i in (1..3) %}
+              {% assign tab_title = 'tab_title_' | append: i %}
+              {% assign tab_coll = 'tab_coll_' | append: i %} 
+              {% assign title = mb_tabs.settings[tab_title] %}
+              {% assign coll = mb_tabs.settings[tab_coll] %}
+              {% if mb_tabs.settings[tab_title] != blank and mb_tabs.settings[tab_coll] %}
+              <div id="TabPanel-{{ title | handle }}_{{ mb_tabs.id }}" role="tabpanel"{% unless i == 1 %}hidden{% endunless %}>
+                <div class="tw-grid tw-grid-cols-2 tw-gap-4">
+                  {% for pr in coll limit:8 %}
+                    <a href="{{ pr.url }}" class="tw-block tw-text-center">
+                      <div class="tw-w-4/5 tw-mx-auto">
+                        {{ pr.featured_image | image_url: width: '500' | image_tag: width: '500'}}
+                      </div>
+                      <p class="tw-m-0 tw-text-sm tw-px-2">
+                        {{pr.title }}
+                      </p>
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+            </div>
+            
+          </tabs-element>
+          {% endif %}
+          <ul class="drawer__scrollable drawer__menu relative w-full h-full tw-overflow-hidden tw-overflow-auto {% if section.settings.mb_layout == "2" %} drawer__scrollable-2 {% endif %}" role="list" data-parent>
+            {%- assign main_menu = section.settings.menu_mobile | default: section.settings.menu -%}
+            {%- for link in main_menu.links -%}
+              <li>
+                {%- liquid
+                  assign enable_mega_menu = false
+                  assign link_title_handle = link.title | downcase | handle
+            
+                  for block in section.blocks
+                    assign menu_title_handle = block.settings.menu_title | downcase | handle
+                    if menu_title_handle == link_title_handle
+                      assign enable_mega_menu = true
+                      assign mega_menu_block = block
+                      break
+                    endif
+                  endfor
+                -%}
+
+                {%- if link.links != blank or enable_mega_menu -%}
+                  {% if section.settings.mb_layout == "2" %}
+                    {%- render 'header-nav-drawer-2', link: link, enable_mega_menu: enable_mega_menu, block: mega_menu_block -%}
+                    {% else %}
+                    {%- render 'header-nav-drawer', link: link, enable_mega_menu: enable_mega_menu, block: mega_menu_block -%}
+                  {% endif %}
+                {%- else -%}
+                  <a class="drawer__menu-item block heading tw-text-xl leading-none tracking-tight" href="{{ link.url }}">{{ link.title }}</a>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+
+
+
+
+        </nav>
+        <div class="drawer__footer grid w-full">
+          {%- liquid
+            if section.settings.enable_language_selector and localization.available_languages.size > 1
+              assign enable_language_selector = true
+            endif
+            if section.settings.enable_country_selector and localization.available_countries.size > 1
+              assign enable_country_selector = true
+            endif
+              assign show_country_link = section.settings.show_country_link
+              assign country_links = section.settings.country_link  | strip | newline_to_br | strip_newlines | split: "<br />"
+          -%}
+
+          {%- if enable_language_selector or enable_country_selector or show_country_link -%}
+            <div class="drawer__footer-top flex">
+              {%- if enable_language_selector -%}
+                <button type="button" class="flex gap-3 grow items-center justify-between" aria-controls="LocalizationLanguage-{{ section.id }}" aria-expanded="false">
+                  <span class="text-sm leading-none flex items-center gap-2 w-auto">
+                    {%- render 'icon', icon: 'language', size: 'xs', class: 'stroke-1 hidden md:block shrink-0' -%}
+                    {{- localization.language.endonym_name | capitalize -}}
+                  </span>
+                  {%- render 'icon', icon: 'chevron-down', size: 'xs', class: 'flex-auto' -%}
+                </button>
+              {%- endif -%}
+              {%- if enable_country_selector -%}
+                <button type="button" class="flex gap-3 grow items-center justify-between" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false"> 
+                  <span class="text-sm leading-none flex items-center gap-2 w-auto">
+                    {%- render 'icon', icon: 'currency', size: 'xs', class: 'stroke-1 hidden md:block shrink-0' -%}
+                    {{- localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+                  </span>
+                  {%- render 'icon', icon: 'chevron-down', size: 'xs', class: 'flex-auto' -%}
+                </button>
+              {%- endif -%}
+
+              {%- if show_country_link -%}
+                <button type="button" class="flex gap-3 grow items-center justify-between" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false"> 
+                  <span class="text-sm leading-none flex items-center gap-2 w-auto">
+                    {%- render 'icon', icon: 'currency', size: 'xs', class: 'stroke-1 hidden md:block shrink-0' -%}
+                    {% assign link_frist_obj = country_links[0] | split: '||' %}
+                    {{link_frist_obj[0]}}
+                  </span>
+                  {%- render 'icon', icon: 'chevron-down', size: 'xs', class: 'flex-auto' -%}
+                </button>
+              {%- endif -%}
+              {%- if enable_language_selector -%}
+                <modal-element id="LocalizationLanguage-{{ section.id }}" class="modal invisible absolute bottom-0 left-0 w-full h-full" role="dialog" hidden>
+                  <overlay-element class="fixed-modal opacity-0 z-1 absolute top-0 left-0 w-full h-full" aria-controls="LocalizationLanguage-{{ section.id }}" aria-expanded="false"></overlay-element>
+                  <div class="modal__container flex flex-col z-3 absolute left-0 bottom-0 w-full">
+                    <button class="close items-center justify-center absolute top-0 right-0" type="button" is="magnet-button" aria-controls="LocalizationLanguage-{{ section.id }}" aria-expanded="false" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+                      <span class="inline-block" data-text>
+                        {%- render 'icon', icon: 'close' -%}
+                      </span>
+                    </button>
+                    {%- form 'localization', id: 'localization_language_form_header_drawer', class: 'modal__content flex flex-col overflow-hidden', is: 'localization-listbox' -%}
+                      <ul class="modal__scrollable listbox grid gap-1d5 xl:gap-2" role="list" tabindex="-1">
+                        {%- for language in localization.available_languages -%}
+                          <li class="opacity-0">
+                            <a class="text-sm reversed-link{% if language.iso_code == localization.language.iso_code %} active{% endif %}"
+                              href="#"
+                              hreflang="{{ language.iso_code }}"
+                              lang="{{ language.iso_code }}"
+                              {% if language.iso_code == localization.language.iso_code %}
+                                aria-current="true"
+                              {% endif %}
+                              data-value="{{ language.iso_code }}"
+                              title="{{ language.endonym_name | capitalize | escape }}"
+                              data-no-instant
+                            >
+                              {{- language.endonym_name | capitalize -}}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" />
+                    {%- endform -%}
+                  </div>
+                </modal-element>
+              {%- endif -%}
+              {%- if enable_country_selector -%}
+                <modal-element id="LocalizationCountry-{{ section.id }}" class="modal invisible absolute bottom-0 left-0 w-full h-full" role="dialog" hidden>
+                  <overlay-element class="fixed-modal opacity-0 z-1 absolute top-0 left-0 w-full h-full" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false"></overlay-element>
+                  <div class="modal__container flex flex-col z-3 absolute left-0 bottom-0 w-full">
+                    <button class="close items-center justify-center absolute top-0 right-0" type="button" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false" is="magnet-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+                      <span class="inline-block" data-text>
+                        {%- render 'icon', icon: 'close' -%}
+                      </span>
+                    </button>
+                    {%- form 'localization', id: 'localization_country_form_header_drawer', class: 'modal__content flex flex-col overflow-hidden', is: 'localization-listbox' -%}
+                      {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
+                      <ul class="modal__scrollable listbox grid gap-1d5 xl:gap-2" role="list" tabindex="-1">
+                        {%- for country in localization.available_countries -%}
+                          <li class="opacity-0">
+                            <a class="text-sm reversed-link{% if country.iso_code == localization.country.iso_code %} active{% endif %}"
+                              href="#"
+                              {% if country.iso_code == localization.country.iso_code %}
+                                aria-current="true"
+                              {% endif %}
+                              data-value="{{ country.iso_code }}"
+                              title="{{ country.name | escape }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})"
+                              data-no-instant
+                            >
+                              {{- country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}" />
+                    {%- endform -%}
+                  </div>
+                </modal-element>
+              {%- endif -%}
+
+              {%- if show_country_link -%}
+                <modal-element id="LocalizationCountry-{{ section.id }}" class="modal invisible absolute bottom-0 left-0 w-full h-full" role="dialog" hidden>
+                  <overlay-element class="fixed-modal opacity-0 z-1 absolute top-0 left-0 w-full h-full" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false"></overlay-element>
+                  <div class="modal__container flex flex-col z-3 absolute left-0 bottom-0 w-full">
+                    <button class="close items-center justify-center absolute top-0 right-0" type="button" aria-controls="LocalizationCountry-{{ section.id }}" aria-expanded="false" is="magnet-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+                      <span class="inline-block" data-text>
+                        {%- render 'icon', icon: 'close' -%}
+                      </span>
+                    </button>
+                    {%- form 'localization', id: 'localization_country_form_header_drawer', class: 'modal__content flex flex-col overflow-hidden', is: 'localization-listbox' -%}
+                      {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
+                      <ul class="modal__scrollable listbox grid gap-1d5 xl:gap-2" role="list" tabindex="-1">
+                        {%- for link in country_links -%}
+                        {% assign link_obj = link | split: '||' %}
+
+                          <li class="opacity-0 tw-text-center" onclick="window.location.href='{{ link_obj | last }}'">
+                            <a class="text-sm tw-block{% if country.iso_code == localization.country.iso_code %} active{% endif %}"
+                              href="{{ link_obj | last }}"
+                              {% if country.iso_code == localization.country.iso_code %}
+                                aria-current="true"
+                              {% endif %}
+                              data-value="{{ country.iso_code }}"
+                              data-no-instant
+                            > 
+                              {{ link_obj | first }}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}" />
+                    {%- endform -%}
+                  </div>
+                </modal-element>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          <div class="drawer__footer-bottom flex items-center justify-between gap-6">
+            {%- if shop.customer_accounts_enabled -%}
+              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="button button--primary icon-with-text" is="hover-link" rel="nofollow">
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- liquid
+                    render 'icon', icon: 'account-2', size: 'xs'
+                    if customer
+                      echo 'customer.account.title' | t
+                    else
+                      echo 'customer.login.title' | t
+                    endif
+                  -%}
+                </span>
+              </a>
+            {%- endif -%}
+            {%- liquid
+              if section.settings.show_social
+                render 'social-icons', size: 'sm', gap: '6'
+              endif
+            -%}
+          </div>
+        </div>
+      </div>
+  </div>
+</menu-drawer>

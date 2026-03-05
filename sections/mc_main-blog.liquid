@@ -1,0 +1,626 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_main-blog {
+        background: #ffffff;
+        padding: 0 0 40px;
+    }
+
+    .mc_main-blog .article-empty {
+        text-align: center;
+        min-height: 100px;
+    }
+
+    .mc_main-blog .article-content-paginate {
+        padding-bottom: 96px;
+    }
+
+    .mc_main-blog .paginate-box {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .mc_main-blog .blog-head {
+        font-size: 2rem;
+        font-weight: 700;
+        height: 80px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .mc_main-blog .blog-content {
+        margin-top: 32px;
+    }
+
+    .mc_main-blog .article-card {
+        width: 100%;
+        color: #000000;
+    }
+
+    .mc_main-blog .article-card .blog-media {
+        aspect-ratio: 7/4;
+    }
+
+    .mc_main-blog .article-card .tag-list {
+        gap: 5px 12px;
+        flex-wrap: wrap;
+    }
+
+    .mc_main-blog .article-card .tag-list .tag {
+        font-size: 13px;
+        font-weight: 400;
+        position: relative;
+        color: #333333;
+        line-height: 1.2;
+        transition-property: background-size, color;
+    }
+
+    .mc_main-blog .article-card .tag-list .tag:hover {
+        color: #000000;
+    }
+
+    .mc_main-blog .article-card .tag-list .tag:last-of-type:before {
+        display: none;
+    }
+
+    .mc_main-blog .article-card .tag-list .tag:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        background: #666666;
+        height: 10px;
+        right: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mc_main-blog .article-card .blog-title {
+        display: block;
+        padding-top: 12px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .mc_main-blog .article-card .blog-desc {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .mc_main-blog .article-card .blog-meta {
+        padding-top: 16px;
+        font-size: 13px;
+        color: #666666;
+    }
+
+    .mc_main-blog .article-card .blog-meta .date {
+        padding-left: 4px;
+        position: relative;
+    }
+
+    .mc_main-blog .article-card .blog-meta .date:before {
+        content: "—";
+        font-size: 13px;
+        font-weight: 500;
+        margin-right: 4px;
+        color: #999999;
+    }
+
+    .mc_main-blog .article-card .blog-meta .read-more {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000000;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .mc_main-blog .blog-main {
+        background: #f7f7f7;
+        flex-direction: row-reverse;
+    }
+
+    .mc_main-blog .blog-main .blog-title {
+        padding-top: 0;
+    }
+
+    .mc_main-blog .blog-main .blog-media,
+    .mc_main-blog .blog-main .blog-info {
+        width: 50%;
+    }
+
+    .mc_main-blog .blog-main .blog-info {
+        padding: 30px;
+    }
+
+    .mc_main-blog .blog-main .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mc_main-blog .article-items {
+        width: 100%;
+        gap: 0 24px;
+        margin-top: 32px;
+        align-items: stretch;
+    }
+
+    .mc_main-blog .article-items .article-card {
+        max-width: 33.333333%;
+        flex: 1;
+        border-radius: 1rem;
+        background: #f7f7f7;
+    }
+
+    .mc_main-blog .article-items .blog-info {
+        padding: 1.6rem;
+    }
+
+    .mc_main-blog .article-items .blog-title {
+        font-size: 18px;
+    }
+
+    .mc_main-blog .article-items .blog-meta {
+        padding-top: 10px;
+    }
+
+    .mc_main-blog .article-items .blog-meta .read-more {
+        font-weight: 500;
+        font-size: 0.85rem;
+        margin-top: 0;
+        color: #333333;
+    }
+
+    .mc_main-blog .blog-nav-wrap {
+        margin-top: 32px;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        background: {{ ss.page_color }};
+        border-bottom: 1px solid #d5d5d5;
+        transition: top var(--animation-nav);
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-items {
+        white-space: wrap;
+        overflow-x: auto;
+        gap: 0 25px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-item {
+        position: relative;
+        line-height: 58px;
+        cursor: pointer;
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #000000;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-item:hover .nav-handler {
+        opacity: 1;
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-item.active .nav-handler {
+        font-weight: 600;
+        opacity: 1 !important;
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-item.active:before {
+        transform: scaleX(1);
+    }
+
+    .mc_main-blog .blog-nav-wrap .nav-handler {
+        color: #000000;
+        transition: 0.3s ease all;
+        opacity: 0.5;
+        font-weight: 400;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .mc_main-blog .article-content {
+        flex-wrap: wrap;
+        gap: 36px 24px;
+        grid-template-columns: repeat(auto-fit, minmax(463px, 1fr));
+        overflow: hidden;
+        display: none;
+    }
+
+    .mc_main-blog .article-content.active {
+        display: grid;
+    }
+
+    .mc_main-blog .article-content .article-item {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_main-blog {
+            padding: 0 0 1.25rem;
+        }
+
+        .mc_main-blog .blog-head {
+            font-size: 1.4rem;
+            height: 3.5rem;
+        }
+
+        .mc_main-blog .blog-content {
+            margin-top: 1.5rem;
+        }
+
+        .mc_main-blog .article-card .blog-title {
+            padding-top: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .mc_main-blog .article-card .blog-desc {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        .mc_main-blog .article-card .blog-meta {
+            padding-top: 0.75rem;
+        }
+
+        .mc_main-blog .article-card .blog-meta .read-more {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .mc_main-blog .blog-main {
+            flex-direction: column;
+        }
+
+        .mc_main-blog .blog-main .blog-media,
+        .mc_main-blog .blog-main .blog-info {
+            width: 100%;
+        }
+
+        .mc_main-blog .blog-main .blog-title {
+            padding-top: 0;
+        }
+
+        .mc_main-blog .blog-main .blog-info {
+            padding: 1.5rem;
+        }
+
+        .mc_main-blog .article-items {
+            gap: 0 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .mc_main-blog .article-items .article-card {
+            border-radius: 0.75rem;
+        }
+
+        .mc_main-blog .article-items .blog-info {
+            padding: 1.2rem;
+        }
+
+        .mc_main-blog .article-items .blog-title {
+            font-size: 1rem;
+        }
+
+        .mc_main-blog .article-items .blog-meta {
+            padding-top: 0.625rem;
+        }
+
+        .mc_main-blog .article-items .blog-meta .read-more {
+            font-size: 0.8125rem;
+            margin-top: 0;
+        }
+
+        .mc_main-blog .blog-minor {
+            overflow-x: auto;
+        }
+
+        .mc_main-blog .blog-minor .blog-item {
+            flex: none;
+            max-width: 80%;
+        }
+
+        .mc_main-blog .blog-nav-wrap {
+            width: 100vw;
+            margin-left: calc(var(--page-padding) * -1);
+        }
+
+        .mc_main-blog .blog-nav-wrap .nav-items {
+            gap: 0 1.25rem;
+            padding: 0 0.625rem;
+        }
+
+        .mc_main-blog .blog-nav-wrap .nav-item {
+            line-height: 2.625rem;
+        }
+
+        .mc_main-blog .blog-nav-wrap .nav-item:hover .nav-handler {
+            opacity: 0.5;
+        }
+
+        .mc_main-blog .blog-nav-wrap .nav-handler {
+            font-size: 0.875rem;
+        }
+
+        .mc_main-blog .article-content {
+            gap: 1.5rem 1.125rem;
+            flex-direction: column;
+        }
+
+        .mc_main-blog .article-content.active {
+            display: flex;
+        }
+    }
+
+    {%- render 'page-wrap-style' -%}
+</style>
+<div class="mc_main-blog section--page" id="{{ section.id }}-blog">
+    <div class="page-width">
+        {%- if ss.show_title -%}
+            <div class="blog-head flex-left" style="color: {{ ss.title_color }};">{{ ss.title }}</div>
+        {%- endif -%}
+        <div class="blog-content">
+            {%- liquid
+                assign sort_list = ''
+                assign art_list = ''
+                assign index = 0
+                for article in blog.articles
+                    assign sort = article.metafields.article.sort.value
+                    if sort != blank
+                        assign sort_list = sort_list | append: sort | append: '|' | append: article.id | append: ','
+                    elsif index < 4
+                        assign art_list = art_list | append: '10000|' | append: article.id | append: ','
+                        assign index = index | plus: 1
+                    endif
+                endfor
+                assign art_list = art_list | remove_last: ',' | split: ','
+                assign sort_list = sort_list | remove_last: ',' | split: ',' | sort | concat: art_list
+                assign id = sort_list[0] | split: '|' | last | times: 1
+                assign article = blog.articles | find: 'id', id
+            -%}
+            {%- if article != blank -%}
+                {%- render 'mc_article-card', class: 'blog-main flex-between', article: article, show_tag: false, show_desc: true -%}
+            {%- endif -%}
+            <div class="blog-minor article-items hide-scroll-bar flex-between-top">
+                {%- for val in sort_list limit: 4 -%}
+                    {%- unless forloop.first -%}
+                        {%- liquid
+                            assign id = val | split: '|' | last | times: 1
+                            assign article = blog.articles | find: 'id', id
+                        -%}
+                        {%- render 'mc_article-card', class: 'blog-item', article: article -%}
+                    {%- endunless -%}
+                {%- endfor -%}
+            </div>
+            {%- liquid
+                assign blog_list = section.blocks | where: 'type', 'blog'
+                assign tab_list = blog_list | map: 'settings' | map: 'title' | join: ','
+                if ss.show_article and ss.article_align == 'start'
+                    assign tab_list = ss.article_title | append: ',' | append: tab_list
+                elsif ss.show_article and ss.article_align == 'end'
+                    assign tab_list = tab_list | append: ',' | append: ss.article_title
+                endif
+                assign tab_list = tab_list | split: ','
+                assign article_list = section.blocks | where: 'type', 'article'
+            -%}
+            {%- if tab_list.size > 0 -%}
+                <div class="blog-nav-wrap flex-center" node-name="navWrap">
+                    <ul class="nav-items hide-scroll-bar">
+                        {%- for tab in tab_list -%}
+                            <li
+                                data-index="{{ forloop.index0 }}"
+                                class="nav-item flex-center{% if forloop.first %} active{% endif %}"
+                                data-proxy="tab"
+                                node-name="tab">
+                                <span class="nav-handler">{{ tab }}</span>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+                {%- assign offset = 0 -%}
+                {%- for tab in tab_list -%}
+                    {%- liquid
+                        assign index = forloop.index0 | minus: offset
+                        assign cur_blog = blog_list[index].settings.blog
+                        assign is_article = true
+                        if tab == ss.article_title
+                            if forloop.first
+                                assign offset = 1
+                            endif
+                            assign is_article = false
+                        endif
+                    -%}
+                    <animate-element
+                        data-repeat
+                        data-proxy="panel"
+                        node-name="panel"
+                        class="article-content{% if forloop.first %} active{% endif %} {% if is_article and cur_blog.articles.size > ss.per_page %} article-content-paginate{% endif %} relative article-items flex-top">
+                        {%- if is_article -%}
+                            {%- paginate cur_blog.articles by ss.per_page -%}
+                                {%- for article in cur_blog.articles -%}
+                                    {%- render 'mc_article-card', class: 'article-item', article: article -%}
+                                {%- endfor -%}
+                                {%- if paginate.pages > 1 -%}
+                                    <div class="flex-center paginate-box">
+                                        {%- render 'pagination', paginate: paginate -%}
+                                    </div>
+                                {%- endif -%}
+
+                            {%- endpaginate -%}
+                        {%- else -%}
+                            {%- for block in article_list -%}
+                                {%- render 'mc_article-card', class: 'article-item', article: block.settings.article -%}
+                            {%- endfor -%}
+                        {%- endif -%}
+                        {%- if cur_blog.articles.size == 0 -%}
+                            <div class="article-empty flex-center">
+                                {{- 'onboarding.no_content' | t -}}
+                            </div>
+                        {%- endif -%}
+                    </animate-element>
+                {%- endfor -%}
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+{%- if blog_list.size > 1 -%}
+    <script>
+        (function () {
+            const node = document.getElementById('{{ section.id }}-blog');
+            const nodeList = $heybike.getNodeList(node);
+            const header = document.getElementById('main-header');
+            const navigation = document.querySelector('.main-navigation')?.offsetHeight || 0;
+            nodeList.navWrap.style.top = `${header.offsetHeight + navigation}px`;
+            $heybike.bind('header:toggle', ({show}) => {
+                if (show) {
+                    nodeList.navWrap.style.top = `${header.offsetHeight + navigation}px`;
+                } else {
+                    nodeList.navWrap.style.top = `${navigation}px`;
+                }
+            });
+
+            $heybike.tabSwitch({
+                root: node,
+                nodeList,
+                device: 'all'
+            })
+        })();
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "MC Main Blog",
+  "class": "mc--main",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Blog page"
+    },
+    {
+      "type": "range",
+      "id": "per_page",
+      "min": 6,
+      "max": 48,
+      "step": 3,
+      "label": "t:sections.main-blog.settings.per_page.label",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Custom article"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_article",
+      "default": false,
+      "label": "Show custom article"
+    },
+    {
+      "type": "text",
+      "id": "article_title",
+      "default": "Latest",
+      "label": "Custom article title"
+    },
+    {
+      "type": "select",
+      "id": "article_align",
+      "options": [
+        {
+          "label": "Start",
+          "value": "start"
+        },
+        {
+          "label": "End",
+          "value": "end"
+        }
+      ],
+      "default": "start",
+      "label": "Custom article display position"
+    }
+  ],
+  "presets": [
+    {
+      "name": "MC Main Blog"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "blog",
+          "type": "blog",
+          "label": "t:sections.blog-posts.settings.blog.label"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "name": "Article",
+      "settings": [
+        {
+          "id": "article",
+          "type": "article",
+          "label": "Article"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,486 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1920x400.jpg",
+            "image_mobile": "shopify://shop_images/460x630.jpg",
+            "heading": "Folding Electric Bike",
+            "heading_size": "title-sm",
+            "heading_tag": "h1",
+            "subheading": "Portable folding ebikes for adults, built for commuting and travel.",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_main_breadcrumbs_gJfYWx": {
+      "type": "mc_main-breadcrumbs",
+      "blocks": {
+        "breadcrumb_6eQtYz": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Home",
+            "url": "https://www.jasionbike.com/"
+          }
+        },
+        "breadcrumb_C6D8kh": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Foldable Electric Bike",
+            "url": "shopify://collections/folding-ebike"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_6eQtYz",
+        "breadcrumb_C6D8kh"
+      ],
+      "name": "MC Main Breadcrumbs",
+      "settings": {
+        "page_color": "",
+        "pc_page_left": 20,
+        "pc_page_right": 20,
+        "pc_page_top": 20,
+        "pc_page_bottom": 20,
+        "mb_page_left": 20,
+        "mb_page_right": 20,
+        "mb_page_top": 20,
+        "mb_page_bottom": 20,
+        "text_color": "#3c3f42",
+        "hover_text_color": "#ff981d",
+        "pc_align": "center",
+        "mb_align": "center",
+        "pc_size": 15,
+        "pc_weight": 400,
+        "mb_size": 14,
+        "mb_weight": 400
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "page_navigation_jzyXXQ": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Electric Bikes",
+            "button_url": "shopify://collections/electric-bike"
+          }
+        },
+        "page_navigation_RtVCQp": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Combo Sale",
+            "button_url": "shopify://collections/combo-sale"
+          }
+        },
+        "page_navigation_dgN7LL": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Folding Ebike",
+            "button_url": "shopify://collections/folding-ebike"
+          }
+        },
+        "page_navigation_Ufn9k3": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Fat Tire Ebike",
+            "button_url": "shopify://collections/fat-tire-ebike"
+          }
+        },
+        "page_navigation_jQ3QVJ": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Cruiser Ebike",
+            "button_url": "shopify://collections/cruiser-ebike"
+          }
+        },
+        "page_navigation_THPDrH": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Over Ebike",
+            "button_url": "shopify://collections/step-over-electric-bikes"
+          }
+        },
+        "page_navigation_NyLQ3c": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Through Ebike",
+            "button_url": "shopify://collections/step-through-ebikes"
+          }
+        },
+        "page_navigation_cLfKqD": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Outlet",
+            "button_url": "shopify://collections/outlet"
+          }
+        }
+      },
+      "block_order": [
+        "promotion",
+        "page_navigation_jzyXXQ",
+        "page_navigation_RtVCQp",
+        "page_navigation_dgN7LL",
+        "page_navigation_Ufn9k3",
+        "page_navigation_jQ3QVJ",
+        "page_navigation_THPDrH",
+        "page_navigation_NyLQ3c",
+        "page_navigation_cLfKqD"
+      ],
+      "settings": {
+        "layout": "1",
+        "products_per_page": 12,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": true,
+        "filter_collapsed": false,
+        "filter_type": "sidebar",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": true,
+        "title": "Foldable E-bike Products",
+        "title_hidden": true,
+        "title_tag": "h2"
+      }
+    },
+    "faq_qH4CGn": {
+      "type": "faq",
+      "blocks": {
+        "question_9PeHqA": {
+          "type": "question",
+          "settings": {
+            "title": "1. What is a folding electric bike?",
+            "title_tag": "h3",
+            "text": "<p>A folding electric bike is an ebike designed with a collapsible frame, making it easy to store, transport, and ride. Folding electric bikes combine portability with electric assist, perfect for commuting and everyday travel.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_GXQf8j": {
+          "type": "question",
+          "settings": {
+            "title": "2. Are foldable electric bikes good for adults?",
+            "title_tag": "h3",
+            "text": "<p>Yes. Foldable electric bikes for adults offer a comfortable ride with the added benefit of compact storage. They’re ideal for commuters, travelers, and riders who need a space-saving ebike.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_VFgaGh": {
+          "type": "question",
+          "settings": {
+            "title": "3. How small does a folding ebike get when folded?",
+            "title_tag": "h3",
+            "text": "<p>Most folding ebikes fold down to a compact footprint that fits more easily in apartments, garages, or vehicle storage. For example, the Jasion Hunter Pro has been cited as folding down to about 39.8″ × 25.6″ × 31.5″, which makes it trunk/RV-friendly for many riders. If you want a portable setup for road trips, compare the folded size and how easy the folding steps feel for you.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_63FcMh": {
+          "type": "question",
+          "settings": {
+            "title": "4. Can I fit a folding electric bike in a car trunk or RV?",
+            "title_tag": "h3",
+            "text": "<p>Yes. One of the biggest benefits of a foldable electric bike is that it can be stored in a car trunk, RV, or camper, making it a great choice for road trips and travel adventures.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_iCdAHg": {
+          "type": "question",
+          "settings": {
+            "title": "5. Are folding ebikes good for commuting?",
+            "title_tag": "h3",
+            "text": "<p>Yes—folding ebikes are great for commuting because they’re easy to park and store at home or the office, and they work well for mixed trips (drive + ride, train + ride). For everyday urban commuting, a balanced folding ebike is often the most convenient option.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_PGE7BB": {
+          "type": "question",
+          "settings": {
+            "title": "6. How much does a lightweight folding ebike weigh?",
+            "title_tag": "h3",
+            "text": "<p>A lightweight folding ebike typically weighs between 50–70 lbs depending on the battery and motor size. Jasion designs folding ebikes to balance portability with power for adults.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_wFc33i": {
+          "type": "question",
+          "settings": {
+            "title": "7. How far can a folding ebike go on a single charge?",
+            "title_tag": "h3",
+            "text": "<p>Most folding ebikes can travel 30–60 miles per charge depending on rider weight, terrain, and assist level. Jasion folding electric bikes feature efficient batteries for daily commuting range.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_xaF7fE": {
+          "type": "question",
+          "settings": {
+            "title": "8. How do I choose the best folding electric bike?",
+            "title_tag": "h3",
+            "text": "<p>To choose the best folding electric bike, consider your commute distance, storage needs, motor power, and comfort. Foldable electric bikes are best when they match your lifestyle and travel habits.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_9mGdcT": {
+          "type": "question",
+          "settings": {
+            "title": "9. Are folding ebikes easy to fold and carry?",
+            "title_tag": "h3",
+            "text": "<p>Yes. We design our folding ebikes with a straightforward folding process so riders can store or transport the bike without hassle. Folding is especially convenient for small-space storage, mixed commuting (drive + ride), and travel. <br/>Which Jasion folding ebike should </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_6P74Wq": {
+          "type": "question",
+          "settings": {
+            "title": "10. Which Jasion folding ebike should I pick: Hunter Pro, X-Hunter, or X-Hunter ST?",
+            "title_tag": "h3",
+            "text": "<p>Here’s a simple way to choose:<br/>● <a href=\"https://www.jasionbike.com/products/hunter-pro\" title=\"https://www.jasionbike.com/products/hunter-pro\">Hunter Pro</a>: a strong all-around folding ebike for daily riding and value.<br/>●<a href=\"https://www.jasionbike.com/products/jasion-x-hunter\" title=\"https://www.jasionbike.com/products/jasion-x-hunter\"> X-Hunter</a>: built for all-terrain use with 85 Nm torque, a great pick if you want more climbing power.<br/>● <a href=\"https://www.jasionbike.com/products/x-hunter-st\" title=\"https://www.jasionbike.com/products/x-hunter-st\">X-Hunter ST:</a> a higher-output option labeled 1400W, ideal if you want extra performance for tougher routes.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_9PeHqA",
+        "question_GXQf8j",
+        "question_VFgaGh",
+        "question_63FcMh",
+        "question_iCdAHg",
+        "question_PGE7BB",
+        "question_wFc33i",
+        "question_xaF7fE",
+        "question_9mGdcT",
+        "question_6P74Wq"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "mc_main_breadcrumbs_gJfYWx",
+    "main-collection",
+    "faq_qH4CGn"
+  ]
+}

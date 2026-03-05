@@ -1,0 +1,173 @@
+
+
+<div class="mega-menu__container mega-menu-hb invisible">
+
+  <div class="page-width tw-flex w-full h-full overflow-hidden tw-py-8 {% if full_width %} page-width--full{% endif %}" role="list" tabindex="-1">
+    
+    
+    
+    <ul class="mega-menu__list tw-w-[18%] tw-border-r tw-border-0 tw-border-solid tw-border-viGray-200 tw-py-0" >
+      {%- if link.links != blank and link.links.size != 1 -%}
+        <li class="mega-menu__item tw-h-full mega-menu__item--nav mega-menu__item--full opacity-0 w-full grid">
+          <div class="tw-font-semibold tw-text-xl tw-text-vi ">{{- block.settings.mega_title | newline_to_br -}}</div>
+          <tabs-element class="mega-menu__nav tw-gap-4 tw-flex tw-flex-col{% if link.links.size > 6 %} mega-menu__nav--more{% endif %} ">
+            <div class="tabs tw-grid tw-gap-4">
+            {%- for childlink in link.links -%}
+              <button role="tab" {% if forloop.first %} disabled {% endif %} aria-controls="tab-{{ childlink.title | handle }}" class="collection-tab opacity-0 tw-py-1 tw-cursor-pointer">
+                <p class="tw-text-lg tw-mb-0 tw-relative tw-inline-block tw-py-1 leading-tight tracking-tight"{% if childlink.current %} aria-current="page"{% endif %}>
+                  {{- childlink.title | escape -}}
+                </p>
+              </button>
+            {%- endfor -%}
+            </div>
+          </tabs-element>
+          {%- if block.settings.button_label != blank -%}
+            <div class="mega-menu__footer relative tw-mr-8">
+              <a class="flex items-center justify-between w-full h-full tw-text-lg tw-pr-0 tw-pb-0"{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% if block.settings.button_external %} target="_blank" rel="noopener"{% endif %}{% else %} role="link" aria-disabled="true"{% endif %}>
+                <span class="reversed-link tracking-tight">{{ block.settings.button_label | escape }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <g clip-path="url(#clip0_2544_584)">
+                  <path d="M9.57339 1.26661C9.57339 0.954228 9.32015 0.700989 9.00776 0.700989C8.69538 0.700989 8.44214 0.954228 8.44214 1.26661V16.7354C8.44214 17.0477 8.69538 17.301 9.00776 17.301C9.32015 17.301 9.57339 17.0477 9.57339 16.7354V1.26661Z" fill="#262629" stroke="#262629" stroke-width="0.1"/>
+                  <path d="M11.4375 3.54492H13.95C15.1051 3.54492 15.6827 3.54492 16.1239 3.76972C16.5119 3.96746 16.8275 4.28298 17.0252 4.67107C17.25 5.11226 17.25 5.68981 17.25 6.84492V11.1387C17.25 12.2938 17.25 12.8713 17.0252 13.3125C16.8275 13.7006 16.5119 14.0161 16.1239 14.2139C15.6827 14.4387 15.1051 14.4387 13.95 14.4387H11.4375" stroke="#262629" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M0.75 5.56348C0.75 4.42439 1.67341 3.50098 2.8125 3.50098H9V14.501H2.8125C1.67341 14.501 0.75 13.5776 0.75 12.4385V5.56348Z" fill="#E4E4E7" stroke="#262629" stroke-width="1.2"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_2544_584">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+    </ul>
+    
+    
+    <div class="tw-col-span-3 tw-px-5 tw-py-3 tw-flex tw-justify-between tw-flex-col {% if link.links.size != 1 %}tw-w-[60%]{% else %}tw-w-[78%]{% endif %}">
+      {%- for childlink in link.links -%}
+        <div id="tab-{{childlink.title | handle}}" role="tabpanel" {% unless forloop.first %} hidden {% endunless %}>
+          <div class="tw-grid {% if link.links.size != 1 %}tw-grid-cols-3{% else %}tw-grid-cols-4{% endif %} tw-gap-6">
+            {%- assign collection = childlink.object -%}
+            {% if link.links.size != 1 %}
+              {% assign limit = 3 %}
+            {% else %}
+              {% assign limit = 4 %}
+            {% endif %}
+              {%- assign count = 0 -%}
+            {%- for product in collection.products -%}
+              {%- if product.metafields.custom.hidden_link.value != true and count < limit -%}
+                  {%- assign count = count | plus: 1 -%}
+                <div class="tw-col-span-1 tw-relative">
+                  {%- render 'product-badges', product: product, show_save_amount: true, save_type: "percent",class:"tw-flex tw-justify-star tw-mb-4", size_class:"badge-sm" -%}
+                  <a href="{{ product.url }}" class="tw-flex tw-flex-col tw-gap-2 tw-text-center ">
+                    {% assign pr_img = product.metafields.custom.pure_product_image | default : product.featured_image %}
+                    {{ pr_img | image_url: width: '450' | image_tag: width: '450'}}
+                    <span class="tw-text-lg tw-line-clamp-1">
+                      {{product.metafields.custom.short_title.value | default: product.title | escape  }}
+                    </span>
+                    <p class="product-card__subtitle  tw-line-clamp-1 tw-leading-snug tw-text-viGray tw-text-xs">
+                      {% if product.metafields.custom.short_text.value != blank %}
+                      {{ product.metafields.custom.short_text.value }}
+                      {% endif %}
+                    </p>
+                    <p>{%- render 'product-price', product: product, class: 'tw-price-text-lg flex gap-2 md:gap-1d5 tw-justify-center' -%} </p>
+                  </a>
+                  {% if block.settings.show_badges %}
+                  {% comment %} {%- render 'product-badges', product: product, show_save_amount: true, save_type: "label",class:"tw-absolute tw-left-auto tw-right-0", size_class:"badge-sm" -%} {% endcomment %}
+                  {% endif %}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endfor -%}
+      <div class="tw-flex tw-justify-between tw-items-center tw-gap-20 tw-mt-12">
+        {%- assign item = block.settings.store_highlights | default : false -%}
+        {% if item %}
+        <div class="tw-grid tw-grid-cols-4 tw-flex-1">
+          {% assign icons = item.icons.value | reverse | reverse %}
+          {% for i in (0..3) %}
+            {% if item.content.value[i] != blank %}
+              <div class="tw-flex tw-items-center tw-text-left tw-gap-2 tw-text-sm">
+                {{- icons[i] | image_url: width: 32 | image_tag: loading: 'lazy', class: 'icon-md tw-aspect-square' -}} 
+                <p> {{ item.content.value[i] }} </p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if block.settings.btm_button_label and block.settings.btm_button_link and block.settings.use_all_btn %}
+        <div class="tw-shrink-0 tw-pr-4">
+          <a class="button tw-button--outline button--sm " href="{{block.settings.btm_button_link}}" is="hover-link">
+            <span class="btn-text">{{ block.settings.btm_button_label }}</span>
+          </a>
+        </div>
+        {% else %}
+          {%- if link.links != blank -%}
+          {%- for childlink in link.links -%}
+            <div class="-md:tw-order-3" aria-controls-item="tab-{{ childlink.title | handle }}" role="tabpanel" {% unless forloop.first %}hidden{% endunless %}>
+              <div class="tw-shrink-0 tw-pr-4">
+                <a class="button tw-button--outline button--sm " href="{{childlink.url}}" is="hover-link">
+                  <span class="btn-text">{{ block.settings.btm_button_label }}</span>
+                </a>
+              </div>
+            </div>
+          {%- endfor -%}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+    <div  class="tw-col-span-1 tw-w-[22%]">
+
+      {%assign promo_image = block.settings["promo_image_1"]%}
+      {%- if promo_image != blank -%}
+        {%- liquid
+          assign promo_image_ratio = 'promo_image_ratio_1' | append: i
+          assign promo_image_ratio = block.settings[promo_image_ratio]
+          assign promo_heading = block.settings['promo_heading_1']
+          assign promo_subtext = block.settings['promo_subtext_1']
+          assign promo_overlay_content = block.settings['promo_overlay_content_1']
+          assign promo_link = block.settings['promo_link_1']
+          assign promo_tag = block.settings['promo_tag_1']
+          assign promo_color_text = block.settings['promo_color_text_1']
+          assign promo_color_overlay = block.settings['promo_color_overlay_1']
+          assign promo_overlay_opacity = block.settings['promo_overlay_opacity_1']
+        -%}
+          <div class="media-card media-card--{{ settings.card_style }}{% if promo_overlay_content %} media-card--overlap{% endif %} overflow-hidden">
+            <a class="media-card__link flex flex-col w-full h-full relative"{% if promo_link != blank %} href="{{ promo_link }}"{% else %} role="link" aria-disabled="true"{% endif %}
+              aria-label="{{ promo_heading | default: promo_subtext | escape }}"
+              style="--color-foreground: {{ promo_color_text.rgb }}; --color-overlay: {{ promo_color_overlay.rgb }}; --overlay-opacity: {{ promo_overlay_opacity | divided_by: 100.0 }};"
+            >
+              <div class="media media--{{ promo_image_ratio }} relative overflow-hidden">
+                {{- promo_image | image_url: width: promo_image.width | image_tag: loading: 'lazy', widths: '180,360,540,720,900,1080', is: 'lazy-image' -}}
+              </div>
+              {%- if promo_heading != blank or promo_subtext != blank -%}
+                <div class="media-card__content !tw-px-4 tw-top-4 tw-bottom-auto tw-left-0 tw-flex tw-flex-col w-full">
+                  {%- if promo_tag != blank -%}
+                  <div class="badges grid gap-3 pointer-events-none">
+                    <span class="badge badge--onsale flex tw-py-2 items-center gap-1d5 font-medium leading-none rounded-full">{{ promo_tag | escape }}</span>
+                  </div>
+                  {%- endif -%}
+                  <div class="media-card__text opacity-0 shrink-1 grid gap-0d5">
+                    {%- if promo_heading != blank -%}
+                      <h4>
+                        <span class="reversed-link tw-text-2xl tracking-tighter leading-tight">{{ promo_heading | escape }}</span>
+                      </h4>
+                    {%- endif -%}
+                    {%- if promo_subtext != blank -%}
+                      <p class="leading-none text-sm">{{ promo_subtext }}</p>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+            </a>
+          </div>
+      {%- endif -%}
+    </div>
+</div>
+
+
+
+</div>

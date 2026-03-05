@@ -1,0 +1,214 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_main-breadcrumbs {
+    {%- if ss.page_color != blank -%} background: {{ ss.page_color }};
+    {%- endif -%}
+    }
+
+    .mc_main-breadcrumbs .container {
+        display: flex;
+    }
+
+    .mc_main-breadcrumbs .container {
+        justify-content: {% if ss.pc_align == 'left' %}flex-start{% elsif ss.pc_align == 'center' %}center{% else %}flex-end{% endif %};
+    }
+
+    .mc_main-breadcrumbs .breadcrumbs-wrap {
+        padding: {{ ss.pc_page_top | divided_by: 19.2 }}vw {{ ss.pc_page_right | divided_by: 19.2 }}vw {{ ss.pc_page_bottom | divided_by: 19.2 }}vw {{ ss.pc_page_left | divided_by: 19.2 }}vw;
+    }
+
+    .mc_main-breadcrumbs .breadcrumbs-wrap .text,
+    .mc_main-breadcrumbs .breadcrumbs-wrap .arrow {
+        color: {{ ss.text_color }};
+        font-size: {{ ss.pc_size }}px;
+        font-weight: {{ ss.pc_weight }};
+        line-height: 1.2;
+        transition: color 0.3s;
+        transition-property: color, background-size;
+    }
+
+    .mc_main-breadcrumbs .breadcrumbs-wrap .arrow {
+        padding: 0 4px;
+    }
+
+    .mc_main-breadcrumbs .breadcrumbs-wrap .text:hover {
+        color: {{ ss.hover_text_color }};
+    }
+
+    @media screen and (max-width: 1024px) {
+        .mc_main-breadcrumbs .container {
+            justify-content: {% if ss.mb_align == 'left' %}flex-start{% elsif ss.mb_align == 'center' %}center{% else %}flex-end{% endif %};
+        }
+
+        .mc_main-breadcrumbs .breadcrumbs-wrap {
+            padding: {{ ss.mb_page_top }}px {{ ss.mb_page_right }}px {{ ss.mb_page_bottom }}px {{ ss.mb_page_left }}px;
+        }
+
+        .mc_main-breadcrumbs .breadcrumbs-wrap .text,
+        .mc_main-breadcrumbs .breadcrumbs-wrap .arrow {
+            font-size: {{ ss.mb_size }}px;
+            font-weight: {{ ss.mb_weight }};
+        }
+    }
+</style>
+<div class="mc_main-breadcrumbs">
+    <nav class="breadcrumbs-wrap">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <a class="text{% if bs.url != blank %} reversed-link{% endif %}" href="{% if bs.url != blank %}{{ bs.url }}{% else %}javascript:void(0){% endif %}">
+                {{ bs.text }}
+            </a>
+            {%- if forloop.last != true -%}
+                <span class="arrow">></span>
+            {%- endif -%}
+        {%- endfor -%}
+    </nav>
+</div>
+{% schema %}
+{
+  "name": "MC Main Breadcrumbs",
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background color"
+    },
+    {
+      "type": "number",
+      "id": "pc_page_left",
+      "label": "Desktop left margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "pc_page_right",
+      "label": "Desktop right margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "pc_page_top",
+      "label": "Desktop top margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "pc_page_bottom",
+      "label": "Desktop bottom margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mb_page_left",
+      "label": "Mobile left margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mb_page_right",
+      "label": "Mobile right margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mb_page_top",
+      "label": "Mobile top margin",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mb_page_bottom",
+      "label": "Mobile bottom margin",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#3c3f42"
+    },
+    {
+      "type": "color",
+      "id": "hover_text_color",
+      "label": "Hover Text Color",
+      "default": "#ff981d"
+    },
+    {
+      "type": "text_alignment",
+      "id": "pc_align",
+      "label": "Desktop Display position",
+      "default": "center"
+    },
+    {
+      "type": "text_alignment",
+      "id": "mb_align",
+      "label": "Mobile Display position",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "pc_size",
+      "label": "Desktop text size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "pc_weight",
+      "label": "Desktop text weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "mb_size",
+      "label": "Mobile text size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mb_weight",
+      "label": "Mobile text weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 400
+    }
+  ],
+  "blocks": [
+    {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "MC Main Breadcrumbs",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

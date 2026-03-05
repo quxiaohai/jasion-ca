@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="{{ 'snowflake.css' | asset_url }}">
+{%- assign ss = section.settings -%}
+<script>
+    (function () {
+        const html = `{%- for v in (1..200) -%}<div class="snow">&nbsp;</div>{%- endfor -%}`;
+        const node = document.createElement('div');
+        node.className = 'page-snowflake';
+        {%- if ss.background_color != blank -%}
+        node.style.background = '{{ ss.background_color }}';
+        {%- endif -%}
+        node.innerHTML = html;
+        document.body.appendChild(node);
+    })()
+</script>
+{% schema %}
+{
+  "name": "MC Page Snowflake",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": " MC Page Snowflake"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_background",
+      "label": "Background color",
+      "id": "background_color",
+      "default": "radial-gradient(ellipse at bottom, #1b2735 0, #090a0f 100%)"
+    }
+  ]
+}
+{% endschema %}

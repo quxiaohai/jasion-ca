@@ -1,0 +1,796 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+
+  #shopify-section-{{ section.id }} .multicolumn-slide-wrapper .avatar-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+  }
+</style>
+
+<div class="multicolumn-slide-wrapper section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="{% if section.settings.pw-overflow-hidden %}page-width-overflow-hidden{% else %}page-width{% endif %}{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    
+    {%- capture indicators -%}
+      {%- if section.settings.carousel_on_desktop -%}
+        <div class="tw-slider-pointers indicators hidden lg:flex gap-2d5">
+          <button class="button button--secondary" type="button" is="previous-button" aria-controls="Slider-{{ section.id }}" aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">
+              {%- render 'icon', icon: 'chevron-left', class: 'transform' -%}
+            </span>
+          </button>
+          <button class="button button--secondary" type="button" is="next-button" aria-controls="Slider-{{ section.id }}" aria-label="{{ 'general.pagination.next' | t | escape }}">
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">
+              {%- render 'icon', icon: 'chevron-right', class: 'transform' -%}
+            </span>
+          </button>
+        </div>
+      {%- else -%}
+      {%- endif -%}
+    {%- endcapture -%}
+    {%- render 'section-heading', section: section, section_button: indicators -%}
+    <div>
+      <slider-element loop id="Slider-{{ section.id }}" class="grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %} {% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card">
+        <motion-list class="card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
+            
+          {% for block in section.blocks %}
+            {% assign bk_stts = block.settings %}
+            <div class="tw-flex tw-flex-col card md:tw-gap-4 tw-gap-3">
+            {% case block.type %}
+              {% when 'item' %}
+                {% if bk_stts.img != blank %}
+                <div class="tw-rounded-2xl tw-overflow-hidden tw-mb-2">
+                  {{ bk_stts.img | image_url: width: '1000' | image_tag: width: '1000,750,500'}} 
+                </div>
+                {% endif %}
+                {% if bk_stts.date %}
+                  <p class="tw-font-light tw-text-viGray -md:tw-text-sm">{{ bk_stts.date }}</p>
+                  {% endif %}
+                  {% if bk_stts.title %}
+                  <p class="{{bk_stts.title_sz}} tw-font-medium tw-line-clamp-2 tw-leading-[1.3] md:-tw-mb-1">{{ bk_stts.title }}</p>
+                  {% endif %}
+                  <p class="-md:tw-text-sm">{{ bk_stts.content }}</p>
+                  {% if bk_stts.avatar and bk_stts.author %}
+                  <div class="tw-flex tw-items-center tw-gap-4 md:tw-text-lg tw-text-sm">
+                      {{ bk_stts.avatar | image_url: width: '48' | image_tag: width: '48', class: 'avatar-image' }}
+                      <span class="-md:tw-text-sm">{{bk_stts.author }}</span>
+                  </div>
+                  {% endif %}
+              {% else %}
+                {%- liquid
+                  assign poster = bk_stts.video.preview_image | default: bk_stts.cover_image
+                  assign video_mobile = bk_stts.video_mobile | default: bk_stts.video
+                
+                  if video_mobile
+                    assign poster_mobile = video_mobile.preview_image | default: bk_stts.cover_image_mobile
+                  endif
+                -%}
+                <div class="tw-video-media-wrapper tw-rounded-2xl image-with-text__image media banner media--adapt media--transparent relative overflow-hidden media--{{ bk_stts.image_height }} mobile:media--{{ bk_stts.image_height_mobile }}">
+                  {%- capture sizes -%}{% if bk_stts.full_width %}100vw{% else %}min({{ settings.page_width }}px, 100vw){% endif %}{%- endcapture -%}
+                  {%- if bk_stts.video_mobile or bk_stts.video_url_mobile -%}
+                    {%- render 'video',
+                      sizes: sizes,
+                      video: bk_stts.video_mobile,
+                      video_url: bk_stts.video_url_mobile,
+                      muted: bk_stts.enable_video_autoplay,
+                      autoplay: bk_stts.enable_video_autoplay,
+                      loop: bk_stts.enable_video_looping,
+                      description: bk_stts.description,
+                      cover_image: bk_stts.cover_image_mobile,
+                      show_play_button: true,
+                      is_mobile: true,
+                      controls: true,
+                      class: 'media media--height w-full h-full relative'
+                    -%}
+                  {%- endif -%}
+                  {%- render 'video',
+                    sizes: sizes,
+                    video: bk_stts.video,
+                    video_url: bk_stts.video_url,
+                    muted: bk_stts.enable_video_autoplay,
+                    autoplay: bk_stts.enable_video_autoplay,
+                    loop: bk_stts.enable_video_looping,
+                    description: bk_stts.description,
+                    cover_image: bk_stts.cover_image,
+                    show_play_button: true,
+                    controls: true,
+                    class: 'media media--height w-full h-full relative'
+                  -%}
+                </div>
+                {% if bk_stts.date %}
+                <p class="tw-font-light tw-text-viGray -md:tw-text-sm">{{ bk_stts.date }}</p>
+                {% endif %}
+                {% if bk_stts.title %}
+                <p class="{{bk_stts.title_sz}} tw-font-medium tw-line-clamp-2 tw-leading-[1.3]">{{ bk_stts.title }}</p>
+                {% endif %}
+                <p>{{ bk_stts.content }}</p>
+                {% if bk_stts.avatar and bk_stts.author %}
+                <div class="tw-flex tw-items-center tw-gap-4 md:tw-text-lg tw-text-sm">
+                    {{ bk_stts.avatar | image_url: width: '48' | image_tag: width: '48', class: 'avatar-image'}}
+                    <span>{{bk_stts.author }}</span>
+                </div>
+                {% endif %}
+
+            {% endcase %}
+            </div>
+
+          {%- endfor -%}
+
+
+        </motion-list>
+        {%- if section.settings.heading == blank and section.settings.subheading == blank and section.settings.description == blank -%}
+          {%- if section.settings.carousel_on_desktop -%}
+            <div class=" indicators hidden lg:flex gap-2d5 items-center absolute top-0 left-0 w-full h-full pointer-events-none opacity-0 page-width">
+              <button class="button button--primary pointer-events-auto" type="button" is="previous-button" aria-controls="Slider-{{ section.id }}" aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled>
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- render 'icon', icon: 'chevron-left', class: 'stroke-2 transform' -%}
+                </span>
+              </button>
+              <button class="button button--primary pointer-events-auto" type="button" is="next-button" aria-controls="Slider-{{ section.id }}" aria-label="{{ 'general.pagination.next' | t | escape }}">
+                <span class="btn-fill" data-fill></span>
+                <span class="btn-text">
+                  {%- render 'icon', icon: 'chevron-right', class: 'stroke-2 transform' -%}
+                </span>
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </slider-element>
+
+      {% assign progress_w = section.settings.columns | times: 100 | divided_by: section.blocks.size  %}
+      {% assign progress_w_mb = 100 | divided_by: section.blocks.size  %}
+      <div id="Slider-progress-{{ section.id }}" class="!tw-block tw-rounded-2xl slider-progress tw-progress tw-mt-12 tw-relative"
+        og-progress-width="{{progress_w}}"
+        og-progress-width-mb="{{progress_w_mb}}"
+        style="--progress-width: {{progress_w}}%;"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .tw-progress::after{transform: translateX(var(--progress-width));}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let progressBar = document.getElementById("Slider-progress-{{ section.id }}");
+      if (progressBar) {
+          let isMobile = window.innerWidth <= 768; // 768px 以下认为是移动端
+          let attrName = isMobile ? 'og-progress-width-mb' : 'og-progress-width';
+          let progressWidth = progressBar.getAttribute(attrName);
+          progressWidth = parseFloat(progressWidth) || 0;
+          progressBar.style.setProperty('--progress-width', `${progressWidth}%`);
+      }
+  });
+</script>
+
+{% schema %}
+  {
+    "name":"Multicolumn slide (hb)",
+    "settings":[
+      {
+          "type":"checkbox",
+          "id":"pw-overflow-hidden",
+          "label":"Use page overflow hidden?",
+          "default":false
+      },
+      {
+          "type":"range",
+          "id":"columns",
+          "min":1,
+          "max":5,
+          "step":1,
+          "default":4,
+          "label":"t:sections.global.settings.columns.label"
+      },
+      {
+          "type":"checkbox",
+          "id":"carousel_on_desktop",
+          "label":"t:sections.global.settings.carousel_on_desktop.label",
+          "default":true
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__mobile.content"
+      },
+      {
+          "type":"select",
+          "id":"columns_mobile",
+          "options":[
+            {
+                "value":"1",
+                "label":"t:sections.global.settings.columns_mobile.options__1.label"
+            },
+            {
+                "value":"2",
+                "label":"t:sections.global.settings.columns_mobile.options__2.label"
+            }
+          ],
+          "default":"1",
+          "label":"t:sections.global.settings.columns_mobile.label"
+      },
+      {
+          "type":"checkbox",
+          "id":"swipe_on_mobile",
+          "label":"t:sections.global.settings.swipe_on_mobile.label",
+          "default":true
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__heading.content"
+      },
+      {
+          "type":"inline_richtext",
+          "id":"heading",
+          "label":"t:sections.global.settings.heading.label",
+          "default":"Product featured"
+      },
+      {
+          "type":"select",
+          "id":"heading_size",
+          "options":[
+            {
+                "value":"title-sm",
+                "label":"t:sections.global.settings.heading_size.options__1.label"
+            },
+            {
+                "value":"title-md",
+                "label":"t:sections.global.settings.heading_size.options__2.label"
+            },
+            {
+                "value":"title-lg tracking-heading",
+                "label":"t:sections.global.settings.heading_size.options__3.label"
+            },
+            {
+                "value":"title-xl tracking-heading",
+                "label":"t:sections.global.settings.heading_size.options__4.label"
+            }
+          ],
+          "default":"title-md",
+          "label":"t:sections.global.settings.heading_size.label"
+      },
+      {
+          "type":"select",
+          "id":"heading_alignment",
+          "label":"t:sections.global.settings.heading_alignment.label",
+          "options":[
+            {
+                "value":"text-left md:items-end md:flex-row",
+                "label":"t:sections.global.settings.heading_alignment.options__1.label"
+            },
+            {
+                "value":"text-center md:items-center",
+                "label":"t:sections.global.settings.heading_alignment.options__2.label"
+            },
+            {
+                "value":"text-right md:items-end md:flex-row-reverse",
+                "label":"t:sections.global.settings.heading_alignment.options__3.label"
+            }
+          ],
+          "default":"text-left md:items-end md:flex-row"
+      },
+      {
+          "type":"select",
+          "id":"heading_tag",
+          "options":[
+            {
+                "value":"h1",
+                "label":"t:sections.global.settings.heading_tag.options__1.label"
+            },
+            {
+                "value":"h2",
+                "label":"t:sections.global.settings.heading_tag.options__2.label"
+            },
+            {
+                "value":"h3",
+                "label":"t:sections.global.settings.heading_tag.options__3.label"
+            },
+            {
+                "value":"h4",
+                "label":"t:sections.global.settings.heading_tag.options__4.label"
+            },
+            {
+                "value":"h5",
+                "label":"t:sections.global.settings.heading_tag.options__5.label"
+            },
+            {
+                "value":"h6",
+                "label":"t:sections.global.settings.heading_tag.options__6.label"
+            },
+            {
+                "value":"div",
+                "label":"t:sections.global.settings.heading_tag.options__7.label"
+            },
+            {
+                "value":"span",
+                "label":"t:sections.global.settings.heading_tag.options__8.label"
+            },
+            {
+                "value":"p",
+                "label":"t:sections.global.settings.heading_tag.options__9.label"
+            }
+          ],
+          "default":"h2",
+          "label":"t:sections.global.settings.heading_tag.label",
+          "info":"t:sections.global.settings.heading_tag.info"
+      },
+      {
+          "type":"text",
+          "id":"subheading",
+          "label":"t:sections.global.settings.subheading.label"
+      },
+      {
+          "type":"richtext",
+          "id":"description",
+          "label":"t:sections.global.settings.description.label"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__highlight.content",
+          "info":"t:sections.global.settings.header__highlight.info"
+      },
+      {
+          "type":"select",
+          "id":"highlighted_text",
+          "options":[
+            {
+                "value":"none",
+                "label":"t:sections.global.settings.highlighted_text.options__1.label"
+            },
+            {
+                "value":"text",
+                "label":"t:sections.global.settings.highlighted_text.options__2.label"
+            },
+            {
+                "value":"full_text",
+                "label":"t:sections.global.settings.highlighted_text.options__3.label"
+            },
+            {
+                "value":"half_text",
+                "label":"t:sections.global.settings.highlighted_text.options__4.label"
+            },
+            {
+                "value":"underline",
+                "label":"t:sections.global.settings.highlighted_text.options__5.label"
+            },
+            {
+                "value":"stencil",
+                "label":"t:sections.global.settings.highlighted_text.options__6.label"
+            },
+            {
+                "value":"scribble",
+                "label":"t:sections.global.settings.highlighted_text.options__7.label"
+            }
+          ],
+          "default":"none",
+          "label":"t:sections.global.settings.highlighted_text.label"
+      },
+      {
+          "type":"select",
+          "id":"highlighted_scribble",
+          "options":[
+            {
+                "value":"circle",
+                "label":"t:sections.global.settings.highlighted_scribble.options__1.label"
+            },
+            {
+                "value":"basic-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__2.label"
+            },
+            {
+                "value":"sketch-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__3.label"
+            },
+            {
+                "value":"squiggle-underline",
+                "label":"t:sections.global.settings.highlighted_scribble.options__4.label"
+            },
+            {
+                "value":"squiggle-underline-2",
+                "label":"t:sections.global.settings.highlighted_scribble.options__5.label"
+            }
+          ],
+          "default":"circle",
+          "label":"t:sections.global.settings.highlighted_scribble.label",
+          "info":"t:sections.global.settings.highlighted_scribble.info"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__colors.content",
+          "info":"t:sections.global.settings.header__colors.info"
+      },
+      {
+          "type":"color",
+          "id":"color_text",
+          "label":"t:sections.global.settings.color_text.label"
+      },
+      {
+          "type":"color",
+          "id":"color_background",
+          "label":"t:sections.global.settings.color_background.label"
+      },
+      {
+          "type":"color_background",
+          "id":"gradient_background",
+          "label":"t:sections.global.settings.gradient_background.label"
+      },
+      {
+          "type":"color",
+          "id":"color_highlight",
+          "label":"t:sections.global.settings.color_highlight.label"
+      },
+      {
+          "type":"color_background",
+          "id":"gradient_highlight",
+          "label":"t:sections.global.settings.gradient_highlight.label"
+      },
+      {
+          "type":"color",
+          "id":"color_button_text",
+          "label":"t:sections.global.settings.color_button_text.label"
+      },
+      {
+          "type":"color",
+          "id":"color_button_background",
+          "label":"t:sections.global.settings.color_button_background.label"
+      },
+      {
+          "type":"color_background",
+          "id":"color_button_gradient",
+          "label":"t:sections.global.settings.color_button_gradient.label"
+      },
+      {
+          "type":"header",
+          "content":"t:sections.global.settings.header__section.content"
+      },
+      {
+          "type":"range",
+          "id":"padding_top",
+          "min":0,
+          "max":120,
+          "step":4,
+          "unit":"px",
+          "label":"t:sections.global.settings.padding_top.label",
+          "default":72
+      },
+      {
+          "type":"range",
+          "id":"padding_bottom",
+          "min":0,
+          "max":120,
+          "step":4,
+          "unit":"px",
+          "label":"t:sections.global.settings.padding_bottom.label",
+          "default":72
+      },
+      {
+          "type":"checkbox",
+          "id":"divider",
+          "label":"t:sections.global.settings.divider.label",
+          "default":false
+      },
+      {
+          "type":"checkbox",
+          "id":"full_width",
+          "label":"t:sections.global.settings.full_width.label",
+          "default":false
+      },
+      {
+          "type":"checkbox",
+          "id":"rounded",
+          "default":false,
+          "label":"t:sections.global.settings.rounded.label"
+      }
+    ],
+    "blocks":[
+      {
+          "type":"item",
+          "name":"Item",
+          "settings":[
+            {
+                "type":"image_picker",
+                "id":"img",
+                "label":"image"
+            },
+            {
+              "type": "text",
+              "id": "date",
+              "label": "Date",
+              "default": "Jun 29, 2024"
+            },
+            {
+                "type":"text",
+                "id":"title",
+                "label":"Title",
+                "default":"Your Long-range, Touring E-bike"
+            },
+            {
+              "type": "select",
+              "id": "title_sz",
+              "label": "Title size",
+              "options": [
+                {
+                "value": "h5",
+                "label": "sm"
+                },
+                {
+                "value": "h4",
+                "label": "md"
+                },
+                {
+                "value": "h3",
+                "label": "lg"
+                },
+              ],
+              "default": "h3",
+            },
+            {
+                "type":"textarea",
+                "id":"content",
+                "label":"Content",
+                "default":"The synergy of the customized motor and torque sensor ensures optimal efficiency, enabling an impressive 80-mile range on a single charge. Enhanced by the Shimano 8-speed gear shift system, it tackles diverse terrains with ease. Start an ebike tour now!"
+            },
+            {
+              "type": "image_picker",
+              "id": "avatar",
+              "label": "Avatar"
+            },
+            {
+              "type": "text",
+              "id": "author",
+              "label": "Author",
+              "default": "RVdaydream"
+            }
+          ]
+      },
+      {
+          "type":"video",
+          "name":"Video",
+          "settings":[
+            {
+                "type":"header",
+                "content":"t:sections.video.settings.header__video.content"
+            },
+            {
+                "type":"video",
+                "id":"video",
+                "label":"t:sections.video.settings.video.label"
+            },
+            {
+                "type":"header",
+                "content":"t:sections.video.settings.header__video_url.content",
+                "info":"t:sections.video.settings.header__video_url.info"
+            },
+            {
+                "type":"video_url",
+                "id":"video_url",
+                "accept":[
+                  "youtube",
+                  "vimeo"
+                ],
+                "default":"https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "label":"t:sections.video.settings.video_url.label",
+                "info":"t:sections.video.settings.video_url.info"
+            },
+            {
+                "type":"image_picker",
+                "id":"cover_image",
+                "label":"t:sections.video.settings.cover_image.label"
+            },
+            {
+                "type":"text",
+                "id":"description",
+                "label":"t:sections.video.settings.description.label",
+                "info":"t:sections.video.settings.description.info"
+            },
+            {
+                "type":"checkbox",
+                "id":"enable_video_autoplay",
+                "label":"t:sections.video.settings.enable_video_autoplay.label",
+                "info":"t:sections.video.settings.enable_video_autoplay.info",
+                "default":false
+            },
+            {
+                "type":"checkbox",
+                "id":"enable_video_looping",
+                "label":"t:sections.video.settings.enable_video_looping.label",
+                "default":false
+            },
+            {
+                "type":"select",
+                "id":"image_height",
+                "options":[
+                  {
+                      "label":"t:sections.global.settings.image_height.options__1.label",
+                      "value":"adapt"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__2.label",
+                      "value":"400px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__3.label",
+                      "value":"450px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__4.label",
+                      "value":"500px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__5.label",
+                      "value":"550px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__6.label",
+                      "value":"600px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__7.label",
+                      "value":"650px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__8.label",
+                      "value":"700px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__9.label",
+                      "value":"750px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__10.label",
+                      "value":"850px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__11.label",
+                      "value":"900px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height.options__12.label",
+                      "value":"100vh"
+                  }
+                ],
+                "default":"adapt",
+                "label":"t:sections.global.settings.image_height.label"
+            },
+            {
+                "type":"header",
+                "content":"t:sections.global.settings.header__mobile.content"
+            },
+            {
+                "type":"video",
+                "id":"video_mobile",
+                "label":"t:sections.video.settings.video_mobile.label"
+            },
+            {
+                "type":"video_url",
+                "id":"video_url_mobile",
+                "accept":[
+                  "youtube",
+                  "vimeo"
+                ],
+                "label":"t:sections.video.settings.video_url_mobile.label",
+                "info":"t:sections.video.settings.video_url.info"
+            },
+            {
+                "type":"image_picker",
+                "id":"cover_image_mobile",
+                "label":"t:sections.video.settings.cover_image_mobile.label"
+            },
+            {
+                "type":"select",
+                "id":"image_height_mobile",
+                "options":[
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__1.label",
+                      "value":"auto"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__2.label",
+                      "value":"200px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__3.label",
+                      "value":"250px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__4.label",
+                      "value":"300px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__5.label",
+                      "value":"400px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__6.label",
+                      "value":"500px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__7.label",
+                      "value":"600px"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__8.label",
+                      "value":"100vh"
+                  },
+                  {
+                      "label":"t:sections.global.settings.image_height_mobile.options__9.label",
+                      "value":"adapt"
+                  }
+                ],
+                "default":"auto",
+                "label":"t:sections.global.settings.image_height_mobile.label"
+            },
+            {
+              "type": "header",
+              "content": "Content settings"
+            },
+            {
+              "type": "text",
+              "id": "date",
+              "label": "Date",
+              "default": "Jun 29, 2024"
+            },
+            {
+                "type":"text",
+                "id":"title",
+                "label":"Title",
+                "default":"Your Long-range, Touring E-bike"
+            },
+            {
+              "type": "select",
+              "id": "title_sz",
+              "label": "Title size",
+              "options": [
+                {
+                "value": "h5",
+                "label": "sm"
+                },
+                {
+                "value": "h4",
+                "label": "md"
+                },
+                {
+                "value": "h3",
+                "label": "lg"
+                },
+              ],
+              "default": "h3",
+            },
+            {
+                "type":"textarea",
+                "id":"content",
+                "label":"Content",
+                "default":"The synergy of the customized motor and torque sensor ensures optimal efficiency, enabling an impressive 80-mile range on a single charge. Enhanced by the Shimano 8-speed gear shift system, it tackles diverse terrains with ease. Start an ebike tour now!"
+            },
+            {
+              "type": "image_picker",
+              "id": "avatar",
+              "label": "Avatar"
+            },
+            {
+              "type": "text",
+              "id": "author",
+              "label": "Author",
+              "default": "RVdaydream"
+            }
+          ]
+      }
+    ],
+    "presets":[
+      {
+          "name":"Multicolumn slide (hb)"
+      }
+    ],
+    "disabled_on":{
+      "templates":[
+          "password"
+      ]
+    }
+  }
+{% endschema %}

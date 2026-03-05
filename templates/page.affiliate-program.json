@@ -1,0 +1,598 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center",
+        "heading_tag": "h2",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_9MqrFU": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_MNUWwr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1banner.png",
+            "image_mobile": "shopify://shop_images/1banner_M.png",
+            "heading": "Partner With Us",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "subheading": "We’re always excited to team up with new content creators and affiliates.",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "Join us",
+            "button_link": "https://jasionbike.goaffpro.com",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_pqPCQM": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "Performance and style in Harmony",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_mdrMU4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "Performance and style in Harmony",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_MNUWwr",
+        "image_pqPCQM",
+        "image_mdrMU4"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "700px",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ff981d",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_nCbgFt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_EiLmjH": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_fMaET7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Partner With Us",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_tpLKkM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re always excited to team up with new content creators and affiliates.<br/><br/></p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_EiLmjH",
+        "heading_fMaET7",
+        "text_tpLKkM"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/1banner.png",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/1banner_M.png",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "multicolumn_iLHkNx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PFRfnQ": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/GOAFFPRO.png",
+            "image_ratio": "adapt",
+            "heading": "Jasion US:",
+            "heading_size": "text-lg-2xl",
+            "text": "",
+            "button_label": "Join Now",
+            "button_link": "https://jasionbike.goaffpro.com/",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_9xf8Wr": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/imp.png",
+            "image_ratio": "adapt",
+            "heading": "Jasion US: 43550",
+            "heading_size": "text-lg-2xl",
+            "text": "",
+            "button_label": "Join Now",
+            "button_link": "http://app.impact.com/campaign-campaign-info-v2/JasionBike.brand",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_NYdBJH": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_border": false,
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Example title",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_PFRfnQ",
+        "column_9xf8Wr",
+        "column_NYdBJH"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "gap": "large",
+        "columns": 2,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Jasion Affiliate Program",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h1",
+        "subheading": "",
+        "description": "<p>Turn your love for e-bikes into earnings with the Jasion Affiliate Program — easy, fast, and rewarding.<br/><br/></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "multicolumn_ND87KE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pTrPYj": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/1_201ed29e-9cdc-4704-aed8-4ae18ab168af.png",
+            "image_ratio": "adapt",
+            "heading": "Join",
+            "heading_size": "text-2xl lg:text-3xl",
+            "text": "<p>Sign up in just a few minutes, it’s quick, simple, and completely free!<br/><br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_XKqU9y": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/1_fcb0fb7b-c6a6-41ed-8ebe-7dcb46dbae74.png",
+            "image_ratio": "adapt",
+            "heading": "Share",
+            "heading_size": "text-2xl lg:text-3xl",
+            "text": "<p>Create your own affiliate links for potential customers, and promote Jasionbike across your content, blog, or social media.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_KpFzir": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/1_2_b543c8c2-2ee3-49ed-944c-310d001e4e44.png",
+            "image_ratio": "adapt",
+            "heading": "Earn",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Track your clicks, monitor sales, and enjoy monthly payouts for every successful referral.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_pTrPYj",
+        "column_XKqU9y",
+        "column_KpFzir"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "gap": "large",
+        "columns": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "How to Get Started?",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_Jq4DcD": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_BwkQdd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJx5Reda3zwfNAZDNB4CwChesN9Mx_PYI1rLF64z6AQ_1920_400.png",
+            "image_mobile": "shopify://shop_images/lQLPKIJ7OrIYfwfNATbNAcyw9KqGDgx22jEI1rLF64z6AA_460_310.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_BwkQdd"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_WCjdrg": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_KMd6Kn": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_TxaA6y": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text overlay",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_FWCT8r": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_KMd6Kn",
+        "heading_TxaA6y",
+        "text_FWCT8r"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/3thunder_33c609d9-85b8-463e-ad34-82cf42020de6.png",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/3thunder_M_b5b1bcd6-d050-4125-91b9-802b1d607fb5.png",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_bKTia3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pPCjTi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3>Let's talk!</h3>",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_7TwKyR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to the #Jasion Affiliate Family! Join us today and watch your income grow.</p><p>Got questions? We’re here to help — reach out at affiliate@jasionbike.com</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_ywB3i7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "mailto:affiliate@jasionbike.com",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_pPCjTi",
+        "text_7TwKyR",
+        "button_ywB3i7"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/2X-Hunter_2f151054-a98e-45de-9b20-c1c0e3d24696.png",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "slideshow_hb_9MqrFU",
+    "image_with_text_overlay_nCbgFt",
+    "multicolumn_iLHkNx",
+    "multicolumn_ND87KE",
+    "slideshow_hb_Jq4DcD",
+    "image_with_text_overlay_WCjdrg",
+    "image_with_text_bKTia3"
+  ]
+}

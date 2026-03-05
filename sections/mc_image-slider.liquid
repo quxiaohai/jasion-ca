@@ -1,0 +1,275 @@
+{%- assign ss = section.settings -%}
+<style>
+  .mc_image-slider {
+    padding: 58px 0 40px;
+    background-color: #f9f7f6;
+  }
+  .mc_image-slider .slider-content .slider>.slider-item~.slider-item {
+    display: none;
+  }
+  .mc_image-slider .slider-content .slider-item {
+    width: calc((100% - 60px) / 4);
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    margin: 0 10px;
+  }
+  .mc_image-slider .slider-content .media-info {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .mc_image-slider .slider-content .media-info:hover {
+    opacity: 1;
+  }
+  .mc_image-slider .slider-content .media-info .score-items .score-item {
+    width: 17px;
+    height: 17px;
+    margin-right: 2px;
+  }
+  .mc_image-slider .slider-content .media-info .score-items svg {
+    width: 100%;
+    height: 100%;
+  }
+  .mc_image-slider .slider-content .media-info .intro,
+  .mc_image-slider .slider-content .media-info .name {
+    color: #ffffff;
+  }
+  .mc_image-slider .slider-content .media-info .intro {
+    padding-top: 12px;
+    font-size: 14px;
+  }
+  .mc_image-slider .slider-content .media-info .name {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1023px) {
+    .mc_image-slider {
+      padding: 0.8680555556rem 0 1.5190972222rem;
+    }
+    .mc_image-slider .slider-content {
+      max-width: 100%;
+      padding: 0;
+    }
+    .mc_image-slider .slider-content .slider-item {
+      width: 57.87vw;
+      border-radius: 0.4340277778rem;
+      margin: 0 0.29296875rem;
+    }
+    .mc_image-slider .slider-content .slider-item.is-selected .media-info {
+      opacity: 1 !important;
+    }
+    .mc_image-slider .slider-content .media-info {
+      padding: 0 0.6944444444rem;
+    }
+    .mc_image-slider .slider-content .media-info:hover {
+      opacity: 0;
+    }
+    .mc_image-slider .slider-content .media-info .score-items .score-item {
+      width: 0.6944444444rem;
+      height: 0.6944444444rem;
+      margin-right: 2px;
+    }
+    .mc_image-slider .slider-content .media-info .intro {
+      padding-top: 0.5208333333rem;
+      font-size: 10px;
+    }
+    .mc_image-slider .slider-content .media-info .name {
+      padding-top: 0.6510416667rem;
+      font-size: 12px;
+    }
+  }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_image-slider section--page w-full">
+    {% render 'section-title', info: ss %}
+    <div class="slider-content page-width">
+        <slideshow-element
+                id="Slider-{{ section.id }}"
+                autoplay
+                cell-align="left"
+                autoplay-speed="{{ ss.slide_duration }}"
+                class="slider">
+          {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="slider-item card tw-relative tw-overflow-hidden">
+              {% render 'global-image', desktop_img: bs.desktop_image, desktop_size: 450, mobile_img: bs.mobile_image, mobile_size: 500 %}
+              <div class="media-info flex-center-col tw-absolute">
+                {% render 'icon-score', info: bs %}
+                <div class="intro tw-relative tw-text-center tw-leading-normal">
+                  {{ bs.intro }}
+                </div>
+                <div class="name tw-leading-[1.2] tw-font-bold">{{ bs.title }}</div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </slideshow-element>
+        {%- render 'slider-button', align: 'center', show_button: false, start: 0 -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Mc Image Slider",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "Mc Image Slider"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "slide_duration",
+      "label": "Slide duration",
+      "min": 1,
+      "max": 20,
+      "step": 0.5,
+      "unit": "s",
+      "default": 3.5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Backdrop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Backdrop Image"
+        },
+        {
+          "type": "range",
+          "id": "score",
+          "label": "Score",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "unit": "s",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "intro",
+          "label": "Intro",
+          "default": "<p></p>"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Daniele Capuccini"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

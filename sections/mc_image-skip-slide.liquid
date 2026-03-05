@@ -1,0 +1,340 @@
+{%- assign ss = section.settings -%}
+<style>
+  .mc_image-skip-slide {
+    padding: 58px 0 40px;
+    background-color: #f9f7f6;
+  }
+  .mc_image-skip-slide .autumn-content .slider {
+    padding-inline: 0;
+    margin-inline: 0;
+    scroll-padding-inline: 0;
+    padding-block-end: 0;
+  }
+  .mc_image-skip-slide .autumn-content .card-grid {
+    --slider-item-width: calc((100% - 19px) / 2);
+    gap: 0 19px;
+  }
+  .mc_image-skip-slide .autumn-content .slider-item {
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+  }
+  .mc_image-skip-slide .autumn-content .media-info {
+    bottom: 0;
+    left: 0;
+    padding: 0 16px 20px;
+    width: {{ ss.intro_width }}%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  }
+  .mc_image-skip-slide .autumn-content .media-info .intro {
+    color: {{ ss.media_intro_color }};
+    font-size: {{ ss.media_intro_size }}px;
+  }
+  .mc_image-skip-slide .slideshow-control {
+    padding-top: 27px;
+  }
+  .mc_image-skip-slide .slideshow-control .flickity-page-dots {
+    margin-block: 0;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots {
+    gap: 0 30px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .button {
+    --buttons-width: 46px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .button .btn-text .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .indicators {
+    gap: 0 11px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot {
+    width: 40px;
+    margin: 0 5px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot:before {
+    height: 4px;
+    width: 40px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true] {
+    width: 80px;
+  }
+  .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true]:before {
+    width: 80px;
+  }
+  @media screen and (max-width: 1023px) {
+    .mc_image-skip-slide {
+      padding: 0.8680555556rem 0 1.5190972222rem;
+    }
+    .mc_image-skip-slide .autumn-content {
+      padding: 0;
+    }
+    .mc_image-skip-slide .autumn-content .slider {
+      scroll-padding-inline: var(--page-padding);
+      padding-block-end: var(--card-shadow-vertical-offset);
+    }
+    .mc_image-skip-slide .autumn-content .card-grid {
+      --slider-item-width: 80vw;
+      gap: 0 0.5859375rem;
+      padding-left: 0.9114583333rem;
+      padding-right: 50vw;
+    }
+    .mc_image-skip-slide .autumn-content .slider-item {
+      border-radius: 0.3472222222rem;
+    }
+    .mc_image-skip-slide .autumn-content .media-info {
+      padding: 0 0.6076388889rem 0.6944444444rem;
+    }
+    .mc_image-skip-slide .autumn-content .media-info .intro {
+      font-size: {{ ss.mb_media_intro_size }}px;
+    }
+    .mc_image-skip-slide .slideshow-control {
+      padding-top: 1.2803819444rem;
+      justify-content: center;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots {
+      gap: 0;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots .indicators {
+      display: none;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot {
+      width: 1.3020833333rem;
+      margin: 0 0.6510416667rem;
+      height: 0.3255208333rem;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot:before {
+      height: 0.3255208333rem;
+      width: 1.3020833333rem;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true] {
+      width: 2.6041666667rem;
+    }
+    .mc_image-skip-slide .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true]:before {
+      width: 2.6041666667rem;
+    }
+  }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_image-skip-slide section--page w-full">
+    {% render 'section-title', info: ss %}
+    <div class="autumn-content page-width w-full">
+        <slider-element
+                id="Slider-{{ section.id }}"
+                class="grid slider slider--desktop slider--tablet"
+                selector=".card-grid>.slider-item">
+            <motion-list class="card-grid card-grid--3 mobile:card-grid--1 grid">
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <a href="{% if bs.url != blank %}{{ bs.url }}{% else %}javascript:void(0){% endif %}" class="slider-item card tw-relative tw-overflow-hidden">
+                        {% render 'global-image', desktop_img: bs.desktop_image, desktop_size: 800, mobile_img: bs.mobile_image, mobile_size: 750 %}
+                        <div class="media-info w-full tw-absolute">
+                            <div class="intro lh-2">
+                                {{ bs.intro }}
+                            </div>
+                        </div>
+                    </a>
+                {%- endfor -%}
+            </motion-list>
+        </slider-element>
+        {%- render 'slider-button' -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Image Skip Slide",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Image Skip Slide"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Media Item"
+    },
+    {
+      "type": "color",
+      "id": "media_intro_color",
+      "label": "Media Intro Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "media_intro_size",
+      "label": "Desktop media intro size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mb_media_intro_size",
+      "label": "Mobile media intro size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Backdrop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Backdrop Image"
+        },
+        {
+          "type": "richtext",
+          "id": "intro",
+          "label": "Intro",
+          "default": "<p></p>"
+        },
+        {
+          "type": "range",
+          "id": "intro_width",
+          "label": "Intro width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 70
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Skip Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

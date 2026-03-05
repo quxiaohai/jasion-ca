@@ -1,0 +1,100 @@
+{% assign ss = section.settings %}
+<style>
+    .autumn-sale-service {
+        height: 49px;
+        background-color: {{ ss.page_color }};
+        gap: 110px;
+    }
+    .autumn-sale-service .item {
+        gap: 16px;
+    }
+    .autumn-sale-service .text {
+        color: #FFFFFF;
+    }
+    .autumn-sale-service .image {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+    @media screen and (max-width: 1376px) {
+        .autumn-sale-service {
+            gap: 93.5px;
+        }
+        .autumn-sale-service .item {
+            gap: 13.6px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-service {
+            height: 3.9279513889rem;
+            gap: 0.9765625rem;
+            padding: 0 20px;
+        }
+        .autumn-sale-service .item {
+            gap: 0.3472222222rem 0;
+            flex-direction: column;
+        }
+        .autumn-sale-service .item .text {
+            font-size: 0.6076388889rem;
+            text-align: center;
+        }
+        .autumn-sale-service .image {
+            width: 1.3020833333rem;
+            height: 1.3020833333rem;
+        }
+    }
+</style>
+<section class="autumn-sale-service w-full flex-center">
+  {%- for block in section.blocks -%}
+    {%- assign bs = block.settings -%}
+    <div class="item flex-center">
+      {% render 'global-image', media_type: 'icon', preload: ss.image_preload, desktop_img: bs.image_icon, desktop_size: 200 %}
+      <span class="text tw-leading-[1.2] tw-text-base">{{ bs.title }}</span>
+    </div>
+  {%- endfor -%}
+</section>
+{% schema %}
+{
+  "name": "Autumn Sale Service",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-service"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Service Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Item Name",
+          "default": "14-Day Trial"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Item Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

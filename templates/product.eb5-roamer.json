@@ -1,0 +1,1791 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": true,
+            "pr_info": "<p><strong>{{ product.metafields.custom.short_text.value }}</strong></p>",
+            "line": true,
+            "line_top": "md:tw-mt-12",
+            "line_bottom": "md:tw-mb-2"
+          }
+        },
+        "countdown_NPztC6": {
+          "type": "countdown",
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#171717",
+            "color_background": "#ffac00",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "bundled_sale_m69hF9": {
+          "type": "bundled_sale",
+          "settings": {
+            "heading": "Compatible Accessories",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7",
+              "copy-of-jasion®-bicycle-universal-mirrors"
+            ],
+            "product_list": [
+              "jasion-ebike®-x-hunter-battery-pack",
+              "jasion-ebike-bracketed-u-lock",
+              "front-basket-for-jasion-eb7",
+              "rear-basket-for-jasion-eb7",
+              "copy-of-jasion®bike-rack-pannier-bag",
+              "jasion®-bike-cover",
+              "jasion-crank-arm-and-pedals",
+              "universal-bicycle-combination-lock"
+            ]
+          }
+        },
+        "quantity_selector_d6GJ77": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "highlights_icons_kU88Jz": {
+          "type": "highlights_icons",
+          "settings": {
+            "bg_color": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "show_payment_icons_RbYfHc": {
+          "type": "show_payment_icons",
+          "settings": {}
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "help_desk_LK3HNi": {
+          "type": "help_desk",
+          "settings": {
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": ""
+          }
+        },
+        "anchor_DWTAQW": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "Specifications",
+            "anchor_id": "Specification (img)"
+          }
+        },
+        "drawer_NiEjcP": {
+          "type": "drawer",
+          "settings": {
+            "title": "Specifications",
+            "content": ""
+          }
+        },
+        "anchor_8VjwmL": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box",
+            "anchor_id": "whats-in-the-box-txt"
+          }
+        },
+        "collapsible_tab_Lt8myP": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Contact us",
+            "content": "",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "liquid_Riat9U": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "Happy Easter–Beat the Tariff Hike!<br>\n🔥Lowest Price EVER on X-Hunter<br>\n🐣Up to $1000 OFF +Extra 1-Year Warranty<br>\n🐇Get 2 Free Rear Baskets with Combo<br>\n✅ Fast U.S. Delivery · 14-Day Easy Returns<br>\nHurry, Time is Running Out!<br>"
+          }
+        },
+        "text_wt9CQN": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "countdown_NPztC6",
+        "variant_picker",
+        "bundled_sale_m69hF9",
+        "quantity_selector_d6GJ77",
+        "highlights_icons_kU88Jz",
+        "buy_buttons",
+        "show_payment_icons_RbYfHc",
+        "sticky_buy_button",
+        "help_desk_LK3HNi",
+        "anchor_DWTAQW",
+        "drawer_NiEjcP",
+        "anchor_8VjwmL",
+        "collapsible_tab_Lt8myP",
+        "liquid_Riat9U",
+        "text_wt9CQN"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {.product__gallery {top: 100px; }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_specs": true,
+        "specs_limit": "6",
+        "media_size": 60,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 64,
+        "padding_bottom": 84,
+        "divider": true,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "drawer_content_hb_qzp8WX": {
+      "type": "drawer-content-hb",
+      "blocks": {
+        "content_9grYEm": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "content": "<h1><strong>Please note: </strong></h1><p><br/>There may be a difference of 0~5 cm between measured and actual data.</p>"
+          }
+        },
+        "table_aCTBik": {
+          "type": "table",
+          "disabled": true,
+          "settings": {
+            "list": "A--Wheelbase|113.5 cm\nB--Total Length|170 cm\nC--Reach|46 cm\nD--Standover Height|69 cm\nE--Minimum Saddle Height|86 cm\nF--Maximum Saddle Height|102 cm\nG--Minimum Handlebar Height|120 cm\nH--Maximum Handlebar Height|130 cm"
+          }
+        },
+        "table_4CpLLg": {
+          "type": "table",
+          "settings": {
+            "list": "Motor|1200W Brushless Hub Motor\nFork|Suspension Front Fork\nBrake|Mechanical Disc Brake\nShift Lever|Shimano 7 Speed\nThrottle|Twist Throttle\nSebsor|Cadence Sensor\nPedal assist|0-5 Level\nTorque|60 Nm\nTop Speed|28 Mph\nRange| Up To 62 Miles\nCharging Time|4-8 Hours\nBattery|48V 11Ah\nController|48V 11A\nTires|26 x 1.95'' Fat Tire\nRider Height|5'2'' - 6'6''\nWeight|65 Lbs\nMax Payload|330 Lbs\nMode|PAS+Throttle\nDisplay|LCD Display\nFolding| No"
+          }
+        },
+        "img_rmqdEK": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "img_1": "shopify://shop_images/1_6.png",
+            "img_3": "shopify://shop_images/1_8.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_9grYEm",
+        "table_aCTBik",
+        "table_4CpLLg",
+        "img_rmqdEK"
+      ],
+      "settings": {
+        "heading": "Specifications"
+      }
+    },
+    "help-drawer": {
+      "type": "help-drawer",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "icon": "rocket",
+            "heading": "Local Warehouse",
+            "text": "<p>On your doorstep in just 2-4 days across 49 states.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#b45309",
+            "color_background": "#fffbeb",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-2": {
+          "type": "content",
+          "settings": {
+            "icon": "headphone",
+            "heading": "A+ Customer Service",
+            "text": "<p>24-Hour Online Customer Service.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#0369a1",
+            "color_background": "#f0f9ff",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-3": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "FAQ’s",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#be123c",
+            "color_background": "#fff1f2",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content_M44gqX": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Information",
+            "text": "<p>Share contact information, store details, and brand content with your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#fafafa",
+            "color_background": "#1f1f1f",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-4": {
+          "type": "content",
+          "settings": {
+            "icon": "phone",
+            "heading": "Contact Us",
+            "text": "<ul><li><strong>Contact Email: </strong>support@jasionbike.com</li><li><strong>Contact Phone：</strong>(+1) 888-825-6366</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#4d7c0f",
+            "color_background": "#f7fee7",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content-2",
+        "content-3",
+        "content_M44gqX",
+        "content-4"
+      ],
+      "settings": {
+        "heading": "Need help?",
+        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em>Tagline</em>",
+            "heading": "Example heading",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image_ratio": "landscape",
+            "content_position": "md:items-end md:justify-center",
+            "text_alignment": "center",
+            "image_ratio_mobile": "landscape",
+            "content_position_mobile": "items-end justify-center",
+            "text_alignment_mobile": "center",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fde047",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em>Tagline</em>",
+            "heading": "Example heading",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image_ratio": "portrait",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "image_ratio_mobile": "portrait",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fde047",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em>Tagline</em>",
+            "heading": "Example heading",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image_ratio": "portrait",
+            "content_position": "md:items-start md:justify-end",
+            "text_alignment": "right",
+            "image_ratio_mobile": "portrait",
+            "content_position_mobile": "items-start justify-end",
+            "text_alignment_mobile": "right",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fde047",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em>Tagline</em>",
+            "heading": "Example heading",
+            "link": "",
+            "invert_subheading_heading": true,
+            "image_ratio": "landscape",
+            "content_position": "md:items-end md:justify-end",
+            "text_alignment": "right",
+            "image_ratio_mobile": "landscape",
+            "content_position_mobile": "items-end justify-end",
+            "text_alignment_mobile": "right",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fde047",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Collage",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "button_label": "View more",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true
+      }
+    },
+    "large_header_slider_NDH3Xx": {
+      "type": "large-header-slider-hb",
+      "blocks": {
+        "item_A4zK3m": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/Establishment_620x620_21866ca7-3698-4640-95ba-ecf114f1da84.png",
+            "tab_con": "Establishment",
+            "title": "Establishment：Specially designed1\nfor off - road adventures.",
+            "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
+          }
+        },
+        "item_pphRKd": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/Design_620x620_90be5000-36eb-4b2a-88c2-0e4ba27566b4.png",
+            "tab_con": "Design",
+            "title": "Design",
+            "content": "X-Hunter’s wide tire design demonstrates our pursuit of e-bike performance and stability. The 20-inch x 4-inch wide tires not only provide a larger ground contact area and enhance traction, but also effectively improve driving stability. This means you can tackle any terrain with ease, whether it's rugged mountain roads, sand or snow, all while maintaining a stable driving experience. This design not only makes the X-Hunter an electric bicycle suitable for adventure, but also allows riders to enjoy the fun in the outdoor environment."
+          }
+        },
+        "item_6WGyaR": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/Craftsmanship_620x620_97741c57-73ae-45b8-a142-3d9dc3cd3f8c.png",
+            "tab_con": "Craftsmanship",
+            "title": "Craftsmanship",
+            "content": "From a technological perspective, X-Hunter is equipped with a four-link structure that drives the movement of the entire electric bicycle through a central four-link structure. Combined with the 180mm adjustable front fork suspension, X-Hunter implements a full suspension system, providing riders with excellent suspension performance. This full-suspension design uses Horst link pivots to provide long-lasting comfort for off-road adventures, allowing riders to enjoy a smooth ride over rough terrain and explore uncharted territory without being limited by terrain."
+          }
+        },
+        "item_nKfTj6": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/Finished_Product_540x540_96aaa830-03e1-4970-9bce-5f33ef843fb4.jpg",
+            "tab_con": "Finished Product",
+            "title": "Finished Product",
+            "content": "With X-Hunter, we redefine the essence of off-road adventure. It transcends mere transportation; it embodies bravery and exploration. Whether conquering rugged mountains or traversing dense forests, X-Hunter allows you to embrace the infinite possibilities of off-road exploration and redefine your adventure at every turn."
+          }
+        },
+        "item_Y4Ak7p": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "tab_con": "Design",
+            "title": "Establishment：Specially designed for off - road adventures.",
+            "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
+          }
+        }
+      },
+      "block_order": [
+        "item_A4zK3m",
+        "item_pphRKd",
+        "item_6WGyaR",
+        "item_nKfTj6",
+        "item_Y4Ak7p"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_UyaqiW": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_d8wieP": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_qQDR7p": {
+          "type": "heading",
+          "settings": {
+            "heading": "85Nm High Torque\nFolding Fat Tire E-Bike",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_McTWyp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The X-Hunter is more than just an electric bike; it's your adventure companion. Seamlessly blending ultimate performance and durability, it opens the door to a world of off-road adventure.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 20,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_d8wieP",
+        "heading_qQDR7p",
+        "text_McTWyp"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/1920_800_9eb25b59-d999-4482-a7cb-bb772812ed79.jpg",
+        "image_height": "adapt",
+        "content_width": "small",
+        "content_position": "md:items-center md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/390_600.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>85Nm High Torque <br/>Folding Fat Tire E-Bike</p><p></p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "basic-underline"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The X-Hunter is more than just an electric bike; it's your adventure companion. Seamlessly blending ultimate performance and durability, it opens the door to a world of off-road adventure.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_BbLhqQ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "50% <span style=\"font-size: 50%;\n    font-weight: normal;\">\nLighter</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "text_BbLhqQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "img_placeholder": true,
+        "image": "shopify://shop_images/1920_800-3.jpg",
+        "image_height": "750px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": true,
+        "image_mobile": "shopify://shop_images/test_3_e6c0b476-0555-4add-a62d-53d42b49100d.png",
+        "image_height_mobile": "300px",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "bg_img": "shopify://shop_images/1920_800-3.jpg",
+        "bg_img_mb": "shopify://shop_images/390_600.jpg",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_WTzzHX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NQN9Un": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Power That Adapts</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_rA7CmC": {
+          "type": "text",
+          "settings": {
+            "text": "With a 5-speed system, the motor delivers 85Nm of torque in just 2 seconds. Its sine-wave design ensures smooth and precise speed control across all gears, making it easy to handle any terrain—whether you're cruising through the city or tackling extreme weather.",
+            "text_size": "subtext-custom",
+            "text_max_size": 20,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_P7YzCp": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "50% <span style=\"font-size: 50%;\n    font-weight: normal;\">\nLighter</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NQN9Un",
+        "text_rA7CmC",
+        "text_P7YzCp"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "video": "shopify://files/videos/电机-1_6db20b32-b730-4662-afcd-380d3c0be108.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_mFYwAt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AwQUyV": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>High Energy Density, 70-Mile Range</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_Lg8THC": {
+          "type": "text",
+          "settings": {
+            "text": "Powered by Samsung SDI’s new 21750 cells (48V13A), the battery offers 35% more capacity and 20% higher energy density than traditional 18650 cells. The quick-release, sealed design is IPX-6 waterproof and supports easy, removable charging.",
+            "text_size": "subtext-custom",
+            "text_max_size": 20,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_cHMnAd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "50% <span style=\"font-size: 50%;\n    font-weight: normal;\">\nLighter</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AwQUyV",
+        "text_Lg8THC",
+        "text_cHMnAd"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "video": "shopify://files/videos/电池1440-1_7293233e-0f95-4aa8-ad81-37900109d59a.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_background_2": "rgba(0,0,0,0)",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "video_BjHb7i": {
+      "type": "video",
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/EB5 Roamer v2.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "image_height": "adapt",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_WTx6NX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_r4mdLQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Smooth Riding <br/>Experience</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_XLF8UP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>X-Hunter features a manually adjustable front fork and four-link suspension system for enhanced shock absorption and load distribution. With a maximum capacity of 330 lbs, it ensures a smooth, stable ride across snow, rough roads, and mountain trails.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 20,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_r4mdLQ",
+        "text_XLF8UP"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "video": "shopify://files/videos/EB5(2).mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_G7VzRF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4mWDW7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Quick Release,<br/>Space Saving<br/></p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_7fT8T3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jasion Bike’s advanced multi-stage quick-disassembly design allows for tool-free, fast breakdown of components—ideal for easy transport and storage.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 20,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_KYqACh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_4mWDW7",
+        "text_7fT8T3",
+        "button_KYqACh"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/image_1_70fbde07-d656-44cf-af8f-7d9d14d43c0f.jpg",
+        "video": "shopify://files/videos/EB5.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "multicolumn_slide_hb_GKkqHc": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "item_efmfGR": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_e338d532-5264-407b-9988-d8343c781b89.jpg",
+            "date": "",
+            "title": "Headlight&Taillight",
+            "title_sz": "h3",
+            "content": "The LED headlight illuminates your path, while the integrated tail light flashes when braking, serving as a nighttime signal.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_UQU9h3": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_ce2091a5-047f-4d37-8fd3-1bb970e82394.jpg",
+            "date": "",
+            "title": "20\" x 4\" Puncture-Resistant Tires",
+            "title_sz": "h3",
+            "content": "The high-quality fat tires provide extra protection against punctures from thorns, glass, and other small materials.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_EN6kyG": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_2f9ece32-ab0a-4d03-9ff3-22dd55924bf8.jpg",
+            "date": "",
+            "title": "Full Supension System",
+            "title_sz": "h3",
+            "content": "Equipped with front fork and four-link suspension, it effectively absorbs most bumps and vibrations for a smooth ride.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_97kqG3": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/Shimano_7_460x460_25e98a5f-e0b3-4677-8767-fbc08df0794c.jpg",
+            "date": "",
+            "title": "Dual Shock Saddle",
+            "title_sz": "h3",
+            "content": "The X-Hunter saddle features dual shock absorption, measuring 11\" L x 10\" W x 3.15\" H, ensuring a smooth ride.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_BEWmqD": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_69c68626-d42c-4d81-9500-e6c5234e3f52.jpg",
+            "date": "",
+            "title": "Shimano 7-Speed",
+            "title_sz": "h3",
+            "content": "The Shimano 7-speed gearbox offers seamless shifting, while the motorcycle-style hand-twist Throttle provides easy control.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_HLcweJ": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_f25c8178-f17b-42ea-936e-05ec881fa491.jpg",
+            "date": "",
+            "title": "Dual Disc Brake System",
+            "title_sz": "h3",
+            "content": "The front and rear 160mm disc brakes provide precise stopping power and quick response whether in wet or dry conditions.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_bbFPRL": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/460x460_ce58b17f-2f95-424c-aaa3-38efcc7b4cc5.jpg",
+            "date": "",
+            "title": "Foldable Electric Bike",
+            "title_sz": "h3",
+            "content": "This e-bike fits easily into compact spaces like apartments, subways, or car trunk, making it perfect for camping and short trips.",
+            "author": "RVdaydream"
+          }
+        },
+        "item_ewmnnU": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "img": "shopify://shop_images/460x460-7.jpg",
+            "date": "",
+            "title": "Your Long-range, Touring E-bike",
+            "title_sz": "h3",
+            "content": "6",
+            "author": "RVdaydream"
+          }
+        }
+      },
+      "block_order": [
+        "item_efmfGR",
+        "item_UQU9h3",
+        "item_EN6kyG",
+        "item_97kqG3",
+        "item_BEWmqD",
+        "item_HLcweJ",
+        "item_bbFPRL",
+        "item_ewmnnU"
+      ],
+      "settings": {
+        "pw-overflow-hidden": true,
+        "columns": 3,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Quality in details",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "#171717",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_ffkPjp": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_rqzQmR": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_aPBJk3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stylish Colors",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_3YxDz6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_rqzQmR",
+        "heading_aPBJk3",
+        "text_3YxDz6"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/1920_700_1.jpg",
+        "image_height": "adapt",
+        "content_width": "medium",
+        "content_position": "md:items-start md:justify-center",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/390_142_1.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-start justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "product_modal_popup_hb_exNHwH": {
+      "type": "product-modal-popup-hb",
+      "blocks": {
+        "hotspot_t7dNQN": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 50,
+            "horizontal": 50,
+            "vertical_mobile": 22,
+            "horizontal_mobile": 17,
+            "modal_img": "shopify://shop_images/test_1.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        },
+        "hotspot_RtLe4E": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 25,
+            "horizontal": 37,
+            "vertical_mobile": 50,
+            "horizontal_mobile": 50,
+            "modal_img": "shopify://shop_images/test_3_e6c0b476-0555-4add-a62d-53d42b49100d.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_t7dNQN",
+        "hotspot_RtLe4E"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/test_311e598a-8549-410a-b440-07d4d5d2ac38.png",
+        "image_mobile": "shopify://shop_images/test.png",
+        "heading": "Details you’ll fall in love with",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Every detail has been carefully crafted to captivate</p>",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "specifications_parameters_hb_84CbEA": {
+      "type": "specifications-parameters-hb",
+      "blocks": {
+        "img_list_tUDfBK": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Geometry",
+            "img": "shopify://shop_images/9367801dc53b37ca75d885be8dc01cb9_1.jpg",
+            "img_w": 40,
+            "list": "|SIZE (inch)|One Size\nA|Handlebar Length|25.2''\nB|Seat tube length|6.3''\nC|Chainstay|17.3''\nD|Ground Clearance|5.9''\nE|Wheelbase|46''\nF|Total Lengthy|69''\nG|Wheel Diameter|22.8''\nH|Handlebar Height from Floor|46''\nI|Minimum Seat Height from Floor|30''\nJ|Maximum Seat Height from Floor|46''\nK|Folded Size|43.3*23.62*32.68",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "2"
+          }
+        },
+        "img_list_QVkBjk": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Specifications",
+            "img_w": 50,
+            "list": "|Motor|1400W Brushless Hub Motor\n|Throttle |Twist Throttle\n|Charger US |Standard 2.0 A\n|Range |Up To 70 Miles\n|Battery |48V 13Ah\n|Controller |48V / 13A\n|Tires|20'' x 4'' Fat Tire\n|Rider Heught|5'3'' - 6'4''\n|Pedal Assist|0-5 Level\n|Weight|71 Lbs\n|Max Payload|400 Lbs\n|Display|LCD Display\n|Lights |Turning Lights & Brake Lights\n|Suspension|With Locking and Adjustment",
+            "item_justify": "tw-justify-left",
+            "list_border": false,
+            "list_col": "2"
+          }
+        },
+        "img_list_LHUEbm": {
+          "type": "img_list",
+          "disabled": true,
+          "settings": {
+            "order_title": "What's In The Box (img)",
+            "img": "shopify://shop_images/Valentine_s-Day1.png",
+            "img_w": 50,
+            "list": "",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "1"
+          }
+        },
+        "package_FmwCMD": {
+          "type": "package",
+          "settings": {
+            "order_title": "What's In The Box？",
+            "cols": "8",
+            "cols_mb": "3",
+            "use_text": true,
+            "img_1": "shopify://shop_images/X-hunter_2.png",
+            "img_2": "shopify://shop_images/X-HUNTER_500x500-7.png",
+            "img_3": "shopify://shop_images/X-HUNTER_500x500-6.png",
+            "img_4": "shopify://shop_images/X-HUNTER_500x500-5.png",
+            "img_5": "shopify://shop_images/X-HUNTER_500x500-4.png",
+            "img_6": "shopify://shop_images/X-HUNTER_500x500-3.png",
+            "img_7": "shopify://shop_images/X-HUNTER_500x500-2.png",
+            "img_8": "shopify://shop_images/X-HUNTER_500x500-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "img_list_tUDfBK",
+        "img_list_QVkBjk",
+        "img_list_LHUEbm",
+        "package_FmwCMD"
+      ],
+      "settings": {
+        "heading": "<strong>Specs & Geometry</strong>",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h1",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "multicolumn_slide_hb_QEk8x8": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "video_CdhUFd": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Sa0JeRX-YfY&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=6",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=Sa0JeRX-YfY&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=6",
+            "image_height_mobile": "auto",
+            "date": "2024/12/9",
+            "title": "NEWEST UPGRADED VERSION",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_bdeec757-9bbd-45b0-ba8d-54b59af8b6bc.jpg",
+            "author": "Papa`s Product Reviews"
+          }
+        },
+        "video_ddPNFB": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=95ultRMIpbo&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=27",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=95ultRMIpbo&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=27",
+            "image_height_mobile": "auto",
+            "date": "2024/2/11",
+            "title": "I CAN'T BELIEVE THIS EBIKE IS SO CHEAP! 1400W FOLDABLE JASION X-HUNTER EBIKE",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_4.jpg",
+            "author": "NRG SPORTS"
+          }
+        },
+        "video_h66XiD": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=MddQALDeGKU",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2025/3/14",
+            "title": "This INSANE Folding Bike Hits 30 MPH With EASE!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_5.jpg",
+            "author": "E Bike Nation"
+          }
+        },
+        "video_nAJUWq": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=MSzZbfAp5lA&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=6",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2024/9/25",
+            "title": "My Honest Review | Jasion X-Hunter Full Suspension eBike Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_2_7359d253-fac7-4023-9018-7c7a1c615e4a.jpg",
+            "author": "Eric Hernandez"
+          }
+        },
+        "video_4tbFaF": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=8o-6h9OUJ-o&t=405s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2025/1/4",
+            "title": "THIS FULL SUSPENSION E-BIKE IS INSANE | JASION X-HUNTER E-BIKE",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_7.jpg",
+            "author": "Kaos Riders"
+          }
+        },
+        "video_Ma77wA": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_yhKgb4bdTg",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "Jun 29, 2024",
+            "title": "Jasion X-Hunter Folding Fat Tire Dual Suspension eBike | I MADE IT GO FAST! | Assembly & Test Ride",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/unnamed_1_805d246c-093c-457e-a919-6c650d68163c.jpg",
+            "author": "Zophie Reviews"
+          }
+        }
+      },
+      "block_order": [
+        "video_CdhUFd",
+        "video_ddPNFB",
+        "video_h66XiD",
+        "video_nAJUWq",
+        "video_4tbFaF",
+        "video_Ma77wA"
+      ],
+      "settings": {
+        "pw-overflow-hidden": true,
+        "columns": 3,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Community Reviews",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "#171717",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "faq_LAqHrA": {
+      "type": "faq",
+      "blocks": {
+        "question_VkiK8E": {
+          "type": "question",
+          "settings": {
+            "title": "1. What's your shipping policy?",
+            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_WydWCH": {
+          "type": "question",
+          "settings": {
+            "title": "2. What's your warranty policy?",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_RxbMnX": {
+          "type": "question",
+          "settings": {
+            "title": "3. What's your return&refund policy?",
+            "text": "<p>We provide exchange service within 14 days. If the product is defective or damaged, Send damaged photos or videos to customer service within 14 days after receiving the goods, and the damaged parts can be replaced or compensated. We will cover the return (exchange) shipping costs.</p><p>In the case of non-quality returns, the customer will be responsible for the return shipping costs.</p><p>You can always contact us for any return questions at <strong>support@jasionbike.com</strong>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_8w3AJM": {
+          "type": "question",
+          "settings": {
+            "title": "4. Does my height suit X-Hunter?",
+            "text": "<p>The recommended rider height is 5'3\" to 6'4\".</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_dADpwD": {
+          "type": "question",
+          "settings": {
+            "title": "5. How long does it take to fully charge the battery?",
+            "text": "<p>It will take 5-7 hours.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_qtF3Vm": {
+          "type": "question",
+          "settings": {
+            "title": "6. How long will it take for my shipment to arrive?",
+            "text": "<p>Generally, your order will be shipped within one business day after the order is placed, and package shipping will take approximately 3-5 days.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_gH97gL": {
+          "type": "question",
+          "settings": {
+            "title": "7. Does my Jasion ebike come pre-assembled?",
+            "text": "<p>Your e-bike arrives 85% assembled. There are just a few pieces to put into place once you take the bike out of the box. For unboxing and setup instructions, please follow the guides on our <a href=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\">YouTube Channel</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_jtpKXd": {
+          "type": "question",
+          "settings": {
+            "title": "8. What is the maximum speed of each PAS level?",
+            "text": "<p>PAS1 Top speed 16mph</p><p>PAS2 Top speed 18mph</p><p>PAS3 Top speed 20mph</p><p>PAS4 Top speed 23mph</p><p>PAS5 Top speed 30+mph</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_VkiK8E",
+        "question_WydWCH",
+        "question_RxbMnX",
+        "question_8w3AJM",
+        "question_dADpwD",
+        "question_qtF3Vm",
+        "question_gH97gL",
+        "question_jtpKXd"
+      ],
+      "settings": {
+        "style": "tw-default-faq",
+        "heading": "FAQ",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Didn’t find your answer?",
+            "text": "<p>Don't hestitate to contact us</p>",
+            "show_phone": false,
+            "avatar_height": 60,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5",
+        "contact"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "with-background",
+        "heading": "FAQs",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Please read our <a href=\"#\" title=\"FAQ's\">FAQs</a> page to find out more.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#ffffff",
+        "color_background": "#171717",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recommended for you",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "drawer_content_hb_qzp8WX",
+    "help-drawer",
+    "collage",
+    "large_header_slider_NDH3Xx",
+    "image_with_text_overlay_UyaqiW",
+    "image-with-text-1",
+    "image_with_text_WTzzHX",
+    "image_with_text_mFYwAt",
+    "video_BjHb7i",
+    "image_with_text_WTx6NX",
+    "image_with_text_G7VzRF",
+    "multicolumn_slide_hb_GKkqHc",
+    "image_with_text_overlay_ffkPjp",
+    "product_modal_popup_hb_exNHwH",
+    "specifications_parameters_hb_84CbEA",
+    "multicolumn_slide_hb_QEk8x8",
+    "faq_LAqHrA",
+    "faq",
+    "product-recommendations",
+    "recently-viewed"
+  ]
+}

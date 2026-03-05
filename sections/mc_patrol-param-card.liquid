@@ -1,0 +1,642 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_patrol-param-card {
+        background-color: #000000;
+        padding: 80px 0;
+    }
+    .mc_patrol-param-card .layout-left {
+        width: 55.7%;
+        gap: 29px 0;
+        flex-wrap: wrap;
+    }
+    .mc_patrol-param-card .layout-right {
+        flex: 1;
+        flex-direction: column;
+        gap: 30px 0;
+    }
+    .mc_patrol-param-card .card-items {
+        padding: 0 31px;
+        gap: 30px 20px;
+    }
+    .mc_patrol-param-card .card-items .image {
+        object-fit: contain;
+    }
+    .mc_patrol-param-card .info .name {
+        font-size: 50px;
+        color: {{ ss.card_title_color }};
+    }
+    .mc_patrol-param-card .info .name strong {
+        color: {{ ss.card_title_bold_color }};
+    }
+    .mc_patrol-param-card .info .desc {
+        padding-top: 5px;
+        font-size: 33px;
+        color: {{ ss.card_desc_color }};
+    }
+    .mc_patrol-param-card .param-items {
+        gap: 0 75px;
+        padding-top: 24px;
+    }
+    .mc_patrol-param-card .param-items .param {
+        font-size: 49px;
+        color: {{ ss.card_title_bold_color }};
+    }
+    .mc_patrol-param-card .param-items .text {
+        font-size: 26px;
+        color: {{ ss.card_title_color }};
+    }
+    .mc_patrol-param-card .item-1 .info {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 65px;
+        width: 450px;
+    }
+    .mc_patrol-param-card .item-4 .info {
+        bottom: 48px;
+        left: 0;
+        width: 100%;
+        padding: 0 36px 0 56px;
+    }
+    .mc_patrol-param-card .item-4 .param-items {
+        padding-top: 32px;
+    }
+    .mc_patrol-param-card .item-4 .param {
+        font-size: 40px;
+    }
+    .mc_patrol-param-card .item-4 .text {
+        font-size: 21px;
+    }
+    .mc_patrol-param-card .item-2,
+    .mc_patrol-param-card .item-3 {
+        width: calc(50% - 6px);
+    }
+    .mc_patrol-param-card .item-2 .info {
+        top: 40px;
+        left: 42px;
+    }
+    .mc_patrol-param-card .item-2 .name {
+        font-size: 42px;
+    }
+    .mc_patrol-param-card .item-5 .desc {
+        padding-top: 2px;
+    }
+    .mc_patrol-param-card .item-5 .info {
+        width: 100%;
+        left: 0;
+        bottom: 42px;
+        padding: 0 36px 0 46px;
+    }
+    .mc_patrol-param-card .item-6 .info {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 320px;
+        max-width: 300px;
+    }
+    .mc_patrol-param-card .item-6 .desc {
+        color: {{ ss.card_title_color }};
+    }
+    @media screen and (max-width: 1540px) {
+        .mc_patrol-param-card {
+            padding: 68px 0;
+        }
+        .mc_patrol-param-card .layout-left {
+            gap: 1.8831168831vw 0;
+        }
+        .mc_patrol-param-card .layout-right {
+            gap: 1.9480519481vw 0;
+        }
+        .mc_patrol-param-card .card-items {
+            padding: 0 2.012987013vw;
+            gap: 1.9480519481vw 1.2987012987vw;
+        }
+        .mc_patrol-param-card .info .name {
+            font-size: 3.2467532468vw;
+        }
+        .mc_patrol-param-card .info .desc {
+            padding-top: 0.3246753247vw;
+            font-size: 2.1428571429vw;
+        }
+        .mc_patrol-param-card .param-items {
+            gap: 0 4.8701298701vw;
+            padding-top: 1.5584415584vw;
+        }
+        .mc_patrol-param-card .param-items .param {
+            font-size: 3.1818181818vw;
+        }
+        .mc_patrol-param-card .param-items .text {
+            font-size: 1.6883116883vw;
+        }
+        .mc_patrol-param-card .item-1 .info {
+            left: 4.2207792208vw;
+            width: 29.2207792208vw;
+        }
+        .mc_patrol-param-card .item-4 .info {
+            bottom: 3.1168831169vw;
+            padding: 0 2.3376623377vw 0 3.6363636364vw;
+        }
+        .mc_patrol-param-card .item-4 .param-items {
+            padding-top: 2.0779220779vw;
+        }
+        .mc_patrol-param-card .item-4 .param {
+            font-size: 2.5974025974vw;
+        }
+        .mc_patrol-param-card .item-4 .text {
+            font-size: 1.3636363636vw;
+        }
+        .mc_patrol-param-card .item-2 .info {
+            top: 2.5974025974vw;
+            left: 2.7272727273vw;
+        }
+        .mc_patrol-param-card .item-2 .name {
+            font-size: 2.7272727273vw;
+        }
+        .mc_patrol-param-card .item-5 .info {
+            bottom: 2.7272727273vw;
+            padding: 0 2.3376623377vw 0 2.987012987vw;
+        }
+        .mc_patrol-param-card .item-6 .info {
+            left: 20.7792207792vw;
+            max-width: 19.4805194805vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_patrol-param-card {
+            padding: 2.5rem 0;
+        }
+        .mc_patrol-param-card .layout-left {
+            width: 100%;
+            gap: 0.34375rem 0.28125rem;
+        }
+        .mc_patrol-param-card .layout-right {
+            flex-direction: row;
+            gap: 0.28125rem;
+        }
+        .mc_patrol-param-card .card-items {
+            padding: 0;
+            gap: 0.34375rem;
+            flex-direction: column;
+        }
+        .mc_patrol-param-card .info .name {
+            font-size: 1.125rem;
+        }
+        .mc_patrol-param-card .info .desc {
+            padding-top: 0.1875rem;
+            font-size: 0.625rem;
+        }
+        .mc_patrol-param-card .param-items {
+            gap: 0 1rem;
+            padding-top: 0.375rem;
+        }
+        .mc_patrol-param-card .param-items .param {
+            white-space: nowrap;
+            font-size: 0.625rem;
+        }
+        .mc_patrol-param-card .param-items .text {
+            font-size: 0.5rem;
+        }
+        .mc_patrol-param-card .item-1 .info {
+            top: 45%;
+            transform: translateY(-50%);
+            left: 1.5rem;
+            width: 9.375rem;
+        }
+        .mc_patrol-param-card .item-4 .info {
+            width: auto;
+            padding: 0;
+            align-items: flex-end;
+            bottom: 1.875rem;
+            left: auto;
+            right: 1.3125rem;
+        }
+        .mc_patrol-param-card .item-4 .name, .mc_patrol-param-card .item-4 .desc {
+            text-align: right;
+            max-width: 7.5rem;
+            padding-right: 0.375rem;
+        }
+        .mc_patrol-param-card .item-4 .param-items {
+            padding-top: 1.5rem;
+        }
+        .mc_patrol-param-card .item-4 .param-items .param {
+            font-size: 0.875rem;
+        }
+        .mc_patrol-param-card .item-4 .param-items .text {
+            font-size: 0.625rem;
+        }
+        .mc_patrol-param-card .item-2,
+        .mc_patrol-param-card .item-3 {
+            width: calc(50% - 3px);
+        }
+        .mc_patrol-param-card .item-2 .info {
+            top: 1.125rem;
+            left: 1.0625rem;
+        }
+        .mc_patrol-param-card .item-2 .name {
+            font-size: 0.96875rem;
+        }
+        .mc_patrol-param-card .item-5 {
+            width: 53%;
+        }
+        .mc_patrol-param-card .item-5 .name {
+            font-size: 0.875rem;
+        }
+        .mc_patrol-param-card .item-5 .desc {
+            padding-top: 0;
+        }
+        .mc_patrol-param-card .item-5 .info {
+            width: auto;
+            left: 1.28125rem;
+            bottom: 1.3125rem;
+            padding: 0;
+        }
+        .mc_patrol-param-card .item-6 {
+            width: 47%;
+        }
+        .mc_patrol-param-card .item-6 .info {
+            top: 1rem;
+            transform: translateY(0);
+            left: auto;
+            right: 0.9375rem;
+            max-width: none;
+        }
+        .mc_patrol-param-card .item-6 .desc {
+            padding-top: 0;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_patrol-param-card section--page">
+    {%- render 'section-title', info: ss, font: 'rushblade' -%}
+    <div class="page-width">
+        <div class="relative w-full card-items flex-between-top">
+            {%- liquid
+                assign list = section.blocks | map: 'settings' | sort: 'position'
+                assign first = true
+                assign last = false
+            -%}
+            {%- for bs in list -%}
+                {%- liquid
+                    assign index = forloop.index
+                    if index == 5
+                        assign last = true
+                    endif
+                    capture stag
+                        if first
+                            assign first = false
+                            echo '<div class="layout-left flex-between-top">'
+                        elsif last
+                            assign last = false
+                            echo '<div class="layout-right flex-between-top">'
+                        endif
+                    endcapture
+                    capture etag
+                        if index == 4 or forloop.last
+                            echo '</div>'
+                        endif
+                    endcapture
+                -%}
+                {{ stag }}
+                <div class="card-item relative item-{{ bs.position }}">
+                    {%- render 'global-image',
+                        desktop_img: bs.image,
+                        mobile_img: bs.mb_image,
+                        sizes: '(min-width: 1024px) 800px, (max-width: 1023px) 700px'
+                    -%}
+                    <div class="info absolute z-1">
+                        {%- if bs.position != '3' -%}
+                            <div class="name italic lh-2 fw-700">{{ bs.title }}</div>
+                        {%- endif -%}
+                        {%- if bs.position != '2' and bs.position != '3' -%}
+                            <div class="desc italic lh-2 fw-500">{{ bs.desc }}</div>
+                        {%- endif -%}
+                        {%- if bs.position == '4' or bs.position == '5' -%}
+                            <div class="param-items flex-top">
+                                <div class="item">
+                                    <div class="param lh-1 italic fw-900">{{ bs.param1_val }}</div>
+                                    <div class="text italic lh-1">{{ bs.param1_text }}</div>
+                                </div>
+                                <div class="item">
+                                    <div class="param lh-1 italic fw-900">{{ bs.param2_val }}</div>
+                                    <div class="text italic lh-1">{{ bs.param2_text }}</div>
+                                </div>
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+                {{ etag }}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Patrol Param Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Patrol Param Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Title</p>"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_pc_weight",
+      "label": "Desktop title weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_pc_line",
+      "label": "Desktop title line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "title_mb_weight",
+      "label": "Mobile title weight",
+      "min": 200,
+      "max": 900,
+      "step": 100,
+      "unit": "w",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_mb_line",
+      "label": "Mobile title line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "description_bold_color",
+      "label": "Description bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_pc_line",
+      "label": "Desktop description line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "description_mb_line",
+      "label": "Mobile description line height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "%",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Gift card"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_title_bold_color",
+      "label": "Card title bold color",
+      "default": "#ffe500"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#9e9e9e"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            {
+              "label": "Left top",
+              "value": "1"
+            },
+            {
+              "label": "Left center left",
+              "value": "3"
+            },
+            {
+              "label": "Left center right",
+              "value": "4"
+            },
+            {
+              "label": "Right top",
+              "value": "2"
+            },
+            {
+              "label": "Bottom left",
+              "value": "5"
+            },
+            {
+              "label": "Bottom right",
+              "value": "6"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p><strong>Hydraulic</strong><br />Disc Brakes</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description",
+          "default": "<p>Superior Braking Performance for Total Confidence</p>"
+        },
+        {
+          "type": "header",
+          "content": "Param"
+        },
+        {
+          "label": "Param #1 value",
+          "type": "text",
+          "id": "param1_val",
+          "default": "4000 w"
+        },
+        {
+          "label": "Param #1 text",
+          "type": "text",
+          "id": "param1_text",
+          "default": "Peak Power"
+        },
+        {
+          "label": "Param #2 value",
+          "type": "text",
+          "id": "param2_val",
+          "default": "145 Nm"
+        },
+        {
+          "label": "Param #2 text",
+          "type": "text",
+          "id": "param2_text",
+          "default": "Torque"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

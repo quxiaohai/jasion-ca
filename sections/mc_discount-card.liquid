@@ -1,0 +1,229 @@
+{%- assign ss = section.settings -%}
+<style>
+  .mc-discount-card {
+    padding: 76px 0 80px;
+    gap: 15px;
+  }
+  .mc-discount-card .card {
+    width: 265px;
+    height: 210px;
+    position: relative;
+  {%- if ss.card_bg_color != blank -%}
+    background: {{ ss.card_bg_color }};
+  {%- endif -%}
+  }
+  .mc-discount-card .card .image {
+    object-fit: fill;
+  }
+  .mc-discount-card .card .content {
+    top: 11px;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+  }
+  .mc-discount-card .card .content .image {
+    width: 71px;
+    height: 71px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .mc-discount-card .card .info .name,
+  .mc-discount-card .card .info .desc {
+    color: {{ ss.card_text_color }};
+    line-height: 1.2;
+    padding: 0 30px;
+  }
+  .mc-discount-card .card .info .name {
+    padding-top: 10px;
+    font-size: 26px;
+  }
+  .mc-discount-card .card .info .desc {
+    font-weight: 400;
+    padding-top: 8px;
+    font-size: 12px;
+    box-sizing: border-box;
+    word-break: break-word;
+    line-height: 1.4;
+  }
+  @media screen and (max-width: 1200px) {
+    .mc-discount-card {
+      padding: 69.92px 0 73.6px;
+      gap: 13.8px;
+    }
+    .mc-discount-card .card {
+      width: 243.8px;
+      height: 193.2px;
+    }
+    .mc-discount-card .card .content {
+      top: 10.12px;
+    }
+    .mc-discount-card .card .content .image {
+      width: 65.32px;
+      height: 65.32px;
+    }
+    .mc-discount-card .card .info .name,
+    .mc-discount-card .card .info .desc {
+      padding: 0 18.4px;
+    }
+    .mc-discount-card .card .info .name {
+      padding-top: 9.2px;
+      font-size: 22.08px;
+    }
+    .mc-discount-card .card .info .desc {
+      padding-top: 7.36px;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .mc-discount-card {
+      padding: 1.4756944444rem 3.5185185185vw 1.1935763889rem;
+      box-sizing: border-box;
+      gap: 1.4756944444rem 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .mc-discount-card .card {
+      width: calc(50% - 5px);
+      height: 6.8359375rem;
+    }
+    .mc-discount-card .card .image {
+      object-fit: contain;
+    }
+    .mc-discount-card .card .content {
+      max-width: 10.4817708333rem;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .mc-discount-card .card .content .image {
+      width: 2.34375rem;
+      height: 2.34375rem;
+      transform: translateY(-0.5642361111rem);
+    }
+    .mc-discount-card .card .info .name,
+    .mc-discount-card .card .info .desc {
+      padding: 0 0.6510416667rem;
+    }
+    .mc-discount-card .card .info .name {
+      font-size: 0.9114583333rem;
+    }
+    .mc-discount-card .card .info .desc {
+      font-size: 0.5642361111rem;
+      padding-top: 0.3255208333rem;
+    }
+  }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc-discount-card flex-center section--page w-full">
+    {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        <div class="card">
+            {%- if ss.card_bg_image != blank -%}
+                {%- render 'global-image',
+                        desktop_img: ss.card_bg_image,
+                        desktop_size: 400,
+                        mobile_img: ss.mb_card_bg_image,
+                        mobile_size: 400,
+                        preload: ss.image_preload
+                -%}
+            {%- endif -%}
+            <div class="content">
+                {% render 'global-image', preload: ss.image_preload, media_type: 'icon', desktop_img: bs.image_icon, desktop_size: 200 %}
+                <div class="info">
+                    <div class="name tw-font-bold">{{ bs.title }}</div>
+                    <div class="desc">
+                        {{ bs.text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {%- endfor -%}
+</div>
+{% schema %}
+{
+  "name": "MC Discount Card",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Discount Card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "color_background",
+      "id": "card_bg_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_bg_image",
+      "label": "Desktop card background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_card_bg_image",
+      "label": "Mobile card background image"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#faebdb"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Rules Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "Up to $1000 Off"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc",
+          "default": "<p>Save big on your favorite eBikes<br />this Events.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

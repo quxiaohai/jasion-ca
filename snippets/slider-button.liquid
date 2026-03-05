@@ -1,0 +1,48 @@
+{%- liquid
+    if align == blank
+        assign align = 'right'
+    endif
+    if show_dot != false
+        assign show_dot = true
+    endif
+    if show_button != false
+        assign show_button = true
+    endif
+-%}
+<div
+    data-lazy-import="{{ 'slider-button.css' | asset_url }}"
+    class="slider--button lazy-import slideshow-control w-full flex-{{ align }}">
+    <div class="tw-mobile--dots flex-center">
+        {%- if show_dot -%}
+            <slider-dots class="flickity-page-dots w-auto pointer-events-auto"
+                         aria-controls="Slider-{{ section.id }}">
+                {%- for i in (1..section.blocks.size) -%}
+                    <button type="button" class="flickity-page-dot" data-index="{% if start == 0 %}{{ forloop.index0 }}{% else %}{{ i }}{% endif %}"
+                            aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                        <span class="sr-only">{{ 'general.pagination.page' | t: number: forloop.index }}</span>
+                    </button>
+                {%- endfor -%}
+            </slider-dots>
+        {%- endif -%}
+        {%- if show_button -%}
+            <div class="tw-slider-pointers flex-center indicators">
+                <button class="button button--secondary" type="button" is="previous-button"
+                        aria-controls="Slider-{{ section.id }}"
+                        aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled tabindex="-1">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">
+                            {%- render 'icon', icon: 'chevron-left', class: 'stroke-2 transform' -%}
+                        </span>
+                </button>
+                <button class="button button--secondary" type="button" is="next-button"
+                        aria-controls="Slider-{{ section.id }}"
+                        aria-label="{{ 'general.pagination.next' | t | escape }}" tabindex="-1">
+                    <span class="btn-fill" data-fill></span>
+                    <span class="btn-text">
+                            {%- render 'icon', icon: 'chevron-right', class: 'stroke-2 transform' -%}
+                        </span>
+                </button>
+            </div>
+        {%- endif -%}
+    </div>
+</div>

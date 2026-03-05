@@ -1,0 +1,990 @@
+{% assign ss = section.settings %}
+<style>
+    .mc_product-compare {
+        padding: 80px 0;
+        background: #ffffff;
+    }
+
+    .mc_product-compare .compare-content {
+        margin: 0 auto;
+        width: auto;
+        max-width: 1318px;
+        --max-width: 275px;
+    }
+
+    .mc_product-compare .compare-content.sticky {
+        position: sticky;
+        transition: top var(--animation-nav);
+        background-color: #ffffff;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .mc_product-compare .compare-content .product-items {
+        width: 100%;
+        align-items: start;
+        padding-left: 215px;
+        padding-bottom: 6px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item {
+        width: var(--max-width);
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .cover {
+        width: 162px;
+        height: 139px;
+        margin-left: 24px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .cover .image {
+        object-fit: contain;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .info {
+        align-items: flex-start;
+        padding-left: 24px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .bike-title {
+        padding-top: 6px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        color: #000000;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects .color-items {
+        gap: 10px;
+        padding-bottom: 6px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects .color-items .color-item {
+        width: 26px;
+        height: 26px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects .color-items .color-item .color-swatch {
+        --swatch-size: 20px;
+        --swatch-radius: 4px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-root {
+        position: relative;
+        min-height: 46px;
+        width: 100%;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap {
+        width: 90%;
+        min-height: 46px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap.on {
+        z-index: 4;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap.on ._drop-info {
+        z-index: 3;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap.on ._drop-info .arrow-down {
+        transform: rotate(180deg);
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap.on ._drop-items {
+        display: block;
+        z-index: 2;
+        width: auto;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+        border: 1px solid #999999;
+        border-radius: 12px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info {
+        height: 40px;
+        width: auto;
+        max-width: 230px;
+        cursor: pointer;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .drop-text {
+        font-size: 16px;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 12px;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .arrow-down {
+        width: 20px;
+        height: 20px;
+        transition: all 0.5s;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .arrow-down .svg-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap .scroll-view {
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+        max-height: 180px;
+        width: 100%;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+        display: none;
+        padding: 12px 0;
+        overflow: hidden;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items .drop-item {
+        min-height: 32px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-size: 14px;
+        color: #333333;
+        word-break: break-word;
+        padding: 6px 22px;
+        box-sizing: border-box;
+        cursor: pointer;
+        white-space: normal;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items .drop-item:hover {
+        background-color: rgba(255, 241, 104, 0.5);
+    }
+
+    .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items .drop-item.selected {
+        background-color: #fff168;
+    }
+
+    .mc_product-compare .compare-content .compare-box {
+        padding: 22px 0;
+        border-bottom: 1px solid #d7d7d7;
+    }
+
+    .mc_product-compare .compare-content .compare-box.first {
+        border-top: 1px solid #d7d7d7;
+    }
+
+    .mc_product-compare .compare-content .compare-box .title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #000000;
+        width: 215px;
+    }
+
+    .mc_product-compare .compare-content .compare-box .info-items .info-item {
+        width: var(--max-width);
+        padding-left: 24px;
+    }
+
+    .mc_product-compare .compare-content .compare-box .info-items .info-item .text {
+        font-size: 20px;
+        line-height: 1.2;
+        color: #6e6e6e;
+    }
+
+    .mc_product-compare .compare-content .compare-box .info-items .info-item .text strong,
+    .mc_product-compare .compare-content .compare-box .info-items .info-item .text b {
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .mc_product-compare {
+            padding: 64px 0;
+        }
+
+        .mc_product-compare .compare-content {
+            --max-width: 19.097vw;
+        }
+
+        .mc_product-compare .compare-content .product-items {
+            padding-left: 172px;
+            padding-bottom: 5px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .cover {
+            width: 130px;
+            height: 111px;
+            margin-left: 19px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .info {
+            padding-left: 19px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .bike-title {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects {
+            padding-top: 8px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-root {
+            min-height: 37px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap {
+            min-height: 37px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+            border-radius: 10px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info {
+            height: 32px;
+            max-width: 184px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .drop-text {
+            font-size: 13px;
+            padding-right: 10px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .arrow-down {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap .scroll-view {
+            max-height: 144px;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+            padding: 10px 0;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items .drop-item {
+            min-height: 26px;
+            font-size: 12px;
+            padding: 5px 18px;
+        }
+
+        .mc_product-compare .compare-content .compare-box {
+            padding: 18px 0;
+        }
+
+        .mc_product-compare .compare-content .compare-box .title {
+            font-size: 16px;
+            width: 172px;
+        }
+
+        .mc_product-compare .compare-content .compare-box .info-items .info-item {
+            padding-left: 19px;
+        }
+
+        .mc_product-compare .compare-content .compare-box .info-items .info-item .text {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_product-compare {
+            padding: 1.624959376rem 0;
+            background: #ffffff;
+            position: relative;
+        }
+
+        .mc_product-compare .compare-content {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            align-items: flex-start;
+            padding-left: 0.914039649rem;
+        }
+
+        .mc_product-compare .compare-content .product-items {
+            padding-left: 0;
+            padding-bottom: 0.1218719532rem;
+            width: auto;
+            justify-content: flex-start;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item {
+            width: 11.2934676633rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .cover {
+            width: 6.3982775431rem;
+            height: 5.5045498863rem;
+            margin-left: 0.914039649rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .info {
+            padding-left: 0.914039649rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .bike-title {
+            padding-top: 0.2437439064rem;
+            font-size: 0.7921676958rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects {
+            padding: 0.406239844rem 0;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects .color-items {
+            gap: 0.3656158596rem;
+            padding-bottom: 0.2437439064rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-root {
+            min-height: 1.2593435164rem;
+            width: 100%;
+            margin-top: 0.2rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap {
+            min-height: 1.2593435164rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+            border-radius: 0.4rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info {
+            height: 1.218719532rem;
+            max-width: 10.1559961001rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .drop-text {
+            font-size: 0.6296717582rem;
+            padding-right: 0.4874878128rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-info .arrow-down {
+            width: 0.6499837504rem;
+            height: 0.6499837504rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap .scroll-view {
+            max-height: 6.4998375041rem;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items {
+            padding: 0.2437439064rem 0;
+        }
+
+        .mc_product-compare .compare-content .product-items .product-item .variant-selects ._dropdown-wrap ._drop-items .drop-item {
+            min-height: 1.2593435164rem;
+            font-size: 0.6296717582rem;
+            padding: 0.2437439064rem 0.4468638284rem;
+        }
+
+        .mc_product-compare .compare-content .compare-box {
+            padding: 0.4468638284rem 0;
+            flex-direction: column;
+        }
+
+        .mc_product-compare .compare-content .compare-box .title {
+            font-size: 0.7921676958rem;
+            position: absolute;
+            inset-inline-start: 1.828079298rem;
+        }
+
+        .mc_product-compare .compare-content .compare-box .info-items {
+            padding-top: 1.624959376rem;
+        }
+
+        .mc_product-compare .compare-content .compare-box .info-items .info-item {
+            width: 11.2934676633rem;
+            padding-left: 0.914039649rem;
+        }
+
+        .mc_product-compare .compare-content .compare-box .info-items .info-item .text {
+            font-size: 0.7921676958rem;
+        }
+    }
+</style>
+<section class="mc_product-compare">
+    {% render 'section-title', info: ss %}
+    <div class="compare-content hide-scroll-bar flex-center-col sticky" id="{{ section.id }}-compare">
+        <div class="product-items flex-center" node-name="productWrap">
+            {%- for block in section.blocks -%}
+                {%- liquid
+                    assign bs = block.settings
+                    assign type = block.type
+                -%}
+                {%- if bs.product != blank  -%}
+                    {%- assign variant = bs.product.selected_or_first_available_variant -%}
+                    <div class="product-item">
+                        <a href="{{ bs.product.url }}" class="cover relative flex-center" node-name="cover">
+                            {% render 'global-image',
+                                desktop_img: variant.featured_image,
+                                desktop_size: 400
+                            %}
+                        </a>
+                        <div class="info flex-center-col">
+                            <div class="bike-title">{{ bs.product.title }}</div>
+                            <div class="variant-selects">
+                                <div node-name="color"></div>
+                                <div node-name="variant"></div>
+                            </div>
+                        </div>
+                    </div>
+                {%- elsif type == 'other_product' -%}
+                    <div class="product-item">
+                        <a href="{% if  bs.url != blank %}{{ bs.url }}{% else %}javascript:void(0){% endif %}" class="cover relative flex-center" node-name="cover">
+                            {% render 'global-image',
+                                desktop_img: bs.image1,
+                                desktop_size: 400
+                            %}
+                        </a>
+                        <div class="info flex-center-col">
+                            <div class="bike-title">{{ bs.title }}</div>
+                            <div class="variant-selects">
+                                <div node-name="color"></div>
+                                <div node-name="variant"></div>
+                            </div>
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="compare-content hide-scroll-bar flex-center-col" id="{{ section.id }}-scroll">
+        {%- assign title_list = ss.compare_title | newline_to_br | split: '<br />' -%}
+        {%- for title in title_list -%}
+            {%- assign index = forloop.index0 -%}
+            <div class="compare-box flex-top{% if forloop.first %} first{% endif %}">
+                <div class="title">
+                    {{ title | strip }}
+                </div>
+                <div class="info-items flex-top">
+                    {%- for block in section.blocks -%}
+                        {%- assign bs = block.settings -%}
+                        {%- if bs.product != blank or block.type == 'other_product' -%}
+                            {%- assign param_list = bs.product_params | newline_to_br | split: '<br />' -%}
+                            <div class="info-item">
+                                <div class="text">{{ param_list[index] | strip }}</div>
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</section>
+<script>
+    (function () {
+        const node = document.getElementById('{{ section.id }}-compare');
+        const elemScroll = document.getElementById('{{ section.id }}-scroll');
+        const nodeList = $heybike.getNodeList(node);
+        const elemCovers = [].concat(nodeList.cover);
+        const elemColors = [].concat(nodeList.color);
+        const elemVariants = [].concat(nodeList.variant);
+        let index = 10000;
+        const getUid = () => {
+            return index++;
+        }
+        const productList = [
+            {%- for block in section.blocks -%}
+            {%- liquid
+                assign bs = block.settings
+                assign type = block.type
+            -%}
+            {%- if bs.product != blank or type == 'other_product' -%}
+            {
+                cIndex: 0,
+                vIndex: 0,
+                id: `{% if type == 'other_product' %}${getUid()}{% else %}{{ bs.product.id }}{% endif %}`,
+                variants: [
+                    {%- if type == 'other_product' -%}
+                    {%- for v in (1..5) -%}
+                    {%- liquid
+                        assign img = 'image' | append: v
+                        assign color = 'color' | append: v
+                        assign text = 'text' | append: v
+                    -%}
+                    {%- if bs[img] != blank and bs[color] != blank -%}
+                    {
+                        id: `${getUid()}`,
+                        key: "{{ bs[text] | handleize }}",
+                        color: "{{ bs[color] }}",
+                        color_image: "",
+                        value: "{{ bs[text] }}",
+                        image: "{{ bs[img] | image_url: width: 650 }}"
+                    },
+                    {%- endif -%}
+                    {%- endfor -%}
+                    {%- else -%}
+                    {%- liquid
+                        assign options_size = bs.product.options_with_values.size
+                        assign option = bs.product.options_with_values[0]
+                    -%}
+                    {%- for value in option.values -%}
+                    {%- assign option_value = value | escape -%}
+                    {%- if options_size > 1 -%}
+                    {
+                        {% render 'color-object', value: value %}
+                        value: "{{ option_value }}",
+                        key: "{{ value | handleize }}",
+                        childList: [
+                            {%- for variant in bs.product.variants -%}
+                            {%- if variant.option1 == value -%}
+                            {
+                                id: "{{ variant.id }}",
+                                value: "{{ variant.option2 }}",
+                                image: "{{ variant.featured_image | image_url: width: 650 }}"
+                            },
+                            {%- endif -%}
+                            {%- endfor -%}
+                        ]
+                    },
+                    {%- else -%}
+                    {
+                        id: "{{ value.variant.id }}",
+                        key: "{{ value | handleize }}",
+                        {% render 'color-object', value: value %}
+                        value: "{{ option_value }}",
+                        image: "{{ value.variant.featured_image | image_url: width: 650 }}"
+                    },
+                    {%- endif -%}
+                    {%- endfor -%}
+                    {%- endif -%}
+
+                ]
+            }{%- if forloop.last != true -%},{%- endif -%}
+            {%- elsif type == 'other_product' -%}
+
+            {%- endif -%}
+            {%- endfor -%}
+        ];
+        const getColorHTML = (product, color, index) => {
+            let html = ``;
+            if (product.variants.length > 1) {
+                html += `<ul class="color-items flex-left">`;
+                product.variants.forEach((item, i) => {
+                    html += `<li class="color-item flex-center">
+                                <input id="color-${product.id}-${item.key}"
+                                   type="radio"
+                                   name="Color-${product.id}"
+                                   ${color.value === item.value ? 'checked' : ''}
+                                   class="sr-only"/>
+                                <label data-index="${i}"
+                                       data-current="${index}"
+                                       data-proxy="color"
+                                       class="color-swatch tw-relative"
+                                       for="color-${product.id}-${item.key}"
+                                       style="--swatch-background: ${item.color}; background-image: 'url(${item.color_image})';">
+                                    <span class="tooltip opacity-0 pointer-events-none text-xs rounded-full z-10">${item.value}</span>
+                                </label>
+                            </li>`;
+                });
+                html += `</ul>`;
+            }
+            return html;
+        }
+
+        const getVariantHTML = (variantList, variant, index) => {
+            let html = ``;
+            if (variantList.length > 0) {
+                html += `<div class="_dropdown-root">
+                            <div class="_dropdown-wrap">
+                            <div class="_drop-info flex-left" data-proxy="drop">
+                                <span class="drop-text tw-font-semibold">${variant.value}</span>
+                                <div class="arrow-down flex-center">
+                                    <svg class="svg-img"
+                                         viewBox="0 0 1024 1024"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         width="32"
+                                         height="32">
+                                        <path d="M952.16851 329.603857l-61.405535-60.778248c-8.91402-8.840342-23.154349-9.061376-31.774681-0.517793L513.860882 597.050048 161.772942 254.480902c-8.729825-8.655124-23.12058-8.43409-32.108279 0.481977l-61.998029 61.367673c-9.025561 8.951883-9.248641 23.156396-0.517793 31.81152l430.986895 419.334507c8.691963 8.656147 23.083741 8.433066 32.108279-0.518816l61.997006-61.367673c1.418302-1.404999 2.589988-2.952238 3.572362-4.579295l356.838128-339.929016C961.306634 352.539218 961.084577 338.40736 952.16851 329.603857z"
+                                              fill="#2c2c2c"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="_drop-items">
+                                <scroll-area>
+                                    <div class="scroll-view hide-scroll-bar">`;
+                variantList.forEach((item, i) => {
+                    html += `<div data-index="${i}" data-current="${index}" data-proxy="variant" class="drop-item ${item.value === variant.value ? 'selected' : ''} tw-font-semibold flex-left">${item.value}</div>`;
+                });
+                html += `</scroll-area></div></div></div>`;
+            }
+            return html;
+        }
+
+        const computed = index => {
+            const product = productList[index];
+            const color = product.variants[product.cIndex] || {};
+            const variantList = color.childList || [];
+            const variant = variantList.length > 0 ? variantList[product.vIndex] : color;
+            return {
+                product,
+                color,
+                variant,
+                variantList
+            }
+        }
+
+        const onChangeVariant = index => {
+            const {variant, variantList} = computed(index);
+            elemVariants[index].innerHTML = getVariantHTML(variantList, variant, index);
+            elemCovers[index].innerHTML = `<img src="${variant.image}" is="lazy-image" loading="lazy" alt="" class="image"/>`;
+        }
+
+        productList.forEach(function (product, index) {
+            const {color, variant, variantList} = computed(index);
+            elemColors[index].innerHTML = getColorHTML(product, color, index);
+            elemVariants[index].innerHTML = getVariantHTML(variantList, variant, index);
+        });
+
+        let openElemList = [];
+        const onHideDrop = (ev) => {
+            if (!ev.target.closest('._dropdown-root')) {
+                openElemList.forEach(item => item.classList.remove('on'));
+                openElemList = [];
+                node.style.overflow = 'hidden';
+            }
+        };
+
+        $heybike.proxy(node, ['color', 'drop', 'variant'], ({elem, type}) => {
+            switch (type) {
+                case 'color':
+                case 'variant':
+                    const current = elem.dataset.current;
+                    productList[current][`${type === 'color' ? 'c' : 'v'}Index`] = Number(elem.dataset.index);
+                    onChangeVariant(current);
+                    break;
+                case 'drop':
+                    const parentNode = elem.parentNode;
+                    parentNode.classList.toggle('on');
+                    openElemList.push(parentNode);
+                    node.style.overflow = parentNode.classList.contains('on') ? 'visible' : 'hidden';
+                    break;
+            }
+        })
+
+        $heybike.on('click', onHideDrop);
+        $heybike.on('touchstart', onHideDrop);
+
+        const onInitFixed = () => {
+            const nav = document.querySelector('.main-navigation') || {offsetHeight: 0};
+            const header = document.getElementById('main-header');
+            let headerHeight = header.offsetHeight;
+            let boxHeight = node.querySelector('.cover').offsetHeight || 0;
+            let navHeight = nav.offsetHeight;
+            $heybike.on('resize', () => {
+                headerHeight = header.offsetHeight;
+                boxHeight = node.querySelector('.cover').offsetHeight || 0;
+                navHeight = nav.offsetHeight;
+                nodeList.productWrap.style.transform = `translateX(${$heybike.isMobile ? elemScroll.scrollLeft : 0}px)`;
+            });
+            $heybike.bind('header:toggle', ({show}) => {
+                if (show) {
+                    node.style.top = `${headerHeight + navHeight - boxHeight}px`;
+                } else {
+                    node.style.top = `${navHeight - boxHeight}px`;
+                }
+            });
+        }
+        onInitFixed();
+
+        $heybike.on('scroll', opt => {
+            nodeList.productWrap.style.transform = `translateX(-${opt.left}px)`;
+        }, elemScroll);
+    })();
+</script>
+{% schema %}
+{
+  "name": "MC Product Compare",
+  "class": "mc--main",
+  "presets": [
+    {
+      "name": "MC Product Compare"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "textarea",
+      "id": "compare_title",
+      "label": "Compare title",
+      "info": "Title line, multiple line breaks",
+      "default": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nBluetooth\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "label": "Product params",
+          "type": "textarea",
+          "info": "Param line, multiple line breaks",
+          "id": "product_params",
+          "default": "$1,699.99\n1350W\n48V 20Ah\n120Nm\n80 Miles\nNo\n28 MPH\nFront & Rear Lights\nHydraulic Brakes\n400 Ibs\nFull suspension\nLCD\n26'' x 4''\n5'4'' - 6'6''\n84.79 lbs"
+        }
+      ]
+    },
+    {
+      "type": "other_product",
+      "name": "Other product",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Product url"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Variant image #1"
+        },
+        {
+          "type": "color",
+          "id": "color1",
+          "label": "Variant color #1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Variant color text #1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Variant image #2"
+        },
+        {
+          "type": "color",
+          "id": "color2",
+          "label": "Variant color #2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Variant color text #2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Variant image #3"
+        },
+        {
+          "type": "color",
+          "id": "color3",
+          "label": "Variant color #3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Variant color text #3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Variant image #4"
+        },
+        {
+          "type": "color",
+          "id": "color4",
+          "label": "Variant color #4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Variant color text #4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Variant image #5"
+        },
+        {
+          "type": "color",
+          "id": "color5",
+          "label": "Variant color #5"
+        },
+        {
+          "type": "text",
+          "id": "text5",
+          "label": "Variant color text #5"
+        },
+        {
+          "label": "Product params",
+          "type": "textarea",
+          "info": "Param line, multiple line breaks",
+          "id": "product_params",
+          "default": "$1,699.99\n1350W\n48V 20Ah\n120Nm\n80 Miles\nNo\n28 MPH\nFront & Rear Lights\nHydraulic Brakes\n400 Ibs\nFull suspension\nLCD\n26'' x 4''\n5'4'' - 6'6''\n84.79 lbs"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

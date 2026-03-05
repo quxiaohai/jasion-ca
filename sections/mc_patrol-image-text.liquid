@@ -1,0 +1,481 @@
+{%- liquid
+    assign ss = section.settings
+    assign aspect_ratio = '1.49'
+    if ss.card_border_image != blank
+        assign aspect_ratio = ss.card_border_image.aspect_ratio
+    endif
+    assign mb_aspect_ratio = aspect_ratio
+    if ss.mb_card_border_image != blank
+        assign mb_aspect_ratio = ss.mb_card_border_image.aspect_ratio
+    endif
+-%}
+<style>
+    .mc_patrol-image-text {
+        padding: 80px 0;
+        background: #000000;
+        display: flex;
+        flex-direction: column;
+        gap: 60px 0;
+    }
+
+    .mc_patrol-image-text .text-content {
+        width: 100%;
+    }
+
+    .mc_patrol-image-text .text-content.reverse .card-item {
+        flex-direction: row-reverse;
+    }
+
+    .mc_patrol-image-text .text-content.reverse .info-wrap {
+        padding-right: 40px;
+        padding-left: 0;
+    }
+
+    .mc_patrol-image-text .card-item {
+        height: auto;
+    }
+
+    .mc_patrol-image-text .card-item .info-wrap {
+        flex: 1;
+        padding-top: 36px;
+        padding-left: 40px;
+    }
+
+    .mc_patrol-image-text .card-item .head {
+        font-size: {{ ss.pc_card_title_size }}px;
+        color: #ffffff;
+    }
+
+    .mc_patrol-image-text .card-item .head strong {
+        color: var(--bold-color);
+    }
+
+    .mc_patrol-image-text .card-item .intro {
+        font-size: {{ ss.pc_card_text_size }}px;
+        padding-top: 16px;
+        color: #747474;
+    }
+
+    .mc_patrol-image-text .card-item .media-wrap {
+        width: 52.5%;
+        aspect-ratio: {{ ss.aspect_ratio }};
+        padding: 1px;
+    }
+
+    .mc_patrol-image-text .card-item .media-wrap .border-image {
+        top: 0;
+        left: 0;
+        object-fit: fill;
+    }
+
+    .mc_patrol-image-text .card-item .image-wrap {
+        padding-top: 40px;
+    }
+
+    .mc_patrol-image-text .card-item .image-wrap .image {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .mc_patrol-image-text {
+            padding: 64px 0;
+            gap: 48px 0;
+        }
+
+        .mc_patrol-image-text .text-content.reverse .info-wrap {
+            padding-right: 32px;
+            padding-left: 0;
+        }
+
+        .mc_patrol-image-text .card-item .info-wrap {
+            padding-top: 29px;
+            padding-left: 32px;
+        }
+
+        .mc_patrol-image-text .card-item .head {
+            font-size: {{ ss.pc_card_title_size | times: 0.8 | round }}px;
+        }
+
+        .mc_patrol-image-text .card-item .intro {
+            font-size: {{ ss.pc_card_text_size | times: 0.8 | round }}px;
+            padding-top: 13px;
+        }
+
+        .mc_patrol-image-text .card-item .image-wrap {
+            padding-top: 32px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_patrol-image-text {
+            padding: 2.5rem 0;
+            gap: 1.75rem 0;
+        }
+
+        .mc_patrol-image-text .text-content.reverse .card-item {
+            flex-direction: column;
+        }
+
+        .mc_patrol-image-text .text-content.reverse .info-wrap {
+            padding-right: 0;
+        }
+
+        .mc_patrol-image-text .card-item {
+            flex-direction: column;
+        }
+
+        .mc_patrol-image-text .card-item .info-wrap {
+            padding-top: 0.875rem;
+            padding-left: 0;
+        }
+
+        .mc_patrol-image-text .card-item .head {
+            font-size: {{ ss.mb_card_title_size }}px;
+        }
+
+        .mc_patrol-image-text .card-item .intro {
+            font-size: {{ ss.mb_card_text_size }}px;
+            padding-top: 0.375rem;
+        }
+
+        .mc_patrol-image-text .card-item .media-wrap {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: {{ ss.mb_aspect_ratio }};
+        }
+
+        .mc_patrol-image-text .card-item .image-wrap {
+            padding-top: 1.125rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_patrol-image-text section--page w-full">
+    {%- render 'section-title', info: ss, font: 'rushblade' -%}
+    {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        <animate-element
+            class="text-content{% if bs.image_position == 'right' %} reverse{% else %} normal{% endif %} page-width">
+            <div class="card-item w-full flex-between-top">
+                <div class="media-wrap relative">
+                    {%- render 'global-image',
+                        desktop_img: bs.pc_image,
+                        desktop_size: 750,
+                        mobile_img: bs.mb_image,
+                        mobile_size: 750
+                    -%}
+                    {%- render 'global-image',
+                        desktop_img: ss.card_border_image,
+                        desktop_size: 750,
+                        desktop_class: 'border-image absolute',
+                        mobile_img: ss.mb_card_border_image,
+                        mobile_size: 750,
+                        mobile_class: 'border-image absolute'
+                    -%}
+                </div>
+                <div class="info-wrap">
+                    <div class="head fw-700 lh-2"
+                         style="color: {{ bs.title_color }}; --bold-color: {{ bs.title_bold_color }};">
+                        {%- if bs.title_gradient_color != blank -%}
+                            <div class="text-gradient"
+                                 style="--gradient: {{ bs.title_gradient_color }}">{{ bs.title }}</div>
+                        {%- else -%}
+                            {{ bs.title }}
+                        {%- endif -%}
+                    </div>
+                    <div class="intro lh-3" style="color:{{ bs.text_color }}">
+                        {{ bs.text }}
+                    </div>
+                    {%- if bs.param_image != blank -%}
+                        <div class="image-wrap">
+                            {%- render 'global-image',
+                                image: bs.param_image,
+                                image_size: 750,
+                                show_size: true
+                            -%}
+                        </div>
+                    {%- endif -%}
+                </div>
+            </div>
+        </animate-element>
+    {%- endfor -%}
+</div>
+{% schema %}
+{
+  "name": "MC Patrol Image Text",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Patrol Image Text"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Slide card"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_border_image",
+      "label": "Desktop card border image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_card_border_image",
+      "label": "Mobile card border image"
+    },
+    {
+      "type": "range",
+      "id": "pc_card_title_size",
+      "label": "Desktop card title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "mb_card_title_size",
+      "label": "Mobile card title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "pc_card_text_size",
+      "label": "Desktop card text size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "mb_card_text_size",
+      "label": "Mobile card text size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "pc_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title text",
+          "default": "<p>Image with text</p>"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_bold_color",
+          "label": "Title bold color",
+          "default": "#ffe500"
+        },
+        {
+          "type": "color_background",
+          "id": "title_gradient_color",
+          "label": "Title gradient color"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Desc"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Desc color",
+          "default": "#747474"
+        },
+        {
+          "type": "image_picker",
+          "id": "param_image",
+          "label": "Param image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

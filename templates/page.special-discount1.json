@@ -1,0 +1,417 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "multicolumn_DyFVU9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kwRckQ": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/2_7c37419e-fbe6-4402-b460-14fd2eb893b4.png",
+            "image_ratio": "adapt",
+            "heading": "Military",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Includes Active Duty, Veterans & Dependents.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_eWjMUW": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/11_1.png",
+            "image_ratio": "adapt",
+            "heading": "Responder",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Includes Police, Fire and EMT.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_c7PGCU": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/1_631e0b4f-3122-47bd-a3ca-5572fb96d9a3.png",
+            "image_ratio": "adapt",
+            "heading": "Teacher",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Includes Pre-K, K-12 and Professors.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_J7W6n9": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/10_1.png",
+            "image_ratio": "adapt",
+            "heading": "Medical",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Includes Doctors, Nurses & medical staff.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_KHMLxb": {
+          "type": "column",
+          "settings": {
+            "show_border": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/S.png",
+            "image_ratio": "adapt",
+            "heading": "Student",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Includes University Students.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_kwRckQ",
+        "column_eWjMUW",
+        "column_c7PGCU",
+        "column_J7W6n9",
+        "column_KHMLxb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "gap": "large",
+        "columns": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Discount for Those Who Serve",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h1",
+        "subheading": "We offer a $50 exclusively for military, teachers, police, firefighters, and medical professionals.",
+        "description": "<p>Thank for for your service. Please email us your proof of identity. We'll send you an exclusive promo code after confirmation.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "rich_text_rFNdAW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QDKxAg": {
+          "type": "heading",
+          "settings": {
+            "heading": "How To Receive Your Discount?",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_jbc8Jp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>1. Please send us your photo ID via <a href=\"mailto:support@jasionbike.com\" title=\"mailto:support@jasionbike.com\">support@jasionbike.com</a> and once confirmed, we will offer you a special discount.</p><p>2. Please apply this discount at the checkout page.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_yBKr3d": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_QDKxAg",
+        "text_jbc8Jp",
+        "button_yBKr3d"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich_text_m4FPgb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zTxxJG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Important Info",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_rwHLmy": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Valid in the US only.</li><li>One discount per person.</li><li>For ebikes only, not available on Jasion’s Amazon store.</li><li>We reserve the right to change or end the promotion at any time.</li><li>Special discounts can't be combined with other offers</li></ol>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_Ha8y7D": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_zTxxJG",
+        "text_rwHLmy",
+        "button_Ha8y7D"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_NrH86Y": {
+      "type": "faq",
+      "blocks": {
+        "question_DQwGnb": {
+          "type": "question",
+          "settings": {
+            "title": "Military Verification",
+            "text": "<p>Valid Documents:</p><p>1. DD-214 (you may block SSN)</p><p>2. LES, DFAS or TRICARE Document</p><p>3. Veterans Affairs ID or VA Postal Letter</p><p>4. USAA Insurance Card</p><p>5. Navy Federal Statement</p><p>6. Driver's License showing Veteran mark (requires visit to DMV to add it)</p><p>7. G.I. Bill Document</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_GtBXfW": {
+          "type": "question",
+          "settings": {
+            "title": "Responder Verification",
+            "text": "<p>Valid Documents:</p><p>1. Official ID Card</p><p>2. Official Badge (must have your name on it)</p><p>3. Pay stub from your employer</p><p>4. Promotion/Award Certificate</p><p>5. Signed letter of employment status from your agency</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_tejL7d": {
+          "type": "question",
+          "settings": {
+            "title": "Medical Verification",
+            "text": "<p>Valid Documents:</p><p>1. Official ID Card</p><p>2. Official Badge (must have your name on it)</p><p>3. Pay stub from your employer</p><p>4. Promotion/Award Certificate</p><p>5. Signed letter of employment status from your agency</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_fCAyzb": {
+          "type": "question",
+          "settings": {
+            "title": "Teacher Verification",
+            "text": "<p>Valid Documents:</p><p>1. Official ID Card or Badge</p><p>2. Educator's License or State Certification</p><p>3. Credential used to gain access to your campus (must have your name on it)</p><p>4. Pay Stub from your employer</p><p>5. Signed letter of employment status from your school</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_3N6aiF": {
+          "type": "question",
+          "settings": {
+            "title": "Student Verification",
+            "text": "<p>1. A student ID card with a date</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_DQwGnb",
+        "question_GtBXfW",
+        "question_tejL7d",
+        "question_fCAyzb",
+        "question_3N6aiF"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "What documents can qualify for this exclusive discount?",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>The following documents are required for verification (only one document is required)</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "multicolumn_DyFVU9",
+    "rich_text_rFNdAW",
+    "rich_text_m4FPgb",
+    "faq_NrH86Y"
+  ]
+}

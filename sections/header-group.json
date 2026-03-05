@@ -1,0 +1,325 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_Lag3eQ": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "⏰Order before the 19th for guaranteed holiday delivery.",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "announcement_8UQHDB": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "Buy One & Get 100% Cash Back | Dec 3 and Dec 18",
+            "link": "shopify://pages/flash-sale",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "announcement-2": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "X-HUNTER: 2 Days Only! $859+ Free Basket",
+            "link": "shopify://products/jasion-x-hunter",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "Hunter Pro: Save $1839+$50 Off+Free Gift, <strong>$1054</strong> Per Unit",
+            "link": "shopify://products/hunter-pro-combo",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "announcement_n8hBLb": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "RetroVolt Pro: -$2029 OFF!😱 <strong>$50 Off $999+ with code: LUV50</strong>",
+            "link": "shopify://products/retrovolt-pro-combo",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "announcement_MiyK6E": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "😲Beware of Fake Jasionbike Websites",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Lag3eQ",
+        "announcement_8UQHDB",
+        "announcement-2",
+        "announcement-1",
+        "announcement_n8hBLb",
+        "announcement_MiyK6E"
+      ],
+      "settings": {
+        "show_social": false,
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "invert_icons_selectors": false,
+        "announcement_position": "center",
+        "autoplay": true,
+        "autoplay_speed": 6,
+        "show_navigation": true,
+        "color_text": "#ffffff",
+        "color_background": "#fe9022",
+        "gradient_background": "",
+        "color_highlight": "#ffddbf",
+        "gradient_highlight": "",
+        "hide_homepage": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_yDnV8g": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "❤️Valentine‘s Day",
+            "menu_width": "small",
+            "show_menu_image": true,
+            "button_label": "",
+            "button_link": "",
+            "promo_image_1": "shopify://shop_images/test_75228ade-ec9f-4a25-954c-1dd814056687.png",
+            "promo_image_ratio_1": "adapt",
+            "promo_heading_1": "X-HUNTER",
+            "promo_subtext_1": "All-Terrain,Foldable, 20 x 4.0'' Fat Tires ",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://collections/all-products",
+            "promo_tag_1": "Sale",
+            "promo_color_text_1": "#171717",
+            "promo_color_overlay_1": "#000000",
+            "promo_overlay_opacity_1": 0,
+            "promo_image_2": "shopify://shop_images/test_75228ade-ec9f-4a25-954c-1dd814056687.png",
+            "promo_image_ratio_2": "adapt",
+            "promo_heading_2": "EB5 ROAMER ST",
+            "promo_subtext_2": "City Commuter,Step-Through",
+            "promo_overlay_content_2": false,
+            "promo_link_2": "shopify://collections/all-products",
+            "promo_tag_2": "",
+            "promo_color_text_2": "#171717",
+            "promo_color_overlay_2": "#000000",
+            "promo_overlay_opacity_2": 0,
+            "promo_image_3": "shopify://shop_images/test_75228ade-ec9f-4a25-954c-1dd814056687.png",
+            "promo_image_ratio_3": "adapt",
+            "promo_heading_3": "RetroVolt",
+            "promo_subtext_3": "Off-Road, Mountain E-Bike",
+            "promo_overlay_content_3": false,
+            "promo_link_3": "shopify://collections/all-products",
+            "promo_tag_3": "",
+            "promo_color_text_3": "#171717",
+            "promo_color_overlay_3": "#000000",
+            "promo_overlay_opacity_3": 0,
+            "promo_image_4": "shopify://shop_images/index_3.png",
+            "promo_image_ratio_4": "adapt",
+            "promo_heading_4": "All Collecetions",
+            "promo_subtext_4": "Check out all our collections.",
+            "promo_overlay_content_4": true,
+            "promo_link_4": "shopify://collections",
+            "promo_tag_4": "",
+            "promo_color_text_4": "#ffffff",
+            "promo_color_overlay_4": "#000000",
+            "promo_overlay_opacity_4": 20,
+            "promo_image_ratio_5": "adapt",
+            "promo_heading_5": "",
+            "promo_subtext_5": "",
+            "promo_overlay_content_5": true,
+            "promo_link_5": "shopify://collections",
+            "promo_tag_5": "",
+            "promo_color_text_5": "#ffffff",
+            "promo_color_overlay_5": "#000000",
+            "promo_overlay_opacity_5": 40
+          }
+        },
+        "mega_menu_hb_YLAwCX": {
+          "type": "mega_menu_hb",
+          "settings": {
+            "menu_title": "E-bikes",
+            "button_label": "Compare Models",
+            "use_all_btn": true,
+            "button_link": "shopify://pages/compare",
+            "store_highlights": "default",
+            "mega_title": "Your 1st eBike that\n beyond expectations！",
+            "btm_button_label": "Shop All Bikes",
+            "btm_button_link": "shopify://collections/electric-bike",
+            "show_badges": true,
+            "promo_image_1": "shopify://shop_images/RetroVolt_Pro_M_ae4c7a43-0ed8-41bd-b729-1acd62a31006.jpg",
+            "promo_image_ratio_1": "adapt",
+            "promo_heading_1": "",
+            "promo_subtext_1": "",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://products/retrovolt-pro",
+            "promo_tag_1": "",
+            "promo_color_text_1": "#ffffff",
+            "promo_color_overlay_1": "#000000",
+            "promo_overlay_opacity_1": 0
+          }
+        },
+        "mega_menu_hb_Kjfthz": {
+          "type": "mega_menu_hb",
+          "settings": {
+            "menu_title": "🔥Combo Sale",
+            "button_label": "",
+            "use_all_btn": false,
+            "button_link": "",
+            "store_highlights": "megamenu",
+            "mega_title": "Your 1st eBike that beyond expectations！",
+            "btm_button_label": "Shop All Bikes",
+            "btm_button_link": "shopify://collections/electric-bike",
+            "show_badges": true,
+            "promo_image_1": "shopify://shop_images/lQLPJxxV-lPohXXNBkDNBLCwTeGQr85K0uoJdshBS6n-AQ_1200_1600.png",
+            "promo_image_ratio_1": "adapt",
+            "promo_heading_1": "",
+            "promo_subtext_1": "",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://products/thunder-pro-thunder-pro-st",
+            "promo_tag_1": "",
+            "promo_color_text_1": "#ffffff",
+            "promo_color_overlay_1": "#000000",
+            "promo_overlay_opacity_1": 0
+          }
+        },
+        "mega_menu_gQ8EcR": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Accessories",
+            "menu_width": "medium",
+            "show_menu_image": false,
+            "button_label": "",
+            "button_link": "shopify://collections/accessories",
+            "promo_image_ratio_1": "adapt",
+            "promo_heading_1": "",
+            "promo_subtext_1": "",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "",
+            "promo_tag_1": "",
+            "promo_color_text_1": "#ffffff",
+            "promo_color_overlay_1": "#000000",
+            "promo_overlay_opacity_1": 40,
+            "promo_image_ratio_2": "adapt",
+            "promo_heading_2": "",
+            "promo_subtext_2": "",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "",
+            "promo_tag_2": "",
+            "promo_color_text_2": "#ffffff",
+            "promo_color_overlay_2": "#000000",
+            "promo_overlay_opacity_2": 40,
+            "promo_image_ratio_3": "adapt",
+            "promo_heading_3": "",
+            "promo_subtext_3": "",
+            "promo_overlay_content_3": true,
+            "promo_link_3": "",
+            "promo_tag_3": "",
+            "promo_color_text_3": "#ffffff",
+            "promo_color_overlay_3": "#000000",
+            "promo_overlay_opacity_3": 40,
+            "promo_image_ratio_4": "adapt",
+            "promo_heading_4": "",
+            "promo_subtext_4": "",
+            "promo_overlay_content_4": true,
+            "promo_link_4": "",
+            "promo_tag_4": "",
+            "promo_color_text_4": "#ffffff",
+            "promo_color_overlay_4": "#000000",
+            "promo_overlay_opacity_4": 40,
+            "promo_image_ratio_5": "adapt",
+            "promo_heading_5": "",
+            "promo_subtext_5": "",
+            "promo_overlay_content_5": true,
+            "promo_link_5": "",
+            "promo_tag_5": "",
+            "promo_color_text_5": "#ffffff",
+            "promo_color_overlay_5": "#000000",
+            "promo_overlay_opacity_5": 40
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_yDnV8g",
+        "mega_menu_hb_YLAwCX",
+        "mega_menu_hb_Kjfthz",
+        "mega_menu_gQ8EcR"
+      ],
+      "settings": {
+        "menu": "main-menu-v2",
+        "menu_mobile": "",
+        "menu_active": "block",
+        "hover_menu": true,
+        "header_layout": "left-center",
+        "sticky_header_type": "on-scroll-up",
+        "enable_language_selector_desktop": false,
+        "enable_country_selector_desktop": false,
+        "show_country_name_dekstop": false,
+        "show_country_flag_desktop": false,
+        "show_country_link": true,
+        "country_link": "EU||eu||https://www.jasionbikes.eu/\nUK||uk||https://jasionbike.uk/\nUS||us||https://www.jasionbike.com/",
+        "mb_layout": "2",
+        "logo_position_mobile": "center",
+        "show_social": true,
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "transparent_color_text": "#ffffff",
+        "color_text": "#171717",
+        "color_background": "#ffffff",
+        "padding_top": 14,
+        "padding_bottom": 16,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

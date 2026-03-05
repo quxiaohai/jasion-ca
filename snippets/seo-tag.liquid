@@ -1,0 +1,11 @@
+{%- liquid
+    if type == blank
+        assign type = 'index'
+    endif
+    if tag == blank
+        assign tag = 'h2'
+    endif
+-%}
+{%- if request.page_type == type -%}
+    <{{ tag }} class="seo-tag-hidden">{{ text }}</{{ tag }}>
+{%- endif -%}

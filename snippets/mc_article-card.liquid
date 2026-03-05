@@ -1,0 +1,53 @@
+{%- liquid
+    if show_tag != false
+        assign show_tag = true
+    endif
+    if show_desc == blank
+        assign show_desc = false
+    endif
+-%}
+<div class="{{ class }} article-card relative overflow-hidden">
+    <a href="{{ article.url }}" class="blog-media flex-center media">
+        {%- render 'global-image', image: article.image, image_size: 700 -%}
+    </a>
+    <div class="blog-info">
+        {%- if show_tag and article.tags.size > 0 -%}
+            <div class="tag-list flex-left">
+                {%- for tag in article.tags -%}
+                    {%- assign bs = block.settings -%}
+                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                       class="tag reversed-link">{{ tag }}</a>
+                {%- endfor -%}
+            </div>
+        {%- endif -%}
+        <h2>
+            {%- assign title = article.title | strip -%}
+            <a href="{{ article.url }}" class="blog-title">
+            {%- if title.size > chats -%}
+                {{ title | truncate: chats }}
+            {%- else -%}
+                {{ title }}
+            {%- endif -%}
+        </a>
+        </h2>
+        {%- if show_desc -%}
+            <div class="blog-desc">
+                {%- liquid
+                    if article.excerpt.size > 0
+                        echo article.excerpt
+                    else
+                        echo article.content | strip_html | truncatewords: 40
+                    endif
+                -%}
+            </div>
+        {%- endif -%}
+        <div class="blog-meta flex-between">
+            <div class="meta-info">
+                <span class="author">{{ article.author }}</span>
+                <span
+                    class="date">{{- article.published_at | time_tag: format: 'month_day_year' -}}</span>
+            </div>
+            <a href="{{ article.url }}" class="read-more reversed-link">Read More</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,971 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_hnRat8": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_X9xKrk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/RetroVolt_Pro_3e17234b-094f-42f5-83b0-e85de01faee7.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_292c07f9-5680-40d7-a234-9f4fa6abc861.jpg",
+            "heading": "Valentine's Day Sale",
+            "heading_size": "title-md",
+            "heading_tag": "h1",
+            "subheading": "SAVE UP TO $1040 + Free Gifts",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "shopify://products/hunter-pro",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        },
+        "image_hhx3ML": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "Performance and style in Harmony",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        },
+        "image_Kwik39": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "Performance and style in Harmony",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_X9xKrk",
+        "image_hhx3ML",
+        "image_Kwik39"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_collection_banner": {
+      "type": "mc_collection-banner",
+      "blocks": {
+        "item_9eicyF": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "30 Day Price Guarantee",
+            "image_icon": "shopify://shop_images/1130.png"
+          }
+        },
+        "item_TrDawr": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Fast & Free Shipping",
+            "image_icon": "shopify://shop_images/14_594130ff-d3a3-42aa-b89d-90ed4efcdac7.png"
+          }
+        },
+        "item_fWpx4j": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Lowest Price",
+            "image_icon": "shopify://shop_images/13_f6c1ebf8-df2e-4b3c-a846-4117a5afc055.png"
+          }
+        },
+        "item_wFPrAm": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Buy Now Pay Later",
+            "image_icon": "shopify://shop_images/12_d6d7ce71-4b90-4486-958c-14d7a72652b0.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_9eicyF",
+        "item_TrDawr",
+        "item_fWpx4j",
+        "item_wFPrAm"
+      ],
+      "name": "MC Collection Banner",
+      "settings": {
+        "page_color": "#ffffff",
+        "show_title": true,
+        "title_hidden": true,
+        "title": "Electric Bikes",
+        "title_color": "#ffffff",
+        "pc_image_url": "shopify://shop_images/RetroVolt_Pro_1920x400_73dc2f98-209e-495c-9c5f-14d9e6fb3c3a.jpg",
+        "image_ratio": "",
+        "mb_image_url": "shopify://shop_images/RetroVolt_Pro_1200x525_86ca716d-3377-4f03-ab36-2121a2f1f95c.jpg",
+        "mb_image_ratio": "",
+        "image_preload": true,
+        "url": "shopify://products/retrovolt-pro",
+        "service_display": "service-rows",
+        "service_title_color": "#ffffff"
+      }
+    },
+    "mc_main_breadcrumbs_N3t9Dj": {
+      "type": "mc_main-breadcrumbs",
+      "blocks": {
+        "breadcrumb_E8eNgQ": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Home",
+            "url": "https://www.jasionbike.com/"
+          }
+        },
+        "breadcrumb_XKURRE": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Electric Bikes",
+            "url": "shopify://collections/electric-bike"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_E8eNgQ",
+        "breadcrumb_XKURRE"
+      ],
+      "name": "MC Main Breadcrumbs",
+      "settings": {
+        "page_color": "",
+        "pc_page_left": 20,
+        "pc_page_right": 20,
+        "pc_page_top": 20,
+        "pc_page_bottom": 20,
+        "mb_page_left": 20,
+        "mb_page_right": 20,
+        "mb_page_top": 20,
+        "mb_page_bottom": 20,
+        "text_color": "#3c3f42",
+        "hover_text_color": "#ff981d",
+        "pc_align": "left",
+        "mb_align": "left",
+        "pc_size": 15,
+        "pc_weight": 400,
+        "mb_size": 14,
+        "mb_weight": 400
+      }
+    },
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/X-Hunter_e25dbcf6-8e55-4c41-859a-3c15078b45d9.jpg",
+            "image_mobile": "shopify://shop_images/X-Hunter_M_cabdd077-7e08-4dc6-a618-8b5a5cb10fcc.jpg",
+            "heading": "",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "shopify://products/jasion-x-hunter",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "disabled": true,
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "page_navigation_aKxjVd": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": " Electric Bikes",
+            "button_url": "shopify://collections/electric-bike"
+          }
+        },
+        "page_navigation_jV7Uer": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Combo Sale",
+            "button_url": "shopify://collections/combo-sale"
+          }
+        },
+        "page_navigation_77R4gj": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Folding Ebike",
+            "button_url": "shopify://collections/folding-ebike"
+          }
+        },
+        "page_navigation_6kyD6P": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Fat Tire Ebike",
+            "button_url": "shopify://collections/fat-tire-ebike"
+          }
+        },
+        "page_navigation_iPpPjp": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Cruiser Ebike",
+            "button_url": "shopify://collections/cruiser-ebike"
+          }
+        },
+        "page_navigation_X8TMRr": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Over Ebike",
+            "button_url": "shopify://collections/step-over-electric-bikes"
+          }
+        },
+        "page_navigation_pjbkpB": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Through Ebike",
+            "button_url": "shopify://collections/step-through-ebikes"
+          }
+        },
+        "page_navigation_N386GW": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Outlet",
+            "button_url": "shopify://collections/outlet"
+          }
+        }
+      },
+      "block_order": [
+        "promotion",
+        "page_navigation_aKxjVd",
+        "page_navigation_jV7Uer",
+        "page_navigation_77R4gj",
+        "page_navigation_6kyD6P",
+        "page_navigation_iPpPjp",
+        "page_navigation_X8TMRr",
+        "page_navigation_pjbkpB",
+        "page_navigation_N386GW"
+      ],
+      "settings": {
+        "layout": "1",
+        "products_per_page": 50,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": true,
+        "filter_collapsed": false,
+        "filter_type": "sidebar",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": true,
+        "title": "E-Bikes Products",
+        "title_hidden": true,
+        "title_tag": "h2"
+      }
+    },
+    "multicolumn_slide_hb_hfkHWV": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "video_BmLPLP": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=6JFqyO155z4",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=6JFqyO155z4",
+            "image_height_mobile": "auto",
+            "date": "2025/10/26",
+            "title": "A Chill Folding Ebike That’s Probably “Enough Ebike” For Most People - Jasion Hunter Pro Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_36_8538f051-809c-4904-bacd-8006de35577e.jpg",
+            "author": "TailHappyTV"
+          }
+        },
+        "video_3bQV6W": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NPTUhfRDBzY",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY",
+            "image_height_mobile": "auto",
+            "date": "2025/10/22",
+            "title": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_33_860cf5da-6416-4ca0-acc2-022fcdce8c20.jpg",
+            "author": "Electric Scooter Academy"
+          }
+        },
+        "video_fPGerK": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=YNd4VF6q-uE&t=395s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=YNd4VF6q-uE&t=395s",
+            "image_height_mobile": "auto",
+            "date": "2025/11/27",
+            "title": "Honest Review of Jasion X-Hunter ST - The BEST All Terrain Folding Ebike In the Market",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/unnamed_7_115054d8-cb49-4df0-a763-a86b72e0977b.jpg",
+            "author": "Eddie Nunez"
+          }
+        },
+        "video_Ct7p6K": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=l_cONfo1WA0",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=l_cONfo1WA0",
+            "image_height_mobile": "auto",
+            "date": "2025/8/15",
+            "title": "BEST CHEAP FAST 2025 Electric Bike for SAFETY? Jasion Thunder Ebike (E-Bike) Review UNDER $1000",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_28_5939a6fb-8e09-4016-890d-bd06a8721fa3.jpg",
+            "author": "HeroesNStuff"
+          }
+        },
+        "video_8gwKWE": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=95ultRMIpbo&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=27",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=95ultRMIpbo&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=27",
+            "image_height_mobile": "auto",
+            "date": "2024/2/11",
+            "title": "I CAN'T BELIEVE THIS EBIKE IS SO CHEAP! 1400W FOLDABLE JASION X-HUNTER EBIKE",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_4_7ce09522-295e-49af-9d0d-66c7baad5705.jpg",
+            "author": "NRG SPORTS"
+          }
+        }
+      },
+      "block_order": [
+        "video_BmLPLP",
+        "video_3bQV6W",
+        "video_fPGerK",
+        "video_Ct7p6K",
+        "video_8gwKWE"
+      ],
+      "name": "Multicolumn slide (hb)",
+      "settings": {
+        "pw-overflow-hidden": true,
+        "columns": 3,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Rider Reviews",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "rich_text_jqejik": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BE37Jh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Jasion Ebikes?</strong>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_hg8JeA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jasion offers electric bikes for adults—built for the rides people actually take, from commuting and errands to campus trips and weekend exploring. Choose a folding e-bike for easy storage, or a fat-tire option for trails and rougher roads, and enjoy a smooth, confidence-inspiring ride that helps you go farther with less effort.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_KciFwX": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_BE37Jh",
+        "text_hg8JeA",
+        "button_KciFwX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_adttaY": {
+      "type": "faq",
+      "blocks": {
+        "question_Urw8tr": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How do I choose the right Jasion e-bike (commuter vs folding vs fat tire)?</strong>",
+            "title_tag": "h3",
+            "text": "<p>Pick based on where you ride and where you store the bike. A commuter-style electric bike is ideal for pavement, bike lanes, and predictable routes. A <a href=\"https://www.jasionbike.com/collections/electric-bike\" target=\"_blank\">folding e-bike</a> is best if you need to store it in an apartment, carry it in a car trunk, or use RV/van travel—folding can remove the biggest ownership barrier: space. A <a href=\"https://www.jasionbike.com/collections/fat-tire-ebike\" target=\"_blank\">fat tire e-bike</a> is the “confidence choice” for rough pavement, gravel, and uneven ground, because wider tires improve stability and traction. If you want one bike to do many jobs, folding + fat tire models combine storage convenience with all-terrain capability. Then finalize with rider fit and expected load (rider + cargo).</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_fJYRwn": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best electric bike for adults from Jasion?</strong>",
+            "title_tag": "h3",
+            "text": "<p>The “best” electric bike for adults depends on where you ride and where you’ll store it. If you want a foldable fat-tire setup designed for mixed terrain and everyday riding, start with <a href=\"https://www.jasionbike.com/products/jasion-x-hunter\" target=\"_blank\"><strong>X-Hunter</strong></a>. If you want a more comfort-focused, confidence-forward build, <strong>Hunter Pro</strong> is positioned with a foldable frame plus upgrades like full suspension and hydraulic disc brakes. For city commutes and simple daily riding, the <a href=\"https://www.jasionbike.com/collections/eb5-roamer-product-series\" target=\"_blank\"><strong>EB5 Roamer series</strong></a> is designed around urban practicality with step-over and step-through options, so fit and convenience come first.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_38UEyr": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best step-through e-bike for riders </strong>(easy mounting)?",
+            "title_tag": "h3",
+            "text": "<p>If you’re searching “best step-through electric bike for adults,” you likely want easier on/off, more confidence at stops, and comfort for errands or commuting. Jasion’s step-through lineup includes commuter-style choices like <a href=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-st-roamer-ebike\" target=\"_blank\"><strong>EB5 Roamer ST</strong></a> for urban riding and low-stress daily use. If you want a step-through frame but also want folding convenience and fat-tire capability for rougher roads, <a href=\"https://www.jasionbike.com/products/x-hunter-st\" target=\"_blank\"><strong>X-Hunter ST</strong></a> is positioned as a step-through, foldable, all-terrain option with hydraulic braking emphasis. Step-through is especially helpful if you carry bags, ride in everyday clothing, or simply prefer a more convenient frame for frequent stopping.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_kJkHre": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best folding e-bike for apartments or small storage?</strong>",
+            "title_tag": "h3",
+            "text": "<p>For rougher riding, prioritize traction + control: fat tires, suspension, and braking confidence. <strong>Thunder</strong> is positioned as an all-terrain fat-tire e-bike with hydraulic brakes and an adjustable front suspension fork, built to feel stable across mixed terrain. If your routes are especially bumpy and comfort is a top priority, <a href=\"https://www.jasionbike.com/products/hunter-pro\" target=\"_blank\"><strong>Hunter Pro</strong></a> is positioned with full suspension and hydraulic disc brakes for a smoother, more controlled ride feel. If you prefer a “retro scrambler” look while still focusing on off-road and city versatility, <a href=\"https://www.jasionbike.com/products/retrovolt-pro\" target=\"_blank\"><strong>RetroVolt Pro</strong></a> is positioned with dual suspension and hydraulic disc brakes.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_8c4KQB": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best Jasion e-bike if I want strong power and fast acceleration?</strong>",
+            "title_tag": "h3",
+            "text": "<p>If you care most about “punchy power” and quick takeoff, compare the models positioned for higher peak output and all-terrain control. <strong>RetroVolt Pro</strong> is marketed with a 2000W peak motor and a 52V battery, plus dual suspension and hydraulic disc brakes—so it’s built around a more performance-leaning ride experience. If you want performance but prefer a more classic fat-tire e-bike style, <a href=\"https://www.jasionbike.com/products/thunder\" target=\"_blank\"><strong>Thunder</strong></a> and <strong>Hunter Pro</strong> both emphasize all-terrain capability and confident braking/suspension in their positioning. The best choice comes down to your preferred frame style (moped/scrambler vs classic e-bike) and whether you need folding storage.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_GPn7mA": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best electric bike for hills (climbing and control)?</strong>",
+            "title_tag": "h3",
+            "text": "<p>For hill riding, look beyond “top speed.” What matters most is whether the bike feels controlled under load: smooth power delivery, gearing that fits your terrain, and braking confidence on descents. Jasion positions commuter models like <strong>EB5 Roamer / EB5 Roamer ST</strong> with quick acceleration messaging for everyday slopes, while performance/all-terrain models like <strong>RetroVolt Pro</strong>, <strong>Thunder</strong>, and <strong>Hunter Pro</strong> are positioned around stronger off-road capability, stability, and braking/suspension for mixed terrain. If your area is consistently hilly, choose the model category first (commuter vs all-terrain), then confirm the motor/battery and braking/suspension details on the product page.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_czBBnr": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What’s the best budget electric bike under $1,000?</strong>",
+            "title_tag": "h3",
+            "text": "<p>For a <strong>budget electric bike under $1,000</strong>, the best choice usually depends on two things: your main riding scenario (city commuting vs. mixed terrain) and how much storage space you have. On Jasion’s site, the <strong>EB5 Roamer</strong> is a strong under-$1,000 option for everyday commuting and errands—making it a practical pick for first-time adult riders.</p><p>If you want more versatility at a similar budget, Jasion also positions the <strong>X-Hunter ST</strong> as a <strong>full-suspension folding all-terrain eBike under $1,000</strong>, which can be a better fit if you need folding convenience or expect rougher roads.  </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_NcxWfb": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Are Jasion e-bikes water resistant? Can I ride in the rain?</strong>",
+            "title_tag": "h3",
+            "text": "<p>Light rain and wet roads are part of normal riding, but e-bikes should not be treated as fully waterproof. Avoid deep water, don’t use high-pressure washing, and keep the charging area clean and dry. After wet rides, wipe the bike down and <strong>do not charge</strong> until the charging port area is completely dry. For your model’s specific guidance, follow the <a href=\"https://www.jasionbike.com/pages/user-manual-download\" target=\"_blank\">manual instructions</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_yw9AMa": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Do Jasion e-bikes arrive assembled? How hard is setup?</strong>",
+            "title_tag": "h3",
+            "text": "<p>E-bikes ship partially assembled for safe packaging. Most riders can finish setup with basic tools by following <a href=\"https://www.jasionbike.com/pages/user-manual-download\" target=\"_blank\">the model manual</a>. Plan time for a first-day safety check: tire pressure, bolt tightness, brakes, and shifting. If you’re not confident, a quick local bike-shop safety check can make the first week smoother.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_Bq9QLY": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>What accessories are most useful for commuting and errands?</strong>",
+            "title_tag": "h3",
+            "text": "<p>For daily commuting, riders typically get the most value from cargo and security upgrades: a rear basket or pannier bag for groceries/work gear, and a solid lock for parking. If you’re building a “car replacement” setup, start with cargo storage first—then add convenience <a href=\"https://www.jasionbike.com/collections/accessories\" target=\"_blank\">accessories</a> like mirrors or phone mounts.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_Urw8tr",
+        "question_fJYRwn",
+        "question_38UEyr",
+        "question_kJkHre",
+        "question_8c4KQB",
+        "question_GPn7mA",
+        "question_czBBnr",
+        "question_NcxWfb",
+        "question_yw9AMa",
+        "question_Bq9QLY"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_hnRat8",
+    "mc_collection_banner",
+    "mc_main_breadcrumbs_N3t9Dj",
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "main-collection",
+    "multicolumn_slide_hb_hfkHWV",
+    "rich_text_jqejik",
+    "faq_adttaY"
+  ]
+}

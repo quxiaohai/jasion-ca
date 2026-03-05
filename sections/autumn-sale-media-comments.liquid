@@ -1,0 +1,287 @@
+{%- assign ss = section.settings -%}
+<style>
+    .autumn-sale-media-comments {
+        padding: 58px 0 40px;
+        background-color: #f9f7f6;
+    }
+    .autumn-sale-media-comments .title {
+        font-size: 36px;
+        color: #000000;
+        padding-bottom: 45px;
+    }
+    .autumn-sale-media-comments .autumn-content {
+        max-width: 1376px;
+        box-sizing: border-box;
+        padding: 0 48px;
+        margin: 0 auto;
+    }
+    .autumn-sale-media-comments .autumn-content .slider {
+        padding-inline: 0;
+        margin-inline: 0;
+        scroll-padding-inline: 0;
+        padding-block-end: 0;
+    }
+    .autumn-sale-media-comments .autumn-content .card-grid {
+        --slider-item-width: 414px;
+        gap: 0 19px;
+    }
+    .autumn-sale-media-comments .autumn-content .slider-item {
+        border-radius: 10px;
+        height: 564px;
+    }
+    .autumn-sale-media-comments .autumn-content .slider-item .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 292px;
+        box-sizing: border-box;
+        padding: 0 38px 20px;
+        justify-content: flex-end;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .score-items .score-item {
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .score-items svg {
+        width: 100%;
+        height: 100%;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .intro,
+    .autumn-sale-media-comments .autumn-content .media-info .name {
+        color: #ffffff;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .intro {
+        padding-top: 22px;
+        font-size: 14px;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .intro:before, .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+        content: "‘‘";
+        position: absolute;
+        font-size: 50px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: #ffffff;
+        left: -15px;
+        top: -10px;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+        content: "’’";
+        left: auto;
+        top: auto;
+        right: -20px;
+        bottom: -54px;
+    }
+    .autumn-sale-media-comments .autumn-content .media-info .name {
+        padding-top: 45px;
+        font-size: 16px;
+    }
+    @media screen and (max-width: 1376px) {
+        .autumn-sale-media-comments {
+            padding: 49.3px 0 34px;
+        }
+        .autumn-sale-media-comments .title {
+            font-size: 30.6px;
+            padding-bottom: 38.25px;
+        }
+        .autumn-sale-media-comments .autumn-content {
+            padding: 0 36px;
+        }
+        .autumn-sale-media-comments .autumn-content .card-grid {
+            --slider-item-width: calc((100% - 40px) / 3);
+        }
+        .autumn-sale-media-comments .autumn-content .slider-item {
+            border-radius: 8.5px;
+            height: 40.988372093vw;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info {
+            height: 248.2px;
+            padding: 0 32.3px 17px;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .intro:before, .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+            font-size: 42.5px;
+            left: -12.75px;
+            top: -8.5px;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+            left: auto;
+            top: auto;
+            right: -17px;
+            bottom: -45.9px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-media-comments {
+            padding: 0.8680555556rem 0 1.5190972222rem;
+        }
+        .autumn-sale-media-comments .title {
+            font-size: 0.78125rem;
+            padding-bottom: 0.9765625rem;
+        }
+        .autumn-sale-media-comments .autumn-content {
+            max-width: 100%;
+            padding: 0;
+        }
+        .autumn-sale-media-comments .autumn-content .slider {
+            scroll-padding-inline: var(--page-padding);
+            padding-block-end: var(--card-shadow-vertical-offset);
+        }
+        .autumn-sale-media-comments .autumn-content .card-grid {
+            --slider-item-width: 57.87vw;
+            gap: 0 0.5859375rem;
+            padding-left: 0.9114583333rem;
+            padding-right: 50vw;
+        }
+        .autumn-sale-media-comments .autumn-content .slider-item {
+            border-radius: 0.1736111111rem;
+            height: 86.2962962963vw;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info {
+            height: 12.2612847222rem;
+            padding: 0 1.6927083333rem 1.0850694444rem;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .score-items .score-item {
+            width: 0.5642361111rem;
+            height: 0.5642361111rem;
+            margin-right: 2px;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .intro {
+            padding-top: 0.6944444444rem;
+            font-size: 0.7595486111rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .intro:before, .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+            font-size: 1.6276041667rem;
+            left: -0.8680555556rem;
+            top: -0.2170138889rem;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .intro:after {
+            left: auto;
+            top: auto;
+            right: -0.8680555556rem;
+            bottom: -1.171875rem;
+        }
+        .autumn-sale-media-comments .autumn-content .media-info .name {
+            padding-top: 1.171875rem;
+            font-size: 0.5208333333rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="autumn-sale-media-comments section--page w-full">
+    <div class="autumn-content w-full">
+        {%- if ss.show_heading -%}
+            <div class="title tw-text-center tw-text-base tw-font-bold">{{ ss.heading }}</div>
+        {%- endif -%}
+        <slider-element
+                id="Slider-{{ section.id }}"
+                class="grid slider slider--desktop slider--tablet"
+                selector=".card-grid>.slider-item">
+            <motion-list class="card-grid card-grid--3 mobile:card-grid--1 grid">
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <div class="slider-item card tw-relative tw-overflow-hidden">
+                        {% render 'global-image', desktop_img: bs.desktop_image, desktop_size: 450, mobile_img: bs.mobile_image, mobile_size: 500 %}
+                        <div class="media-info flex-center-col tw-absolute">
+                            {% render 'icon-score', info: bs %}
+                            <div class="intro tw-relative tw-text-center tw-leading-normal">
+                                {{ bs.intro }}
+                            </div>
+                            <div class="name tw-leading-[1.2] tw-font-bold">{{ bs.title }}</div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </motion-list>
+        </slider-element>
+        {%- render 'slider-button' -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Autumn Sale Comments",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-comments"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#f9f7f6"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "Comments"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media",
+      "name": "Media Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Backdrop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Backdrop Image"
+        },
+        {
+          "type": "range",
+          "id": "score",
+          "label": "Score",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "unit": "s",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "intro",
+          "label": "Intro",
+          "default": "<p></p>"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Daniele Capuccini"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "store_features_hb_zpEnAb": {
+      "type": "store-features-hb",
+      "blocks": {
+        "icon_MfCJNq": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/62b346479761e66abbf8c135abb2c594.png",
+            "content": "14-Day Trial\nDon't love it? Send it back to us!"
+          }
+        },
+        "icon_nYfLWm": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/4644f593bcee0c4f92851631365e1646_9032bd34-ed14-4373-801c-8b63f1378261.png",
+            "content": "Customer Service\n24 Hour Online Customer Service."
+          }
+        },
+        "icon_VPUk67": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/99ff960b42e22b739dfaccb9347f9cd8.png",
+            "content": "Local Warehouse\nOn your doorstep in just 2-4 days across 49 states."
+          }
+        },
+        "icon_FAGaiF": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/4bddfd799d2f8701386aa3f0db510a4c_da8f68e4-c921-449d-b3d5-ef5940054214.png",
+            "content": "1 Year Warranty\nAll Ebikes backed by Jasion Limited Warranty."
+          }
+        }
+      },
+      "block_order": [
+        "icon_MfCJNq",
+        "icon_nYfLWm",
+        "icon_VPUk67",
+        "icon_FAGaiF"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.md\\:tw-w-3\\/8 {width: auto; }}"
+      ],
+      "settings": {
+        "layout": "1",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "title": "Join Our Community",
+        "btn_txt": "Join Now",
+        "link": "https://www.facebook.com/groups/321883149636188/",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "bg_img": "shopify://shop_images/image_208784f7-e08c-444a-b879-6d147bc6aa82.png",
+        "bg_img_mb": "shopify://shop_images/4_390x360_d81acdf2-7f07-4921-b221-90c674b61542.jpg",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "multicolumn-with-icons": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "icon": "support",
+            "custom_icon": "",
+            "heading": "Customer service",
+            "text": "<p>It’s not actually free we just price it into the products.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "icon": "box",
+            "custom_icon": "",
+            "heading": "Fast Free Shipping",
+            "text": "<p>Get free shipping on orders of $150 or more</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "icon": "users",
+            "custom_icon": "",
+            "heading": "Refer a friend",
+            "text": "<p>Refer a friend and get 15% off each other.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "icon": "shield",
+            "custom_icon": "",
+            "heading": "Secure payment",
+            "text": "<p>Your payment information is processed securely</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "with-border",
+        "columns": 4,
+        "text_alignment": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": true,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information": {
+          "type": "brand_information",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "button_label_1": "+21 (0) 987654321",
+            "button_link_1": "tel:+21(0)987654321",
+            "button_label_2": "hello@domain.com",
+            "button_link_2": "mailto:hello@domain.com",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_label_4": "",
+            "button_link_4": "",
+            "container_width": 95
+          }
+        },
+        "logo_social": {
+          "type": "logo_social",
+          "settings": {
+            "logo_height": 50,
+            "show_social": false,
+            "enable_follow_on_shop": false
+          }
+        },
+        "link_list-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "before-you-buy",
+            "container_width": 30
+          }
+        },
+        "link_list-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Product",
+            "menu": "footer-products",
+            "container_width": 30
+          }
+        },
+        "link_list_YYQMmz": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "our-company",
+            "container_width": 30
+          }
+        },
+        "link_list_TDJtFw": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Electric Bike",
+            "menu": "collection",
+            "container_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "brand_information",
+        "logo_social",
+        "link_list-2",
+        "link_list-1",
+        "link_list_YYQMmz",
+        "link_list_TDJtFw"
+      ],
+      "custom_css": [
+        ".rte.leading-tight.tw-opacity-75 {max-width: 28.5rem;}"
+      ],
+      "settings": {
+        "invert_newsletter_others": false,
+        "enable_newsletter": true,
+        "newsletter_heading": "Stay Connected with Us.",
+        "newsletter_heading_size": "md:title-md",
+        "newsletter_text": "<p>Subscribe Jasionbike to unlock exclusive offers, product updates, and insider information!</p>",
+        "newsletter_logo_height": 50,
+        "show_social": true,
+        "enable_follow_on_shop": false,
+        "color_text": "#ffffff",
+        "color_background": "#1f1f1f",
+        "gradient_background": "",
+        "color_button_text": "#000000",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false
+      }
+    },
+    "footer-copyright": {
+      "type": "footer-copyright",
+      "settings": {
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "show_policy": true,
+        "show_payment_icons": true,
+        "monochrome_payment_icons": false,
+        "show_copyright": true,
+        "copyright_text": "",
+        "color_text": "#ffffff",
+        "color_background": "#171717",
+        "gradient_background": "",
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true
+      }
+    }
+  },
+  "order": [
+    "store_features_hb_zpEnAb",
+    "multicolumn-with-icons",
+    "footer",
+    "footer-copyright"
+  ]
+}

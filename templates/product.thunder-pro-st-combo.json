@@ -1,0 +1,2102 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "tag": {
+          "type": "tag",
+          "settings": {
+            "bg_color": "linear-gradient(180deg, rgba(127, 18, 0, 1), rgba(191, 0, 0, 1) 100%, rgba(110, 107, 115, 1) 100%, rgba(29, 213, 230, 1) 100%)",
+            "radius": 5,
+            "title": "Early Bird Deal",
+            "tag_color": "#ffffff",
+            "top": 0,
+            "bottom": 12,
+            "mb_top": 0,
+            "mb_bottom": 12
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": false,
+            "pr_info": "<p><strong>{{ product.metafields.custom.short_text.value }}</strong></p>",
+            "line": true,
+            "line_top": "md:tw-mt-2",
+            "line_bottom": "md:tw-mb-2"
+          }
+        },
+        "inventory_RH4gwp": {
+          "type": "inventory",
+          "settings": {
+            "custom_text": "",
+            "inventory_threshold": 10,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "judge_me_reviews_preview_badge_L4TAGE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "cycle_countdown_yyiaXc": {
+          "type": "cycle_countdown",
+          "settings": {
+            "countdown_lbl": "Hurry!",
+            "countdown_lbl_content": "Early Bird Ends Soon",
+            "countdown_start_date": "2026-02-25T00:00:00",
+            "duration": 1,
+            "countdown_days": "DAYS",
+            "countdown_hours": "HRS",
+            "countdown_minutes": "MIN",
+            "countdown_seconds": "SEC",
+            "background": "#ff9b2b",
+            "background_gradient": "linear-gradient(345deg, rgba(255, 210, 123, 1) 13%, rgba(255, 120, 0, 1) 90%)",
+            "text_color": "#ffffff"
+          }
+        },
+        "countdown_NPztC6": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#171717",
+            "color_background": "#ffac00",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "early_bird_gift": {
+          "type": "early_bird_gift",
+          "settings": {
+            "bg_color": "linear-gradient(180deg, rgba(255, 228, 134, 1), rgba(255, 199, 1, 1) 100%)",
+            "show_image": true,
+            "image": "shopify://shop_images/ab1d47899c80160ffccd36bac62e7b9c.png",
+            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Feb 25–Mar 31</p>",
+            "gift_list": [
+              "tail-bag",
+              "ebike-mirrors"
+            ]
+          }
+        },
+        "bundled_sale_m69hF9": {
+          "type": "bundled_sale",
+          "settings": {
+            "heading": "Compatible Accessories",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7",
+              "copy-of-jasion®-bicycle-universal-mirrors"
+            ],
+            "product_list": [
+              "phone-mount-holder",
+              "jasion-ebike®-front-basket-copy",
+              "jasion-ebike®-rear-basket-copy",
+              "jasion-ebike-bracketed-u-lock",
+              "hunter-pro-battery-pack",
+              "copy-of-jasion®bike-rack-pannier-bag",
+              "e-bike-phone-mount-holder"
+            ]
+          }
+        },
+        "quantity_selector_d6GJ77": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "show_payment_icons_RbYfHc": {
+          "type": "show_payment_icons",
+          "settings": {}
+        },
+        "image_9MmUdA": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/lQLPKIMf2QDyRqvMz80CObB4awVjHeZrsQkHhcZfhSQB_569_207.png",
+            "image_mb": "shopify://shop_images/lQLPJwMSj5gU9qvNAfPNBFWwWa8tmTH7nGAJB4XGX4UkAA_1109_499.png"
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "image_XpqFCh": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/lQLPJwAyx4sGyBPMpc0CObC-ClQjoJKYqAkoLE0qtf8C_569_165.png",
+            "image_mb": "shopify://shop_images/lQLPKHOXiWSESRPNAZHNBFWwhszSzBZebfYJKCxNK0fTAA_1109_401.png"
+          }
+        },
+        "highlights_icons_kU88Jz": {
+          "type": "highlights_icons",
+          "settings": {
+            "bg_color": ""
+          }
+        },
+        "help_desk_LK3HNi": {
+          "type": "help_desk",
+          "settings": {
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": ""
+          }
+        },
+        "anchor_DWTAQW": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "Specifications",
+            "anchor_id": "Specification (img)"
+          }
+        },
+        "drawer_NiEjcP": {
+          "type": "drawer",
+          "settings": {
+            "title": "Specifications",
+            "content": ""
+          }
+        },
+        "anchor_8VjwmL": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box",
+            "anchor_id": "whats-in-the-box-txt"
+          }
+        },
+        "collapsible_tab_Lt8myP": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Contact us",
+            "content": "",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "liquid_Riat9U": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Bundle Purchase — <strong>$1,249 Each</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n🎉Buy & Win: Chance to Get a <strong>100% Refund</strong><br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry!Price Goes Up After Mar 31!"
+          }
+        },
+        "text_wt9CQN": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "tag",
+        "title",
+        "inventory_RH4gwp",
+        "judge_me_reviews_preview_badge_L4TAGE",
+        "cycle_countdown_yyiaXc",
+        "countdown_NPztC6",
+        "variant_picker",
+        "early_bird_gift",
+        "bundled_sale_m69hF9",
+        "quantity_selector_d6GJ77",
+        "buy_buttons",
+        "show_payment_icons_RbYfHc",
+        "image_9MmUdA",
+        "sticky_buy_button",
+        "image_XpqFCh",
+        "highlights_icons_kU88Jz",
+        "help_desk_LK3HNi",
+        "anchor_DWTAQW",
+        "drawer_NiEjcP",
+        "anchor_8VjwmL",
+        "collapsible_tab_Lt8myP",
+        "liquid_Riat9U",
+        "text_wt9CQN"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {.product__gallery {top: 100px; }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_specs": true,
+        "specs_limit": "6",
+        "media_size": 60,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 64,
+        "padding_bottom": 84,
+        "divider": true,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "drawer_content_hb_xy4FCG": {
+      "type": "drawer-content-hb",
+      "blocks": {
+        "table_RRqD7r": {
+          "type": "table",
+          "settings": {
+            "list": "Motor|1800W Brushless Hub Motor\nSuspension|Full Suspension\nBrake|Dual Hydraulic Brakes\nShift Lever|Shimano 7 Speed\nThrottle|Twist Throttle\nSebsor|Cadence Sensor\nPedal assist|0-5 Level\nTorque|115 Nm\nTop Speed|35 Mph\nRange| Up To 90 Miles\nCharging Time|7-8 Hours\nBattery|52V 20Ah\nController|58.8V 3A\nTires|26 x 4'' Fat Tire\nRider Height|5'5 - 7'2‘'\nWeight|82.5 Lbs\nMax Payload|500 Lbs\nMode|PAS+Throttle\nDisplay|LCD Display\nFolding| NO"
+          }
+        }
+      },
+      "block_order": [
+        "table_RRqD7r"
+      ],
+      "name": "Drawer content (hb)",
+      "settings": {
+        "heading": "Specifications"
+      }
+    },
+    "mc_page_snowflake": {
+      "type": "mc_page-snowflake",
+      "settings": {
+        "background_color": "radial-gradient(ellipse at bottom, #f6f6f6 0, #f6f6f6 100%)"
+      }
+    },
+    "slideshow_hb_PwMALx": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_kitqfY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_aa26d804-2a3f-47f1-8384-f8a4720552a0.jpg",
+            "image_mobile": "shopify://shop_images/1_ddcbd9a8-cde2-4798-a37a-9aed9fda2865.png",
+            "heading": "",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "subheading": "Performance and style in Harmony",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_kitqfY"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "slideshow_hb_ybjar9": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_VzEjME": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lQDPJwHUPQCRDvXNAq3NB4Cw0DtWiwfGO3QJdo4jRX0CAQ_1920_685.jpg",
+            "image_mobile": "shopify://shop_images/lQLPKdEMKiovrvXNBMnNBLCwi7DdRx6M10MJdo4jRX0CAA_1200_1225.png",
+            "heading": "",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": true,
+            "top": 555,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 280,
+            "mb_bottom": 50,
+            "pc_align": "flex-center",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_w": 500,
+            "input_h": 0,
+            "input_deg": 50,
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#fff1c6",
+            "input_border_color": "#ffb840",
+            "input_color": "#000000",
+            "input_placeholder": "Enter your email address",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_top": 0,
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Sign Up",
+            "btn_color": "#171717",
+            "btn_bg_color": "linear-gradient(176deg, rgba(255, 176, 73, 1) 9%, rgba(255, 246, 0, 1) 81%)",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_VzEjME"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "large_header_slider_hb_XaqpBd": {
+      "type": "large-header-slider-hb",
+      "blocks": {
+        "item_PWmbT7": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/1_dd514e4c-078c-427f-9cb7-f6359dd7bad1.jpg",
+            "tab_con": "Establishment",
+            "title": "Beyond Mobility. Beyond Limits.",
+            "content": "Thunder Pro was born as the next evolution of Thunder, crafted for riders who demand more power, capability, and confidence. Driven by the same spirit of adventure and everyday practicality, it pushes the original vision further through refined engineering. From rugged trails and snowy paths to city streets, Thunder Pro delivers one seamless ride without compromise."
+          }
+        },
+        "item_d77m7c": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/2_6396e7be-9ab6-4d95-abfd-e3eafcbffbaa.jpg",
+            "tab_con": "Design",
+            "title": "Designed for Power, Built for Control",
+            "content": "Every design decision behind Thunder Pro balances high-output electric power with rider confidence. The eBike frame geometry is precisely engineered to support high-speed performance, heavy payloads, and long-distance riding, while maintaining stability and comfort. Dual suspension, 26″×4″ fat tires, and hydraulic disc brakes are integrated from the ground up—not added later—ensuring a fully optimized all-terrain electric bike system that performs as one unified machine."
+          }
+        },
+        "item_XkRWcY": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/3_2ce2fdff-506f-445f-830f-7ac09619bed4.jpg",
+            "tab_con": "Craftsmanship",
+            "title": "Precision in Every Detail",
+            "content": "Thunder Pro is built with precision and purpose. From its hydraulic disc brakes for confident stopping to its front and rear suspension system designed to absorb impacts and rough terrain, every component is selected and assembled to endure demanding conditions. Attention to detail in materials, welding, and component integration ensures strength, durability, and long-term reliability."
+          }
+        },
+        "item_ME43ea": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/4_4d515f08-fcc7-4153-855e-654171e17815.jpg",
+            "tab_con": "Finished Product",
+            "title": "Go Beyond Every Ride.",
+            "content": "The result is Thunder Pro—a powerful, refined electric bike built to dominate streets and trails alike. With 1800W peak power, 35 MPH performance, dual suspension, hydraulic braking, and a 90-mile max range, it delivers an uncompromising ride that’s fast, capable, and comfortable. Designed to carry more, go farther, and ride harder—Thunder Pro is performance, perfected."
+          }
+        }
+      },
+      "block_order": [
+        "item_PWmbT7",
+        "item_d77m7c",
+        "item_XkRWcY",
+        "item_ME43ea"
+      ],
+      "name": "Large Header slider (hb)",
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "slideshow_hb_ewRHzP": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_VeqLKj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lQDPKHBAnLDaQRXNAq3NB4Cw8_WzgcEUwQoJd8spvNKaAA_1920_685.jpg",
+            "image_mobile": "shopify://shop_images/lQDPJxgbreDKIBXNCC3NBLCw8f-ZF13SLG8Jd8spvzkLAA_1200_2093.jpg",
+            "heading": "",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "shopify://products/hunter-pro-combo",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_VeqLKj"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_media_slide": {
+      "type": "mc_media-slide",
+      "blocks": {
+        "slide1": {
+          "type": "slide",
+          "settings": {
+            "title": "All-Weather Commuters",
+            "intro": "Fat tires provide superior grip on wet pavement, snow, and ice—reducing slips and improving stability for safer daily commutes in any weather.",
+            "pc_image": "shopify://shop_images/2_b291d9e9-1391-44ef-8439-b2845766b06d.png",
+            "mb_image": "shopify://shop_images/2_b291d9e9-1391-44ef-8439-b2845766b06d.png"
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "title": "Hunting Riders",
+            "intro": "Blend in. Move silently. Custom camo bodywork keeps you concealed, while the quiet motor carries you smoothly through the backcountry—ideal for reaching game without drawing attention.",
+            "pc_image": "shopify://shop_images/1_bc40bd96-3bdd-492c-9d08-4da762ed2ff9.png",
+            "mb_image": "shopify://shop_images/1_bc40bd96-3bdd-492c-9d08-4da762ed2ff9.png"
+          }
+        },
+        "slide3": {
+          "type": "slide",
+          "settings": {
+            "title": "Off-Road Riders",
+            "intro": "From sand and gravel to mud and forest trails, fat tires float over uneven terrain—unlocking off-road adventures without sacrificing comfort.",
+            "pc_image": "shopify://shop_images/3_4a6bcfc1-dcad-4234-99d7-1a5824bf4a10.png",
+            "mb_image": "shopify://shop_images/3_4a6bcfc1-dcad-4234-99d7-1a5824bf4a10.png"
+          }
+        },
+        "slide4": {
+          "type": "slide",
+          "settings": {
+            "title": "Outdoor Camping Riders",
+            "intro": "Fat tire eBikes are perfect for camping trips and outdoor escapes. Wide tires and stable suspension handle dirt roads, gravel paths, and campground terrain with ease—making it simple to carry gear, explore nearby trails, or cruise around the campsite in total comfort.",
+            "pc_image": "shopify://shop_images/4_0a4521d7-62c9-4686-b899-5862ec4aef93.png",
+            "mb_image": "shopify://shop_images/4_0a4521d7-62c9-4686-b899-5862ec4aef93.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2",
+        "slide3",
+        "slide4"
+      ],
+      "name": "MC Media Slide",
+      "settings": {
+        "page_color": "",
+        "show_title": false,
+        "title": "",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "slide_tab_bg_color": "#000000",
+        "slide_tab_color": "#ffffff",
+        "slide_tab_active_color": "#ff981d",
+        "slide_text_color": "#000000",
+        "image_ratio": "2/1",
+        "mb_image_ratio": "2/1",
+        "auto_slide": true,
+        "duration": 4
+      }
+    },
+    "image_with_text_4jnJkP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gmXXwx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Master Every Trail. Own the Ride.</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_GtepjG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thunder Pro ST’s upgraded motor delivers 1200W of sustained power, peaking at 2000W, with an impressive 115 N·m of torque to take on steep climbs and rough terrain with ease. Accelerate from 0–20 mph in just 5 seconds, enjoying strong, responsive power that keeps every ride smooth, controlled, and effortlessly confident.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_kMg4d6": {
+          "type": "text",
+          "settings": {
+            "text": "2000W <span style=\"font-size: 50%;\n    font-weight: normal;\">\nPeak</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gmXXwx",
+        "text_GtepjG",
+        "text_kMg4d6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da_2.webp",
+        "video": "shopify://files/videos/电机-1_c7736209-e02b-48e0-a261-b142152d835f.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_yHypPg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KpypMy": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Next-Level Battery Performance</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_wJh6U6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Equipped with a 1040Wh battery, Thunder Pro ST delivers a top speed of 35 mph and a maximum range of up to 90 miles, making it ideal for long commutes or all-day adventures. With fast charging from 15% to 80% in just 5 hours, you spend less time waiting and more time riding. Go farther, ride faster, and enjoy every journey without limits.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_p4DtPB": {
+          "type": "text",
+          "settings": {
+            "text": "52V 20Ah <span style=\"font-size: 50%;\n    font-weight: normal;\">\nBattery</span>",
+            "text_size": "subtext-custom",
+            "text_max_size": 48,
+            "text_color": "#ee4d19",
+            "text_font": "heading",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KpypMy",
+        "text_wJh6U6",
+        "text_p4DtPB"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "video": "shopify://files/videos/电池1440-1_df351804-748b-4949-91dd-3871bc01ebfa.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_xWWWq6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HwTPHn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Full-Terrain Suspension for Any Ride</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_mfcnAt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A responsive front suspension and upgraded rear soft-tail system absorb bumps and rough terrain for a smoother, more comfortable ride. Built to handle hard landings and tough trails, the rear suspension keeps the frame stable while reducing wear and maintenance. Paired with 26″×4″ fat tires, it delivers confident control and all-terrain comfort—so you can focus on the ride, not the road.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HwTPHn",
+        "text_mfcnAt"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da_2.webp",
+        "video": "shopify://files/videos/Thunder pro ST黑-减震1400.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "adapt",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_FKJzxp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GRh9UT": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Control Isn’t Optional — It’s Standard.</p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_Y7RP3a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Upgraded front and rear 180mm hydraulic disc brakes deliver powerful, precise stopping control on your electric bike. The moment you squeeze the lever, you get instant, consistent response—whether you’re riding city streets, off-road trails, or facing wet and rough terrain. No hesitation, no guesswork—just total eBike braking control when it matters most.</p>",
+            "text_size": "subtext-custom",
+            "text_max_size": 16,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_xTGJ8f": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_GRh9UT",
+        "text_Y7RP3a",
+        "button_xTGJ8f"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/test_9a8633cf-0112-4544-9247-0470405725da_2.webp",
+        "video": "shopify://files/videos/Thunder pro ST黑-油刹1400.mp4",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_media_image_kc7Nag": {
+      "type": "mc_media-image",
+      "name": "MC Media Image",
+      "settings": {
+        "page_color": "",
+        "page_top": 0,
+        "page_bottom": 0,
+        "show_title": true,
+        "title": "<p>90-Mile Long Range</p>",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 20,
+        "title_color": "#000000",
+        "title_bold_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": true,
+        "description": "<p>Go further without limits. With up to 90 miles of range, Thunder Pro ST is built to carry you across long commutes, open roads, and off-road terrain—no range anxiety, just pure freedom.<br/><br/></p>",
+        "description_color": "#171717",
+        "description_bold_color": "#171717",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 10,
+        "description_mb_margin_bottom": 0,
+        "pc_image": "shopify://shop_images/6_c436f557-744f-4bfe-ba1f-0ec200e9584a.jpg",
+        "mb_image": "shopify://shop_images/4_57cfbd7d-5333-4955-92fa-f2a0c8db7847.jpg",
+        "image_radius": 0,
+        "mb_image_radius": 0,
+        "image_width": 100,
+        "image_ratio": "",
+        "image_fill": false,
+        "mb_image_ratio": "",
+        "mb_image_fill": false
+      }
+    },
+    "mc_pas_level_bUgUcN": {
+      "type": "mc_pas-level",
+      "blocks": {
+        "pas_f4JxX9": {
+          "type": "pas",
+          "settings": {
+            "title": "PAS-1",
+            "speed": "Avg.Spd.9.3Mph",
+            "speed_width": 30,
+            "range": "Range:90Miles",
+            "range_width": 100
+          }
+        },
+        "pas_Gi8hA9": {
+          "type": "pas",
+          "settings": {
+            "title": "PAS-2",
+            "speed": "Avg.Spd.16Mph",
+            "speed_width": 40,
+            "range": "Range:69Miles",
+            "range_width": 75
+          }
+        },
+        "pas_ighy6L": {
+          "type": "pas",
+          "settings": {
+            "title": "PAS-3",
+            "speed": "Avg.Spd.20Mph",
+            "speed_width": 60,
+            "range": "Range:58Miles",
+            "range_width": 50
+          }
+        },
+        "pas_WaiGHy": {
+          "type": "pas",
+          "settings": {
+            "title": "PAS-4",
+            "speed": "Avg.Spd.30Mph",
+            "speed_width": 80,
+            "range": "Range:47Miles",
+            "range_width": 45
+          }
+        },
+        "pas_BdK8ym": {
+          "type": "pas",
+          "settings": {
+            "title": "PAS-5",
+            "speed": "Avg.Spd.38Mph",
+            "speed_width": 100,
+            "range": "Range:45Miles",
+            "range_width": 40
+          }
+        }
+      },
+      "block_order": [
+        "pas_f4JxX9",
+        "pas_Gi8hA9",
+        "pas_ighy6L",
+        "pas_WaiGHy",
+        "pas_BdK8ym"
+      ],
+      "name": "MC Pas Level",
+      "settings": {
+        "page_color": "",
+        "show_title": false,
+        "title": "Title",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#000000",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "pas_title": "PAS Levels Corresponding Speed and Range",
+        "pas_remark": "The results above were obtained with a rider weighing 80kg, in a flat road environment at 33°C. Please note that the cruising range can vary depending on riding conditions; refer to actual usage for more accurate information.",
+        "pas_title_color": "#000000",
+        "pas_remark_color": "#999999",
+        "pas_name_color": "#ffffff",
+        "pas_name_bg_color": "#ff981e",
+        "pas_text_color": "#ffffff",
+        "speed_gradient_color": "linear-gradient(90deg, rgba(136, 246, 255, 1), rgba(101, 168, 255, 1) 100%)",
+        "range_gradient_color": "linear-gradient(90deg, rgba(247, 201, 36, 1), rgba(250, 53, 1, 1) 100%)"
+      }
+    },
+    "slideshow_hb_aKEjid": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_E9Vzyb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a82f4bcfcc127d2187d3408ca0e8176a.png",
+            "image_mobile": "shopify://shop_images/2_5e80949c-c3de-41c7-b309-a22e087f8b19.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        },
+        "image_PQFN6n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8ee163965c752b4df31d594396825cee_f98acf60-d1ba-4970-b7a3-352418f8cdd5.png",
+            "image_mobile": "shopify://shop_images/3_9977bee2-bc9d-4708-85f4-d4c26fff4bc1.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        },
+        "image_QLcLiV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/f6fdd8a6d3fb9fe636be7bfbeee08f50.png",
+            "image_mobile": "shopify://shop_images/1_8b768b79-8405-4594-821d-33cd3aa56131.png",
+            "heading": "",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": true,
+            "text_size": "subtext-md",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_E9Vzyb",
+        "image_PQFN6n",
+        "image_QLcLiV"
+      ],
+      "name": "Slideshow (hb)",
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 2,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": true,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_blends_drag_tzr8cm": {
+      "type": "mc_blends-drag",
+      "name": "MC Blends Drag",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "Thunder Pro / Thunder Pro ST",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": true,
+        "description": "<p>Thunder Pro features a high-step frame for greater rigidity and a sportier riding posture, with enhanced stability at higher speeds or on rough terrain. Thunder Pro ST adopts a lowered top tube for easier access and everyday convenience.</p>",
+        "description_color": "#000000",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "drop_arrow_color": "#ff981d",
+        "pc_before_image_url": "shopify://shop_images/lQLPKILgLuyCuWXNApXNB4CwHokj8hcRtncJdrb7HibYAQ_1920_661.png",
+        "pc_after_image_url": "shopify://shop_images/lQLPJx4JoD6gKWXNApXNB4CwFWklqEkv65wJdrb7HibYAA_1920_661.png",
+        "image_radius": 8,
+        "image_width": 100,
+        "mb_before_image_url": "shopify://shop_images/pro3.png",
+        "mb_after_image_url": "shopify://shop_images/pro4.png",
+        "mb_image_radius": 8,
+        "mb_image_width": 100
+      }
+    },
+    "multicolumn_slide_hb_dfCJ6M": {
+      "type": "multicolumn-slide-hb",
+      "blocks": {
+        "item_UK9pgA": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/1_38a23cf4-dd97-4587-b93a-b8ab61c503ab.jpg",
+            "date": "",
+            "title": "26\" x 4\" Puncture-Resistant Tires",
+            "title_sz": "h4",
+            "content": "26×4 fat tires deliver superior grip and stability, floating smoothly over snow, sand, and rough terrain—so you ride with more control and confidence in any condition.",
+            "author": ""
+          }
+        },
+        "item_6NEbTP": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/9APP_b73ff428-c9fc-4a14-b301-2113c305b57a.jpg",
+            "date": "",
+            "title": "Connect. Ride. Explore.",
+            "title_sz": "h4",
+            "content": "Monitor your battery, track rides, customize settings, and plan routes all from your phone. Stay connected for a smoother ride.",
+            "author": ""
+          }
+        },
+        "item_qzYw3y": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/3_97cd7505-3eeb-40f0-8f49-062e165d13fe.jpg",
+            "date": "",
+            "title": "Shimano 7-Speed",
+            "title_sz": "h4",
+            "content": "With the Shimano 7-speed drivetrain and motorcycle-style hand-twist throttle, enjoy smooth shifting and effortless control, whether you're accelerating, climbing, or cruising.",
+            "author": ""
+          }
+        },
+        "item_pQPKcj": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/5_41244bbf-3114-45d4-9e52-53bac1e90d4d.jpg",
+            "date": "",
+            "title": "Headlight&Taillight",
+            "title_sz": "h4",
+            "content": "The high-brightness headlight lights the road in low-visibility conditions, the brake light activates instantly when you pull the lever, and built-in turn signals clearly show your direction.",
+            "author": ""
+          }
+        },
+        "item_aLYEqM": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/7_15fc573c-cead-434c-9b2a-674568dfb695.jpg",
+            "date": "",
+            "title": "Haul More, Ride Ready",
+            "title_sz": "h4",
+            "content": "The durable rear rack enhances versatility, making it perfect for carrying groceries, outdoor gear, or even an extra passenger. It easily fits bags, cargo boxes, and pet carriers—ready to ride.（Standard tail bag included）",
+            "author": ""
+          }
+        },
+        "item_mtV8h7": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/8_d3756e42-5b3c-4f1b-851e-7e75567e6d23.jpg",
+            "date": "",
+            "title": "Color Display",
+            "title_sz": "h4",
+            "content": "Displays critical ride data like speed, battery life, and mileage, with excellent visibility in all light conditions",
+            "author": ""
+          }
+        },
+        "item_EVD96X": {
+          "type": "item",
+          "settings": {
+            "img": "shopify://shop_images/10_ed7a179f-bef1-4c22-9271-8bb8e4fc7540.jpg",
+            "date": "Jun",
+            "title": "Extra-Comfort Saddle",
+            "title_sz": "h4",
+            "content": "Thunder Pro features an ergonomically designed, thickened saddle with high-resilience padding that provides lasting comfort and absorbs bumps from rough terrain.",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_UK9pgA",
+        "item_6NEbTP",
+        "item_qzYw3y",
+        "item_pQPKcj",
+        "item_aLYEqM",
+        "item_mtV8h7",
+        "item_EVD96X"
+      ],
+      "name": "Multicolumn slide (hb)",
+      "settings": {
+        "pw-overflow-hidden": false,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Quality in Details",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "mc_image_wall": {
+      "type": "mc_image-wall",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.1_284da4f8-e5b3-45ac-97ed-93b312425b23.png",
+            "image_ratio": ""
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.2_a07e43c6-49ed-45b5-9728-ea9fabc2307d.png",
+            "image_ratio": ""
+          }
+        },
+        "image_j4Y6Gp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.5_3456227a-82aa-48dd-bc3c-91ba0aeb8582.png",
+            "image_ratio": ""
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.3_9fcda418-105d-40c0-97f9-51cf4f2a92cd.png",
+            "image_ratio": ""
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.6_0764513d-a350-48a4-bf0a-e43ac8187798.png",
+            "image_ratio": ""
+          }
+        },
+        "image_7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.4_42dbe751-67be-4dd8-9c3a-058d43ab4869.png",
+            "image_ratio": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_j4Y6Gp",
+        "image_3",
+        "image_4",
+        "image_7"
+      ],
+      "name": "MC Image Wall",
+      "settings": {
+        "page_color": "#ffffff",
+        "show_title": false,
+        "title": "Title",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#000000",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "loop_speed": 1,
+        "slide_direction": "left"
+      }
+    },
+    "mc_product_compare": {
+      "type": "mc_product-compare",
+      "blocks": {
+        "other_product_C7C3Yz": {
+          "type": "other_product",
+          "settings": {
+            "title": "Thunder",
+            "url": "shopify://products/thunder",
+            "image1": "shopify://shop_images/lQDPKH7aoq8R21XNA4TNA4Sw8SqiB0OaLe8Jdoykmj8UAA_900_900.jpg",
+            "color1": "#506b97",
+            "text1": "",
+            "image2": "shopify://shop_images/Untitled_design_1.png",
+            "color2": "#b8babf",
+            "text2": "",
+            "color3": "",
+            "text3": "",
+            "color4": "",
+            "text4": "",
+            "color5": "",
+            "text5": "",
+            "product_params": "$899\n1800W\n48V 18Ah\n85Nm\n80 Miles\nSmart App for ios & Android\n30+ MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n400 Ibs\nSuspension Front Fork\nLCD\n26'' x 4''\n5'2'' - 6'3''\n82 lbs"
+          }
+        },
+        "other_product_wrfKLe": {
+          "type": "other_product",
+          "settings": {
+            "title": "Thunder Pro ST",
+            "url": "https://www.jasionbike.com/products/thunder-pro",
+            "image1": "shopify://shop_images/103_ee21a27a-054b-4000-baeb-a9169203667b.jpg",
+            "color1": "#43528b",
+            "text1": "Stealth Black",
+            "image2": "shopify://shop_images/102_2a44c12e-4535-4cc3-b448-743a77b3941d.jpg",
+            "color2": "#171717",
+            "text2": "Storm Blue",
+            "color3": "",
+            "text3": "",
+            "color4": "",
+            "text4": "",
+            "color5": "",
+            "text5": "",
+            "product_params": "$1,299\n2000W\n52V 20Ah\n115Nm\n90 Miles\nSmart App for ios & Android\n35 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nFull suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n82.5 lbs"
+          }
+        },
+        "other_product_tQB4LU": {
+          "type": "other_product",
+          "settings": {
+            "title": "***pro",
+            "url": "",
+            "image1": "shopify://shop_images/1_3_f55fbe3e-6e25-4db0-927e-931f84eb9527.png",
+            "color1": "#b60bcd",
+            "text1": "Purple",
+            "image2": "shopify://shop_images/1_6_26b1f5ff-b37f-4d3b-88b5-c33e1e3e1ea7.png",
+            "color2": "#6ad8dd",
+            "text2": "Black",
+            "color3": "rgba(0,0,0,0)",
+            "text3": "",
+            "color4": "",
+            "text4": "",
+            "color5": "",
+            "text5": "",
+            "product_params": "$1,197\n1800W\n48V 17.5Ah\n110Nm\n85 Miles\nNo\n36 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nAir Shock Suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n90 lbs"
+          }
+        },
+        "product2": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "thunder-pro",
+            "product_params": "$1,???\n1800W\n52V 20Ah\n110Nm\n90 Miles\nSmart App for ios & Android\n35 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nFull suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n82.5 lbs"
+          }
+        },
+        "other_product_V4zq6Y": {
+          "type": "other_product",
+          "settings": {
+            "title": "***MAX",
+            "url": "",
+            "image1": "shopify://shop_images/1_4_a12b0e7e-d3ec-42f1-998c-c9fd5475960a.png",
+            "color1": "#debe84",
+            "text1": "Line Camouflage",
+            "image2": "shopify://shop_images/1_7_5b893f56-1a6f-4577-822b-8fc421212227.png",
+            "color2": "#e95801",
+            "text2": "Orange",
+            "color3": "",
+            "text3": "",
+            "color4": "",
+            "text4": "",
+            "color5": "",
+            "text5": "",
+            "product_params": "$1,148\n1800W\n48V 17.5Ah\n110Nm\n85 Miles\nNo\n36 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nAir Shock Suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n90 lbs"
+          }
+        }
+      },
+      "block_order": [
+        "other_product_C7C3Yz",
+        "other_product_wrfKLe",
+        "other_product_tQB4LU",
+        "product2",
+        "other_product_V4zq6Y"
+      ],
+      "name": "MC Product Compare",
+      "settings": {
+        "page_color": "#ffffff",
+        "show_title": false,
+        "title": "Title",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "description",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "compare_title": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nBluetooth\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
+      }
+    },
+    "specifications_parameters_hb_84CbEA": {
+      "type": "specifications-parameters-hb",
+      "blocks": {
+        "img_list_tUDfBK": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Geometry",
+            "img": "shopify://shop_images/10_e2f80c26-1669-4014-b3a3-fc2d11e49cdc.jpg",
+            "img_w": 40,
+            "list": "|SIZE (inch)|One Size\nA|Handlebar Length|27.8''\nB|Seat tube length|18.3''\nC|Chainstay|22''\nD|Ground Clearance|5.1''\nE|Wheelbase|48.6''\nF|Total Length|78''\nG|Wheel Diameter|48.6''\nH|Handlebar Height from Floor|47.2''\nI|Minimum Seat Height from Floor|35''\nJ|Maximum Seat Height from Floor|39''",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "2"
+          }
+        },
+        "img_list_QVkBjk": {
+          "type": "img_list",
+          "settings": {
+            "order_title": "Specifications",
+            "img_w": 50,
+            "list": "|Motor|2000W Brushless Hub Motor\n|Throttle |Twist Throttle\n|Charger US |Standard 2.0 A\n|Range |Up To 90 Miles\n|Battery |52V 20Ah\n|Controller |58.8V / 3A\n|Tires|26'' x 4'' Fat Tire\n|Rider Height|5'5'' - 7'2''\n|Pedal Assist|0-5 Level\n|Weight|82.5 Lbs\n|Max Payload|500 Lbs\n|Display|LCD Display\n|Lights |Headlight & Turn signal& & Brake light\n|Suspension|Hydraulic suspension fork with lockout",
+            "item_justify": "tw-justify-left",
+            "list_border": false,
+            "list_col": "2"
+          }
+        },
+        "img_list_LHUEbm": {
+          "type": "img_list",
+          "disabled": true,
+          "settings": {
+            "order_title": "What's In The Box (img)",
+            "img": "shopify://shop_images/Valentine_s-Day1.png",
+            "img_w": 50,
+            "list": "",
+            "item_justify": "tw-justify-between",
+            "list_border": true,
+            "list_col": "1"
+          }
+        },
+        "package_FmwCMD": {
+          "type": "package",
+          "settings": {
+            "order_title": "What's In The Box？",
+            "cols": "8",
+            "cols_mb": "3",
+            "use_text": true,
+            "img_1": "shopify://shop_images/Thunder_Pro_ST_1.jpg",
+            "img_2": "shopify://shop_images/3_2875f9d8-60ec-4f9b-b1a2-bbb6f1524b3a.jpg",
+            "img_3": "shopify://shop_images/7_efb7201b-6d6f-4ff3-9f9f-e359f4b18258.jpg",
+            "img_4": "shopify://shop_images/2_969f12cb-c9bf-4c60-9b34-a3f6f9351950.jpg",
+            "img_5": "shopify://shop_images/6_ce8f64c7-7694-43ed-ae6f-a2d7b908f4ae.jpg",
+            "img_6": "shopify://shop_images/9_40cc85a4-9341-441c-9432-dea36b31a500.jpg",
+            "img_7": "shopify://shop_images/8_19a96ba2-bee3-489c-8d2c-96912c884ae6.jpg",
+            "img_8": "shopify://shop_images/1_2_2cb5388b-c196-4d0b-9a1d-b9a67c36a0e4.png",
+            "img_9": "shopify://shop_images/lQDPJxJ827u9UuXNAljNAliwOAbA9HtH5z8JdrLOrNLKAQ_600_600.jpg",
+            "img_10": "shopify://shop_images/lQDPKGlK6V7DAuXNAljNAliwuscMTt5cg7sJdrLOrNLKAA_600_600.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "img_list_tUDfBK",
+        "img_list_QVkBjk",
+        "img_list_LHUEbm",
+        "package_FmwCMD"
+      ],
+      "settings": {
+        "heading": "Specs & Geometry",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "faq_ehwjkn": {
+      "type": "faq",
+      "blocks": {
+        "question_pMRV47": {
+          "type": "question",
+          "settings": {
+            "title": "1. What's your shipping policy?",
+            "title_tag": "span",
+            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_A7Ucqc": {
+          "type": "question",
+          "settings": {
+            "title": "2. What's your warranty policy?",
+            "title_tag": "span",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_yBbHQE": {
+          "type": "question",
+          "settings": {
+            "title": "3. What's your return&refund policy?",
+            "title_tag": "span",
+            "text": "<p>We provide exchange service within 14 days. If the product is defective or damaged, Send damaged photos or videos to customer service within 14 days after receiving the goods, and the damaged parts can be replaced or compensated. We will cover the return (exchange) shipping costs.</p><p>In the case of non-quality returns, the customer will be responsible for the return shipping costs.</p><p>You can always contact us for any return questions at <strong>support@jasionbike.com</strong>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_gPd36L": {
+          "type": "question",
+          "settings": {
+            "title": "4. Does my height suit Thunder Pro ST?",
+            "title_tag": "span",
+            "text": "<p>The recommended rider height is 5'5\" to 7'2\".</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_7mHYL9": {
+          "type": "question",
+          "settings": {
+            "title": "5. How long does it take to fully charge the battery?",
+            "title_tag": "span",
+            "text": "<p>It will take 7-8 hours.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_rDpyRx": {
+          "type": "question",
+          "settings": {
+            "title": "6. How long will it take for my shipment to arrive?",
+            "title_tag": "span",
+            "text": "<p>Generally, your order will be shipped within one business day after the order is placed, and package shipping will take approximately 3-5 days.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_zU9TB9": {
+          "type": "question",
+          "settings": {
+            "title": "7. Does my Jasion ebike come pre-assembled?",
+            "title_tag": "span",
+            "text": "<p>Your e-bike arrives 85% assembled. There are just a few pieces to put into place once you take the bike out of the box. For unboxing and setup instructions, please follow the guides on our <a href=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\">YouTube Channel</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_iUtT7w": {
+          "type": "question",
+          "settings": {
+            "title": "8. What is the maximum speed of each PAS level?",
+            "title_tag": "span",
+            "text": "<p>PAS1 Top speed 16mph</p><p>PAS2 Top speed 18mph</p><p>PAS3 Top speed 20mph</p><p>PAS4 Top speed 28mph</p><p>PAS5 Top speed 35mph</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_pMRV47",
+        "question_A7Ucqc",
+        "question_yBbHQE",
+        "question_gPd36L",
+        "question_7mHYL9",
+        "question_rDpyRx",
+        "question_zU9TB9",
+        "question_iUtT7w"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "product_modal_popup_hb_exNHwH": {
+      "type": "product-modal-popup-hb",
+      "blocks": {
+        "hotspot_t7dNQN": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 50,
+            "horizontal": 50,
+            "vertical_mobile": 22,
+            "horizontal_mobile": 17,
+            "modal_img": "shopify://shop_images/test_1.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        },
+        "hotspot_RtLe4E": {
+          "type": "hotspot",
+          "settings": {
+            "content": "Selle Royal Saddle",
+            "color_text": "#ffac00",
+            "vertical": 25,
+            "horizontal": 37,
+            "vertical_mobile": 50,
+            "horizontal_mobile": 50,
+            "modal_img": "shopify://shop_images/test_3_e6c0b476-0555-4add-a62d-53d42b49100d.png",
+            "modal_title": "Selle Royal Saddle",
+            "modal_content": "Long Rides Are Made Easy With Cushioned Comfort."
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_t7dNQN",
+        "hotspot_RtLe4E"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/test_311e598a-8549-410a-b440-07d4d5d2ac38.png",
+        "image_mobile": "shopify://shop_images/test.png",
+        "heading": "Details you’ll fall in love with",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Every detail has been carefully crafted to captivate</p>",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recommended for you",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "1754645058bbf75ec9": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_jVwnwq": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_jVwnwq"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "drawer_content_hb_xy4FCG",
+    "mc_page_snowflake",
+    "slideshow_hb_PwMALx",
+    "slideshow_hb_ybjar9",
+    "large_header_slider_hb_XaqpBd",
+    "slideshow_hb_ewRHzP",
+    "mc_media_slide",
+    "image_with_text_4jnJkP",
+    "image_with_text_yHypPg",
+    "image_with_text_xWWWq6",
+    "image_with_text_FKJzxp",
+    "mc_media_image_kc7Nag",
+    "mc_pas_level_bUgUcN",
+    "slideshow_hb_aKEjid",
+    "mc_blends_drag_tzr8cm",
+    "multicolumn_slide_hb_dfCJ6M",
+    "mc_image_wall",
+    "mc_product_compare",
+    "specifications_parameters_hb_84CbEA",
+    "faq_ehwjkn",
+    "product_modal_popup_hb_exNHwH",
+    "product-recommendations",
+    "recently-viewed",
+    "1754645058bbf75ec9"
+  ]
+}

@@ -1,0 +1,288 @@
+<div id="{{ section.id }}-popup" class="lazy-import" data-lazy-import="{{ 'product-buy-popup.css' | asset_url }}">
+    <Teleport to="body">
+        <hey-popup data-section-id="{{ section.id }}">
+            <div class="m-popup">
+                <div class="popup-view flex-center">
+                    <div ref="popupInfo" class="product-buy-popup __loading__ hide-scroll-bar tw-relative">
+                        <div node-name="popup_close"
+                             class="close tw-absolute tw-cursor-pointer tw-right-4 tw-top-2 flex-center">
+                            <svg class="svg-icon w-full h-full" viewBox="0 0 1024 1024"
+                                 xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+                                <path d="M509.9 71.1C265.3 71.1 67 269.4 67 514c0 244.6 198.3 443 442.9 443 244.6 0 442.9-198.3 442.9-442.9 0.1-244.7-198.3-443-442.9-443z m181.6 565.8c7.5 7.5 12.2 17.9 12.2 29.3 0 23-18.6 41.5-41.5 41.5-11.4 0-21.8-4.6-29.3-12.2l-123-122.7-122.8 122.9c-7.6 7.5-17.9 12.2-29.4 12.2-22.9 0-41.5-18.6-41.5-41.5 0-11.5 4.6-21.8 12.1-29.3l122.9-123-122.9-123c-7.5-7.5-12.1-17.9-12.1-29.4 0-22.9 18.6-41.5 41.5-41.5 11.4 0 21.8 4.6 29.3 12.1l122.8 122.9 122.9-122.9c7.5-7.5 17.9-12.1 29.3-12.1 22.9 0 41.5 18.6 41.5 41.5 0 11.5-4.6 21.9-12.2 29.4L568.7 514l122.8 122.9z"
+                                      fill="#666666"></path>
+                            </svg>
+                        </div>
+                        <div class="scroll-view">
+                            <div class="_product-card flex-between tw-overflow-hidden">
+                                <div class="product-cover tw-relative">
+                                    <div
+                                            style="--tag-color: {{ section.settings.tag_color }}; --tag-bg-color: {{ section.settings.tag_bg_color }};"
+                                            class="tag tw-font-bold"
+                                            v-if="variant.discount">Save ${variant.discount}</div>
+                                    <img :src="variant.image" loading="lazy" alt="" class="image"/>
+                                    <ul class="item-icons w-full flex-center">
+                                        <li class="item-icon tw-text-center flex-center-col"
+                                            v-for="(spec, i) in product.specList"
+                                            :key="i">
+                                            <img :src="spec.image" alt="" loading="lazy" class="image"/>
+                                            <div class="text flex-center-col">
+                                                <span>${spec.title}</span>
+                                                <span>${spec.content}</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name tw-font-bold">${product.title}</div>
+                                    <div class="intro tw-line-clamp-2">${product.intro}</div>
+                                    <div class="price-box flex-left">
+                                        <div class="price tw-font-bold">${variant.price}</div>
+                                        <div class="original-price">${variant.originalPrice}</div>
+                                    </div>
+                                    <div class="pay-discount flex-left">
+                                        ${product.paymentText}
+                                        <template v-for="(icon, i) in product.paymentIcons" :key="i">
+                                            <img :src="icon" alt="" loading="lazy" class="image"/>
+                                        </template>
+                                    </div>
+                                    <div class="variant-selects">
+                                        <template v-if="product.variants.length > 1">
+                                            <div class="current-variant tw-font-semibold">
+                                                Select color <span class="dark">- ${color.value}</span>
+                                            </div>
+                                            <ul class="color-items flex-left">
+                                                <li class="color-item flex-center"
+                                                    v-for="(item, i) in product.variants">
+                                                    <input :id="`color-{{ section.id }}-${item.key}`"
+                                                           type="radio"
+                                                           name="Color-{{ section.id }}"
+                                                           @change="handleDropColor(i)"
+                                                           :checked="color.value === item.value"
+                                                           class="sr-only"/>
+                                                    <label class="color-swatch tw-relative"
+                                                           :for="`color-{{ section.id }}-${item.key}`"
+                                                           :style="{
+                                                    '--swatch-background': item.color,
+                                                    'background-image': `url(${item.color_image})`
+                                                    }">
+                                                        <span class="tooltip opacity-0 pointer-events-none text-xs rounded-full z-10">${item.value}</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </template>
+                                        <template v-if="variantList.length > 0">
+                                            <div class="current-variant last tw-font-semibold">COMBO SALE STYLE</div>
+                                            {% render 'dropdown-select' %}
+                                        </template>
+                                    </div>
+                                    <div class="quantity-name tw-font-semibold">Quantity:</div>
+                                    <quantity-input class="quantity tw-inline-flex">
+                                        <button type="button" name="minus" class="quantity__button flex-center"
+                                                aria-label="Decrease quantity for X-Hunter*2" disabled="">
+                                            <svg class="icon"
+                                                 viewBox="0 0 1024 1024"
+                                                 width="32"
+                                                 height="32">
+                                                <path d="M960 448H64a64 64 0 0 0 0 128h896a64 64 0 0 0 0-128z"
+                                                      fill="#000000"></path>
+                                            </svg>
+                                        </button>
+                                        <input
+                                                class="quantity__input tw-font-bold text-center"
+                                                type="number"
+                                                name="quantity"
+                                                inputmode="numeric"
+                                                autocomplete="off"
+                                                v-model="product.num"
+                                                min="1"
+                                                step="1"
+                                        />
+                                        <button type="button" name="plus" class="quantity__button flex-center"
+                                                aria-label="Increase quantity for X-Hunter*2">
+                                            <svg class="icon"
+                                                 viewBox="0 0 1024 1024"
+                                                 width="32"
+                                                 height="32">
+                                                <path d="M960 448H576V64a64 64 0 0 0-128 0v384H64a64 64 0 0 0 0 128h384v384a64 64 0 0 0 128 0V576h384a64 64 0 0 0 0-128z"
+                                                      fill="#000000"></path>
+                                            </svg>
+                                        </button>
+                                    </quantity-input>
+                                    <div class="btn-group flex-between">
+                                        <button @click="onAddToCart($event, false)"
+                                                is="hover-button"
+                                                class="button flex-center flex-center">
+                                            <span class="btn-text">Add to Cart</span>
+                                        </button>
+                                        <button @click="onAddToCart($event, true)"
+                                                is="hover-button"
+                                                class="button flex-center flex-center">
+                                            <span class="btn-text">Checkout</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </hey-popup>
+    </Teleport>
+</div>
+<script>
+    (function (){
+        const initVue = (index) => {
+            $heybike.load({
+                type: 'VUE'
+            }, Vue => {
+                const productList = [
+                    {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    {
+                        title: "{{ bs.product.title }}",
+                        intro: `{{ bs.product.metafields.custom.short_title.value }}`,
+                        cIndex: 0,
+                        vIndex: 0,
+                        num: 1,
+                        on: false,
+                        paymentText: "{{ bs.payment_text }}",
+                        paymentIcons: [
+                            {%- for v in (1..3) -%}
+                            {%- assign payment_icon = 'payment_icon' | append: v -%}
+                            {%- if bs[payment_icon] != blank -%}
+                            "{{ bs[payment_icon] | image_url: width: 200 }}",
+                            {%- endif -%}
+                            {%- endfor -%}
+                        ],
+                        specList: [
+                            {%- assign specs = bs.product.metafields.custom.specifications.value | default: false -%}
+                            {%- assign icons = specs.icon_list.value | json -%}
+                            {%- for i in ( 0..specs.title_list.value.size) limit: 4 -%}
+                            {%- if specs.title_list.value[i] != blank -%}
+                            {
+                                image: "{% for url in specs.icon_list.value %}{% if forloop.index0 == i and url != blank %}{{ url | image_url: width: url.width }}{% endif %}{% endfor %}",
+                                title: "{{ specs.title_list.value[i] }}",
+                                content: "{{ specs.content_list.value[i] }}"
+                            },
+                            {%- endif -%}
+                            {%- endfor -%}
+                        ],
+                        variants: [
+                            {%- liquid
+                                assign options_size = bs.product.options_with_values.size
+                                assign option = bs.product.options_with_values[0]
+                            -%}
+                            {%- for value in option.values -%}
+                            {%- assign option_value = value | escape -%}
+                            {%- if options_size > 1 -%}
+                            {
+                                {% render 'color-object', value: value %}
+                                value: "{{ option_value }}",
+                                key: "{{ value | handleize }}",
+                                childList: [
+                                    {%- for variant in bs.product.variants -%}
+                                    {%- if variant.option1 == value -%}
+                                    {
+                                        id: "{{ variant.id }}",
+                                        value: "{{ variant.option2 }}",
+                                        image: "{{ variant.featured_image | image_url: width: 650 }}",
+                                        price: "{{ variant.price | money }}",
+                                        originalPrice: "{{ variant.compare_at_price | money }}",
+                                        discount: "{%- if variant.compare_at_price > variant.price -%}{%- assign diff = variant.compare_at_price | minus: variant.price -%}{{ diff | money_without_trailing_zeros }}{%- endif -%}"
+                                    },
+                                    {%- endif -%}
+                                    {%- endfor -%}
+                                ]
+                            },
+                            {%- else -%}
+                            {
+                                id: "{{ value.variant.id }}",
+                                key: "{{ value | handleize }}",
+                                {% render 'color-object', value: value %}
+                                value: "{{ option_value }}",
+                                image: "{{ value.variant.featured_image | image_url: width: 650 }}",
+                                price: "{{ value.variant.price | money }}",
+                                originalPrice: "{{ value.variant.compare_at_price | money }}",
+                                discount: "{%- if value.variant.compare_at_price > value.variant.price -%}{%- assign diff = value.variant.compare_at_price | minus: value.variant.price -%}{{ diff | money_without_trailing_zeros }}{%- endif -%}"
+                            },
+                            {%- endif -%}
+                            {%- endfor -%}
+                        ]
+                    }{%- if forloop.last != true -%},{%- endif -%}
+                    {%- endfor -%}
+                ];
+                Vue.createApp({
+                    delimiters: ["${", "}"],
+                    data() {
+                        return {
+                            current: index,
+                            productList
+                        }
+                    },
+                    mounted() {
+                        this.onInit();
+                    },
+                    computed: {
+                        product() {
+                            return this.productList[this.current];
+                        },
+                        color() {
+                            return this.product.variants[this.product.cIndex] || {};
+                        },
+                        variantList() {
+                            return this.color.childList || [];
+                        },
+                        variant() {
+                            return this.variantList.length > 0 ? this.variantList[this.product.vIndex] : this.color;
+                        }
+                    },
+                    methods: {
+                        onInit() {
+                            $heybike.on('click', (ev) => {
+                                if (!ev.target.closest('.dropdown-root')) {
+                                    this.product.on = false;
+                                }
+                            });
+                            $heybike.bind('{{ section.id }}-shop-popup', index => {
+                                this.current = index;
+                                window.theme && theme.pubsub.publish(theme.pubsub.PUB_SUB_EVENTS.popupShow, "{{ section.id }}");
+                            });
+
+                            this.$refs.popupInfo.classList.remove('__loading__');
+                        },
+                        handleDropColor(index) {
+                            this.product.cIndex = index;
+                        },
+                        handleDropOpen() {
+                            this.product.on = !this.product.on;
+                        },
+                        handleChangeDrop(index) {
+                            this.product.vIndex = index;
+                            this.product.on = false;
+                        },
+                        onAddToCart(ev, checkout) {
+                            $heybike.addToCart({
+                                items: [{
+                                    quantity: this.product.num,
+                                    id: this.variant.id,
+                                }],
+                                button: ev.target
+                            }, checkout, () => {
+                                theme.pubsub.publish(theme.pubsub.PUB_SUB_EVENTS.popupHide, "{{ section.id }}");
+                            });
+                        }
+                    }
+                }).mount("#{{ section.id }}-popup");
+            });
+        }
+
+        const openPopup = (index) => {
+            window.theme && theme.pubsub.publish(theme.pubsub.PUB_SUB_EVENTS.popupShow, "{{ section.id }}");
+            $heybike.unbind('{{ section.id }}-shop-popup', openPopup);
+            setTimeout(() => {
+                initVue(index);
+            }, !!window.Vue ? 300 : 50);
+        }
+        $heybike.bind('{{ section.id }}-shop-popup', openPopup);
+    })();
+</script>

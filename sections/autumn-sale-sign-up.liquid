@@ -1,0 +1,318 @@
+{%- assign ss = section.settings -%}
+<style>
+    .autumn-sale-sign-up {
+        height: 659px;
+    }
+    .autumn-sale-sign-up .backdrop-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .autumn-sale-sign-up .autumn-content {
+        z-index: 2;
+        max-width: 973px;
+        margin: 0 auto;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner {
+        height: 150px;
+        border-radius: 16px;
+        background-image: linear-gradient(to bottom, #f83b01, #f9c320);
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .pay-icons {
+        width: 152px;
+        gap: 14px 0;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .pay-icons .image {
+        max-width: 76px;
+        height: 100%;
+        object-fit: contain;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .info {
+        height: 100%;
+        flex: 1;
+        background-color: #000000;
+        border-radius: 16px;
+        color: #ffffff;
+        box-sizing: border-box;
+        padding-left: 42px;
+        align-items: flex-start;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .info .tag {
+        font-size: 20px;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .info .name {
+        padding-top: 9px;
+        font-size: 32px;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .info .name strong {
+        color: #ff981d;
+    }
+    .autumn-sale-sign-up .autumn-content .pay-banner .info .text {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content {
+        color: #ffffff;
+        padding-top: 60px;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content .title {
+        font-size: 36px;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content .intro {
+        padding-top: 18px;
+        font-size: 16px;
+        word-break: break-word;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content .field {
+        padding-top: 26px;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content .field input {
+        width: 530px;
+        height: 55px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        line-height: 48px;
+        font-size: 18px;
+        color: #000000;
+        border: 0 none;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .autumn-sale-sign-up .autumn-content .form-content .field .button {
+        height: 55px;
+        padding: 0 20px;
+        font-size: 18px;
+        color: #ffffff;
+        margin-left: 6px;
+        border-radius: 8px;
+    }
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-sign-up {
+            height: 79.9074074074vw;
+        }
+        .autumn-sale-sign-up .autumn-content {
+            max-width: 92.4074074074vw;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner {
+            height: 3.9713541667rem;
+            border-radius: 0.2821180556rem;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .pay-icons {
+            width: 3.4071180556rem;
+            gap: 0.4340277778rem 0;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .pay-icons .image {
+            max-width: 2.4088541667rem;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .info {
+            border-radius: 0.2821180556rem;
+            padding-left: 0.78125rem;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .info .tag {
+            font-size: 0.5208333333rem;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .info .name {
+            padding-top: 0.3255208333rem;
+            font-size: 0.8680555556rem;
+        }
+        .autumn-sale-sign-up .autumn-content .pay-banner .info .text {
+            padding-top: 0.3038194444rem;
+            font-size: 0.5208333333rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content {
+            padding-top: 2.6041666667rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content .title {
+            font-size: 0.8680555556rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content .intro {
+            padding-top: 0.6944444444rem;
+            font-size: 0.5208333333rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content .field {
+            padding-top: 0.9982638889rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content .field input {
+            width: 67.962962963vw;
+            height: 1.6276041667rem;
+            border-radius: 0.1736111111rem;
+            line-height: 1.3020833333rem;
+            font-size: 0.5425347222rem;
+            padding: 0 0.6076388889rem;
+        }
+        .autumn-sale-sign-up .autumn-content .form-content .field .button {
+            height: 1.6276041667rem;
+            padding: 0 0.6076388889rem;
+            font-size: 0.5425347222rem;
+            margin-left: 0.1519097222rem;
+            border-radius: 0.1736111111rem;
+        }
+    }
+</style>
+<section class="autumn-sale-sign-up flex-center w-full tw-relative">
+    {% render 'global-image',
+            desktop_img: ss.desktop_image,
+            desktop_size: 1920,
+            desktop_class: 'backdrop-image',
+            mobile_img: ss.mobile_image,
+            mobile_size: 750,
+            mobile_class: 'backdrop-image'
+    %}
+    <div class="autumn-content w-full flex-center-col tw-relative">
+        {%- assign payInfo = section.blocks | where: 'type', 'pay' | first -%}
+        {%- if payInfo != blank -%}
+            {%- assign bs = payInfo.settings -%}
+            <div class="pay-banner flex-between w-full">
+                <div class="pay-icons flex-center-col">
+                    {%- for v in (1..3) -%}
+                        {%- assign icon = 'image_icon' | append: v -%}
+                        {%- if bs[icon] != blank -%}
+                            {% render 'global-image', desktop_img: bs[icon], desktop_size: 200, media_type: 'icon' %}
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+                <div class="info flex-center-col">
+                    <div class="tag tw-leading-[1.2]">{{ bs.tag }}</div>
+                    <div class="name tw-leading-[1.2] tw-font-semibold">
+                        {{ bs.text }}
+                    </div>
+                    <div class="text tw-leading-[1.2]">{{ bs.remark }}</div>
+                </div>
+            </div>
+        {%- endif -%}
+        {%- assign formInfo = section.blocks | where: 'type', 'form' | first -%}
+        {%- if formInfo != blank -%}
+            {%- assign bs = formInfo.settings -%}
+            <div class="form-content tw-text-center">
+                <div class="title tw-leading-[1.2] tw-font-bold">{{ bs.title }}</div>
+                <div class="intro tw-leading-[1.2] tw-font-medium">
+                    {{ bs.intro }}
+                </div>
+                {%- form 'customer' -%}
+                    <input type="hidden" name="contact[tags]" value="autumn"/>
+                    <input type="hidden" name="contact[context]" value="autumn"/>
+                    <div class="field flex-center">
+                        <input type="email" name="contact[email]" value="" autocorrect="off" autocapitalize="off"
+                               autocomplete="email" placeholder="{{ bs.placeholder }}" required=""/>
+                        <button type="submit" class="button button--primary flex-center" is="magnet-button"
+                                data-magnet="20" aria-label="Subscribe">
+                            <span class="btn-text tw-font-medium">{{ bs.button }}</span>
+                        </button>
+                    </div>
+                    {%- liquid
+                        if form.errors and form.context == context
+                            assign form_errors = form.errors | default_errors
+                            render 'alert', status: 'error', content: form_errors
+                        endif
+
+                        if form.posted_successfully?
+                            assign success_message = 'general.newsletter.success' | t
+                            render 'alert', status: 'success', content: success_message
+                        endif
+                    -%}
+                {%- endform -%}
+            </div>
+        {%- endif -%}
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Autumn Sale Sign Up",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-sign-up"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Backdrop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Backdrop Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pay",
+      "name": "Pay Layer",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon1",
+          "label": "Pay Icon1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon2",
+          "label": "Pay Icon2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon3",
+          "label": "Pay Icon3"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "default": "Ride Now, Pay Later"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Desc",
+          "default": "<p>Limited-Time <strong>0% APR</strong> for 4 Months</p>"
+        },
+        {
+          "type": "textarea",
+          "id": "remark",
+          "label": "Remark",
+          "default": "A $1,599 purchase costs $66.62/month for 24 months at 0% APR."
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "name": "Form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "Sign up forthe latest and greatest"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Intro",
+          "default": "Subscribe to stay up-to-date with ourlatestnews, promotions, ande-bike tips. Everything you need for happy e-biking!"
+        },
+        {
+          "type": "text",
+          "id": "button",
+          "label": "Button Text",
+          "default": "Join Us"
+        },
+        {
+          "type": "textarea",
+          "id": "placeholder",
+          "label": "Input placeholder",
+          "default": "Your email"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

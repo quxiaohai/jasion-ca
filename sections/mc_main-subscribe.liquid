@@ -1,0 +1,274 @@
+{%- assign ss = section.settings -%}
+{%- assign formInfo = section.blocks | where: 'type', 'form' | first -%}
+{%- assign bs = formInfo.settings -%}
+<style>
+    .mc-main-subscribe {
+        padding: 0 0 80px;
+    }
+    .mc-main-subscribe .autumn-content {
+        z-index: 2;
+        max-width: 871px;
+        margin: 0 auto;
+    }
+    .mc-main-subscribe .autumn-content .form-content {
+        width: 100%;
+    }
+    .mc-main-subscribe .autumn-content .form-content .title {
+        font-size: {{ ss.pc_title_size }}px;
+        word-break: break-word;
+        padding-bottom: 36px;
+        color: {{ ss.title_color }};
+    }
+    .mc-main-subscribe .autumn-content .form-content .field {
+        width: 100%;
+        height: 58px;
+        background-color: {{ bs.input_bg_color }};
+        border-radius: 100px;
+        position: relative;
+        box-shadow: inset 0 0 0 2px {{ bs.input_border_color }};
+    }
+    .mc-main-subscribe .autumn-content .form-content .field input {
+        flex: 1;
+        line-height: 48px;
+        font-size: 16px;
+        color: {{ bs.input_text_color }};
+        border: 0 none;
+        box-sizing: border-box;
+        padding: 0 240px 0 33px;
+    }
+    .mc-main-subscribe .autumn-content .form-content .field .button {
+        position: absolute;
+        top: 0;
+        right: -1px;
+        width: 221px;
+        height: 100%;
+        font-size: 20px;
+        border-radius: 100px;
+        color: {{ bs.buton_text_color }};
+        background-image: {% if bs.button_bg_color != blank %}{{ bs.button_bg_color }}{% else %}linear-gradient(90deg, rgb(255, 98, 92) 0%, #d83e38 50%, #b11913 100%), linear-gradient(#faebdb, #faebdb){% endif %};
+    }
+    .mc-main-subscribe .autumn-content .form-content .privacy-text {
+        font-size: 16px;
+        line-height: 1.2;
+        color: {{ bs.privacy_text_color }};
+        padding-top: 26px;
+        word-break: break-word;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc-main-subscribe {
+            padding: 0 0 1.7361111111rem;
+        }
+        .mc-main-subscribe .autumn-content {
+            max-width: 92.6851851852vw;
+        }
+        .mc-main-subscribe .autumn-content .form-content .title {
+            font-size: 0.8680555556rem;
+            padding-bottom: 1.2152777778rem;
+        }
+        .mc-main-subscribe .autumn-content .form-content .field {
+            height: 2.34375rem;
+        }
+        .mc-main-subscribe .autumn-content .form-content .field input {
+            line-height: 1.7361111111rem;
+            font-size: 0.6510416667rem;
+            padding: 0 8.8758680556rem 0 1.1067708333rem;
+        }
+        .mc-main-subscribe .autumn-content .form-content .field .button {
+            width: 8.8758680556rem;
+            font-size: 0.8897569444rem;
+        }
+        .mc-main-subscribe .autumn-content .form-content .privacy-text {
+            font-size: 0.6510416667rem;
+            padding-top: 1.0850694444rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<section class="mc-main-subscribe flex-center tw-relative w-full page--section">
+    <div class="autumn-content w-full flex-center-col tw-relative">
+        <div class="form-content text-center">
+            {%- if ss.show_title -%}
+                <div class="title tw-text-center tw-font-bold">{{ ss.title }}</div>
+            {%- endif -%}
+            {%- if formInfo != blank -%}
+                {%- form 'customer' -%}
+                    <input type="hidden" name="contact[tags]" value="{{ bs.tag }}"/>
+                    <input type="hidden" name="contact[context]" value="{{ bs.content }}"/>
+                    <label class="field flex-center">
+                        <input class="default-input" type="email" name="contact[email]" value="" autocorrect="off" autocapitalize="off"
+                               autocomplete="off" placeholder="{{ bs.placeholder }}" required=""/>
+                        <button type="submit" class="button button--primary flex-center" is="magnet-button"
+                                data-magnet="20" aria-label="Subscribe">
+                            <span class="btn-text flex-center tw-font-medium">
+                                {{ bs.button }}
+                            </span>
+                        </button>
+                    </label>
+                    {%- if bs.show_privacy -%}
+                        <div class="privacy-text">
+                            {{ bs.privacy_text }}
+                        </div>
+                    {%- endif -%}
+                    {%- liquid
+                        if form.errors and form.context == context
+                            assign form_errors = form.errors | default_errors
+                            render 'alert', status: 'error', content: form_errors
+                        endif
+
+                        if form.posted_successfully?
+                            assign success_message = 'general.newsletter.success' | t
+                            render 'alert', status: 'success', content: success_message
+                        endif
+                    -%}
+                {%- endform -%}
+            {%- endif -%}
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "MC Main Subscribe",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Main Subscribe"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Title</p>"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "pc_title_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "mb_title_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "form",
+      "name": "Form",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button",
+          "label": "Button Text",
+          "default": "Sign Up"
+        },
+        {
+          "type": "color_background",
+          "id": "button_bg_color",
+          "label": "Button background color"
+        },
+        {
+          "type": "color",
+          "id": "buton_text_color",
+          "label": "Button text color",
+          "default": "#fdf0e2"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tags",
+          "default": "Sub"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content",
+          "default": "Sub"
+        },
+        {
+          "type": "textarea",
+          "id": "placeholder",
+          "label": "Input placeholder",
+          "default": "Your email"
+        },
+        {
+          "type": "color",
+          "id": "input_bg_color",
+          "label": "Input background color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "input_border_color",
+          "label": "Input border color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "input_text_color",
+          "label": "Input text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_privacy",
+          "label": "Show privacy",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "privacy_text",
+          "label": "Privacy text",
+          "default": "<p>*By submitting, you agree to jasion's Privacy Policy and Terms of Use</p>"
+        },
+        {
+          "type": "color",
+          "id": "privacy_text_color",
+          "label": "Privacy text color",
+          "default": "#faebdb"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

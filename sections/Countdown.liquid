@@ -1,0 +1,449 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+
+
+    
+  {%- render 'section-variables', section: section -%}
+  }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    {%- render 'section-heading'
+      , section: section -%}
+
+
+    {% for block in section.blocks %}
+      {% if block.type == "countdown" %}
+        <div {% render 'surface', class: 'countdown-wrapper tw-max-w-[550px] tw-mx-auto' %}>
+          {% assign meta = block.settings.countdown_date %}
+          {% assign countdown_days = block.settings.countdown_days %}
+          {% assign countdown_hours = block.settings.countdown_hours %}
+          {% assign countdown_minutes = block.settings.countdown_minutes %}
+          {% assign countdown_seconds = block.settings.countdown_seconds %}
+          <div class="tw-py-2 tw-px-4 tw-text-center ">
+            <div class="md:tw-block tw-flex tw-gap-2 tw-mb-4 tw-justify-center">
+              <p id="countdownLbl" class="block-label text-subdued tw-text-xl tw-font-semibold tw-mb-2 tw-leading-tight">
+                {{ block.settings.countdown_lbl }}
+              </p>
+              {% if block.settings.countdown_lbl_content != blank %}
+                <p class="tw-leading-tight tw-text-base">{{ block.settings.countdown_lbl_content }}</p>
+              {% endif %}
+            </div>
+            <div class=" tw-w-[1px] tw-bg-stone-50 tw-h-[125px]"></div>
+            <div id="countdown" class="prcountdown tw-flex tw-items-center md:tw-gap-4 tw-gap-2 tw-mx-0 tw-my-2 tw-justify-center tw-text-black"></div>
+          </div>
+          <script type="text/javascript">
+              // 使用 Liquid 渲染服务器端时间
+              var storeNow = new Date("{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}").getTime(); // 初始店铺时间
+              var clientNow = new Date().getTime(); // 当前浏览器时间
+              var timeOffset = storeNow - clientNow; // 计算店铺时间与浏览器时间的偏移
+              
+              // 目标时间
+              var countDownDate = new Date("{{ meta }}").getTime(); // Liquid 提供的目标时间
+              
+              var x = setInterval(function() {
+                  // 获取当前浏览器时间并加上偏移以模拟店铺时间
+                  var now = new Date().getTime() + timeOffset;
+              
+                  // 计算剩余时间
+                  var distance = countDownDate - now;
+              
+                  // 计算天、小时、分钟、秒
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              
+                  // 格式化为两位数
+                  days = ("0" + days).slice(-2);
+                  hours = ("0" + hours).slice(-2);
+                  minutes = ("0" + minutes).slice(-2);
+                  seconds = ("0" + seconds).slice(-2);
+              
+                  // 更新页面倒计时显示
+                  document.getElementById("countdown").innerHTML = `
+                    <div class="days tw-countdown-item">
+                        <p> ${days} </p>
+                        <span class="countdown-unit tw-block ">{{ countdown_days }}</span>
+                    </div>
+                    <img  src="https://cdn.shopify.com/s/files/1/0605/0044/3373/files/maohao.png?v=1759217183" alt="countdown-icon" class="countdown-icon">
+                    <div class="hours tw-countdown-item">
+                    <p>${hours}</p>
+                    <span class="countdown-unit">{{ countdown_hours }}</span>
+                    </div>
+                    <img  src="https://cdn.shopify.com/s/files/1/0605/0044/3373/files/maohao.png?v=1759217183" alt="countdown-icon" class="countdown-icon">
+                    <div class="minutes tw-countdown-item">
+                    <p>${minutes}</p>
+                    <span class="countdown-unit">{{ countdown_minutes }}</span>
+                    </div>
+                    <img  src="https://cdn.shopify.com/s/files/1/0605/0044/3373/files/maohao.png?v=1759217183" alt="countdown-icon" class="countdown-icon">
+                    <div class="seconds tw-countdown-item">
+                    <p>${seconds}</p>
+                    <span class="countdown-unit">{{ countdown_seconds }}</span>
+                    </div>
+                    `;
+            
+              
+                  // 如果倒计时完成
+                  if (distance < 0) {
+                      clearInterval(x);
+                      document.querySelector(".countdown-wrapper").style.display = "none";
+                      document.getElementById("countdownLbl").style.display = "none";
+                      document.getElementById("countdown").style.display = "none";
+                  }
+            
+            
+               }, 1000);
+               
+               // 测试用：立即停止倒计时
+               // clearInterval(x);
+          </script>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Countdown",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.global.settings.header__heading.content"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "label": "t:sections.global.settings.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "title-sm",
+            "label": "t:sections.global.settings.heading_size.options__1.label"
+          },
+          {
+            "value": "title-md",
+            "label": "t:sections.global.settings.heading_size.options__2.label"
+          },
+          {
+            "value": "title-lg tracking-heading",
+            "label": "t:sections.global.settings.heading_size.options__3.label"
+          },
+          {
+            "value": "title-xl tracking-heading",
+            "label": "t:sections.global.settings.heading_size.options__4.label"
+          }
+        ],
+        "default": "title-md",
+        "label": "t:sections.global.settings.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_alignment",
+        "label": "t:sections.global.settings.heading_alignment.label",
+        "options": [
+          {
+            "value": "text-left md:items-end md:flex-row",
+            "label": "t:sections.global.settings.heading_alignment.options__1.label"
+          },
+          {
+            "value": "text-center md:items-center",
+            "label": "t:sections.global.settings.heading_alignment.options__2.label"
+          },
+          {
+            "value": "text-right md:items-end md:flex-row-reverse",
+            "label": "t:sections.global.settings.heading_alignment.options__3.label"
+          }
+        ],
+        "default": "text-left md:items-end md:flex-row"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "t:sections.global.settings.heading_tag.options__1.label"
+          },
+          {
+            "value": "h2",
+            "label": "t:sections.global.settings.heading_tag.options__2.label"
+          },
+          {
+            "value": "h3",
+            "label": "t:sections.global.settings.heading_tag.options__3.label"
+          },
+          {
+            "value": "h4",
+            "label": "t:sections.global.settings.heading_tag.options__4.label"
+          },
+          {
+            "value": "h5",
+            "label": "t:sections.global.settings.heading_tag.options__5.label"
+          },
+          {
+            "value": "h6",
+            "label": "t:sections.global.settings.heading_tag.options__6.label"
+          },
+          {
+            "value": "div",
+            "label": "t:sections.global.settings.heading_tag.options__7.label"
+          },
+          {
+            "value": "span",
+            "label": "t:sections.global.settings.heading_tag.options__8.label"
+          },
+          {
+            "value": "p",
+            "label": "t:sections.global.settings.heading_tag.options__9.label"
+          }
+        ],
+        "default": "h2",
+        "label": "t:sections.global.settings.heading_tag.label",
+        "info": "t:sections.global.settings.heading_tag.info"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "t:sections.global.settings.subheading.label"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "t:sections.global.settings.description.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.global.settings.header__highlight.content",
+        "info": "t:sections.global.settings.header__highlight.info"
+      },
+      {
+        "type": "select",
+        "id": "highlighted_text",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.global.settings.highlighted_text.options__1.label"
+          },
+          {
+            "value": "text",
+            "label": "t:sections.global.settings.highlighted_text.options__2.label"
+          },
+          {
+            "value": "full_text",
+            "label": "t:sections.global.settings.highlighted_text.options__3.label"
+          },
+          {
+            "value": "half_text",
+            "label": "t:sections.global.settings.highlighted_text.options__4.label"
+          },
+          {
+            "value": "underline",
+            "label": "t:sections.global.settings.highlighted_text.options__5.label"
+          },
+          {
+            "value": "stencil",
+            "label": "t:sections.global.settings.highlighted_text.options__6.label"
+          },
+          {
+            "value": "scribble",
+            "label": "t:sections.global.settings.highlighted_text.options__7.label"
+          }
+        ],
+        "default": "none",
+        "label": "t:sections.global.settings.highlighted_text.label"
+      },
+      {
+        "type": "select",
+        "id": "highlighted_scribble",
+        "options": [
+          {
+            "value": "circle",
+            "label": "t:sections.global.settings.highlighted_scribble.options__1.label"
+          },
+          {
+            "value": "basic-underline",
+            "label": "t:sections.global.settings.highlighted_scribble.options__2.label"
+          },
+          {
+            "value": "sketch-underline",
+            "label": "t:sections.global.settings.highlighted_scribble.options__3.label"
+          },
+          {
+            "value": "squiggle-underline",
+            "label": "t:sections.global.settings.highlighted_scribble.options__4.label"
+          },
+          {
+            "value": "squiggle-underline-2",
+            "label": "t:sections.global.settings.highlighted_scribble.options__5.label"
+          }
+        ],
+        "default": "circle",
+        "label": "t:sections.global.settings.highlighted_scribble.label",
+        "info": "t:sections.global.settings.highlighted_scribble.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.global.settings.header__colors.content",
+        "info": "t:sections.global.settings.header__colors.info"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "t:sections.global.settings.color_text.label"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "t:sections.global.settings.color_background.label"
+      },
+      {
+        "type": "color_background",
+        "id": "gradient_background",
+        "label": "t:sections.global.settings.gradient_background.label"
+      },
+      {
+        "type": "color",
+        "id": "color_highlight",
+        "label": "t:sections.global.settings.color_highlight.label"
+      },
+      {
+        "type": "color_background",
+        "id": "gradient_highlight",
+        "label": "t:sections.global.settings.gradient_highlight.label"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text",
+        "label": "t:sections.global.settings.color_button_text.label"
+      },
+      {
+        "type": "color",
+        "id": "color_button_background",
+        "label": "t:sections.global.settings.color_button_background.label"
+      },
+      {
+        "type": "color_background",
+        "id": "color_button_gradient",
+        "label": "t:sections.global.settings.color_button_gradient.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.global.settings.header__section.content"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.global.settings.padding_top.label",
+        "default": 72
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.global.settings.padding_bottom.label",
+        "default": 72
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "t:sections.global.settings.divider.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:sections.global.settings.full_width.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "rounded",
+        "default": false,
+        "label": "t:sections.global.settings.rounded.label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "countdown",
+        "name": "Countdown",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "countdown_lbl",
+            "label": "Countdown title",
+            "default": "Hurry up!"
+          },
+          {
+            "type": "text",
+            "id": "countdown_lbl_content",
+            "label": "Countdown content",
+            "default": "Sale Ends In"
+          },
+          {
+            "type": "text",
+            "id": "countdown_date",
+            "label": "Select end date for countdown",
+            "default": "2024-12-02T00:00:00",
+            "info": "2024-12-02T00:00:00"
+          },
+          {
+            "type": "text",
+            "id": "countdown_days",
+            "label": "Countdown Days",
+            "default": "DAYS"
+          },
+          {
+            "type": "text",
+            "id": "countdown_hours",
+            "label": "Countdown Hours",
+            "default": "HRS"
+          },
+          {
+            "type": "text",
+            "id": "countdown_minutes",
+            "label": "Countdown Minutes",
+            "default": "MIN"
+          },
+          {
+            "type": "text",
+            "id": "countdown_seconds",
+            "label": "Countdown Seconds",
+            "default": "SEC"
+          },
+          {
+            "type": "header",
+            "content": "Colors",
+            "info": "Gradient replaces solid colors when set."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Customize",
+        "name": "Countdown"
+      }
+    ],
+    "disabled_on": {
+      "templates": ["password"]
+    }
+  }
+{% endschema %}

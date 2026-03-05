@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1920x400.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/460x630.jpg",
+            "heading": "Electric Bikes",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "subheading": "It's time to take your adventures to the next level.",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify:\/\/shop_images\/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify:\/\/shop_images\/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "promotion"
+      ],
+      "settings": {
+        "layout": "2",
+        "products_per_page": 50,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": false,
+        "filter_collapsed": false,
+        "filter_type": "drawer",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "main-collection"
+  ]
+}

@@ -1,0 +1,93 @@
+<div class="accordion hb-drawer-accordion">
+    <details class="details" is="accordion-details" {{ block.shopify_attributes }}>
+        <summary class="drawer__menu-item block heading tw-text-xl leading-none tracking-tight cursor-pointer relative" aria-expanded="false">
+            {{- link.title | escape -}}
+        </summary>
+        {% assign first_url = link.links[0].url %}
+        {% if first_url contains "collections/" %}
+        {% assign is_coll = true %}
+        {% else %} 
+        {% assign is_coll = false %}
+        {% endif %}
+
+        <div class="details__content text-base rte -md:tw-text-xs {% if is_coll %} tw-space-y-8 {% else %} tw-space-y-4 {% endif %} ">
+            {%- for childlink in link.links -%}
+                {%- assign collection = childlink.object -%}
+                <div class="tw-grid tw-space-y-4">
+                    {% if link.links.size != 1 %}
+                    {% assign limit = 3 %}
+                    {% else %}
+                    {% assign limit = 4 %}
+                    {% endif %}
+                    <a class="!tw-bg-none !tw-text-sm tw-font-medium" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                    {% if is_coll %}
+                        {%- assign count = 0 -%}
+                        {%- for product in collection.products -%}
+                        {%- if product.metafields.custom.hidden_link.value != true and count < limit -%}
+                            {%- assign count = count | plus: 1 -%}
+                            <div class="tw-col-span-1 tw-relative">
+                            <div class="tw-grid tw-grid-cols-5 tw-gap-4">
+                                <div class="tw-col-span-2 ">
+                                    <a href="{{ product.url }}">
+                                        {% assign pr_img = product.metafields.custom.pure_product_image | default : product.featured_image %}
+                                        {{ pr_img | image_url: width: '450' | image_tag: width: '450', class:"tw-m-0"}} 
+                                    </a>
+                                </div>
+                                <div class="tw-col-span-3">
+                                    <div class="tw-flex tw-justify-between ">
+                                        <a href="{{ product.url }}" class="!tw-bg-none tw-font-medium tw-line-clamp-1 tw-m-0 !tw-text-base">
+                                            {{product.metafields.custom.short_title.value | default: product.title | escape  }}
+                                        </a>
+                                        {%- render 'product-badges', product: product, show_save_amount: true, save_type: "percent",class:"tw-flex tw-justify-star tw-mb-2", size_class:"badge-sm" -%}
+                                    </div>
+                                    <p class="product-card__subtitle tw-m-0 tw-line-clamp-1 tw-leading-snug tw-text-viGray tw-text-[10px] tw-mb-3">
+                                    {% if product.metafields.custom.short_text.value != blank %}
+                                    {{ product.metafields.custom.short_text.value }}
+                                    {% endif %}
+                                    </p>
+                                    <p>{%- render 'product-price', product: product, class: 'tw-price-text-lg flex gap-2 md:gap-1d5 ' -%} </p>
+                                </div>
+                            </div>
+                        {% comment %} {% if block.settings.show_badges %} {% endcomment %}
+                        {% comment %} {%- render 'product-badges', product: product, show_save_amount: true, save_type: "label",class:"tw-absolute tw-left-auto tw-right-0", size_class:"badge-sm" -%} {% endcomment %}
+                        {% comment %} {% endif %} {% endcomment %}
+                        </div>
+                        {%- endif -%}
+                        {%- endfor -%}
+                    {% endif %}
+                </div>
+            {%- endfor -%}
+            
+            {% if is_coll %}
+            <div class="">
+                <div class="tw-mb-8 tw-flex tw-items-center tw-gap-4">
+                    {%- if block.settings.button_label != blank -%}
+                    <a class="button tw-button--outline button--sm tw-mx-auto tw-text-black tw-flex-1"{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% if block.settings.button_external %} target="_blank" rel="noopener"{% endif %}{% else %} role="link" aria-disabled="true"{% endif %}>
+                        <span class="reversed-link tracking-tight">{{ block.settings.button_label | escape }}</span>
+                    </a>
+                    {%- endif -%}
+                    <a class="button tw-button--outline button--sm tw-mx-auto tw-text-black tw-flex-1 tw-max-w-[50%]" href="{{block.settings.btm_button_link}}" is="hover-link">
+                        <span class="btn-text">{{ block.settings.btm_button_label }}</span>
+                    </a>
+                </div>
+                {%- assign item = block.settings.store_highlights | default : false -%}
+                <div class="tw-grid tw-grid-cols-4 tw-gap-4 not-rte tw-pb-8">
+                    {% assign icons = item.icons.value | reverse | reverse %}
+                    {% for i in (0..3) %}
+                    {% if item.content.value[i] != blank %}
+                        <div class="tw-gap-2 tw-text-xs tw-text-center">
+                        {{- icons[i] | image_url: width: 26 | image_tag: loading: 'lazy', class: 'icon-md tw-aspect-square tw-mx-auto' -}} 
+                        <p class="tw-leading-tight"> {{ item.content.value[i] }} </p>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+
+
+
+        </div>
+    </details>
+  </div>

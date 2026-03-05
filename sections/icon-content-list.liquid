@@ -1,0 +1,155 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+</style>
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %} relative">
+
+
+    <div class="icon-content-list tw-flex -md:tw-flex-col md:tw-gap-6 tw-gap-2">
+      {% for block in section.blocks %}
+        <div class="icon-content-list__item tw-flex-1 md:tw-max-w-[50%] tw-shadow-lg tw-text-center tw-rounded-lg tw-pb-6 " style="background: {{ section.settings.card_color_background }}">
+          <div class="icon-content-list__item-icon -tw-translate-y-1/4">
+            {{ block.settings.icon | image_url: width: 95 | image_tag: class: 'tw-mx-auto -md:tw-w-[50px]' }}
+          </div>
+          <div class="icon-content-list__item-content">
+            <h3 class="icon-content-list__item-title tw-font-black tw-mb-1 xl:tw-text-[28px] tw-text-[22px] ">{{ block.settings.title }}</h3>
+            <div class="icon-content-list__item-content -md:tw-text-[14px]">{{ block.settings.content | newline_to_br}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon content list",
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "color_background",
+      "id": "card_color_background",
+      "label": "Card background color"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__colors.content",
+      "info": "t:sections.global.settings.header__colors.info"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "t:sections.global.settings.color_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "t:sections.global.settings.color_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "t:sections.global.settings.gradient_background.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "t:sections.global.settings.color_button_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "t:sections.global.settings.color_button_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "color_button_gradient",
+      "label": "t:sections.global.settings.color_button_gradient.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_top.label",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_bottom.label",
+      "default": 72
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.global.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow",
+      "label": "t:sections.global.settings.narrow.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "default": false,
+      "label": "t:sections.global.settings.rounded.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon content list",
+      "category": "Customize"
+    }
+  ],
+}
+{% endschema %}

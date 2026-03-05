@@ -1,0 +1,896 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image-with-text-overlay": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ride Further, Pay Less.",
+            "heading_size": "title-md",
+            "heading_tag": "h1",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the joy of powered pedaling, <br/>where innovation meets sustainability<br/><br/></p>",
+            "text_size": "subtext-lg",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/About_Us_banner_1920x700_cf1f5f8f-4813-4163-a635-6f2c23df43a1.jpg",
+        "image_height": "adapt",
+        "content_width": "medium",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "image_mobile": "shopify://shop_images/About_Us_banner_390x260_227b8d6d-1d5b-4a65-9947-7bc61bf7ad6c.jpg",
+        "image_height_mobile": "adapt",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#000000",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "images-with-text": {
+      "type": "images-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Example <em>heading</em>",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_ratio": "portrait",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 120,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true
+      }
+    },
+    "rich_text_VhchrD": {
+      "type": "rich-text",
+      "blocks": {
+        "text_eTPTeM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dedicated to transforming the way individuals commute, Jasion is founded to provide everyone with their 1st eBike that beyond expectations. With a passion for innovation and sustainability, Jasion is rising as a trusted brand  by tens of thousands riders.<br/></p><p></p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "image_myad9A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__1_1920x800_a877cb10-9727-4f96-abd7-b05e8f5fade4.jpg",
+            "image_width": "custom",
+            "image_max_width": 800,
+            "image_max_width_mobile": 460
+          }
+        },
+        "text_kdCAgC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Riding with JasionBike is a simple way to add movement to your day—whether it’s commuting, weekend cruising, or exploring new routes. Our goal is to make every ride practical, comfortable, and enjoyable.<br/><br/><br/><br/><br/><em><br/></em></p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text_eTPTeM",
+        "image_myad9A",
+        "text_kdCAgC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_FLGgwk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jwXcRD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>All-Terrain Commuting</p>",
+            "heading_size": "title-xs",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_qEPitR": {
+          "type": "text",
+          "settings": {
+            "text": "Explore our diverse range of electric bicycles, meticulously designed to cater to various lifestyles and preferences. From sleek urban commuters to robust off-road adventurers, each model reflects our commitment to quality, performance, and customer satisfaction.",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jwXcRD",
+        "text_qEPitR"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/About_Us__2_720x350_f3ff080d-7b51-4176-be65-1da863d9fb2a.jpg",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_rtVwiL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kCTwDk": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Tight Control of theProduction Process</p>",
+            "heading_size": "title-xs",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_J3aYch": {
+          "type": "text",
+          "settings": {
+            "text": "Exercising rigorous oversight throughout the production chain, we meticulously manage every stage, from raw material acquisition to final assembly, ensuring an integrated and tightly controlled manufacturing process.",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_color": "#000000",
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kCTwDk",
+        "text_J3aYch"
+      ],
+      "settings": {
+        "img_placeholder": false,
+        "image": "shopify://shop_images/About_Us__4_720x350_0624dccd-9888-4346-91b5-8a10da16bb7e.jpg",
+        "image_height": "adapt",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "img_placeholder_mb": false,
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 68,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_overlay_KNkeka": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/About_Us__5_1920x800_4a659d71-2ef1-4573-849d-0c0eaec2dfd1.jpg",
+        "image_height": "650px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/About_Us__5_390x220_3cbcbb2f-a15f-4a8e-8ef1-02857fc21603.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "portfolio": {
+      "type": "portfolio",
+      "blocks": {
+        "profile-1": {
+          "type": "profile",
+          "settings": {
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        },
+        "profile-2": {
+          "type": "profile",
+          "settings": {
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        },
+        "profile-3": {
+          "type": "profile",
+          "settings": {
+            "heading": "Example title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "color_text": "#ffffff",
+            "color_background": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "profile-1",
+        "profile-2",
+        "profile-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "layout": "grid",
+        "image_ratio": "portrait",
+        "image_ratio_mobile": "portrait",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Talk about your <em>brand</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "Add a tagline",
+        "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#ccd8b5",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<em><strong>Free shipping and returns</strong></em>",
+            "text_size": 160,
+            "text_font": "body",
+            "highlighted_text": "stencil",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "direction": "left",
+        "speed": 20,
+        "grid_horizontal": 70,
+        "enable_twin": false,
+        "enable_parallax": true,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "rich_text_cnRCb7": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rBja3f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're navigating the city, exploring new terrains, or simply enjoying a relaxing ride, Jasion is dedicated to making every journey smoother, more sustainable, and unforgettable. We’re here to help you embrace a lifestyle of adventure, fitness, and eco-conscious living with every pedal.<br/><br/></p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text_rBja3f"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "",
+            "author": "",
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 84,
+        "padding_bottom": 120,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "timeline": {
+      "type": "timeline",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/lQDPKHU8ohrj8IfNBbLNBXiwY_Ny1TY5XaoJGz5tC0NtAQ_1400_1458.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__7_330x160_dc6301e2-4388-4e4e-8663-e1a76e408ade.jpg",
+            "subheading": "2020",
+            "heading": "Jasion EB7 1.0",
+            "heading_tag": "h2",
+            "text": "<p>Jasion EB7 1.0 marks the inception of our brand, serving as a trailblazer in the realm of cycling and embodying a yearning for unknown adventures. From this point forward, we present to you a series of exhilarating innovations, top-notch quality, and a redefined riding experience. Let's collectively embark on a new era of electric bikes, exploring uncharted territories and pushing the boundaries further.<br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_UarHJQ": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/lQDPJxJ829giIIfNBbLNBXiw7a67kIwEIU8JGz5tC0NtAA_1400_1458.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__6_330x160_62cea159-5105-4ddb-9f81-c8827bb5aa56.jpg",
+            "subheading": "2021",
+            "heading": "Jasion EB7 2.0",
+            "heading_tag": "h2",
+            "text": "<p>Explore urban landscapes with the EB7 2.0 electric bike. With an 850W motor, 20\"x3\" wide tires, and dual shock absorbers, it delivers a smooth and powerful ride. Choose between low and high frames for a personalized commuting experience.</p>",
+            "button_label": "Learn more",
+            "button_link": "shopify://products/jasion-eb7-electric-bike",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_cD7a6N": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__8_720x750_2aa93dbf-c6dc-4dbc-92a3-7f6333076c0a.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__8_330x160_b989be78-e44c-4cf1-be5a-fc8b160c843b.jpg",
+            "subheading": "2022",
+            "heading": "Jasion EB7 ST",
+            "heading_tag": "h2",
+            "text": "<p>To cater to a wider audience, we introduce the all-new EB7 ST, boasting a lower frame for a unique style and outstanding performance. With its lower frame and seat height, individuals of all ages, including children, seniors, and those with mobility challenges, can enjoy the pleasures of riding. The ST isn't just a mode of transportation but also a companion.<br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_f9pGnU": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__9_720x750_a5236f7a-9df4-440e-90ea-6c9c44881cd9.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__9_330x160_8cdb5e88-87fd-4128-a61f-f1d7c951c1ab.jpg",
+            "subheading": "2023",
+            "heading": "Jasion X-Hunter",
+            "heading_tag": "h2",
+            "text": "<p>X-Hunter marks our first stride into the realm of off-road adventures—a rugged and durable companion for your explorations. This brand-new electric bike comes equipped with a robust 1400W motor, 20\"x4\" wide tires, and full suspension, ensuring a thrilling yet comfortable riding experience on any terrain. This high-performance electric bike seamlessly blends primal power with outstanding shock absorption, unleashing your spirit of adventure and redefining your off-road journey.</p>",
+            "button_label": "Learn more",
+            "button_link": "shopify://products/jasion-x-hunter",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_Pnq8CG": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__10_720x750_bea6154c-a757-489c-acb0-c46c74e88770.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__10_330x160_4ad71441-1679-4007-a28d-a6c39080c839.jpg",
+            "subheading": "2024",
+            "heading": "Jasion EB5 Roamer",
+            "heading_tag": "h2",
+            "text": "<p>The EB5 Roamer Series returns to our roots, celebrating our expertise in urban commuting. With its advanced lighting setup and groundbreaking features, it heralds a new era of safe and convenient urban travel. It's the perfect blend of rider, art, and craftsmanship.</p>",
+            "button_label": "Learn more",
+            "button_link": "shopify://products/jasion®eb5-st-roamer-ebike",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_f8iPVy": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__11_720x750_f50a0a2b-c45c-40de-9dad-2298d60b84fe.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__11_330x160_80520973-2d69-4bd5-875f-a8a84fe8abf1.jpg",
+            "subheading": "2025.4",
+            "heading": "Jasion YR20",
+            "heading_tag": "h2",
+            "text": "<p>The YR20 launches with powerful performance, long-range capability, and a comfortable ride. With a top speed of 32 mph and a range of up to 80 miles, you'll reach your destination at your own pace. More than just an electric bike, it’s the perfect companion for cycling enthusiasts to explore the world.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_BcimEB": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__12_720x750_5abfda3e-c3ad-4433-a7b6-305c3c498b8b.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__12_330x160_d838a0e5-0eee-46da-b078-9967bf6b7aaf.jpg",
+            "subheading": "2025.6",
+            "heading": "Jasion Hunter Pro",
+            "heading_tag": "h2",
+            "text": "<p>Hunter Pro isn’t just an upgrade—it’s a complete evolution. Combining powerful performance, extended range, and exceptional control, it delivers an exhilarating ride, all wrapped in a familiar, classic frame. Whether you're chasing high-speed thrills or forging new paths off-road, the Hunter Pro is your ultimate companion.</p>",
+            "button_label": "Learn more",
+            "button_link": "shopify://products/hunter-pro",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_yDWmM8": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/About_Us__13_720x750_3220c9f7-d905-4875-9783-6b071a43d19e.jpg",
+            "image_mobile": "shopify://shop_images/About_Us__13_330x160_d689bbf1-f027-4a37-a627-bd152d19f34a.jpg",
+            "subheading": "2025.7",
+            "heading": "Jasion Thunder",
+            "heading_tag": "h2",
+            "text": "<p>Thunder is built for riders who demand power, comfort, and versatility. With a 750W (peak 1500W) motor, adjustable front suspension, fat 26x4” tires, and hydraulic brakes, it’s ready for any terrain—snow, sand, mountains, or city streets.</p><p>From daily rides to rugged adventures, Thunder is your ultimate all-terrain eBike.</p>",
+            "button_label": "Learn more",
+            "button_link": "shopify://products/thunder",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_ntik9a": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/lQDPKH8bNZvxKwvNBdzNBaCwZ0E-FXkCpn8IxisqeiBgAQ_1440_1500.jpg",
+            "image_mobile": "shopify://shop_images/lQDPJwHCDEvKigvNAUDNApSwRJKbTODxPi0IxisqeiBgAA_660_320.jpg",
+            "subheading": "2025.9",
+            "heading": "Jasion RetroVolt Pro",
+            "heading_tag": "h2",
+            "text": "<p>Retrovolt Pro was born from a clear vision: to preserve the iconic spirit of the original Retrovolt while pushing the boundaries of performance. With upgraded hydraulic disc brakes, a powerful 2000W peak motor, and a 52V 20Ah battery for extended range, our mission was to create a ride that’s stronger, safer, and longer-lasting—an evolution for every rider who demands more.<br/><br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content_UarHJQ",
+        "content_cD7a6N",
+        "content_f9pGnU",
+        "content_Pnq8CG",
+        "content_f8iPVy",
+        "content_BcimEB",
+        "content_yDWmM8",
+        "content_ntik9a"
+      ],
+      "settings": {
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "wide",
+        "heading": "Our Story",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#171717",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "blocks": {
+        "logo-1": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-5": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-6": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        },
+        "logo-7": {
+          "type": "logo",
+          "settings": {
+            "height": 60,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4",
+        "logo-5",
+        "logo-6",
+        "logo-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "marquee",
+        "grid_horizontal": 120,
+        "direction": "right",
+        "speed": 10,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-with-text-overlay",
+    "images-with-text",
+    "rich_text_VhchrD",
+    "image_with_text_FLGgwk",
+    "image_with_text_rtVwiL",
+    "image_with_text_overlay_KNkeka",
+    "portfolio",
+    "scrolling-text",
+    "rich_text_cnRCb7",
+    "testimonials",
+    "timeline",
+    "logo-list"
+  ]
+}

@@ -1,0 +1,362 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+</style>
+
+
+<div class="large-header-slider-wrapper section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.narrow %} page-width--narrow{% endif %} relative">
+
+
+    <div class="tw-grid md:tw-grid-cols-2 md:tw-gap-[10%] tw-gap-4 large-header-slider-grid">
+      {% for block in section.blocks %}
+      {% assign bk_stts = block.settings %}
+      <div class="" aria-controls-item="TabPanel-{{ block.id }}" role="tabpanel" {% unless forloop.first %}hidden{% endunless %}>
+        <div class="large-slider-parent">
+          {% if bk_stts.img_1 %}
+            <div class="large-slider-img {% unless bk_stts.img_2 %}single-img tw-aspect-square{% endunless %}">
+              {{ bk_stts.img_1 | image_url: width: '1000' | image_tag: width: '1000,750,500', class:'tw-block tw-h-full tw-object-cover'}} 
+            </div>
+          {% endif %}
+          {% if bk_stts.img_2 %}
+            <div class="large-slider-img ">
+              {{ bk_stts.img_2 | image_url: width: '1000' | image_tag: width: '1000,750,500', class:'tw-block tw-h-full tw-object-cover'}} 
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      <div class="tw-flex tw-flex-col tw-justify-around md:tw-py-8">
+        <tabs-element class="tab-list tw-text-4xl tw-font-normal tw-overflow-hidden mobile-slider tw-mobile-carousels md:tw-mb-0 tw-mb-2 tw-grid 2xl:tw-gap-10 md:tw-gap-6" >
+            {% for block in section.blocks %}
+            {% assign bk_stts = block.settings %}
+            <button class="tab__item tw-no-tab-btn tw-leading-none tw-w-full {% if forloop.first %}button--primary{% else %} button--secondary{% endif %}" role="tab" aria-controls="TabPanel-{{block.id}}" data-index="{{ forloop.index0 }}">
+              <p class="large-slider-title tw-relative tw-flex tw-items-center tw-transition-all tw-cursor-pointer tw-opacity-25 ">
+                <span class="tw-inline-block tw-w-3 tw-h-3 tw-mr-5 tw-rounded-full tw-bg-current -md:tw-hidden"></span>{{bk_stts.tab_con}}
+              </p>
+            </button>
+          {% endfor %}
+        </tabs-element>
+          
+        <div class="slideshow-dots tw-mobile--dots md:tw-hidden tw-flex tw-items-center tw-justify-center tw-border-none tw-mb-4">
+          <slider-dots class="flickity-page-dots tw-mt-0 w-auto pointer-events-auto" aria-controls="Slider-{{ section.id }}">
+            {% for block in section.blocks %}
+              <button type="button" class="flickity-page-dot" data-index="{{ i }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                <span class="sr-only">{{ 'general.pagination.page' | t: number: forloop.index }}</span>
+              </button>
+            {%- endfor -%}
+          </slider-dots>
+        </div> 
+
+
+        {% for block in section.blocks %}
+          {% assign bk_stts = block.settings %}
+          <div id="TabPanel-{{ block.id }}" role="tabpanel" {% unless forloop.first %} hidden{% endunless %}>
+            <h4 class="md:tw-text-2xl tw-text-xl md:tw-mb-4 tw-mb-2 !tw-leading-tight tw-font-medium">
+              {{bk_stts.title | newline_to_br}}
+            </h4>
+            <p class="tw-leading-normal">{{bk_stts.content | newline_to_br}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  @media (max-width:769px){
+    .tw-mobile-carousels{
+      justify-content: center;
+    }
+    .tw-mobile-carousels .button--secondary{
+      display: none
+    }
+      {% comment %} .tw-mobile-carousels {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 100%;
+      gap: 2rem;
+      overflow: scroll;
+      scroll-snap-type: x mandatory;
+      max-width:calc(100vw - 40px)
+    } {% endcomment %}
+    {% comment %} @media (prefers-reduced-motion: no-preference) {
+      .tw-mobile-carousels {
+        scroll-behavior: smooth;
+      }
+    }
+    .tw-mobile-carousels > button {
+      scroll-snap-align: center;
+      text-align:center
+    }
+    .tw-mobile-carousels > button p{
+      justify-content: center;
+    } {% endcomment %}
+  }
+</style>
+
+<script> 
+
+  if (window.innerWidth < 769) {
+    const carousel = document.querySelector('#shopify-section-{{section.id}} .tw-mobile-carousels');
+    const buttons = document.querySelectorAll('#shopify-section-{{section.id}} .tw-mobile-carousels > button');
+    const dots = document.querySelectorAll('#shopify-section-{{section.id}} .slideshow-dots button');
+    
+    let isScrolling = false;
+    
+    carousel.addEventListener('scroll', () => {
+      if (isScrolling) return; // 防止重复触发
+      
+      isScrolling = true;
+      
+      // 找到当前居中的按钮
+      buttons.forEach((button, index) => {
+        const rect = button.getBoundingClientRect();
+        const isVisible = rect.left >= 0 && rect.right <= window.innerWidth;
+        
+        if (isVisible) {
+          // 1. 更新按钮的 active 状态（可选）
+          button.classList.add('active');
+          button.click();
+          
+          // 2. 找到对应的 dot，并更新 aria-current
+          dots.forEach((dot, dotIndex) => {
+            const isCurrent = dotIndex === index;
+            dot.setAttribute('aria-current', isCurrent ? 'true' : 'false');
+          });
+        } else {
+          button.classList.remove('active');
+        }
+      });
+      
+      // 防抖处理，避免频繁触发
+      setTimeout(() => {
+        isScrolling = false;
+      }, 100);
+    });
+    
+
+
+    {% comment %} 模拟拖动 {% endcomment %}
+    let startX = 0;
+    let isDragging = false;
+
+    const slider = document.querySelector('.large-header-slider-grid');
+
+    slider.addEventListener('mousedown', startDrag);
+    slider.addEventListener('touchstart', startDrag, { passive: true });
+
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('touchmove', onDrag, { passive: true });
+
+    document.addEventListener('mouseup', endDrag);
+    document.addEventListener('touchend', endDrag);
+
+    function startDrag(e) {
+      startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+      isDragging = true;
+    }
+
+    function onDrag(e) {
+      if (!isDragging) return;
+
+      const currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+      const deltaX = currentX - startX;
+
+      if (Math.abs(deltaX) < 50) return;
+      isDragging = false;
+
+      const sectionId = '{{section.id}}'; // 可替换为变量注入逻辑
+      const carouselDom = document.querySelector(`#shopify-section-${sectionId} .tw-mobile-carousels`);
+      const dotContainer = document.querySelector(`#shopify-section-${sectionId} .tw-mobile--dots`);
+      const primaryButton = carouselDom?.querySelector('.button--primary');
+
+      if (!primaryButton) return;
+
+      const tabContainer = primaryButton.closest('.tab__item')?.parentElement;
+      if (!tabContainer) return;
+
+      const tabs = Array.from(tabContainer.querySelectorAll('.tab__item'));
+      const dots = dotContainer?.querySelectorAll('.flickity-page-dot') || [];
+      const currentIndex = tabs.findIndex(tab => tab.classList.contains('button--primary'));
+
+      if (currentIndex === -1) return;
+
+      let targetIndex = -1;
+      if (deltaX > 0 && currentIndex > 0) {
+        targetIndex = currentIndex - 1; // 👉 右滑 - 上一个 tab
+        console.log('👉 右滑：点击上一个 tab');
+      } else if (deltaX < 0 && currentIndex < tabs.length - 1) {
+        targetIndex = currentIndex + 1; // 👈 左滑 - 下一个 tab
+        console.log('👈 左滑：点击下一个 tab');
+      }
+
+      if (targetIndex !== -1) {
+        tabs[targetIndex].click();
+
+        // 更新 aria-current
+        dots.forEach(dot => dot.removeAttribute('aria-current'));
+        if (dots[targetIndex]) {
+          dots[targetIndex].setAttribute('aria-current', 'true');
+        }
+
+        console.log(`✅ 已点击 tab index: ${targetIndex}`);
+      }
+    }
+
+
+    function endDrag() {
+      isDragging = false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+  }; 
+
+</script>
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Large Header slider (hb)",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__colors.content",
+      "info": "t:sections.global.settings.header__colors.info"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "t:sections.global.settings.color_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "t:sections.global.settings.color_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "t:sections.global.settings.gradient_background.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": "t:sections.global.settings.color_button_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_button_background",
+      "label": "t:sections.global.settings.color_button_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "color_button_gradient",
+      "label": "t:sections.global.settings.color_button_gradient.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_top.label",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_bottom.label",
+      "default": 72
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.global.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow",
+      "label": "t:sections.global.settings.narrow.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "default": false,
+      "label": "t:sections.global.settings.rounded.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Big image (left bottom)"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Small image (right top)"
+        },
+        {
+          "type": "text",
+          "id": "tab_con",
+          "label": "Tab name",
+          "default": "Design"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "Establishment：Specially designed for off - road adventures."
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content",
+          "default": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
+        }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Large Header slider (hb)"
+    }
+  ]
+}
+{% endschema %}

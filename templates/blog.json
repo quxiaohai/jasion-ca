@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-blog": {
+      "type": "mc_main-blog",
+      "blocks": {
+        "blog_t2CVyR": {
+          "type": "blog",
+          "settings": {
+            "title": "Jasion",
+            "blog": "jasion"
+          }
+        },
+        "blog_gWhnfM": {
+          "type": "blog",
+          "settings": {
+            "title": "All Things about Jasion",
+            "blog": "news"
+          }
+        },
+        "blog_kzRxhU": {
+          "type": "blog",
+          "settings": {
+            "title": "Destination and Adventure",
+            "blog": "destination-and-adventure"
+          }
+        },
+        "blog_DxcJmf": {
+          "type": "blog",
+          "settings": {
+            "title": "Environmental",
+            "blog": "sustainability-and-environmental-impact"
+          }
+        },
+        "blog_t4RVyQ": {
+          "type": "blog",
+          "settings": {
+            "title": "Health & Fitness",
+            "blog": "health-and-fitness"
+          }
+        },
+        "blog_PdfF7C": {
+          "type": "blog",
+          "settings": {
+            "title": "Repair",
+            "blog": "maintenance-and-repair"
+          }
+        },
+        "blog_qiTByq": {
+          "type": "blog",
+          "settings": {
+            "title": "Riding Safety",
+            "blog": "riding-techniques-and-safety"
+          }
+        },
+        "blog_J3w6jq": {
+          "type": "blog",
+          "settings": {
+            "title": "Technology & Innovation",
+            "blog": "technology-and-innovation"
+          }
+        },
+        "blog_naegGf": {
+          "type": "blog",
+          "settings": {
+            "title": "Trends & News",
+            "blog": "industry-news-and-trends"
+          }
+        },
+        "article_JUtrwk": {
+          "type": "article",
+          "settings": {
+            "article": "jasion/diy-electric-bike-repair-handy-tips-for-maintenance-and-repairs"
+          }
+        },
+        "article_Dtbjwz": {
+          "type": "article",
+          "settings": {
+            "article": "jasion/diy-electric-bike-repair-handy-tips-for-maintenance-and-repairs"
+          }
+        },
+        "article_nmBEQ6": {
+          "type": "article",
+          "settings": {
+            "article": "jasion/3rd-anniversary-celebration-lucky-draw-event"
+          }
+        }
+      },
+      "block_order": [
+        "blog_t2CVyR",
+        "blog_gWhnfM",
+        "blog_kzRxhU",
+        "blog_DxcJmf",
+        "blog_t4RVyQ",
+        "blog_PdfF7C",
+        "blog_qiTByq",
+        "blog_J3w6jq",
+        "blog_naegGf",
+        "article_JUtrwk",
+        "article_Dtbjwz",
+        "article_nmBEQ6"
+      ],
+      "disabled": true,
+      "settings": {
+        "page_color": "#ffffff",
+        "show_title": false,
+        "title": "Title",
+        "title_color": "#000000",
+        "per_page": 6,
+        "show_article": true,
+        "article_title": "Latest",
+        "article_align": "start"
+      }
+    },
+    "main-blog_tags": {
+      "type": "mc_main-blog-tags",
+      "settings": {
+        "page_color": "#ffffff",
+        "show_title": true,
+        "title": "JasionBike Blog",
+        "title_color": "#3f3a36",
+        "show_tag_filter": true,
+        "per_page": 6
+      }
+    }
+  },
+  "order": [
+    "main-blog",
+    "main-blog_tags"
+  ]
+}

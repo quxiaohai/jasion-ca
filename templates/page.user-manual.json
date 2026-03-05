@@ -1,0 +1,564 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "multicolumn_grid_hb_QHpUPB": {
+      "type": "multicolumn-grid-hb",
+      "blocks": {
+        "video_3ipERD": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=GS6CaYZ1Q2o",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "EB5 Roamer",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_w8fcDJ": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=DE150BXGTp4",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "EB5 Roamer ST",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_WCKjmr": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=i0LcsKoZaXU&t=135s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "X-Hunter",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_feUjWy": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=LpyrNYVNFwo&t=213s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "X-Hunter | 2nd Version",
+            "title_sz": "h5",
+            "content": "",
+            "author": "RVdaydream"
+          }
+        },
+        "video_PxPnPd": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=xLlYP_xKCAU&t=33s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "EB7 2.0",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_PK3wEx": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=xLlYP_xKCAU&t=33s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "EB7 ST",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_ehjMd9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=dcK7DBPQWvM",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "RetroVolt",
+            "title_sz": "h5",
+            "content": "",
+            "author": "RVdaydream"
+          }
+        },
+        "video_NMFC3j": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=KIsWfu_WCIc&list=PLPWkwjbN02QTQLz3oECXqVC-aEUZxJtFj&index=9",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "YR20",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_PAqyT9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=zIn11nY-mto",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "Hunter Pro",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_MYMdWx": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NByqtmCnLUc",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "Thunder",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_miDnMD": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=H1-uvXHSMHc&t=5s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "RetroVolt Pro",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
+        "video_PwkyK9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=JBGJIRhDNaw&feature=youtu.be",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=JBGJIRhDNaw&feature=youtu.be",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "X-Hunter ST",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_3ipERD",
+        "video_w8fcDJ",
+        "video_WCKjmr",
+        "video_feUjWy",
+        "video_PxPnPd",
+        "video_PK3wEx",
+        "video_ehjMd9",
+        "video_NMFC3j",
+        "video_PAqyT9",
+        "video_MYMdWx",
+        "video_miDnMD",
+        "video_PwkyK9"
+      ],
+      "name": "Multicolumn grid",
+      "settings": {
+        "pw-overflow-hidden": false,
+        "use_foldable": false,
+        "columns": 3,
+        "carousel_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "heading": "Assembly Instruction",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_text_des": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "multicolumn_grid_hb_dy8fAy": {
+      "type": "multicolumn-grid-hb",
+      "blocks": {
+        "video_TMpMtQ": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ON-qwVUzTRo",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=ON-qwVUzTRo",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "Jasion App Quick Start Guide",
+            "title_sz": "h5",
+            "content": "The Jasion App is a powerful tool that puts the full capabilities of your Jasion ebike right at your fingertips. It offers a seamless and intuitive way to customize your ride, record your progress, and stay connected with the Jasion community. Let's take a closer look at what the app offers.",
+            "author": ""
+          }
+        },
+        "video_TH8hik": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=87u4uYq8CQs",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "X-Hunter Adjusting to Maximum Speed (30MPH+)",
+            "title_sz": "h5",
+            "content": "Here is a solution to address the issue of customers unable to reach 30 miles per hour.<br><br>\n\nHere are the steps:<br><br>\n\n1- You'll need to access the settings page on the display. (To access this page, press and hold both the up and down keys for 3 seconds.)<br>\n2- Press the M key to navigate to page P08. You'll notice a number displayed below. The smaller the number, the slower the speed; the larger the number, the faster the speed. The number range is 0-100. To achieve the highest speed, adjust the number to 100.",
+            "author": "RVdaydream"
+          }
+        },
+        "video_YXW9Vk": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=hE6QEso7IaA",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "X-Hunter Adjusting PAS from PAS3 to PAS5",
+            "title_sz": "h5",
+            "content": "Here is a solution to address the issue raised by a customer regarding the PAS (Pedal Assist System) having only 3 levels. <br><br>\nHere are the steps:<br><br>\n\n1- Access the settings page on the display. (To access this page, press and hold both the up and down keys for 3 seconds.)<br>\n2- Press the M key to navigate to page P05. Check if the number below shows as 1. If it displays as 0, press the up key to change it to 1. A value of 0 corresponds to 3 levels, while a value of 1 corresponds to 5 levels.<br>\n*PAS refers to the Pedal Assist System.",
+            "author": "RVdaydream"
+          }
+        }
+      },
+      "block_order": [
+        "video_TMpMtQ",
+        "video_TH8hik",
+        "video_YXW9Vk"
+      ],
+      "name": "Multicolumn grid",
+      "settings": {
+        "pw-overflow-hidden": false,
+        "use_foldable": true,
+        "columns": 3,
+        "carousel_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "heading": "User Guide",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "rgba(0,0,0,0)",
+        "color_text_des": "#939393",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "dowmload_list_hb_QQQxD9": {
+      "type": "dowmload-list-hb",
+      "blocks": {
+        "file_M4ae3W": {
+          "type": "file",
+          "settings": {
+            "title": "Jasion App Quick Start Guide-2025.10.31",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/applicationGuide.pdf?v=1762243243",
+            "type": "PDF"
+          }
+        },
+        "file_Jy4p3C": {
+          "type": "file",
+          "settings": {
+            "title": "EB7 2.0-User Manual-2022.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB7_User_Manual-V2_us.pdf?v=1747792852",
+            "type": "PDF"
+          }
+        },
+        "file_7UQeVW": {
+          "type": "file",
+          "settings": {
+            "title": "EB7 ST-User Manual-2024.07.03",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB7_ST_User_Manual-V2_us.pdf?v=1747792842",
+            "type": "PDF"
+          }
+        },
+        "file_BpiQTJ": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter-User Manual-2023.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_User_Manual-V2_us.pdf?v=1747792831",
+            "type": "PDF"
+          }
+        },
+        "file_pk9E3y": {
+          "type": "file",
+          "settings": {
+            "title": "EB5 Roamer-User Manual-2024.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB5_Roamer_User_Manual-V2_us.pdf?v=1747792693",
+            "type": "PDF"
+          }
+        },
+        "file_HGg9pK": {
+          "type": "file",
+          "settings": {
+            "title": "EB5 Roamer ST-User Manual-2024.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB5_Roamer_ST_User_Manual-V2_us.pdf?v=1747792669",
+            "type": "PDF"
+          }
+        },
+        "file_KNjRLj": {
+          "type": "file",
+          "settings": {
+            "title": "RetroVolt-User Manual-2024.09",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Retrovol_User_Manual-V2_us.pdf?v=1747792933",
+            "type": "PDF"
+          }
+        },
+        "file_jbjLFj": {
+          "type": "file",
+          "settings": {
+            "title": "YR20-User Manual-2025.04",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/YR20_User_Manual-V3.pdf?v=1747794189",
+            "type": "PDF"
+          }
+        },
+        "file_detJYe": {
+          "type": "file",
+          "settings": {
+            "title": "Hunter Pro-User Manual-2025.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Hunter_Pro_User_Manual-V1.pdf?v=1759218888",
+            "type": "PDF"
+          }
+        },
+        "file_tHaC6F": {
+          "type": "file",
+          "settings": {
+            "title": "Thunder-User Manual-2025.07",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Thunder_User_Manual-V1_1.pdf?v=1752851273",
+            "type": "PDF"
+          }
+        },
+        "file_UD79pN": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter-User Manual-2nd Version-2025.07",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_-V1_1.pdf?v=1751622617",
+            "type": "PDF"
+          }
+        },
+        "file_4jwFTt": {
+          "type": "file",
+          "settings": {
+            "title": "RetroVolt Pro-User Manual-2025.09",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Retrovol_Pro_User_Manual_V1_2.pdf?v=1760066786",
+            "type": "PDF"
+          }
+        },
+        "file_fmVaYc": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter ST-User Manual-2025.11.04",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_ST_User_Manual-V2.pdf?v=1762242443",
+            "type": "PDF"
+          }
+        },
+        "file_9XjcUH": {
+          "type": "file",
+          "settings": {
+            "title": "EB5 Plus-User Manual-2024.05.03",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/EB5_PLUS_User_Manual_caea5ad5-bf7a-4162-91b2-c054b5b0570d.pdf?v=1767867568",
+            "type": "PDF"
+          }
+        },
+        "file_7nknQy": {
+          "type": "file",
+          "settings": {
+            "title": "EB5 Max-User Manual-2024.04.03",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB5_MAX_User_Manual-V3.pdf?v=1767867567",
+            "type": "PDF"
+          }
+        },
+        "file_T8qqmp": {
+          "type": "file",
+          "settings": {
+            "title": "EB6-User Manual-2024.03.03",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB6_User_Manual_V1.pdf?v=1767867567",
+            "type": "PDF"
+          }
+        },
+        "file_WmRn9c": {
+          "type": "file",
+          "settings": {
+            "title": "JC1-User Manual-2024.07.03",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_JC1_User_Manual_46d6dd95-f838-4894-a570-a49e226be353.pdf?v=1767867567",
+            "type": "PDF"
+          }
+        }
+      },
+      "block_order": [
+        "file_M4ae3W",
+        "file_Jy4p3C",
+        "file_7UQeVW",
+        "file_BpiQTJ",
+        "file_pk9E3y",
+        "file_HGg9pK",
+        "file_KNjRLj",
+        "file_jbjLFj",
+        "file_detJYe",
+        "file_tHaC6F",
+        "file_UD79pN",
+        "file_4jwFTt",
+        "file_fmVaYc",
+        "file_9XjcUH",
+        "file_7nknQy",
+        "file_T8qqmp",
+        "file_WmRn9c"
+      ],
+      "name": "Download list (hb)",
+      "settings": {
+        "heading": "User Manual",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h1",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "multicolumn_grid_hb_QHpUPB",
+    "multicolumn_grid_hb_dy8fAy",
+    "dowmload_list_hb_QQQxD9"
+  ]
+}

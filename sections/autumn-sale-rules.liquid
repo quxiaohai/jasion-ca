@@ -1,0 +1,235 @@
+{%- assign ss = section.settings -%}
+{%- assign size = section.blocks.size -%}
+<style>
+    .autumn-sale-rules {
+        padding: 76px 0 80px;
+        background-color: #f9f7f6;
+        gap: 27px;
+    }
+    .autumn-sale-rules .page-width {
+        gap: 27px;
+    }
+    .autumn-sale-rules .card {
+        max-width: 409px;
+        flex: 1;
+        position: relative;
+    }
+    .autumn-sale-rules .card .content {
+        text-align: center;
+        width: 100%;
+        height: 230px;
+        background-image: {% if ss.card_bg_color != blank %}{{ ss.card_bg_color }}{% else %}linear-gradient(55deg, rgb(255, 143, 22) 0%, #ffea03 100%), linear-gradient(#f5f0ed, #f5f0ed){% endif %};
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+    }
+    .autumn-sale-rules .card:before, .autumn-sale-rules .card:after {
+        content: "";
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        box-shadow: -20px 20px 25px rgba(255, 132, 0, 0.6);
+        bottom: 15px;
+        left: 20px;
+        z-index: 1;
+        transform: rotate(-7deg);
+    }
+    .autumn-sale-rules .card:after {
+        box-shadow: 20px 20px 25px rgba(255, 132, 0, 0.6);
+        bottom: 15px;
+        right: 20px;
+        left: auto;
+        transform: rotate(7deg);
+    }
+    .autumn-sale-rules .card .image {
+        width: 99px;
+        height: 99px;
+        object-fit: contain;
+        margin: 0 auto;
+        transform: translateY(-19px);
+    }
+    .autumn-sale-rules .card:last-of-type .info .desc {
+        //padding: 15px 40px 0;
+    }
+    .autumn-sale-rules .card .info .name,
+    .autumn-sale-rules .card .info .desc {
+        color: {{ ss.card_text_color }};
+        line-height: 1.2;
+    }
+    .autumn-sale-rules .card .info .name {
+        font-size: {{ 36 | times: ss.card_font_scale | divided_by: 100 }}px;
+    }
+    .autumn-sale-rules .card .info .desc {
+        font-weight: 400;
+        padding: 15px 10px 0;
+        font-size: {{ 18 | times: ss.card_font_scale | divided_by: 100 }}px;
+        box-sizing: border-box;
+        word-break: break-word;
+    }
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-rules {
+            padding: 1.4756944444rem 0 1.1935763889rem;
+        }
+        .autumn-sale-rules .page-width {
+            box-sizing: border-box;
+            gap: 1.7144097222rem 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .autumn-sale-rules .card {
+            flex: auto;
+            max-width: none;
+            width: 45%;
+        }
+
+    {% assign modulo = size | modulo: 2 %}
+    {%- if modulo == 1 -%}
+        .autumn-sale-rules .card:last-of-type {
+            width: 100%;
+        }
+        .autumn-sale-rules .card:last-of-type:before, .autumn-sale-rules .card:last-of-type:after {
+            width: 25%;
+        }
+        .autumn-sale-rules .card:last-of-type .info .desc:last-of-type {
+            padding: 0.3255208333rem 1.0850694444rem 0;
+        }
+    {%- endif -%}
+        .autumn-sale-rules .card .content {
+            height: 6.1631944444rem;
+            border-radius: 0.6510416667rem;
+        }
+        .autumn-sale-rules .card:before, .autumn-sale-rules .card:after {
+            box-shadow: -15px 15px 20px rgba(255, 132, 0, 0.9);
+        }
+        .autumn-sale-rules .card:after {
+            box-shadow: 15px 15px 20px rgba(255, 132, 0, 0.9);
+        }
+        .autumn-sale-rules .card .image {
+            width: 2.5390625rem;
+            height: 2.5390625rem;
+            transform: translateY(-0.4774305556rem);
+        }
+        .autumn-sale-rules .card .info .name {
+            font-size: {{ 0.9114583333 | times: ss.mb_card_font_scale | divided_by: 100 }}rem;
+        }
+        .autumn-sale-rules .card .info .desc {
+            font-size: {{ 0.5642361111 | times: ss.mb_card_font_scale | divided_by: 100 }}rem;
+            padding-top: 0.3255208333rem;
+        }
+    }
+    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-rules' %}
+</style>
+<section class="autumn-sale-rules w-full">
+  <div class="page-width flex-center">
+      {%- for block in section.blocks -%}
+          {%- assign bs = block.settings -%}
+          <div class="card">
+              <div class="content">
+                  {% render 'global-image', preload: ss.image_preload, media_type: 'icon', desktop_img: bs.image_icon, desktop_size: 200 %}
+                  <div class="info">
+                      <div class="name tw-font-bold">{{ bs.title }}</div>
+                      <div class="desc">
+                          {{ bs.text }}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Autumn Sale Rules",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-rules"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#f9f7f6"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "color_background",
+      "id": "card_bg_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "range",
+      "id": "card_font_scale",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "unit": "%",
+      "label": "Desktop card font scale",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "mb_card_font_scale",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "unit": "%",
+      "label": "Mobile card font scale",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#222222"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Rules Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "Up to $1000 Off"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc",
+          "default": "<p>Save big on your favorite eBikes<br />this Events.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

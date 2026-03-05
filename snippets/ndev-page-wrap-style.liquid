@@ -1,0 +1,22 @@
+{% if load_style == true %}<style>{% endif %}
+    #shopify-section-{{ section.id }} {{ class }} {
+        {%- if info.page_color != blank -%}background: {{ info.page_color }};{%- endif -%}
+        {%- if info.pc_page_image != blank -%}
+        background-image: url("{{ info.pc_page_image | img_url: '1920x' }}");
+        background-size: cover;
+        {%- endif -%}
+        {%- if info.page_top != blank -%}padding-top: {{ info.page_top | divided_by: 19.2 }}vw;{%- endif -%}
+        {%- if info.page_bottom != blank -%}padding-bottom: {{ info.page_bottom | divided_by: 19.2 }}vw;{%- endif -%}
+    }
+    @media screen and (max-width: 768px) {
+        #shopify-section-{{ section.id }} {{ class }} {
+            {%- if info.page_top != blank -%} padding-top: {{ info.page_top | divided_by: 7.5 }}vw;
+        {%- endif -%} {%- if info.page_bottom != blank -%} padding-bottom: {{ info.page_bottom | divided_by: 7.5 }}vw;
+        {%- endif -%}
+        {%- if info.mb_page_image != blank -%}
+            background-image: url("{{ info.mb_page_image | img_url: '750x' }}");
+            background-size: cover;
+        {%- endif -%}
+        }
+    }
+{% if load_style == true %}</style>{% endif %}

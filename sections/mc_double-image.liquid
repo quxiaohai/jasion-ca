@@ -1,0 +1,340 @@
+{%- liquid
+    assign ss = section.settings
+    assign cid = section.id | split: '__' | last
+-%}
+<style>
+    .{{ cid }} {
+        padding: 58px 0 40px;
+        background-color: #000000;
+    }
+
+    .{{ cid }} .image-content {
+        gap: 0 36px;
+    }
+
+    .{{ cid }} .image-content .image {
+        aspect-ratio: var(--aspect-ratio);
+        border-radius: 12px;
+    }
+
+    .{{ cid }} .image-content .image-item {
+        width: 100%;
+        flex: 1;
+    }
+
+    .{{ cid }} .image-content .media-info {
+        padding-top: 20px;
+    }
+
+    .{{ cid }} .image-content .media-info .intro {
+        padding-top: 15px;
+        font-size: {{ ss.image_desc_size }}px;
+        color: {{ ss.image_desc_color }};
+    }
+
+    .{{ cid }} .image-content .media-info .name {
+        font-size: {{ ss.image_title_size }}px;
+        color: {{ ss.image_title_color }};
+    }
+
+    @media screen and (max-width: 1023px) {
+        .{{ cid }} {
+            padding: 2.5rem 0;
+        }
+
+        .{{ cid }} .image-content {
+            flex-direction: column;
+            gap: 1rem 0;
+        }
+
+        .{{ cid }} .image-content .image {
+            border-radius: 0.5rem;
+            aspect-ratio: var(--mb-aspect-ratio);
+        }
+
+        .{{ cid }} .image-content .media-info {
+            padding-top: 0.5rem;
+        }
+
+        .{{ cid }} .image-content .media-info .intro {
+            padding-top: 0.5rem;
+            font-size: {{ ss.mb_image_desc_size }}px;
+        }
+
+        .{{ cid }} .image-content .media-info .name {
+            font-size: {{ ss.mb_image_title_size }}px;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="{{ cid }} section--page w-full">
+    {%- render 'section-title', info: ss -%}
+    <div class="image-content page-width flex-between-top">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div
+                style="--aspect-ratio: {{ bs.image.aspect_ratio }};--mb-aspect-ratio: {% if bs.mb_image != blank %}{{ bs.mb_image.aspect_ratio }}{% else %}{{ bs.image.aspect_ratio }}{% endif %};"
+                class="image-item relative overflow-hidden">
+                {%- render 'global-image',
+                    desktop_img: bs.image,
+                    image_size: 750,
+                    mobile_img: bs.mb_image,
+                    mobile_size: 750,
+                    preload: ss.image_preload
+                -%}
+                {%- if bs.show_info -%}
+                    <div class="media-info text-left">
+                        <div class="name fw-700 lh-2">{{ bs.title }}</div>
+                        <div class="intro lh-2">{{ bs.text }}</div>
+                    </div>
+                {%- endif -%}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Double Image",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Double Image"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "image_title_color",
+      "label": "Image title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "image_desc_color",
+      "label": "Image desc color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "image_title_size",
+      "label": "Desktop image title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mb_image_title_size",
+      "label": "Mobile image title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "image_desc_size",
+      "label": "Desktop image desc size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mb_image_desc_size",
+      "label": "Mobile image desc size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_info",
+          "label": "Show Info",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Desc"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

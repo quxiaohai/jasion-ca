@@ -1,0 +1,620 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_timeline-gift {
+        padding: 80px 0;
+    }
+
+    .mc_timeline-gift .timeline-content {
+        max-width: 1376px;
+        box-sizing: border-box;
+        padding: 0 48px;
+        margin: 0 auto;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items {
+        width: 870px;
+        height: 71px;
+        position: relative;
+        box-sizing: border-box;
+        padding: 7px;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items.active-2:before {
+        transform: translateX(100%);
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items.active-2 .image-zoon {
+        left: 75%;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .image {
+        top: 0;
+        left: 0;
+        object-fit: fill;
+        position: absolute;
+        z-index: 4;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .image-zoon {
+        width: auto;
+        height: 92px;
+        object-fit: contain;
+        z-index: 1;
+        left: 25%;
+        transform: translateX(-50%);
+        top: -48px;
+        transition: left 0.5s;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items:after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        background: {{ ss.choose_bg_color }};
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items:before {
+        content: "";
+        height: 58px;
+        width: 50%;
+        border-radius: 100px;
+        background-image: {% if ss.choose_active_bg_color != blank %}{{ ss.choose_active_bg_color }}{% else %}linear-gradient(90deg, rgb(255, 98, 92) 0%, #d83e38 50%, #b11913 100%), linear-gradient(#faebdb, #faebdb){% endif %};
+        box-shadow: 6px 0 16px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 7px;
+        transition: transform 0.5s;
+        z-index: 3;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .tab-item {
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        padding-top: 9px;
+        cursor: pointer;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .tab-item.active {
+        opacity: 1;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .tab-item .name,
+    .mc_timeline-gift .timeline-content .tab-items .tab-item .text {
+        line-height: 1.2;
+        color: {{ ss.choose_text_color }};
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .tab-item .name {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .mc_timeline-gift .timeline-content .tab-items .tab-item .text {
+        padding-top: 2px;
+        font-size: 14px;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-cards {
+        padding-top: 71px;
+        gap: 0 30px;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-cards.hidden {
+        display: none;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card {
+        width: 405px;
+        height: 544px;
+        position: relative;
+        box-sizing: border-box;
+        align-items: flex-start;
+        padding-top: 159px;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .image-backup {
+        position: absolute;
+        object-fit: fill;
+        left: 0;
+        top: 0;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .gift-image {
+        max-width: 100%;
+        height: 215px;
+        align-items: flex-start;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .gift-image .image {
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .card-content {
+        width: 326px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .card-content .image {
+        object-fit: contain;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .card-content .info {
+        text-align: center;
+        padding-top: 26px;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .card-content .info .name {
+        color: {{ ss.card_title_color }};
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+
+    .mc_timeline-gift .timeline-content .timeline-card .card-content .info .desc {
+        padding-top: 10px;
+        font-size: 16px;
+        color: {{ ss.card_desc_color }};
+        line-height: 1.7;
+    }
+
+    @media screen and (max-width: 1340px) {
+        .mc_timeline-gift {
+            padding: 68px 0;
+        }
+
+        .mc_timeline-gift .timeline-content {
+            max-width: 1169.6px;
+            padding: 0 40.8px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items {
+            width: 739.5px;
+            height: 60.35px;
+            padding: 5.95px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .image-zoon {
+            height: 78.2px;
+            top: -40.8px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items:before {
+            height: 49.3px;
+            top: 5.95px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item {
+            padding-top: 7.65px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item .name {
+            font-size: 17px;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item .text {
+            padding-top: 1.7px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-cards {
+            padding-top: 60.35px;
+            gap: 0 25.5px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card {
+            width: 344.25px;
+            height: 462.4px;
+            padding-top: 135.15px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .gift-image {
+            height: 182.75px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .gift-image .image {
+            border-radius: 8.5px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content {
+            width: 277.1px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info {
+            padding-top: 22.1px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info .name {
+            font-size: 17px;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info .desc {
+            padding-top: 8.5px;
+            font-size: 13.6px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_timeline-gift {
+            padding: 1.7361111111rem 0;
+        }
+
+        .mc_timeline-gift .timeline-content {
+            max-width: 100%;
+            padding: 0 3.8888888889vw;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-wrap {
+            width: 100%;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items {
+            width: 100%;
+            max-width: 21.484375rem;
+            height: 2.4739583333rem;
+            padding: 0.1736111111rem;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .image-zoon {
+            height: 2.9296875rem;
+            top: -1.6927083333rem;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items:before {
+            height: 2.1267361111rem;
+            box-shadow: -5px 3px 16px rgba(0, 0, 0, 0.5);
+            top: 0.1519097222rem;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item {
+            padding-top: 0.390625rem;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item .name {
+            font-size: 0.6727430556rem;
+        }
+
+        .mc_timeline-gift .timeline-content .tab-items .tab-item .text {
+            padding-top: 0.0434027778rem;
+            font-size: 0.4774305556rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-cards {
+            padding-top: 1.7361111111rem;
+            gap: 1.6493055556rem 0;
+            flex-direction: column;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card {
+            width: 16.1458333333rem;
+            height: 21.2673611111rem;
+            padding-top: 6.25rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .gift-image {
+            height: 8.5069444444rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .gift-image .image {
+            border-radius: 0.2170138889rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content {
+            width: 12.8689236111rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info {
+            padding-top: 0.9982638889rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info .name {
+            font-size: 0.78125rem;
+        }
+
+        .mc_timeline-gift .timeline-content .timeline-card .card-content .info .desc {
+            padding-top: 0.3472222222rem;
+            font-size: 0.6293402778rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_timeline-gift section--page" id="{{ section.id }}-gift">
+    <div class="timeline-content flex-center-col">
+        <div class="tab-wrap flex-center">
+            <div class="tab-items flex-center{% if ss.timeline_choice == '2' %} active-2{% endif %}" node-name="tabItems">
+                {%- if ss.choose_decorate_image != blank -%}
+                    {%- render 'global-image',
+                            desktop_img: ss.choose_decorate_image,
+                            desktop_class: 'image-zoon',
+                            media_type: 'icon'
+                    -%}
+                {%- endif -%}
+                {%- if ss.choose_bg_image != blank -%}
+                    {%- render 'global-image',
+                            desktop_img: ss.choose_bg_image,
+                            desktop_size: 900,
+                            mobile_img: ss.mb_choose_bg_image,
+                            mobile_size: 750,
+                            media_type: 'icon'
+                    -%}
+                {%- endif -%}
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <div node-name="tab" class="tab-item{% if ss.timeline_choice contains forloop.index %} active{% endif %}">
+                        <div class="name">{{ bs.title }}</div>
+                        <div class="text">{{ bs.date_desc }}</div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div node-name="card" class="timeline-cards flex-center{% unless ss.timeline_choice contains forloop.index %} hidden{% endunless %}">
+                {%- for v in (1..3) -%}
+                    {%- liquid
+                        assign bg_image = 'card' | append: v | append: '_bg_image'
+                        assign gift_image = 'card' | append: v | append: '_gift_image'
+                        assign card_title = 'card' | append: v | append: '_title'
+                        assign card_desc = 'card' | append: v | append: '_desc'
+                    -%}
+                    <div class="timeline-card flex-center">
+                        {%- render 'global-image',
+                                desktop_img: bs[bg_image],
+                                desktop_class: 'image-backup',
+                                sizes: '(min-width: 1024px) 420px, (max-width: 1023px) 600px'
+                        -%}
+                        <div class="card-content">
+                            <div class="gift-image flex-center media">
+                                {%- render 'global-image',
+                                        desktop_img: bs[gift_image],
+                                        sizes: '(min-width: 1024px) 400px, (max-width: 1023px) 500px'
+                                -%}
+                            </div>
+                            <div class="info">
+                                <div class="name">{{ bs[card_title] }}</div>
+                                <div class="desc">{{ bs[card_desc] }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{%- if section.blocks.size > 1 -%}
+    <script>
+        (function () {
+            const node = document.getElementById('{{ section.id }}-gift');
+            const nodeList = $heybike.getNodeList(node);
+            nodeList.tab.forEach((elem, index) => {
+                elem.addEventListener('click', () => {
+                    if (elem.classList.contains('active')) {
+                        return false;
+                    }
+                    if (index === 1) {
+                        nodeList.tabItems.classList.add('active-2');
+                    } else {
+                        nodeList.tabItems.classList.remove('active-2');
+                    }
+                    nodeList.tab.forEach((elem, i) => {
+                        if (i === index) {
+                            nodeList.card[i].classList.remove('hidden');
+                            elem.classList.add('active');
+                        } else {
+                            nodeList.card[i].classList.add('hidden');
+                            elem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        })()
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "MC Timeline Gift",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Timeline Gift"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Timeline"
+    },
+    {
+      "type": "color",
+      "id": "choose_bg_color",
+      "label": "Choose background color",
+      "default": "#131A24"
+    },
+    {
+      "type": "image_picker",
+      "id": "choose_bg_image",
+      "label": "Desktop choose background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_choose_bg_image",
+      "label": "Mobile choose background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "choose_decorate_image",
+      "label": "Desktop decorate image"
+    },
+    {
+      "type": "color",
+      "id": "choose_text_color",
+      "label": "choose text color",
+      "default": "#fdf0e2"
+    },
+    {
+      "type": "color_background",
+      "id": "choose_active_bg_color",
+      "label": "choose active background color"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#b11913"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#0e3e19"
+    },
+    {
+      "type": "select",
+      "id": "timeline_choice",
+      "label": "Timeline choice",
+      "options": [
+        {
+          "value": "1",
+          "label": "Choice 1"
+        },
+        {
+          "value": "2",
+          "label": "Choice 2"
+        }
+      ],
+      "default": "1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gift",
+      "name": "Timeline",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Date",
+          "default": "12.3-12.15"
+        },
+        {
+          "type": "text",
+          "id": "date_desc",
+          "label": "Date desc",
+          "default": "Round 1"
+        },
+        {
+          "type": "header",
+          "content": "Card #1"
+        },
+        {
+          "type": "image_picker",
+          "id": "card1_bg_image",
+          "label": "Card background image"
+        },
+        {
+          "type": "image_picker",
+          "id": "card1_gift_image",
+          "label": "Gift image"
+        },
+        {
+          "type": "text",
+          "id": "card1_title",
+          "label": "Card title",
+          "default": "FREE EBIKE"
+        },
+        {
+          "type": "richtext",
+          "id": "card1_desc",
+          "label": "Card desc",
+          "default": "<p>Place An Order $3,500+ to enter the draw for a free EB7 Ebike. Only for 2 orders!</p>"
+        },
+        {
+          "type": "header",
+          "content": "Card #2"
+        },
+        {
+          "type": "image_picker",
+          "id": "card2_bg_image",
+          "label": "Card background image"
+        },
+        {
+          "type": "image_picker",
+          "id": "card2_gift_image",
+          "label": "Gift image"
+        },
+        {
+          "type": "text",
+          "id": "card2_title",
+          "label": "Card title",
+          "default": "FREE GIFT"
+        },
+        {
+          "type": "richtext",
+          "id": "card2_desc",
+          "label": "Card desc",
+          "default": "<p>Buy Hunter Pro ebike, get Free Gift. (2 X JBL Speakers; 3 X Stanley drinkware)</p>"
+        },
+        {
+          "type": "header",
+          "content": "Card #3"
+        },
+        {
+          "type": "image_picker",
+          "id": "card3_bg_image",
+          "label": "Card background image"
+        },
+        {
+          "type": "image_picker",
+          "id": "card3_gift_image",
+          "label": "Gift image"
+        },
+        {
+          "type": "text",
+          "id": "card3_title",
+          "label": "Card title",
+          "default": "Up to $1000 Off"
+        },
+        {
+          "type": "richtext",
+          "id": "card3_desc",
+          "label": "100% ORDER REFUND.",
+          "default": "<p>100% ORDER REFUND.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

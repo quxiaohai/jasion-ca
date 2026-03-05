@@ -1,0 +1,259 @@
+{%- assign ss = section.settings -%}
+{%- assign size = section.blocks.size -%}
+<style>
+    .mc_winning-list {
+        min-height: 380px;
+        position: relative;
+        background-color: {{ ss.page_color }};
+    }
+
+    @media screen and (min-width: 1024px) {
+        .mc_winning-list {
+            background-image: url("{{ ss.pc_page_image | img_url: '1920x' }}");
+            background-size: cover;
+        }
+    }
+
+    {%- if ss.show_layer_mask -%}
+    .mc_winning-list:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: #000000;
+        opacity: {{ ss.layer_mask_opacity | divided_by: '100.0' }};
+    }
+    {%- endif -%}
+
+    .mc_winning-list .winner-content {
+        gap: 24px;
+        padding: 30px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_winning-list .winner-content .winner-info {
+        width: 42%;
+    }
+    .mc_winning-list .winner-content .winner-info .text-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: {{ ss.title_color }};
+    }
+
+    .mc_winning-list .winner-content .winner-info .text-detail {
+        font-size: 16px;
+        line-height: 1.8;
+        color: {{ ss.description_color }};
+    }
+
+    .mc_winning-list .winner-content .winner-marquee {
+        flex: 1;
+        height: 224px;
+        overflow: hidden;
+    }
+
+    @keyframes marqueeUp {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-{{ size | times: 56 }}px);
+        }
+    }
+
+    .mc_winning-list .winner-content .winner-list {
+        animation: marqueeUp {{ size | times: 800 | divided_by: ss.slide_speed }}ms linear infinite;
+        padding-left: 60px;
+    }
+
+    .mc_winning-list .winner-content .winner-list .winner-item {
+        height: 56px;
+        line-height: 1.2;
+        word-break: break-word;
+        color: {{ ss.content_color }};
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .mc_winning-list .winner-content .winner-list .winner-item strong, .mc_winning-list .winner-content .winner-list .winner-item b {
+        font-weight: 400;
+        color: {{ ss.content_bold_color }};
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_winning-list {
+            background-image: url("{{ ss.mb_page_image | img_url: '750x' }}");
+            background-size: cover;
+        }
+        .mc_winning-list .winner-content {
+            flex-direction: column;
+        }
+
+        .mc_winning-list .winner-content .winner-info {
+            width: 100%;
+        }
+
+        .mc_winning-list .winner-content .winner-info .text-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.9375rem;
+        }
+
+        .mc_winning-list .winner-content .winner-info .text-detail {
+            font-size: 0.875rem;
+        }
+
+        .mc_winning-list .winner-content .winner-marquee {
+            flex: auto;
+            height: 7rem;
+        }
+
+        .mc_winning-list .winner-content .winner-list {
+            padding-left: 0;
+        }
+    }
+</style>
+<div class="mc_winning-list section--page flex-center">
+    <div class="page-width">
+        <div class="winner-content flex-between">
+            <div class="winner-info">
+                <div class="text-title" style="color: {{ss.title_color }};">{{ ss.title }}</div>
+                <div class="text-detail" style="color: {{ ss.description_color }};">
+                    {{ ss.description }}
+                </div>
+            </div>
+            <div class="winner-marquee">
+                <ul class="winner-list">
+                    {%- for block in section.blocks -%}
+                        {%- assign bs = block.settings -%}
+                        <li class="winner-item">
+                           {{ bs.title }}
+                        </li>
+                    {%- endfor -%}
+                    {%- for block in section.blocks -%}
+                        {%- assign bs = block.settings -%}
+                        <li class="winner-item">
+                            {{ bs.title }}
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Mc Winning List",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "Mc Winning List"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "pc_page_image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_page_image",
+      "label": "Mobile background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_layer_mask",
+      "label": "Show layer mask",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "layer_mask_opacity",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Layer mask opacity",
+      "default": 55
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Free Order Winner</p>"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Winning"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Content color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "content_bold_color",
+      "label": "Content bold color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "range",
+      "id": "slide_speed",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.1,
+      "unit": "s",
+      "label": "Slide speed",
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "win",
+      "name": "Winning List",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Content",
+          "default": "<p>Nov. 1 - k********e@gmail.com: <strong>Won a Free Order ($2,244.31 OFF!)</strong></p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

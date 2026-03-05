@@ -1,0 +1,353 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_pas-level {
+        background: #ffffff;
+        padding: 60px 0;
+    }
+    .mc_pas-level .head-name {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+    .mc_pas-level .head-name,
+    .mc_pas-level .items,
+    .mc_pas-level .remark {
+        max-width: 1200px;
+    }
+    .mc_pas-level .items {
+        gap: 12px 0;
+    }
+    .mc_pas-level .items .item {
+        gap: 0 8px;
+        align-items: stretch;
+    }
+    .mc_pas-level .items .name {
+        background-color: #FF981E;
+        border-radius: 8px;
+        font-size: 18px;
+        color: #FFFFFF;
+        width: 120px;
+    }
+    .mc_pas-level .items .progress {
+        flex: 1;
+    }
+    .mc_pas-level .items .speed, .mc_pas-level .items .range {
+        color: #fff;
+        height: 18px;
+        border-radius: 24px;
+        font-size: 12px;
+        padding-right: 12px;
+    }
+    .mc_pas-level .items .speed {
+        margin-bottom: 4px;
+        background: linear-gradient(to right, #88F6FF, #65A8FF);
+    }
+    .mc_pas-level .items .range {
+        background: linear-gradient(to right, #F7C924, #FA3501);
+    }
+    .mc_pas-level .remark {
+        color: #999999;
+        font-size: 14px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_pas-level {
+            padding: 2.5rem 0;
+        }
+        .mc_pas-level .head-name {
+            font-size: 0.75rem;
+            padding-bottom: 1rem;
+            font-weight: 400;
+        }
+        .mc_pas-level .items {
+            gap: 0.75rem 0;
+        }
+        .mc_pas-level .items .item {
+            gap: 0.3125rem 0.5rem;
+            flex-direction: column;
+        }
+        .mc_pas-level .items .name {
+            font-weight: 400;
+            color: #000000 !important;
+            font-size: 0.75rem;
+            width: auto;
+            background: none;
+            justify-content: flex-start;
+        }
+        .mc_pas-level .items .speed, .mc_pas-level .items .range {
+            height: 0.875rem;
+            font-size: 0.5625rem;
+            padding-right: 0.5rem;
+        }
+        .mc_pas-level .items .speed {
+            padding-bottom: 0.125rem;
+        }
+        .mc_pas-level .remark {
+            font-size: 0.625rem;
+            padding-top: 0.875rem;
+            text-align: left;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_pas-level section--page">
+    {% render 'section-title', info: ss %}
+    <div class="level-content w-full flex-center-col page-width">
+        {%- if ss.pas_title != blank -%}
+            <div class="head-name w-full fw-500 lh-2 flex-left" style="color: {{ ss.pas_title_color }};">
+                {{ ss.pas_title }}
+            </div>
+        {%- endif -%}
+        <ul class="items w-full flex-column">
+            {%- for block in section.blocks -%}
+                {%- assign bs = block.settings -%}
+                <li class="item flex-left">
+                    <div class="name flex-center lh-2 fw-700" style="color: {{ ss.pas_name_color }}">{{ bs.title }}</div>
+                    <div class="progress">
+                        <div style="width: {{ bs.speed_width }}%; color: {{ ss.pas_text_color }}; background: {{ ss.speed_gradient_color }};" class="speed flex-right lh-1">{{ bs.speed }}</div>
+                        <div style="width: {{ bs.range_width }}%; color: {{ ss.pas_text_color }}; background: {{ ss.range_gradient_color }};" class="range flex-right lh-1">{{ bs.range }}</div>
+                    </div>
+                </li>
+            {%- endfor -%}
+        </ul>
+        {%- if ss.pas_remark != blank -%}
+            <div class="remark w-full lh-2" style="color: {{ ss.pas_remark_color }};">{{ ss.pas_remark }}</div>
+        {%- endif -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Pas Level",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Pas Level"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Pas content"
+    },
+    {
+      "type": "textarea",
+      "id": "pas_title",
+      "label": "Pas title text",
+      "default": "PAS Levels Corresponding Speed and Range"
+    },
+    {
+      "type": "textarea",
+      "id": "pas_remark",
+      "label": "Pas remark text",
+      "default": "PAS Levels Corresponding Speed and Range"
+    },
+    {
+      "type": "header",
+      "content": "Pas color"
+    },
+    {
+      "type": "color",
+      "id": "pas_title_color",
+      "label": "Pas title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "pas_remark_color",
+      "label": "Pas remark color",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "pas_name_color",
+      "label": "Pas name color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "pas_name_bg_color",
+      "label": "Pas name background color",
+      "default": "#FF981E"
+    },
+    {
+      "type": "color",
+      "id": "pas_text_color",
+      "label": "Pas text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "speed_gradient_color",
+      "label": "Speed gradient color",
+      "default": "linear-gradient(to right, #88F6FF, #65A8FF)"
+    },
+    {
+      "type": "color_background",
+      "id": "range_gradient_color",
+      "label": "Range gradient color",
+      "default": "linear-gradient(to right, #F7C924, #FA3501)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pas",
+      "name": "Pas",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "PAS-1"
+        },
+        {
+          "type": "text",
+          "id": "speed",
+          "label": "Speed text",
+          "default": "Avg.Spd.9.3Mph"
+        },
+        {
+          "type": "range",
+          "id": "speed_width",
+          "label": "Speed width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "text",
+          "id": "range",
+          "label": "Range text",
+          "default": "Range:90Miles"
+        },
+        {
+          "type": "range",
+          "id": "range_width",
+          "label": "Range width",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 80
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

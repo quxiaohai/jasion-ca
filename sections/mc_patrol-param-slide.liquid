@@ -1,0 +1,417 @@
+{%- liquid
+    assign ss = section.settings
+-%}
+<style>
+    .mc_patrol-param-slide {
+        padding: 80px 0;
+        background: #121212;
+        position: relative;
+    }
+    .mc_patrol-param-slide .title {
+        font-size: 75px;
+        color: #FFFFFF;
+        padding-bottom: 24px;
+    }
+    .mc_patrol-param-slide .backdrop-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .mc_patrol-param-slide .slide-tabs {
+        gap: 10px;
+        padding-bottom: 70px;
+    }
+    .mc_patrol-param-slide .button-fold {
+        height: 82px;
+        min-width: 222px;
+        padding: 0 40px;
+        background: linear-gradient(45deg, transparent 24px, #313131 24px);
+        color: #ffffff;
+        font-size: 18px;
+        transition: background 0.2s;
+    }
+    .mc_patrol-param-slide .button-fold.active {
+        background: linear-gradient(45deg, transparent 24px, #ff2501 24px);
+        font-weight: 700;
+    }
+    .mc_patrol-param-slide .button-fold.active:after {
+        border-top-color: #ff2501;
+    }
+    .mc_patrol-param-slide .button-fold:before, .mc_patrol-param-slide .button-fold:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        position: absolute;
+    }
+    .mc_patrol-param-slide .button-fold:before {
+        border-bottom-color: #121212;
+        right: 20px;
+        bottom: 0;
+    }
+    .mc_patrol-param-slide .button-fold:after {
+        border-top-color: #313131;
+        bottom: -10px;
+        right: 30px;
+    }
+    .mc_patrol-param-slide .card-item {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+    .mc_patrol-param-slide .card-item.active {
+        display: flex;
+    }
+    .mc_patrol-param-slide .card-item ul {
+        list-style: none;
+    }
+    .mc_patrol-param-slide .card-item ul li {
+        color: #ffffff;
+        display: flex;
+        line-height: 1.2;
+        padding: 14px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #383838;
+        white-space: nowrap;
+    }
+    .mc_patrol-param-slide .card-item ul li strong {
+        width: 15.42vw;
+        max-width: 300px;
+        font-weight: 700;
+    }
+    .mc_patrol-param-slide .card-item .media-wrap {
+        width: 48%;
+        aspect-ratio: 4/3;
+    }
+    .mc_patrol-param-slide .card-item .media-wrap .image {
+        object-fit: contain;
+    }
+    @media screen and (max-width: 1440px) {
+        .mc_patrol-param-slide {
+            padding: 72px 0;
+        }
+        .mc_patrol-param-slide .slide-tabs {
+            padding-bottom: 77px;
+        }
+        .mc_patrol-param-slide .text-content .card-item .info-wrap ul li {
+            padding: 13px 0;
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_patrol-param-slide {
+            padding: 2.5rem 0;
+        }
+        .mc_patrol-param-slide .title {
+            font-size: 1.34375rem;
+            padding-bottom: 0.9375rem;
+        }
+        .mc_patrol-param-slide .slide-tabs {
+            gap: 0.21875rem;
+            padding-bottom: 1.75rem;
+        }
+        .mc_patrol-param-slide .button-fold {
+            height: 1.875rem;
+            min-width: 5rem;
+            padding: 0 0.9375rem;
+            background: linear-gradient(45deg, transparent 9px, #313131 9px);
+            font-size: 0.625rem;
+        }
+        .mc_patrol-param-slide .button-fold.active {
+            background: linear-gradient(45deg, transparent 9px, #ff2501 9px);
+        }
+        .mc_patrol-param-slide .button-fold:before, .mc_patrol-param-slide .button-fold:after {
+            border-width: 2px;
+        }
+        .mc_patrol-param-slide .button-fold:before {
+            right: 10px;
+        }
+        .mc_patrol-param-slide .button-fold:after {
+            border-width: 3px;
+            bottom: -5px;
+            right: 13px;
+        }
+        .mc_patrol-param-slide .card-item {
+            flex-direction: column;
+        }
+        .mc_patrol-param-slide .card-item ul {
+            width: 100%;
+            list-style: none;
+            padding: 0 1.25rem;
+        }
+        .mc_patrol-param-slide .card-item ul li {
+            padding: 0.5625rem 0;
+            font-size: 0.625rem;
+        }
+        .mc_patrol-param-slide .card-item ul li strong {
+            width: 50%;
+            max-width: none;
+        }
+        .mc_patrol-param-slide .card-item .media-wrap {
+            margin-bottom: 0.75rem;
+            width: 100%;
+            aspect-ratio: 4/3;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_patrol-param-slide section--page w-full" id="{{ section.id }}-slide">
+    {%- if ss.pc_image != blank -%}
+        {%- render 'global-image',
+            desktop_img: ss.pc_image,
+            mobile_img: ss.mb_image,
+            desktop_class: 'backdrop-image'
+        -%}
+    {%- endif -%}
+    <div class="text-content relative z-2 w-full page-width">
+        {%- if ss.show_title -%}
+            <div class="title font-rushblade lh-2">{{ ss.title }}</div>
+        {%- endif -%}
+        {%- if section.blocks.size > 1 -%}
+            <div class="slide-tabs hide-scroll-bar flex-left">
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <button
+                        is="magnet-button"
+                        data-proxy="tab"
+                        node-name="tab"
+                        data-index="{{ forloop.index0 }}"
+                        class="button-fold flex-center relative {% if forloop.first %}active{% endif %}">
+                        {{ bs.title }}
+                    </button>
+                {%- endfor -%}
+            </div>
+        {%- endif -%}
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <animate-element
+                node-name="panel"
+                data-repeat
+                class="card-item{% if forloop.first %} active{% endif %} w-full flex-between">
+                {%- liquid
+                    assign width = 900
+                    assign image_ratio = '5/3'
+                    assign show_size = false
+                    if bs.param_text == blank
+                        assign width = 1440
+                        assign show_size = true
+                    endif
+                    if bs.image_ratio != blank
+                        assign image_ratio = bs.image_ratio
+                    endif
+                -%}
+                <div class="media-wrap {% if bs.param_text == blank %}fill{% endif %} relative"
+                     style="--image-ratio: {{ image_ratio }};">
+                    {%- render 'global-image',
+                        desktop_img: bs.pc_image,
+                        desktop_size: width,
+                        mobile_img: bs.mb_image,
+                        mobile_size: 750,
+                        show_size: show_size
+                    -%}
+                </div>
+                {%- if bs.param_text != blank -%}
+                    {{ bs.param_text }}
+                {%- endif -%}
+            </animate-element>
+        {%- endfor -%}
+    </div>
+</div>
+{%- if section.blocks.size > 1 -%}
+    <script>
+        $heybike.tabSwitch({
+            root: document.getElementById('{{ section.id }}-slide'),
+            device: 'mobile'
+        });
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "MC Patrol Param Slide",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Patrol Param Slide"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "pc_image",
+      "label": "Desktop backdrop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_image",
+      "label": "Mobile backdrop image"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Title</p>"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Slide tab"
+    },
+    {
+      "type": "color",
+      "id": "tab_color",
+      "label": "Tab text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_color",
+      "label": "Tab active text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_bg_color",
+      "label": "Tab background color",
+      "default": "#df1cf1"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_bg_color",
+      "label": "Tab active background color",
+      "default": "#f8e737"
+    },
+    {
+      "type": "header",
+      "content": "Slide card"
+    },
+    {
+      "type": "range",
+      "id": "param_text_size",
+      "label": "Desktop param text size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mb_param_text_size",
+      "label": "Mobile param text size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 9
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Mobile card background color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "param_text_color",
+      "label": "Param text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#383838"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab title"
+        },
+        {
+          "type": "image_picker",
+          "id": "pc_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_image",
+          "label": "Mobile image"
+        },
+        {
+          "type": "text",
+          "id": "image_ratio",
+          "label": "Image ratio(w/h)",
+          "default": "5/3"
+        },
+        {
+          "type": "richtext",
+          "id": "param_text",
+          "label": "Param text",
+          "default": "<ul><li><strong>Motor</strong>52V 4160W Mid Drive Motor</li></ul>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

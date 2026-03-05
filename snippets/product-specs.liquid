@@ -1,0 +1,23 @@
+
+<div class="product-icons tw-mt-8 -md:tw-mb-6 {% if show_on == "mb" %} md:tw-hidden -md:tw-block {% else %} -md:tw-hidden {% endif %}">
+    <div class="tw-grid tw-grid-cols-3 md:tw-gap-6 tw-gap-x-1 tw-gap-y-3 tw-py-6 md:tw-px-3 tw-rounded-2xl">
+      {% for i in ( 0..specs.title_list.value.size ) limit: section.settings.specs_limit %}
+        {% if specs.title_list.value[i] != blank %}
+        <div class="product-icon tw-col-span-1">
+          <div class="tw-flex tw-gap-2 tw-items-center ">
+            {% for url in specs.icon_list.value %}
+            {% assign i_2 = forloop.index | minus: 1 %}
+            {% if i_2 == i and url != blank%}
+              {{- url | image_url: width: url.width | image_tag: loading: 'lazy', class: 'tw-w-8 tw-h-8 md:tw-w-12 md:tw-h-12' -}} 
+            {% endif %}
+            {% endfor %}
+            <div>
+              <p class="md:tw-text-xs tw-text-xs tw-text-viGray-500">{{ specs.content_list.value[i] }}</p>
+              <p class="md:tw-text-sm tw-font-semibold tw-text-xs tw-leading-tight">{{ specs.title_list.value[i] }}</p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>

@@ -1,0 +1,138 @@
+<style>
+  {%- for block in section.blocks -%}
+    #shopify-block-{{ block.id }} {
+      {%- render 'section-variables', section: block -%}
+    }
+  {%- endfor -%}
+</style>
+<drawer-element id="drawer_{{section.settings.heading | handle}}" class="drawer drawer--end z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-label="{{ section.settings.heading | escape }}"
+  data-section-id="{{ section.id }}"
+  shopify-design-mode
+  hidden
+>
+  <overlay-element class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none" aria-controls="drawer_{{section.settings.heading | handle}}" aria-expanded="false"></overlay-element>
+  <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
+    <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative">
+      <span class="drawer__title heading lg:text-3xl text-2xl leading-none tracking-tight">{{ section.settings.heading | escape }}</span>
+      <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center" type="button" is="hover-button" aria-controls="drawer_{{section.settings.heading | handle}}" aria-expanded="false" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">
+          {%- render 'icon', icon: 'close', size: 'sm' -%}
+        </span>
+      </button>
+    </gesture-element>
+    <div class="drawer__content opacity-0 invisible flex flex-col h-full grow shrink">
+      <div class="drawer__scrollable relative flex flex-col gap-5 md:gap-7 grow shrink">
+        {%- if section.blocks.size > 0 -%}
+          <div class="drawer-list grid gap-4 md:gap-5">
+            {%- liquid
+              assign with_gradient = false
+              if section.settings.gradient_highlight != blank and section.settings.gradient_highlight != 'rgba(0,0,0,0)'
+                assign with_gradient = true
+              endif
+            -%}
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {% when 'content' %}
+                  <div>
+                    {{- block.settings.content -}}
+                  </div>
+                {% when 'table' %}
+                  <div>
+                    {% assign list_arr = block.settings.list  | strip | newline_to_br | strip_newlines | split: "<br />"  %}
+                    <table class="tw-w-full tw-table-sm">
+                      {% for parts in list_arr %}
+                        {% assign is_even = forloop.index0 | modulo: 2 %}
+                        <tr {% if is_even == 0 %}class="tw-bg-viGray-200"{% endif %}>
+                          <td>{{ parts | split: '|' | first }}</td>  
+                          <td>{{ parts | split: '|' | last }}</td>
+                        </tr>
+                      {% endfor %}
+                    </table>
+                  </div>
+                {% when 'img' %}
+                  {% for i in (1..3) %}
+                    {% assign img_key = 'img_' | append: i %}
+                    {% if block.settings[img_key] != blank %}
+                    <div>
+                        {{ block.settings[img_key] | image_url: width: '500' | image_tag: width: '500'}} 
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                {% endcase %}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</drawer-element>
+
+{% schema %}
+{
+  "name": "Drawer content (hb)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.global.settings.heading.label",
+      "default": "Specs"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "name": "Table",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "list",
+          "label": "List content",
+          "default": "Information"
+        }
+      ]
+    },
+    {
+      "type": "img",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Image 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Drawer content (hb)",
+    }
+  ]
+}
+{% endschema %}

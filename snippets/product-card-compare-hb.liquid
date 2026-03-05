@@ -1,0 +1,194 @@
+{%- comment -%}
+  Renders a product card
+
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  - image_ratio: {String} Size of the product image card. Values are "square", "landscape" and "portrait". Default is "square" (optional)
+  - image_fill: {Boolean} Zoom image to fill space. Default: false (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - show_rating: {Boolean} Show the product rating. Default: false
+  - show_quick_add: {Boolean} Show the quick add button.
+  - show_color_swatches: {Boolean} Show the color swatches.
+  - show_save_amount: {Boolean} Show save amount.
+  - amount_type: {String} Save amount type.
+  - product_id: {String} The ID of the current product.
+  - section_id: {String} The ID of the section that contains this card.
+
+  Usage:
+{%- endcomment -%}
+
+  {%- liquid
+    assign featured_media = product.featured_media
+
+    assign product_url = product.url | within: collection
+    if settings.product_disable_collection_portion
+      assign product_url = product.url
+    endif
+  -%}
+  <div class="card product-card product-card-hb product-card-compare-hb !tw-border-none product-card-hb-2 tw-bg-transparent product-card--{{ settings.card_style }}{% if settings.card_border_thickness > 0 %}  product-card--thickness{% endif %}{% unless featured_media %} no-media{% endunless %}{% if product.available and show_quick_add and mobile_quick_add %} mobile:with-quick-add{% endif %} flex flex-col leading-none relative overflow-hidden">
+  
+
+  {%- if featured_media -%}
+      <div class="product-card__media relative h-auto aspect-{{ image_ratio }}">
+          
+          {% comment %} {%- if show_rating -%}
+          {%- liquid
+              assign rating_max = 5
+          
+              if product.metafields.reviews.rating.value != blank and product.metafields.reviews.rating_count.value > 0
+              assign rating_value = product.metafields.reviews.rating.value.rating | round: 1
+              assign rating_count = product.metafields.reviews.rating_count.value
+              assign rating_max = product.metafields.reviews.rating.value.scale_max
+              elsif show_empty
+              assign rating_value = 0.0
+              assign rating_count = 0
+              elsif show_placeholder
+              assign rating_value = 4.5
+              assign rating_count = 2
+              else
+              assign hide_rating = true
+              endif
+          -%}
+          
+          {%- endif -%} {% endcomment %}
+  
+  
+          {%- unless featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}
+          {%- if show_secondary_image and product.media.size > 1 -%}
+              <card-slider-media slider-media-id="card-slider-{{ product.id }}" class="product-card__carousel tw-flex tw-h-full" thumbnail-mode="click">
+  
+                  {% assign colors = '' %}
+                  {% for variant in product.variants %}
+                  {% if variant.options[0] != blank %}
+                      {% unless colors contains variant.options[0] %}
+                      {% assign colors = colors | append: variant.options[0] | append: ',' %}
+                      {% endunless %}
+                  {% endif %}
+                  {% endfor %}
+                  {% assign colors = colors | split: ',' %}
+                  {% for color in colors %}
+                  {% for variant in product.variants %}
+                      {% if variant.options[0] == color %}
+                      {% assign media = variant.image %}
+                      {% comment %} <div  class="media media--height{% unless image_fill %} media--contain{% endunless %} w-full h-full overflow-hidden"> {% endcomment %}
+                      <div class="media media--height {% unless image_fill %}media--contain{% endunless %} ">
+                          <a href="{{ product.url }}">
+                          {% if media %}
+                            {{- media | image_url: width: '500' | image_tag: loading: 'lazy', widths: '500', is: 'lazy-image',class:"tw-block" -}}
+                          {% else %}
+                            {{- product.featured_media | image_url: width: '500' | image_tag: loading: 'lazy', widths: '500', is: 'lazy-image',class:"tw-block" -}}
+                          {% endif %}
+                          </a>
+                      </div>
+                      {% break %}
+                      {% endif %}
+  
+                  {% endfor %}
+                  {% endfor %}
+  
+  
+              </card-slider-media>
+          {%- endif -%}
+          {%- endunless -%}
+  
+  
+  
+      </div>
+      {%- else -%}
+      <div class="product-card__media h-auto overflow-hidden">
+          <span class="block aspect-{{ image_ratio }}"></span>
+      </div>
+  {%- endif -%}
+    <div class="product-card__content !tw-p-0 flex flex-col{% if featured_media %} justify-start text-{{ settings.card_text_alignment }}{% else %} justify-center items-center absolute top-0 left-0 w-full h-full{% endif %}">
+      {%- if show_color_swatches -%}
+        {%- liquid
+          assign swatch_trigger_list = 'products.general.color_swatch_trigger' | t | downcase | split: ','
+          assign swatch_file_extension = 'png'
+          assign color_count = 0
+        -%}
+        {%- for option in product.options_with_values -%}
+          {%- liquid
+            assign is_color = false
+            assign option_name = option.name | downcase
+            for trigger in swatch_trigger_list
+              assign swatch_trigger = trigger | strip
+              if option_name contains swatch_trigger
+                assign is_color = true
+              elsif swatch_trigger == 'color' and option_name contains 'colour'
+                assign is_color = true
+              endif
+
+              if is_color == true
+                break
+              endif
+            endfor
+          -%}
+          {%- if is_color -%}
+            {%- liquid
+              assign option_index = forloop.index0
+              assign values = ''
+              assign max_color_count = settings.product_max_color_swatches
+            -%}
+              <ul slider-thumbnail-id="card-slider-{{ product.id }}" class="card-swatches-hb tw-mx-auto swatches swatches--{{ settings.rounded_swatch }}{% if settings.product_color_swatch_type == 'variant' %} swatches--variant{% endif %} swatches--{{ product.id }} inline-flex items-start gap-4">
+                
+                {%- for variant in product.variants -%}
+                  {%- assign value = variant.options[option_index] %}
+                  {%- unless values contains value -%}
+                    {%- liquid
+                      assign values = values | join: ',' | append: ',' | append: value | split: ','
+                      assign color_count = color_count | plus: 1
+                      assign color_title = product.title | append: ' - ' | append: value
+                      assign color_url = variant.url | within: collection
+                      if settings.product_disable_collection_portion
+                        assign color_url = variant.url
+                      endif
+
+                      assign swatch = blank
+                      if value.swatch != blank
+                        assign swatch = value.swatch
+                      endif
+
+                      if settings.product_color_swatch_type == 'variant' and variant.image
+                        assign swatch = variant
+                      endif
+                    -%}
+                    {%- if color_count <= max_color_count -%}
+                      <li class="{% if forloop.first %} active {% endif %}">
+                        {%- render 'swatch',  title: color_title, value: value, file_extension: swatch_file_extension, swatch: swatch -%}
+                      </li>
+                    {%- endif -%}
+                  {%- endunless -%}
+                {%- endfor -%}
+              </ul>
+              {%- if color_count > max_color_count -%}
+                <a href="{{ product_url }}" class="reversed-link font-medium text-xs text-opacity leading-none tracking-widest" is="hover-link" aria-controls="Quickview-{{ section_id }}-{{ product_id }}" aria-expanded="false">+{{ color_count | minus: max_color_count }}</a>
+              {%- endif -%}
+            {%- if color_count < 1 -%}
+              <style>
+                .swatches--{{ product.id }} { display: none; }
+              </style>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+
+    <div class="tw-grid md:tw-gap-5 tw-gap-2 md:tw-mt-16 tw-mt-8"> 
+      <p class="2xl:tw-text-4xl md:tw-text-3xl tw-text-2xl tw-font-semibold">
+          {{ product.price | money }}
+      </p>
+      <div class="tw-mt-1 tw-compare-atc">
+        <a class="button button--primary tw-py-4" href="{{ product.url }}">
+          Learn more 
+        </a>
+      </div>
+      {% comment %} <p class="">
+        <a class="tw-text-vi tw-flex tw-items-center tw-justify-center tw-text-sm" href="{{ product.url }}">Learn more 
+        {%- render 'icon', icon: 'chevron-right', size: 's' -%}</a>
+      </p> {% endcomment %}
+    </div>
+
+
+  </div>

@@ -1,0 +1,442 @@
+{% assign ss = section.settings %}
+{%- assign size = section.blocks.size -%}
+<style>
+    .mc_photo-wall {
+        padding: 80px 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mc_photo-wall.overlay:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        background: transparent;
+    }
+
+    @keyframes loop-image {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .mc_photo-wall .wall-content .marquee-box {
+        flex: 0 0 auto;
+        min-width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        /*animation: var(--duration) linear 1s infinite normal none running loop-image;*/
+        animation-direction: var(--direction);
+        flex-wrap: nowrap;
+        margin-left: -100vw;
+    }
+
+    .mc_photo-wall .wall-content .marquee-box:hover {
+        /*animation-play-state: paused;*/
+    }
+
+    .mc_photo-wall .wall-content .image {
+        height: 27vw;
+        max-height: 518px;
+        width: auto;
+        aspect-ratio: var(--image_ratio);
+        border-radius: 1.04vw;
+        margin: 0 0.46875vw;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_photo-wall {
+            padding: 2.5rem 0;
+        }
+
+        .mc_photo-wall .wall-content {
+            margin-bottom: 0.6875rem;
+        }
+
+        .mc_photo-wall .wall-content .image {
+            height: 17.5rem;
+            max-height: none;
+            margin: 0 0.3125rem;
+            border-radius: 0.333rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_photo-wall section--page" id="{{ section.id }}-wall">
+    {% render 'section-title', info: ss %}
+    {%- assign size = section.blocks.size -%}
+    {%- assign duration = size | times: 5.5 | times: ss.loop_speed -%}
+    <div class="wall-content flex-left" node-name="scroll">
+        <div node-name="drag" class="flex-left">
+            <div class="marquee-box"
+                 node-name="marquee"
+                 style="--direction: normal; --duration: {{ duration }}s;">
+                {%- for v in (1..4) -%}
+                    <div class="marquee-items flex-left">
+                        {%- for block in section.blocks -%}
+                            {%- liquid
+                                assign bs = block.settings
+                                assign image_ratio = '--image_ratio: 85/100'
+                                if bs.image_ratio != blank
+                                    assign image_ratio = '--image_ratio: ' | append: bs.image_ratio
+                                endif
+                            -%}
+                            {%- render 'global-image', image: block.settings.image, style: image_ratio, sizes: '(min-width: 1024px) 400w, 600w' -%}
+                        {%- endfor -%}
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    (async function () {
+        const node = document.getElementById('{{ section.id }}-wall');
+        const nodeList = $heybike.getNodeList(node);
+        const duration = {{ duration }};
+        const track = nodeList.marquee;
+        let animationTranslate = 0;
+        let currentTranslate = 0; // 当前手动位移量
+        let prevTranslate = 0;    // 上一帧的translateX值（用于计算速度）
+        let lastTime;             // 上一帧的时间戳（用于精确计算速度）
+        let velocity = 0;         // 当前速度
+        let animationId = null;   // 动画帧ID
+        let animation = null;
+
+        if ('animate' in document.body) {
+            animation = track.animate([
+                { transform: 'translateX(0px)' },
+                { transform: 'translateX(-50%)' }
+            ], {
+                duration: duration * 1000, // 根据速度调整时长
+                iterations: Infinity, // 无限循环
+                // direction: 'alternate', // 往返运动
+                easing: 'linear'
+            });
+        } else {
+            track.style.animation = `loop-image ${duration}s linear 1s infinite`;
+        }
+
+        // --- 速度计算辅助函数：使用更平滑的低通滤波 ---
+        function updateVelocity(currentPosition, timestamp) {
+            if (lastTime !== undefined) {
+                const deltaTime = timestamp - lastTime;
+                // 避免deltaTime为0导致异常
+                if (deltaTime > 0) {
+                    // 计算瞬时速度 (像素/毫秒)
+                    const instantVelocity = (currentPosition - prevTranslate) / deltaTime;
+                    // 低通滤波平滑速度，避免抖动。系数越小越平滑。
+                    const smoothingFactor = 0.2;
+                    velocity = velocity * (1 - smoothingFactor) + instantVelocity * smoothingFactor;
+                }
+            }
+            prevTranslate = currentPosition;
+            lastTime = timestamp;
+        }
+
+        // --- 惯性动画函数 ---
+        function inertiaAnimation(singleSetWidth, cb) {
+            // 摩擦力系数，决定减速快慢 (0.9-0.99之间效果较自然)
+            const friction = 0.96;
+            // 速度阈值，低于此值停止动画
+            const velocityThreshold = 0.05;
+            // 动画循环函数
+            function animate() {
+                // 应用摩擦力减速
+                velocity *= friction;
+                // 更新位置
+                currentTranslate += velocity;
+                // 边界检测：防止滑出容器
+                if (Math.abs(currentTranslate + animationTranslate) > singleSetWidth) {
+                    currentTranslate = -singleSetWidth - animationTranslate;
+                    velocity = 0; // 撞到边界时速度清零
+                } else if (currentTranslate + animationTranslate >= 0) {
+                    currentTranslate = -animationTranslate;
+                    velocity = 0; // 撞到边界时速度清零
+                }
+
+                // 应用变换
+                nodeList.drag.style.transform = `translateX(${currentTranslate}px)`;
+                // 判断是否继续动画
+                if (Math.abs(velocity) > velocityThreshold) {
+                    // 速度仍足够大，继续下一帧
+                    animationId = requestAnimationFrame(animate);
+                } else {
+                    // 速度已很小，停止动画，并确保停在边界内
+                    velocity = 0;
+                    cb && cb();
+                }
+            }
+
+            // 启动第一帧动画
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // 平滑释放的核心函数
+        function releaseTrack(singleSetWidth) {
+            // 移除拖拽时的手动transform样式，让CSS重新接管
+            track.style.transform = '';
+            // 计算当前位移对“一组图片宽度”取模后的余数
+            // 这个余数就是我们需要的“新起点”的负延迟时间对应的位移量
+            // 我们希望动画从“已经滚动了一部分(remainder)”的状态开始
+            const newPosition = currentTranslate % singleSetWidth;
+
+            // 重置动画：先取消，触发重排，再以新参数启动
+            track.style.animation = 'none';
+            void track.offsetWidth; // 强制重排，确保动画重置生效
+
+            // 重新应用动画，并通过负的animation-delay跳转到指定进度
+            // 计算要跳过的时间（秒）= (已滚动距离 / 总滚动距离) * 总时长
+            const skipTime = (Math.abs(newPosition) / singleSetWidth) * duration;
+            if (animation) {
+                animation.currentTime = skipTime * 1000;
+                animation.play();
+            } else {
+                track.style.animation = `loop-image ${duration}s linear infinite ${-skipTime}s`;
+                track.style.animationPlayState = 'running';
+            }
+            nodeList.drag.style.transform = `translateX(0px)`;
+        }
+
+        function overTrack(singleSetWidth) {
+            cancelAnimationFrame(animationId);
+            if (velocity !== 0) {
+                currentTranslate += animationTranslate;
+                track.style.transform = `translateX(${currentTranslate}px)`;
+                releaseTrack(singleSetWidth);
+                velocity = 0;
+            }
+        }
+
+        const initEvent = (start, move, end, mobile) => {
+            nodeList.scroll.addEventListener(start, e => {
+                e.preventDefault();
+                const pageX = mobile ? e.touches[0].pageX : e.pageX;
+                node.classList.add('overlay');
+                // 关键步骤：计算新的动画起点，实现无缝衔接
+                const singleSetWidth = track.scrollWidth / 2; // 一组图片的宽度（和CSS中一致）
+                overTrack(singleSetWidth);
+                // 关键：获取动画当前的计算值，并立即暂停它
+                const computedStyle = getComputedStyle(track);
+                // 解析动画当前产生的transform矩阵，获取X轴位移
+                const matrix = new DOMMatrixReadOnly(computedStyle.transform);
+                animationTranslate = matrix.m41; // m41 代表矩阵中的水平位移值
+                currentTranslate = 0;
+                if (animation) {
+                    animation.pause();
+                } else {
+                    track.style.animationPlayState = 'paused'; // 暂停CSS动画
+                }
+
+                let _mousemove = (ev) => {
+                    ev.preventDefault();
+                    // 总位移 = 动画已产生的位移 + 本次手动拖拽的位移
+                    currentTranslate = (mobile ? ev.touches[0].pageX : ev.pageX) - pageX;
+                    const moveX = Math.min(-animationTranslate, Math.max(-singleSetWidth - animationTranslate, currentTranslate));
+                    nodeList.drag.style.transform = `translateX(${Math.min(moveX)}px)`;
+                    // 更新速度
+                    updateVelocity(currentTranslate, performance.now());
+                };
+
+                let _mouseup = () => {
+                    document.body.removeEventListener(move, _mousemove);
+                    document.body.removeEventListener(end, _mouseup);
+                    !mobile && document.body.removeEventListener('mouseleave', _mouseup);
+                    _mousemove = undefined;
+                    _mouseup = undefined;
+                    node.classList.remove('overlay');
+                    if (currentTranslate === 0) {
+                        if (animation) {
+                            animation.play();
+                        } else {
+                            track.style.animationPlayState = 'running';
+                        }
+                    } else {
+                        inertiaAnimation(singleSetWidth, () => {
+                            currentTranslate += animationTranslate;
+                            !animation && (track.style.transform = `translateX(${currentTranslate}px)`);
+                            releaseTrack(singleSetWidth);
+                        });
+                    }
+                };
+
+                document.body.addEventListener(move, _mousemove);
+                document.body.addEventListener(end, _mouseup);
+                !mobile && document.body.addEventListener('mouseleave', _mouseup);
+            });
+        }
+
+        initEvent('mousedown', 'mousemove', 'mouseup', false);
+        initEvent('touchstart', 'touchmove', 'touchend', true);
+    })();
+</script>
+{% schema %}
+{
+  "name": "MC Photo Wall",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Photo Wall"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>description</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "range",
+      "id": "loop_speed",
+      "label": "Loop speed",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s",
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_ratio",
+          "label": "Image ratio"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

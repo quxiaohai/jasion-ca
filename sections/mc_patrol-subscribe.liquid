@@ -1,0 +1,342 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_patrol-subscribe {
+        background-color: #000000;
+        padding: 80px 0;
+    }
+    .mc_patrol-subscribe .form-content {
+        padding: 0 31px;
+    }
+    .mc_patrol-subscribe .form-content .title {
+        color: #ffffff;
+        font-size: 50px;
+        word-break: break-word;
+        flex: 1;
+        line-height: 1.16;
+    }
+    .mc_patrol-subscribe .form-content .field {
+        width: 805px;
+        height: 105px;
+        padding-bottom: 5px;
+    }
+
+    @media screen and (min-width: 1024px){
+        .mc_patrol-subscribe .form-content .field {
+            background: url("{{ ss.image | img_url: '900x' }}") no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .mc_patrol-subscribe .form-content .field input {
+        width: 526px;
+        height: 80px;
+        background: none;
+        border: 0 none;
+        line-height: 60px;
+        font-size: 33px;
+        color: #ffffff;
+        padding-left: 69px;
+    }
+    .mc_patrol-subscribe .form-content .field .sub-button {
+        width: 279px;
+        height: 100%;
+        font-size: 29px;
+        color: #ffffff;
+    }
+    .mc_patrol-subscribe .sub-button .btn-text {
+        transition: transform 0.5s;
+    }
+    .mc_patrol-subscribe .sub-button:hover .btn-text {
+        transform: scale(1.1);
+    }
+    @media screen and (max-width: 1540px) {
+        .mc_patrol-subscribe {
+            padding: 68px 0;
+        }
+        .mc_patrol-subscribe .form-content {
+            padding: 0 26px;
+        }
+        .mc_patrol-subscribe .form-content .title {
+            font-size: 3.2467532468vw;
+        }
+        .mc_patrol-subscribe .form-content .field {
+            width: 52.2727272727vw;
+            height: 6.8181818182vw;
+            padding-bottom: 0.3246753247vw;
+        }
+        .mc_patrol-subscribe .form-content .field input {
+            width: 34.1558441558vw;
+            height: 5.1948051948vw;
+            line-height: 3.8961038961vw;
+            font-size: 2.1428571429vw;
+            padding-left: 4.4805194805vw;
+        }
+        .mc_patrol-subscribe .form-content .field .sub-button {
+            width: 18.1168831169vw;
+            font-size: 1.8831168831vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_patrol-subscribe {
+            padding: 2.5rem 0;
+        }
+        .mc_patrol-subscribe .page-width {
+            padding: 0;
+        }
+        .mc_patrol-subscribe .form-wrap {
+            width: 100%;
+        }
+        .mc_patrol-subscribe .form-content {
+            padding: 0 2.5625rem;
+            flex-direction: column;
+            gap: 0.625rem 0;
+        }
+        .mc_patrol-subscribe .form-content .title {
+            font-size: 0.875rem;
+        }
+        .mc_patrol-subscribe .form-content .title br {
+            display: none;
+        }
+        .mc_patrol-subscribe .form-content .field {
+            background: url("{{ ss.mb_image | img_url: '750x' }}") no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 7.443;
+            padding-bottom: 0.15625rem;
+        }
+        .mc_patrol-subscribe .form-content .field input {
+            width: auto;
+            flex: 1;
+            height: 100%;
+            line-height: 1.875rem;
+            font-size: 0.75rem;
+            padding-left: 1.125rem;
+        }
+        .mc_patrol-subscribe .form-content .field .sub-button {
+            width: 34.64%;
+            font-size: 0.75rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<section class="mc_patrol-subscribe section--page">
+    <div class="page-width">
+        <div class="form-content flex-between">
+            {%- if ss.show_title -%}
+                <div class="title desktop-done font-rushblade">{{ ss.title }}</div>
+                <div class="title text-center font-rushblade mobile-done">{{ ss.mb_title }}</div>
+            {%- endif -%}
+            {%- assign form_id = 'patrol-' | append: section.id -%}
+            {%- form 'customer', id: form_id, class: 'form-wrap' -%}
+                <input type="hidden" name="contact[tags]" value="{{ ss.tag }}"/>
+                <input type="hidden" name="contact[context]" value="{{ ss.content }}"/>
+                <div class="field flex-center">
+                    <input
+                        class="default-input"
+                        type="email"
+                        name="contact[email]"
+                        value=""
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        placeholder="{{ ss.placeholder }}"
+                        required=""/>
+                    <button
+                        type="submit"
+                        class="sub-button relative font-rushblade flex-center"
+                        is="hover-button" aria-label="{{ ss.button }}">
+                        <span class="btn-text">{{ ss.button }}</span>
+                    </button>
+                </div>
+                {%- liquid
+                    if form.errors and form.context == context
+                        assign form_errors = form.errors | default_errors
+                        render 'alert', status: 'error', content: form_errors, duration: ss.alert_duration
+                    endif
+                    if form.posted_successfully?
+                        assign success_message = 'general.newsletter.success' | t
+                        render 'alert', status: 'success', content: success_message, duration: ss.alert_duration
+                    endif
+                -%}
+            {%- endform -%}
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "MC Patrol Subscribe",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Patrol Subscribe"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Desktop title",
+      "default": "<p>Secure Your<br/>Early Bird Specials</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "mb_title",
+      "label": "Mobile title",
+      "default": "<p>Secure Your Early Bird Specials</p>"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "pc_title_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mb_title_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Form"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop input background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_image",
+      "label": "Mobile input background image"
+    },
+    {
+      "type": "range",
+      "id": "alert_duration",
+      "label": "Alert hide duration",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button Text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "range",
+      "id": "pc_button_size",
+      "label": "Desktop button size",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "mb_button_size",
+      "label": "Mobile button size",
+      "min": 6,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background color",
+      "default": "#df1cf1"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover_color",
+      "label": "Button background hover color",
+      "default": "#da5ae6"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Tags",
+      "default": "Sub"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content",
+      "default": "Sub"
+    },
+    {
+      "type": "textarea",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "Your email"
+    },
+    {
+      "type": "color",
+      "id": "input_bg_color",
+      "label": "Input background color",
+      "default": "#181818"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border color",
+      "default": "#f8e737"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}

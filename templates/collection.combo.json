@@ -1,0 +1,468 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1920x400_5ee1502e-5059-418d-8408-fcd142f2c9ac.jpg",
+            "image_mobile": "shopify://shop_images/1200x525.jpg",
+            "heading": "",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "subheading": "",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "shopify://products/hunter-pro-combo",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "adapt",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "adapt",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "page_navigation_4gmJVW": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Electric Bikes",
+            "button_url": "shopify://collections/electric-bike"
+          }
+        },
+        "page_navigation_VHimHM": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Combo Sale",
+            "button_url": "shopify://collections/combo-sale"
+          }
+        },
+        "page_navigation_Hbm87a": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Folding Ebike",
+            "button_url": "shopify://collections/folding-ebike"
+          }
+        },
+        "page_navigation_MAMeX9": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Fat Tire Ebike",
+            "button_url": "shopify://collections/fat-tire-ebike"
+          }
+        },
+        "page_navigation_E69Wj4": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Cruiser Ebike",
+            "button_url": "shopify://collections/cruiser-ebike"
+          }
+        },
+        "page_navigation_jaVYT4": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Over Ebike",
+            "button_url": "shopify://collections/step-over-electric-bikes"
+          }
+        },
+        "page_navigation_P8HKdW": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Through Ebike",
+            "button_url": "shopify://collections/step-through-ebikes"
+          }
+        },
+        "page_navigation_3RhgMw": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Outlet",
+            "button_url": "shopify://collections/outlet"
+          }
+        }
+      },
+      "block_order": [
+        "promotion",
+        "page_navigation_4gmJVW",
+        "page_navigation_VHimHM",
+        "page_navigation_Hbm87a",
+        "page_navigation_MAMeX9",
+        "page_navigation_E69Wj4",
+        "page_navigation_jaVYT4",
+        "page_navigation_P8HKdW",
+        "page_navigation_3RhgMw"
+      ],
+      "settings": {
+        "layout": "1",
+        "products_per_page": 50,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": true,
+        "filter_collapsed": false,
+        "filter_type": "sidebar",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": false,
+        "title": "E-Bikes",
+        "title_hidden": false,
+        "title_tag": "h2"
+      }
+    },
+    "rich_text_Qec7Qq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QpkjYe": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Choose Jasion Ebikes?</strong>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_EUj39w": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jasion offers electric bikes for adults—built for the rides people actually take, from commuting and errands to campus trips and weekend exploring. Choose a folding e-bike for easy storage, or a fat-tire option for trails and rougher roads, and enjoy a smooth, confidence-inspiring ride that helps you go farther with less effort.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_fjUK4x": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_QpkjYe",
+        "text_EUj39w",
+        "button_fjUK4x"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_eEMyqk": {
+      "type": "faq",
+      "blocks": {
+        "question_H86tA3": {
+          "type": "question",
+          "settings": {
+            "title": "What is a Jasion ebike combo deal?",
+            "title_tag": "span",
+            "text": "<p>A Jasion combo is a two-bike package designed for riders who want to get on the road together—whether it’s a couple, family members, or friends. It’s a convenient way to purchase two ebikes in one order and enjoy better overall value compared to buying separately.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_bXXCtt": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Which combo should we choose for couples or weekend adventures?</strong>",
+            "title_tag": "span",
+            "text": "<p>If you want stronger performance for longer rides, choose <a href=\"https://www.jasionbike.com/products/jasion%C2%AE-combo-sale-x-hunter-2\" target=\"_blank\"><strong>X-Hunter*2</strong></a>. If your rides are more city-focused, <a href=\"https://www.jasionbike.com/products/combo-sale-eb7-2-0-folding-fat-tire-electric-bike\" target=\"_blank\"><strong>EB7 2.0*2</strong></a> is a practical everyday option. If two riders prefer different styles, the <a href=\"https://www.jasionbike.com/products/jasion-ebike%C2%AE-combo-sale-x-hunter-eb7-2-0\" target=\"_blank\"><strong>X-Hunter + EB7 2.0</strong></a> combo is a great “best of both worlds” pick.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_dUbNnK": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Can we buy two matching ebikes in one order?</strong>",
+            "title_tag": "span",
+            "text": "<p>Yes. Many of our combo options include two of the same model, which makes it easier for two riders to share a similar ride feel, speed expectations, and setup—especially helpful for couples riding together.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_8RczmP": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Can friends or family choose different models in one combo?</strong>",
+            "title_tag": "span",
+            "text": "<p>In some combo packages, you can choose a mixed setup (for example, <strong>X-Hunter + EB7 2.0</strong>) so each rider can match the bike to their preferred terrain and riding habits—great for friends with different preferences.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_7AwQwT": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How does shipping work for combo orders?</strong>",
+            "title_tag": "span",
+            "text": "<p>Combo orders ship directly to your address. Depending on logistics, the bikes may arrive in separate boxes and may be delivered on different days. You’ll receive tracking details for each shipment so you can follow the delivery status clearly.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_6n9wJY": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Do combo purchases include warranty and support?</strong>",
+            "title_tag": "span",
+            "text": "<p>Yes. Combo orders come with the same coverage and customer support as single-bike purchases. If you have questions about setup or riding, our team is available to help so you can start riding together with confidence.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_H86tA3",
+        "question_bXXCtt",
+        "question_dUbNnK",
+        "question_8RczmP",
+        "question_7AwQwT",
+        "question_6n9wJY"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "main-collection",
+    "rich_text_Qec7Qq",
+    "faq_eEMyqk"
+  ]
+}

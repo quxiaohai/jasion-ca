@@ -1,0 +1,423 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1920x400.jpg",
+            "image_mobile": "shopify://shop_images/460x630.jpg",
+            "heading": "Electric Bikes",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "subheading": "It's time to take your adventures to the next level.",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_main_breadcrumbs_aT3xDW": {
+      "type": "mc_main-breadcrumbs",
+      "blocks": {
+        "breadcrumb_zrn4Gc": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Home",
+            "url": "https://www.jasionbike.com/"
+          }
+        },
+        "breadcrumb_p8V6rL": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Accessories",
+            "url": "shopify://collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_zrn4Gc",
+        "breadcrumb_p8V6rL"
+      ],
+      "name": "MC Main Breadcrumbs",
+      "settings": {
+        "page_color": "",
+        "pc_page_left": 20,
+        "pc_page_right": 20,
+        "pc_page_top": 20,
+        "pc_page_bottom": 20,
+        "mb_page_left": 20,
+        "mb_page_right": 20,
+        "mb_page_top": 20,
+        "mb_page_bottom": 20,
+        "text_color": "#3c3f42",
+        "hover_text_color": "#ff981d",
+        "pc_align": "center",
+        "mb_align": "center",
+        "pc_size": 15,
+        "pc_weight": 400,
+        "mb_size": 14,
+        "mb_weight": 400
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "promotion"
+      ],
+      "settings": {
+        "layout": "2",
+        "products_per_page": 25,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": false,
+        "filter_collapsed": false,
+        "filter_type": "drawer",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": false,
+        "title": "E-Bikes",
+        "title_hidden": false,
+        "title_tag": "h2"
+      }
+    },
+    "faq_atNR83": {
+      "type": "faq",
+      "blocks": {
+        "question_ztTR4d": {
+          "type": "question",
+          "settings": {
+            "title": "What accessories do I need for an electric bike?",
+            "title_tag": "h3",
+            "text": "<p>The best ebike accessories depend on how you ride. For commuting, start with a secure lock, a phone mount, and mirrors for visibility. For errands and travel, add a front/rear basket or pannier bag for cargo and daily storage.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_xN8RTP": {
+          "type": "question",
+          "settings": {
+            "title": "Are Jasion accessories compatible with all Jasion ebike models?",
+            "title_tag": "h3",
+            "text": "<p>Many accessories are designed to be broadly compatible across Jasion ebikes (like locks, mirrors, and phone mounts). Model-specific items—especially <strong>battery packs</strong>—must match your exact bike series. Always confirm compatibility on the product page before ordering.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_FrfnrY": {
+          "type": "question",
+          "settings": {
+            "title": "Do you sell replacement batteries and extra battery packs?",
+            "title_tag": "h3",
+            "text": "<p>Yes. We offer battery packs for specific models/series (for example, X-Hunter, Hunter Pro, and EB7 series battery packs) so you can extend range or keep a spare for longer rides.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_xmky3P": {
+          "type": "question",
+          "settings": {
+            "title": "How do I choose between a front basket, rear basket, and pannier bag?",
+            "title_tag": "h3",
+            "text": "<p>Choose based on what you carry and how often you ride with cargo. A <strong>front basket</strong> is great for quick access items, a <strong>rear basket</strong> is ideal for larger loads, and a <strong>rack pannier bag</strong> keeps items protected and stable—especially for commuting.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_hj4Dpj": {
+          "type": "question",
+          "settings": {
+            "title": "Can I carry a pet using Jasion accessories?",
+            "title_tag": "h3",
+            "text": "<p>We offer a dedicated <a href=\"https://www.jasionbike.com/products/copy-of-jasion%C2%AEbike-rack-pannier-bag\" target=\"_blank\"><strong>pet bike basket</strong></a> designed for riders who want to bring a small companion along. For the safest experience, follow the product instructions and ensure the basket is securely mounted before every ride.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_AjDfTx": {
+          "type": "question",
+          "settings": {
+            "title": "What’s the best lock for an ebike?",
+            "title_tag": "h3",
+            "text": "<p>For higher theft-risk areas, a U-lock style is typically a strong choice. For everyday stops, a combination lock can be convenient. No matter which you choose, lock the frame to a fixed object and park in a visible, well-lit area when possible.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_VQrVyz": {
+          "type": "question",
+          "settings": {
+            "title": "Are mirrors and phone mounts worth it for commuting?",
+            "title_tag": "h3",
+            "text": "<p>Yes—mirrors improve situational awareness, and a phone mount helps with navigation without stopping. For daily riders, these two upgrades are among the simplest ways to make commuting safer and more convenient.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_NV4Bek": {
+          "type": "question",
+          "settings": {
+            "title": "Do accessories require professional installation?",
+            "title_tag": "h3",
+            "text": "<p>Most common accessories (baskets, locks, mirrors, phone mounts, bags) are designed for straightforward installation. For model-specific parts or fit-critical accessories, follow the instructions on the product page and contact support if you have questions.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_YhYd8Q": {
+          "type": "question",
+          "settings": {
+            "title": "Can I improve passenger comfort with accessories?",
+            "title_tag": "h3",
+            "text": "<p>Yes. If you ride with a passenger setup, comfort upgrades like a rear seat accessory can improve stability and support. Always follow the product guidance and confirm your bike’s payload limits before riding with passengers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_zaYRat": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know which accessory is right for my riding style?",
+            "title_tag": "h3",
+            "text": "<p>Start with your primary use case: <strong>commuting</strong> (lock + mirrors + phone mount), <strong>cargo/errands</strong> (basket or pannier), <strong>longer rides</strong> (spare battery pack), or <strong>family/pet trips</strong> (pet basket / seat accessories). If you’re unsure, pick one “safety” upgrade and one “cargo” upgrade first—those usually deliver the biggest day-to-day benefit.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_ztTR4d",
+        "question_xN8RTP",
+        "question_FrfnrY",
+        "question_xmky3P",
+        "question_hj4Dpj",
+        "question_AjDfTx",
+        "question_VQrVyz",
+        "question_NV4Bek",
+        "question_YhYd8Q",
+        "question_zaYRat"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "mc_main_breadcrumbs_aT3xDW",
+    "main-collection",
+    "faq_atNR83"
+  ]
+}

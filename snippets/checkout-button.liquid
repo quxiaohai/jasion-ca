@@ -1,0 +1,37 @@
+<button id="{{ section.id }}-checkout"
+        style="--color-button-background: 0 0 0;--color-button-text: 255 255 255;"
+        class="button product-form__submit button--primary" type="button" is="hover-button">
+    <span class="btn-fill" data-fill></span>
+    <span class="btn-text">
+      {{ 'cart.general.checkout' | t }}
+    </span>
+</button>
+<script>
+    (function () {
+        const button = document.getElementById('{{ section.id }}-checkout');
+        button && button.addEventListener('click', function () {
+            const form = document.querySelector('#{{ form_id }}');
+            const formData = new FormData(form);
+            let allFormData = {items: [], button};
+            const checkedBundles = document.querySelectorAll(".bundled_sale input[name='bundles']:checked:not(.unsubmit)");
+            if (checkedBundles && checkedBundles.length > 0) {
+                checkedBundles.forEach((item) => {
+                    const parentDiv = item.closest('.bundle-item');
+                    const quantityInput = parentDiv.querySelector('.quantity__input');
+                    const quantity = quantityInput ? parseInt(quantityInput.value) || 1 : 1;
+                    allFormData.items.push({id: item.value, quantity: quantity});
+                });
+            }
+            const json = {};
+            for (const [name, value] of formData.entries()) {
+                if (name === 'id' || name === 'quantity') {
+                    json[name] = value;
+                } else {
+                    allFormData[name] = value;
+                }
+            }
+            allFormData.items.push(json);
+            $heybike.addToCart(allFormData, true);
+        });
+    })();
+</script>

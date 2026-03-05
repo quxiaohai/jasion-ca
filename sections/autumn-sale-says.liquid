@@ -1,0 +1,285 @@
+{%- assign ss = section.settings -%}
+<style>
+    .autumn-sale-says {
+        padding: 58px 0 40px;
+        background-color: #f9f7f6;
+    }
+
+    .autumn-sale-says .title {
+        font-size: 36px;
+        color: #000000;
+        padding-bottom: 45px;
+    }
+
+    .autumn-sale-says .autumn-content .slider {
+        margin: 0 auto;
+    }
+
+    .autumn-sale-says .autumn-content .say-text {
+        color: #666666;
+        font-size: 18px;
+        text-align: center;
+        word-break: break-word;
+        max-width: 873px;
+        margin: 0 auto;
+        padding: 0 48px;
+        box-sizing: border-box;
+    }
+
+    .autumn-sale-says .slideshow-control {
+        max-width: 873px;
+        margin: 60px auto 0;
+    }
+
+    .autumn-sale-says .slideshow-control .auto-blog.on .image {
+        filter: grayscale(0);
+    }
+
+    .autumn-sale-says .slideshow-control .auto-blog .image {
+        filter: grayscale(100%);
+        max-height: 92px;
+        width: auto;
+        object-fit: contain;
+        transition: filter 0.5s ease-in-out;
+        display: none;
+    }
+
+    .autumn-sale-says .slideshow-control .auto-blog[aria-current="true"] .image {
+        display: inline-block;
+    }
+
+    .autumn-sale-says .slideshow-control .flickity-page-dots {
+        margin-block: 0;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots {
+        gap: 0 30px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .button {
+        --buttons-width: 46px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .button .btn-text .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .indicators {
+        gap: 0 11px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot {
+        width: 40px;
+        margin: 0 5px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot:before {
+        height: 4px;
+        width: 40px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true] {
+        width: 80px;
+    }
+
+    .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true]:before {
+        width: 80px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .autumn-sale-says {
+            padding: 1.953125rem 0 0.8680555556rem;
+        }
+
+        .autumn-sale-says .title {
+            font-size: 0.8680555556rem;
+            padding-bottom: 1.6059027778rem;
+        }
+
+        .autumn-sale-says .autumn-content .slider {
+            margin: 0 auto;
+            width: 100%;
+            padding-inline: 0;
+            margin-inline: 0;
+            scroll-padding-inline: 0;
+        }
+
+        .autumn-sale-says .autumn-content .card-grid {
+            --slider-item-width: 100%;
+            --card-grid-gap: 0;
+        }
+
+        .autumn-sale-says .autumn-content .say-text {
+            font-size: 0.6076388889rem;
+            max-width: 100%;
+            padding: 0 1.3454861111rem;
+            line-height: 2.2;
+        }
+
+        .autumn-sale-says .slideshow-control {
+            max-width: 100%;
+            margin: 0.4340277778rem auto 0;
+            flex-direction: column;
+            gap: 12px 0;
+        }
+
+        .autumn-sale-says .slideshow-control .auto-blog .image {
+            max-height: 3.5373263889rem;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots {
+            gap: 0;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .tw-slider-pointers {
+            display: none;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .indicators {
+            gap: 0 0.2387152778rem;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot {
+            width: 1.3020833333rem;
+            margin: 0 5px;
+            height: 0.3255208333rem;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot:before {
+            height: 0.3255208333rem;
+            width: 1.3020833333rem;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true] {
+            width: 2.6041666667rem;
+        }
+
+        .autumn-sale-says .slideshow-control .tw-mobile--dots .flickity-page-dot[aria-current=true]:before {
+            width: 2.6041666667rem;
+        }
+    }
+
+    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-says' %}
+</style>
+<section class="autumn-sale-says w-full">
+    {%- if ss.show_heading -%}
+        <div class="title tw-text-center tw-leading-[1.2] tw-font-bold">{{ ss.heading }}</div>
+    {%- endif -%}
+    <div class="autumn-content w-full tw-relative">
+        <slider-element id="Slider-{{ section.id }}" class="grid slider slider--desktop slider--tablet"
+                        selector=".card-grid>.slider-item">
+            <motion-list class="card-grid card-grid--1 mobile:card-grid--1 grid">
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <div class="slider-item card">
+                        <div class="say-text tw-leading-normal">
+                            {{ bs.intro }}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </motion-list>
+        </slider-element>
+        <div class="slideshow-control w-full flex-between">
+            <slider-dots aria-controls="Slider-{{ section.id }}" data-event-selector=".auto-blog" data-event-active="on">
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <div class="auto-blog tw-cursor-pointer" data-index="{{ forloop.index }}"
+                         aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                        {% render 'global-image', desktop_img: bs.image_icon, desktop_size: bs.image_icon.width, media_type: 'icon' %}
+                    </div>
+                {%- endfor -%}
+            </slider-dots>
+            <div class="tw-mobile--dots flex-center">
+                <slider-dots class="flickity-page-dots w-auto pointer-events-auto"
+                             aria-controls="Slider-{{ section.id }}">
+                    {%- for i in (1..section.blocks.size) -%}
+                        <button type="button" class="flickity-page-dot" data-index="{{ i }}"
+                                aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                            <span class="sr-only">{{ 'general.pagination.page' | t: number: forloop.index }}</span>
+                        </button>
+                    {%- endfor -%}
+                </slider-dots>
+                <div class="tw-slider-pointers flex-center indicators">
+                    <button class="button button--secondary" type="button" is="previous-button"
+                            aria-controls="Slider-{{ section.id }}"
+                            aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled tabindex="-1">
+                        <span class="btn-fill" data-fill></span>
+                        <span class="btn-text">
+                            {%- render 'icon', icon: 'chevron-left', class: 'stroke-2 transform' -%}
+                        </span>
+                    </button>
+                    <button class="button button--secondary" type="button" is="next-button"
+                            aria-controls="Slider-{{ section.id }}"
+                            aria-label="{{ 'general.pagination.next' | t | escape }}" tabindex="-1">
+                        <span class="btn-fill" data-fill></span>
+                        <span class="btn-text">
+                            {%- render 'icon', icon: 'chevron-right', class: 'stroke-2 transform' -%}
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Autumn Sale Says",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "autumn-sale-says"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#f9f7f6"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "What They Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "say",
+      "name": "Say Item",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "intro",
+          "label": "Intro",
+          "default": "<p></p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Media icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,462 @@
+<script>
+    (function () {
+        const settings = {
+            imageRatio: "{{ settings.product_image_ratio }}",
+            imageFill: {{ settings.product_image_fill }},
+            showSecondaryImage: {{ settings.product_secondary_image }},
+            showVendor: {{ settings.product_vendor }},
+            showRating: {{ settings.product_rating }},
+            showColorSwatches: {{ settings.product_color_swatches }},
+            showCountdown: {{ settings.product_countdown }},
+            showQuickAdd: {{ settings.product_quick_add }},
+            showQuickView: {{ settings.product_quick_view }},
+            showSaveAmount: {{ settings.product_save_amount }},
+            saveType: "{{ settings.product_save_type }}",
+            cardStyle: "{{ settings.card_style }}",
+            cardBorderThickness: {{ settings.card_border_thickness }},
+            cardTextAlignment: "{{ settings.card_text_alignment }}",
+            maxColorCount: {{ settings.product_max_color_swatches }}
+        }
+        const swatchMap = new Map();
+        {%- assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />' -%}
+        {%- for swatch in swatch_config -%}
+        {%- liquid
+
+            assign swatch_fallback_override = false
+            assign swatch_parts = swatch | strip | split: ':'
+            assign value = swatch_parts.first | strip
+            assign swatch_name = value | downcase
+            assign swatch_value = swatch_parts.last | strip
+            assign file_name = value | handle | append: '.' | append: 'png'
+            assign swatch_fallback = value | split: ' ' | last | handle
+            if swatch_value contains '#'
+                assign swatch_fallback = swatch_value
+                assign swatch_fallback_override = true
+            else
+                assign file_name = swatch_value
+            endif
+            assign swatch_image = blank
+            if images[file_name] != blank
+                assign swatch_image = images[file_name] | image_url: width: 72
+            elsif file_name contains '//cdn.shopify.com/'
+                assign swatch_image = file_name
+            endif
+        -%}
+        swatchMap.set("{{ swatch_name }}", {
+            color: "{{ swatch_fallback }}",
+            override: {{ swatch_fallback_override }},
+            image: "{{ swatch_image }}"
+        });
+        {%- endfor -%}
+
+        const getBadgeHTML = (product) => {
+            let savedAmount = '';
+            const compareAtPrice = product.compareAtPrice;
+            const price = product.price;
+            if (compareAtPrice > price && settings.showSaveAmount) {
+                if (settings.saveType === 'label') {
+                    savedAmount = "{{ 'products.general.sale' | t }}";
+                } else if (settings.saveType === 'dollar') {
+                    savedAmount = `${$heybike.money(compareAtPrice - price)}`;
+                } else {
+                    savedAmount = `${Math.round((compareAtPrice - price) * 100 / product.compareAtPrice)}%`;
+                }
+            }
+            let html = `<div class="badges tw-inline-block pointer-events-none">`
+            if (product.label) {
+                const styles = product.labelColor ? ` style="--badge-background: ${product.labelColor.value}; --badge-foreground: #ffffff;"` : '';
+                const labelList = JSON.parse(product.label.value);
+                labelList.forEach(label => {
+                    html += `<span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"${styles}>${label}</span>`;
+                });
+            }
+
+            if (savedAmount) {
+                if (settings.saveType !== 'label') {
+                    const saveHtml = '{{ 'products.general.save_html' | t: saved_amount: "SAVED_AMOUNT" }}';
+                    savedAmount = saveHtml.replace('SAVED_AMOUNT', savedAmount);
+                }
+                html += `<span class="badge badge-sm badge--onsale flex items-center gap-1d5 font-medium leading-none rounded-full">${savedAmount}</span>`;
+            }
+            html += '</div>';
+
+            return html;
+        }
+        const getImagesHTML = (product) => {
+            let html = `<card-slider-media slider-media-id="card-slider-${product.id}"
+                                           class="product-card__carousel tw-flex tw-h-full" thumbnail-mode="click">`;
+            const colorMap = new Map();
+            product.variants.forEach((variant, index) => {
+                const color = variant.options[0];
+                if (!colorMap.has(color)) {
+                    colorMap.set(color, true);
+                    html += `<div class="media media--height ${settings.imageFill ? '' : 'media--contain'}"><a href="/products/${product.handle}">`;
+                    if (variant.image && variant.image.url && index > 0) {
+                        html += `<img src="${variant.image.url}" class="tw-block" is="lazy-image" loading="eager" alt="${variant.image.alt}"/>`;
+                    } else {
+                        html += `<img src="${product.image.url}" class="tw-block" is="lazy-image" loading="eager" alt="${product.image.alt}"/>`;
+                    }
+                    html += '</a></div>';
+                }
+            });
+            html += `</card-slider-media>`;
+            return html;
+        }
+        const getCountdownHTML = (product) => {
+            const nowTime = new Date("{{ 'now' | date: '%Y-%m-%dT%H:00:00' }}").getTime(); // 初始店铺时间
+            const cur = new Date();
+            const timeOffset = nowTime - new Date(`${cur.getFullYear()}-${cur.getMonth() + 1}-${cur.getDate()} ${cur.getHours()}:00:00`);
+            let date = product.countdown ? new Date(product.countdown.value) : null;
+            if (date) {
+                date.setTime(date.getTime() + timeOffset);
+            }
+            if (settings.showCountdown && date && date.getTime() > nowTime) {
+                return ` <div class="product-card__countdown hidden sm:flex justify-center absolute w-full z-0 pointer-events-none no-js-hidden">
+                        <div class="button icon-with-text">
+                            <div class="btn-text">
+                                {%- render 'icon', icon: 'countdown-compact', size: 'sm', class: 'flex-auto hidden md:block' -%}
+                                <countdown-timer
+                                        class="flex gap-3"
+                                        data-year="${date.getFullYear()}"
+                                        data-month="${date.getMonth() + 1}"
+                                        data-day="${date.getDate()}"
+                                        data-hour="${date.getHours()}"
+                                        data-minute="${date.getMinutes()}"
+                                        data-compact="true">
+                                    <div class="countdown__item">
+                                        <p>--{{ 'general.date.d' | t }}</p>
+                                    </div>
+                                    <div class="countdown__item">
+                                        <p>--{{ 'general.date.h' | t }}</p>
+                                    </div>
+                                    <div class="countdown__item">
+                                        <p>--{{ 'general.date.m' | t }}</p>
+                                    </div>
+                                    <div class="countdown__item">
+                                        <p>--{{ 'general.date.s' | t }}</p>
+                                    </div>
+                                </countdown-timer>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+            return '';
+        }
+        const getVendorHTML = (product) => {
+            if (settings.showVendor) {
+                return `<div class="product-card__top w-full">
+                    <span class="sr-only">{{ 'general.accessibility.vendor' | t }}</span>
+                    <a href="/collections/vendors?q=${encodeURIComponent(product.vendor)}" title="${product.vendor}" class="caption reversed-link uppercase leading-none tracking-widest">${product.vendor}</a>
+                </div>`
+            }
+            return '';
+        }
+        const getRatingHTML = (product) => {
+            if (settings.showRating && product.rating && product.count) {
+                let ratingDecimal = 0;
+                const rating = JSON.parse(product.rating.value);
+                const decimal = rating.value % 1;
+                if (decimal >= 0.3 && decimal <= 0.7) {
+                    ratingDecimal = 0.5;
+                } else if (decimal > 0.7) {
+                    ratingDecimal = 1;
+                }
+                const label = "{{ 'general.accessibility.star_reviews_info' | t: rating_value: '#rating#', rating_max: '#max#' }}".replace('#rating#', rating.value).replace('#max#', rating.scale_max);
+                const span = "{{ 'general.accessibility.star_reviews_count' | t: count: '#count#' }}".replace("#count#", product.count.value)
+                return `<div class="product__rating flex items-center gap-2">
+                            <div
+                              class="rating text-lg leading-none"
+                              role="img"
+                              aria-label="${label}"
+                            >
+                              {%- render 'icon', icon: 'star', size: 'xs lg:hidden' -%}
+                              <span
+                                aria-hidden="true"
+                                class="rating-star hidden lg:block"
+                                style="--rating: ${Math.floor(rating.value)}; --rating-max: ${rating.scale_max}; --rating-decimal: ${ratingDecimal};"
+                              ></span>
+                            </div>
+                            <p class="rating-text text-sm leading-none">
+                              <span aria-hidden="true">${rating.value}</span>
+                            </p>
+                            <p class="rating-count text-sm leading-none hidden xl:block">
+                              <span aria-hidden="true">${span}</span>
+                              <span class="sr-only">
+                                ${product.count.value}
+                                {{ 'general.accessibility.total_reviews' | t -}}
+                              </span>
+                            </p>
+                          </div>`;
+            }
+            return '';
+        }
+        const getColorHTML = (product) => {
+            if (settings.showColorSwatches) {
+                const swatchTrigger = "{{ 'products.general.color_swatch_trigger' | t | downcase }}";
+                let colorCount = 0;
+                let html = '';
+
+                const getSwatchColor = (value) => {
+                    const obj = swatchMap.get(value.toLocaleLowerCase()) || {
+                        color: value.split(' ').pop().toLocaleLowerCase(),
+                        override: true
+                    };
+                    const escapeValue = value.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                    return `<input class="sr-only" id="${product.id}-escapeValue" name="color-${product.id}" value="${escapeValue}" type="radio" />
+                    <label for="${product.id}-escapeValue" class="color-swatch ${obj.image ? 'with-image' : ''} block relative"  style="--swatch-background: ${obj.color};${obj.override ? '' : `background-image: url(${obj.image})`}">
+                      <span class="sr-only">${escapeValue}</span>
+                  </label>`
+                }
+
+                product.options.forEach((option, index) => {
+                    let isColor = false;
+                    const name = option.name.toLocaleLowerCase();
+                    if (name.includes(swatchTrigger)) {
+                        isColor = true;
+                    } else if (name === 'color' || name.includes('colour')) {
+                        isColor = true;
+                    }
+
+                    if (isColor) {
+                        let values = [];
+                        html += `<div class="product-card__bottom flex items-center gap-2"><ul slider-thumbnail-id="card-slider-${product.id}" ${product.variants.length === 0 ? 'style="display: none;"' : ''} class="card-swatches-hb swatches swatches--{{ settings.rounded_swatch }} {% if settings.product_color_swatch_type == 'variant' %} swatches--variant{% endif %} swatches--${product.id} inline-flex items-start gap-4">`;
+                        product.variants.forEach((variant, i) => {
+                            const value = variant.options[index].value;
+                            if (!values.includes(value)) {
+                                values.push(value);
+                                colorCount += 1;
+                                if (colorCount <= settings.maxColorCount) {
+                                    html += `<li ${i === 0 ? 'class="active"' : ''}>${getSwatchColor(value)}</li>`;
+                                }
+                            }
+                        });
+                        html += `</ul>`;
+                        if (colorCount > settings.maxColorCount) {
+                            html += `<a href="/products/${product.handle}" class="reversed-link font-medium text-xs text-opacity leading-none tracking-widest" is="hover-link" aria-controls="Quickview-{{ section.id }}--${product.id}" aria-expanded="false">+${colorCount - settings.maxColorCount}</a>`;
+                        }
+                        html += '</div>';
+                    }
+                });
+                return html;
+            }
+            return '';
+        }
+        const getPriceHTML = (product) => {
+            const compareAtPrice = product.compareAtPrice;
+            const price = product.price;
+            const onSale = compareAtPrice > price;
+            let html = `<div class="price ${onSale ? 'price--on-sale' : ''} flex gap-2 md:gap-1d5 tw-align-baseline">`;
+            if (onSale) {
+                html += `<span class="sr-only">{{ 'products.price.sale_price' | t }}</span>`;
+            }
+            html += `<p class="price__regular whitespace-nowrap">${$heybike.money(price)}</p>`;
+            if (onSale) {
+                html += `<span class="sr-only">{{ 'products.price.regular_price' | t }}</span><span class="price__sale inline-flex items-center h-auto relative">${$heybike.money(compareAtPrice)}</span>`;
+            }
+            html += `</div>`;
+            return html;
+        }
+        const getSpecHTML = (product) => {
+            let html = '';
+            if (product.specs && {{ section.settings.enable_specs }}) {
+                html += '<div class="product-icons"><div class="tw-grid tw-grid-cols-2 md:tw-gap-2 tw-gap-1">';
+                const titleList = JSON.parse(product.specs.title.value).slice(0, 4);
+                const contentList = JSON.parse(product.specs.content.value);
+                titleList.forEach((title, index) => {
+                    if (title) {
+                        html += `<div class="product-icon tw-col-span-1">
+                                    <div class="tw-leading-none">
+                                        <p class="md:tw-text-xs tw-text-[10px] tw-text-viGray-500 tw-mb-1">${contentList[index]}</p>
+                                        <p class="-md:tw-text-xs tw-font-semibold">${title}</p>
+                                    </div>
+                                </div>`;
+                    }
+                });
+                html += '</div></div>';
+            }
+            return html;
+        }
+        const getSoldOutHTML = (product) => {
+            if (!product.available) {
+                return `<div class="quick-add flex justify-center absolute w-full z-1 pointer-events-none">
+                        <button type="button" class="button button--secondary button--blur" disabled="disabled">
+                            {{- 'products.product.sold_out' | t -}}
+                        </button>
+                    </div>`;
+            }
+            return '';
+        }
+        const getShopButtonHTML = (product) => {
+            return `<a href="/products/${product.handle}"
+                               class="button button--primary tw-px-4 tw-py-2 md:tw-text-sm  button--blur tw-text-sm"
+                               is="hover-link">
+                                <span class="btn-text">{{- 'products.product.read_more' | t -}}</span>
+                            </a>`;
+        }
+        const getProductCardTemplate = (product, discount) => {
+            return `<div class="card product-card product-card-hb tw-pb-6 product-card--${settings.cardStyle}${settings.cardBorderThickness > 0 ? ' product-card--thickness' : ''} flex flex-col leading-none relative overflow-hidden">
+                    <div class="product-card__content md:tw-p-4 tw-pb-4 tw-p-4 flex flex-col justify-start text-${settings.cardTextAlignment}">
+                        ${getVendorHTML(product)}
+                        <div class="product-card__details tw-flex tw-flex-col tw-gap-2">
+                            <div class="grow tw-flex tw-flex-wrap tw-items-center tw-gap-x-4">
+                                <a class="product-card__title reversed-link md:tw-text-2xl tw-text-2xl font-medium leading-tight tw-font-semibold"
+                                    href="/products/${product.handle}">
+                                    <h3>${product.shortTitle ? product.shortTitle.value : product.title}</h3>
+                                </a>
+                                ${getBadgeHTML(product)}
+                            </div>
+                            <p class="product-card__subtitle tw-line-clamp-2 tw-leading-snug tw-text-sm ">
+                                ${product.shortText ? product.shortText.value : ''}
+                            </p>
+                            ${getRatingHTML(product)}
+                            ${getColorHTML(product)}
+                        </div>
+                    </div>
+                    <div class="product-card__media relative h-auto aspect-${settings.imageRatio}">
+                        ${getImagesHTML(product)}
+                        ${getSoldOutHTML(product)}
+                        ${getCountdownHTML(product)}
+                    </div>
+                    <div class="product-card__footer md:tw-p-4 tw-p-4 md:tw-pb-0 tw-pb-0">
+                        <div style="--fluid-base-to-xl: 16px; --fluid-sm-to-base: 16px;"
+                             class="tw-flex tw-justify-between md:tw-items-center tw-mb-4 md:tw-gap-1 tw-gap-1 tw-items-center">
+                             ${getPriceHTML(product)}
+                             ${getShopButtonHTML(product)}
+                        </div>
+                        ${getSpecHTML(product)}
+                    </div>
+                </div>`;
+        }
+        const storefrontAccessToken = '571e2797a4aa01bf079959323c5c0bf5';
+        const shopDomain = 'www.jasionbike.com';
+        const productList = [
+            {%- for text in products -%}
+            {key: "{{ text | remove: '-' }}".replace(/[^a-zA-Z0-9]/g, ''), handle: "{{ text }}"}{% if forloop.last == false %},{% endif %}
+            {%- endfor -%}
+        ]
+        const getMetaobjects = (list) => {
+            let graphql = 'query Metaobjects() {';
+            list.forEach((item) => {
+                graphql += `${item.key}: metaobject(id: "${item.id}") {
+                            ... on Metaobject {
+                                title: field(key: "title_list") {
+                                    value
+                                }
+                                content: field(key: "content_list") {
+                                    value
+                                }
+                            }
+                        }`
+            });
+            graphql += '}';
+            return fetch(`https://${shopDomain}/api/2025-10/graphql.json`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Shopify-Storefront-Access-Token': storefrontAccessToken
+                },
+                body: JSON.stringify({
+                    query: graphql
+                })
+            });
+        }
+        const getGraphqlQuery = () => {
+            let html = '';
+            productList.forEach(item => {
+                html += `${item.key}: product(handle: "${item.handle}") {
+                          id
+                          title
+                          vendor
+                          handle
+                          available: availableForSale
+                          price: priceRange { min: minVariantPrice { amount } }
+                          compareAtPrice: compareAtPriceRange { min: minVariantPrice { amount }}
+                          image: featuredImage { url alt: altText }
+                          options(first: 20) {
+                            name values
+                          }
+                          variants(first: 20) {
+                            nodes {
+                                id
+                                image { url alt: altText }
+                                title
+                                options: selectedOptions { name value }
+                            }
+                          }
+                          shortTitle: metafield(namespace: "custom", key: "short_title") {
+                            value
+                          }
+                          shortText: metafield(namespace: "custom", key: "short_text") {
+                            value
+                          }
+                          countdown: metafield(namespace: "theme", key: "countdown") {
+                            value
+                          }
+                          description: metafield(namespace: "custom", key: "pdc_description") {
+                            value
+                          }
+                          rating: metafield(namespace: "reviews", key: "rating") {
+                            value
+                          }
+                          count: metafield(namespace: "reviews", key: "rating_count") {
+                            value
+                          }
+                          specs: metafield(namespace: "custom", key: "specifications") {
+                            value
+                          }
+                          label: metafield(namespace: "theme", key: "label") {
+                            value
+                          }
+                          labelColor: metafield(namespace: "theme", key: "label_color") {
+                            value
+                          }
+                        }`;
+            });
+            return `query Products() {
+                ${html}
+            }`;
+        }
+        // 使用fetch发送请求
+        fetch(`https://${shopDomain}/api/2025-10/graphql.json`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Shopify-Storefront-Access-Token': storefrontAccessToken
+            },
+            body: JSON.stringify({
+                query: getGraphqlQuery()
+                // variables: {handle: "target-product-handle"}
+            })
+        })
+            .then(response => response.json())
+            .then(async data => {
+                const list = [];
+                Object.keys(data.data).forEach(key => {
+                    const obj = data.data[key];
+                    if (obj.specs) {
+                        list.push({key, id: obj.specs.value});
+                    }
+                });
+                let metaMap = {};
+                if (list.length > 0) {
+                    metaMap = (await (await getMetaobjects(list)).json())?.data || {};
+                }
+                productList.forEach(item => {
+                    const node = document.querySelector(`#{{ section.id }}-${item.handle}`);
+                    if (node) {
+                        const obj = data.data[item.key];
+                        obj.specs = metaMap[item.key];
+                        obj.variants = obj.variants.nodes;
+                        obj.id = obj.id.split('/Product/')[1];
+                        obj.price = parseFloat(obj.price.min.amount) * 100;
+                        obj.compareAtPrice = parseFloat(obj.compareAtPrice.min.amount) * 100;
+                        obj.variants.forEach(variant => {
+                            variant.id = variant.id.split('/ProductVariant/')[1];
+                        });
+                        //const discount = node.dataset.discount === 'empty' ? '' : `?discount=${node.dataset.discount}`;
+                        node.outerHTML = getProductCardTemplate(obj, '');
+                    }
+                });
+            });
+    })();
+</script>

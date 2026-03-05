@@ -1,0 +1,416 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1920x400.jpg",
+            "image_mobile": "shopify://shop_images/460x630.jpg",
+            "heading": "Cruiser Ebike",
+            "heading_size": "title-sm",
+            "heading_tag": "h1",
+            "subheading": "It's time to take your adventures to the next level.",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_main_breadcrumbs_rz4ntK": {
+      "type": "mc_main-breadcrumbs",
+      "blocks": {
+        "breadcrumb_7AqmTa": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Home",
+            "url": "https://www.jasionbike.com/"
+          }
+        },
+        "breadcrumb_8KG8tE": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Electric Cruiser Bike",
+            "url": "shopify://collections/cruiser-ebike"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_7AqmTa",
+        "breadcrumb_8KG8tE"
+      ],
+      "name": "MC Main Breadcrumbs",
+      "settings": {
+        "page_color": "",
+        "pc_page_left": 20,
+        "pc_page_right": 20,
+        "pc_page_top": 20,
+        "pc_page_bottom": 20,
+        "mb_page_left": 20,
+        "mb_page_right": 20,
+        "mb_page_top": 20,
+        "mb_page_bottom": 20,
+        "text_color": "#3c3f42",
+        "hover_text_color": "#ff981d",
+        "pc_align": "center",
+        "mb_align": "center",
+        "pc_size": 15,
+        "pc_weight": 400,
+        "mb_size": 14,
+        "mb_weight": 400
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "page_navigation_XDqEAy": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Electric Bikes",
+            "button_url": "shopify://collections/electric-bike"
+          }
+        },
+        "page_navigation_3YFKQ9": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Combo Sale",
+            "button_url": "shopify://collections/combo-sale"
+          }
+        },
+        "page_navigation_bKEtNR": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Folding Ebike",
+            "button_url": "shopify://collections/folding-ebike"
+          }
+        },
+        "page_navigation_xLiwFG": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Fat Tire Ebike",
+            "button_url": "shopify://collections/fat-tire-ebike"
+          }
+        },
+        "page_navigation_AaiFTL": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Cruiser Ebike",
+            "button_url": "shopify://collections/cruiser-ebike"
+          }
+        },
+        "page_navigation_DLU97C": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Over Ebike",
+            "button_url": "shopify://collections/step-over-electric-bikes"
+          }
+        },
+        "page_navigation_nDh4TD": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Through Ebike",
+            "button_url": "shopify://collections/step-through-ebikes"
+          }
+        }
+      },
+      "block_order": [
+        "promotion",
+        "page_navigation_XDqEAy",
+        "page_navigation_3YFKQ9",
+        "page_navigation_bKEtNR",
+        "page_navigation_xLiwFG",
+        "page_navigation_AaiFTL",
+        "page_navigation_DLU97C",
+        "page_navigation_nDh4TD"
+      ],
+      "settings": {
+        "layout": "1",
+        "products_per_page": 50,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": true,
+        "filter_collapsed": false,
+        "filter_type": "sidebar",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": false,
+        "title": "E-Bikes",
+        "title_hidden": false,
+        "title_tag": "h2"
+      }
+    },
+    "faq_FVRtcA": {
+      "type": "faq",
+      "blocks": {
+        "question_6H9ftk": {
+          "type": "question",
+          "settings": {
+            "title": "What is a cruiser electric bike?",
+            "title_tag": "h3",
+            "text": "<p>A cruiser electric bike is built for relaxed, upright riding with comfort-first geometry—ideal for city cruising, casual rides, and everyday trips. Our cruiser lineup is designed for smooth, confidence-forward riding on typical urban routes and weekend outings. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_LmwUiG": {
+          "type": "question",
+          "settings": {
+            "title": "Are cruiser ebikes good for commuting?",
+            "title_tag": "h3",
+            "text": "<p>Yes. Cruiser ebikes are a great fit for commuting when you want a comfortable posture, steady handling, and an easy daily ride. If you’re riding to work, running errands, or doing short-to-mid city trips, a cruiser-style ebike keeps things simple and comfortable. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_qwqGPk": {
+          "type": "question",
+          "settings": {
+            "title": "How do I choose the best cruiser ebike for my riding style?",
+            "title_tag": "h3",
+            "text": "<p>Start with your use case:<br/>● <strong>Daily commuting + quick errands</strong>: look for simple comfort and visibility features.<br/>● <strong>Easier mounting / relaxed posture</strong>: choose a step-through cruiser design (like <a href=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-st-roamer-ebike\" title=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-st-roamer-ebike\">Roamer ST</a>).<br/>● <strong>Weekend rides + touring vibes</strong>: consider the Road Trip option for a more trip-ready setup. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_m6DNjd": {
+          "type": "question",
+          "settings": {
+            "title": "How far can a cruiser ebike go on a single charge?",
+            "title_tag": "h3",
+            "text": "<p>Range depends on terrain, rider weight, temperature, wind, and assist level. In our cruiser lineup, <a href=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-roamer-ebike\" target=\"_blank\">EB5 Roamer</a> and <a href=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-st-roamer-ebike\" target=\"_blank\">EB5 Roamer ST</a> are listed with a <strong>max range up to 62 miles</strong> and a <strong>48V 11Ah battery</strong>, making them a strong fit for daily commuting and longer weekend rides when you want a comfort-focused cruiser feel. For the best real-world range, use a moderate PAS level, keep tires properly inflated, and plan extra buffer for hills or higher speeds. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_JCzLY7": {
+          "type": "question",
+          "settings": {
+            "title": "How fast do cruiser ebikes go, and can I adjust assist levels?",
+            "title_tag": "h3",
+            "text": "<p>Our <a href=\"https://www.jasionbike.com/products/jasion%C2%AEeb5-roamer-ebike\" target=\"_blank\">EB5 Roamer series</a> is listed with a <strong>max speed up to 28 mph</strong>, and you can fine-tune the ride using <strong>Pedal Assist levels 0–5</strong> to match your comfort and local riding conditions. Both EB5 Roamer and EB5 Roamer ST also include a <strong>thumb throttle</strong> for convenient acceleration when needed. If you’d like to confirm or adjust the number of assist levels on your display, our manual guidance explains how to switch between 3-level and 5-level PAS settings in the device parameters.  </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_6H9ftk",
+        "question_LmwUiG",
+        "question_qwqGPk",
+        "question_m6DNjd",
+        "question_JCzLY7"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "mc_main_breadcrumbs_rz4ntK",
+    "main-collection",
+    "faq_FVRtcA"
+  ]
+}

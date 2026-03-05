@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "products_compare_hb_R7KmMD": {
+      "type": "products-compare-hb",
+      "blocks": {
+        "item_E4d6P9": {
+          "type": "item",
+          "settings": {
+            "pr": "jasion®eb5-roamer-ebike",
+            "list": "5'2''-6'6''\n1200W\n62 Miles\n28 Mph\n60 N·m\n48V 11AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 1.94 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nThumb Throttle\n330 lbs\nUL 2849\n65 lbs\nLCD\nCity, Commuting",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_4P8mFz": {
+          "type": "item",
+          "settings": {
+            "pr": "jasion®eb5-st-roamer-ebike",
+            "list": "5'2''-6'6''\n1200W\n62 Miles\n28 Mph\n60 N·m\n48V 11AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 1.94 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nThumb Throttle\n330 lbs\nUL 2849\n65 lbs\nLCD\nCity, Commuting",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_dtiU7t": {
+          "type": "item",
+          "settings": {
+            "pr": "jasion-eb7-electric-bike",
+            "list": "5'1''-6'2''\n1200W\n55 Miles\n28 Mph\n55 N·m\n48V 10AH\n48V/2A\n0~5 Level\nDual Suspension\n20 x 3 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n63 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_jVM6Rd": {
+          "type": "item",
+          "settings": {
+            "pr": "eb7-st",
+            "list": "5'1''-6'2''\n1200W\n55 Miles\n28 Mph\n55 N·m\n48V 10AH\n48V/2A\n0~5 Level\nDual Suspension\n20 x 3 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n63 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_prfUjG": {
+          "type": "item",
+          "settings": {
+            "pr": "jasion-x-hunter",
+            "list": "5'3''-6'4''\n1400W\n70 Miles\n30+ Mph\n85 N·m\n48V 13AH\n48V/2A\n0~5 Level\nFull Suspension\n20 x 4 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n400 lbs\nUL 2849\n71 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_iNYLPk": {
+          "type": "item",
+          "settings": {
+            "pr": "hunter-pro",
+            "list": "5'3''-6'4''\n1800W\n80 Miles\n30+ Mph\n95 N·m\n48V 15AH\n48V/2A\n0~5 Level\nDual Suspension\n20 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n400 lbs\nUL 2849\n73 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_ejHkfX": {
+          "type": "item",
+          "settings": {
+            "pr": "jasion-yr20",
+            "list": "5'5''-6'7''\n2000W\n80 Miles\n32 Mph\n120 N·m\n48V 20AH\n48V/3A\n0~5 Level\nDual Suspension\n20 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n87 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_Vixg8U": {
+          "type": "item",
+          "settings": {
+            "pr": "thunder",
+            "list": "5'2''-6'3''\n1500W\n80 Miles\n30+ Mph\n85 N·m\n48V 18AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n400 lbs\nUL 2849\n82 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_GpddBx": {
+          "type": "item",
+          "settings": {
+            "pr": "retrovolt-pro",
+            "list": "5'4''-6'2''\n2000W\n90 Miles\n38 Mph\n99 N·m\n52V 20AH\n52V/3A\n0~5 Level\nFull Suspension\n20 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n82 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
+        "item_CCciXP": {
+          "type": "item",
+          "settings": {
+            "pr": "x-hunter-st",
+            "list": "5'2''- 6'3''\n1400W\n71 Miles\n30+ Mph\n85 N·m\n48V 13AH\n48V/2A\n0~5 Level\nFull Suspension\n20 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n480 lbs\nUL 2849\n71 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_E4d6P9",
+        "item_4P8mFz",
+        "item_dtiU7t",
+        "item_jVM6Rd",
+        "item_prfUjG",
+        "item_iNYLPk",
+        "item_ejHkfX",
+        "item_Vixg8U",
+        "item_GpddBx",
+        "item_CCciXP"
+      ],
+      "name": "Products compare (hb)",
+      "settings": {
+        "first_list": "User Height Range\nPeak Motor\nMax Range\nMax Speed\nTorque\nBattery\nCharger\nPedal Assist\nSuspension\nTire\nBrakes\nSensor\nDriverain\nThrottle\nPayload Capacity\nUL Certified\nBike Weight\nDisplay\nBest For",
+        "pc_h": "300",
+        "mb_h": "200",
+        "heading": "Compare ebike models",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h1",
+        "subheading": "",
+        "description": "<p>Shop ebike &gt;<br/><br/></p>",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "products_compare_hb_R7KmMD"
+  ]
+}

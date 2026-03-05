@@ -1,0 +1,85 @@
+<!-- 引入web-vitals归因库并监控INP -->
+{%- if request.page_type == 'product' -%}
+    <script>
+        // 1. 加载web-vitals归因库
+        $heybike.on('DOMContentLoaded', () => {
+           if ($heybike.isMobile) {
+               function sendToAnalytics(param) {
+                   const url = 'https://script.google.com/macros/s/AKfycbzgaCAU-HyORfPCi4_iLy03AT-vNglP9FAWQiWIHuZbw-JsKMpuJXqBj_l8HuKI1-T7rA/exec';
+                   const formData = new FormData();
+                   Object.keys(param).forEach(key => {
+                       formData.append(key, param[key]);
+                   });
+                   fetch(url, {
+                       method: 'POST',
+                       body: formData
+                   });
+               }
+
+               const duration = 200;
+               const script = document.createElement('script');
+               script.src = 'https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.iife.js';
+               script.onload = function () {
+                   // 2. 库加载完成后，开始监控INP
+                   if (window.webVitals && window.webVitals.onINP) {
+                       window.webVitals.onINP(function (metric) {
+                           if (metric.value > duration) {
+                               sendToAnalytics({
+                                   date: new Date(performance.timeOrigin + metric.entries[0].startTime).toISOString(),
+                                   inp: metric.value?.toFixed(2) + 'ms (阈值: 200ms)',
+                                   type: metric.attribution.eventType + `(${navigator.userAgent})`,
+                                   page: '{{ shop.url }}{{ request.path }}',
+                                   attribution: JSON.stringify(metric.attribution)
+                               });
+                           }
+
+                       }, {reportAllChanges: true}); // 设置为true可在开发阶段观察每次变化
+                   }
+               };
+               document.head.appendChild(script);
+
+               function getUniqueSelector(el) {
+                   const path = [];
+                   while (el && el.nodeType === 1) {
+                       let selector = el.nodeName.toLowerCase();
+                       if (el.id) {
+                           selector += `#${el.id}`;
+                           path.unshift(selector);
+                           break; // ID通常唯一，可提前结束
+                       } else {
+                           let sibling = el, nth = 1;
+                           while (sibling.previousElementSibling) {
+                               sibling = sibling.previousElementSibling;
+                               if (sibling.nodeName.toLowerCase() === selector) nth++;
+                           }
+                           if (nth > 1) selector += `:nth-of-type(${nth})`;
+                       }
+                       path.unshift(selector);
+                       el = el.parentElement;
+                   }
+                   return path.join(' > ');
+               }
+
+               // 核心：创建性能观察者来监听所有“事件”类型的性能条目
+               const observer = new PerformanceObserver((list) => {
+                   for (const entry of list.getEntries()) {
+                       // 筛选出交互延迟较长的条目（例如，超过100毫秒）
+                       // 注意：`duration` 就是处理延迟（processing delay）
+                       if (entry.duration > duration) {
+                           sendToAnalytics({
+                               date: new Date(performance.timeOrigin + entry.startTime).toISOString(),
+                               inp: entry.duration.toFixed(2) + 'ms (阈值: 200ms)',
+                               type: entry.name + `(${navigator.userAgent})`,
+                               page: '{{ shop.url }}{{ request.path }}',
+                               attribution: entry.target ? getUniqueSelector(entry.target) : '(未知)'
+                           });
+                       }
+                   }
+               });
+
+               // 开始观察类型为 “event” 的性能条目，buffered: true 表示也查看已经发生的历史条目
+               observer.observe({type: "event", buffered: true});
+           }
+        });
+    </script>
+{%- endif -%}

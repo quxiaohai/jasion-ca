@@ -1,0 +1,372 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_gift-cards {
+        padding: 80px 0;
+    }
+
+    .mc_gift-cards .gift-content .card-item {
+        width: 444px;
+        aspect-ratio: 222/233;
+        position: relative;
+        box-sizing: border-box;
+        align-items: flex-start;
+        padding-top: 52px;
+    }
+
+    .mc_gift-cards .gift-content .card-item .image-backup {
+        position: absolute;
+        object-fit: fill;
+        left: 0;
+        top: 0;
+    }
+
+    .mc_gift-cards .gift-content .card-item .gift-image {
+        max-width: 100%;
+        height: 215px;
+    }
+
+    .mc_gift-cards .gift-content .card-item .gift-image .image {
+        width: var(--width);
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .mc_gift-cards .gift-content .card-item .card-content {
+        width: 326px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_gift-cards .gift-content .card-item .card-content .info {
+        text-align: center;
+        padding-top: 26px;
+    }
+
+    .mc_gift-cards .gift-content .card-item .card-content .info .name {
+        color: {{ ss.card_title_color }};
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+
+    .mc_gift-cards .gift-content .card-item .card-content .info .desc {
+        padding-top: 10px;
+        font-size: 16px;
+        color: {{ ss.card_desc_color }};
+        line-height: 1.7;
+    }
+
+    @media screen and (max-width: 1340px) {
+        .mc_gift-cards {
+            padding: 68px 0;
+        }
+
+        .mc_gift-cards .gift-content .card-item {
+            width: 377px;
+            padding-top: 44px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .gift-image {
+            height: 182.75px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .gift-image .image {
+            border-radius: 8.5px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content {
+            width: 277.1px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info {
+            padding-top: 22.1px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info .name {
+            font-size: 17px;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info .desc {
+            padding-top: 8.5px;
+            font-size: 13.6px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_gift-cards {
+            padding: 1.7361111111rem 0;
+        }
+
+        .mc_gift-cards .gift-content {
+            max-width: 100%;
+            padding: 0 3.8888888889vw;
+        }
+
+        .mc_gift-cards .gift-content .card-items {
+            gap: 0.6944444444rem 0;
+            flex-direction: column;
+        }
+
+        .mc_gift-cards .gift-content .card-item {
+            width: 18.0121527778rem;
+            padding-top: 2.1701388889rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .gift-image {
+            height: 8.5069444444rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .gift-image .image {
+            border-radius: 0.2170138889rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content {
+            width: 12.8689236111rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info {
+            padding-top: 0.9982638889rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info .name {
+            font-size: 0.78125rem;
+        }
+
+        .mc_gift-cards .gift-content .card-item .card-content .info .desc {
+            padding-top: 0.3472222222rem;
+            font-size: 0.6293402778rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_gift-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="gift-content flex-center">
+        <div class="card-items flex-center">
+            {%- for block in section.blocks -%}
+                {%- assign bs = block.settings -%}
+                <div class="card-item flex-center">
+                    {%- render 'global-image',
+                        desktop_img: ss.card_bg_image,
+                        desktop_class: 'image-backup',
+                        sizes: '(min-width: 1024px) 420px, (max-width: 1023px) 600px'
+                    -%}
+                    <div class="card-content">
+                        <div class="gift-image flex-center media">
+                            {%- render 'global-image',
+                                desktop_img: bs.gift_image,
+                                show_size: true,
+                                sizes: '(min-width: 1024px) 400px, (max-width: 1023px) 500px'
+                            -%}
+                        </div>
+                        <div class="info">
+                            <div class="name">{{ bs.title }}</div>
+                            <div class="desc">{{ bs.desc }}</div>
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Gift Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Gift Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Gift card"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#b11913"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#0e3e19"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_bg_image",
+      "label": "Card background image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gift",
+      "name": "Gift card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "gift_image",
+          "label": "Gift image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "FREE EBIKE"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Card desc",
+          "default": "<p>Place An Order $3,500+ to enter the draw for a free EB7 Ebike. Only for 2 orders!</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
