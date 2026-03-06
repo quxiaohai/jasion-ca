@@ -114,7 +114,7 @@
             "product_list": [
               "phone-mount-holder",
               "jasion-ebike®-front-basket-copy",
-              "jasion-ebike®-rear-basket-copy",
+              "jasion-ebike-rear-basket-copy",
               "jasion-ebike-bracketed-u-lock",
               "hunter-pro-battery-pack",
               "copy-of-jasion®bike-rack-pannier-bag",
@@ -1020,7 +1020,6 @@
         "page_bottom": 0,
         "show_title": true,
         "title": "<p>90-Mile Long Range</p>",
-        "title_style": "normal",
         "title_pc_size": 48,
         "title_mb_size": 24,
         "title_margin_bottom": 20,

@@ -270,9 +270,9 @@
       "settings": {
         "page_color": "#ffffff",
         "show_title": true,
-        "title": "<p>JasionBike X Totwoo</p>",
+        "title": "<h1>JasionBike X Totwoo</h1>",
         "title_style": "normal",
-        "title_pc_size": 48,
+        "title_pc_size": 24,
         "title_mb_size": 24,
         "title_margin_bottom": 16,
         "title_color": "#171717",

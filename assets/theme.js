@@ -5587,6 +5587,10 @@ class MediaGallery extends HTMLElement {
     loadPhotoswipe() {
         return new Promise(resolve => {
             if (this._photoswipe) return resolve(this._photoswipe);
+            const node = document.createElement('DIV');
+            node.className = 'w-full h-full __loading__';
+            node.style.cssText = 'background: #FFF;position: fixed;top: 0;left: 0;z-index: 99;display: block;';
+            document.body.appendChild(node);
             $heybike.load({type: "LIGHTBOX"}, () => {
                 const lightbox = new PhotoSwipeLightbox({
                     arrowPrevSVG: '<svg class="pswp__icn icon" stroke="currentColor" fill="none" viewBox="0 0 30 30"><path d="M17.5 7.5L10 15L17.5 22.5"/></svg>',
@@ -5634,6 +5638,7 @@ class MediaGallery extends HTMLElement {
                 lightbox.init();
                 this._photoswipe = lightbox;
                 resolve(lightbox);
+                setTimeout(() => document.body.removeChild(node), 1200);
             });
         });
     }

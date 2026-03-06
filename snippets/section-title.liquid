@@ -239,7 +239,7 @@
             assign tag = 'div'
         endif
     -%}
-    <{{ tag }} class="{{ mid }}-section--title text-center">
+    <{{ tag }} class="{{ mid }}-section--title __st text-center">
     {%- if info.show_title -%}
         <div class="title{% if info.title_gradient_color != blank %} text-gradient{% endif %}"
              style="{% if font != blank %}font-family: {{ font }}; {% endif %}{% if info.title_gradient_color != blank %}--background: {{ info.title_color.rgb }}; --gradient: {{ info.title_gradient_color }};{% else %}color: {{ info.title_color }};{% endif %}">{{ info.title }}</div>

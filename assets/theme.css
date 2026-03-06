@@ -14891,6 +14891,10 @@ video-media:not([playing]) .deferred-poster .play-button .icon:last-child:not(:o
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
+.mc--main:has(.__st) h1,
+.mc--main:has(.__st) h2,
+.mc--main:has(.__st) h3,
+.mc--main:has(.__st) h4,
 .mc--main p {
 	line-height: inherit;
 	color: inherit;
