@@ -292,7 +292,7 @@
           "settings": {
             "title": "Do you sell replacement batteries and extra battery packs?",
             "title_tag": "h3",
-            "text": "<p>Yes. We offer battery packs for specific models/series (for example, X-Hunter, Hunter Pro, and EB7 series battery packs) so you can extend range or keep a spare for longer rides.</p>",
+            "text": "<p>Yes. We offer battery packs for specific models/series (for example, X-Hunter, Hunter Pro) so you can extend range or keep a spare for longer rides.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

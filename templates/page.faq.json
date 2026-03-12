@@ -101,6 +101,7 @@
           "type": "rich-text",
           "settings": {
             "heading": "Shipping & Returns",
+            "heading_tag": "p",
             "text": "<p>Below are some common questions about shipping, returns, and exchanges</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -109,8 +110,9 @@
         "question-1": {
           "type": "question",
           "settings": {
-            "title": "Do you ship to Alaska, Puerto Rico, and Hawaii?",
-            "text": "<p>No, currently, we are only capable of shipping to the Contiguous United States.If possible, do you have any friends of relatives in other State, so that you can leave their address.And after we ship the bike there, you could ask them a favor for shipping it to you.</p>",
+            "title": "Do you ship to Yukon, Northwest Territories, and Nunavut?",
+            "title_tag": "h3",
+            "text": "<p>No, currently, we are only able to ship within the 10 Canadian provinces. As a workaround, do you have friends or family located in one of the provinces who could receive the delivery for you? You could use their shipping address at checkout, and once the bike arrives there, you could ask them to kindly forward it to you.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -119,6 +121,7 @@
           "type": "question",
           "settings": {
             "title": "How long should it take for my Jasion ebike to arrive?",
+            "title_tag": "h3",
             "text": "<p>In-stock orders typically ship within 3 business days, unless otherwise noted on the product page. Please allow 2~8 business days for your shipment to arrive at your address. For pre-orders, please refer to the shipping date on the product page. A shipping confirmation email will be sent to your email once the order has shipped.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -127,8 +130,9 @@
         "question-4": {
           "type": "question",
           "settings": {
-            "title": "What if the package is broken/the item scratches when arrived?",
-            "text": "<p>Due to FedEx's failure to deliver the bike as required during transportation, parts of the wear and scratch may cause by the parts crashing together, although we have packed all the parts to prevent these situations as much as we can. Please send us the related pictures via <a href=\"mailto:support@jasionbike.com\" title=\"mailto:support@jasionbike.com\">support@jasionbike.com</a>, we will solve it for you.</p>",
+            "title": "What should I do if my package arrives damaged or the bike is scratched?",
+            "title_tag": "h3",
+            "text": "<p>We meticulously pack all our bikes to prevent any damage. However, due to the carrier's rough handling and failure to transport the package properly, parts may occasionally rub against each other and cause minor scratches. If the carrier has damaged your shipment, please send clear pictures of the box and the affected parts to support@jasionbike.com, and we will step in to help you resolve this issue.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -137,6 +141,7 @@
           "type": "question",
           "settings": {
             "title": "Can I return my order for personal reasons?",
+            "title_tag": "h3",
             "text": "<p>To be eligible for a return, your item must be in the same condition that you received it, unworn, unused, or the ebike must have less than ten (10) miles on the odometer and must include all items that were inside the box (charger, keys, hardware, etc.), and in its original packaging.For specific fees, please click <a href=\"https://www.jasionbike.com/pages/return-refund-policy\">HERE</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -146,6 +151,7 @@
           "type": "rich-text",
           "settings": {
             "heading": "Orders",
+            "heading_tag": "p",
             "text": "<p>Below are some of are common questions about orders</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -155,6 +161,7 @@
           "type": "question",
           "settings": {
             "title": "What payment methods do you accept?",
+            "title_tag": "h3",
             "text": "<p>Currently, we are able to securely process payments from American Express, Discover, Diner’s Club, JCB, Visa, Venmo, MasterCard, PayPal, Apple Pay thanks to secure payment processing from Stripe. Additionally, we have a financing partnership with Klarna. Be sure to choose Klarna at checkout to apply for financing options for your e-bike to pay over installments.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -164,6 +171,7 @@
           "type": "question",
           "settings": {
             "title": "Do you offer financing?",
+            "title_tag": "h3",
             "text": "<p>We are offering financing.You can have direct access to Klarna financing through our partnership with Klarna. Now, you can pay for your next e-bike with installment payments after being approved for financing. Be sure to select Klarna at checkout and you will be taken to their secure payment process. For more details please click <a href=\"/pages/payment\" title=\"Checkout&Coupons&Financing Guidelines\">HERE</a></p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -173,6 +181,7 @@
           "type": "question",
           "settings": {
             "title": "I ordered two items, why I have received only one?",
+            "title_tag": "h3",
             "text": "<p>Because the shipment weight is overweight, we usually ship them separately. So both reach at different day and time. Due to Shopify's store settings, Combo Sale will only show ONE tracking number, please don't panic, you can contact our customer service at <a href=\"mailto:support@jasionbike.com\" title=\"mailto:support@jasionbike.com\">support@jasionbike.com</a> to get detailed tracking information.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -182,6 +191,7 @@
           "type": "question",
           "settings": {
             "title": "How do I change or cancel my order?",
+            "title_tag": "h3",
             "text": "<p>Your order can only be canceled <strong>before it ships.</strong>To cancel the order, please email us: <a href=\"mailto:support@jasionbike.com\" title=\"mailto:support@jasionbike.com\">support@jasionbike.com</a>. Canceling order requests may not be available during the weekend or holiday.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -191,7 +201,8 @@
           "type": "question",
           "settings": {
             "title": "Special Discount",
-            "text": "<p>We offer $50 for military, teachers, firefighters, police and paramedics, but you will need to provide us with certification. Click <a href=\"/pages/military-discount\" title=\"Special Discount\">HERE </a>to get more information.</p>",
+            "title_tag": "h3",
+            "text": "<p>We offer C$50 for military, teachers, firefighters, police and paramedics, but you will need to provide us with certification. Click <a href=\"/pages/military-discount\" title=\"Special Discount\">HERE </a>to get more information.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -200,6 +211,7 @@
           "type": "question",
           "settings": {
             "title": "How to apply my discount code?",
+            "title_tag": "h3",
             "text": "<p>Please apply your discount code when you are at the checkout page. For more details, please click <a href=\"/pages/payment\" title=\"Checkout&Coupons&Financing Guidelines\">HERE</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -209,6 +221,7 @@
           "type": "rich-text",
           "settings": {
             "heading": "Products",
+            "heading_tag": "p",
             "text": "<p>Below are some common questions about our products</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -218,7 +231,8 @@
           "type": "question",
           "settings": {
             "title": "How to find the ebike that fits me?",
-            "text": "<p>The <strong>Lightest</strong> ebikes: EB7 2.0 & EB7 ST. Both bikes weigh 62.8 lbs and come with a folding feature for easy storage.<br/><br/>The <strong>Heaviest</strong> ebike: X-Hunter. The X-Hunter is the heaviest model in the Jasion ebike series, providing a more stable frame for better balance and stability. It offers improved traction and grip on slopes or uneven surfaces.<br/><br/>The <strong>Most Powerful Motor </strong>ebike: X-Hunter. With a 1400W powerful motor, the X-Hunter effortlessly handles any terrain, reaching speeds of over 30 mph.<br/><br/>The <strong>Highest</strong> ebikes: EB5 Roamer & EB5 Roamer ST. These bikes feature larger frames, suitable for taller riding postures, offering a more comfortable riding experience. They are ideal for taller riders, providing a more enjoyable ride. Recommended for heights up to 6.6 feet.<br/><br/>The <strong>Shortest</strong> ebike: EB7 ST. Specifically designed for shorter riders, the EB7 ST features a low center of gravity design for added stability. This design enhances riding safety, reducing the risk of tipping and loss of control. Recommended for heights as low as 5.5 feet.<br/><br/>You can check our <a href=\"/pages/compare\" title=\"Compare\">Compare Page</a> for the differences between our Ebike.</p>",
+            "title_tag": "h3",
+            "text": "<p>The <strong>Heaviest</strong> ebike: X-Hunter. The X-Hunter is the heaviest model in the Jasion ebike series, providing a more stable frame for better balance and stability. It offers improved traction and grip on slopes or uneven surfaces.<br/><br/>The <strong>Most Powerful Motor </strong>ebike: X-Hunter. With a 1400W powerful motor, the X-Hunter effortlessly handles any terrain, reaching speeds of over 30 mph.</p><p>The <strong>Longest Range </strong>ebike: RetroVolt Pro. Equipped with a high-capacity 52V 20Ah battery, it delivers an impressive 90-mile maximum range on a single charge. It is perfect for long commutes or all-day adventures without range anxiety.<br/></p><p>The <strong>Most Capable All-Terrain</strong> ebike: Thunder Pro. Packing a 2000W peak motor and 115 N·m of torque, it easily conquers steep inclines at speeds up to 35 mph. Its massive 500 lbs payload capacity makes it the ultimate powerhouse for gear-heavy outdoor adventures.</p><p>The <strong>Most Accessible Heavy-Duty</strong> ebike: Thunder Pro ST. It pairs the extreme 2000W peak performance and 90-mile range with a convenient step-through frame. This design allows for effortless mounting and a comfortable ride without sacrificing rugged off-road capabilities.</p><p><br/>You can check our <a href=\"/pages/compare\" title=\"Compare\">Compare Page</a> for the differences between our Ebike.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -227,6 +241,7 @@
           "type": "question",
           "settings": {
             "title": "Does my Jasion ebike come pre-assembled?",
+            "title_tag": "h3",
             "text": "<p>Your e-bike will arrive partially assembled. There are just a few pieces to put into place once you take the bike out of the box. For unboxing and setup instructions, please follow the guides on our <a href=\"https://www.youtube.com/@JasionBike\" target=\"_blank\" title=\"https://www.youtube.com/@JasionBike\">YouTube Channel</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -236,6 +251,7 @@
           "type": "question",
           "settings": {
             "title": "Can I ride my ebike with a passenger?",
+            "title_tag": "h3",
             "text": "<p>Jasion does not recommend riding with more than one adult on the bike at a time. This ensures safer riding conditions as well as increased maneuverability and control for the rider.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -245,6 +261,7 @@
           "type": "question",
           "settings": {
             "title": "Can I ride the Jasion ebike on rainy days?",
+            "title_tag": "h3",
             "text": "<p>Jasion E-Bike is water-resistant, which means that the bike won't let water in easily. If you drive on a wet road, your bike will be fine. But if your battery is in puddles or your bike into water and the electric parts get wet, damage could occur. Rider Safety tip: It's pretty dangerous riding in the rain, so take care. If you do ride on wet surfaces, wipe off all the water on the surface of your board, especially the charging port, and do not charge your bike until it’s dry.FYI: warranty doesn't include water damage.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -254,6 +271,7 @@
           "type": "question",
           "settings": {
             "title": "User manual/Installation Video",
+            "title_tag": "h3",
             "text": "<p>For Jasion E-Bike user manual and installation video, please click <a href=\"https://jasionbike.com/pages/user-manual-download\">HERE</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -263,6 +281,7 @@
           "type": "question",
           "settings": {
             "title": "How do I update my account information?",
+            "title_tag": "h3",
             "text": "<p>You can change your account information by selecting Login/Register. Enter your email address and password to view your account information. From there, you can update your name, password, and billing/shipping information.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -272,6 +291,7 @@
           "type": "question",
           "settings": {
             "title": "If the battery is dead, can I still ride?",
+            "title_tag": "h3",
             "text": "<p>Absolutely. Just step on the pedals to ride like an ordinary bike.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -281,6 +301,7 @@
           "type": "question",
           "settings": {
             "title": "Can Jasion Ebike be serviced at any bicycle shop?",
+            "title_tag": "h3",
             "text": "<p>Yes, any bike store can repair your bike. If you need help with your order, our customer support team is happy to help. Please email us at <a href=\"mailto:support@jasionbike.com\" title=\"mailto:support@jasionbike.com\">support@jasionbike.com</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -290,6 +311,7 @@
           "type": "question",
           "settings": {
             "title": "Best Practices",
+            "title_tag": "h3",
             "text": "<ol><li>Store your bike in a clean, dry place to avoid rust.</li><li>Keep components tightened to the torque specifications listed in the Recommended Torque Values section of the user manual.</li><li>Ensure the frame latch and handlebar latch are locked in place before riding.</li><li>Clean and lubricate moving parts regularly.</li><li>Clean your bike frame with a wet rag and low residue cleaner. After cleaning, lubricate where necessary.</li><li>Ensure your bike tires are always inflated to a pressure within the recommended range printed on the tire sidewalls.</li><li>Before each ride ensure all electrical wires are connected.</li></ol>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -299,6 +321,7 @@
           "type": "question",
           "settings": {
             "title": "Inspect Regularly",
+            "title_tag": "h3",
             "text": "<ol><li>Inflate your tires to the pressure listed on the tire sidewall.</li><li>Lubricate the chain until there is little noise from the drivetrain; we recommend using Tri-Flow chain lubrication.</li><li>Check that all hardware is tightened to the torque specifications listed in the Recommended Torque Values section of our user manual.</li><li>Check your brake pads for signs of wear and replace them if necessary.</li><li>Check your bike’s shifting performance and adjust the derailleur if necessary.</li><li>Clean the bike frame with a low-residue cleaner; we recommend using Simple Green. Use a rag to dry everything completely.</li><li>Check spoke tension and adjust if necessary. The recommended spoke tension can be found in the Recommended Torque Values section of our user manual.</li></ol>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -308,6 +331,7 @@
           "type": "question",
           "settings": {
             "title": "Chain",
+            "title_tag": "h3",
             "text": "<p>The chain is an essential part of your e-bike's drivetrain. Proper maintenance will keep it running smoothly:</p><p>1. Regularly clean the chain to remove dirt and debris.</p><p>2. Lubricate the chain with a suitable bicycle chain lubricant.</p><p>3. Check chain tension and adjust as necessary to ensure proper shifting and power transmission.</p><p>4. Replace the chain when it shows signs of wear to prevent damage to other drivetrain components.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -317,6 +341,7 @@
           "type": "question",
           "settings": {
             "title": "Brake",
+            "title_tag": "h3",
             "text": "<p>Brakes are critical for your safety. Learn how to maintain and adjust them effectively:</p><p>1. Regularly inspect brake pads for wear and replace them when necessary.</p><p>2. Adjust brake cable tension to ensure proper braking performance.</p><p>3. Check brake caliper alignment and adjust as needed.</p><p>4. Learn how to bleed hydraulic brakes if your e-bike is equipped with them.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -326,6 +351,7 @@
           "type": "question",
           "settings": {
             "title": "Extended Battery Life",
+            "title_tag": "h3",
             "text": "<p>Best practices for extending the range and battery life:</p><p>1. Follow the best practices listed below to help extend your range and battery life.</p><p>2. Whenever possible, avoid applying full throttle when the bike has slowed to very low speeds, has stalled, or stopped.</p><p>3. Pedal to assist the motor when climbing hills and accelerating from a stop.</p><p>4. Reduce your power consumption whenever possible.</p><p>5. Do not climb hills steeper than 15% in grade.</p><p>6. Avoid sudden starts and stops.</p><p>7. Accelerate slowly.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -335,6 +361,7 @@
           "type": "question",
           "settings": {
             "title": "Tire",
+            "title_tag": "h3",
             "text": "<p>Jasion recommends 45-60 PSI for the stock tires on the Jasion E-bike. Always stay within the manufacturer’s recommended air pressure range as listed on the tire sidewall.<br/>It is critically important that proper air pressure is always maintained in pneumatic tires. Do not underinflate or overinflate your tires. Low pressure may result in loss of control, and overinflated tires may burst. Failure to always maintain the air pressure rating indicated on pneumatic tires may result in the tire and/or wheel failure.<br/>Even tires equipped with built-in, flat-preventative tire liners, like those that come with bikes from Jasion, can and do get flats from punctures, pinches, impact, and other causes. When tire wear becomes evident or a flat tire is discovered, tires and/or tubes must be replaced before operating the bike or injury to operators and/or damage to your bike from heybike could occur.<br/>When changing a tire or tube, ensure that all air pressure has been removed from the inner tube prior to removing the tire from the rim. Failure to remove all air pressure from the inner tube could result in serious injury.<br/>Using aftermarket tires or inner tubes, not provided by Jasion may void your warranty, create an unsafe riding condition, or damage to your bike.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
