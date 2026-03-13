@@ -42,6 +42,11 @@
           "settings": {
             "text": "<p>Includes Pre-K, K-12 and University/College Faculty.</p>"
           }
+        },
+        "column_eWjMUW": {
+          "settings": {
+            "text": "<p>Includes Police, Fire and Paramedics.</p>"
+          }
         }
       }
     }
