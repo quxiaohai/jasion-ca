@@ -1,0 +1,508 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hb_yY3zhc": {
+      "type": "slideshow-hb",
+      "blocks": {
+        "image_AJgPLH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1920x400.jpg",
+            "image_mobile": "shopify://shop_images/460x630.jpg",
+            "heading": "Fat Tire Electric Bikes",
+            "heading_size": "title-sm",
+            "heading_tag": "h1",
+            "subheading": "Built for mountain trails, sand, snow, and city roads – ride with comfort.",
+            "subh_before": false,
+            "text_size": "subtext-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false,
+            "show_subscribe": false,
+            "top": 0,
+            "bottom": 20,
+            "left": 0,
+            "right": 0,
+            "mb_top": 0,
+            "mb_bottom": 20,
+            "pc_align": "flex-left",
+            "form_tag": "main sub",
+            "form_content": "main sub",
+            "show_privacy": false,
+            "privacy_text": "",
+            "pc_privacy_size": 16,
+            "mb_privacy_size": 10,
+            "privacy_checked": true,
+            "privacy_color": "#6d6d80",
+            "privacy_link_color": "#9e9daa",
+            "privacy_link_hover_color": "#ffffff",
+            "privacy_active_color": "#683df5",
+            "privacy_required": "This field is required",
+            "input_size": 18,
+            "input_align": "left",
+            "mb_input_size": 14,
+            "mb_input_align": "left",
+            "input_bg_color": "#ffffff",
+            "input_border_color": "#ffdb00",
+            "input_color": "#000000",
+            "input_placeholder": "Email",
+            "input_empty": "This field is required",
+            "input_required": "This email is invalid",
+            "sub_btn_align": "row",
+            "pc_sub_btn_size": 16,
+            "mb_sub_btn_size": 14,
+            "sub_btn": "Subscribe",
+            "btn_color": "#ffffff",
+            "btn_bg_color": "",
+            "show_remark": false,
+            "remark_text": "",
+            "remark_text_align": "left",
+            "pc_remark_size": 16,
+            "mb_remark_size": 10,
+            "remark_color": "#6d6d80"
+          }
+        }
+      },
+      "block_order": [
+        "image_AJgPLH"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "image_height": "400px",
+        "content_pw": false,
+        "content_position": "center",
+        "content_width": "small",
+        "image_height_mobile": "auto",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 48,
+            "height_mobile": 0
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_collections_link": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "title-xl"
+          }
+        },
+        "description_6gKhiH": {
+          "type": "description",
+          "settings": {
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing",
+        "breadcrumb",
+        "title",
+        "description_6gKhiH"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": true,
+        "show_image": true,
+        "image": "shopify://shop_images/image_5d216882-44d5-47f0-b7fa-60ae1aad1a6b.jpg",
+        "image_height": "adapt",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "mc_main_breadcrumbs_DmJtkj": {
+      "type": "mc_main-breadcrumbs",
+      "blocks": {
+        "breadcrumb_Fh8kHk": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "Home",
+            "url": "https://www.jasionbike.com/"
+          }
+        },
+        "breadcrumb_NFbHXT": {
+          "type": "breadcrumb",
+          "settings": {
+            "text": "New Arrivals",
+            "url": "shopify://collections/new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_Fh8kHk",
+        "breadcrumb_NFbHXT"
+      ],
+      "name": "MC Main Breadcrumbs",
+      "settings": {
+        "page_color": "",
+        "pc_page_left": 20,
+        "pc_page_right": 20,
+        "pc_page_top": 20,
+        "pc_page_bottom": 20,
+        "mb_page_left": 20,
+        "mb_page_right": 20,
+        "mb_page_top": 20,
+        "mb_page_bottom": 20,
+        "text_color": "#3c3f42",
+        "hover_text_color": "#ff981d",
+        "pc_align": "center",
+        "mb_align": "center",
+        "pc_size": 15,
+        "pc_weight": 400,
+        "mb_size": 14,
+        "mb_weight": 400
+      }
+    },
+    "main-collection": {
+      "type": "main-collection-e-bike",
+      "blocks": {
+        "promotion": {
+          "type": "promotion",
+          "settings": {
+            "position": 6,
+            "column_size": "1",
+            "image": "shopify://shop_images/460x630_89212206-f669-42c9-8e01-04fe788a66bf.jpg",
+            "heading": "Combo Sale",
+            "content": "<p>Start a wonderful journey with family and friends！</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "content_position": "md:items-start",
+            "text_alignment": "left",
+            "content_position_mobile": "items-center",
+            "text_alignment_mobile": "center",
+            "color_text": "#ffffff",
+            "color_button_text": "#4d5940",
+            "color_button_background": "#ffffff",
+            "color_button_gradient": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "page_navigation_D4eKgA": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Electric Bikes",
+            "button_url": "shopify://collections/electric-bike"
+          }
+        },
+        "page_navigation_mPEzR6": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Combo Sale",
+            "button_url": "shopify://collections/combo-sale"
+          }
+        },
+        "page_navigation_Peqt6x": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Folding EBike",
+            "button_url": "shopify://collections/folding-ebike"
+          }
+        },
+        "page_navigation_kX8U4D": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Fat Tire Ebike",
+            "button_url": "shopify://collections/fat-tire-ebike"
+          }
+        },
+        "page_navigation_GynjQA": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Cruiser Ebikes",
+            "button_url": "shopify://collections/cruiser-ebike"
+          }
+        },
+        "page_navigation_jcWeUg": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Over Ebike",
+            "button_url": "shopify://collections/step-over-electric-bikes"
+          }
+        },
+        "page_navigation_tnYyAL": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Step Through Ebike",
+            "button_url": "shopify://collections/step-through-ebikes"
+          }
+        },
+        "page_navigation_miU7zf": {
+          "type": "page_navigation",
+          "settings": {
+            "button_label": "Outlet",
+            "button_url": "shopify://collections/outlet"
+          }
+        }
+      },
+      "block_order": [
+        "promotion",
+        "page_navigation_D4eKgA",
+        "page_navigation_mPEzR6",
+        "page_navigation_Peqt6x",
+        "page_navigation_kX8U4D",
+        "page_navigation_GynjQA",
+        "page_navigation_jcWeUg",
+        "page_navigation_tnYyAL",
+        "page_navigation_miU7zf"
+      ],
+      "settings": {
+        "layout": "1",
+        "products_per_page": 50,
+        "columns": 3,
+        "columns_mobile": "1",
+        "pagination": "paginated",
+        "enable_specs": true,
+        "specs_limit": "4",
+        "enable_filtering": true,
+        "filter_collapsed": false,
+        "filter_type": "sidebar",
+        "filter_color_swatches": false,
+        "enable_sorting": false,
+        "padding_top": 40,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "show_title": true,
+        "title": "Fat Tire Ebikes Products",
+        "title_hidden": true,
+        "title_tag": "h2"
+      }
+    },
+    "faq_UzTexm": {
+      "type": "faq",
+      "blocks": {
+        "question_eUPVWh": {
+          "type": "question",
+          "settings": {
+            "title": "Why choose a fat tire eBike instead of a regular eBike?",
+            "title_tag": "h3",
+            "text": "<p>A fat tire eBike uses extra-wide tires (typically <strong>4\" wide</strong>, and sometimes 3\") to create a larger contact patch for <strong>better stability, traction, and comfort</strong> on imperfect surfaces like broken pavement, gravel, sand, and light snow. </p><p>On JasionBike’s fat-tire lineup, you’ll see both <strong>20\" x 4\"</strong> formats (more compact, easier to store) and <strong>26\" x 4\"</strong> formats (more rollover and stability at speed). If your rides include mixed terrain or you prioritize comfort and confidence over pure efficiency, fat tires are usually the better fit.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_Vz8Mai": {
+          "type": "question",
+          "settings": {
+            "title": "Which fat tire eBike is best for all-terrain and off-road riding?",
+            "title_tag": "h3",
+            "text": "<p>Here’s a practical “match-by-use-case” guide:</p><ul><li><strong>Best all-around folding, high comfort, and strong brakes</strong>:<br/><strong>Hunter Pro</strong> – Features <strong>full suspension</strong>, <strong>dual hydraulic brakes</strong>, <strong>95 Nm</strong> of torque, <strong>48V 15Ah</strong> battery, up to <strong>80 miles</strong> range, and <strong>400 lb</strong> payload. Perfect for long rides across varying terrain.</li><li><strong>Best value folding fat tire for mixed terrain</strong>:<br/><strong>X-Hunter</strong> – A <strong>folding model</strong>, with <strong>85 Nm</strong> of torque, <strong>48V 13Ah</strong> battery, and up to <strong>70 miles</strong> range. Great for riders seeking an affordable but versatile fat tire eBike.</li><li><strong>Best step-through accessibility and hydraulic brakes</strong>:<br/><strong>X-Hunter ST</strong> – A <strong>low-step frame</strong> model with <strong>dual hydraulic brakes</strong>, <strong>up to 71 miles</strong> range, and <strong>480 lb</strong> payload capacity. Ideal for easy mounting and urban commuting.</li><li><strong>Best 26\" platform for taller riders and long-range battery</strong>:<br/><strong>Thunder</strong> – With <strong>26\" x 4\" tires</strong>, a <strong>48V 18Ah</strong> battery, <strong>dual hydraulic brakes</strong>, and up to <strong>80 miles</strong> of range, this is the go-to for riders looking for stability at higher speeds and rougher roads.</li><li><strong>Fastest moped-style eBike with 52V system</strong>:<br/><strong>RetroVolt Pro</strong> – Featuring <strong>full suspension</strong>, <strong>52V 20Ah</strong> battery, up to <strong>90 miles</strong> range, and speeds up to <strong>38 mph</strong> with pedal assist, this is ideal for those seeking maximum speed and comfort.</li><li><strong>Most compact folding wide-tire for city and light off-road</strong>:<br/><strong>EB7 2.0 Road Trip</strong> – With <strong>20\" x 3\" tires</strong>, <strong>peak 1200W</strong> motor, up to <strong>55 miles</strong> of range, and folding design, it's perfect for city commutes and light off-road use.</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_azW6Lx": {
+          "type": "question",
+          "settings": {
+            "title": "Can JasionBike fat tire eBikes be used for snow, sand, and off-road riding?",
+            "title_tag": "h3",
+            "text": "<p>Yes, fat tire eBikes excel in snow, sand, and gravel due to their <strong>wide tire width</strong> that allows for better <strong>traction</strong> and <strong>flotation</strong>. Fat tires help you maintain stability on soft and uneven surfaces, reducing the risk of sinking into the terrain.</p><p>For snow or sand, it’s common to <strong>lower tire pressure</strong> slightly to improve grip, while for pavement, <strong>higher PSI</strong> reduces rolling resistance and improves efficiency. If you frequently ride in <strong>winter conditions</strong>, models like <strong>Hunter Pro</strong> (full suspension + dual hydraulic brakes) or <strong>Thunder</strong> (26\" x 4\" tires) are excellent choices.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_twRHBM": {
+          "type": "question",
+          "settings": {
+            "title": "What tire pressure (PSI) should I run on 20x4 or 26x4 fat tires?",
+            "title_tag": "h3",
+            "text": "<p>Tire pressure (PSI) can vary depending on your weight, riding style, and the terrain you're tackling. Here's a general guide:</p><ul><li><strong>For pavement</strong>: Run <strong>higher PSI</strong> (usually <strong>20-30 PSI</strong>) for better efficiency.</li><li><strong>For loose surfaces like sand or snow</strong>: <strong>Lower PSI</strong> (usually <strong>10-20 PSI</strong>) for better flotation and grip.</li></ul><p>Remember, always stay within the PSI range printed on the sidewall of your tires and adjust gradually depending on terrain and load. Proper tire pressure is essential for both safety and optimal performance.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_BVTA9m": {
+          "type": "question",
+          "settings": {
+            "title": "What is the maximum speed of JasionBike fat tire eBikes?",
+            "title_tag": "h3",
+            "text": "<p>Top speed varies by model (and local regulations). On JasionBike’s product specs:</p><ul><li><strong>Hunter Pro</strong>: <strong>30+ mph</strong> </li><li><strong>X-Hunter</strong>: <strong>30+ mph</strong></li><li><strong>X-Hunter ST</strong>: <strong>30+ mph</strong> </li><li><strong>Thunder</strong>: <strong>30+ mph</strong> </li><li><strong>RetroVolt Pro</strong>: up to <strong>38 mph</strong> (with pedal assist per the listing)</li><li><strong>EB7 2.0 Road Trip</strong>: <strong>28 mph</strong> </li></ul><p>Always ride within your local eBike class/speed rules.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_3xmeW9": {
+          "type": "question",
+          "settings": {
+            "title": "Do JasionBike fat tire ebikes use a torque sensor or cadence sensor?",
+            "title_tag": "h3",
+            "text": "<p>Most of JasionBike's fat tire models, including the <strong>Hunter Pro</strong>, <strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>, <strong>Thunder</strong>, <strong>RetroVolt Pro</strong>, and <strong>EB7 2.0 Road Trip</strong>, use <strong>cadence sensors</strong>. A <strong>cadence sensor</strong> detects the rate of pedaling (how fast you’re pedaling) and adjusts power output accordingly, providing a smoother, more consistent assist—ideal for <strong>casual rides</strong> or <strong>commuting</strong>.</p><p>If you're seeking a more <strong>natural ride feel</strong>, <strong>torque sensors</strong> (which detect pedal force) are generally found on higher-end models.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_aT7ACA": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Frequently asked question",
+            "title_tag": "span",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_YDF4n7": {
+          "type": "question",
+          "settings": {
+            "title": "What is the max payload capacity for heavy riders or cargo?",
+            "title_tag": "h3",
+            "text": "<p>Payload capacity is critical for larger riders and anyone carrying gear.</p><p>From the published specs:</p><ul><li><strong>X-Hunter ST</strong>: up to <strong>480 lbs</strong></li><li><strong>Hunter Pro / X-Hunter / Thunder</strong>: up to <strong>400 lbs</strong></li><li><strong>RetroVolt Pro / EB7 2.0 Road Trip</strong>: up to <strong>330 lbs</strong></li></ul><p>Remember: payload includes rider + accessories + cargo.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_WfwAxR": {
+          "type": "question",
+          "settings": {
+            "title": "Which JasionBike fat tire eBike models feature hydraulic brakes for better stopping power?",
+            "title_tag": "h3",
+            "text": "<p>Hydraulic brakes matter for confident stopping—especially on heavier fat tire eBikes.</p><p>Models that list <strong>dual hydraulic brakes</strong> include:</p><ul><li><strong>Hunter Pro</strong></li><li><strong>X-Hunter ST</strong></li><li><strong>Thunder</strong></li><li><strong>RetroVolt Pro</strong></li></ul><p>If you’re choosing between two similar bikes, hydraulic brakes are a strong “quality-of-ride” upgrade.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_igw8xT": {
+          "type": "question",
+          "settings": {
+            "title": "What tire sizes are available for JasionBike fat tire eBikes and how do they affect riding performance?",
+            "title_tag": "h3",
+            "text": "<p>JasionBike primarily uses:</p><ul><li><strong>20\" x 4\" fat tires</strong> on models like <strong>Hunter Pro</strong>, <strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>, and <strong>RetroVolt Pro</strong>—great for compact storage and agile handling. </li><li><strong>26\" x 4\" fat tires</strong> on <strong>Thunder</strong>—more rollover and stability on rough roads and at speed. </li><li><strong>20\" x 3\" wide tires</strong> on <strong>EB7 2.0 Road Trip</strong>—not as wide as 4\", but still noticeably more stable than standard commuter tires. </li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_tnHrzy": {
+          "type": "question",
+          "settings": {
+            "title": "What’s the difference between motor power and torque? Which matters most for climbing and off-road?",
+            "title_tag": "h3",
+            "text": "<p><strong>Torque (Nm)</strong> is what you feel when accelerating, climbing, or pushing through soft terrain. <strong>Motor power (W)</strong> influences sustained output and top-end performance, but torque often better predicts “hill confidence.”</p><p>Here’s a breakdown from JasionBike's models:</p><ul><li><strong>Hunter Pro</strong>: <strong>95 Nm</strong> of torque</li><li><strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>, <strong>Thunder</strong>: <strong>85 Nm</strong> of torque</li><li><strong>RetroVolt Pro</strong>: <strong>99 Nm</strong> of torque</li><li><strong>EB7 2.0 Road Trip</strong>: <strong>55 Nm</strong> of torque</li></ul><p>If you ride in <strong>hilly or off-road areas</strong> or carry heavy loads, models with higher torque like <strong>Hunter Pro</strong> or <strong>RetroVolt Pro</strong> will offer better performance.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_6jw9hm": {
+          "type": "question",
+          "settings": {
+            "title": "What are the top fat tire eBike for off-road riding and long-distance commutes?",
+            "title_tag": "h3",
+            "text": "<p>Here’s a list of top models depending on your riding style:</p><p><strong>1. For compact folding and off-road use</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/products/hunter-pro\" target=\"_blank\">Hunter Pro</a> (full suspension, hydraulic brakes, 48V 15Ah, 95 Nm torque)</li><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/products/jasion-x-hunter\" target=\"_blank\">X-Hunter</a> (folding, 85 Nm torque, 48V 13Ah, up to 70 miles)</li><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/products/x-hunter-st\" target=\"_blank\">X-Hunter ST</a> (step-through, hydraulic brakes, up to 480 lb payload)</li></ul><p><strong>2. For a larger 26x4 platform with long-range battery</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/products/thunder\" target=\"_blank\">Thunder</a> (26x4, 48V 18Ah, up to 80 miles, dual hydraulic brakes)</li></ul><p><strong>3. For maximum speed and comfort</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/products/retrovolt-pro\" target=\"_blank\">RetroVolt Pro</a> (52V 20Ah, up to 38 mph, full suspension, hydraulic brakes)</li></ul><p><strong>4. For the most compact folding wide-tire option</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://www.jasionbike.com/collections/electric-bike/products/eb5-roamer-st-road-trip\" target=\"_blank\">EB7 2.0 Road Trip</a> (20x3, peak 1200W, 28 mph, up to 55 miles)</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_eUPVWh",
+        "question_Vz8Mai",
+        "question_azW6Lx",
+        "question_twRHBM",
+        "question_BVTA9m",
+        "question_3xmeW9",
+        "question_aT7ACA",
+        "question_YDF4n7",
+        "question_WfwAxR",
+        "question_igw8xT",
+        "question_tnHrzy",
+        "question_6jw9hm"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQs",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 32,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow_hb_yY3zhc",
+    "main-collection-banner",
+    "mc_main_breadcrumbs_DmJtkj",
+    "main-collection",
+    "faq_UzTexm"
+  ]
+}

@@ -21,8 +21,8 @@
         "image_VeqLKj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1920x400_5ee1502e-5059-418d-8408-fcd142f2c9ac.jpg",
-            "image_mobile": "shopify://shop_images/1200x525.jpg",
+            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_4fe708a4-1c73-4111-b1e8-107491a7555b.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_17f1b124-39a0-442a-99d1-7645f8226dba.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -115,7 +115,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "🌸Happy International Women’s Day！",
+            "title": "🌸Early Spring Sale",
             "position": 6
           }
         },

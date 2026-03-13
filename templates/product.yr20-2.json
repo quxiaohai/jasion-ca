@@ -34,10 +34,6 @@
             "color_scheme": "accent-1"
           }
         },
-        "judge_me_reviews_preview_badge_rw99kg": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_nqdiQE": {
           "type": "cycle_countdown",
           "settings": {
@@ -179,7 +175,6 @@
       "block_order": [
         "title",
         "inventory_gRPFYM",
-        "judge_me_reviews_preview_badge_rw99kg",
         "cycle_countdown_nqdiQE",
         "countdown_NPztC6",
         "variant_picker",

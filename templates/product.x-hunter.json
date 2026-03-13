@@ -46,10 +46,6 @@
             "gradient_background": ""
           }
         },
-        "judge_me_reviews_preview_badge_BWr79w": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_tfjyUG": {
           "type": "cycle_countdown",
           "settings": {
@@ -178,7 +174,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🌸Happy Women's Day Sale\n<br>\n⚡Lowest Price EVER on X-Hunter<br>\n⚡ <strong>$50 Off $999+ with code:  HERPOWER</strong><br>\n🎁Purchase 2 e-bikes between <strong>Feb 15 and Mar 8</strong> for a chance to <strong>win a Walmart Gift Card</strong>.<br>\n🎁 Catch This Women’s Day Deal Before It’s Gone!"
+            "liquid": "🍃Early Spring Sale\n<br>\n⚡Lowest Price EVER on X-Hunter<br>\n⚡ <strong>C$50 Off C$999+ with code: SPRINGRIDE</strong><br>\n🎁 Catch This Spring Deal Before It’s Gone!"
           }
         },
         "text_wt9CQN": {
@@ -193,7 +189,6 @@
         "title",
         "inventory_mywmYW",
         "countdown_NPztC6",
-        "judge_me_reviews_preview_badge_BWr79w",
         "cycle_countdown_tfjyUG",
         "variant_picker",
         "bundled_sale_m69hF9",
@@ -1768,20 +1763,6 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_jVwnwq": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_jVwnwq"
-      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -1806,7 +1787,7 @@
           "settings": {
             "title": "1. What's your shipping policy?",
             "title_tag": "span",
-            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "text": "<p>Jasion has suspended local pick-up services in Canada. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

@@ -273,9 +273,9 @@
         "title_hidden": true,
         "title": "Electric Bikes",
         "title_color": "#ffffff",
-        "pc_image_url": "shopify://shop_images/RetroVolt_Pro_1920x400_73dc2f98-209e-495c-9c5f-14d9e6fb3c3a.jpg",
+        "pc_image_url": "shopify://shop_images/RetroVolt_Pro_1920x400_4fe708a4-1c73-4111-b1e8-107491a7555b.jpg",
         "image_ratio": "",
-        "mb_image_url": "shopify://shop_images/RetroVolt_Pro_1200x525_86ca716d-3377-4f03-ab36-2121a2f1f95c.jpg",
+        "mb_image_url": "shopify://shop_images/RetroVolt_Pro_1200x525_8ff92dc8-17df-40ec-9f3f-4fb9233c28ab.jpg",
         "mb_image_ratio": "",
         "image_preload": true,
         "url": "shopify://products/retrovolt-pro",
@@ -605,6 +605,24 @@
     "multicolumn_slide_hb_hfkHWV": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_7qYjiz": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Teml--hDSE8&t=9s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=Teml--hDSE8&t=9s",
+            "image_height_mobile": "auto",
+            "date": "2026/3/11",
+            "title": "Jasion Thunder Pro Unboxing and Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_44.jpg",
+            "author": "Adam Esposito"
+          }
+        },
         "video_BmLPLP": {
           "type": "video",
           "settings": {
@@ -697,6 +715,7 @@
         }
       },
       "block_order": [
+        "video_7qYjiz",
         "video_BmLPLP",
         "video_3bQV6W",
         "video_fPGerK",
@@ -924,6 +943,7 @@
         "question_yw9AMa",
         "question_Bq9QLY"
       ],
+      "disabled": true,
       "name": "t:sections.faq.presets.name",
       "settings": {
         "style": "with-border",

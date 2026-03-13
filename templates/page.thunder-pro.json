@@ -915,7 +915,6 @@
     },
     "mc_pas_level": {
       "type": "mc_pas-level",
-      "disabled": true,
       "blocks": {
         "pas_1": {
           "type": "pas",
@@ -942,6 +941,7 @@
         "pas_1",
         "pas_2"
       ],
+      "disabled": true,
       "settings": {
         "page_color": "",
         "show_title": true,
@@ -1003,7 +1003,6 @@
         "page_color": "",
         "show_title": true,
         "title": "<p>90-Mile Long Range</p>",
-        "title_style": "normal",
         "title_pc_size": 48,
         "title_mb_size": 24,
         "title_margin_bottom": 16,

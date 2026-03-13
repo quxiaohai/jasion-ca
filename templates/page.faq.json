@@ -142,7 +142,7 @@
           "settings": {
             "title": "Can I return my order for personal reasons?",
             "title_tag": "h3",
-            "text": "<p>To be eligible for a return, your item must be in the same condition that you received it, unworn, unused, or the ebike must have less than ten (10) miles on the odometer and must include all items that were inside the box (charger, keys, hardware, etc.), and in its original packaging.For specific fees, please click <a href=\"https://www.jasionbike.com/pages/return-refund-policy\">HERE</a>.</p>",
+            "text": "<p>To be eligible for a return, your item must be in the same condition that you received it, unworn, unused, or the ebike must have less than ten (10) miles on the odometer and must include all items that were inside the box (charger, keys, hardware, etc.), and in its original packaging.For specific fees, please click <a href=\"https://ca.jasionbike.com/pages/return-refund-policy\" title=\"https://ca.jasionbike.com/pages/return-refund-policy\">HERE</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -172,7 +172,7 @@
           "settings": {
             "title": "Do you offer financing?",
             "title_tag": "h3",
-            "text": "<p>We are offering financing.You can have direct access to Klarna financing through our partnership with Klarna. Now, you can pay for your next e-bike with installment payments after being approved for financing. Be sure to select Klarna at checkout and you will be taken to their secure payment process. For more details please click <a href=\"/pages/payment\" title=\"Checkout&Coupons&Financing Guidelines\">HERE</a></p>",
+            "text": "<p>We are offering financing.You can have direct access to Klarna financing through our partnership with Klarna. Now, you can pay for your next e-bike with installment payments after being approved for financing. Be sure to select Klarna at checkout and you will be taken to their secure payment process. For more details please click <a href=\"/pages/payment\" title=\"Payment & Checkout & Coupons Guide\">HERE</a></p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -272,7 +272,7 @@
           "settings": {
             "title": "User manual/Installation Video",
             "title_tag": "h3",
-            "text": "<p>For Jasion E-Bike user manual and installation video, please click <a href=\"https://jasionbike.com/pages/user-manual-download\">HERE</a>.</p>",
+            "text": "<p>For Jasion E-Bike user manual and installation video, please click <a href=\"/pages/user-manual-download\" title=\"User Manual\">HERE</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

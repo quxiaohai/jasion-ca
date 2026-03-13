@@ -48,10 +48,6 @@
             "color_scheme": "accent-1"
           }
         },
-        "judge_me_reviews_preview_badge_L4TAGE": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_yyiaXc": {
           "type": "cycle_countdown",
           "settings": {
@@ -212,7 +208,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Bundle Purchase — <strong>$1,249 Each</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n🎉Buy & Win: Chance to Get a <strong>100% Refund</strong><br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry!Price Goes Up After Mar 31!"
+            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Bundle Purchase — <strong>C$1,834.5 Each</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry! Price Goes Up After Mar 31 !"
           }
         },
         "text_wt9CQN": {
@@ -227,7 +223,6 @@
         "tag",
         "title",
         "inventory_RH4gwp",
-        "judge_me_reviews_preview_badge_L4TAGE",
         "cycle_countdown_yyiaXc",
         "countdown_NPztC6",
         "variant_picker",
@@ -1020,8 +1015,13 @@
         "page_bottom": 0,
         "show_title": true,
         "title": "<p>90-Mile Long Range</p>",
+        "title_font": "",
         "title_pc_size": 48,
+        "title_pc_weight": 700,
+        "title_pc_line": 120,
         "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
         "title_margin_bottom": 20,
         "title_color": "#000000",
         "title_bold_color": "#000000",
@@ -1031,7 +1031,9 @@
         "description_color": "#171717",
         "description_bold_color": "#171717",
         "description_pc_size": 18,
+        "description_pc_line": 120,
         "description_mb_size": 14,
+        "description_mb_line": 120,
         "description_pc_margin_bottom": 10,
         "description_mb_margin_bottom": 0,
         "pc_image": "shopify://shop_images/6_c436f557-744f-4bfe-ba1f-0ec200e9584a.jpg",
@@ -1793,7 +1795,7 @@
           "settings": {
             "title": "1. What's your shipping policy?",
             "title_tag": "span",
-            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "text": "<p>Jasion has suspended local pick-up services in Canada. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/shipping-policy\" title=\"https://ca.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -1803,7 +1805,7 @@
           "settings": {
             "title": "2. What's your warranty policy?",
             "title_tag": "span",
-            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/warranty\" title=\"https://ca.jasionbike.com/pages/warranty\">Warranty Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -2040,20 +2042,6 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_jVwnwq": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_jVwnwq"
-      ],
       "settings": {
         "color_text": "",
         "color_background": "",

@@ -1,0 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "ca"
+  },
+  "parent": "collection.e-bikes.json",
+  "sections": {
+    "faq_adttaY": {
+      "settings": {},
+      "blocks": {
+        "question_fJYRwn": {
+          "settings": {
+            "text": "<p>The “best” electric bike for adults depends on where you ride and where you’ll store it. If you want a foldable fat-tire setup designed for mixed terrain and everyday riding, start with <a href=\"https://www.jasionbike.com/products/jasion-x-hunter\" target=\"_blank\"><strong>X-Hunter</strong></a>. If you want a more comfort-focused, confidence-forward build, <strong>Hunter Pro</strong> is positioned with a foldable frame plus upgrades like full suspension and hydraulic disc brakes. </p>"
+          }
+        },
+        "question_38UEyr": {
+          "settings": {
+            "text": "<p>If you’re searching for the <strong>“best step-through electric bike for adults,”</strong> you likely prioritize easy mounting, stability at stops, and comfort for daily errands or commuting. Jasion’s step-through lineup is designed specifically for smooth urban riding and low-stress daily use.</p><p>For those who want the convenience of a step-through frame combined with extra versatility, the <a href=\"https://www.jasionbike.com/products/x-hunter-st\" target=\"_blank\"><strong>X-Hunter ST</strong></a> stands out as a foldable, all-terrain option equipped with fat tires and high-performance hydraulic brakes. This design is particularly beneficial if you carry bags, ride in everyday clothing, or simply prefer a more accessible frame for frequent stopping during your ride.</p>"
+          }
+        },
+        "question_kJkHre": {
+          "settings": {
+            "text": "<p>For rougher riding, prioritize traction + control: fat tires, suspension, and braking confidence. <a href=\"https://www.jasionbike.com/products/hunter-pro\" target=\"_blank\"><strong>Hunter Pro</strong></a> is positioned with full suspension and hydraulic disc brakes for a smoother, more controlled ride feel. If you prefer a “retro scrambler” look while still focusing on off-road and city versatility, <a href=\"https://www.jasionbike.com/products/retrovolt-pro\" target=\"_blank\"><strong>RetroVolt Pro</strong></a> is positioned with dual suspension and hydraulic disc brakes.</p>"
+          }
+        },
+        "question_8c4KQB": {
+          "settings": {
+            "text": "<p>If you care most about “punchy power” and quick takeoff, compare the models positioned for higher peak output and all-terrain control. <strong>RetroVolt Pro</strong> is marketed with a 2000W peak motor and a 52V battery, plus dual suspension and hydraulic disc brakes—so it’s built around a more performance-leaning ride experience. If you want performance but prefer a more classic fat-tire e-bike style, <strong>Hunter Pro</strong> emphasizes all-terrain capability and confident braking/suspension in their positioning. The best choice comes down to your preferred frame style (moped/scrambler vs classic e-bike) and whether you need folding storage.</p>"
+          }
+        },
+        "question_GPn7mA": {
+          "settings": {
+            "text": "<p>For hill riding, look beyond “top speed.” What matters most is whether the bike feels controlled under load: smooth power delivery, gearing that fits your terrain, and braking confidence on descents. Jasion’s commuter models are designed with quick acceleration for managing everyday slopes, while performance/all-terrain models like the <strong>RetroVolt Pro</strong> and<strong> Hunter Pro</strong> are engineered for superior off-road capability, stability, and advanced braking/suspension on mixed terrain.<br/><br/>If your area is consistently hilly, choose the model category first (commuter vs. all-terrain), then confirm the motor/battery and braking/suspension details on the specific product page to ensure it meets your needs.</p>"
+          }
+        },
+        "question_czBBnr": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
+}

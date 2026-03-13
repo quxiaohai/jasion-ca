@@ -42,16 +42,12 @@
         "inventory_FgCihQ": {
           "type": "inventory",
           "settings": {
-            "custom_text": "Pre-order，ships in 15 business days",
+            "custom_text": "In stock, ready to ship",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
             "color_scheme": "accent-1"
           }
-        },
-        "judge_me_reviews_preview_badge_rVgtgR": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         },
         "cycle_countdown_WPzr7e": {
           "type": "cycle_countdown",
@@ -175,6 +171,7 @@
         },
         "collapsible_tab_Lt8myP": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "RetroVolt Pro Pre-Sale😲",
@@ -186,7 +183,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🌸Happy Women's Day Sale\n<br>\n🎁Purchase any e-bike between <strong>Feb 15 and Mar 8</strong> for a chance to <strong>win a Walmart Gift Card</strong>.<br>\n⚡ <strong>$50 Off $999+ with code: HERPOWER</strong><br>\n🎁Buy 2 Get 2 <strong>Free Rear Seat</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Women’s Day Deal Before It’s Gone!"
+            "liquid": "🍃Early Spring Sale<br>\n⚡<strong> C$50 Off C$999+ with code: SPRINGRIDE</strong><br>\n🎁Buy 2 Get <strong>2 Free Rear Seat</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Spring Deal Before It’s Gone!<br>"
           }
         },
         "text_wt9CQN": {
@@ -201,7 +198,6 @@
         "tag_qyRk3U",
         "title",
         "inventory_FgCihQ",
-        "judge_me_reviews_preview_badge_rVgtgR",
         "cycle_countdown_WPzr7e",
         "countdown_NPztC6",
         "variant_picker",
@@ -1957,20 +1953,6 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_jVwnwq": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_jVwnwq"
-      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -1995,7 +1977,7 @@
           "settings": {
             "title": "1. What's your shipping policy?",
             "title_tag": "span",
-            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "text": "<p>Jasion has suspended local pick-up services in the Canada. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

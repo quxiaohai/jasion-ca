@@ -137,8 +137,8 @@
         "image_UxKiWT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lQLPKINMacFUVnXNArzNB4CwYidNRt5f8h8JdshBS6n-AA_1920_700.png",
-            "image_mobile": "shopify://shop_images/lQLPJxxV-lPohXXNBkDNBLCwTeGQr85K0uoJdshBS6n-AQ_1200_1600.png",
+            "image": "shopify://shop_images/RetroVolt_Pro_2cf2be5b-d7c0-436e-8f55-c1503be39fd1.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_17f1b124-39a0-442a-99d1-7645f8226dba.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -197,8 +197,8 @@
         "image_F7kDtH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1cfd64a3b5d815512134e8f9e07e4ebf.jpg",
-            "image_mobile": "shopify://shop_images/M_e37892e8-8868-4d39-8084-c93335ac6304.jpg",
+            "image": "shopify://shop_images/1cfd64a3b5d815512134e8f9e07e4ebf_c14ce535-3caa-4e53-ab3c-56ee9dc23b48.jpg",
+            "image_mobile": "shopify://shop_images/M_ed4e23bb-e235-4bdb-9c71-3de02d2385ac.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -257,8 +257,8 @@
         "image_xV4atH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_Pro_4e7a033f-b972-437d-84b2-2a6aa90bc2cf.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_ae4c7a43-0ed8-41bd-b729-1acd62a31006.jpg",
+            "image": "shopify://shop_images/Hunter_Pro_993e9adc-2a58-4552-8889-96b4281f867b.jpg",
+            "image_mobile": "shopify://shop_images/Hunter_Pro_M_d9dbcc8a-bffd-49ed-be70-922900d42c47.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -355,7 +355,7 @@
           "type": "collection",
           "settings": {
             "collection": "folding-ebike",
-            "image": "shopify://shop_images/11_68c2a676-6b3f-459e-b6e7-43ed56894462.jpg",
+            "image": "shopify://shop_images/11_241c9955-56a1-4f10-9c82-c7b1bcad780e.jpg",
             "title": "Folding Ebike",
             "description": "",
             "overlay_content": true,
@@ -376,7 +376,7 @@
           "type": "collection",
           "settings": {
             "collection": "fat-tire-ebike",
-            "image": "shopify://shop_images/12_0f9feb14-a8b4-4d89-8cfb-07a1b2ffc612.jpg",
+            "image": "shopify://shop_images/12_467b33af-3335-4427-ade6-c0d8ebf9ef9c.jpg",
             "title": "Fat Tire Ebike",
             "description": "",
             "overlay_content": true,
@@ -396,9 +396,9 @@
         "collection_gwpjnX": {
           "type": "collection",
           "settings": {
-            "collection": "outlet",
-            "image": "shopify://shop_images/13_b5841133-b8c2-4139-ba61-a6a3a1ef07f1.jpg",
-            "title": "Outlet",
+            "collection": "new-arrivals",
+            "image": "shopify://shop_images/13_f6a8da72-16b7-4a9b-a562-8fbe84be6ffc.jpg",
+            "title": "New Arrival",
             "description": "",
             "overlay_content": true,
             "color_text": "#ffffff",
@@ -695,8 +695,8 @@
         "image_cx4dww": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1banner_0c158b0c-5011-4189-a4cd-1d884d3322d5.png",
-            "image_mobile": "shopify://shop_images/banner_14ecfc0c-a6c0-455d-b626-647c0e27837d.png",
+            "image": "shopify://shop_images/THUNDEER_PRO.png",
+            "image_mobile": "shopify://shop_images/THUNDEER_PRO1.png",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -990,6 +990,60 @@
     "multicolumn_slide_hb_9xwaqy": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_A9HYyG": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NXL2uVvJ_tQ&t=215s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=NXL2uVvJ_tQ&t=215s",
+            "image_height_mobile": "auto",
+            "date": "2026/3/10",
+            "title": "40mph ebike | Jasion Thunder Pro",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_43.jpg",
+            "author": "Jack Cecil"
+          }
+        },
+        "video_TdPpAp": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
+            "image_height_mobile": "auto",
+            "date": "2025/10/22",
+            "title": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_46.jpg",
+            "author": "IMBruceECLECTIC"
+          }
+        },
+        "video_cG883Q": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=9y1pGdYNSZk",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=9y1pGdYNSZk",
+            "image_height_mobile": "auto",
+            "date": "2025/7/18",
+            "title": "DOORDASH ON A E-BIKE A BIG CHANGE FOR ME! The JASION HUNTER PRO!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_47.jpg",
+            "author": "Electric Scooter Academy"
+          }
+        },
         "video_jC9Wz8": {
           "type": "video",
           "settings": {
@@ -1006,42 +1060,6 @@
             "content": "",
             "avatar": "shopify://shop_images/channels4_profile_31.jpg",
             "author": "Raspy Rides"
-          }
-        },
-        "video_cG883Q": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "image_height": "adapt",
-            "video_url_mobile": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
-            "image_height_mobile": "auto",
-            "date": "",
-            "title": "1,194 people have given this bike a 4.5 star rating",
-            "title_sz": "h5",
-            "content": "",
-            "avatar": "shopify://shop_images/channels4_profile_19_4822d1f8-0ef3-4412-be58-74adb7c5dc82.jpg",
-            "author": "Electric Revolution"
-          }
-        },
-        "video_DMmQWM": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "image_height": "adapt",
-            "video_url_mobile": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
-            "image_height_mobile": "auto",
-            "date": "",
-            "title": "The JasionBike Thunder…1,500 Watts and 30 MPH for UNDER $1,000! Get out and Live Electric Life!",
-            "title_sz": "h5",
-            "content": "",
-            "avatar": "shopify://shop_images/channels4_profile_30_3f2af141-68db-493a-9e33-58455ff17cf2.jpg",
-            "author": "IMBruceECLECTIC"
           }
         },
         "video_VMWpRU": {
@@ -1062,40 +1080,41 @@
             "author": "Papa`s Product Reviews"
           }
         },
-        "video_MU3xzG": {
+        "video_3heDqh": {
           "type": "video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=FTCK4ppjSOE",
+            "video_url": "https://www.youtube.com/watch?v=bL2orWUzOvg&t=2s",
             "description": "",
             "enable_video_autoplay": false,
             "enable_video_looping": false,
             "image_height": "adapt",
-            "video_url_mobile": "",
+            "video_url_mobile": "https://www.youtube.com/watch?v=bL2orWUzOvg&t=2s",
             "image_height_mobile": "auto",
-            "date": "",
-            "title": "BEST CHEAP BUDGET FOLDING EBike WIth Full Suspension?",
+            "date": "2025/7/3",
+            "title": "E-Bike for RVers - Jasion Hunter Pro Review - Is It Worth It?",
             "title_sz": "h5",
             "content": "",
-            "avatar": "shopify://shop_images/channels4_profile.jpg",
-            "author": "HeroesNStuff"
+            "avatar": "shopify://shop_images/channels4_profile_48.jpg",
+            "author": "Our Everyday Getaway"
           }
         },
-        "video_tPEBaE": {
+        "video_DMmQWM": {
           "type": "video",
+          "disabled": true,
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=lQj5bcSygpU",
+            "video_url": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
             "description": "",
             "enable_video_autoplay": false,
             "enable_video_looping": false,
             "image_height": "adapt",
-            "video_url_mobile": "",
+            "video_url_mobile": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
             "image_height_mobile": "auto",
             "date": "",
-            "title": "Super Commuter Deal for $839! 28MPH Class 3 Speed Throttle",
+            "title": "The JasionBike Thunder…1,500 Watts and 30 MPH for UNDER $1,000! Get out and Live Electric Life!",
             "title_sz": "h5",
             "content": "",
-            "avatar": "shopify://shop_images/unnamed.jpg",
-            "author": "EbikeProducts"
+            "avatar": "shopify://shop_images/channels4_profile_30_3f2af141-68db-493a-9e33-58455ff17cf2.jpg",
+            "author": "IMBruceECLECTIC"
           }
         },
         "video_QzEdDj": {
@@ -1115,54 +1134,17 @@
             "avatar": "shopify://shop_images/channels4_profile_2.jpg",
             "author": "Eric Hernandez"
           }
-        },
-        "video_6FAaH4": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=MP_q93MD_eo&list=PLPWkwjbN02QSgNwl0IlKEUEs-24bipLtY&index=18",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "image_height": "adapt",
-            "video_url_mobile": "",
-            "image_height_mobile": "auto",
-            "date": "",
-            "title": "EBIKE REVIEW - Jasion EB7 Foldable E-Bike - Under $900",
-            "title_sz": "h5",
-            "content": "",
-            "avatar": "shopify://shop_images/channels4_profile_3.jpg",
-            "author": "Our Everyday Getaway"
-          }
-        },
-        "video_DXmRVj": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_yhKgb4bdTg&list=PLPWkwjbN02QTPLOb6gUXJTrA9EIdglrqA&index=9",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "image_height": "adapt",
-            "video_url_mobile": "",
-            "image_height_mobile": "auto",
-            "date": "",
-            "title": "I MADE IT GO FAST! | Assembly & Test Ride",
-            "title_sz": "h5",
-            "content": "",
-            "avatar": "shopify://shop_images/unnamed_1.jpg",
-            "author": "Zophie Reviews"
-          }
         }
       },
       "block_order": [
-        "video_jC9Wz8",
+        "video_A9HYyG",
+        "video_TdPpAp",
         "video_cG883Q",
-        "video_DMmQWM",
+        "video_jC9Wz8",
         "video_VMWpRU",
-        "video_MU3xzG",
-        "video_tPEBaE",
-        "video_QzEdDj",
-        "video_6FAaH4",
-        "video_DXmRVj"
+        "video_3heDqh",
+        "video_DMmQWM",
+        "video_QzEdDj"
       ],
       "settings": {
         "pw-overflow-hidden": true,
@@ -1196,6 +1178,55 @@
     "mc_kol_testimonials_Ba34yH": {
       "type": "mc_kol-testimonials",
       "blocks": {
+        "video_7xqwrk": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video": "shopify://files/videos/Thunder pro 20260309.mp4",
+            "video_mobile": "shopify://files/videos/Thunder pro 20260309.mp4",
+            "description": "",
+            "desktop_image": "shopify://shop_images/6.6_a6831aae-a80a-427f-bbc8-1a350dd08b0d.png",
+            "mobile_image": "shopify://shop_images/6.6_a6831aae-a80a-427f-bbc8-1a350dd08b0d.png",
+            "show_button1": true,
+            "button1": "Outdoor Riding",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#000000",
+            "button1_url": "shopify://products/thunder-pro-st",
+            "show_button2": true,
+            "button2": "Hiking Trails",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#000000",
+            "button2_url": "shopify://products/thunder-pro",
+            "content_color": "#000000",
+            "title": "35 mph is crazy！",
+            "content": "<p>Whether you're chasing sunsets or exploring new paths, Thunder Pro makes every ride effortless and unforgettable.<br/><br/></p>",
+            "author": "selenayazs"
+          }
+        },
+        "video_AN4NfQ": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Thunder pro 20260309.mov",
+            "video_mobile": "shopify://files/videos/Thunder pro 20260309.mov",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_1395.jpg",
+            "mobile_image": "shopify://shop_images/IMG_1395.jpg",
+            "show_button1": true,
+            "button1": "Outdoor Riding",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#000000",
+            "button1_url": "shopify://products/thunder-pro-st",
+            "show_button2": true,
+            "button2": "Hiking Trails",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#000000",
+            "button2_url": "shopify://products/thunder-pro-thunder-pro-st",
+            "content_color": "#000000",
+            "title": "Meet my next adventure buddy!",
+            "content": "<p>Whether you're chasing sunsets or exploring new paths, Thunder Pro makes every ride effortless and unforgettable.</p>",
+            "author": "selenayazs"
+          }
+        },
         "video_WYVHzn": {
           "type": "video",
           "settings": {
@@ -1264,36 +1295,14 @@
             "content": "<p>Very smooth ride with front suspension and rear mono shock.<br/></p>",
             "author": "wolfie.de"
           }
-        },
-        "video_yyH6DG": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/copy_13EF8ABB-E474-458F-A63C-CE41D7D575C6.mov",
-            "video_mobile": "shopify://files/videos/copy_13EF8ABB-E474-458F-A63C-CE41D7D575C6.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/1759456294__img_7008__original.avif",
-            "show_button1": true,
-            "button1": "Easy Assembly",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#000000",
-            "button1_url": "shopify://products/thunder",
-            "show_button2": false,
-            "button2": "",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#000000",
-            "button2_url": "",
-            "content_color": "#000000",
-            "title": "Love my Jasion bike!",
-            "content": "<p>I love my bike, I ride it every day! Easy assembly, perfect ride for me!!<br/></p>",
-            "author": "Scott C."
-          }
         }
       },
       "block_order": [
+        "video_7xqwrk",
+        "video_AN4NfQ",
         "video_WYVHzn",
         "video_fcMMFA",
-        "video_d8PLtx",
-        "video_yyH6DG"
+        "video_d8PLtx"
       ],
       "name": "MC Kol Testimonials",
       "settings": {

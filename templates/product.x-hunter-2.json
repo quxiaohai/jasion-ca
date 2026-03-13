@@ -35,10 +35,6 @@
             "color_scheme": "accent-1"
           }
         },
-        "judge_me_reviews_preview_badge_LVVwm8": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_aMFGQB": {
           "type": "cycle_countdown",
           "settings": {
@@ -178,7 +174,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🌸Happy Women's Day Sale\n<br>\n🎁Get 2 Free Rear Baskets with Combo<br>\n🎫<strong>$50 Off $999+ with code:  HERPOWER</strong><br>\n🎁Spend $3,500+ to win a <strong>FREE EB7</strong> or buy any eBike for a chance to <strong>win a Walmart Gift Card —Feb 15–Mar 8.</strong><br>\n🎁 Hurry! Catch This Women’s Day Deal Before It’s Gone!"
+            "liquid": "🍃 Early Spring Sale<br>\n🎁 Get 2 Free Rear Baskets with Combo<br>\n🎫<strong> C$50 Off C$1500+ with code: SPRINGRIDE<br></strong>\n🎁 Hurry! Catch This Spring Deal Before It’s Gone!<br>"
           }
         },
         "text_wt9CQN": {
@@ -192,7 +188,6 @@
       "block_order": [
         "title",
         "inventory_jJhPMb",
-        "judge_me_reviews_preview_badge_LVVwm8",
         "cycle_countdown_aMFGQB",
         "countdown_NPztC6",
         "variant_picker",
@@ -1768,20 +1763,6 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_jVwnwq": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_jVwnwq"
-      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -1806,7 +1787,7 @@
           "settings": {
             "title": "1. What's your shipping policy?",
             "title_tag": "span",
-            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "text": "<p>Jasion has suspended local pick-up services in Canada. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS and FedEx shipping services.  We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/shipping-policy\" title=\"https://ca.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -1816,7 +1797,7 @@
           "settings": {
             "title": "2. What's your warranty policy?",
             "title_tag": "span",
-            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/warranty\" title=\"https://ca.jasionbike.com/pages/warranty\">Warranty Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

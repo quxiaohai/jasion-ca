@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "ca"
+  },
+  "parent": "page.2025-christmas.json",
+  "sections": {
+    "slideshow_hb_ewRHzP": {
+      "settings": {},
+      "blocks": {
+        "image_VeqLKj": {
+          "settings": {
+            "image": "shopify://shop_images/Hunter_Pro_1920x400_700575b1-321f-4435-9602-2da03eb24592.jpg",
+            "image_mobile": "shopify://shop_images/Hunter_Pro_M_d9dbcc8a-bffd-49ed-be70-922900d42c47.jpg"
+          }
+        }
+      }
+    }
+  }
+}
