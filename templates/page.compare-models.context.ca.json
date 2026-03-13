@@ -20,8 +20,34 @@
           "settings": {
             "list": "5'5'' - 7'2''\n1800W\n90 Miles\n35Mph\n115 N.m\n52V 20Ah\n52V/2A\n0~5 Level\nDual Suspension\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7 Speed\nTwist Throttle\n500 lbs\nUL 2849\n82.5 lbs\nLCD\nAll Terrain"
           }
+        },
+        "item_t9QPHr": {
+          "type": "item",
+          "name": "Item",
+          "disabled": false,
+          "settings": {
+            "pr": "thunder-pro-st",
+            "list": "5'5'' - 7'2''\n1800W\n90 Miles\n35Mph\n115 N.m\n52V 20Ah\n52V/2A\n0~5 Level\nDual Suspension\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7 Speed\nTwist Throttle\n500 lbs\nUL 2849\n82.5 lbs\nLCD\nAll Terrain",
+            "bg_color": "",
+            "pr_img": null,
+            "pr_price": ""
+          }
         }
-      }
+      },
+      "block_order": [
+        "item_E4d6P9",
+        "item_4P8mFz",
+        "item_dtiU7t",
+        "item_jVM6Rd",
+        "item_prfUjG",
+        "item_iNYLPk",
+        "item_ejHkfX",
+        "item_Vixg8U",
+        "item_GpddBx",
+        "item_DW3dUw",
+        "item_t9QPHr",
+        "item_CCciXP"
+      ]
     }
   }
 }
