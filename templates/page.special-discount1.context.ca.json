@@ -12,5 +12,16 @@
     "market": "ca"
   },
   "parent": "page.special-discount1.json",
-  "sections": {}
+  "sections": {
+    "rich_text_m4FPgb": {
+      "settings": {},
+      "blocks": {
+        "text_rwHLmy": {
+          "settings": {
+            "text": "<ol><li>Valid in the Canada only.</li><li>One discount per person.</li><li>For ebikes only, not available on Jasion’s Amazon store.</li><li>We reserve the right to change or end the promotion at any time.</li><li>Special discounts can't be combined with other offers.</li></ol>"
+          }
+        }
+      }
+    }
+  }
 }
