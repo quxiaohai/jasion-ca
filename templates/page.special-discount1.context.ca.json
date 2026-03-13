@@ -22,6 +22,22 @@
           }
         }
       }
+    },
+    "faq_NrH86Y": {
+      "settings": {},
+      "blocks": {
+        "question_DQwGnb": {
+          "settings": {
+            "text": "<p>Valid Documents:</p><ol><li>Veteran's Service Card (NDI 75) (you may block your Service Number/SIN)</li><li>Canadian Armed Forces ID Card (NDI 20) or Current Pay Statement</li><li>Veterans Affairs Canada (VAC) ID or Official VAC Letter</li><li>CFOne Card (must show \"Veteran\" designation)</li><li>Medavie Blue Cross Veteran Health Card<br/></li><li>Driver's License showing Veteran mark <br/></li><li>VAC Education and Training Benefit Document</li></ol>"
+          }
+        }
+      }
+    },
+    "multicolumn_DyFVU9": {
+      "settings": {
+        "subheading": "We offer a C$50 exclusively for military, teachers, police, firefighters, and medical professionals."
+      },
+      "blocks": {}
     }
   }
 }
