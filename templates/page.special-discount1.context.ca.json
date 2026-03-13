@@ -37,7 +37,13 @@
       "settings": {
         "subheading": "We offer a C$50 exclusively for military, teachers, police, firefighters, and medical professionals."
       },
-      "blocks": {}
+      "blocks": {
+        "column_c7PGCU": {
+          "settings": {
+            "text": "<p>Includes Pre-K, K-12 and University/College Faculty.</p>"
+          }
+        }
+      }
     }
   }
 }
