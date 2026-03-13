@@ -18,7 +18,7 @@
       "blocks": {
         "item_DW3dUw": {
           "settings": {
-            "list": "5'5'' - 7'2''\n1800W\n90 Miles\n35Mph\n115 N.m\n52V 20Ah\n0~5 Level\nDual Suspension\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7 Speed\nTwist Throttle\n500 lbs\nUL 2849\n82.5 lbs\nLCD\nAll Terrain"
+            "list": "5'5'' - 7'2''\n1800W\n90 Miles\n35Mph\n115 N.m\n52V 20Ah\n52V/2A\n0~5 Level\nDual Suspension\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7 Speed\nTwist Throttle\n500 lbs\nUL 2849\n82.5 lbs\nLCD\nAll Terrain"
           }
         }
       }
