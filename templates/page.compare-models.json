@@ -114,6 +114,15 @@
             "pr_price": ""
           }
         },
+        "item_DW3dUw": {
+          "type": "item",
+          "settings": {
+            "pr": "thunder-pro",
+            "list": "",
+            "bg_color": "",
+            "pr_price": ""
+          }
+        },
         "item_CCciXP": {
           "type": "item",
           "settings": {
@@ -134,6 +143,7 @@
         "item_ejHkfX",
         "item_Vixg8U",
         "item_GpddBx",
+        "item_DW3dUw",
         "item_CCciXP"
       ],
       "name": "Products compare (hb)",
