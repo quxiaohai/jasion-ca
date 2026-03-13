@@ -325,7 +325,8 @@
           "type": "question",
           "settings": {
             "title": "Military Verification",
-            "text": "<p>Valid Documents:</p><p>1. DD-214 (you may block SSN)</p><p>2. LES, DFAS or TRICARE Document</p><p>3. Veterans Affairs ID or VA Postal Letter</p><p>4. USAA Insurance Card</p><p>5. Navy Federal Statement</p><p>6. Driver's License showing Veteran mark (requires visit to DMV to add it)</p><p>7. G.I. Bill Document</p>",
+            "title_tag": "h3",
+            "text": "<p>Valid Documents:</p><p>1. Veteran's Service Card (NDI 75)</p><p>2. Canadian Armed Forces ID Card (NDI 20) or Current Pay Statement</p><p>3. Veterans Affairs Canada (VAC) ID or Official VAC Letter</p><p>4. CFOne Card (must show \"Veteran\" designation)</p><p>5. Medavie Blue Cross Veteran Health Card</p><p>6. Driver's License showing Veteran mark / Poppy (requires visit to provincial registry to add it)</p><p>7. VAC Education and Training Benefit Document</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -334,6 +335,7 @@
           "type": "question",
           "settings": {
             "title": "Responder Verification",
+            "title_tag": "h3",
             "text": "<p>Valid Documents:</p><p>1. Official ID Card</p><p>2. Official Badge (must have your name on it)</p><p>3. Pay stub from your employer</p><p>4. Promotion/Award Certificate</p><p>5. Signed letter of employment status from your agency</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -343,6 +345,7 @@
           "type": "question",
           "settings": {
             "title": "Medical Verification",
+            "title_tag": "h3",
             "text": "<p>Valid Documents:</p><p>1. Official ID Card</p><p>2. Official Badge (must have your name on it)</p><p>3. Pay stub from your employer</p><p>4. Promotion/Award Certificate</p><p>5. Signed letter of employment status from your agency</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -352,6 +355,7 @@
           "type": "question",
           "settings": {
             "title": "Teacher Verification",
+            "title_tag": "h3",
             "text": "<p>Valid Documents:</p><p>1. Official ID Card or Badge</p><p>2. Educator's License or State Certification</p><p>3. Credential used to gain access to your campus (must have your name on it)</p><p>4. Pay Stub from your employer</p><p>5. Signed letter of employment status from your school</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -361,6 +365,7 @@
           "type": "question",
           "settings": {
             "title": "Student Verification",
+            "title_tag": "h3",
             "text": "<p>1. A student ID card with a date</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
