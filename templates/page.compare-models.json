@@ -29,6 +29,7 @@
       "blocks": {
         "item_E4d6P9": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "jasion®eb5-roamer-ebike",
             "list": "5'2''-6'6''\n1200W\n62 Miles\n28 Mph\n60 N·m\n48V 11AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 1.94 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nThumb Throttle\n330 lbs\nUL 2849\n65 lbs\nLCD\nCity, Commuting",
@@ -38,6 +39,7 @@
         },
         "item_4P8mFz": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "jasion®eb5-st-roamer-ebike",
             "list": "5'2''-6'6''\n1200W\n62 Miles\n28 Mph\n60 N·m\n48V 11AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 1.94 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nThumb Throttle\n330 lbs\nUL 2849\n65 lbs\nLCD\nCity, Commuting",
@@ -47,6 +49,7 @@
         },
         "item_dtiU7t": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "jasion-eb7-electric-bike",
             "list": "5'1''-6'2''\n1200W\n55 Miles\n28 Mph\n55 N·m\n48V 10AH\n48V/2A\n0~5 Level\nDual Suspension\n20 x 3 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n63 lbs\nLCD\nAll Terrain",
@@ -56,6 +59,7 @@
         },
         "item_jVM6Rd": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "eb7-st",
             "list": "5'1''-6'2''\n1200W\n55 Miles\n28 Mph\n55 N·m\n48V 10AH\n48V/2A\n0~5 Level\nDual Suspension\n20 x 3 in\nMechanical Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n63 lbs\nLCD\nAll Terrain",
@@ -83,6 +87,7 @@
         },
         "item_ejHkfX": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "jasion-yr20",
             "list": "5'5''-6'7''\n2000W\n80 Miles\n32 Mph\n120 N·m\n48V 20AH\n48V/3A\n0~5 Level\nDual Suspension\n20 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n87 lbs\nLCD\nAll Terrain",
@@ -92,6 +97,7 @@
         },
         "item_Vixg8U": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "pr": "thunder",
             "list": "5'2''-6'3''\n1500W\n80 Miles\n30+ Mph\n85 N·m\n48V 18AH\n48V/2A\n0~5 Level\nFront Fork\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n400 lbs\nUL 2849\n82 lbs\nLCD\nAll Terrain",
