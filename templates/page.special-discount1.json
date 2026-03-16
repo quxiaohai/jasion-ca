@@ -33,7 +33,7 @@
             "show_border": false,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "image": "shopify://shop_images/2_7c37419e-fbe6-4402-b460-14fd2eb893b4.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_1mfulx1mfulx1mfu_4730fa52-cb55-44d2-8738-5d0198cf40e0.png",
             "image_ratio": "adapt",
             "heading": "Military",
             "heading_size": "text-lg-2xl",
@@ -259,7 +259,7 @@
         "text_rwHLmy": {
           "type": "text",
           "settings": {
-            "text": "<ol><li>Valid in the US only.</li><li>One discount per person.</li><li>For ebikes only, not available on Jasion’s Amazon store.</li><li>We reserve the right to change or end the promotion at any time.</li><li>Special discounts can't be combined with other offers</li></ol>",
+            "text": "<ol><li>Valid in Canada only.</li><li>One discount per person.</li><li>For ebikes only, not available on Jasion’s Amazon store.</li><li>We reserve the right to change or end the promotion at any time.</li><li>Special discounts can't be combined with other offers</li></ol>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
