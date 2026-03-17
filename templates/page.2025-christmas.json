@@ -835,7 +835,7 @@
             "enable_video_autoplay": false,
             "enable_video_looping": false,
             "video_url_mobile": "https://www.youtube.com/watch?v=NXL2uVvJ_tQ&t=220s",
-            "date": "2026/3/10",
+            "date": "",
             "content": "40mph ebike | Jasion Thunder Pro",
             "avatar": "shopify://shop_images/channels4_profile_43_779a48b2-c6f9-43f6-8c43-099668a545df.jpg",
             "author": "Jack Cecil"
@@ -849,7 +849,7 @@
             "enable_video_autoplay": false,
             "enable_video_looping": true,
             "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
-            "date": "2025/10/12",
+            "date": "",
             "content": "Like A Super73.. But a THIRD of The Price?! | Jasion Retrovolt Pro Review",
             "avatar": "shopify://shop_images/channels4_profile_c3e4fbd8-eb7e-4beb-9ab1-493a62b0fcf7.jpg",
             "author": "Raspy Rides"
@@ -858,15 +858,15 @@
         "video_F9ApfL": {
           "type": "video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
+            "video_url": "https://www.youtube.com/watch?v=YNd4VF6q-uE&t=435s",
             "description": "",
             "enable_video_autoplay": false,
             "enable_video_looping": false,
-            "video_url_mobile": "https://www.youtube.com/watch?v=ZR8N-TV_4AA",
-            "date": "2025/6/20",
-            "content": "1,194 people have given this bike a 4.5 star rating",
-            "avatar": "shopify://shop_images/channels4_profile_1_9eb8fbf7-40cd-40cd-937b-641976e15af8.jpg",
-            "author": "Electric Revolution"
+            "video_url_mobile": "https://www.youtube.com/watch?v=YNd4VF6q-uE&t=435s",
+            "date": "",
+            "content": "Honest Review of Jasion X-Hunter ST - The BEST All Terrain Folding Ebike In the Market",
+            "avatar": "shopify://shop_images/unnamed_8.jpg",
+            "author": "Eddie Nunez"
           }
         },
         "video_HnB7wB": {
