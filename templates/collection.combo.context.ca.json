@@ -26,6 +26,17 @@
           }
         }
       }
+    },
+    "slideshow_hb_yY3zhc": {
+      "settings": {},
+      "blocks": {
+        "image_AJgPLH": {
+          "settings": {
+            "image": "shopify://shop_images/Hunter_Pro_993e9adc-2a58-4552-8889-96b4281f867b.jpg",
+            "image_mobile": "shopify://shop_images/Hunter_Pro_M_d9dbcc8a-bffd-49ed-be70-922900d42c47.jpg"
+          }
+        }
+      }
     }
   }
 }
