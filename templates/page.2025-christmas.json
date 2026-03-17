@@ -827,6 +827,20 @@
     "autumn_sale_community_video_y9RFFf": {
       "type": "autumn-sale-community-video",
       "blocks": {
+        "video_LAPFPL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NXL2uVvJ_tQ&t=220s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=NXL2uVvJ_tQ&t=220s",
+            "date": "2026/3/10",
+            "content": "40mph ebike | Jasion Thunder Pro",
+            "avatar": "shopify://shop_images/channels4_profile_43_779a48b2-c6f9-43f6-8c43-099668a545df.jpg",
+            "author": "Jack Cecil"
+          }
+        },
         "video_KMnAdR": {
           "type": "video",
           "settings": {
@@ -899,6 +913,7 @@
         }
       },
       "block_order": [
+        "video_LAPFPL",
         "video_KMnAdR",
         "video_F9ApfL",
         "video_HnB7wB",
