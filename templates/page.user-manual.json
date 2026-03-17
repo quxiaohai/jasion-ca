@@ -524,6 +524,14 @@
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_JC1_User_Manual_46d6dd95-f838-4894-a570-a49e226be353.pdf?v=1767867567",
             "type": "PDF"
           }
+        },
+        "file_G6FHMq": {
+          "type": "file",
+          "settings": {
+            "title": "Thunder Pro-User Manual-2026.03.17",
+            "url": "https://cdn.shopify.com/s/files/1/0751/3486/1498/files/Jasion_Thunder_Pro_User_Manual-V1_1.pdf?v=1773732433",
+            "type": "PDF"
+          }
         }
       },
       "block_order": [
@@ -543,7 +551,8 @@
         "file_9XjcUH",
         "file_7nknQy",
         "file_T8qqmp",
-        "file_WmRn9c"
+        "file_WmRn9c",
+        "file_G6FHMq"
       ],
       "name": "Download list (hb)",
       "settings": {
