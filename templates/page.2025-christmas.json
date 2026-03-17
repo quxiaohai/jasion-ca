@@ -678,9 +678,9 @@
         "discount_item_3EDXAP": {
           "type": "discount_item",
           "settings": {
-            "full_price": 3000,
+            "full_price": 4500,
             "discount_price": 150,
-            "discount_code": "IWD2026"
+            "discount_code": "SPRING150"
           }
         },
         "product_item_3XNajb": {
