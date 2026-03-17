@@ -148,8 +148,26 @@
             "author": "RVdaydream"
           }
         },
+        "video_f6AV6A": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=grwTz8LJkDs",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "https://www.youtube.com/watch?v=grwTz8LJkDs",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "Thunder Pro",
+            "title_sz": "h5",
+            "content": "",
+            "author": ""
+          }
+        },
         "video_MYMdWx": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=NByqtmCnLUc",
             "description": "",
@@ -246,6 +264,7 @@
         "video_miDnMD",
         "video_WCKjmr",
         "video_feUjWy",
+        "video_f6AV6A",
         "video_MYMdWx",
         "video_PxPnPd",
         "video_PK3wEx",
