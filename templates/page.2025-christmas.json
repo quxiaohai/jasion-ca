@@ -869,20 +869,6 @@
             "author": "Eddie Nunez"
           }
         },
-        "video_HnB7wB": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "video_url_mobile": "https://www.youtube.com/watch?v=tUCTZ6lS1n0",
-            "date": "2025/7/29",
-            "content": "The JasionBike Thunder…1,500 Watts and 30 MPH for UNDER $1,000! Get out and Live Electric Life!",
-            "avatar": "shopify://shop_images/channels4_profile_30_936b2579-daaf-489b-8b35-7fea2312569a.jpg",
-            "author": "EbikeProducts"
-          }
-        },
         "video_QDBpJ6": {
           "type": "video",
           "settings": {
@@ -896,29 +882,13 @@
             "avatar": "shopify://shop_images/483484232_122189012252250183_2874798791765895331_n_77a29ba0-51e8-4a73-8e43-28675ac8fb10.jpg",
             "author": "Papa`s Product Reviews"
           }
-        },
-        "video_HnB7wB1": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=FTCK4ppjSOE",
-            "description": "",
-            "enable_video_autoplay": false,
-            "enable_video_looping": false,
-            "video_url_mobile": "https://www.youtube.com/watch?v=FTCK4ppjSOE",
-            "date": "2025/10/29",
-            "content": "BEST CHEAP BUDGET FOLDING EBike WIth Full Suspension?",
-            "avatar": "shopify://shop_images/channels4_profile_3_5fbf7fc2-8df7-4aae-9c0b-e131fba67f55.jpg",
-            "author": "HeroesNStuff"
-          }
         }
       },
       "block_order": [
         "video_LAPFPL",
         "video_KMnAdR",
         "video_F9ApfL",
-        "video_HnB7wB",
-        "video_QDBpJ6",
-        "video_HnB7wB1"
+        "video_QDBpJ6"
       ],
       "name": "autumn-sale-video",
       "settings": {
@@ -960,16 +930,6 @@
             "title": "Raspy Rides"
           }
         },
-        "media_8aA4gV": {
-          "type": "media",
-          "settings": {
-            "desktop_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
-            "mobile_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
-            "score": 5,
-            "intro": "<p>My new bike was shipped very promptly. Received in excellent condition. Assembly was very easy and intuitive. Riding the Thunder is so much fun. I'm 55 and feel like a kid again. Thank you Jasion!</p>",
-            "title": "Scot R.A."
-          }
-        },
         "media_aDaPiY": {
           "type": "media",
           "settings": {
@@ -995,7 +955,6 @@
         "media_wbbaeK",
         "media_6Fq4TE",
         "media_EQqnDg",
-        "media_8aA4gV",
         "media_aDaPiY",
         "media_aX9Kyq"
       ],
