@@ -46,6 +46,13 @@
           "settings": {}
         }
       }
+    },
+    "mc_collection_banner": {
+      "settings": {
+        "pc_image_url": "shopify://shop_images/RetroVolt_Pro_1920x400_28fed14f-2e2a-4f35-a077-774cdfa99621.jpg",
+        "mb_image_url": "shopify://shop_images/RetroVolt_Pro_1200x525_3d9f71d9-db58-4f82-9d6d-f7b19db9071f.jpg"
+      },
+      "blocks": {}
     }
   }
 }
