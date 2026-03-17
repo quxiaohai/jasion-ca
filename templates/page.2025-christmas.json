@@ -235,7 +235,7 @@
       "settings": {
         "page_color": "",
         "show_title": true,
-        "title": "WINTER SALES END IN",
+        "title": "SPRING SALES END IN",
         "title_pc_size": 20,
         "title_mb_size": 16,
         "title_margin_bottom": 16,
@@ -453,7 +453,6 @@
       "name": "MC Main Subscribe",
       "settings": {
         "page_color": "",
-        "page_top": 80,
         "show_title": false,
         "title": "<p>Title</p>",
         "title_color": "#333333",
