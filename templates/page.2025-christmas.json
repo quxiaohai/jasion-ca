@@ -271,6 +271,7 @@
         },
         "card_xtxcfQ": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image_icon": "shopify://shop_images/autumn-sale-rules-icon2.png",
             "title": "Free Gifts",
