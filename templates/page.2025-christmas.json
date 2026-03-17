@@ -556,14 +556,14 @@
     "autumn_sale_product_list_kb7cx4": {
       "type": "autumn-sale-product-list",
       "blocks": {
-        "product_item_cwqA7b": {
+        "product_item_MQwcXa": {
           "type": "product_item",
           "settings": {
-            "product": "x-hunter-st",
+            "product": "thunder-pro",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
             "button2": "Learn More",
-            "button2_url": "shopify://products/x-hunter-st"
+            "button2_url": "shopify://products/thunder-pro"
           }
         },
         "product_item_qNkYPg": {
@@ -574,6 +574,16 @@
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/hunter-pro-combo"
+          }
+        },
+        "product_item_cwqA7b": {
+          "type": "product_item",
+          "settings": {
+            "product": "x-hunter-st",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/x-hunter-st"
           }
         },
         "product_item_44gqyE": {
@@ -631,8 +641,9 @@
         }
       },
       "block_order": [
-        "product_item_cwqA7b",
+        "product_item_MQwcXa",
         "product_item_qNkYPg",
+        "product_item_cwqA7b",
         "product_item_44gqyE",
         "product_item_Y7Tb7d",
         "product_item_xPtqMB",
