@@ -459,6 +459,7 @@
         },
         "file_tHaC6F": {
           "type": "file",
+          "disabled": true,
           "settings": {
             "title": "Thunder-User Manual-2025.07",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Thunder_User_Manual-V1_1.pdf?v=1752851273",
