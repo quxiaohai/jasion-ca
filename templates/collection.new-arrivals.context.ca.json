@@ -35,6 +35,11 @@
           "settings": {
             "text": "<p>Yes, fat tire eBikes excel in snow, sand, and gravel due to their <strong>wide tire width</strong> that allows for better <strong>traction</strong> and <strong>flotation</strong>. Fat tires help you maintain stability on soft and uneven surfaces, reducing the risk of sinking into the terrain.</p><p>For snow or sand, it’s common to <strong>lower tire pressure</strong> slightly to improve grip, while for pavement, <strong>higher PSI</strong> reduces rolling resistance and improves efficiency. If you frequently ride in <strong>winter conditions</strong>, models like <strong>Hunter Pro</strong> (full suspension + dual hydraulic brakes) or <strong>Thunder</strong> <strong>Pro</strong>(26\" x 4\" tires) are excellent choices.</p>"
           }
+        },
+        "question_BVTA9m": {
+          "settings": {
+            "text": "<p>Top speed varies by model (and local regulations). On JasionBike’s product specs:</p><ul><li><strong>Hunter Pro</strong>: <strong>30+ mph</strong> </li><li><strong>X-Hunter</strong>: <strong>30+ mph</strong></li><li><strong>X-Hunter ST</strong>: <strong>30+ mph</strong> </li><li><strong>Thunder Pro</strong>: <strong>35 mph</strong> </li><li><strong>RetroVolt Pro</strong>: up to <strong>38 mph</strong> (with pedal assist per the listing)</li></ul><p>Always ride within your local eBike class/speed rules.</p>"
+          }
         }
       }
     }
