@@ -56,7 +56,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "Hunter Pro: Save C$2999+C$50 Off, <strong>C$1475</strong> Per Unit",
+            "text": "Hunter Pro: Save C$2426+C$50 Off, <strong>C$1475</strong> Per Unit",
             "link": "shopify://products/hunter-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -78,6 +78,7 @@
         },
         "announcement_MiyK6E": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "😲Beware of Fake Jasionbike Websites",
