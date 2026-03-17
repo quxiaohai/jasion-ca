@@ -12,5 +12,17 @@
     "market": "ca"
   },
   "parent": "index.json",
-  "sections": {}
+  "sections": {
+    "slideshow_hb_WLJBe8001": {
+      "settings": {},
+      "blocks": {
+        "image_UxKiWT": {
+          "settings": {
+            "image": "shopify://shop_images/RetroVolt_Pro_a26a1bf9-265d-46bb-b400-9e840f33d641.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_648b2b6e-c890-470d-ac17-6b077f7c36bc.jpg"
+          }
+        }
+      }
+    }
+  }
 }
