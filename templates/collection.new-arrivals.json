@@ -15,8 +15,8 @@
         "image_AJgPLH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1920x400.jpg",
-            "image_mobile": "shopify://shop_images/460x630.jpg",
+            "image": "shopify://shop_images/Thunder_PRO.png",
+            "image_mobile": "shopify://shop_images/Thunder_PRO_M.png",
             "heading": "Built For Dirt",
             "heading_size": "title-sm",
             "heading_tag": "h1",
