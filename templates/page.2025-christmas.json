@@ -400,6 +400,7 @@
         "gift_KdMPhG",
         "gift_KdMXSG"
       ],
+      "disabled": true,
       "name": "MC Gift Cards",
       "settings": {
         "page_color": "",
