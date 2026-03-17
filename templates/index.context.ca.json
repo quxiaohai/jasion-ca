@@ -21,6 +21,27 @@
             "image": "shopify://shop_images/RetroVolt_Pro_a26a1bf9-265d-46bb-b400-9e840f33d641.jpg",
             "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_648b2b6e-c890-470d-ac17-6b077f7c36bc.jpg"
           }
+        },
+        "image_F7kDtH": {
+          "settings": {
+            "image": "shopify://shop_images/1cfd64a3b5d815512134e8f9e07e4ebf_95ac4937-3920-47e0-acaa-f7a052372568.jpg",
+            "image_mobile": "shopify://shop_images/M_ed7320e5-602c-41ed-a4d7-1ddba5691c87.jpg"
+          }
+        },
+        "image_xV4atH": {
+          "settings": {
+            "image": "shopify://shop_images/Hunter_Pro_1200x525_5f6dfb93-9b46-452d-8c4f-434d9d9fb9a9.jpg"
+          }
+        }
+      }
+    },
+    "collection_list_CbXJf3": {
+      "settings": {},
+      "blocks": {
+        "collection_cJqfhF": {
+          "settings": {
+            "image": "shopify://shop_images/12_7f3cbd45-12b0-4c4a-a6d0-599fc574a167.jpg"
+          }
         }
       }
     }
