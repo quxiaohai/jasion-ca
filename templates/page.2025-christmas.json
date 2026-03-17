@@ -453,6 +453,7 @@
       "name": "MC Main Subscribe",
       "settings": {
         "page_color": "",
+        "page_top": 60,
         "show_title": false,
         "title": "<p>Title</p>",
         "title_color": "#333333",
