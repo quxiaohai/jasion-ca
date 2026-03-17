@@ -44,7 +44,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "X-HUNTER: 2 Days Only! C$1259",
+            "text": "X-HUNTER: 2 Days Only! C$1369",
             "link": "shopify://products/jasion-x-hunter",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -78,7 +78,6 @@
         },
         "announcement_MiyK6E": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "😲Beware of Fake Jasionbike Websites",
