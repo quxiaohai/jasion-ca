@@ -78,6 +78,7 @@
         },
         "announcement_MiyK6E": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "😲Beware of Fake Jasionbike Websites",
