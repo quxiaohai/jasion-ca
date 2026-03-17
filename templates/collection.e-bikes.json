@@ -679,6 +679,7 @@
         },
         "video_Ct7p6K": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=l_cONfo1WA0",
             "description": "",
