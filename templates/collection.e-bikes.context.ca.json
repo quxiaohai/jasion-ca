@@ -53,6 +53,19 @@
         "mb_image_url": "shopify://shop_images/RetroVolt_Pro_1200x525_3d9f71d9-db58-4f82-9d6d-f7b19db9071f.jpg"
       },
       "blocks": {}
+    },
+    "main-collection": {
+      "settings": {},
+      "blocks": {
+        "page_navigation_iPpPjp": {
+          "disabled": true,
+          "settings": {}
+        },
+        "page_navigation_N386GW": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
     }
   }
 }

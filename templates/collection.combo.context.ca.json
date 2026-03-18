@@ -37,6 +37,19 @@
           }
         }
       }
+    },
+    "main-collection": {
+      "settings": {},
+      "blocks": {
+        "page_navigation_E69Wj4": {
+          "disabled": true,
+          "settings": {}
+        },
+        "page_navigation_3RhgMw": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
     }
   }
 }
