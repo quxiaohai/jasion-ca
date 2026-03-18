@@ -40,6 +40,16 @@
           "settings": {
             "text": "<p>Top speed varies by model (and local regulations). On JasionBike’s product specs:</p><ul><li><strong>Hunter Pro</strong>: <strong>30+ mph</strong> </li><li><strong>X-Hunter</strong>: <strong>30+ mph</strong></li><li><strong>X-Hunter ST</strong>: <strong>30+ mph</strong> </li><li><strong>Thunder Pro</strong>: <strong>35 mph</strong> </li><li><strong>RetroVolt Pro</strong>: up to <strong>38 mph</strong> (with pedal assist per the listing)</li></ul><p>Always ride within your local eBike class/speed rules.</p>"
           }
+        },
+        "question_3xmeW9": {
+          "settings": {
+            "text": "<p>Most of JasionBike's fat tire models, including the <strong>Hunter Pro</strong>, <strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>,   <strong>RetroVolt Pro</strong>, and <strong>Thunder Pro</strong>, use <strong>cadence sensors</strong>. A <strong>cadence sensor</strong> detects the rate of pedaling (how fast you’re pedaling) and adjusts power output accordingly, providing a smoother, more consistent assist—ideal for <strong>casual rides</strong> or <strong>commuting</strong>.</p><p>If you're seeking a more <strong>natural ride feel</strong>, <strong>torque sensors</strong> (which detect pedal force) are generally found on higher-end models.</p>"
+          }
+        },
+        "question_YDF4n7": {
+          "settings": {
+            "text": "<p>Payload capacity is critical for larger riders and anyone carrying gear.</p><p>From the published specs:</p><ul><li><strong>X-Hunter ST</strong>: up to <strong>480 lbs</strong></li><li><strong>Hunter Pro / X-Hunter</strong>: up to <strong>400 lbs</strong></li><li><strong>RetroVolt Pro / EB7 2.0 Road Trip</strong>: up to <strong>330 lbs</strong></li><li><strong>Thunder Pro</strong>: up to 5<strong>00 lbs</strong></li></ul><p>Remember: payload includes rider + accessories + cargo.</p>"
+          }
         }
       }
     }
