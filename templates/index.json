@@ -257,7 +257,7 @@
         "image_xV4atH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Hunter_Pro_1920x400_700575b1-321f-4435-9602-2da03eb24592.jpg",
+            "image": "shopify://shop_images/Hunter_Pro_1200x525_5f6dfb93-9b46-452d-8c4f-434d9d9fb9a9.jpg",
             "image_mobile": "shopify://shop_images/Hunter_Pro_M_d9dbcc8a-bffd-49ed-be70-922900d42c47.jpg",
             "heading": "",
             "heading_size": "title-md",
@@ -587,12 +587,12 @@
         "pw-overflow-hidden": true,
         "collection": "",
         "products": [
+          "thunder-pro",
           "thunder-pro-st",
           "jasion-x-hunter",
           "hunter-pro",
           "x-hunter-st",
           "retrovolt-pro",
-          "thunder-pro",
           "jasion®-combo-sale-x-hunter-2",
           "hunter-pro-combo",
           "x-hunter-x-hunter-st"
