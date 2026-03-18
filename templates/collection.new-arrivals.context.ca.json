@@ -55,6 +55,21 @@
           "settings": {
             "text": "<p>Hydraulic brakes matter for confident stopping—especially on heavier fat tire eBikes.</p><p>Models that list <strong>dual hydraulic brakes</strong> include:</p><ul><li><strong>Hunter Pro</strong></li><li><strong>X-Hunter ST</strong></li><li><strong>Thunder Pro</strong></li><li><strong>RetroVolt Pro</strong></li></ul><p>If you’re choosing between two similar bikes, hydraulic brakes are a strong “quality-of-ride” upgrade.<br/><br/></p>"
           }
+        },
+        "question_igw8xT": {
+          "settings": {
+            "text": "<p>JasionBike primarily uses:</p><ul><li><strong>20\" x 4\" fat tires</strong> on models like <strong>Hunter Pro</strong>, <strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>, and <strong>RetroVolt Pro</strong>—great for compact storage and agile handling. </li><li><strong>26\" x 4\" fat tires</strong> on <strong>Thunder Pro</strong>—more rollover and stability on rough roads and at speed. </li></ul>"
+          }
+        },
+        "question_tnHrzy": {
+          "settings": {
+            "text": "<p><strong>Torque (Nm)</strong> is what you feel when accelerating, climbing, or pushing through soft terrain. <strong>Motor power (W)</strong> influences sustained output and top-end performance, but torque often better predicts “hill confidence.”</p><p>Here’s a breakdown from JasionBike's models:</p><ul><li><strong>Hunter Pro</strong>: <strong>95 Nm</strong> of torque</li><li><strong>X-Hunter</strong>, <strong>X-Hunter ST</strong>: <strong>85 Nm</strong> of torque</li><li><strong>RetroVolt Pro</strong>: <strong>99 Nm</strong> of torque</li><li><strong>Thunder Pro</strong>: <strong>115</strong> <strong>Nm</strong> of torque</li></ul><p>If you ride in <strong>hilly or off-road areas</strong> or carry heavy loads, models with higher torque like <strong>Hunter Pro</strong> or <strong>RetroVolt Pro</strong> will offer better performance.</p>"
+          }
+        },
+        "question_6jw9hm": {
+          "settings": {
+            "text": "<p>Here’s a list of top models depending on your riding style:</p><p><strong>1. For compact folding and off-road use</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://ca.jasionbike.com/products/hunter-pro\" target=\"_blank\" title=\"https://ca.jasionbike.com/products/hunter-pro\">Hunter Pro</a> (full suspension, hydraulic brakes, 48V 15Ah, 95 Nm torque)</li><li><strong>Jasion </strong><a href=\"https://ca.jasionbike.com/products/jasion-x-hunter\" target=\"_blank\" title=\"https://ca.jasionbike.com/products/jasion-x-hunter\">X-Hunter</a> (folding, 85 Nm torque, 48V 13Ah, up to 70 miles)</li><li><strong>Jasion </strong><a href=\"https://ca.jasionbike.com/products/x-hunter-st\" target=\"_blank\" title=\"https://ca.jasionbike.com/products/x-hunter-st\">X-Hunter ST</a> (step-through, hydraulic brakes, up to 480 lb payload)</li></ul><p><strong>2. For a larger 26x4 platform with long-range battery</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://ca.jasionbike.com/products/thunder-pro\" title=\"https://ca.jasionbike.com/products/thunder-pro\">Thunder Pro</a> (26x4, 52V 20Ah, up to 90 miles, dual hydraulic brakes)</li></ul><p><strong>3. For maximum speed and comfort</strong>:</p><ul><li><strong>Jasion </strong><a href=\"https://ca.jasionbike.com/products/retrovolt-pro\" target=\"_blank\" title=\"https://ca.jasionbike.com/products/retrovolt-pro\">RetroVolt Pro</a> (52V 20Ah, up to 38 mph, full suspension, hydraulic brakes)</li></ul>"
+          }
         }
       }
     }
