@@ -12,5 +12,20 @@
     "market": "ca"
   },
   "parent": "product.thunderpro-thunderprost.json",
-  "sections": {}
+  "sections": {
+    "mc_product_compare": {
+      "settings": {},
+      "blocks": {
+        "other_product_C7C3Yz": {
+          "disabled": true,
+          "settings": {}
+        },
+        "other_product_wrfKLe": {
+          "settings": {
+            "product_params": "C$1,859\n2000W\n52V 20Ah\n115Nm\n90 Miles\nSmart App for ios & Android\n35 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nFull suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n82.5 lbs"
+          }
+        }
+      }
+    }
+  }
 }
