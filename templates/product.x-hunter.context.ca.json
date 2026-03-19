@@ -37,6 +37,11 @@
           }
         }
       }
+    },
+    "image_with_text_overlay_dijRbq": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
