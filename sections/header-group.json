@@ -52,6 +52,18 @@
             "highlighted_scribble": "circle"
           }
         },
+        "announcement_FkJPec": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "Welcome to our store",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "announcement-1": {
           "type": "announcement",
           "settings": {
@@ -78,7 +90,6 @@
         },
         "announcement_MiyK6E": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "😲Beware of Fake Jasionbike Websites",
@@ -94,6 +105,7 @@
         "announcement_Lag3eQ",
         "announcement_8UQHDB",
         "announcement-2",
+        "announcement_FkJPec",
         "announcement-1",
         "announcement_n8hBLb",
         "announcement_MiyK6E"
