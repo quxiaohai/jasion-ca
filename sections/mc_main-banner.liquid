@@ -54,72 +54,27 @@
     .{{ cid }} .backdrop-img, .{{ cid }} .backdrop-video {
         width: 100%;
         height: 100%;
-        object-fit: {% if ss.pc_height > 0 %}fill{% else %}cover{% endif %};
+        object-fit: cover;
+    }
+
+    .{{ cid }} ._dev-text strong {
+        color: var(--strong-color);
+        font-weight: var(--strong-weight);
     }
 
     .{{ cid }} .banner-content {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
         justify-content: {% if ss.content_pos == 'top' %}flex-start{% elsif  ss.content_pos == 'center' %}center{% else %}flex-end{% endif %};
-        max-width: {{ ss.pc_content_width }}px;
-    {%- if ss.width_follow_the_theme -%}
-        padding: 0 {% if ss.width_follow_the_theme %}var(--page-padding);{% else %}48px{% endif %};
-    {%- else -%}
+    {%- unless ss.width_follow_the_theme -%}
         padding-left: {{ ss.pc_left | divided_by: 19.2 }}vw;
-    {%- endif -%}
+    {%- endunless -%}
     }
 
     .{{ cid }} .banner-content.hidden {
         display: none;
-    }
-
-    .{{ cid }} .banner-content .date-name {
-        padding-bottom: 16px;
-    }
-
-    .{{ cid }} .banner-content .date-name .text {
-        padding: 6px 32px;
-        color: #181623;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.17;
-        border-radius: 1000px;
-        border: 1px solid #181623;
-    }
-
-    .{{ cid }} .banner-content .image-info {
-        width: auto;
-        overflow: hidden;
-        padding-bottom: 20px;
-    }
-
-    .{{ cid }} .banner-content .image-info .image {
-        width: auto;
-        height: 155px;
-    }
-
-    @media screen and (max-width: 1440px) {
-        .{{ cid }} .banner-content {
-            padding: 0 36px;
-        }
-
-        .{{ cid }} .banner-content .date-name {
-            padding-bottom: 11px;
-        }
-
-        .{{ cid }} .banner-content .date-name .text {
-            padding: 4px 22px;
-            font-size: 12px;
-        }
     }
 
     @media screen and (max-width: 1023px) {
@@ -130,7 +85,6 @@
             aspect-ratio: {{ mb_aspect_ratio }};
         {%- endif -%}
         }
-
         .{{ cid }} .banner-content {
             transform: translate3d(0, 0, 0);
         {%- unless ss.width_follow_the_theme -%}
@@ -139,11 +93,6 @@
             align-items: center;
             left: 0;
             justify-content: {% if ss.mb_content_pos == 'mb_top' %}flex-start{% elsif  ss.mb_content_pos == 'mb_center' %}center{% else %}flex-end{% endif %};
-        }
-
-        .{{ cid }} .banner-content .date-name .text {
-            padding: 0.25rem 1.66667rem;
-            font-size: 0.66667rem;
         }
     }
 </style>
@@ -182,7 +131,7 @@
     {% endif %}
     <div
         node-name="content"
-        class="banner-content w-full {% if ss.video_play_show %} hidden{% endif %}">
+        class="banner-content w-full h-full absolute flex-column z-2 {% if ss.width_follow_the_theme %} page-width{% endif %}{% if ss.video_play_show %} hidden{% endif %}">
         {%- for block in section.blocks -%}
             {% assign bs = block.settings %}
             {%- case block.type -%}
@@ -191,8 +140,11 @@
                         style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;"
                         class="date-name pc-done">
                         <span
-                            style="border-radius: {{ bs.radius }}px;{% if bs.bg_color != blank %}background: {{ bs.bg_color }};border: 0 none;{% else %} border-color: {{ bs.tag_color }};{% endif %}color: {{ bs.tag_color }}"
-                            class="text">{{ bs.tag }}</span>
+                            style="border-radius: {{ bs.radius }}px;
+                            {% if bs.bg_color != blank %}background: {{ bs.bg_color }};{% else %}border: 1px solid {{ bs.tag_color }};{% endif %}
+                                font-size: 0.9375vw;
+                                color: {{ bs.tag_color }}"
+                            class="text fw-500 lh-2">{{ bs.tag }}</span>
                     </div>
                     <div
                         style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
@@ -210,26 +162,30 @@
                 {%- when 'subscribe' -%}
                     {% render 'banner-subscribe', info: bs %}
                 {%- when 'image_icon' -%}
-                    <div
-                        class="w-full desktop-done {{ bs.pc_align }}"
-                        style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;">
-                        <img
-                            style="width: {{ bs.pc_img_w | divided_by: 19.2 }}vw"
-                            class="image"
-                            alt=""
-                            loading="lazy"
-                            src="{{ bs.pc_img | image_url: width: bs.pc_img_w }}"/>
-                    </div>
-                    <div
-                        style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
-                        class="w-full mobile-done:flex {{ bs.mb_align }}">
-                        <img
-                            class="image"
-                            alt=""
-                            loading="lazy"
-                            style="width: {{ bs.mb_img_w }}px"
-                            src="{{ bs.mb_img | image_url: width: bs.mb_img_w }}"/>
-                    </div>
+                    {%- if bs.pc_img_w != blank -%}
+                        <div
+                            class="w-full desktop-done {{ bs.pc_align }}"
+                            style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;">
+                            <img
+                                style="width: {{ bs.pc_img_w | divided_by: 19.2 }}vw"
+                                class="image"
+                                alt=""
+                                loading="lazy"
+                                src="{{ bs.pc_img | image_url: width: bs.pc_img_w }}"/>
+                        </div>
+                    {%- endif -%}
+                    {%- if bs.mb_img != blank -%}
+                        <div
+                            style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
+                            class="w-full mobile-done:flex {{ bs.mb_align }}">
+                            <img
+                                class="image"
+                                alt=""
+                                loading="lazy"
+                                style="width: {{ bs.mb_img_w }}px"
+                                src="{{ bs.mb_img | image_url: width: bs.mb_img_w }}"/>
+                        </div>
+                    {%- endif -%}
                 {%- when 'image' -%}
                     {%- if bs.pc_img != blank -%}
                         <div
@@ -251,65 +207,29 @@
 </div>
 {%- if ss.media_type == 'video' -%}
     <script>
-        (function () {
+        $heybike.on('DOMContentLoaded', () => {
             const node = document.getElementById('{{ cid }}');
             const nodeList = $heybike.getNodeList(node);
-            {%- if preload == false -%}
-            let vInfo = {};
-            const scrollRun = (top) => {
-                if (!vInfo.play
-                    && top + $heybike.screenHeight > vInfo.top
-                    && top - $heybike.screenHeight < vInfo.top
-                ) {
-                    vInfo.node.play().then(() => {
-                        console.log('play');
-                    }).catch(() => {
-                        vInfo.play = false;
-                    });
-                    vInfo.play = true;
-                } else if (vInfo.play && (top > vInfo.top + $heybike.screenHeight || top + $heybike.screenHeight < vInfo.top)) {
-                    vInfo.node.pause();
-                    vInfo.play = false;
-                    console.log('pause');
-                }
-            };
-            const initData = () => {
-                if (vInfo.node) {
-                    vInfo.node.pause();
-                }
-                const videoNode = $heybike.isMobile ? nodeList.mobile_banner_video : nodeList.desktop_banner_video;
-                const offset = $heybike.getOffset(videoNode);
-                vInfo = {
-                    node: videoNode,
-                    play: false,
-                    top: offset.top
-                };
+            const mediaElem = () => {
+                return $heybike.isMobile ? nodeList.mobile_banner_video : nodeList.desktop_banner_video;
+            }
 
-                scrollRun(window.scrollY || document.documentElement.scrollTop);
-            };
-
-            initData();
-            $heybike.on('scroll', opt => {
-                scrollRun(opt.top);
-            });
-            $heybike.on('resize', initData);
-            {%- else -%}
-            $heybike.on('DOMContentLoaded', () => {
-                const videoNode = $narwal.isMobile ? nodeList.mobile_banner_video : nodeList.desktop_banner_video;
-                videoNode.play()
+            const onPlay = () => {
+                const elem = mediaElem();
+                elem.play()
                     .then(() => {
                         {% if ss.video_play_show %}
-                        videoNode.addEventListener('ended', () => {
+                        elem.duration > 0 && setTimeout(() => {
                             nodeList.content.classList.remove('hidden');
-                        });
-                        videoNode.duration > 0 && setTimeout(() => {
-                            nodeList.content.classList.remove('hidden');
-                        }, videoNode.duration * 1000);
+                        }, elem.duration * 1000);
                         {% endif %}
                     });
+            }
+            $heybike.inView(node, () => {
+                onPlay();
+                return () => mediaElem().pause();
             });
-            {%- endif -%}
-        })();
+        });
     </script>
 {%- endif -%}
 {% schema %}
@@ -370,35 +290,41 @@
       "label": "Desktop image",
       "type": "image_picker",
       "info": "Please upload an image no larger than 2 megabytes.",
-      "id": "pc_image_url"
+      "id": "pc_image_url",
+      "visible_if": "{{ section.settings.media_type == 'image' }}"
     },
     {
       "label": "Mobile image",
       "type": "image_picker",
       "info": "Please upload an image no larger than 2 megabytes.",
-      "id": "mb_image_url"
+      "id": "mb_image_url",
+      "visible_if": "{{ section.settings.media_type == 'image' }}"
     },
     {
       "label": "Desktop video",
       "type": "video",
-      "id": "pc_video"
+      "id": "pc_video",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
     },
     {
       "label": "Desktop video cover",
       "type": "image_picker",
       "info": "Please upload an image no larger than 2 megabytes.",
-      "id": "pc_video_cover_url"
+      "id": "pc_video_cover_url",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
     },
     {
       "label": "Mobile video",
       "type": "video",
-      "id": "mb_video"
+      "id": "mb_video",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
     },
     {
       "label": "Mobile video cover",
       "type": "image_picker",
       "info": "Please upload an image no larger than 2 megabytes.",
-      "id": "mb_video_cover_url"
+      "id": "mb_video_cover_url",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
     },
     {
       "type": "select",
@@ -461,7 +387,8 @@
       "type": "number",
       "id": "pc_left",
       "label": "Desktop left padding",
-      "default": 145
+      "default": 145,
+      "visible_if": "{{ section.settings.width_follow_the_theme == false }}"
     },
     {
       "label": "Show overlay",
@@ -473,7 +400,8 @@
       "label": "Overlay color",
       "type": "color",
       "id": "overlay_color",
-      "default": "#000000"
+      "default": "#000000",
+      "visible_if": "{{ section.settings.overlay_show }}"
     },
     {
       "type": "range",
@@ -483,7 +411,8 @@
       "max": 100,
       "step": 1,
       "unit": "sec",
-      "default": 20
+      "default": 20,
+      "visible_if": "{{ section.settings.overlay_show }}"
     }
   ],
   "blocks": [
@@ -574,6 +503,12 @@
           "default": 0
         },
         {
+          "label": "Desktop button gap",
+          "type": "number",
+          "id": "pc_gap",
+          "default": 12
+        },
+        {
           "label": "Mobile left margin",
           "type": "number",
           "id": "mb_left",
@@ -596,6 +531,12 @@
           "type": "number",
           "id": "mb_bottom",
           "default": 0
+        },
+        {
+          "label": "Mobile button gap",
+          "type": "number",
+          "id": "mb_gap",
+          "default": 10
         },
         {
           "type": "select",
@@ -1027,6 +968,12 @@
           "default": "<p>Heybike</p>"
         },
         {
+          "label": "Desktop text fade up",
+          "type": "checkbox",
+          "id": "pc_fade_up",
+          "default": false
+        },
+        {
           "type": "text_alignment",
           "id": "pc_align",
           "label": "Desktop content alignment",
@@ -1107,6 +1054,12 @@
           "type": "richtext",
           "id": "mb_text",
           "default": "<p>Heybike</p>"
+        },
+        {
+          "label": "Mobile text fade up",
+          "type": "checkbox",
+          "id": "mb_fade_up",
+          "default": false
         },
         {
           "type": "text_alignment",

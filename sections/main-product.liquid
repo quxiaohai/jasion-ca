@@ -337,10 +337,10 @@
                               data-store="{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}"
                               data-date="{{ bs.countdown_start_date }}"
                               class="prcountdown tw-flex tw-gap-4 tw-mx-0 tw-my-2  tw-text-black">
-                              <span class="days tw-countdown-item"><input class="default-input text-center w-full" node-name="day" readonly value="00"/><span class="countdown-unit tw-block ">{{ bs.countdown_days }}</span>
-                              </span> <span class="hours tw-countdown-item"><input class="default-input text-center w-full" node-name="hour" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_hours }}</span></span>
-                              <span class="minutes tw-countdown-item"><input class="default-input text-center w-full" node-name="minute" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_minutes }}</span></span>
-                              <span class="seconds tw-countdown-item"><input class="default-input text-center w-full" node-name="second" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_seconds }}</span></span>
+                              <label class="days tw-countdown-item"><input class="default-input text-center w-full" node-name="day" readonly value="00"/><span class="countdown-unit tw-block ">{{ bs.countdown_days }}</span></label>
+                              <label class="hours tw-countdown-item"><input class="default-input text-center w-full" node-name="hour" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_hours }}</span></label>
+                              <label class="minutes tw-countdown-item"><input class="default-input text-center w-full" node-name="minute" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_minutes }}</span></label>
+                              <label class="seconds tw-countdown-item"><input class="default-input text-center w-full" node-name="second" readonly value="00"/><span class="countdown-unit">{{ bs.countdown_seconds }}</span></label>
                           </count-down>
                       </div>
                   </div>

@@ -1,9 +1,16 @@
+{%- assign ss = section.settings -%}
 <style>
   #shopify-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
   }
+
+  {%- if ss.color_active_text != blank -%}
+  .tab__item.tw-no-tab-btn.button--primary {
+    --color-foreground: {{ ss.color_active_text.rgb }};
+  }
+  {%- endif -%}
 </style>
 
 
@@ -34,7 +41,7 @@
             {% for block in section.blocks %}
             {% assign bk_stts = block.settings %}
             <button class="tab__item tw-no-tab-btn tw-leading-none tw-w-full {% if forloop.first %}button--primary{% else %} button--secondary{% endif %}" role="tab" aria-controls="TabPanel-{{block.id}}" data-index="{{ forloop.index0 }}">
-              <p class="large-slider-title tw-relative tw-flex tw-items-center tw-transition-all tw-cursor-pointer tw-opacity-25 ">
+              <p class="large-slider-title tw-relative tw-flex tw-items-center tw-transition-all tw-cursor-pointer tw-opacity-25{% if bk_stts.tab_con_font != blank %} font-{{ bk_stts.tab_con_font }}{% endif %}">
                 <span class="tw-inline-block tw-w-3 tw-h-3 tw-mr-5 tw-rounded-full tw-bg-current -md:tw-hidden"></span>{{bk_stts.tab_con}}
               </p>
             </button>
@@ -251,6 +258,11 @@
     },
     {
       "type": "color",
+      "id": "color_active_text",
+      "label": "Text active"
+    },
+    {
+      "type": "color",
       "id": "color_background",
       "label": "t:sections.global.settings.color_background.label"
     },
@@ -337,6 +349,11 @@
           "id": "tab_con",
           "label": "Tab name",
           "default": "Design"
+        },
+        {
+          "type": "text",
+          "id": "tab_con_font",
+          "label": "Tab name font"
         },
         {
           "type": "textarea",

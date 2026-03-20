@@ -79,6 +79,10 @@
     }
 
     @media screen and (max-width: 1023px) {
+        .{{ cid }} {
+            padding: 40px 0;
+        }
+
         .{{ cid }} .media-content {
             width: 100%;
             aspect-ratio: {{ mb_aspect_ratio }};
@@ -97,7 +101,7 @@
     {% render 'page-wrap-style' %}
 </style>
 <div class="{{ cid }} section--page w-full">
-    {%- render 'section-title', info: ss -%}
+    {%- render 'section-title', info: ss, font: ss.font_name -%}
     {%- if video_info != blank -%}
         <div class="page-width flex-center">
             <animate-element data-repeat class="media-content relative">
@@ -189,6 +193,11 @@
       "type": "richtext",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
     },
     {
       "type": "select",

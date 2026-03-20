@@ -6019,7 +6019,7 @@ html.touch .has-modal-open {
 }
 
 .loaded .drawer__inner {
-  transition: transform .6s cubic-bezier(.7, 0, .2, 1)
+  transition: transform .3s linear;
 }
 
 .drawer[open] {
@@ -6092,7 +6092,7 @@ html.touch .has-modal-open {
     max-width: none;
     inset-block-start: auto;
     inset-block-end: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 75%, 0);
   }
 
   html.js .drawer[active]>.drawer__inner {
@@ -15088,11 +15088,23 @@ body .nextop-chat--side-bottom {
     height: 100%;
     z-index: 1;
 }
+.scroll-area-view.scroll-x:before, .scroll-area-view.scroll-x:after {
+  width: 100%;
+  height: 0.25rem;
+  left: 0;
+  bottom: 0;
+  top: auto;
+}
 .scroll-area-view:after {
     transform: translateY(var(--scrollbar-y, 0));
     height: var(--scrollbar-height, 10px);
     background-color: #ff9500;
     z-index: 2;
+}
+.scroll-area-view.scroll-x:after {
+  transform: translateX(var(--scrollbar-x, 0));
+  height: 0.25rem;
+  width: var(--scrollbar-width, 10px);
 }
 .drawer__content .menu-tag,
 .header__menu .menu-tag {

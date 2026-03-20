@@ -1955,7 +1955,7 @@ class ModalElement extends HTMLElement {
         this.abortController?.abort();
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    onAttributeChanged(name, oldValue, newValue) {
         switch (name) {
             case 'open':
                 this.controls.forEach((button) => button.setAttribute('aria-expanded', newValue === null ? 'false' : 'true'));
@@ -2000,7 +2000,6 @@ class ModalElement extends HTMLElement {
 
     onButtonClick(event) {
         event.preventDefault();
-
         this.open ? this.hide() : this.show(event.currentTarget);
     }
 
@@ -2010,7 +2009,7 @@ class ModalElement extends HTMLElement {
         this.beforeHide();
         this.resetGesture();
         this.removeAttribute('open');
-
+        this.onAttributeChanged('open', '', null);
         return theme.utils.waitForEvent(this, this.events.afterHide);
     }
 
@@ -2020,7 +2019,7 @@ class ModalElement extends HTMLElement {
         this.beforeShow();
         this.activeElement = activeElement;
         this.setAttribute('open', animate ? '' : 'immediate');
-
+        this.onAttributeChanged('open', null, animate ? '' : 'immediate');
         if (this.shouldLock) {
             document.body.classList.add(this.classes.opening);
         }
@@ -2056,9 +2055,9 @@ class ModalElement extends HTMLElement {
     }
 
     showTransition() {
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             this.setAttribute('active', '');
-        }, 75);
+        });
         return new Promise((resolve) => {
             this.overlay.addEventListener('transitionend', resolve, {once: true});
         });
@@ -7896,27 +7895,32 @@ class HeyPopup extends HTMLElement {
 customElements.define('hey-popup', HeyPopup);
 
 
-class ScrollArea extends HTMLElement {
+customElements.define('scroll-area', class extends HTMLElement {
     constructor() {
         super();
     }
 
     connectedCallback() {
         this.classList.add('scroll-area-view');
+        !this.isScrollY && this.classList.add('scroll-x');
         setTimeout(() => {
             this._node = this.querySelector(this.selector);
             if (this._node){
-                $heybike.on('resize', this.onInit.bind(this), this._node);
-                this.onInit();
+                $heybike.on('resize', this.isScrollY ? this.initScrollY.bind(this) : this.initScrollX.bind(this), this._node);
+                this.isScrollY ? this.initScrollY() : this.initScrollX();
             }
         }, 500);
+    }
+
+    get isScrollY() {
+        return this.getAttribute('direct') !== 'x';
     }
 
     get selector() {
         return this.hasAttribute('data-selector') ? this.getAttribute('data-selector') : '.scroll-view';
     }
 
-    onInit = () => {
+    initScrollY = () => {
         const scrollHeight = this._node.scrollHeight;
         const totalHeight = this._node.offsetHeight;
 
@@ -7931,8 +7935,8 @@ class ScrollArea extends HTMLElement {
         this.barTotalHeight = totalHeight - barHeight;
         this.scrollTotalHeight = scrollHeight - totalHeight;
         this.style.setProperty('--scrollbar-height', `${barHeight}px`);
-        if (this.getAttribute('scroll')) {
-            return false;
+        if (this.hasAttribute('scroll')) {
+            return true;
         }
         this.setAttribute('scroll', 'true');
         this._node.addEventListener('scroll', (ev) => {
@@ -7941,8 +7945,31 @@ class ScrollArea extends HTMLElement {
             this.style.setProperty('--scrollbar-y', `${moveY}px`);
         });
     };
-}
-customElements.define('scroll-area', ScrollArea);
+
+    initScrollX = () => {
+        const scrollWidth = this._node.scrollWidth;
+        const totalWidth = this._node.offsetWidth;
+        // 隐藏状态
+        if (scrollWidth === 0 || scrollWidth === totalWidth) {
+            this.classList.add('hidden-bar');
+            return false;
+        }
+
+        this.classList.remove('hidden-bar');
+        this.barWidth = Math.round((totalWidth / scrollWidth) * totalWidth);
+        this.barTotalWidth = totalWidth - this.barWidth;
+        this.scrollTotalWidth = scrollWidth - totalWidth;
+        this.style.setProperty('--scrollbar-width', `${this.barWidth}px`);
+        if (this.hasAttribute('scroll')) {
+            return true;
+        }
+        this.setAttribute('scroll', 'true');
+        this._node.addEventListener('scroll', (ev) => {
+            const moveX = (ev.target.scrollLeft / this.scrollTotalWidth) * this.barTotalWidth;
+            this.style.setProperty('--scrollbar-x', `${moveX}px`);
+        });
+    };
+});
 
 class SlideElement extends HTMLElement {
     constructor() {
@@ -7989,10 +8016,20 @@ class SlideElement extends HTMLElement {
             wrapAround: this.loop,
             groupCells: this.cells,
             autoPlay: this.autoplay ? this.speed : false,
-            cellAlign: this.center
+            cellAlign: this.center,
+            on: {
+                change: (index) => {
+                    this.dispatchEvent(
+                        new CustomEvent('slider:change', {
+                            bubbles: true,
+                            detail: {currentPage: index}
+                        })
+                    );
+                }
+            }
         });
 
-        $heybike.on('resize:mobile', () => {
+        $heybike.on('resize:width', () => {
             this.querySelector('.flickity-viewport').style.height = '';
             this.slider.options.groupCells = this.cells;
             setTimeout(() => {

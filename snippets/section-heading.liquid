@@ -10,13 +10,13 @@
               assign subtext_size = 'subtext-lg'
             endif
           -%}
-          <p class="heading normal-case font-medium {{ subtext_size }} leading-none tracking-none">
+          <p class="heading normal-case font-medium {{ subtext_size }} leading-none tracking-none" style="font-family: ">
             {{- section.settings.subheading | escape -}}
           </p>
         {%- endif -%}
 
         {%- if section.settings.heading != blank -%}
-          <{{ section.settings.heading_tag }} class="heading {{ section.settings.heading_size }}">
+          <{{ section.settings.heading_tag }} {% if section.settings.font_name != blank %} style="font-family: {{ section.settings.font_name }}"{% endif %} class="heading {{ section.settings.heading_size }}">
             {%- if section.settings.highlighted_text == 'none' -%}
               <split-words class="split-words block" data-animate="fade-up-large">{{ section.settings.heading }}</split-words>
             {%- else -%}

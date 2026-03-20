@@ -299,6 +299,7 @@
         .mc_main-blog .article-items {
             gap: 0 1rem;
             margin-top: 1.5rem;
+            padding-bottom: 0.5rem;
         }
 
         .mc_main-blog .article-items .article-card {
@@ -385,25 +386,46 @@
                         assign index = index | plus: 1
                     endif
                 endfor
+                assign sort_list = sort_list | remove_last: ',' | split: ','
+                assign total_list = ''
+                if sort_list.size > 0
+                    for v in (1..4)
+                        assign cur_val = '10001|0'
+                        for val in sort_list
+                            unless total_list contains val
+                                assign num = val | split: '|' | first | times: 1
+                                assign cur = cur_val | sort: '|' | first | times: 1
+                                if num < cur
+                                    assign cur_val = val
+                                endif
+                            endunless
+                        endfor
+                        if cur_val != '10001|0'
+                            assign total_list = total_list | append: cur_val | append: ','
+                        endif
+                    endfor
+                endif
                 assign art_list = art_list | remove_last: ',' | split: ','
-                assign sort_list = sort_list | remove_last: ',' | split: ',' | sort | concat: art_list
+                assign sort_list = total_list | remove_last: ',' | split: ',' | concat: art_list
                 assign id = sort_list[0] | split: '|' | last | times: 1
                 assign article = blog.articles | find: 'id', id
             -%}
             {%- if article != blank -%}
                 {%- render 'mc_article-card', class: 'blog-main flex-between', article: article, show_tag: false, show_desc: true, chats: 60 -%}
             {%- endif -%}
-            <div class="blog-minor article-items hide-scroll-bar flex-between-top">
-                {%- for val in sort_list limit: 4 -%}
-                    {%- unless forloop.first -%}
-                        {%- liquid
-                            assign id = val | split: '|' | last | times: 1
-                            assign article = blog.articles | find: 'id', id
-                        -%}
-                        {%- render 'mc_article-card', class: 'blog-item', article: article, chats: 70 -%}
-                    {%- endunless -%}
-                {%- endfor -%}
-            </div>
+            <scroll-area direct="x">
+                <div class="blog-minor scroll-view article-items hide-scroll-bar flex-between-top">
+                    {%- for val in sort_list limit: 4 -%}
+                        {%- unless forloop.first -%}
+                            {%- liquid
+                                assign id = val | split: '|' | last | times: 1
+                                assign article = blog.articles | find: 'id', id
+                            -%}
+                            {%- render 'mc_article-card', class: 'blog-item', article: article, chats: 70 -%}
+                        {%- endunless -%}
+                    {%- endfor -%}
+                </div>
+            </scroll-area>
             {%- if ss.show_tag_filter and blog.tags.size > 0 -%}
                 <div class="blog-nav-wrap flex-center" node-name="navWrap">
                     <ul class="nav-items hide-scroll-bar">

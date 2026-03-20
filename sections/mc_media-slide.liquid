@@ -57,7 +57,7 @@
         position: absolute;
         opacity: 1;
         transform: translateX(var(--translate-x));
-        transition: transform 2ms;
+        transition: transform {{ ss.duration | times: 100 }}ms linear;
     }
 
     .mc_media-slide .slide-content .media-slide-items .slide-item.active {
@@ -200,9 +200,9 @@
                         trigger(nodeList.tab[next]);
                         return false;
                     }
-                    i++;
+                    i += 10;
                     updateProgress(i);
-                }, {{ ss.duration | times: 10 }});
+                }, {{ ss.duration | times: 100 }});
             };
             $heybike.inView(node, () => {
                 startSlide();

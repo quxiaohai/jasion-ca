@@ -3,6 +3,17 @@
     .mc_product-compare {
         padding: 80px 0;
         background: #ffffff;
+        --bike-title: #000000;
+        --compare-title: #000000;
+        --border-color: #d7d7d7;
+        --info-text: #6e6e6e;
+    }
+
+    .mc_product-compare.dark {
+        --bike-title: #ffffff;
+        --compare-title: #ffffff;
+        --border-color: #383838;
+        --info-text: #b9b9b9;
     }
 
     .mc_product-compare .compare-content {
@@ -15,7 +26,7 @@
     .mc_product-compare .compare-content.sticky {
         position: sticky;
         transition: top var(--animation-nav);
-        background-color: #ffffff;
+        background-color: {{ ss.page_color }};
         z-index: 2;
         overflow: hidden;
     }
@@ -51,7 +62,7 @@
         font-size: 20px;
         font-weight: bold;
         line-height: 1.2;
-        color: #000000;
+        color: var(--bike-title);
     }
 
     .mc_product-compare .compare-content .product-items .product-item .variant-selects {
@@ -180,18 +191,18 @@
 
     .mc_product-compare .compare-content .compare-box {
         padding: 22px 0;
-        border-bottom: 1px solid #d7d7d7;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .mc_product-compare .compare-content .compare-box.first {
-        border-top: 1px solid #d7d7d7;
+        border-top: 1px solid var(--border-color);
     }
 
     .mc_product-compare .compare-content .compare-box .title {
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
-        color: #000000;
+        color: var(--compare-title);
         width: 215px;
     }
 
@@ -203,7 +214,7 @@
     .mc_product-compare .compare-content .compare-box .info-items .info-item .text {
         font-size: 20px;
         line-height: 1.2;
-        color: #6e6e6e;
+        color: var(--info-text);
     }
 
     .mc_product-compare .compare-content .compare-box .info-items .info-item .text strong,
@@ -420,8 +431,9 @@
             font-size: 0.7921676958rem;
         }
     }
+    {% render 'page-wrap-style' %}
 </style>
-<section class="mc_product-compare">
+<section class="mc_product-compare {{ ss.theme }} section--page">
     {% render 'section-title', info: ss %}
     <div class="compare-content hide-scroll-bar flex-center-col sticky" id="{{ section.id }}-compare">
         <div class="product-items flex-center" node-name="productWrap">
@@ -857,6 +869,22 @@
       "id": "description_mb_margin_bottom",
       "label": "Mobile description margin bottom",
       "default": 30
+    },
+    {
+      "type": "select",
+      "id": "theme",
+      "label": "Theme color",
+      "options": [
+        {
+          "label": "Light",
+          "value": "light"
+        },
+        {
+          "label": "Dark",
+          "value": "dark"
+        }
+      ],
+      "default": "light"
     },
     {
       "type": "textarea",

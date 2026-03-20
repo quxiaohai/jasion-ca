@@ -9,6 +9,612 @@
  */
 {
   "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "show_price": true,
+            "show_rating": false,
+            "pr_info": "<p>{{ product.metafields.custom.short_text.value }}</p>",
+            "line": true,
+            "line_top": "md:tw-mt-2",
+            "line_bottom": "md:tw-mb-2"
+          }
+        },
+        "judge_me_reviews_preview_badge_CNr4Dr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "cycle_countdown_xpW97T": {
+          "type": "cycle_countdown",
+          "settings": {
+            "countdown_lbl": "Hurry up!",
+            "countdown_lbl_content": "Price Increases Soon",
+            "countdown_start_date": "2024-12-02T00:00:00",
+            "duration": 1,
+            "countdown_days": "DAYS",
+            "countdown_hours": "HRS",
+            "countdown_minutes": "MIN",
+            "countdown_seconds": "SEC",
+            "background": "#ff9b2b",
+            "background_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
+        "countdown_NPztC6": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#171717",
+            "color_background": "#ffac00",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "color",
+            "size_chart": ""
+          }
+        },
+        "bundled_sale_m69hF9": {
+          "type": "bundled_sale",
+          "settings": {
+            "heading": "Compatible Accessories",
+            "gift_list": [
+              "extra-one-year-warranty",
+              "fenders-for-jasion-eb7",
+              "jasion-bike-cap",
+              "patrol-sticker"
+            ],
+            "product_list": [
+              "bicycle-combination-lock",
+              "jasion-bicycle-universal-mirrors"
+            ]
+          }
+        },
+        "highlights_icons_HEfgKC": {
+          "type": "highlights_icons",
+          "disabled": true,
+          "settings": {
+            "bg_color": "#ffffff"
+          }
+        },
+        "quantity_selector_d6GJ77": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "show_payment_icons_RbYfHc": {
+          "type": "show_payment_icons",
+          "settings": {}
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "anchor_DWTAQW": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "Specifications",
+            "anchor_id": "Specification (img)"
+          }
+        },
+        "highlights_icons_kU88Jz": {
+          "type": "highlights_icons",
+          "settings": {
+            "bg_color": ""
+          }
+        },
+        "help_desk_LK3HNi": {
+          "type": "help_desk",
+          "settings": {
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": ""
+          }
+        },
+        "drawer_NiEjcP": {
+          "type": "drawer",
+          "settings": {
+            "title": "Specifications",
+            "content": ""
+          }
+        },
+        "liquid_epRzrJ": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 Early Bird: $1,599 (<strong>-$100</strong>)|Mar 20–Mar 31<br>\n🎁 Exclusive Patrol Gifts Included<br>\n🎥 Buy & Win: <strong>Insta360 GO 3S X1| Mar 20–Mar 23<br></strong>\n💰 Order & Win a 100% Refund | Mar 20–Mar 31<br>\n⏳ <strong>Price Goes Up After Mar 31</strong>"
+          }
+        },
+        "anchor_8VjwmL": {
+          "type": "anchor",
+          "disabled": true,
+          "settings": {
+            "title": "What's In The Box",
+            "anchor_id": "whats-in-the-box-txt"
+          }
+        },
+        "collapsible_tab_Lt8myP": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible row",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "text_wt9CQN": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Black: Pre-sale ends on February 20th.Contact Email: support@jasionbike.comContact Phone：(+1) 888-825-6366Notice: The new version of the X-hunter has updated handlebars and stems. Both versions are shipped randomly.",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_CNr4Dr",
+        "cycle_countdown_xpW97T",
+        "countdown_NPztC6",
+        "variant_picker",
+        "bundled_sale_m69hF9",
+        "highlights_icons_HEfgKC",
+        "quantity_selector_d6GJ77",
+        "buy_buttons",
+        "show_payment_icons_RbYfHc",
+        "sticky_buy_button",
+        "anchor_DWTAQW",
+        "highlights_icons_kU88Jz",
+        "help_desk_LK3HNi",
+        "drawer_NiEjcP",
+        "liquid_epRzrJ",
+        "anchor_8VjwmL",
+        "collapsible_tab_Lt8myP",
+        "text_wt9CQN"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_specs": true,
+        "specs_limit": "6",
+        "media_size": 60,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "beside",
+        "image_ratio": "adapt_first",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "adapt_first",
+        "mobile_thumbnail": false,
+        "padding_top": 64,
+        "padding_bottom": 84,
+        "divider": true,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "large_header_slider_hb_jHEfnU": {
+      "type": "large-header-slider-hb",
+      "blocks": {
+        "item_8NiF9n": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/1_37194af7-6f4a-44a4-9290-946053541318.jpg",
+            "tab_con": "Establishment",
+            "tab_con_font": "rushblade",
+            "title": "Born to Redefine the Ride",
+            "content": "The Patrol was conceived with one mission: to dominate beyond the pavement.\n\nEngineered from the ground up to redefine expectations, it merges motorcycle-grade power with the agility and freedom of an eBike—built for rugged trails and high-performance riding. Every detail, from its aggressive powertrain to off-road-focused geometry, is purpose-built for the wild."
+          }
+        },
+        "item_xybDjj": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/2_4420e5c8-1223-4842-81d8-2b0d963d3031.jpg",
+            "tab_con": "Design",
+            "tab_con_font": "rushblade",
+            "title": "Tame the Terrain",
+            "content": "At the core of Patrol’s design is a full-terrain philosophy. Its full suspension system (soft-tail architecture) absorbs aggressive impacts while maintaining stability and rider confidence across dirt, gravel, and uneven terrain.\n\nEngineered for explosive yet controlled performance, the 4000W motor delivers 145Nm of torque, launching from 0 to 20 mph in just 3.5 seconds. Wide fat tires enhance grip and stability, while NFC unlocking adds seamless, keyless convenience—ensuring every detail serves both performance and rider ease."
+          }
+        },
+        "item_rrJjJL": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/3_6ac2d67b-dea2-4d78-b179-3c6f1a677563.jpg",
+            "tab_con": "Craftsmanship",
+            "tab_con_font": "rushblade",
+            "title": "Precision in Every Detail",
+            "content": "Patrol’s craftsmanship is built on durability, precision, and advanced engineering. Its 52V 30Ah battery delivers extended range with efficient performance, while fast charging (15% to 80% in 3.5 hours) reduces downtime.\n\nHydraulic brakes provide reliable stopping power, enhanced by integrated brake lighting for added visibility. From suspension tuning to electronic integration, every component is refined to perform in demanding, real-world conditions."
+          }
+        },
+        "item_KhV99j": {
+          "type": "item",
+          "settings": {
+            "img_1": "shopify://shop_images/4_4d638ab9-3083-412f-b00c-4907c75d29f4.jpg",
+            "tab_con": "Finished Product",
+            "tab_con_font": "rushblade",
+            "title": "Street legal. Trail ready. No compromises.",
+            "content": "Patrol represents a new category of riding—where regulation meets rebellion. Designed to comply with road standards while carrying the DNA of an off-road machine, it delivers a rare balance of control, capability, and freedom."
+          }
+        }
+      },
+      "block_order": [
+        "item_8NiF9n",
+        "item_xybDjj",
+        "item_rrJjJL",
+        "item_KhV99j"
+      ],
+      "name": "Large Header slider (hb)",
+      "settings": {
+        "color_text": "#ffffff",
+        "color_active_text": "#ffe500",
+        "color_background": "#000000",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "mc_patrol_community_video_y9RFFf": {
+      "type": "mc_patrol-community-video",
+      "blocks": {
+        "youtube_iYJYkX": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=GfV9s65f1Ns",
+            "video_url_mobile": "https://www.youtube.com/watch?v=GfV9s65f1Ns",
+            "date": "",
+            "content": "Jasion Patrol Review: 52V Power in a Dirt Bike Style eBike!",
+            "avatar": "shopify://shop_images/channels4_profile_50.jpg",
+            "author": "RunPlayBack"
+          }
+        },
+        "youtube_9nVMYH": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ob7XNgE1GSE",
+            "video_url_mobile": "https://www.youtube.com/watch?v=ob7XNgE1GSE",
+            "date": "",
+            "content": "Jasion Patrol Review | 40 MPH Electric Dirt Bike Beast?",
+            "avatar": "shopify://shop_images/channels4_profile_51.jpg",
+            "author": "The Oh Family"
+          }
+        },
+        "youtube_kJgcPT": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=swTU1P5TwX4",
+            "video_url_mobile": "https://www.youtube.com/watch?v=swTU1P5TwX4",
+            "date": "",
+            "content": "JASION PATROL 52 EBIKE | 4000W 40MPH SPEED | 52V 30AH BATTERY | DIRT OR ROAD POWER",
+            "avatar": "shopify://shop_images/channels4_profile_52.jpg",
+            "author": "Papa`s Product Reviews"
+          }
+        },
+        "video_HnB7wB": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=2JJpL7KrAL0",
+            "video_url_mobile": "https://www.youtube.com/watch?v=2JJpL7KrAL0",
+            "date": "",
+            "content": "This E-Bike Completely Shocked Me… | Jasion Patrol Unboxing And Review",
+            "avatar": "shopify://shop_images/channels4_profile_45.jpg",
+            "author": "RideModz"
+          }
+        },
+        "video_KMnAdR": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=kKnhOPhyXMY",
+            "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "date": "",
+            "content": "Worlds First Surron With Pedals | Reviewing The Jasion Patrol Electric Dirt Bike!",
+            "avatar": "shopify://shop_images/channels4_profile_42.jpg",
+            "author": "Jordan Roderick"
+          }
+        },
+        "video_XwNjh8": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=kvbHu-NOTQs",
+            "video_url_mobile": "https://www.youtube.com/watch?v=kvbHu-NOTQs",
+            "date": "",
+            "content": "I Bought A Street Legal SURRON!",
+            "avatar": "shopify://shop_images/channels4_profile_49.jpg",
+            "author": "RazorDriftz"
+          }
+        },
+        "video_cMmBMj": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/AQNnqercbAfXVQ_0nsTkuwsTHfqEhq3JdF52WYxmSzLxvvMXMksFkwyg-G2xofKzu4n5TdVXM5SYRax_Pl-Rj747.mp4",
+            "video_mobile": "shopify://files/videos/AQNnqercbAfXVQ_0nsTkuwsTHfqEhq3JdF52WYxmSzLxvvMXMksFkwyg-G2xofKzu4n5TdVXM5SYRax_Pl-Rj747.mp4",
+            "description": "",
+            "desktop_image": "shopify://shop_images/1_9b070638-b8b6-4be8-8ad5-ace3d14f9740.png",
+            "show_button1": true,
+            "button1": "Smooth",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "No noise",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-combo",
+            "content_color": "#ffffff",
+            "title": "Absolutely love my Patrol 🔥",
+            "content": "<p>Every ride just puts a smile on my face...</p>",
+            "author": ""
+          }
+        },
+        "video_JCNPgw": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/下载 (1).mp4",
+            "video_mobile": "shopify://files/videos/下载 (1).mp4",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_7312.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7312.jpg",
+            "show_button1": true,
+            "button1": "Patrol Ebike",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "All Terrain Ride",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-combo",
+            "content_color": "#ffffff",
+            "title": "Lil brother cool asf🥹 | @JasionBike",
+            "content": "<p>Power + comfort = perfect combo. Loving my Patrol ⚡</p>",
+            "author": ""
+          }
+        },
+        "video_tE84R8": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
+            "video_mobile": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
+            "description": "",
+            "desktop_image": "shopify://shop_images/Untitled_design_2.png",
+            "mobile_image": "shopify://shop_images/Untitled_design_2.png",
+            "show_button1": true,
+            "button1": "Tame the Terrain",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "",
+            "show_button2": true,
+            "button2": "Full-Terrain Suspension",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "",
+            "content_color": "#ffffff",
+            "title": "Absolutely impressed with the Patrol👊🔥",
+            "content": "<p>The Patrol is a beast. Incredible torque, fast acceleration, and the suspension makes off-road riding feel effortless.</p>",
+            "author": ""
+          }
+        },
+        "video_6R9LWh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Patrol52--260309.mov",
+            "video_mobile": "shopify://files/videos/Patrol52--260309.mov",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_7172.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7172.jpg",
+            "show_button1": true,
+            "button1": "1560WH",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://pages/patrol",
+            "show_button2": true,
+            "button2": "Smart NFC Access",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://pages/patrol",
+            "content_color": "#ffffff",
+            "title": "The new Patrol 52 ebike🔥🔥",
+            "content": "<p>Huge S/O TO <a href=\"https://www.instagram.com/jasionbike/\">@jasionbike</a> for letting me test out the new patrol 52! <br/>52v 30Ah <br/>4000w motor <br/>Dual suspension <br/>Up to 50 miles<br/><br/></p>",
+            "author": ""
+          }
+        },
+        "video_zYYzrr": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
+            "video_mobile": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_7174.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7174.jpg",
+            "show_button1": true,
+            "button1": "Built for the wild",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://pages/patrol",
+            "show_button2": true,
+            "button2": "Trail-Ready",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://pages/patrol",
+            "content_color": "#ffffff",
+            "title": "Nothing but a SMILE on my face....",
+            "content": "<p>OMG, this bike is insane. Patrol is pushing eBike performance into all-new territory.<br/><br/>Launching March 20 — unlock the early bird deal now.</p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "youtube_iYJYkX",
+        "youtube_9nVMYH",
+        "youtube_kJgcPT",
+        "video_HnB7wB",
+        "video_KMnAdR",
+        "video_XwNjh8",
+        "video_cMmBMj",
+        "video_JCNPgw",
+        "video_tE84R8",
+        "video_6R9LWh",
+        "video_zYYzrr"
+      ],
+      "name": "MC Patrol Community Video",
+      "settings": {
+        "page_color": "#000000",
+        "show_title": true,
+        "title": "<p>Riders <strong>Reviews</strong></p>",
+        "title_pc_size": 75,
+        "title_pc_weight": 700,
+        "title_pc_line": 120,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#ffffff",
+        "title_bold_color": "#ffe500",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "tab1": "YouTube video",
+        "tab2": "Instagram videos",
+        "tab_color": "#ffffff",
+        "tab_active_color": "#ffffff",
+        "tab_bg_color": "#313131",
+        "tab_active_bg_color": "#ff2501"
+      }
+    },
+    "drawer_content_hb_qzp8WX": {
+      "type": "drawer-content-hb",
+      "blocks": {
+        "table_4CpLLg": {
+          "type": "table",
+          "settings": {
+            "list": "Motor|4000W Brushless Rear Hub Motor\nSuspension|Full Suspension\nBrake|Hydraulic Brakes\nThrottle|Twist Throttle\nSensor|Cadence Sensor\nThrottle Gear|0-5 Level(No Pedal Assist)\nTorque|145 Nm\nTop Speed|40 Mph\nRange| Up To 50 Miles\nCharging Time|7-8 Hours\nBattery|52V 30Ah\nController|52V 70A\nFront Tires|70/100-19 Extra-thick dirtbike tire\nRear Tires|70/100-17Extra-thick dirtbike tire\nRider Height|5'7'' - 6'7'\nWeight|115 Lbs\nMax Payload|330 Lbs\nMode|Throttle Only\nDisplay|LCD with NFC Unlock\nFolding| NO"
+          }
+        }
+      },
+      "block_order": [
+        "table_4CpLLg"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "Specifications"
+      }
+    },
+    "help-drawer": {
+      "type": "help-drawer",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "icon": "rocket",
+            "heading": "Local Warehouse",
+            "text": "<p>On your doorstep in just 2-4 days across 49 states.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#b45309",
+            "color_background": "#fffbeb",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-2": {
+          "type": "content",
+          "settings": {
+            "icon": "headphone",
+            "heading": "Customer Support",
+            "text": "<p>24-Hour Online Customer Service.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#0369a1",
+            "color_background": "#f0f9ff",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-3": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "FAQ’s",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#be123c",
+            "color_background": "#fff1f2",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-4": {
+          "type": "content",
+          "settings": {
+            "icon": "phone",
+            "heading": "Contact Us",
+            "text": "<ul><li><strong>Contact Email: </strong>support@jasionbike.com</li><li><strong>Contact Phone：</strong>(+1) 888-825-6366</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#4d7c0f",
+            "color_background": "#f7fee7",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content-2",
+        "content-3",
+        "content-4"
+      ],
+      "settings": {
+        "heading": "Need help?",
+        "description": "<p>IIf you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible, within 24 hours on weekdays.</p>"
+      }
+    },
     "mc_patrol_font": {
       "type": "mc_patrol-font",
       "settings": {
@@ -28,7 +634,7 @@
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
-        "backdrop_link": "",
+        "backdrop_link": "shopify://products/heybike-villain",
         "width_follow_the_theme": true,
         "pc_left": 145,
         "overlay_show": false,
@@ -45,7 +651,7 @@
             "position": "1",
             "gift_image": "shopify://shop_images/120_59071a4f-1c56-43b9-a958-43a97adb4e14.png",
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
-            "title": "<p>Early Bird<br/><strong>Price $1,???&lcub;$2,699&rcub;</strong></p>",
+            "title": "<p>Early Bird<br/><strong>Price $1,599&lcub;$2,699&rcub;</strong></p>",
             "show_date": true,
             "date": "<p>Date: Mar 20 - Mar 31</p>",
             "desc": "<p>Don't Miss Out-Super Early Bird Tickets End 31 Mar.</p>"
@@ -387,7 +993,7 @@
         "title_gradient_color": "",
         "show_description": true,
         "description": "<p>The Patrol electric bike features a high-performance motor with up to 4000W peak power and 145 Nm of torque, delivering powerful acceleration and outstanding climbing ability. It sprints from 0–20 mph in just 3.5 seconds, giving you instant power for steep hills and rugged dirt trails.</p>",
-        "description_color": "#6e6f66",
+        "description_color": "#ffffff",
         "description_bold_color": "#000000",
         "description_pc_size": 18,
         "description_pc_line": 120,
@@ -412,14 +1018,14 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "pc_image": "shopify://shop_images/patrol-param-text-image1-new.jpg",
+            "pc_image": "shopify://shop_images/EDM-Patrol_052faf1a-c2b8-4216-a94f-5f7680cce4c2.gif",
             "image_position": "left",
             "title": "<p><strong>52V 30AH</strong> Removable Battery</p>",
             "title_color": "#ffffff",
             "title_bold_color": "#ffe500",
             "title_gradient_color": "",
             "text": "<p>Equipped with a <strong>1560Wh (52V 30Ah) </strong>battery, the Patrol delivers up to 50 miles of range for demanding off-road rides. The removable design allows easy charging anywhere, while 15–80% fast charging in just <strong>3.5 hours</strong> means less waiting and more riding.</p>",
-            "text_color": "#747474"
+            "text_color": "#ffffff"
           }
         },
         "slide_2": {
@@ -432,7 +1038,7 @@
             "title_bold_color": "#ffe500",
             "title_gradient_color": "",
             "text": "<p>Built for rugged terrain, the Patrol combines a <strong>150 mm long-travel hydraulic front fork with lockout and a rear hydraulic shock</strong> to absorb hard hits and rough trails. The full-suspension setup enhances stability and traction, giving you better control and a smoother ride across dirt, rocks, and uneven ground.</p>",
-            "text_color": "#747474"
+            "text_color": "#ffffff"
           }
         },
         "slide_3": {
@@ -445,7 +1051,7 @@
             "title_bold_color": "#ffe500",
             "title_gradient_color": "",
             "text": "<p>The Patrol is equipped with an <strong>NFC card access system</strong> for fast and secure bike activation. Simply tap the card to power on—no physical keys required. This intelligent system enhances security while providing a seamless and convenient riding experience.</p>",
-            "text_color": "#747474"
+            "text_color": "#ffffff"
           }
         }
       },
@@ -664,278 +1270,31 @@
         "description_mb_margin_bottom": 30
       }
     },
-    "mc_patrol_community_video_y9RFFf": {
-      "type": "mc_patrol-community-video",
-      "blocks": {
-        "youtube_Xw3fpR": {
-          "type": "youtube",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=GfV9s65f1Ns",
-            "video_url_mobile": "https://www.youtube.com/watch?v=GfV9s65f1Ns",
-            "date": "",
-            "content": "Jasion Patrol Review: 52V Power in a Dirt Bike Style eBike!",
-            "avatar": "shopify://shop_images/channels4_profile_50.jpg",
-            "author": "RunPlayBack"
-          }
-        },
-        "video_HnB7wB": {
-          "type": "youtube",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=2JJpL7KrAL0",
-            "video_url_mobile": "https://www.youtube.com/watch?v=2JJpL7KrAL0",
-            "date": "",
-            "content": "This E-Bike Completely Shocked Me… | Jasion Patrol Unboxing And Review",
-            "avatar": "shopify://shop_images/channels4_profile_45.jpg",
-            "author": "RideModz"
-          }
-        },
-        "video_KMnAdR": {
-          "type": "youtube",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=kKnhOPhyXMY",
-            "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
-            "date": "",
-            "content": "Worlds First Surron With Pedals | Reviewing The Jasion Patrol Electric Dirt Bike!",
-            "avatar": "shopify://shop_images/channels4_profile_42.jpg",
-            "author": "Jordan Roderick"
-          }
-        },
-        "video_XwNjh8": {
-          "type": "youtube",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=kvbHu-NOTQs",
-            "video_url_mobile": "https://www.youtube.com/watch?v=kvbHu-NOTQs",
-            "date": "",
-            "content": "I Bought A Street Legal SURRON!",
-            "avatar": "shopify://shop_images/channels4_profile_49.jpg",
-            "author": "RazorDriftz"
-          }
-        },
-        "video_6R9LWh": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/Patrol52--260309.mov",
-            "video_mobile": "shopify://files/videos/Patrol52--260309.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/IMG_7172.jpg",
-            "mobile_image": "shopify://shop_images/IMG_7172.jpg",
-            "show_button1": true,
-            "button1": "1560WH",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://pages/patrol",
-            "show_button2": true,
-            "button2": "Smart NFC Access",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://pages/patrol",
-            "content_color": "#ffffff",
-            "title": "The new Patrol 52 ebike🔥🔥",
-            "content": "<p>Huge S/O TO <a href=\"https://www.instagram.com/jasionbike/\">@jasionbike</a> for letting me test out the new patrol 52! <br/>52v 30Ah <br/>4000w motor <br/>Dual suspension <br/>Up to 50 miles<br/><br/></p>",
-            "author": "motorcity.moee"
-          }
-        },
-        "video_zYYzrr": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
-            "video_mobile": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/IMG_7174.jpg",
-            "mobile_image": "shopify://shop_images/IMG_7174.jpg",
-            "show_button1": true,
-            "button1": "Built for the wild",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://pages/patrol",
-            "show_button2": true,
-            "button2": "Trail-Ready",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://pages/patrol",
-            "content_color": "#ffffff",
-            "title": "Nothing but a SMILE on my face....",
-            "content": "<p>OMG, this bike is insane. Patrol is pushing eBike performance into all-new territory.<br/><br/>Launching March 20 — unlock the early bird deal now.</p>",
-            "author": "IMBruceECLECTIC"
-          }
-        },
-        "video_fnCPH3": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/Thunder pro 20260309.mov",
-            "video_mobile": "shopify://files/videos/Thunder pro 20260309.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/IMG_1360.jpg",
-            "mobile_image": "shopify://shop_images/IMG_1360.jpg",
-            "show_button1": true,
-            "button1": "Hiking Trails",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://products/thunder-pro-st",
-            "show_button2": true,
-            "button2": "Outdoor Riding",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://products/thunder-pro-thunder-pro-st",
-            "content_color": "#ffffff",
-            "title": "Meet my next adventure buddy",
-            "content": "<p>Powered for the wild,built for the<br/>journey. The Jasion ThunderPro ST e-bike is the perfect partner for hiking trails,<br/>outdoor riding, and every adventure in between.<br/><br/></p>",
-            "author": "selenayazs"
-          }
-        },
-        "video_fcMMFA": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/Retrovolt Pro.mp4",
-            "video_mobile": "shopify://files/videos/Retrovolt Pro.mp4",
-            "description": "",
-            "desktop_image": "shopify://shop_images/DSC02690.jpg",
-            "show_button1": true,
-            "button1": "Retro Look",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://products/retrovolt-pro",
-            "show_button2": true,
-            "button2": "All-Terrain",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://products/retrovolt-pro-combo",
-            "content_color": "#ffffff",
-            "title": "My go-to adventure bike",
-            "content": "<p>The 2000W motor is a beast! I ride uphill with zero struggle, and hitting 38 mph feels like a motorcycle but way more eco-friendly.</p>",
-            "author": "wolfie.de"
-          }
-        },
-        "video_WYVHzn": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/开箱.mp4",
-            "video_mobile": "shopify://files/videos/开箱.mp4",
-            "description": "",
-            "desktop_image": "shopify://shop_images/496513353_2632582773615664_8082161350994987622_n.jpg",
-            "show_button1": true,
-            "button1": "Rugged",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://products/hunter-pro",
-            "show_button2": true,
-            "button2": "Wild Soul",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://products/hunter-pro-combo",
-            "content_color": "#ffffff",
-            "title": "Fantastic!",
-            "content": "<p>Yes,I finally found an e-bike that can keep up with my coffee runs and last-minute adventures!</p>",
-            "author": "Tarikdeliktas"
-          }
-        },
-        "video_d8PLtx": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/X Hunter ST.mp4",
-            "video_mobile": "shopify://files/videos/X Hunter ST.mp4",
-            "description": "",
-            "desktop_image": "shopify://shop_images/DSC02791.jpg",
-            "show_button1": true,
-            "button1": "Easy to Fold",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://products/x-hunter-st",
-            "show_button2": true,
-            "button2": "Powerful",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "shopify://products/x-hunter-x-hunter-st",
-            "content_color": "#ffffff",
-            "title": "Two bikes. One adventure.",
-            "content": "<p>Very smooth ride with front suspension and rear mono shock.<br/></p>",
-            "author": "wolfie.de"
-          }
-        },
-        "video_yyH6DG": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/copy_13EF8ABB-E474-458F-A63C-CE41D7D575C6.mov",
-            "video_mobile": "shopify://files/videos/copy_13EF8ABB-E474-458F-A63C-CE41D7D575C6.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/1759456294__img_7008__original.avif",
-            "show_button1": true,
-            "button1": "Easy Assembly",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#ff2501",
-            "button1_url": "shopify://products/thunder",
-            "show_button2": false,
-            "button2": "",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#ff2501",
-            "button2_url": "",
-            "content_color": "#ffffff",
-            "title": "Love my Jasion bike!",
-            "content": "<p>I love my bike, I ride it every day! Easy assembly, perfect ride for me!!<br/></p>",
-            "author": "Scott C."
-          }
-        }
-      },
-      "block_order": [
-        "youtube_Xw3fpR",
-        "video_HnB7wB",
-        "video_KMnAdR",
-        "video_XwNjh8",
-        "video_6R9LWh",
-        "video_zYYzrr",
-        "video_fnCPH3",
-        "video_fcMMFA",
-        "video_WYVHzn",
-        "video_d8PLtx",
-        "video_yyH6DG"
-      ],
-      "name": "MC Patrol Community Video",
-      "settings": {
-        "page_color": "#000000",
-        "show_title": true,
-        "title": "<p>Riders <strong>Reviews</strong></p>",
-        "title_pc_size": 75,
-        "title_pc_weight": 700,
-        "title_pc_line": 120,
-        "title_mb_size": 24,
-        "title_mb_weight": 700,
-        "title_mb_line": 120,
-        "title_margin_bottom": 16,
-        "title_color": "#ffffff",
-        "title_bold_color": "#ffe500",
-        "title_gradient_color": "",
-        "show_description": false,
-        "description": "<p>description</p>",
-        "description_color": "#ffffff",
-        "description_bold_color": "#ffffff",
-        "description_pc_size": 18,
-        "description_pc_line": 120,
-        "description_mb_size": 14,
-        "description_mb_line": 120,
-        "description_pc_margin_bottom": 40,
-        "description_mb_margin_bottom": 30,
-        "tab1": "YouTube video",
-        "tab2": "Instagram videos",
-        "tab_color": "#ffffff",
-        "tab_active_color": "#ffffff",
-        "tab_bg_color": "#313131",
-        "tab_active_bg_color": "#ff2501"
-      }
-    },
     "mc_patrol_photo_wall": {
       "type": "mc_patrol-photo-wall",
       "blocks": {
+        "image_DMD4hU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_9c53a51e-2803-4c17-9c06-034d58050384.png"
+          }
+        },
+        "image_waWxzR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/14_081446bb-1cbb-494b-95c9-e3750e2203fc.png"
+          }
+        },
         "image_1": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/1_98ca4819-fc5a-4624-b819-e50b0988affe.png"
+          }
+        },
+        "image_6pnmnT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_42355e06-b170-4625-933c-94aa9520a955.png"
           }
         },
         "image_HjwNhK": {
@@ -950,6 +1309,18 @@
             "image": "shopify://shop_images/11_f6f2a5a3-45c8-43ba-a906-6469e36bd507.png"
           }
         },
+        "image_AMeKAh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_e229368e-bd4c-435e-a1f6-476918892f60.png"
+          }
+        },
+        "image_q4CPzb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/16_a57bfa7f-7aa9-4c33-ab81-b14568f01b18.png"
+          }
+        },
         "image_2": {
           "type": "image",
           "settings": {
@@ -962,6 +1333,10 @@
             "image": "shopify://shop_images/10_d6c937fd-9d34-437d-a92b-27a273267537.png"
           }
         },
+        "image_LkMMX8": {
+          "type": "image",
+          "settings": {}
+        },
         "image_3": {
           "type": "image",
           "settings": {
@@ -972,6 +1347,12 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/6_4dc4fe02-78fe-4e86-9a40-be9863f55b2a.png"
+          }
+        },
+        "image_BqjFYG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_cc3dd5b2-3573-4533-a5cf-f8de29377b0b.png"
           }
         },
         "image_WrGdk3": {
@@ -997,20 +1378,34 @@
           "settings": {
             "image": "shopify://shop_images/7_f5a4196b-cf41-488f-98cb-0d129e1d5048.png"
           }
+        },
+        "image_6PzRHw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_e23e72c7-806c-4c84-8ecd-8ebc56e9e06c.png"
+          }
         }
       },
       "block_order": [
+        "image_DMD4hU",
+        "image_waWxzR",
         "image_1",
+        "image_6pnmnT",
         "image_HjwNhK",
         "image_fzDDGx",
+        "image_AMeKAh",
+        "image_q4CPzb",
         "image_2",
         "image_rA9MXb",
+        "image_LkMMX8",
         "image_3",
         "image_4",
+        "image_BqjFYG",
         "image_WrGdk3",
         "image_6",
         "image_AyfDYm",
-        "image_p6fTTM"
+        "image_p6fTTM",
+        "image_6PzRHw"
       ],
       "name": "MC Patrol Photo Wall",
       "settings": {
@@ -1146,7 +1541,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,???\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
+            "product_params": "$1,499\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
           }
         },
         "other_product_hwgPet": {
@@ -1219,10 +1614,20 @@
     "faq_4qmJVA": {
       "type": "faq",
       "blocks": {
+        "question_8NyQTC": {
+          "type": "question",
+          "settings": {
+            "title": "1. Electric Bike Riding Disclaimer (Simplified)",
+            "title_tag": "h3",
+            "text": "<p>For your safety, please read and follow the terms below before riding. By using this vehicle, you acknowledge and agree to comply with all provisions of this disclaimer.</p><p><strong>Rider Eligibility:</strong> Riders must be at least 18 years old and possess a basic understanding of traffic laws and adequate riding skills. Riding is strictly prohibited if you are unwell or not in a proper physical or mental condition.</p><p><strong>Protective Gear:</strong> A certified safety helmet must be worn at all times. The use of additional protective equipment, such as knee and elbow pads, is strongly recommended.</p><p><strong>Prohibited Conduct:</strong> Any hazardous behavior is strictly forbidden during operation, including but not limited to: riding hands-free, standing while riding, weaving or stunt riding, excessive speeding, carrying passengers, using a handheld phone, or filming while riding.</p><p><strong>Situational Awareness:</strong> Riders must remain alert and continuously monitor road conditions, yielding to pedestrians and other vehicles as necessary. Extra caution should be taken to avoid water, loose gravel, potholes, and slippery surfaces to prevent skidding or loss of control.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "question_QVPHW4": {
           "type": "question",
           "settings": {
-            "title": "1. What's your shipping policy?",
+            "title": "2. What's your shipping policy?",
             "title_tag": "h3",
             "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services. We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
@@ -1232,7 +1637,7 @@
         "question_G7GHDy": {
           "type": "question",
           "settings": {
-            "title": "2. What's your warranty policy?",
+            "title": "3. What's your warranty policy?",
             "title_tag": "h3",
             "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
             "highlighted_text": "none",
@@ -1242,7 +1647,7 @@
         "question_9fm8hR": {
           "type": "question",
           "settings": {
-            "title": "3. What's your return&refund policy?",
+            "title": "4. What's your return&refund policy?",
             "title_tag": "h3",
             "text": "<p>We provide exchange service within 14 days. If the product is defective or damaged, Send damaged photos or videos to customer service within 14 days after receiving the goods, and the damaged parts can be replaced or compensated. We will cover the return (exchange) shipping costs.</p><p>In the case of non-quality returns, the customer will be responsible for the return shipping costs.</p><p>You can always contact us for any return questions at <strong>support@jasionbike.com</strong>.</p>",
             "highlighted_text": "none",
@@ -1252,7 +1657,7 @@
         "question_RXxEew": {
           "type": "question",
           "settings": {
-            "title": "4. Does the Patrol eBike have pedal assist?",
+            "title": "5. Does the Patrol eBike have pedal assist?",
             "title_tag": "h3",
             "text": "<p>The Patrol eBike is a <strong>throttle-only electric bike</strong> and does not feature a pedal assist (PAS) system. Power is delivered directly through the <strong>twist throttle</strong>, allowing you to control acceleration and speed without pedaling. This design provides <strong>instant power response and simple operation</strong>, making it ideal for riders who prefer a fully motor-driven riding experience.</p>",
             "highlighted_text": "none",
@@ -1262,7 +1667,7 @@
         "question_yGJrtt": {
           "type": "question",
           "settings": {
-            "title": "5. Does my height suit Patrol?",
+            "title": "6. Does my height suit Patrol?",
             "title_tag": "h3",
             "text": "<p>The recommended rider height is 5'7'' to 6'7''.</p>",
             "highlighted_text": "none",
@@ -1272,7 +1677,7 @@
         "question_zHWBc8": {
           "type": "question",
           "settings": {
-            "title": "6. Does my Jasion ebike come pre-assembled?",
+            "title": "7. Does my Jasion ebike come pre-assembled?",
             "title_tag": "h3",
             "text": "<p>Your e-bike arrives 85% assembled. There are just a few pieces to put into place once you take the bike out of the box. For unboxing and setup instructions, please follow the guides on our<a href=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\" target=\"_blank\" title=\"https://www.youtube.com/watch?v=i0LcsKoZaXU\">YouTube Channel</a>.</p>",
             "highlighted_text": "none",
@@ -1282,7 +1687,7 @@
         "question_yb33ga": {
           "type": "question",
           "settings": {
-            "title": "7. How do I unlock the Patrol eBike?",
+            "title": "8. How do I unlock the Patrol eBike?",
             "title_tag": "h3",
             "text": "<p>The Patrol eBike features <strong>NFC card unlocking</strong>. Simply place the included NFC card on the display and tap once to unlock and power on the bike. If the NFC card is not used, the display can also be unlocked using a <strong>password</strong>. The <strong>default password can be found in the user manual</strong>.<br/><br/></p>",
             "highlighted_text": "none",
@@ -1292,7 +1697,7 @@
         "question_RCEq8w": {
           "type": "question",
           "settings": {
-            "title": "8. How long does it take to fully charge the battery?",
+            "title": "9. How long does it take to fully charge the battery?",
             "title_tag": "h3",
             "text": "<p>It will take 7-8 hours.</p>",
             "highlighted_text": "none",
@@ -1302,7 +1707,7 @@
         "question_RUgpDy": {
           "type": "question",
           "settings": {
-            "title": "9. How long will it take for my shipment to arrive?",
+            "title": "10. How long will it take for my shipment to arrive?",
             "title_tag": "h3",
             "text": "<p>Generally, your order will be shipped within one business day after the order is placed, and package shipping will take approximately 3-5 days.</p>",
             "highlighted_text": "none",
@@ -1311,6 +1716,7 @@
         }
       },
       "block_order": [
+        "question_8NyQTC",
         "question_QVPHW4",
         "question_G7GHDy",
         "question_9fm8hR",
@@ -1353,9 +1759,46 @@
         "narrow": true,
         "rounded": false
       }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
+    "main-product",
+    "large_header_slider_hb_jHEfnU",
+    "mc_patrol_community_video_y9RFFf",
+    "drawer_content_hb_qzp8WX",
+    "help-drawer",
     "mc_patrol_font",
     "mc_main_banner_YHyBBN",
     "mc_patrol_gift_card",
@@ -1367,10 +1810,10 @@
     "mc_patrol_image_text",
     "mc_main_banner_SHyBBN",
     "mc_patrol_card_slide",
-    "mc_patrol_community_video_y9RFFf",
     "mc_patrol_photo_wall",
     "mc_patrol_param_slide",
     "mc_product_compare_n7rP9C",
-    "faq_4qmJVA"
+    "faq_4qmJVA",
+    "recently-viewed"
   ]
 }

@@ -39,9 +39,11 @@
         opacity: 0.3 !important;
         transition: opacity 0.3s;
     }
+
     .mc_kol-testimonials .slider-item.empty {
         width: 845px;
     }
+
     .mc_kol-testimonials .slider-item.selected {
         opacity: 1 !important;
     }
@@ -285,16 +287,17 @@
                         </div>
                         <div class="media-video">
                             {%- render 'global-video',
-                                    desktop_video: bs.video,
-                                    desktop_size: 500,
-                                    desktop_node: pc_node,
-                                    desktop_cover: bs.cover_image,
-                                    mobile_video: bs.video_mobile,
-                                    mobile_cover: bs.cover_image_mobile,
-                                    mobile_size: 500,
-                                    mobile_node: mb_node,
-                                    controls: true,
-                                    loop: true
+                                desktop_video: bs.video,
+                                desktop_size: 500,
+                                desktop_node: pc_node,
+                                desktop_cover: bs.cover_image,
+                                mobile_video: bs.video_mobile,
+                                mobile_cover: bs.cover_image_mobile,
+                                mobile_size: 500,
+                                mobile_node: mb_node,
+                                frament: true,
+                                controls: true,
+                                loop: true
                             -%}
                         </div>
                         <div class="media-info tw-relative">
@@ -318,12 +321,25 @@
         const node = document.getElementById('Slider-{{ section.id }}');
         const nodeList = $heybike.getNodeList(node);
         let current = 0;
+        const onResetTemp = (index, key) => {
+            const elem = nodeList[`${key}_kol_${index}`];
+            if (elem?.tagName.toLocaleUpperCase() !== 'video') {
+                const templateElement = elem.querySelector(`template`);
+                if (templateElement) {
+                    const media = templateElement.content.firstElementChild.cloneNode(true);
+                    elem.replaceWith(media);
+                    nodeList[`${key}_kol_${index}`] = media;
+                }
+            }
+        }
         const onPlay = (index) => {
             const key = $heybike.isMobile ? 'mb' : 'pc';
+            onResetTemp(index, key);
             nodeList[`${key}_kol_${index}`]?.play();
         }
         const onPause = (index) => {
             const key = $heybike.isMobile ? 'mb' : 'pc';
+            onResetTemp(index, key);
             nodeList[`${key}_kol_${index}`]?.pause();
         }
 

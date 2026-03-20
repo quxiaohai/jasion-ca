@@ -15,6 +15,9 @@
     .mc_patrol-gift-card .card-items .image {
         object-fit: contain;
     }
+    .mc_patrol-gift-card .info {
+        text-align: center;
+    }
     .mc_patrol-gift-card .info .date-tag {
         font-size: 14px;
         color: #ffffff;
@@ -65,6 +68,8 @@
         transform: translateY(-50%);
         right: 5%;
         width: 51%;
+        align-items: flex-start;
+        text-align: left;
     }
     .mc_patrol-gift-card .item-1 .desc {
         font-size: 29px;
@@ -83,6 +88,12 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .mc_patrol-gift-card .item-3 .info {
+        align-items: center;
+    }
+    .mc_patrol-gift-card .item-3 .date-tag {
+        margin-bottom: 4px;
+    }
     .mc_patrol-gift-card .item-2 .name,
     .mc_patrol-gift-card .item-3 .name {
         font-size: 29px;
@@ -90,9 +101,7 @@
     }
     .mc_patrol-gift-card .item-2 .info,
     .mc_patrol-gift-card .item-4 .info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
     }
     .mc_patrol-gift-card .item-2 .name,
     .mc_patrol-gift-card .item-4 .name {
@@ -107,7 +116,6 @@
     .mc_patrol-gift-card .item-4 .date-tag {
         text-align: right;
         padding: 7px 16px 7px 21px;
-        transform: translateX(-34px);
         background: linear-gradient(45deg, transparent 12px, #ff2501 12px);
     }
     .mc_patrol-gift-card .item-4 .name {
@@ -267,7 +275,6 @@
         }
         .mc_patrol-gift-card .item-4 .date-tag {
             padding: 0.1875rem 0.46875rem 0.1875rem 0.375rem;
-            transform: translateX(0);
             margin: 0 0 0.25rem 0;
             background: linear-gradient(315deg, transparent 5px, #ff2501 5px);
         }
@@ -282,8 +289,8 @@
             left: 10px;
         }
         .mc_patrol-gift-card .item-4 .name {
-            text-align: left;
             width: 100%;
+            text-align: left;
         }
         .mc_patrol-gift-card .item-4 .name br {
             display: none;
@@ -294,9 +301,10 @@
         .mc_patrol-gift-card .item-4 .info {
             width: 50%;
             bottom: 48%;
-            left: 45%;
+            left: 46%;
             transform: translate(0, 50%);
             align-items: flex-start;
+            text-align: left;
         }
     }
     @media screen and (max-width: 374px) {
@@ -325,8 +333,8 @@
                         mobile_img: bs.mb_gift_image,
                         sizes: '(min-width: 1024px) 1000px, (max-width: 1023px) 750x'
                     -%}
-                    <div class="info absolute z-1">
-                        {%- if bs.position == '2' or bs.position == '4' -%}
+                    <div class="info flex-column absolute z-1">
+                        {%- if bs.show_date -%}
                             <div class="date-tag relative flex-center">
                                 <span class="relative text lh-1 z-1">{{ bs.date }}</span>
                             </div>
@@ -630,6 +638,12 @@
           "id": "title",
           "label": "Title",
           "default": "<p>Early Bird<br/><strong>Price $1,???{$2,699}</strong></p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_date",
+          "label": "Show date",
+          "default": true
         },
         {
           "type": "richtext",
