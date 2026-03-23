@@ -25,10 +25,6 @@
             "line_bottom": "md:tw-mb-2"
           }
         },
-        "judge_me_reviews_preview_badge_CNr4Dr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_xpW97T": {
           "type": "cycle_countdown",
           "settings": {
@@ -178,7 +174,6 @@
       },
       "block_order": [
         "title",
-        "judge_me_reviews_preview_badge_CNr4Dr",
         "cycle_countdown_xpW97T",
         "countdown_NPztC6",
         "variant_picker",
@@ -1541,7 +1536,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,499\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
+            "product_params": "C$2,289\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
           }
         },
         "other_product_hwgPet": {
@@ -1560,7 +1555,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,599.99\n2400W\n48V 18.2Ah*2\n106Nm\n51 Miles\n37 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD\n25'' x 4''\n5'5'' - 6'3''\n117 lbs"
+            "product_params": "C$2,299\n2400W\n48V 18.2Ah*2\n106Nm\n51 Miles\n37 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD\n25'' x 4''\n5'5'' - 6'3''\n117 lbs"
           }
         },
         "other_product_fgxp3D": {
@@ -1579,7 +1574,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,999\n3000W\n60V 18Ah*2\n338Nm\n87 Miles\n50 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD \n25‘’ X 3‘’\n5'5'' - 6'3''\n123 lbs"
+            "product_params": "C$2,899\n3000W\n60V 18Ah*2\n338Nm\n87 Miles\n50 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD \n25‘’ X 3‘’\n5'5'' - 6'3''\n123 lbs"
           }
         }
       },
