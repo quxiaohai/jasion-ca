@@ -25,10 +25,6 @@
             "line_bottom": "md:tw-mb-2"
           }
         },
-        "judge_me_reviews_preview_badge_CNr4Dr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_xpW97T": {
           "type": "cycle_countdown",
           "settings": {
@@ -178,7 +174,6 @@
       },
       "block_order": [
         "title",
-        "judge_me_reviews_preview_badge_CNr4Dr",
         "cycle_countdown_xpW97T",
         "countdown_NPztC6",
         "variant_picker",
@@ -1571,7 +1566,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,499\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
+            "product_params": "C$2,289\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
           }
         },
         "other_product_hwgPet": {
