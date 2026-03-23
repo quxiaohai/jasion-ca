@@ -44,7 +44,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "X-HUNTER: 2 Days Only! $859+ Free Basket",
+            "text": "X-HUNTER: C$1,369-2 Days Only!",
             "link": "shopify://products/jasion-x-hunter",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -191,7 +191,6 @@
             "btm_button_label": "Shop All Bikes",
             "btm_button_link": "shopify://collections/electric-bike",
             "show_badges": true,
-            "promo_image_1": "shopify://shop_images/RetroVolt_Pro_M_364d6040-c797-4171-86f7-946cc0386125.jpg",
             "promo_image_ratio_1": "adapt",
             "promo_heading_1": "",
             "promo_subtext_1": "",
