@@ -75,10 +75,9 @@
         },
         "image_gimiFf": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/480bf5e0310593bcd385805ece2e3b4e_55c81749-c038-490a-9a98-132e8f1930ed.jpg",
-            "image_mobile": "shopify://shop_images/M_11d881f0-6a4a-49fe-99ce-afb3332a330c.jpg",
+            "image": "shopify://shop_images/Patrol.jpg",
+            "image_mobile": "shopify://shop_images/Patrol_M.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
