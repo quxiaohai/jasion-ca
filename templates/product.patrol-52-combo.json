@@ -624,8 +624,8 @@
         "pc_width": 1920,
         "mb_width": 780,
         "media_type": "image",
-        "pc_image_url": "shopify://shop_images/banner-patrol-image-new.jpg",
-        "mb_image_url": "shopify://shop_images/mb-banner-patrol-image-new.jpg",
+        "pc_image_url": "shopify://shop_images/PC_5f715764-9509-4e6e-8413-56a8e906986d.jpg",
+        "mb_image_url": "shopify://shop_images/M_340bd159-a8f6-4744-a464-0d8efdd44a88.png",
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
@@ -646,10 +646,10 @@
             "position": "1",
             "gift_image": "shopify://shop_images/120_59071a4f-1c56-43b9-a958-43a97adb4e14.png",
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
-            "title": "<p>Early Bird<br/><strong>Price $1,599&lcub;$2,699&rcub;</strong></p>",
+            "title": "<p>Early Bird<br/><strong>Price C$2,289&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 - Mar 31</p>",
-            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End 31 Mar.</p>"
+            "date": "<p>Date: Mar 25 - Apr 10</p>",
+            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End Apr 10.</p>"
           }
         },
         "card_2": {
@@ -672,7 +672,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 - Mar 31</p>",
+            "date": "<p>Date: Mar 25 - Apr 10</p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         },
@@ -684,8 +684,8 @@
             "mb_gift_image": "shopify://shop_images/3_e20766b2-c13c-4070-a8a7-70070ee32559.png",
             "title": "<p>BUY & WIN<br/><strong>Insta360 GO 3S X1</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 – Mar 23</p>",
-            "desc": "<p>Every Patrol purchase automatically enters you into our exclusive giveaway for a chance to win an <strong>Insta360 camera</strong>.<br/><br/><strong>One lucky rider</strong> will take it home — no extra steps required.</p>"
+            "date": "<p>Date: Mar 25 – Apr 10</p>",
+            "desc": "<p>Every Patrol purchase automatically enters you into our exclusive giveaway for a chance to win an <strong>Insta 360 camera</strong>.<br/><br/><strong>One lucky rider</strong> will take it home — no extra steps required.</p>"
           }
         }
       },
