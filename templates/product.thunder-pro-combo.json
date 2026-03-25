@@ -208,7 +208,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Bundle Purchase — <strong>C$1,834.5 Each</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry!Price Goes Up After Mar 31!"
+            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Bundle Purchase — <strong>C$1,834.5 Each</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n📦 <strong>Estimated Shipping:</strong> Starts April 2<br>\n🔥Hurry!Price Goes Up After Mar 31!"
           }
         },
         "text_wt9CQN": {
@@ -492,6 +492,7 @@
           "settings": {
             "img_1": "shopify://shop_images/1_9a498f42-e152-47e2-8bf3-090e45fe6177.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Beyond Mobility. Beyond Limits.",
             "content": "Thunder Pro was born as the next evolution of Thunder, crafted for riders who demand more power, capability, and confidence. Driven by the same spirit of adventure and everyday practicality, it pushes the original vision further through refined engineering. From rugged trails and snowy paths to city streets, Thunder Pro delivers one seamless ride without compromise."
           }
@@ -501,6 +502,7 @@
           "settings": {
             "img_1": "shopify://shop_images/2_6396e7be-9ab6-4d95-abfd-e3eafcbffbaa.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Designed for Power, Built for Control",
             "content": "Every design decision behind Thunder Pro balances high-output electric power with rider confidence. The eBike frame geometry is precisely engineered to support high-speed performance, heavy payloads, and long-distance riding, while maintaining stability and comfort. Dual suspension, 26″×4″ fat tires, and hydraulic disc brakes are integrated from the ground up—not added later—ensuring a fully optimized all-terrain electric bike system that performs as one unified machine."
           }
@@ -510,6 +512,7 @@
           "settings": {
             "img_1": "shopify://shop_images/3_ef14fee7-8a46-486c-b4ba-1ba7a7a0aa67.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "Precision in Every Detail",
             "content": "Thunder Pro is built with precision and purpose. From its hydraulic disc brakes for confident stopping to its front and rear suspension system designed to absorb impacts and rough terrain, every component is selected and assembled to endure demanding conditions. Attention to detail in materials, welding, and component integration ensures strength, durability, and long-term reliability."
           }
@@ -519,6 +522,7 @@
           "settings": {
             "img_1": "shopify://shop_images/4_8ea6b89b-dae3-4caa-9209-1dfddd4716b7.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "Go Beyond Every Ride.",
             "content": "The result is Thunder Pro—a powerful, refined electric bike built to dominate streets and trails alike. With 1800W peak power, 35 MPH performance, dual suspension, hydraulic braking, and a 90-mile max range, it delivers an uncompromising ride that’s fast, capable, and comfortable. Designed to carry more, go farther, and ride harder—Thunder Pro is performance, perfected."
           }
@@ -533,6 +537,7 @@
       "name": "Large Header slider (hb)",
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1703,6 +1708,7 @@
         "description_mb_size": 14,
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
+        "theme": "light",
         "compare_title": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nBluetooth\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
       }
     },
@@ -1893,6 +1899,7 @@
       "settings": {
         "style": "with-border",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
