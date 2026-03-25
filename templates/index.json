@@ -75,6 +75,7 @@
         },
         "image_gimiFf": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Patrol.jpg",
             "image_mobile": "shopify://shop_images/Patrol_M.jpg",
