@@ -1595,6 +1595,7 @@
       "blocks": {
         "other_product_C7C3Yz": {
           "type": "other_product",
+          "disabled": true,
           "settings": {
             "title": "Thunder",
             "url": "shopify://products/thunder",
