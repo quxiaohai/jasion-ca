@@ -195,6 +195,7 @@
         },
         "image_F7kDtH": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1cfd64a3b5d815512134e8f9e07e4ebf_c14ce535-3caa-4e53-ab3c-56ee9dc23b48.jpg",
             "image_mobile": "shopify://shop_images/M_ed4e23bb-e235-4bdb-9c71-3de02d2385ac.jpg",

@@ -29,10 +29,9 @@
         },
         "announcement_8UQHDB": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "icon": "none",
-            "text": "Buy One & Get 100% Cash Back | Dec 3 and Dec 18",
+            "text": "⏰ <strong>Limited Time:</strong> Get C$100 OFF the new Patrol. Claim your Early Bird offer today!",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
