@@ -16,6 +16,17 @@
     "products_compare_hb_R7KmMD": {
       "settings": {},
       "blocks": {
+        "item_QriLD": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "pr": "patrol-52",
+            "list": "5'7'' - 6'7'\n4000W\n50 Miles\n40 Mph\n145 N·m\n52V 30AH\n52V/7A\n0~5 Level(No Pedal Assist)\nFull Suspension\nFront 70/100-19, Rear 70/100-17\nHydraulic Brakes\nCadence Sensor\nShimano 7-speed\nTwist Throttle\n330 lbs\nUL 2849\n115 lbs\nLCD with NFC Unlock\nAll Terrain",
+            "bg_color": "",
+            "pr_img": null,
+            "pr_price": ""
+          }
+        },
         "item_DW3dUw": {
           "settings": {
             "list": "5'5'' - 7'2''\n1800W\n90 Miles\n35Mph\n115 N.m\n52V 20Ah\n52V/2A\n0~5 Level\nDual Suspension\n26 x 4 in\nDual Hydraulic Brakes\nCadence Sensor\nShimano 7 Speed\nTwist Throttle\n500 lbs\nUL 2849\n82.5 lbs\nLCD\nAll Terrain"
@@ -35,6 +46,7 @@
         }
       },
       "block_order": [
+        "item_QriLD",
         "item_E4d6P9",
         "item_4P8mFz",
         "item_dtiU7t",
