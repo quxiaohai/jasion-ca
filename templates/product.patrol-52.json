@@ -192,9 +192,7 @@
         "collapsible_tab_Lt8myP",
         "text_wt9CQN"
       ],
-      "custom_css": [
-        ".product__gallery {top: 100px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "enable_specs": true,
