@@ -1690,6 +1690,7 @@
         "product2",
         "other_product_V4zq6Y"
       ],
+      "disabled": true,
       "name": "MC Product Compare",
       "settings": {
         "page_color": "#ffffff",
