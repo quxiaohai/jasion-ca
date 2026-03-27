@@ -2,7 +2,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
 <head>
-  <meta name="google-site-verification" content="Qu4IQDPwvoMbpJMRXAOlMhXp4LRHTa86g5O0Nngcv1k" />
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -75,6 +75,7 @@
         })(document, window, 'NextopLiveChat');
 </script>
 <!-- / Nextop LiveChat {/literal} -->
+<meta name="google-site-verification" content="Qu4IQDPwvoMbpJMRXAOlMhXp4LRHTa86g5O0Nngcv1k" />
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}{% if request.design_mode %} shopify-design-mode{% endif %}" data-rounded-button="{{ settings.rounded_button }}" data-rounded-input="{{ settings.rounded_input }}" data-rounded-block="{{ settings.rounded_block }}" data-rounded-card="{{ settings.rounded_card }}" data-button-hover="{{ settings.buttons_hover }}"{% if settings.enable_lazy_image %} data-lazy-image{% endif %} data-title-animation data-page-rendering>
