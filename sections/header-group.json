@@ -41,6 +41,7 @@
         },
         "announcement-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "X-HUNTER: C$1,369-2 Days Only!",
