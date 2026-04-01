@@ -417,20 +417,59 @@
     "dowmload_list_hb_QQQxD9": {
       "type": "dowmload-list-hb",
       "blocks": {
-        "file_eqPaNz": {
-          "type": "file",
-          "disabled": true,
-          "settings": {
-            "title": "Patrol 52-User Manual-2026.03",
-            "url": "",
-            "type": "PDF"
-          }
-        },
         "file_M4ae3W": {
           "type": "file",
           "settings": {
             "title": "Jasion App Quick Start Guide-2025.10.31",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/applicationGuide.pdf?v=1762243243",
+            "type": "PDF"
+          }
+        },
+        "file_eqPaNz": {
+          "type": "file",
+          "settings": {
+            "title": "Patrol 52-User Manual-2026.03",
+            "url": "https://cdn.shopify.com/s/files/1/0751/3486/1498/files/Jasion_Patrol_User_Manual-final.pdf?v=1775033423",
+            "type": "PDF"
+          }
+        },
+        "file_G6FHMq": {
+          "type": "file",
+          "settings": {
+            "title": "Thunder Pro-User Manual-2026.03.17",
+            "url": "https://cdn.shopify.com/s/files/1/0751/3486/1498/files/Jasion_Thunder_Pro_User_Manual-V1_1.pdf?v=1773732433",
+            "type": "PDF"
+          }
+        },
+        "file_fmVaYc": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter ST-User Manual-2025.11.04",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_ST_User_Manual-V2.pdf?v=1762242443",
+            "type": "PDF"
+          }
+        },
+        "file_UD79pN": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter-User Manual-2nd Version-2025.07",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_-V1_1.pdf?v=1751622617",
+            "type": "PDF"
+          }
+        },
+        "file_detJYe": {
+          "type": "file",
+          "settings": {
+            "title": "Hunter Pro-User Manual-2025.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Hunter_Pro_User_Manual-V1.pdf?v=1759218888",
+            "type": "PDF"
+          }
+        },
+        "file_BpiQTJ": {
+          "type": "file",
+          "settings": {
+            "title": "X-Hunter-User Manual-2023.06",
+            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_User_Manual-V2_us.pdf?v=1747792831",
             "type": "PDF"
           }
         },
@@ -449,14 +488,6 @@
           "settings": {
             "title": "EB7 ST-User Manual-2024.07.03",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_EB7_ST_User_Manual-V2_us.pdf?v=1747792842",
-            "type": "PDF"
-          }
-        },
-        "file_BpiQTJ": {
-          "type": "file",
-          "settings": {
-            "title": "X-Hunter-User Manual-2023.06",
-            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_User_Manual-V2_us.pdf?v=1747792831",
             "type": "PDF"
           }
         },
@@ -496,14 +527,6 @@
             "type": "PDF"
           }
         },
-        "file_detJYe": {
-          "type": "file",
-          "settings": {
-            "title": "Hunter Pro-User Manual-2025.06",
-            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Hunter_Pro_User_Manual-V1.pdf?v=1759218888",
-            "type": "PDF"
-          }
-        },
         "file_tHaC6F": {
           "type": "file",
           "disabled": true,
@@ -513,27 +536,11 @@
             "type": "PDF"
           }
         },
-        "file_UD79pN": {
-          "type": "file",
-          "settings": {
-            "title": "X-Hunter-User Manual-2nd Version-2025.07",
-            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_-V1_1.pdf?v=1751622617",
-            "type": "PDF"
-          }
-        },
         "file_4jwFTt": {
           "type": "file",
           "settings": {
             "title": "RetroVolt Pro-User Manual-2025.09",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_Retrovol_Pro_User_Manual_V1_2.pdf?v=1760066786",
-            "type": "PDF"
-          }
-        },
-        "file_fmVaYc": {
-          "type": "file",
-          "settings": {
-            "title": "X-Hunter ST-User Manual-2025.11.04",
-            "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_ST_User_Manual-V2.pdf?v=1762242443",
             "type": "PDF"
           }
         },
@@ -572,36 +579,28 @@
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_JC1_User_Manual_46d6dd95-f838-4894-a570-a49e226be353.pdf?v=1767867567",
             "type": "PDF"
           }
-        },
-        "file_G6FHMq": {
-          "type": "file",
-          "settings": {
-            "title": "Thunder Pro-User Manual-2026.03.17",
-            "url": "https://cdn.shopify.com/s/files/1/0751/3486/1498/files/Jasion_Thunder_Pro_User_Manual-V1_1.pdf?v=1773732433",
-            "type": "PDF"
-          }
         }
       },
       "block_order": [
-        "file_eqPaNz",
         "file_M4ae3W",
+        "file_eqPaNz",
+        "file_G6FHMq",
+        "file_fmVaYc",
+        "file_UD79pN",
+        "file_detJYe",
+        "file_BpiQTJ",
         "file_Jy4p3C",
         "file_7UQeVW",
-        "file_BpiQTJ",
         "file_pk9E3y",
         "file_HGg9pK",
         "file_KNjRLj",
         "file_jbjLFj",
-        "file_detJYe",
         "file_tHaC6F",
-        "file_UD79pN",
         "file_4jwFTt",
-        "file_fmVaYc",
         "file_9XjcUH",
         "file_7nknQy",
         "file_T8qqmp",
-        "file_WmRn9c",
-        "file_G6FHMq"
+        "file_WmRn9c"
       ],
       "name": "Download list (hb)",
       "settings": {
