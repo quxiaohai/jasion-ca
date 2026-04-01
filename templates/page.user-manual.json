@@ -345,7 +345,7 @@
         "video_TH8hik": {
           "type": "video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=87u4uYq8CQs",
+            "video_url": "https://www.youtube.com/watch?v=OjOLswqdTX0",
             "description": "",
             "enable_video_autoplay": false,
             "enable_video_looping": false,
@@ -417,6 +417,15 @@
     "dowmload_list_hb_QQQxD9": {
       "type": "dowmload-list-hb",
       "blocks": {
+        "file_eqPaNz": {
+          "type": "file",
+          "disabled": true,
+          "settings": {
+            "title": "Patrol 52-User Manual-2026.03",
+            "url": "",
+            "type": "PDF"
+          }
+        },
         "file_M4ae3W": {
           "type": "file",
           "settings": {
@@ -574,6 +583,7 @@
         }
       },
       "block_order": [
+        "file_eqPaNz",
         "file_M4ae3W",
         "file_Jy4p3C",
         "file_7UQeVW",
