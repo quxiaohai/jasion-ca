@@ -24,6 +24,7 @@
       }
     },
     "mc_product_compare": {
+      "disabled": false,
       "settings": {},
       "blocks": {
         "other_product_C7C3Yz": {

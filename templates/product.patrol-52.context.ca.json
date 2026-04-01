@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "ca"
+  },
+  "parent": "product.patrol-52.json",
+  "sections": {
+    "mc_product_compare_n7rP9C": {
+      "settings": {},
+      "blocks": {
+        "other_product_CijGfB": {
+          "settings": {
+            "product_params": "C$2,099\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,10 +25,6 @@
             "line_bottom": "md:tw-mb-2"
           }
         },
-        "judge_me_reviews_preview_badge_CNr4Dr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "cycle_countdown_xpW97T": {
           "type": "cycle_countdown",
           "settings": {
@@ -145,7 +141,7 @@
         "liquid_epRzrJ": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 Early Bird: $1,599 (<strong>-$100</strong>)|Mar 20–Mar 31<br>\n🎁 Exclusive Patrol Gifts Included<br>\n🎥 Buy & Win: <strong>Insta360 GO 3S X1| Mar 20–Mar 23<br></strong>\n💰 Order & Win a 100% Refund | Mar 20–Mar 31<br>\n⏳ <strong>Price Goes Up After Mar 31</strong>"
+            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 Early Bird: C$4,098 for combo</strong>|Mar 25 – Apr 10<br>\n📦 <strong>Estimated Shipping:</strong> Starts April 2<br>\n🎁 Exclusive Patrol Gifts Included<br>\n🎥 Buy & Win: <strong>Insta360 GO 3S X1| Mar 25 – Apr 10<br></strong>\n💰 Order & Win a 100% Refund | Mar 25 – Apr 10 <br>\n⏳ <strong>Price Goes Up After Apr 10</strong>"
           }
         },
         "anchor_8VjwmL": {
@@ -178,7 +174,6 @@
       },
       "block_order": [
         "title",
-        "judge_me_reviews_preview_badge_CNr4Dr",
         "cycle_countdown_xpW97T",
         "countdown_NPztC6",
         "variant_picker",
@@ -629,8 +624,8 @@
         "pc_width": 1920,
         "mb_width": 780,
         "media_type": "image",
-        "pc_image_url": "shopify://shop_images/banner-patrol-image-new.jpg",
-        "mb_image_url": "shopify://shop_images/mb-banner-patrol-image-new.jpg",
+        "pc_image_url": "shopify://shop_images/PC_5f715764-9509-4e6e-8413-56a8e906986d.jpg",
+        "mb_image_url": "shopify://shop_images/M_340bd159-a8f6-4744-a464-0d8efdd44a88.png",
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
@@ -651,10 +646,10 @@
             "position": "1",
             "gift_image": "shopify://shop_images/120_59071a4f-1c56-43b9-a958-43a97adb4e14.png",
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
-            "title": "<p>Early Bird<br/><strong>Price $1,599&lcub;$2,699&rcub;</strong></p>",
+            "title": "<p>Early Bird<br/><strong>Price C$2,099&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 - Mar 31</p>",
-            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End 31 Mar.</p>"
+            "date": "<p>Date: Mar 25 - Apr 10</p>",
+            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End Apr 10.</p>"
           }
         },
         "card_2": {
@@ -677,7 +672,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 - Mar 31</p>",
+            "date": "<p>Date: Mar 25 - Apr 10</p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         },
@@ -689,8 +684,8 @@
             "mb_gift_image": "shopify://shop_images/3_e20766b2-c13c-4070-a8a7-70070ee32559.png",
             "title": "<p>BUY & WIN<br/><strong>Insta360 GO 3S X1</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Mar 20 – Mar 23</p>",
-            "desc": "<p>Every Patrol purchase automatically enters you into our exclusive giveaway for a chance to win an <strong>Insta360 camera</strong>.<br/><br/><strong>One lucky rider</strong> will take it home — no extra steps required.</p>"
+            "date": "<p>Date: Mar 25 – Apr 10</p>",
+            "desc": "<p>Every Patrol purchase automatically enters you into our exclusive giveaway for a chance to win an <strong>Insta 360 camera</strong>.<br/><br/><strong>One lucky rider</strong> will take it home — no extra steps required.</p>"
           }
         }
       },
@@ -790,7 +785,7 @@
       "settings": {
         "page_color": "",
         "show_title": true,
-        "title": "<p><strong>Launching on March 20th.<br/></strong>Define the Future</p>",
+        "title": "<p><strong>Launching on March 25th.<br/></strong>Define the Future</p>",
         "font_name": "rushblade",
         "title_style": "normal",
         "title_pc_size": 75,
@@ -1541,7 +1536,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,499\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
+            "product_params": "C$2,289\n4000W\n52V 30Ah\n145Nm\n50 Miles\n40 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD with NFC Unlock\nFront 70/100-19, Rear 70/100-17\n5'7'' - 6'7''\n115 lbs"
           }
         },
         "other_product_hwgPet": {
@@ -1560,7 +1555,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,599.99\n2400W\n48V 18.2Ah*2\n106Nm\n51 Miles\n37 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD\n25'' x 4''\n5'5'' - 6'3''\n117 lbs"
+            "product_params": "C$2,299\n2400W\n48V 18.2Ah*2\n106Nm\n51 Miles\n37 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD\n25'' x 4''\n5'5'' - 6'3''\n117 lbs"
           }
         },
         "other_product_fgxp3D": {
@@ -1579,7 +1574,7 @@
             "text4": "",
             "color5": "",
             "text5": "",
-            "product_params": "$1,999\n3000W\n60V 18Ah*2\n338Nm\n87 Miles\n50 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD \n25‘’ X 3‘’\n5'5'' - 6'3''\n123 lbs"
+            "product_params": "C$2,899\n3000W\n60V 18Ah*2\n338Nm\n87 Miles\n50 MPH\nFront & Rear Lights\nHydraulic Brakes\n330 Ibs\nFull suspension\nLCD \n25‘’ X 3‘’\n5'5'' - 6'3''\n123 lbs"
           }
         }
       },
@@ -1629,7 +1624,7 @@
           "settings": {
             "title": "2. What's your shipping policy?",
             "title_tag": "h3",
-            "text": "<p>Jasion has suspended local pick-up services in the United States. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS, USPS, and FedEx shipping services. We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/shipping-policy\" title=\"https://www.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
+            "text": "<p>Jasion has suspended local pick-up services in Canada. If pick-up services are resumed, we will update the information on our website. Please check the website for updates.</p><p>We provide UPS,and FedEx shipping services. We DO NOT ship to PO BOXES.</p><p>In-stock orders typically ship within 2 business days, unless otherwise noted on the product page. Please allow 5-7 business days for your shipment to arrive at your address. Any delivery dates provided by JASION are estimates.</p><p>For more shipping information, send an email to support@Jasionbike.com. We will get back to you in 24 hours.</p><p>Want to know more about shipping policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/shipping-policy\" title=\"https://ca.jasionbike.com/pages/shipping-policy\">Shipping Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -1639,7 +1634,7 @@
           "settings": {
             "title": "3. What's your warranty policy?",
             "title_tag": "h3",
-            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"https://www.jasionbike.com/pages/warranty\" title=\"Warranty\">Warranty Policy Page</a>.</p>",
+            "text": "<p>All JASION bikes carry a one(1) year warranty from the date of receipt of the bike for manufacturing defects in materials and/or workmanship( all free accessories are not covered).<br/><br/>We will replace any component that is defective or damaged in materials and/or workmanship( including the damage in the processing of shipment).<br/><br/>Before making a warranty claim, we suggest that you first contact us at <strong>support@jasionbike.com</strong>.</p><p>Want to know more about warranty policies, please check more details on our <a href=\"https://ca.jasionbike.com/pages/warranty\" title=\"https://ca.jasionbike.com/pages/warranty\">Warranty Policy Page</a>.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }

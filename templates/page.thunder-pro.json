@@ -211,6 +211,7 @@
           "settings": {
             "img_1": "shopify://shop_images/1_9a498f42-e152-47e2-8bf3-090e45fe6177.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Beyond Mobility. Beyond Limits.",
             "content": "Thunder Pro was born as the next evolution of Thunder, crafted for riders who demand more power, capability, and confidence. Driven by the same spirit of adventure and everyday practicality, it pushes the original vision further through refined engineering. From rugged trails and snowy paths to city streets, Thunder Pro delivers one seamless ride without compromise."
           }
@@ -220,6 +221,7 @@
           "settings": {
             "img_1": "shopify://shop_images/2_6396e7be-9ab6-4d95-abfd-e3eafcbffbaa.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Designed for Power, Built for Control",
             "content": "Every design decision behind Thunder Pro balances high-output electric power with rider confidence. The eBike frame geometry is precisely engineered to support high-speed performance, heavy payloads, and long-distance riding, while maintaining stability and comfort. Dual suspension, 26″×4″ fat tires, and hydraulic disc brakes are integrated from the ground up—not added later—ensuring a fully optimized all-terrain electric bike system that performs as one unified machine."
           }
@@ -229,6 +231,7 @@
           "settings": {
             "img_1": "shopify://shop_images/3_ef14fee7-8a46-486c-b4ba-1ba7a7a0aa67.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "Precision in Every Detail",
             "content": "Thunder Pro is built with precision and purpose. From its hydraulic disc brakes for confident stopping to its front and rear suspension system designed to absorb impacts and rough terrain, every component is selected and assembled to endure demanding conditions. Attention to detail in materials, welding, and component integration ensures strength, durability, and long-term reliability."
           }
@@ -238,6 +241,7 @@
           "settings": {
             "img_1": "shopify://shop_images/4_8ea6b89b-dae3-4caa-9209-1dfddd4716b7.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "Go Beyond Every Ride.",
             "content": "The result is Thunder Pro—a powerful, refined electric bike built to dominate streets and trails alike. With 1800W peak power, 35 MPH performance, dual suspension, hydraulic braking, and a 90-mile max range, it delivers an uncompromising ride that’s fast, capable, and comfortable. Designed to carry more, go farther, and ride harder—Thunder Pro is performance, perfected."
           }
@@ -252,6 +256,7 @@
       "name": "Large Header slider (hb)",
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -988,6 +993,7 @@
         "description_mb_size": 14,
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
+        "drop_arrow_color": "#ffffff",
         "pc_before_image_url": "shopify://shop_images/TST_R002_20_1500W_Full_Suspension_Moped-style_Electric_Bike_Data-2.jpg",
         "pc_after_image_url": "shopify://shop_images/TST_R002-Plus_20_1500W_Full_Suspension_Moped-style_Electric_Bike_Data-3.jpg",
         "image_radius": 8,
@@ -1003,8 +1009,13 @@
         "page_color": "",
         "show_title": true,
         "title": "<p>90-Mile Long Range</p>",
+        "title_font": "",
         "title_pc_size": 48,
+        "title_pc_weight": 700,
+        "title_pc_line": 120,
         "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
         "title_margin_bottom": 16,
         "title_color": "#000000",
         "title_bold_color": "#000000",
@@ -1014,7 +1025,9 @@
         "description_color": "#ffffff",
         "description_bold_color": "#ffffff",
         "description_pc_size": 18,
+        "description_pc_line": 120,
         "description_mb_size": 14,
+        "description_mb_line": 120,
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
         "pc_image": "shopify://shop_images/90-mile-image_d4f25d41-e0e8-48b7-bcfe-c444d1f53513.jpg",
@@ -1327,6 +1340,7 @@
         },
         "product1": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "eb7-2-0-road-trip",
             "product_params": "$1,699.99\n1350W\n48V 20Ah\n120Nm\n80 Miles\nNo\n28 MPH\nFront & Rear Lights\nHydraulic Brakes\n400 Ibs\nFull suspension\nLCD\n26'' x 4'' \n5'4'' - 6'6''\n84.79 lbs"
@@ -1334,6 +1348,7 @@
         },
         "product2": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "jasionbike-eb5-copy",
             "product_params": "$1,???\n1800W\n52V 20Ah\n110Nm\n90 Miles\nSmart App for ios & Android\n35 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nFull suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n82.5 lbs"
@@ -1341,6 +1356,7 @@
         },
         "product4": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "retrovolt-pro",
             "product_params": "$1,148\n1800W\n48V 17.5Ah\n110Nm\n85 Miles\nNo\n36 MPH\nHeadlight & Turn signal& & Brake light\nHydraulic Brakes\n500 lbs\nAir Shock Suspension\nLCD\n26'' x 4'' \n5'5'' - 7'2''\n90 lbs"
@@ -1353,6 +1369,7 @@
         "product2",
         "product4"
       ],
+      "disabled": true,
       "name": "MC Product Compare",
       "settings": {
         "page_color": "#ffffff",
@@ -1372,6 +1389,7 @@
         "description_mb_size": 14,
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
+        "theme": "light",
         "compare_title": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nBluetooth\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
       }
     },
@@ -1473,6 +1491,7 @@
       "settings": {
         "style": "with-border",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",

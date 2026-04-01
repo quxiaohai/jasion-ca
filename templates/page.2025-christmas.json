@@ -21,8 +21,8 @@
         "image_VeqLKj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_4fe708a4-1c73-4111-b1e8-107491a7555b.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_17f1b124-39a0-442a-99d1-7645f8226dba.jpg",
+            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_28fed14f-2e2a-4f35-a077-774cdfa99621.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_648b2b6e-c890-470d-ac17-6b077f7c36bc.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -30,7 +30,7 @@
             "subh_before": true,
             "text_size": "subtext-md",
             "button_label": "",
-            "button_link": "shopify://products/hunter-pro-combo",
+            "button_link": "shopify://products/retrovolt-pro-combo",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false,
@@ -464,34 +464,25 @@
     "autumn_sale_product_card_fkC9CE": {
       "type": "autumn-sale-product-card",
       "blocks": {
-        "product_item_Gx4Utj": {
+        "product_item_RmTt9L": {
           "type": "product_item",
+          "disabled": true,
           "settings": {
-            "decorative_image": "shopify://shop_images/4bee83998ac4b7319abef324ec93f66b.png",
-            "product": "jasion-x-hunter",
+            "product": "",
             "product_price_color": "#ff981d",
-            "pc_product_image": "shopify://shop_images/X-Hunter_5853387f-ac5d-4248-a4f6-7ae96559b92d.jpg",
-            "mb_product_image": "shopify://shop_images/lQLPJxIko0gHvbfNAerNAtCw4qK8mtzrwSEI-w83XItzAQ_720_490.png",
-            "show_spec": false,
-            "spec_text_color": "dark",
+            "show_spec": true,
+            "spec_text_color": "light",
             "payment_text": "Pay over time with 0% interes",
-            "payment_icon1": "shopify://shop_images/autumn-shop-pay.png",
-            "payment_icon2": "shopify://shop_images/autumn-klarna.png",
-            "gift_list": [
-              "extra-one-year-warranty",
-              "jasion-ebike-front-basket-1",
-              "copy-of-jasion®-bicycle-universal-mirrors",
-              "fenders-for-jasion-eb7"
-            ],
-            "remark": "Save $1,207 total! Score $1,207 OFF early + Extra one-year warranty (worth $199) on X-Hunter. Get your eBike now.",
+            "gift_list": [],
+            "remark": "Now,as part of the Pre-Order, we are offering free Fender Set and a Rear Rack, a total value of $515.",
             "button1": "Shop Now",
             "button1_text_color": "#ffffff",
-            "button1_bg_color": "#000000",
-            "button1_gradient": "linear-gradient(188deg, rgba(255, 210, 123, 1), rgba(255, 120, 0, 1) 100%)",
+            "button1_bg_color": "#ffdb00",
+            "button1_gradient": "",
             "button2": "Learn More",
-            "button2_url": "shopify://products/jasion-x-hunter",
-            "button2_text_color": "#ff981d",
-            "button2_border_color": "#ff981d"
+            "button2_url": "",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000"
           }
         },
         "product_item_4za3JA": {
@@ -525,7 +516,7 @@
         }
       },
       "block_order": [
-        "product_item_Gx4Utj",
+        "product_item_RmTt9L",
         "product_item_4za3JA"
       ],
       "name": "autumn-sale-product-card",
@@ -579,6 +570,7 @@
         },
         "product_item_Y7Tb7d": {
           "type": "product_item",
+          "disabled": true,
           "settings": {
             "product": "jasion-x-hunter",
             "payment_text": "Pay over time with 0% interes",
@@ -599,6 +591,7 @@
         },
         "product_item_44gqyE": {
           "type": "product_item",
+          "disabled": true,
           "settings": {
             "product": "jasion®-combo-sale-x-hunter-2",
             "payment_text": "Pay over time with 0% interes",
@@ -621,7 +614,6 @@
         },
         "product_item_dxWPHa": {
           "type": "product_item",
-          "disabled": true,
           "settings": {
             "product": "retrovolt-pro-combo",
             "payment_text": "Pay over time with 0% interes",

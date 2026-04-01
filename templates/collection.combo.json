@@ -15,8 +15,8 @@
         "image_AJgPLH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_4fe708a4-1c73-4111-b1e8-107491a7555b.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_17f1b124-39a0-442a-99d1-7645f8226dba.jpg",
+            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_28fed14f-2e2a-4f35-a077-774cdfa99621.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_1200x525_3d9f71d9-db58-4f82-9d6d-f7b19db9071f.jpg",
             "heading": "",
             "heading_size": "title-sm",
             "heading_tag": "h2",
@@ -437,6 +437,7 @@
       "settings": {
         "style": "with-border",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
