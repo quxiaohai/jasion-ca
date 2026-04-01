@@ -27,6 +27,24 @@
     "multicolumn_grid_hb_QHpUPB": {
       "type": "multicolumn-grid-hb",
       "blocks": {
+        "video_dJfpUU": {
+          "type": "video",
+          "name": "Patrol 52",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=xLuvBpco_-Y",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "",
+            "title": "Patrol 52",
+            "title_sz": "h5",
+            "content": "",
+            "author": "RVdaydream"
+          }
+        },
         "video_3ipERD": {
           "type": "video",
           "disabled": true,
@@ -257,6 +275,7 @@
         }
       },
       "block_order": [
+        "video_dJfpUU",
         "video_3ipERD",
         "video_w8fcDJ",
         "video_PAqyT9",
