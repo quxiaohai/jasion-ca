@@ -91,7 +91,7 @@
             "bg_color": "linear-gradient(180deg, rgba(255, 228, 134, 1), rgba(255, 199, 1, 1) 100%)",
             "show_image": true,
             "image": "shopify://shop_images/ab1d47899c80160ffccd36bac62e7b9c.png",
-            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Mar 16–Mar 31</p>",
+            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Until Apr 7</p>",
             "gift_list": [
               "tail-bag",
               "ebike-mirrors"
@@ -208,7 +208,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Early Bird Price — <strong>C$1859 | Mar 16–Mar 31</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry! Price Goes Up After Mar 31!"
+            "liquid": "⚡ Thunder Pro Early Bird Exclusive Perks\n<br>\n🔥Early Bird Price — <strong>C$1859</strong><br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Time)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry! Price Goes Up After Apr 7!"
           }
         },
         "text_wt9CQN": {
