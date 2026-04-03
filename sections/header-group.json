@@ -41,10 +41,9 @@
         },
         "announcement-2": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "icon": "none",
-            "text": "X-HUNTER: C$1,369-2 Days Only!",
+            "text": "🍃 Get the Thunder Pro for just C$1,809 with code <strong>SPRINGRIDE</strong>!",
             "link": "shopify://products/jasion-x-hunter",
             "hide_icon_mobile": true,
             "text_mobile": "",
