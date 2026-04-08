@@ -28,10 +28,12 @@
           {% assign bk_stts = block.settings %}
           {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
           {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
-            <div class="tw-flex md:tw-w-1/3 tw-w-1/2 tw-px-4 tw-items-center tw-justify-center tw-flex-col pr-item tw-transition-all tw-cursor-pointer" data-handle="{{ pr_title | handle}}">
-                {{ pr_img | image_url: width: '225' | image_tag: width: '225'}}
-                <p class="md:tw-text-xl tw-mt-2">{{pr_title}}</p>
-            </div>
+              {%- if pr_img != blank -%}
+                  <div class="tw-flex md:tw-w-1/3 tw-w-1/2 tw-px-4 tw-items-center tw-justify-center tw-flex-col pr-item tw-transition-all tw-cursor-pointer" data-handle="{{ pr_title | handle}}">
+                      {{ pr_img | image_url: width: '225' | image_tag: width: '225'}}
+                      <p class="md:tw-text-xl tw-mt-2">{{pr_title}}</p>
+                  </div>
+              {%- endif -%}
           {% endfor %}
         </div>
       </div>
@@ -45,84 +47,83 @@
         {% assign pr = bk_stts.pr %}
         {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
         {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
-        
-
-        <div class="pr-result-wrapper md:tw-flex-1  {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}" style="background-color:{{ bk_stts.bg_color }}">
-          <div class="tw-text-center tw-relative "> 
-            <div class="md:tw-px-10 pr-header">
-              <div class="md:tw-mb-16 tw-mb-12 ">
-                <a class="compare-select md:tw-p-4 tw-p-2 tw-cursor-pointer tw-border-solid tw-border-viGray-300 tw-flex tw-justify-between tw-items-center tw-border tw-rounded-lg tw-w-full" data-handle="{{ pr_title | handle }}" data-modal-target="modal-product-list">
-                  <h5 class="2xl:tw-text-xl md:tw-text-lg tw-text-base">{{pr_title}}</h5>
-                  {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
-                </a>
-              </div>
-
-
-              {% comment %} <div class="tw-mb-14">
-                {{ pr_img | image_url: width: '500' | image_tag: width: '500',class:'tw-min-h-0 tw-object-contain'}}
-              </div>
-              <div class="tw-grid tw-gap-5"> 
-                <p class="tw-text-4xl tw-font-semibold">
-                  {% if bk_stts.pr_price != blank %}
-                    {{bk_stts.pr_price}}
-                  {% else %}
-                    {{ bk_stts.pr.price | money }}
-                  {% endif %}
-                </p>
-                <p>
-                  <a href="/cart/{{bk_stts.pr.variants.first.id}}" class="button button--primary tw-px-5 tw-py-2 md:tw-text-lg button--blur tw-text-xs tw-font-normal" is="hover-link">
-                    <span class="btn-text">{{- 'products.product.read_more' | t -}}</span>
-                  </a>
-                </p>
-                <p class="">
-                  <a class="tw-text-vi tw-flex tw-items-center tw-justify-center" href="{{ bk_stts.pr.url }}">Learn more 
-                  {%- render 'icon', icon: 'chevron-right', size: 's' -%}</a>
-                </p>
-              </div> {% endcomment %}
+            {%- if pr_img != blank -%}
+                <div class="pr-result-wrapper md:tw-flex-1  {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}" style="background-color:{{ bk_stts.bg_color }}">
+                    <div class="tw-text-center tw-relative ">
+                        <div class="md:tw-px-10 pr-header">
+                            <div class="md:tw-mb-16 tw-mb-12 ">
+                                <a class="compare-select md:tw-p-4 tw-p-2 tw-cursor-pointer tw-border-solid tw-border-viGray-300 tw-flex tw-justify-between tw-items-center tw-border tw-rounded-lg tw-w-full" data-handle="{{ pr_title | handle }}" data-modal-target="modal-product-list">
+                                    <h5 class="2xl:tw-text-xl md:tw-text-lg tw-text-base">{{pr_title}}</h5>
+                                    {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
+                                </a>
+                            </div>
 
 
-
-              {%- render 'product-card-compare-hb',
-                product: pr,
-                product_id: pr.id,
-                section_id: section.id,
-                lazy_load: lazy_load,
-                image_ratio: settings.product_image_ratio,
-                image_fill: settings.product_image_fill,
-                show_secondary_image: settings.product_secondary_image,
-                show_vendor: settings.product_vendor,
-                show_color_swatches: settings.product_color_swatches,
-                enable_specs: section.settings.enable_specs,
-                specs_limit: section.settings.specs_limit
-              -%}
-
-
-            </div>
-            <div class="spes-wrapper md:tw-px-9 tw-px-4 md:tw-pt-20 md:tw-my-20 tw-pt-12 tw-my-12 tw-grid md:tw-gap-4 tw-gap-2 tw-font-medium tw-border-viGray-300 tw-border-t tw-border-0 tw-border-solid">
-              {%- for content in content_arr -%}
-              <div class="md:tw-py-4 tw-p-2 md:tw-text-nowrap">
-                <p class="tw-text-viGray-500 tw-mb-1 -md:tw-text-sm" >{{ th_arr[forloop.index0] }}</p>
-                <p class="md:tw-text-lg tw-text-base">{{content}}</p>
-              </div>
-              {% endfor %}
-            </div>
+                            {% comment %} <div class="tw-mb-14">
+                              {{ pr_img | image_url: width: '500' | image_tag: width: '500',class:'tw-min-h-0 tw-object-contain'}}
+                            </div>
+                            <div class="tw-grid tw-gap-5">
+                              <p class="tw-text-4xl tw-font-semibold">
+                                {% if bk_stts.pr_price != blank %}
+                                  {{bk_stts.pr_price}}
+                                {% else %}
+                                  {{ bk_stts.pr.price | money }}
+                                {% endif %}
+                              </p>
+                              <p>
+                                <a href="/cart/{{bk_stts.pr.variants.first.id}}" class="button button--primary tw-px-5 tw-py-2 md:tw-text-lg button--blur tw-text-xs tw-font-normal" is="hover-link">
+                                  <span class="btn-text">{{- 'products.product.read_more' | t -}}</span>
+                                </a>
+                              </p>
+                              <p class="">
+                                <a class="tw-text-vi tw-flex tw-items-center tw-justify-center" href="{{ bk_stts.pr.url }}">Learn more
+                                {%- render 'icon', icon: 'chevron-right', size: 's' -%}</a>
+                              </p>
+                            </div> {% endcomment %}
 
 
-            <div class="tw-mt-1 tw-compare-atc">
-              {%- assign product_form_id = 'ProductForm-' | append: section.id | append: '-' | append: pr.id -%}
-              {%- render 'buy-buttons',
-                block: block,
-                product: pr,
-                product_id: pr.id,
-                section_id: section.id,
-                product_form_id: product_form_id
-              -%}
-            </div>
 
-          </div>
+                            {%- render 'product-card-compare-hb',
+                                product: pr,
+                                product_id: pr.id,
+                                section_id: section.id,
+                                lazy_load: lazy_load,
+                                image_ratio: settings.product_image_ratio,
+                                image_fill: settings.product_image_fill,
+                                show_secondary_image: settings.product_secondary_image,
+                                show_vendor: settings.product_vendor,
+                                show_color_swatches: settings.product_color_swatches,
+                                enable_specs: section.settings.enable_specs,
+                                specs_limit: section.settings.specs_limit
+                            -%}
 
-        </div>
 
+                        </div>
+                        <div class="spes-wrapper md:tw-px-9 tw-px-4 md:tw-pt-20 md:tw-my-20 tw-pt-12 tw-my-12 tw-grid md:tw-gap-4 tw-gap-2 tw-font-medium tw-border-viGray-300 tw-border-t tw-border-0 tw-border-solid">
+                            {%- for content in content_arr -%}
+                                <div class="md:tw-py-4 tw-p-2 md:tw-text-nowrap">
+                                    <p class="tw-text-viGray-500 tw-mb-1 -md:tw-text-sm" >{{ th_arr[forloop.index0] }}</p>
+                                    <p class="md:tw-text-lg tw-text-base">{{content}}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+
+                        <div class="tw-mt-1 tw-compare-atc">
+                            {%- assign product_form_id = 'ProductForm-' | append: section.id | append: '-' | append: pr.id -%}
+                            {%- render 'buy-buttons',
+                                block: block,
+                                product: pr,
+                                product_id: pr.id,
+                                section_id: section.id,
+                                product_form_id: product_form_id
+                            -%}
+                        </div>
+
+                    </div>
+
+                </div>
+            {%- endif -%}
         {% endfor %}
       </div>
 
@@ -133,14 +134,16 @@
           {% assign bk_stts = block.settings %}
           {% assign pr_title = bk_stts.pr_img.alt | default: bk_stts.pr.title %}
           {% assign pr_img = bk_stts.pr_img | default: bk_stts.pr.featured_image %}
-          <a class="tw-flex compare-select tw-cursor-pointer tw-items-center tw-justify-between tw-font-medium tw-py-4 md:tw-px-10 tw-px-2 {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}"
-            data-modal-target="modal-product-list">
-                <div class="tw-flex tw-items-center tw-gap-7">
-                  {{ pr_img | image_url: width: '100' | image_tag: width: '100', class:'-md:tw-hidden'}}
-                  <p class="md:tw-text-xl">{{pr_title }}</p>
-                </div>
-                {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
-            </a>
+            {%- if pr_img != blank -%}
+                <a class="tw-flex compare-select tw-cursor-pointer tw-items-center tw-justify-between tw-font-medium tw-py-4 md:tw-px-10 tw-px-2 {% if forloop.index < 4 %}active{% endif %}" data-handle="{{ pr_title | handle }}"
+                   data-modal-target="modal-product-list">
+                    <div class="tw-flex tw-items-center tw-gap-7">
+                        {{ pr_img | image_url: width: '100' | image_tag: width: '100', class:'-md:tw-hidden'}}
+                        <p class="md:tw-text-xl">{{pr_title }}</p>
+                    </div>
+                    {%- render 'icon', icon: 'chevron-down', size: 's', class:'tw-text-vi' -%}
+                </a>
+            {%- endif -%}
         {% endfor %}
         </div>
       </div>
