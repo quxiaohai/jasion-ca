@@ -43,6 +43,10 @@
             "pr_img": null,
             "pr_price": ""
           }
+        },
+        "item_prfUjG": {
+          "disabled": true,
+          "settings": {}
         }
       },
       "block_order": [
