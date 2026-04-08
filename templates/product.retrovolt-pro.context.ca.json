@@ -16,14 +16,14 @@
     "main-product": {
       "settings": {},
       "blocks": {
-        "liquid_Riat9U": {
-          "settings": {
-            "liquid": "🍃Early Spring Sale<br>\n⚡<strong> C$50 Off C$1500+ with code: SPRINGRIDE</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Spring Deal Before It’s Gone!<br>\n📦 <strong>Estimated Shipping:</strong> Starts April 8<br>"
-          }
-        },
         "inventory_FgCihQ": {
           "settings": {
             "color_scheme": "accent-1"
+          }
+        },
+        "liquid_Riat9U": {
+          "settings": {
+            "liquid": "🍃Early Spring Sale<br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Spring Deal Before It’s Gone!<br>"
           }
         }
       }
