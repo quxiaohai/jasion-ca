@@ -48,6 +48,10 @@
             "color_scheme": "accent-1"
           }
         },
+        "judge_me_reviews_preview_badge_B34nQ7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "cycle_countdown_yyiaXc": {
           "type": "cycle_countdown",
           "settings": {
@@ -223,6 +227,7 @@
         "tag",
         "title",
         "inventory_RH4gwp",
+        "judge_me_reviews_preview_badge_B34nQ7",
         "cycle_countdown_yyiaXc",
         "countdown_NPztC6",
         "variant_picker",
@@ -1801,6 +1806,38 @@
         "rounded": false
       }
     },
+    "1754645058bbf75ec9": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_QCMATB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_QCMATB"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "faq_ehwjkn": {
       "type": "faq",
       "blocks": {
@@ -2054,24 +2091,6 @@
         "full_width": false,
         "rounded": false
       }
-    },
-    "1754645058bbf75ec9": {
-      "type": "apps",
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
     }
   },
   "order": [
@@ -2095,10 +2114,10 @@
     "mc_image_wall",
     "mc_product_compare",
     "specifications_parameters_hb_84CbEA",
+    "1754645058bbf75ec9",
     "faq_ehwjkn",
     "product_modal_popup_hb_exNHwH",
     "product-recommendations",
-    "recently-viewed",
-    "1754645058bbf75ec9"
+    "recently-viewed"
   ]
 }
