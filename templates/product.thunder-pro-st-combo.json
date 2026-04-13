@@ -95,7 +95,7 @@
             "bg_color": "linear-gradient(180deg, rgba(255, 228, 134, 1), rgba(255, 199, 1, 1) 100%)",
             "show_image": true,
             "image": "shopify://shop_images/ab1d47899c80160ffccd36bac62e7b9c.png",
-            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Until Apr 15</p>",
+            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Until Apr 22</p>",
             "gift_list": [
               "tail-bag",
               "ebike-mirrors"
@@ -397,8 +397,8 @@
         "image_VzEjME": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/PC_554af65b-bc82-4044-a73b-0a5f64002cad.jpg",
-            "image_mobile": "shopify://shop_images/M_33bfc6ff-b713-467f-a830-6860fe55cc78.png",
+            "image": "shopify://shop_images/1_0e68fe11-0d63-4d28-ba22-e868762ad9e8.jpg",
+            "image_mobile": "shopify://shop_images/1_8c0dc743-468f-4066-b7fe-d0a9befd568d.png",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
