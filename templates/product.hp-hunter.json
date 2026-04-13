@@ -35,6 +35,10 @@
             "color_scheme": "accent-1"
           }
         },
+        "judge_me_reviews_preview_badge_7Bki4D": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "cycle_countdown_yyiaXc": {
           "type": "cycle_countdown",
           "settings": {
@@ -198,6 +202,7 @@
       "block_order": [
         "title",
         "inventory_RH4gwp",
+        "judge_me_reviews_preview_badge_7Bki4D",
         "cycle_countdown_yyiaXc",
         "countdown_NPztC6",
         "variant_picker",
@@ -757,6 +762,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Establishment_620x620_2b196d21-c2a5-419a-8d18-27649da0552d.png",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Compact Power, Wild Soul.",
             "content": "Hunter Pro was born from a bold vision: to honor the legacy of the X-Hunter while pushing its limits in power and capability. Inspired by real rider feedback, we enhanced torque, range, control, and comfort—without losing the original spirit.\n\nWe kept the iconic fat-tire look and foldable frame, and integrating full suspension, upgraded hydraulic disc brakes, an oversized saddle, and a smart app system for a ride that’s powerful, smooth, and connected."
           }
@@ -766,6 +772,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Design_620x620_560c4508-a330-4fb8-8d4b-d2b7ed7700c3.png",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "",
             "content": "The Hunter Pro is built for control and confidence in every condition. Its aggressive 20x4\" fat tires offer superior grip and stability across varied terrain, while the upgraded hydraulic disc brakes provide reliable, all-weather stopping power in an instant. Whether you're riding through rain or dirt, this setup lets you rider harder while staying in complete control—no matter where the road takes you."
           }
@@ -775,6 +782,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Craftsmanship_620x620_f023e7e5-4489-49d7-ab12-1e53bd3aa193.png",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "",
             "content": "The Hunter Pro retains the advanced dual suspension system of the X-Hunter, built around a durable four-link structure and a 180mm adjustable front fork. With Horst link pivots, it delivers lasting comfort and control across rough terrain—ensuring every ride feels smooth, stable, and ready for adventure."
           }
@@ -784,6 +792,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Finished_Product_620x620_d95e53c8-360e-44e1-951d-b4edf6301b4e.png",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "",
             "content": "Hunter Pro isn’t just an upgrade—it’s a complete evolution. Combining powerful performance, extended range, and exceptional control, it delivers an exhilarating ride, all wrapped in a familiar, classic frame. Whether you're chasing high-speed thrills or forging new paths off-road, the Hunter Pro is your ultimate companion.\n\nHunter Pro — More than a ride. Feel the rush, own the ride."
           }
@@ -793,6 +802,7 @@
           "disabled": true,
           "settings": {
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -807,6 +817,7 @@
       ],
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1834,6 +1845,7 @@
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -1928,6 +1940,20 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_BNbbdm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_BNbbdm"
+      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -2041,6 +2067,7 @@
       "settings": {
         "style": "tw-default-faq",
         "heading": "FAQ",
+        "font_name": "",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
