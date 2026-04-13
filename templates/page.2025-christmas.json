@@ -21,8 +21,8 @@
         "image_VeqLKj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_Pro_1920x400_28fed14f-2e2a-4f35-a077-774cdfa99621.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Pro_M_648b2b6e-c890-470d-ac17-6b077f7c36bc.jpg",
+            "image": "shopify://shop_images/3Thunder_Pro_ST_11.jpg",
+            "image_mobile": "shopify://shop_images/3Thunder_Pro_ST_M.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -115,7 +115,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "🌸Early Spring Sale",
+            "title": "🌏Earth Day Sale",
             "position": 6
           }
         },
