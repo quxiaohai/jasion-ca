@@ -631,8 +631,8 @@
         "image_cx4dww": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lQDPJwN3g9IxoZHNArzNB4CwjUd7PuRim1wJo1vr8yw_AQ_1920_700.jpg",
-            "image_mobile": "shopify://shop_images/lQDPKcwQJK_popHNBkDNBLCw_VZTTCtHJdQJo1vr8yw_AA_1200_1600.jpg",
+            "image": "shopify://shop_images/2Patrol.jpg",
+            "image_mobile": "shopify://shop_images/2Patrol_M.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
