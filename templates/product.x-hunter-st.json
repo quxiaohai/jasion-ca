@@ -172,7 +172,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🍃Early Spring Sale<br>\n⚡<STRONG>C$50 Off C$1500+ with code: SPRINGRIDE</STRONG><br>\n✅ Fast Delivery<br>\n✅ 14-Day Easy Returns<br>\n⏰ Hurry! Catch This Spring Deal Before It’s Gone!<br>"
+            "liquid": "🌏 Earth Day Sale<br>\n✅ Fast Delivery<br>\n✅ 14-Day Easy Returns<br>"
           }
         },
         "text_wt9CQN": {
@@ -634,6 +634,7 @@
           "settings": {
             "img_1": "shopify://shop_images/1_476c959a-0a46-4cbc-9a29-3b88862c12c9.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "",
             "content": "The X-Hunter ST builds upon the adventurous spirit and performance of the original X-Hunter, taking it to the next level. This upgraded version pushes the boundaries of adventure cycling, enhancing both performance and comfort, while introducing a sleek, modern design. With these improved features, the X-Hunter ST encourages riders to embark on even bolder adventures."
           }
@@ -643,6 +644,7 @@
           "settings": {
             "img_1": "shopify://shop_images/2.1.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "",
             "content": "The X-Hunter ST’s design perfectly balances power, comfort, and stability. Featuring a low-step frame and hydraulic disc brakes, it offers a smoother, more accessible ride. The 1400W motor, paired with 20-inch x 4-inch tires, ensures superior traction and control on any terrain—whether mountain trails, sand, or snow."
           }
@@ -652,6 +654,7 @@
           "settings": {
             "img_1": "shopify://shop_images/3_fc89a526-7f7d-4f0f-b104-872828587e50.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "",
             "content": "Building on the original’s four-link structure and 180mm adjustable suspension, the X-Hunter ST delivers improved comfort and durability. With 85Nm torque and a 48V13Ah battery, it offers up to 71 miles of power, perfect for long off-road adventures."
           }
@@ -661,6 +664,7 @@
           "settings": {
             "img_1": "shopify://shop_images/4_97c98a73-d4cd-46cb-abc4-b0714ad78bfc.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "",
             "content": "The X-Hunter ST redefines off-road adventure once again. It's not just an electric bike; it’s an invitation to push the limits, explore new frontiers, and embrace the wild unknown. With its robust frame, enhanced braking system, and powerful motor, the X-Hunter ST is the ultimate tool for exploring nature’s most challenging landscapes. From steep mountain trails to remote forests, the X-Hunter ST allows you to ride further, faster, and with more confidence than ever before."
           }
@@ -670,6 +674,7 @@
           "disabled": true,
           "settings": {
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -684,6 +689,7 @@
       ],
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1798,6 +1804,7 @@
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -2005,6 +2012,7 @@
       "settings": {
         "style": "tw-default-faq",
         "heading": "FAQ",
+        "font_name": "",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
