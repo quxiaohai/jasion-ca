@@ -35,6 +35,10 @@
             "color_scheme": "accent-1"
           }
         },
+        "judge_me_reviews_preview_badge_rN43nM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "countdown_NPztC6": {
           "type": "countdown",
           "disabled": true,
@@ -170,7 +174,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🍃Early Spring Sale<br>\n⚡ <STRONG>C$50 Off C$1500+ with code: SPRINGRIDE</STRONG><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Spring Deal Before It’s Gone!<br>"
+            "liquid": "🌏Go Green & Save Big!<br>\n⚡ <STRONG>C$50 Off C$1500+ with code: EARTHDAY</STRONG><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Save the Earth, Save Your Cash. Shop Earth Day Deals!<br>"
           }
         },
         "text_wt9CQN": {
@@ -184,6 +188,7 @@
       "block_order": [
         "title",
         "inventory_pfgny7",
+        "judge_me_reviews_preview_badge_rN43nM",
         "countdown_NPztC6",
         "cycle_countdown_4P9aRg",
         "variant_picker",
@@ -620,6 +625,7 @@
           "settings": {
             "img_1": "shopify://shop_images/1_3bef6557-bc1e-4781-ac49-88d64df8465b.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Your Ultimate Retro Power",
             "content": "Retrovolt Pro was born from a clear vision: to preserve the iconic spirit of the original Retrovolt while pushing the boundaries of performance. With upgraded hydraulic disc brakes, a powerful 2000W peak motor, and a 52V 20Ah battery for extended range, our mission was to create a ride that’s stronger, safer, and longer-lasting—an evolution for every rider who demands more."
           }
@@ -629,6 +635,7 @@
           "settings": {
             "img_1": "shopify://shop_images/1_3bef6557-bc1e-4781-ac49-88d64df8465b.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Smooth Rides, Confident Stops",
             "content": "The Retrovolt Pro is engineered for comfort and safety on every ride. Its dual suspension system absorbs bumps and vibrations with ease, delivering a smoother, more stable experience whether you’re cruising city streets or tackling rough terrain. Paired with upgraded hydraulic disc brakes, you get precise, all-weather stopping power that inspires confidence at any speed. Together, these enhancements ensure every journey feels controlled, cushioned, and secure."
           }
@@ -638,6 +645,7 @@
           "settings": {
             "img_1": "shopify://shop_images/3_5bfd13f8-3e05-418b-b57c-cd98bd2a2b95.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "Strength Meets Versatility",
             "content": "The Retrovolt Pro is equipped with a reinforced rear rack, engineered from high-strength materials for lasting durability. Its robust design not only ensures reliable cargo capacity but also makes room for a second passenger—without compromising stability or balance. Built with precision and strength, this rack turns every ride into a versatile, two-seater adventure."
           }
@@ -647,6 +655,7 @@
           "settings": {
             "img_1": "shopify://shop_images/4_ca3edd0b-7ef2-41e4-8e4a-8c62ef81335e.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "",
             "content": "Retrovolt Pro isn’t just an update—it’s a bold reinvention. With a 2000W peak motor, extended-range 52V 20Ah battery, dual suspension, and upgraded hydraulic brakes, it blends raw power with refined comfort. All of this comes wrapped in Retrovolt’s timeless design, creating a ride that feels both iconic and unstoppable. Whether you’re cruising the city or exploring new horizons, Retrovolt Pro is built to go further, faster, and stronger.\n\nRetrovolt Pro — Your Ultimate Retro Power."
           }
@@ -656,6 +665,7 @@
           "disabled": true,
           "settings": {
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -670,6 +680,7 @@
       ],
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1845,6 +1856,7 @@
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -1939,6 +1951,20 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_LpcjyE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_LpcjyE"
+      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -2052,6 +2078,7 @@
       "settings": {
         "style": "tw-default-faq",
         "heading": "FAQ",
+        "font_name": "",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
