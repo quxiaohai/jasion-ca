@@ -25,6 +25,20 @@
             "line_bottom": "md:tw-mb-2"
           }
         },
+        "inventory_qRGUEX": {
+          "type": "inventory",
+          "settings": {
+            "custom_text": "",
+            "inventory_threshold": 10,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "judge_me_reviews_preview_badge_HT83AM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "cycle_countdown_xpW97T": {
           "type": "cycle_countdown",
           "settings": {
@@ -174,6 +188,8 @@
       },
       "block_order": [
         "title",
+        "inventory_qRGUEX",
+        "judge_me_reviews_preview_badge_HT83AM",
         "cycle_countdown_xpW97T",
         "countdown_NPztC6",
         "variant_picker",
@@ -1786,6 +1802,38 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "177607734507e5a34c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_rwNH4m": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_rwNH4m"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1809,6 +1857,7 @@
     "mc_patrol_param_slide",
     "mc_product_compare_n7rP9C",
     "faq_4qmJVA",
+    "177607734507e5a34c",
     "recently-viewed"
   ]
 }

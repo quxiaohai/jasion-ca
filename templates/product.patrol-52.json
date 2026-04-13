@@ -25,6 +25,20 @@
             "line_bottom": "md:tw-mb-2"
           }
         },
+        "inventory_XD93jy": {
+          "type": "inventory",
+          "settings": {
+            "custom_text": "",
+            "inventory_threshold": 10,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "judge_me_reviews_preview_badge_rQ4aFJ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "cycle_countdown_xpW97T": {
           "type": "cycle_countdown",
           "settings": {
@@ -174,6 +188,8 @@
       },
       "block_order": [
         "title",
+        "inventory_XD93jy",
+        "judge_me_reviews_preview_badge_rQ4aFJ",
         "cycle_countdown_xpW97T",
         "countdown_NPztC6",
         "variant_picker",
@@ -1634,6 +1650,38 @@
         "compare_title": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
       }
     },
+    "1776077272567101bc": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_kfRHWQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_kfRHWQ"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "faq_4qmJVA": {
       "type": "faq",
       "blocks": {
@@ -1837,6 +1885,7 @@
     "mc_patrol_param_slide",
     "mc_product_compare_n7rP9C",
     "faq_4qmJVA",
+    "1776077272567101bc",
     "recently-viewed"
   ]
 }
