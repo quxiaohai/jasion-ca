@@ -462,6 +462,7 @@
           "settings": {
             "img_1": "shopify://shop_images/image.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed1\nfor off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -472,6 +473,7 @@
             "img_1": "shopify://shop_images/image_1.jpg",
             "img_2": "shopify://shop_images/image.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Hydraulic Disc Brakes",
             "content": "The advanced hydraulic disc brakes provide reliable braking power for enhanced safety and control during your rides."
           }
@@ -482,6 +484,7 @@
             "img_1": "shopify://shop_images/image.jpg",
             "img_2": "shopify://shop_images/EB7_2.0-3.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "Add a Pop of Color to Your Ride",
             "content": "There are 4 color options of Ranger S: merlot-red, stone-blue, shark-grey, metallic-sand. Choose the one you like and ride in style."
           }
@@ -492,6 +495,7 @@
             "img_1": "shopify://shop_images/image_1.jpg",
             "img_2": "shopify://shop_images/image.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "Specially designed for off - road adventures.",
             "content": "The Ranger S ebike features a Safety Certified Battery (UL2849 Standard) with a capacity of 692Wh. It can provide reliable power for a versatile and eco-friendly ride."
           }
@@ -501,6 +505,7 @@
           "disabled": true,
           "settings": {
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -516,6 +521,7 @@
       "disabled": true,
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1189,6 +1195,7 @@
           "type": "question",
           "settings": {
             "title": "1. What areas do you ship to?",
+            "title_tag": "h3",
             "text": "<p>We offer shipping services to most countries within the European Union (excluding Malta, Cyprus, Iceland, and the EU Outermost Regions) as well as the United Kingdom. At this time, we do not deliver to P.O. boxes.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1198,6 +1205,7 @@
           "type": "question",
           "settings": {
             "title": "2. Do you offer free shipping?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1207,6 +1215,7 @@
           "type": "question",
           "settings": {
             "title": "3. What is the Jasion warranty period?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1216,6 +1225,7 @@
           "type": "question",
           "settings": {
             "title": "4. What should I do if my e-bike is damaged during shipping?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1225,6 +1235,7 @@
           "type": "question",
           "settings": {
             "title": "5. What is the return policy?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1234,6 +1245,7 @@
           "type": "question",
           "settings": {
             "title": "6. What is the return and exchange process?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1243,6 +1255,7 @@
           "type": "question",
           "settings": {
             "title": "7. How to find the e-bike that fits me?",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1262,6 +1275,7 @@
       "settings": {
         "style": "tw-default-faq",
         "heading": "Frequently asked questions",
+        "font_name": "",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -1297,6 +1311,7 @@
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1306,6 +1321,7 @@
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1315,6 +1331,7 @@
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1324,6 +1341,7 @@
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1333,6 +1351,7 @@
           "type": "question",
           "settings": {
             "title": "Frequently asked question",
+            "title_tag": "h3",
             "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -1362,6 +1381,7 @@
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -1453,6 +1473,38 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "1776073376c1bb8a8c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_JDEFNM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_JDEFNM"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -1472,6 +1524,7 @@
     "faq_LAqHrA",
     "faq",
     "product-recommendations",
-    "recently-viewed"
+    "recently-viewed",
+    "1776073376c1bb8a8c"
   ]
 }
