@@ -35,6 +35,10 @@
             "color_scheme": "accent-1"
           }
         },
+        "judge_me_reviews_preview_badge_Wd9Cgh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "cycle_countdown_aMFGQB": {
           "type": "cycle_countdown",
           "settings": {
@@ -188,6 +192,7 @@
       "block_order": [
         "title",
         "inventory_jJhPMb",
+        "judge_me_reviews_preview_badge_Wd9Cgh",
         "cycle_countdown_aMFGQB",
         "countdown_NPztC6",
         "variant_picker",
@@ -651,6 +656,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Establishment_620x620_42fc3e3f-8e74-4d4a-a09d-392041e03a76.jpg",
             "tab_con": "Establishment",
+            "tab_con_font": "",
             "title": "Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -660,6 +666,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Design_620x620_f930de66-4bed-4bba-9263-0a2370732af7.jpg",
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "",
             "content": "X-Hunter’s wide tire design demonstrates our pursuit of e-bike performance and stability. The 20-inch x 4-inch wide tires not only provide a larger ground contact area and enhance traction, but also effectively improve driving stability. This means you can tackle any terrain with ease, whether it's rugged mountain roads, sand or snow, all while maintaining a stable driving experience. This design not only makes the X-Hunter an electric bicycle suitable for adventure, but also allows riders to enjoy the fun in the outdoor environment."
           }
@@ -669,6 +676,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Craftsmanship_620x620_bc18f829-8c6c-4938-a3ac-effd94e9a33a.jpg",
             "tab_con": "Craftsmanship",
+            "tab_con_font": "",
             "title": "",
             "content": "From a technological perspective, X-Hunter is equipped with a four-link structure that drives the movement of the entire electric bicycle through a central four-link structure. Combined with the 180mm adjustable front fork suspension, X-Hunter implements a full suspension system, providing riders with excellent suspension performance. This full-suspension design uses Horst link pivots to provide long-lasting comfort for off-road adventures, allowing riders to enjoy a smooth ride over rough terrain and explore uncharted territory without being limited by terrain."
           }
@@ -678,6 +686,7 @@
           "settings": {
             "img_1": "shopify://shop_images/Finished_Product_620x620_03054ad8-7a28-48dc-bb0f-9bdf6ab4ec84.jpg",
             "tab_con": "Finished Product",
+            "tab_con_font": "",
             "title": "",
             "content": "With X-Hunter, we redefine the essence of off-road adventure. It transcends mere transportation; it embodies bravery and exploration. Whether conquering rugged mountains or traversing dense forests, X-Hunter allows you to embrace the infinite possibilities of off-road exploration and redefine your adventure at every turn."
           }
@@ -687,6 +696,7 @@
           "disabled": true,
           "settings": {
             "tab_con": "Design",
+            "tab_con_font": "",
             "title": "Establishment：Specially designed for off - road adventures.",
             "content": "The adventurous off-road genes of jasionbike were born with X-Hunter, defining what a bicycle can achieve in adventure and off-roading. It symbolizes jasionbike's bold innovation. X-Hunter integrates sports and leisure, allowing consumers to adapt perfectly to any scene. It represents rugged durability and unparalleled performance, urging you to embark on new paths and embrace the thrill of the unknown."
           }
@@ -701,6 +711,7 @@
       ],
       "settings": {
         "color_text": "",
+        "color_active_text": "",
         "color_background": "",
         "gradient_background": "",
         "color_button_text": "",
@@ -1669,6 +1680,7 @@
       "settings": {
         "style": "with-background",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -1763,6 +1775,20 @@
     },
     "1754645058bbf75ec9": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_zapCFt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_zapCFt"
+      ],
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -1876,6 +1902,7 @@
       "settings": {
         "style": "tw-default-faq",
         "heading": "FAQ",
+        "font_name": "",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
