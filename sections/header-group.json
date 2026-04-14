@@ -63,11 +63,23 @@
             "highlighted_scribble": "circle"
           }
         },
+        "announcement_7x9KUU": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "Welcome to our store",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "announcement_n8hBLb": {
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: SPRINGRIDE</strong>",
+            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: EARTHDAY</strong>",
             "link": "shopify://products/retrovolt-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -93,6 +105,7 @@
         "announcement_8UQHDB",
         "announcement-2",
         "announcement-1",
+        "announcement_7x9KUU",
         "announcement_n8hBLb",
         "announcement_MiyK6E"
       ],
