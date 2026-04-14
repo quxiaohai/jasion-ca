@@ -300,6 +300,17 @@
     "mc_patrol_community_video_y9RFFf": {
       "type": "mc_patrol-community-video",
       "blocks": {
+        "youtube_hqXJqn": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=gZ0CpK3KWwQ",
+            "video_url_mobile": "https://www.youtube.com/watch?v=gZ0CpK3KWwQ",
+            "date": "",
+            "content": "Best Electric Dirt Bike Under $2,000? | Jasion Patrol 52 Review",
+            "avatar": "shopify://shop_images/channels4_profile_1_358efc70-7bdc-41bc-a459-95da7e9c97b3.jpg",
+            "author": "Android Tech"
+          }
+        },
         "youtube_YD7Kzi": {
           "type": "youtube",
           "settings": {
@@ -520,6 +531,7 @@
         }
       },
       "block_order": [
+        "youtube_hqXJqn",
         "youtube_YD7Kzi",
         "youtube_iYJYkX",
         "youtube_9nVMYH",
