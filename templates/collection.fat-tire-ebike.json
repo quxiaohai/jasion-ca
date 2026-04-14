@@ -374,7 +374,7 @@
           "settings": {
             "title": "What is the maximum speed of JasionBike fat tire eBikes?",
             "title_tag": "h3",
-            "text": "<p>Top speed varies by model (and local regulations). On JasionBike’s product specs:</p><ul><li><strong>Hunter Pro</strong>: <strong>30+ mph</strong> </li><li><strong>X-Hunter</strong>: <strong>30+ mph</strong></li><li><strong>X-Hunter ST</strong>: <strong>30+ mph</strong> </li><li><strong>Thunder</strong>: <strong>30+ mph</strong> </li><li><strong>RetroVolt Pro</strong>: up to <strong>38 mph</strong> (with pedal assist per the listing)</li><li><strong>EB7 2.0 Road Trip</strong>: <strong>28 mph</strong> </li></ul><p>Always ride within your local eBike class/speed rules.</p>",
+            "text": "<p>Top speed varies by model (and local regulations). On JasionBike’s product specs:</p><ul><li><strong>Hunter Pro</strong>: <strong>30+ mph</strong> </li><li><strong>X-Hunter</strong>: <strong>30+ mph</strong></li><li><strong>X-Hunter ST</strong>: <strong>30+ mph</strong> </li><li><strong>Thunder Pro&Thunder Pro ST</strong>: <strong>35mph</strong> </li><li><strong>RetroVolt Pro</strong>: up to <strong>38 mph</strong> (with pedal assist per the listing)</li></ul><p>Always ride within your local eBike class/speed rules.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
