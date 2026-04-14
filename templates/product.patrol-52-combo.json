@@ -344,6 +344,17 @@
             "author": "RideModz"
           }
         },
+        "youtube_YD7Kzi": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_url_mobile": "https://www.youtube.com/watch?v=dE3vAh0BlRw&t=691s",
+            "date": "",
+            "content": "This BRAND NEW E-Bike is a SURRON With Pedals | JasionBike Patrol Review",
+            "avatar": "shopify://shop_images/channels4_profile_8ea76881-ae19-48e5-8328-53fe730bd57c.jpg",
+            "author": "Volted Adventures"
+          }
+        },
         "video_KMnAdR": {
           "type": "youtube",
           "settings": {
@@ -491,6 +502,7 @@
         "youtube_9nVMYH",
         "youtube_kJgcPT",
         "video_HnB7wB",
+        "youtube_YD7Kzi",
         "video_KMnAdR",
         "video_XwNjh8",
         "video_cMmBMj",
@@ -1771,38 +1783,6 @@
         "rounded": false
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "disabled": true,
-      "settings": {
-        "product_limit": 6,
-        "columns": 4,
-        "carousel_on_desktop": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "heading": "Recently Viewed",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
     "177607734507e5a34c": {
       "type": "apps",
       "blocks": {
@@ -1820,6 +1800,38 @@
         "judge_me_reviews_review_widget_rwNH4m"
       ],
       "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
