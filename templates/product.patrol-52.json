@@ -366,6 +366,28 @@
             "author": "RazorDriftz"
           }
         },
+        "video_QtbYAA": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "video_mobile": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "description": "",
+            "show_button1": true,
+            "button1": "Unstoppable Power",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "Instant Torque",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-2",
+            "content_color": "#ffffff",
+            "title": "First E-bike that fits me 😭",
+            "content": "<p>Unbox the Patrol. Experience the thrill of Instant Torque the moment you twist the throttle. </p>",
+            "author": ""
+          }
+        },
         "video_6R9LWh": {
           "type": "video",
           "settings": {
@@ -518,6 +540,7 @@
         "video_HnB7wB",
         "video_KMnAdR",
         "video_XwNjh8",
+        "video_QtbYAA",
         "video_6R9LWh",
         "video_UjcjFg",
         "video_nYiGtD",
@@ -1650,38 +1673,6 @@
         "compare_title": "Price\nPeak Power\nBattery Capacity\nTorque\nMax Range\nTop Speed\nLighting\nBrake\nPayload\nSuspension\nScreen\nTire\nUser Height Range\nWeight"
       }
     },
-    "1776077272567101bc": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_kfRHWQ": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "real_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_kfRHWQ"
-      ],
-      "settings": {
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false
-      }
-    },
     "faq_4qmJVA": {
       "type": "faq",
       "blocks": {
@@ -1828,6 +1819,38 @@
         "padding_bottom": 72,
         "divider": false,
         "narrow": true,
+        "rounded": false
+      }
+    },
+    "1776077272567101bc": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_kfRHWQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_kfRHWQ"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
         "rounded": false
       }
     },
