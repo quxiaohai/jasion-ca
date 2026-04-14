@@ -743,7 +743,7 @@
         "page_color": "rgba(0,0,0,0)",
         "pc_discount_url": "shopify://shop_images/autumn-sale-product-bundle-back.png",
         "discount_title": "Bundle & Save – Stack Your Discounts!",
-        "discount_text": "<p>Extra C<strong>$50</strong> OFF on C$1500, C<strong>$150</strong> OFF on C$3,000</p>",
+        "discount_text": "<p>Extra C<strong>$50</strong> OFF on C$1500!</p>",
         "pc_checkout_url": "shopify://shop_images/product-image1.png",
         "checkout_text": "Proceed to Checkout"
       }
