@@ -377,6 +377,28 @@
             "author": "RazorDriftz"
           }
         },
+        "video_AQJ9na": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "video_mobile": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "description": "",
+            "show_button1": true,
+            "button1": "Unstoppable Power",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "Adventure-Ready",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-2",
+            "content_color": "#ffffff",
+            "title": "First E-bike that fits me 😭",
+            "content": "<p>Unbox the Patrol. Experience the thrill of Instant Torque the moment you twist the throttle. </p>",
+            "author": ""
+          }
+        },
         "video_cMmBMj": {
           "type": "video",
           "settings": {
@@ -505,6 +527,7 @@
         "youtube_YD7Kzi",
         "video_KMnAdR",
         "video_XwNjh8",
+        "video_AQJ9na",
         "video_cMmBMj",
         "video_JCNPgw",
         "video_tE84R8",
@@ -524,10 +547,10 @@
         "title_mb_line": 120,
         "title_margin_bottom": 16,
         "title_color": "#ffffff",
-        "title_bold_color": "#ffe500",
+        "title_bold_color": "#ff2501",
         "title_gradient_color": "",
         "show_description": false,
-        "description": "<p>description</p>",
+        "description": "<p>First E-bike that fits me 😭</p>",
         "description_color": "#ffffff",
         "description_bold_color": "#ffffff",
         "description_pc_size": 18,
