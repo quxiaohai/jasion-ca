@@ -558,6 +558,24 @@
             "author": "Tim's Electric"
           }
         },
+        "video_Y68EAB": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=G7hBVqrTbXU&t=2s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2025/11/10",
+            "title": "The BEST CHEAP Ebike No One Talks About - Jasion X-Hunter ST Review",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_fd7ce99d-b2ce-4b16-8144-b81621b47409.jpg",
+            "author": "Hazers"
+          }
+        },
         "video_YygNUW": {
           "type": "video",
           "settings": {
@@ -598,6 +616,7 @@
       "block_order": [
         "video_aX9gyP",
         "video_i6rcG9",
+        "video_Y68EAB",
         "video_YygNUW",
         "video_aUPJmH"
       ],
