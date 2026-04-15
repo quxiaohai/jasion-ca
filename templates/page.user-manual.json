@@ -134,6 +134,7 @@
         },
         "video_WCKjmr": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=i0LcsKoZaXU&t=135s",
             "description": "",
@@ -151,6 +152,7 @@
         },
         "video_feUjWy": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=LpyrNYVNFwo&t=213s",
             "description": "",
@@ -344,6 +346,7 @@
         },
         "video_TH8hik": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=OjOLswqdTX0",
             "description": "",
@@ -361,6 +364,7 @@
         },
         "video_YXW9Vk": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=hE6QEso7IaA",
             "description": "",
@@ -451,6 +455,7 @@
         },
         "file_UD79pN": {
           "type": "file",
+          "disabled": true,
           "settings": {
             "title": "X-Hunter-User Manual-2nd Version-2025.07",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_-V1_1.pdf?v=1751622617",
@@ -467,6 +472,7 @@
         },
         "file_BpiQTJ": {
           "type": "file",
+          "disabled": true,
           "settings": {
             "title": "X-Hunter-User Manual-2023.06",
             "url": "https://cdn.shopify.com/s/files/1/0605/0044/3373/files/Jasion_X-Hunter_User_Manual-V2_us.pdf?v=1747792831",
