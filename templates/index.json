@@ -9,7 +9,7 @@
  */
 {
   "sections": {
-    "slideshow_hb_WLJBe8001": {
+    "slideshow_hb_WLJBe": {
       "type": "slideshow-hb",
       "blocks": {
         "image_xV4atH": {
@@ -1470,7 +1470,7 @@
     }
   },
   "order": [
-    "slideshow_hb_WLJBe8001",
+    "slideshow_hb_WLJBe",
     "collection_list_CbXJf3",
     "collage_grid_mx4BAF",
     "featured_collection_hb_3aApkj",
