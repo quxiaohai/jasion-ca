@@ -1,0 +1,1322 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_easter-gift-hunt .easter-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100dvh;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 10000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto, sans-serif;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .mc_easter-gift-hunt .easter-modal {
+        position: relative;
+        background: {% if ss.model_gradient != blank %}{{ ss.model_gradient }}{% else %}linear-gradient(160deg, rgba(147, 112, 219, 0.82) 0%, rgba(186, 135, 211, 0.76) 50%, rgba(155, 135, 220, 0.72) 100%){% endif %};
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        max-width: 420px;
+        width: 100%;
+        padding: 28px 24px 22px;
+        box-sizing: border-box;
+        text-align: center;
+        color: #fff;
+        overflow: visible;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 0 0.5px rgba(255, 255, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .mc_easter-gift-hunt .easter-close {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 12;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .mc_easter-gift-hunt .easter-close:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .mc_easter-gift-hunt .easter-header {
+        margin-bottom: 6px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_easter-gift-hunt .easter-big-egg {
+        margin-bottom: 6px;
+    }
+
+    .mc_easter-gift-hunt .easter-big-egg .image {
+        max-width: 70px;
+        max-height: 70px;
+        object-fit: contain;
+    }
+
+    .mc_easter-gift-hunt .easter-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 4px;
+        color: {{ ss.model_title_color }};
+        text-shadow: 0 2px 8px rgba({{ ss.model_title_color.rgb | split: ' ' | join: ',' }}, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.5px;
+    }
+
+    .mc_easter-gift-hunt .easter-subtitle {
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0 0 10px;
+        color: {{ ss.model_subtitle_color }};
+        letter-spacing: 0.3px;
+    }
+
+    .mc_easter-gift-hunt .easter-prize-display {
+        position: relative;
+        z-index: 2;
+        margin: 2px 0 14px;
+    }
+
+    .mc_easter-gift-hunt .easter-prize-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: {{ ss.model_prize_name_color }};
+        text-shadow: 0 1px 4px rgba(255, 215, 0, 0.25);
+        line-height: 1.3;
+    }
+
+    .mc_easter-gift-hunt .easter-code-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_easter-gift-hunt .easter-code {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1.5px solid {% if ss.model_code_border_color != blank %}{{ ss.model_code_border_color }}{% else %}rgba({{ ss.model_code_color.rgb | split: ' ' | join: ',' }}, 0.5){% endif %};
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: {{ ss.model_code_color }};
+        letter-spacing: 2px;
+        background: {% if ss.model_code_bg_color != blank %}{{ ss.model_code_bg_color }}{% else %}rgba({{ ss.model_code_color.rgb | split: ' ' | join: ',' }}, 0.08){% endif %};
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn {
+        padding: 10px 14px;
+        background: {% if ss.model_copy_bg_color != blank %}{{ ss.model_copy_bg_color }}{% else %}rgba({{ ss.model_copy_color.rgb | split: ' ' | join: ',' }}, 0.12){% endif %};
+        color: {{ ss.model_copy_color }};
+        border: 1px solid {% if ss.model_copy_border_color != blank %}{{ ss.model_copy_border_color }}{% else %}rgba({{ ss.model_copy_color.rgb | split: ' ' | join: ',' }}, 0.2){% endif %};
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn .svg-icon,
+    .mc_easter-gift-hunt .easter-copy-btn .svg-icon-ok {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn .svg-icon-ok {
+        display: none;
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn.active .svg-icon {
+        display: none;
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn.active .svg-icon-ok {
+        display: block;
+    }
+
+    .mc_easter-gift-hunt .easter-copy-btn:hover {
+        background: {% if ss.model_copy_bg_color != blank %}{{ ss.model_copy_bg_color }}{% else %}rgba({{ ss.model_copy_color.rgb | split: ' ' | join: ',' }}, 0.22){% endif %};
+        border-color: {% if ss.model_copy_border_color != blank %}{{ ss.model_copy_border_color }}{% else %}rgba({{ ss.model_copy_color.rgb | split: ' ' | join: ',' }}, 0.35){% endif %};
+    }
+
+    .mc_easter-gift-hunt .easter-shop-btn {
+        display: inline-block;
+        padding: 0 32px;
+        height: 48px;
+        line-height: 48px;
+        background: linear-gradient(135deg, {{ ss.model_button_bg_color }}, rgba({{ ss.model_button_bg_color.rgb | split: ' ' | join: ',' }}, 0.7));
+        color: {{ ss.model_button_color }};
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: Roboto, sans-serif;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 4px 16px rgba({{ ss.model_button_bg_color.rgb | split: ' ' | join: ',' }}, 0.3);
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_easter-gift-hunt .easter-shop-btn:hover {
+        background: linear-gradient(135deg, {{ ss.model_button_bg_hover_color }}, {{ ss.model_button_bg_color }});
+        box-shadow: 0 6px 20px rgba({{ ss.model_button_bg_color.rgb | split: ' ' | join: ',' }}, 0.4);
+        transform: translateY(-1px);
+    }
+
+    .mc_easter-gift-hunt .easter-fine-print {
+        font-size: 11px;
+        color: {{ ss.model_desc_color }};
+        margin-top: 10px;
+        line-height: 1.4;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mc_easter-gift-hunt .easter-confetti {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .mc_easter-gift-hunt .easter-confetti-piece {
+        position: absolute;
+        top: -20px;
+        opacity: 0;
+        animation: easter-fall 2.5s ease-out forwards;
+    }
+
+    @keyframes easter-fall {
+        0% {
+            opacity: 1;
+            transform: translateY(0) rotate(0deg) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(500px) rotate(720deg) scale(0.5);
+        }
+    }
+
+    .easter-hidden-gift {
+        display: block;
+        width: {% if ss.icon_type == 'egg' %} 42px{% else %} 51px{% endif %};
+        height: 51px;
+        cursor: pointer;
+        animation: easter-egg-bob 3s ease-in-out infinite;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.18));
+        transition: transform 0.2s, filter 0.2s;
+        position: absolute;
+        z-index: 50;
+        pointer-events: auto;
+        object-fit: contain;
+    }
+
+    .easter-hidden-gift:hover {
+        transform: scale(1.35);
+        filter: drop-shadow(0 3px 12px rgba(255, 179, 71, 0.6));
+    }
+
+    .easter-hidden-gift:focus {
+        outline: 2px solid #ffb347;
+        outline-offset: 2px;
+        border-radius: 50%;
+    }
+
+    @keyframes easter-egg-bob {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-4px);
+        }
+    }
+
+    .easter-gift-anchor {
+        position: relative !important;
+    }
+
+    @media (max-width: 480px) {
+        .mc_easter-gift-hunt .easter-modal {
+            padding: 24px 18px 18px;
+            max-width: 95vw;
+            border-radius: 18px;
+        }
+
+        .mc_easter-gift-hunt .easter-title {
+            font-size: 24px;
+        }
+
+        .mc_easter-gift-hunt .easter-prize-name {
+            font-size: 17px;
+        }
+
+        .mc_easter-gift-hunt .easter-code {
+            font-size: 15px;
+            padding: 8px 14px;
+        }
+
+        .mc_easter-gift-hunt .easter-big-egg svg {
+            width: 50px;
+            height: 62px;
+        }
+
+        .mc_easter-gift-hunt .easter-big-egg .image {
+            max-width: 62px;
+            max-height: 62px;
+        }
+
+        .mc_easter-gift-hunt .easter-hidden-gift {
+            width: 36px;
+            height: 44px;
+        }
+    }
+
+    {%- if ss.show_countdown != blank -%}
+    .mc_easter-gift-hunt .countdown-wrapper {
+        padding: {{ ss.padding }};
+    }
+
+    {%- assign width = 36 | times: ss.countdown_num_width -%}
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item {
+        flex-direction: column;
+        position: relative;
+        width: {{ width | plus: 16 }}px;
+    }
+
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item .num {
+        width: {{ 36 | times: ss.countdown_num_width }}px;
+        height: {{ 28 | times: ss.countdown_num_height }}px;
+        background-color: {{ ss.countdown_fill_color }};
+        border-radius: 5px;
+        color: {{ ss.countdown_num_color }};
+        opacity: 1;
+        font-size: {{ 17 | times: ss.countdown_num_size }}px;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+        line-height: 1.2;
+        border: 0 none;
+    }
+
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item .num:disabled {
+        opacity: 1;
+    }
+
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item .name {
+        font-size: {{ 12 | times: ss.countdown_name_size }}px;
+        line-height: 1;
+        font-weight: 700;
+        color: {{ ss.countdown_text_color }};
+        text-align: center;
+        padding-top: 4px;
+        transform-origin: top center;
+        transform: scale(0.7);
+    }
+
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item:last-of-type:before {
+        display: none;
+    }
+
+    .mc_easter-gift-hunt .countdown-wrapper .countdown-item:before {
+        content: ":";
+        font-size: 16px;
+        font-weight: 700;
+        color: {{ ss.countdown_dot_color }};
+        position: absolute;
+        right: -2px;
+        top: 28%;
+        transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 639px) {
+    {%- assign width = 29 | times: ss.mb_countdown_num_width -%}
+        .mc_easter-gift-hunt .countdown-wrapper {
+            padding: {{ ss.mb_padding }};
+        }
+        .mc_easter-gift-hunt .countdown-wrapper .countdown-item {
+            width: {{ width | plus: 12 }}px;
+        }
+
+        .mc_easter-gift-hunt .countdown-wrapper .countdown-item .num {
+            width: {{ 29 | times: ss.mb_countdown_num_width }}px;
+            height: {{ 24 | times: ss.mb_countdown_num_height }}px;
+            font-size: {{ 14 | times: ss.mb_countdown_num_size }}px;
+            border-radius: 4px;
+        }
+
+        .mc_easter-gift-hunt .countdown-wrapper .countdown-item .name {
+            font-size: {{ 7 | times: ss.mb_countdown_name_size }}px;
+            transform: scale(1);
+            padding-top: 0.25rem;
+        }
+
+        .mc_easter-gift-hunt .countdown-wrapper .countdown-item:before {
+            font-size: 0.875rem;
+            top: 30%;
+        }
+    }
+    {%- endif -%}
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_easter-gift-hunt section--page" id="{{ section.id }}-hunt">
+    <div node-name="overlay" class="easter-overlay" style="display:none;">
+        <div class="easter-modal">
+            <button class="easter-close" node-name="close" aria-label="Close">&times;</button>
+            <div class="easter-header">
+                <div class="easter-big-egg flex-center" node-name="bigEgg">
+                    {%- if ss.icon_type == 'custom' -%}
+                        {%- render 'global-image', image: ss.custom_gift_icon, image_size: 120, media_type: 'icon' -%}
+                    {%- endif -%}
+                </div>
+                <div class="easter-title">{{ ss.model_title }}</div>
+                <p class="easter-subtitle" node-name="subtitle">
+                    {%- if request.design_mode -%}
+                        {{ ss.model_design_mode_subtitle }}
+                    {%- else -%}
+                        {{ ss.model_subtitle }}
+                    {%- endif -%}
+                </p>
+            </div>
+            {%- if ss.show_countdown -%}
+                <count-down
+                    cycle-duration="{{ ss.duration }}"
+                    data-store="{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}"
+                    data-date="{{ ss.countdown_time }}"
+                    class="countdown-wrapper flex-center">
+                    <label class="countdown-item flex-center">
+                        <input node-name="day" disabled type="text" class="num"
+                               value="00"/>
+                        <span class="name">{{ ss.day }}</span>
+                    </label>
+                    <label class="countdown-item flex-center">
+                        <input node-name="hour" disabled type="text" class="num"
+                               value="00"/>
+                        <span class="name">{{ ss.hour }}</span>
+                    </label>
+                    <label class="countdown-item flex-center">
+                        <input node-name="minute" disabled type="text" class="num"
+                               value="00"/>
+                        <span class="name">{{ ss.minute }}</span>
+                    </label>
+                    <label class="countdown-item flex-center">
+                        <input node-name="second" disabled type="text" class="num"
+                               value="00"/>
+                        <span class="name">{{ ss.second }}</span>
+                    </label>
+                </count-down>
+            {%- endif -%}
+            <div class="easter-prize-display">
+                <div class="easter-prize-name" node-name="prizeName"></div>
+            </div>
+            <div class="easter-code-box">
+                <span class="easter-code" node-name="code"></span>
+                <button class="easter-copy-btn flex-center" node-name="copy">
+                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <rect stroke="currentColor" fill="none" stroke-width="32px" x="128" y="128" width="336"
+                              height="336" rx="57" ry="57" stroke-linejoin="round"></rect>
+                        <path
+                            stroke="currentColor"
+                            stroke-width="32px"
+                            fill="none"
+                            d="M383.5 128l.5-24a56.16 56.16 0 00-56-56H112a64.19 64.19 0 00-64 64v216a56.16 56.16 0 0056 56h24"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg
+                        class="svg-icon-ok"
+                        viewBox="0 0 1024 1024"
+                        xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+                        <path
+                            d="M512 0C229.216 0 0 229.248 0 512c0 282.784 229.216 512 512 512 282.752 0 512-229.216 512-512 0-282.752-229.248-512-512-512z m292.608 357.024l-320 384c-12.128 14.56-30.08 23.008-49.024 23.072h-0.128a63.936 63.936 0 0 1-48.992-22.88l-167.52-199.488a64 64 0 1 1 97.952-82.368l118.336 140.96 271.04-325.248a64.032 64.032 0 0 1 98.336 81.952z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+            </div>
+            <a class="easter-shop-btn" node-name="btn" href="#">{{ ss.model_button }}</a>
+            <p class="easter-fine-print">
+                {{ ss.model_desc }}
+            </p>
+            <div class="easter-confetti" node-name="confetti"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $heybike.ready(() => {
+        const node = document.getElementById('{{ section.id }}-hunt');
+        const nodeList = $heybike.getNodeList(node);
+        let eggElement = null;
+        const prizes = [
+            {%- for v in (1..5) -%}
+            {%- liquid
+                assign code = 'discount_code' | append: v
+                assign name = 'prize_name' | append: v
+                assign weight = 'prize_weight' | append: v
+            -%}
+            {%- if ss[code] != blank -%}
+            {code: '{{ ss[code] }}', title: `{{ ss[name] }}`, weight: {{ ss[weight] }}},
+            {%- endif -%}
+            {%- endfor -%}
+        ];
+
+        const getSelectPrize = () => {
+            const len = prizes.length;
+            const totalWeight = prizes.reduce((prev, cur) => cur.weight + prev, 0);
+            const r = Math.random() * totalWeight;
+            let cumulative = 0;
+            for (let k = 0; k < len; k++) {
+                cumulative += prizes[k].weight;
+                if (r <= cumulative) return prizes[k];
+            }
+            return prizes[len - 1];
+        };
+
+        const egg_colors = [
+            { // Classic Pastel (pink/plum/sky)
+                grad: ['#FFB6C1', '#DDA0DD', '#87CEEB'], stroke: '#C9A0DC',
+                waves: ['#FFD700', '#98FB98'], dots: ['#FFD700', '#98FB98', '#FFB347']
+            },
+            { // Mint Coral
+                grad: ['#98FFD6', '#5BC0BE', '#FF8A80'], stroke: '#5BC0BE',
+                waves: ['#FFAB91', '#FFFFFF'], dots: ['#FFAB91', '#B2DFDB', '#FF8A80']
+            },
+            { // Sunset
+                grad: ['#FFDAB9', '#FA8072', '#D8BFD8'], stroke: '#E8A0BF',
+                waves: ['#FFD700', '#FFB6C1'], dots: ['#FFD700', '#FF69B4', '#FFA07A']
+            },
+            { // Ocean
+                grad: ['#B0E0E6', '#9999FF', '#DCD0FF'], stroke: '#9999FF',
+                waves: ['#7FDBDA', '#FFFFFF'], dots: ['#7FDBDA', '#B0C4DE', '#9999FF']
+            },
+            { // Spring Garden
+                grad: ['#FFFACD', '#BFFF00', '#98FFD6'], stroke: '#90EE90',
+                waves: ['#77DD77', '#FFD700'], dots: ['#77DD77', '#FFFACD', '#90EE90']
+            },
+            { // Berry
+                grad: ['#DDA0DD', '#FF69B4', '#FFB6C1'], stroke: '#DB7093',
+                waves: ['#FFB6C1', '#FFF0F5'], dots: ['#FF69B4', '#DDA0DD', '#FFB347']
+            }
+        ];
+
+        const getCollectAnchors = () => {
+            const main = document.getElementById('MainContent');
+            let anchors = [];
+            let childList = [...main.childNodes].filter(item => item.nodeType === 1);
+            if (childList[0] && !childList[0].id.includes('shopify-section-template')) {
+                childList = [...childList[0].childNodes].filter(item => item.nodeType === 1);
+            }
+
+            let scrollTop = window.scrollY || 0;
+            let len = childList.length;
+            for (let i = 0; i < len; i++) {
+                const el = childList[i];
+                let rect = el.getBoundingClientRect();
+                if (rect.width < 40 || rect.height < 40) continue;
+                let style = window.getComputedStyle(el);
+                if (style.visibility === 'hidden' || style.display === 'none') continue;
+                if (parseFloat(style.opacity) < 0.1) continue;
+
+                // Skip easter-related elements
+                if (el.closest('#easter-overlay') || el.closest('.easter-hunt-section')) continue;
+
+                anchors.push({
+                    el: el,
+                    rect: rect,
+                    absTop: rect.top + scrollTop,
+                    absLeft: rect.left,
+                    width: rect.width,
+                    height: rect.height
+                });
+            }
+
+            return anchors;
+        }
+
+        const getPickInsidePosition = (w = 42, h = 51) => {
+            const giftW = w, giftH = h;
+            const zone = Math.floor(Math.random() * 8);
+            let top, left;
+
+            switch (zone) {
+                case 0:
+                    top = '-' + giftH + 'px';
+                    left = Math.floor(Math.random() * 80) + '%';
+                    break;          // above, random x
+                case 1:
+                    top = 'calc(100% + 4px)';
+                    left = Math.floor(Math.random() * 80) + '%';
+                    break;         // below, random x
+                case 2:
+                    top = Math.floor(Math.random() * 70) + '%';
+                    left = '-' + (giftW + 4) + 'px';
+                    break;    // left side, random y
+                case 3:
+                    top = Math.floor(Math.random() * 70) + '%';
+                    left = 'calc(100% + 4px)';
+                    break;         // right side, random y
+                case 4:
+                    top = '-' + giftH + 'px';
+                    left = '-' + giftW + 'px';
+                    break;                             // top-left corner
+                case 5:
+                    top = '-' + giftH + 'px';
+                    left = 'calc(100% - ' + giftW + 'px)';
+                    break;                 // top-right corner
+                case 6:
+                    top = 'calc(100% + 4px)';
+                    left = '4px';
+                    break;                                        // bottom-left corner
+                case 7:
+                    top = 'calc(100% + 4px)';
+                    left = 'calc(100% - ' + giftW + 'px)';
+                    break;                // bottom-right corner
+            }
+
+            return {top, left};
+        };
+
+        {%- if ss.icon_type == 'egg' -%}
+        const getBigEggElement = (pal) => {
+            return `<svg viewBox="0 0 80 100" width="64" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="egg_big_gradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="${pal.grad[0]}"></stop>
+                            <stop offset="50%" stop-color="${pal.grad[1]}"></stop>
+                            <stop offset="100%" stop-color="${pal.grad[2]}"></stop>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="40" cy="55" rx="34" ry="42" fill="url(#egg_big_gradient)" stroke="${pal.stroke}" stroke-width="1.5">
+                    </ellipse>
+                    <path d="M10 45 Q25 38 40 45 Q55 52 70 45" fill="none" stroke="${pal.waves[0]}" stroke-width="3" stroke-linecap="round" opacity="0.7"></path>
+                    <path d="M12 60 Q27 53 40 60 Q53 67 68 60" fill="none" stroke="${pal.waves[1]}" stroke-width="3" stroke-linecap="round" opacity="0.7"></path>
+                    <circle cx="25" cy="35" r="4" fill="${pal.dots[0]}" opacity="0.5"></circle>
+                    <circle cx="52" cy="38" r="3" fill="${pal.dots[1]}" opacity="0.5"></circle>
+                    <circle cx="38" cy="75" r="3.5" fill="${pal.dots[2]}" opacity="0.5"></circle>
+                </svg>`;
+        };
+        {%- endif -%}
+        const getEggElement = ({top, left}) => {
+            {%- if ss.icon_type == 'egg' -%}
+            const pal = egg_colors[Math.floor(Math.random() * egg_colors.length)];
+            const icon = `<svg viewBox="0 0 40 50" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="egg_small_gradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="${pal.grad[0]}"></stop>
+                            <stop offset="50%" stop-color="${pal.grad[1]}"></stop>
+                            <stop offset="100%" stop-color="${pal.grad[2]}"></stop>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="20" cy="27" rx="16" ry="21" fill="url(#egg_small_gradient)" stroke="${pal.stroke}" stroke-width="1"></ellipse>
+                    <path d="M6 22 Q13 18 20 22 Q27 26 34 22" fill="none" stroke="${pal.waves[0]}" stroke-width="1.8" stroke-linecap="round" opacity="0.6"></path>
+                    <path d="M7 32 Q14 28 20 32 Q26 36 33 32" fill="none" stroke="${pal.waves[1]}" stroke-width="1.8" stroke-linecap="round" opacity="0.6"></path>
+                    <circle cx="13" cy="17" r="2" fill="${pal.dots[0]}" opacity="0.45"></circle>
+                    <circle cx="26" cy="19" r="1.5" fill="${pal.dots[1]}" opacity="0.45"></circle>
+                    <circle cx="19" cy="39" r="1.8" fill="${pal.dots[2]}" opacity="0.45"></circle>
+                </svg>`;
+            {%- endif -%}
+            const egg = document.createElement('span');
+            {%- if ss.icon_type == 'egg' -%}
+            egg.innerHTML = icon;
+            {%- else -%}
+            egg.innerHTML = `{%- render 'global-image', image: ss.custom_gift_icon, image_size: 120, media_type: 'icon' -%}`;
+            {%- endif -%}
+            egg.setAttribute('role', 'button');
+            egg.setAttribute('aria-label', 'Easter egg');
+            egg.setAttribute('tabindex', '0');
+            egg.style.top = top;
+            egg.style.left = left;
+            egg.classList.add('easter-hidden-gift');
+            egg.title = '';
+            return {egg{% if ss.icon_type == 'egg' %}, bigEgg: getBigEggElement(pal){% endif %}};
+        };
+
+        const eggPlacementIsValid = egg => {
+            const rect = egg.getBoundingClientRect();
+            if (rect.width === 0 || rect.height === 0) return false;
+
+            // 1. Viewport bounds check (prevents off-screen on mobile edges)
+            const vw = $heybike.screenWidth;
+            const vh = $heybike.screenHeight;
+            const margin = 4;
+            if (rect.left < margin || rect.right > vw - margin) return false;
+            if (rect.bottom < 0 || rect.top > vh * 5) return false; // allow below fold but not absurdly far
+
+            // 2. Ancestor overflow clipping check
+            let parent = egg.parentElement;
+            while (parent && parent !== document.body && parent !== document.documentElement) {
+                var ps = window.getComputedStyle(parent);
+                var ov = ps.overflow + ' ' + ps.overflowX + ' ' + ps.overflowY;
+                if (ov.indexOf('hidden') !== -1 || ov.indexOf('clip') !== -1) {
+                    const pr = parent.getBoundingClientRect();
+                    // If the egg sticks out beyond this clipping ancestor, it will be cut off
+                    if (rect.left < pr.left - 2 || rect.right > pr.right + 2 ||
+                        rect.top < pr.top - 2 || rect.bottom > pr.bottom + 2) {
+                        return false;
+                    }
+                }
+                parent = parent.parentElement;
+            }
+
+            // 3. Content overlap check (existing logic)
+            const contentTags = ['p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'a', 'button',
+                'li', 'ul', 'ol', 'label', 'input', 'select', 'textarea', 'canvas',
+                'video', 'iframe', 'figure', 'figcaption', 'table', 'form', 'strong', 'em', 'svg'];
+            const origVis = egg.style.visibility;
+            egg.style.visibility = 'hidden';
+
+            const probes = [
+                [rect.left + rect.width / 2, rect.top + rect.height / 2],
+                [rect.left + 4, rect.top + 4],
+                [rect.left + rect.width - 4, rect.top + 4],
+                [rect.left + 4, rect.top + rect.height - 4],
+                [rect.left + rect.width - 4, rect.top + rect.height - 4]
+            ];
+
+            let overlaps = false;
+            for (let i = 0; i < probes.length; i++) {
+                const px = probes[i][0], py = probes[i][1];
+                if (px < 0 || py < 0 || px > vw || py > vh) continue;
+                const el = document.elementFromPoint(px, py);
+                if (!el) continue;
+                if (el === egg.parentElement) continue;
+                const tag = el.tagName.toLowerCase();
+                if (tag === 'html' || tag === 'body' || tag === 'main' || tag === 'section' || tag === 'div' ||
+                    tag === 'footer' || tag === 'header' || tag === 'article' || tag === 'nav' || tag === 'aside') continue;
+                if (contentTags.indexOf(tag) !== -1) {
+                    overlaps = true;
+                    break;
+                }
+                for (let c = 0; c < el.childNodes.length; c++) {
+                    if (el.childNodes[c].nodeType === 3 && el.childNodes[c].textContent.trim().length > 0) {
+                        overlaps = true;
+                        break;
+                    }
+                }
+                if (overlaps) break;
+            }
+
+            egg.style.visibility = origVis;
+            return !overlaps;
+        }
+
+        function placeGift() {
+            const anchors = getCollectAnchors();
+
+            if (anchors.length === 0) return false;
+
+            for (let i = anchors.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                let tmp = anchors[i];
+                anchors[i] = anchors[j];
+                anchors[j] = tmp;
+            }
+
+            for (let a = 0; a < Math.min(anchors.length, 15); a++) {
+                const anchor = anchors[a];
+
+                const anchorStyle = window.getComputedStyle(anchor.el);
+                if (anchorStyle.position === 'static') {
+                    anchor.el.classList.add('easter-gift-anchor');
+                }
+
+                for (let attempt = 0; attempt < 6; attempt++) {
+                    const pos = getPickInsidePosition();
+                    const elem = getEggElement(pos);
+                    anchor.el.appendChild(elem.egg);
+                    if (eggPlacementIsValid(elem.egg)) {
+                        eggElement = elem.egg;
+                        {%- if ss.icon_type == 'egg' -%}
+                        nodeList.bigEgg.innerHTML = elem.bigEgg;
+                        {%- endif -%}
+                        elem.egg.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            openModal();
+                        });
+                        elem.egg.addEventListener('keydown', function (e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                openModal();
+                            }
+                        });
+                        return true;
+                    }
+
+                    anchor.el.removeChild(elem.egg);
+                }
+
+                if (anchorStyle.position === 'static') {
+                    anchor.el.classList.remove('easter-gift-anchor');
+                }
+            }
+
+            // Couldn't find a clean spot on any anchor
+            return false;
+        }
+
+        let currentPrize = null;
+        let isOpen = false;
+        let scrollPos = 0;
+
+        function openModal() {
+            if (isOpen) return;
+            isOpen = true;
+            currentPrize = getSelectPrize();
+            nodeList.prizeName.textContent = currentPrize.title;
+            nodeList.code.textContent = currentPrize.code;
+            nodeList.btn.href = '/discount/' + currentPrize.code + '?redirect=' + encodeURIComponent('{{ ss.model_button_url }}');
+            scrollPos = window.scrollY;
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = '-' + scrollPos + 'px';
+            document.body.style.width = '100%';
+            nodeList.overlay.style.display = 'flex';
+            history.pushState({easter: true}, '');
+            spawnConfetti();
+        }
+
+        function closeModal() {
+            if (!isOpen) return;
+            isOpen = false;
+            nodeList.overlay.style.display = 'none';
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPos);
+            if (eggElement && eggElement.parentNode) {
+                eggElement.parentNode.removeChild(eggElement);
+                eggElement = null;
+            }
+        }
+
+        nodeList.close.addEventListener('click', closeModal);
+        nodeList.overlay.addEventListener('click', function (e) {
+            if (e.target === nodeList.overlay) closeModal();
+        });
+
+        window.addEventListener('popstate', function () {
+            if (isOpen) closeModal();
+        });
+
+        function spawnConfetti() {
+            // Clear existing confetti
+            while (nodeList.confetti.firstChild) {
+                nodeList.confetti.removeChild(nodeList.confetti.firstChild);
+            }
+            const emojis = ['\uD83E\uDD5A', '\uD83D\uDC23', '\uD83D\uDC30', '\uD83C\uDF38', '\uD83C\uDF37', '\u2728'];
+            const pieces = 24;
+            for (let i = 0; i < pieces; i++) {
+                let el = document.createElement('div');
+                el.className = 'easter-confetti-piece';
+                el.textContent = emojis[i % emojis.length];
+                el.style.left = Math.random() * 100 + '%';
+                el.style.fontSize = (14 + Math.random() * 14) + 'px';
+                el.style.animationDelay = (Math.random() * 0.8) + 's';
+                el.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+                nodeList.confetti.appendChild(el);
+            }
+        }
+
+        nodeList.copy.addEventListener('click', function () {
+            const code = nodeList.code.textContent;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(code).then(function () {
+                    nodeList.copy.classList.add('active');
+                    setTimeout(function () {
+                        nodeList.copy.classList.remove('active');
+                    }, 2000);
+                });
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = code;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                nodeList.copy.classList.add('active');
+                setTimeout(function () {
+                    nodeList.copy.classList.remove('active');
+                }, 2000);
+            }
+        });
+
+        function init() {
+            {%- if request.design_mode -%}
+            currentPrize = prizes[0];
+            openModal();
+            {%- else -%}
+            setTimeout(function () {
+                placeGift();
+            }, 600);
+            {%- endif -%}
+        }
+
+        init();
+    });
+</script>
+{% schema %}
+{
+  "name": "MC Easter Gift Hunt",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Easter Gift Hunt"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Gift Icon"
+    },
+    {
+      "type": "select",
+      "id": "icon_type",
+      "label": "Icon type",
+      "options": [
+        {
+          "label": "Egg",
+          "value": "egg"
+        },
+        {
+          "label": "Custom",
+          "value": "custom"
+        }
+      ],
+      "default": "egg"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_gift_icon",
+      "label": "Custom gift icon"
+    },
+    {
+      "type": "header",
+      "content": "Gift discount code"
+    },
+    {
+      "type": "text",
+      "id": "discount_code1",
+      "label": "Discount code #1",
+      "default": "EASTER-001"
+    },
+    {
+      "type": "text",
+      "id": "prize_name1",
+      "label": "Prize name #1",
+      "default": "Free Screen Protector Installation"
+    },
+    {
+      "type": "number",
+      "id": "prize_weight1",
+      "label": "Prize weight #1",
+      "default": 35
+    },
+    {
+      "type": "text",
+      "id": "discount_code2",
+      "label": "Discount code #2",
+      "default": "EASTER-002"
+    },
+    {
+      "type": "text",
+      "id": "prize_name2",
+      "label": "Prize name #2",
+      "default": "50% Off Extended Warranty"
+    },
+    {
+      "type": "number",
+      "id": "prize_weight2",
+      "label": "Prize weight #2",
+      "default": 25
+    },
+    {
+      "type": "text",
+      "id": "discount_code3",
+      "label": "Discount code #3",
+      "default": "EASTER-003"
+    },
+    {
+      "type": "text",
+      "id": "prize_name3",
+      "label": "Prize name #3",
+      "default": "50% Off New Battery Installation"
+    },
+    {
+      "type": "number",
+      "id": "prize_weight3",
+      "label": "Prize weight #3",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "discount_code4",
+      "label": "Discount code #4",
+      "default": "EASTER-004"
+    },
+    {
+      "type": "text",
+      "id": "prize_name4",
+      "label": "Prize name #4",
+      "default": "Free Extended Warranty"
+    },
+    {
+      "type": "number",
+      "id": "prize_weight4",
+      "label": "Prize weight #4",
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "discount_code5",
+      "label": "Discount code #5",
+      "default": "EASTER-005"
+    },
+    {
+      "type": "text",
+      "id": "prize_name5",
+      "label": "Prize name #5",
+      "default": "Free New Battery Installation"
+    },
+    {
+      "type": "number",
+      "id": "prize_weight5",
+      "label": "Prize weight #5",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Gift model"
+    },
+    {
+      "type": "color_background",
+      "id": "model_gradient",
+      "label": "Model background color"
+    },
+    {
+      "type": "text",
+      "id": "model_title",
+      "label": "Model title",
+      "default": "You Found It!"
+    },
+    {
+      "type": "color",
+      "id": "model_title_color",
+      "label": "Model title color",
+      "default": "#ffd700"
+    },
+    {
+      "type": "text",
+      "id": "model_subtitle",
+      "label": "Model subtitle",
+      "default": "Nice find! Here's your reward:"
+    },
+    {
+      "type": "text",
+      "id": "model_design_mode_subtitle",
+      "label": "Model design mode subtitle",
+      "default": "Welcome back! Here's your reward:"
+    },
+    {
+      "type": "color",
+      "id": "model_subtitle_color",
+      "label": "Model subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "model_prize_name_color",
+      "label": "Model prize name color",
+      "default": "#ffd700"
+    },
+    {
+      "type": "color",
+      "id": "model_code_color",
+      "label": "Model code color",
+      "default": "#ffd700"
+    },
+    {
+      "type": "color",
+      "id": "model_code_border_color",
+      "label": "Model code border color"
+    },
+    {
+      "type": "color",
+      "id": "model_code_bg_color",
+      "label": "Model code background color"
+    },
+    {
+      "type": "color",
+      "id": "model_copy_color",
+      "label": "Model copy color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "model_copy_border_color",
+      "label": "Model copy border color"
+    },
+    {
+      "type": "color",
+      "id": "model_copy_bg_color",
+      "label": "Model copy background color"
+    },
+    {
+      "type": "textarea",
+      "id": "model_desc",
+      "label": "Model desc",
+      "default": "Valid until 6 April 2026 • One use per customer. Must be used with a device purchase. • Cannot be combined with other offers."
+    },
+    {
+      "type": "color",
+      "id": "model_desc_color",
+      "label": "Model desc color",
+      "default": "#c1b4d3"
+    },
+    {
+      "type": "text",
+      "id": "model_button",
+      "label": "Model button",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "model_button_url",
+      "label": "Model button url"
+    },
+    {
+      "type": "color",
+      "id": "model_button_color",
+      "label": "Model button color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "model_button_bg_color",
+      "label": "Model button background color",
+      "default": "#77cd28"
+    },
+    {
+      "type": "color",
+      "id": "model_button_bg_hover_color",
+      "label": "Model button background hover color",
+      "default": "#85d838"
+    },
+    {
+      "type": "header",
+      "content": "Countdown"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_countdown",
+      "default": false,
+      "label": "Show countdown"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "default": "0px 0px 0px 0px",
+      "label": "Desktop padding"
+    },
+    {
+      "type": "text",
+      "id": "mb_padding",
+      "default": "0px 0px 0px 0px",
+      "label": "Mobile padding"
+    },
+    {
+      "type": "range",
+      "id": "countdown_num_width",
+      "label": "Desktop countdown num width scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "countdown_num_height",
+      "label": "Desktop countdown num height scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "countdown_num_size",
+      "label": "Desktop countdown num size scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "countdown_name_size",
+      "label": "Desktop countdown name size scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "mb_countdown_num_width",
+      "label": "Mobile countdown num width scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "mb_countdown_num_height",
+      "label": "Mobile countdown num height scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "mb_countdown_num_size",
+      "label": "Mobile countdown num size scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "mb_countdown_name_size",
+      "label": "Mobile countdown name size scale",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "m",
+      "default": 1
+    },
+    {
+      "type": "text",
+      "id": "countdown_time",
+      "label": "Countdown date",
+      "default": "2026-04-28 12:01:01",
+      "info": "Format: yyyy-MM-dd HH:mm:ss"
+    },
+    {
+      "type": "range",
+      "id": "duration",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "Day",
+      "label": "Duration days",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "day",
+      "label": "Day",
+      "default": "DAYS"
+    },
+    {
+      "type": "text",
+      "id": "hour",
+      "label": "Hour",
+      "default": "HOURS"
+    },
+    {
+      "type": "text",
+      "id": "minute",
+      "label": "Minute",
+      "default": "MINS"
+    },
+    {
+      "type": "text",
+      "id": "second",
+      "label": "Second",
+      "default": "SECS"
+    },
+    {
+      "type": "header",
+      "content": "Countdown Color"
+    },
+    {
+      "label": "Countdown fill color",
+      "type": "color",
+      "id": "countdown_fill_color",
+      "default": "#ffd700"
+    },
+    {
+      "label": "countdown num color",
+      "type": "color",
+      "id": "countdown_num_color",
+      "default": "#2f2900"
+    },
+    {
+      "label": "Countdown text color",
+      "type": "color",
+      "id": "countdown_text_color",
+      "default": "#ffffff"
+    },
+    {
+      "label": "Countdown dot color",
+      "type": "color",
+      "id": "countdown_dot_color",
+      "default": "#ffd700"
+    }
+  ]
+}
+{% endschema %}

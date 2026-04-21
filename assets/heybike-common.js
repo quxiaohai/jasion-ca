@@ -108,7 +108,7 @@ class HeybikeCommon {
                 node.addEventListener("scroll", info.listener);
             } else {
                 info.listener = ev => {
-                    ev && info.fns.forEach(fn => {
+                    info.fns.forEach(fn => {
                         fn && fn(ev);
                     });
                 }
@@ -129,6 +129,10 @@ class HeybikeCommon {
         if ((this._domLoaded && event === "DOMContentLoaded") || (this._loaded && event === "load")) {
             fn && fn();
         }
+    }
+
+    ready(cb) {
+        this.on("DOMContentLoaded", cb);
     }
 
     trigger(event, node, target) {
