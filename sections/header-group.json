@@ -43,8 +43,8 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🌏Get the Thunder Pro for just C$1,809 with code <strong>EARTHDAY</strong>!",
-            "link": "shopify://products/jasion-x-hunter",
+            "text": "🎁Get the Thunder Pro for just C$1,809 with code <strong>MOM50</strong>!",
+            "link": "shopify://products/thunder-pro",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",
@@ -79,7 +79,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: EARTHDAY</strong>",
+            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: MOM50</strong>",
             "link": "shopify://products/retrovolt-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
