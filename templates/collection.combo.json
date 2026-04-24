@@ -222,6 +222,7 @@
         },
         "page_navigation_E69Wj4": {
           "type": "page_navigation",
+          "disabled": true,
           "settings": {
             "button_label": "Cruiser Ebike",
             "button_url": "shopify://collections/cruiser-ebike"
@@ -243,6 +244,7 @@
         },
         "page_navigation_3RhgMw": {
           "type": "page_navigation",
+          "disabled": true,
           "settings": {
             "button_label": "Outlet",
             "button_url": "shopify://collections/outlet"
