@@ -74,10 +74,9 @@
         },
         "image_UxKiWT": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/4RetroVolt_Pro.jpg",
-            "image_mobile": "shopify://shop_images/4RetroVolt_Pro.png",
+            "image": "shopify://shop_images/lQDPJwjcILVt82nNArzNB4CwJ3GhekhXvXYJwWdgKlBbAQ_1920_700.jpg",
+            "image_mobile": "shopify://shop_images/lQLPJxU6FC3kg2nNBkDNBLCw1A1CY6fdFQAJwWdgKlBbAA_1200_1600.png",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
