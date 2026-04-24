@@ -115,7 +115,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "🌏Earth Day Sale",
+            "title": "Mother‘s Day Special",
             "position": 6
           }
         },
@@ -235,7 +235,7 @@
       "settings": {
         "page_color": "",
         "show_title": true,
-        "title": "EARTH DAY SALES END IN",
+        "title": "MOTHER'S DAY SPECIAL ENDS IN",
         "title_pc_size": 20,
         "title_mb_size": 16,
         "title_margin_bottom": 16,
