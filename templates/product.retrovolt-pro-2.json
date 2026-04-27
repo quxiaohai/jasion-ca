@@ -28,7 +28,7 @@
         "inventory_pfgny7": {
           "type": "inventory",
           "settings": {
-            "custom_text": "In stock, ready to ship",
+            "custom_text": "⏳ Pre-Order (Venom Green): Ships within 15 business days",
             "inventory_threshold": 12,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -174,7 +174,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🌏Go Green & Save Big!<br>\n⚡ <STRONG>C$50 Off C$1500+ with code: EARTHDAY</STRONG><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Save the Earth, Save Your Cash. Shop Earth Day Deals!<br>"
+            "liquid": "💐Share the Journey this Mother's Day!<br>\n🔥<strong>Save C$2374 Instantly </strong><br>\n⚠️<span style=\"color: #e65100;\"><strong>Pre-sale Notice:</strong> The <strong>Venom Green</strong> color ships within 15 business days.</span><br>\n🎁 Hurry! Catch This Mother's Day Deal Before It’s Gone!<br>"
           }
         },
         "text_wt9CQN": {
