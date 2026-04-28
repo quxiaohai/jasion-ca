@@ -28,7 +28,7 @@
         "inventory_mywmYW": {
           "type": "inventory",
           "settings": {
-            "custom_text": "Pre-Order, ship within 15 business days",
+            "custom_text": "Pre-Order, ship within 7 business days",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
