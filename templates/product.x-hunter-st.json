@@ -28,7 +28,7 @@
         "inventory_mywmYW": {
           "type": "inventory",
           "settings": {
-            "custom_text": "White: In Stock | Blue: Pre-Order",
+            "custom_text": "Pre-Order, ship within 15 business days",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -176,7 +176,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "👑Mother's Day Special<br>\n✅Free Shipping + 2 Years Warranty<br>\n✅14-Day Easy Returns<br>\n<span style=\"color: #FF6600;\"><strong>⚠️ Shipping Notice: White is in stock and ready to ship. The Blue is on pre-order and will ship within 15 business days.</strong></span><br>\n🎁 Hurry! Give Her The Best Gift Before This Deal Ends!<br>"
+            "liquid": "👑Mother's Day Special<br>\n✅Free Shipping + 2 Years Warranty<br>\n✅14-Day Easy Returns<br>\n<span style=\"color: #FF6600;\"><strong>\n🎁 Hurry! Give Her The Best Gift Before This Deal Ends!<br>"
           }
         },
         "text_wt9CQN": {
