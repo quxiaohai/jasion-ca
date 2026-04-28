@@ -134,7 +134,6 @@
         },
         "video_WCKjmr": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=i0LcsKoZaXU&t=135s",
             "description": "",
@@ -152,7 +151,6 @@
         },
         "video_feUjWy": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=LpyrNYVNFwo&t=213s",
             "description": "",
@@ -346,7 +344,6 @@
         },
         "video_TH8hik": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=OjOLswqdTX0",
             "description": "",
@@ -364,7 +361,6 @@
         },
         "video_YXW9Vk": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video_url": "https://www.youtube.com/watch?v=hE6QEso7IaA",
             "description": "",
