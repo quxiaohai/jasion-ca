@@ -42,7 +42,7 @@
         "inventory_FgCihQ": {
           "type": "inventory",
           "settings": {
-            "custom_text": "⏳ Pre-Order (Venom Green): Ships within 15 business days",
+            "custom_text": "⏳ Pre-Order: Ships within 15 business days",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -187,7 +187,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "💐Mother's Day Special<br>\n✅14-Day Easy Returns<br>\n✅Free Shipping + 2 Years Warranty<br>\n⚠️ <span style=\"color: #e65100;\"><strong>Pre-sale Notice:</strong> <strong>Venom Green</strong> ships within 15 business days.</span><br>\n🎁 Hurry! Catch This Mother's Day Deal Before It’s Gone!<br>"
+            "liquid": "💐Mother's Day Special<br>\n✅14-Day Easy Returns<br>\n✅Free Shipping + 2 Years Warranty<br>\n⚠️ <span style=\"color: #e65100;\"><strong>Pre-sale Notice:</strong> <strong>Ships within 15 business days.</span><br>\n🎁 Hurry! Catch This Mother's Day Deal Before It’s Gone!<br>"
           }
         },
         "text_wt9CQN": {
