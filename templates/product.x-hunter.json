@@ -28,7 +28,7 @@
         "inventory_mywmYW": {
           "type": "inventory",
           "settings": {
-            "custom_text": "",
+            "custom_text": "Pre-order, ship within 15 business days",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -178,7 +178,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🍃Early Spring Sale\n<br>\n⚡Lowest Price EVER on X-Hunter<br>\n⚡ <strong>C$50 Off C$1500+ with code: SPRINGRIDE</strong><br>\n🎁 Catch This Spring Deal Before It’s Gone!"
+            "liquid": "👑Mother's Day Special<br>\n✅Free Shipping + 2 Years Warranty<br>\n✅14-Day Easy Returns<br>\n<span style=\"color: #FF6600;\"><strong>📦 Inventory Update: Pre- order, ships within 15 business days.</strong></span><br>\n🎁 Hurry! Give Her The Best Gift Before This Deal Ends!<br>"
           }
         },
         "text_wt9CQN": {
