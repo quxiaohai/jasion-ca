@@ -155,7 +155,7 @@
         "liquid_epRzrJ": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 <strong>Early Bird: C$2,099</strong> | Apr 22 – May 8<br>\n🎁 Exclusive Patrol Gifts Included<br>\n🎥 Buy & Win: <strong>Insta360 GO 3S X1</strong> | Apr 22 – May 8<br>\n💰 Order & Win a 100% Refund | Apr 22 – May 8<br>\n⏳ <strong>Price Goes Up After May 8</strong>"
+            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 <strong>Early Bird: C$2,099</strong> | May 8 – May 19<br>\n🎁 Exclusive Patrol Gifts Included<br>\n💰 Order & Win a 100% Refund | May 8 – May 19<br>\n⏳ <strong>Price Goes Up After May 19</strong>"
           }
         },
         "anchor_8VjwmL": {
@@ -737,8 +737,8 @@
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
             "title": "<p>Early Bird<br/><strong>Price C$2,099&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Apr 10 - Apr 22</p>",
-            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End Apr 22.</p>"
+            "date": "<p>Date: May 8 - May 19 </p>",
+            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End May 19.</p>"
           }
         },
         "card_2": {
@@ -761,7 +761,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: Apr 10 - Apr 22</p>",
+            "date": "<p>Date: May 8 - May 19 </p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         },
@@ -773,7 +773,7 @@
             "mb_gift_image": "shopify://shop_images/3_e20766b2-c13c-4070-a8a7-70070ee32559.png",
             "title": "<p>BUY & WIN<br/><strong>Insta360 GO 3S X1</strong></p>",
             "show_date": true,
-            "date": "<p>Date: Apr 10 – Apr 22</p>",
+            "date": "<p>Date: May 8 - May 19</p>",
             "desc": "<p>Every Patrol purchase automatically enters you into our exclusive giveaway for a chance to win an <strong>Insta 360 camera</strong>.<br/><br/><strong>One lucky rider</strong> will take it home — no extra steps required.</p>"
           }
         }
