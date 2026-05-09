@@ -11,9 +11,11 @@
     .mc_patrol-gift-card .card-items {
         gap: 0 35px;
         padding: 0 31px;
+        align-items: stretch;
     }
     .mc_patrol-gift-card .card-items .image {
-        object-fit: contain;
+        object-fit: fill;
+        height: 100%;
     }
     .mc_patrol-gift-card .info {
         text-align: center;
@@ -42,14 +44,14 @@
         right: 19px;
     }
     .mc_patrol-gift-card .info .name {
-        font-size: 50px;
+        font-size: 22px;
         color: {{ ss.card_title_color }};
     }
     .mc_patrol-gift-card .info .name strong {
         color: {{ ss.card_title_bold_color }};
     }
     .mc_patrol-gift-card .info .name sub {
-        font-size: 23px;
+        font-size: 20px;
         padding-left: 12px;
         transform: translateY(-6px);
         display: inline-block;
@@ -57,11 +59,11 @@
     }
     .mc_patrol-gift-card .info .desc {
         padding-top: 9px;
-        font-size: 21px;
+        font-size: 16px;
         color: {{ ss.card_desc_color }};
     }
     .mc_patrol-gift-card .item-1 {
-        width: 66.69%;
+        flex: 2;
     }
     .mc_patrol-gift-card .item-1 .info {
         top: 50%;
@@ -71,22 +73,20 @@
         align-items: flex-start;
         text-align: left;
     }
+    .mc_patrol-gift-card .item-1 .name {
+        font-size: 32px;
+        padding-top: 8px;
+    }
     .mc_patrol-gift-card .item-1 .desc {
-        font-size: 29px;
+        font-size: 18px;
     }
     .mc_patrol-gift-card .item-2,
     .mc_patrol-gift-card .item-3 {
-        position: absolute;
-        bottom: 0;
-        left: 31px;
-        width: 30%;
+       flex: 1;
     }
     .mc_patrol-gift-card .item-2 .info,
     .mc_patrol-gift-card .item-3 .info {
-        width: 80%;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 14px;
     }
     .mc_patrol-gift-card .item-3 .info {
         align-items: center;
@@ -99,39 +99,11 @@
         font-size: 29px;
         text-align: center;
     }
-    .mc_patrol-gift-card .item-2 .info,
-    .mc_patrol-gift-card .item-4 .info {
+    .mc_patrol-gift-card .item-2 .info {
         align-items: center;
     }
-    .mc_patrol-gift-card .item-2 .name,
-    .mc_patrol-gift-card .item-4 .name {
+    .mc_patrol-gift-card .item-2 .name {
         padding-top: 4px;
-    }
-    .mc_patrol-gift-card .item-3 {
-        left: 35.8%;
-    }
-    .mc_patrol-gift-card .item-4 {
-        flex: 1;
-    }
-    .mc_patrol-gift-card .item-4 .date-tag {
-        text-align: right;
-        padding: 7px 16px 7px 21px;
-        background: linear-gradient(45deg, transparent 12px, #ff2501 12px);
-    }
-    .mc_patrol-gift-card .item-4 .name {
-        text-align: center;
-        line-height: 1;
-        width: 100%;
-        padding-top: 9px;
-    }
-    .mc_patrol-gift-card .item-4 .desc {
-        padding-top: 6px;
-    }
-    .mc_patrol-gift-card .item-4 .info {
-        width: 82%;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
     }
     @media screen and (max-width: 1540px) {
         .mc_patrol-gift-card {
@@ -156,47 +128,30 @@
             right: 16px;
         }
         .mc_patrol-gift-card .info .name {
-            font-size: 3.2467532468vw;
+            font-size: 1.88vw;
         }
         .mc_patrol-gift-card .info .name sub {
-            font-size: 1.4935064935vw;
+            font-size: 1.2vw;
             padding-left: 0.7792207792vw;
             transform: translateY(-0.3896103896vw);
         }
         .mc_patrol-gift-card .info .desc {
-            padding-top: 0.5844155844vw;
-            font-size: 1.3636363636vw;
+            padding: 0.5844155844vw 5px 0;
+            font-size: 1vw;
         }
         .mc_patrol-gift-card .item-1 .desc {
-            font-size: 1.8831168831vw;
-        }
-        .mc_patrol-gift-card .item-2 {
-            left: 2.012987013vw;
+            font-size: 1.4vw;
         }
         .mc_patrol-gift-card .item-2 .info,
         .mc_patrol-gift-card .item-3 .info {
-            bottom: 2.5974025974vw;
+            bottom: 1.1vw;
         }
         .mc_patrol-gift-card .item-2 .name,
         .mc_patrol-gift-card .item-3 .name {
             font-size: 1.8831168831vw;
         }
-        .mc_patrol-gift-card .item-2 .name,
-        .mc_patrol-gift-card .item-4 .name {
+        .mc_patrol-gift-card .item-2 .name {
             padding-top: 0.2597402597vw;
-        }
-        .mc_patrol-gift-card .item-4 .date-tag {
-            padding: 6px 14px 6px 18px;
-            background: linear-gradient(45deg, transparent 11px, #ff2501 11px);
-        }
-        .mc_patrol-gift-card .item-4 .name {
-            padding-top: 0.5844155844vw;
-        }
-        .mc_patrol-gift-card .item-4 .desc {
-            padding-top: 0.3896103896vw;
-        }
-        .mc_patrol-gift-card .item-4 .info {
-            bottom: 2.5974025974vw;
         }
     }
     @media screen and (max-width: 1023px) {
@@ -211,8 +166,8 @@
             margin-bottom: 0.875rem;
         }
         .mc_patrol-gift-card .card-items {
-            gap: 0.625rem 0;
-            padding: 0 2.5625rem;
+            gap: 0.625rem;
+            padding: 0 2rem;
             justify-content: space-between;
             flex-wrap: wrap;
         }
@@ -246,6 +201,7 @@
         }
         .mc_patrol-gift-card .item-1 {
             width: 100%;
+            flex: auto;
         }
         .mc_patrol-gift-card .item-1 .info {
             right: 5%;
@@ -256,8 +212,7 @@
         }
         .mc_patrol-gift-card .item-2,
         .mc_patrol-gift-card .item-3 {
-            position: relative;
-            left: auto;
+            flex: auto;
             width: calc(50% - 5px);
         }
         .mc_patrol-gift-card .item-2 .info,
@@ -268,43 +223,6 @@
         }
         .mc_patrol-gift-card .item-3 {
             left: auto;
-        }
-        .mc_patrol-gift-card .item-4 {
-            flex: none;
-            width: 100%;
-        }
-        .mc_patrol-gift-card .item-4 .date-tag {
-            padding: 0.1875rem 0.46875rem 0.1875rem 0.375rem;
-            margin: 0 0 0.25rem 0;
-            background: linear-gradient(315deg, transparent 5px, #ff2501 5px);
-        }
-        .mc_patrol-gift-card .item-4 .date-tag br {
-            display: none;
-        }
-        .mc_patrol-gift-card .item-4 .date-tag:before {
-            left: 7px;
-            right: auto;
-        }
-        .mc_patrol-gift-card .item-4 .date-tag:after {
-            left: 10px;
-        }
-        .mc_patrol-gift-card .item-4 .name {
-            width: 100%;
-            text-align: left;
-        }
-        .mc_patrol-gift-card .item-4 .name br {
-            display: none;
-        }
-        .mc_patrol-gift-card .item-4 .desc {
-            padding-top: 6px;
-        }
-        .mc_patrol-gift-card .item-4 .info {
-            width: 50%;
-            bottom: 48%;
-            left: 46%;
-            transform: translate(0, 50%);
-            align-items: flex-start;
-            text-align: left;
         }
     }
     @media screen and (max-width: 374px) {
@@ -597,7 +515,7 @@
     {
       "type": "card",
       "name": "Gift card",
-      "limit": 4,
+      "limit": 3,
       "settings": [
         {
           "type": "select",
