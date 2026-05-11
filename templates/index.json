@@ -988,6 +988,42 @@
     "multicolumn_slide_hb_9xwaqy": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_RXnxwF": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=ob7XNgE1GSE&t=13s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2026/3/20",
+            "title": "Jasion Patrol Review | 40 MPH Electric Dirt Bike Beast?",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_51.jpg",
+            "author": "The Oh Family"
+          }
+        },
+        "video_DbqL9Y": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=GfV9s65f1Ns&t=457s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2026/3/16",
+            "title": "Jasion Patrol Review: 52V Power in a Dirt Bike Style eBike!",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_50.jpg",
+            "author": "RunPlayBack"
+          }
+        },
         "video_A9HYyG": {
           "type": "video",
           "settings": {
@@ -1135,6 +1171,8 @@
         }
       },
       "block_order": [
+        "video_RXnxwF",
+        "video_DbqL9Y",
         "video_A9HYyG",
         "video_TdPpAp",
         "video_cG883Q",
