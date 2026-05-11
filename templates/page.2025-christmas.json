@@ -21,8 +21,8 @@
         "image_VeqLKj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3_cd55ff83-6cca-4f3c-b8b9-3f02d1988795.jpg",
-            "image_mobile": "shopify://shop_images/5hunter_st_c1922118-2ded-40d8-929a-271390032ae6.jpg",
+            "image": "shopify://shop_images/1Thunder_Pro_ST_PC.jpg",
+            "image_mobile": "shopify://shop_images/1Thunder_Pro_ST_527d225d-aa6a-4649-a096-c7368ee14715.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -115,7 +115,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "Mother‘s Day Special",
+            "title": "Victoria‘s Day Sale",
             "position": 6
           }
         },
@@ -235,7 +235,7 @@
       "settings": {
         "page_color": "",
         "show_title": true,
-        "title": "MOTHER'S DAY SPECIAL ENDS IN",
+        "title": "VICTORIA DAY SALE ENDS IN",
         "title_pc_size": 20,
         "title_mb_size": 16,
         "title_margin_bottom": 16,

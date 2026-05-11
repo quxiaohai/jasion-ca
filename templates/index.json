@@ -15,8 +15,8 @@
         "image_36t3mW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lQDPJwaN3aHQlWHNArzNB4CwYskwgb63VYAJxiAQZkNFAQ_1920_700.jpg",
-            "image_mobile": "shopify://shop_images/lQDPJwviG5j6VWHNBkDNBLCwHLMtWYzL76kJxiAQZkNFAA_1200_1600.jpg",
+            "image": "shopify://shop_images/1Thunder_Pro_PC.jpg",
+            "image_mobile": "shopify://shop_images/1Thunder_Pro_ST.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -24,7 +24,7 @@
             "subh_before": true,
             "text_size": "subtext-md",
             "button_label": "",
-            "button_link": "shopify://products/hunter-pro",
+            "button_link": "shopify://products/thunder-pro-st",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false,
@@ -75,8 +75,8 @@
         "image_gimiFf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/5hunter_st.jpg",
-            "image_mobile": "shopify://shop_images/5hunter_st_c1922118-2ded-40d8-929a-271390032ae6.jpg",
+            "image": "shopify://shop_images/2hunter_pro_076ca106-b8ff-4b62-aae4-e86712f5591c.jpg",
+            "image_mobile": "shopify://shop_images/2hunter_pro_f5170ccc-d72f-4545-941a-abb216cc4a8e.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -135,8 +135,8 @@
         "image_F7kDtH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2Thunder_Pro_ST.jpg",
-            "image_mobile": "shopify://shop_images/2Thunder_Pro_ST_9291ed4a-9b7b-4eda-9b02-c9e930440511.jpg",
+            "image": "shopify://shop_images/3patrol.jpg",
+            "image_mobile": "shopify://shop_images/3patrol_14974cf1-c02b-4e7a-a7d9-399afb5a2290.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -194,6 +194,7 @@
         },
         "image_xV4atH": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/2Patrol.jpg",
             "image_mobile": "shopify://shop_images/2Patrol_M.jpg",
@@ -254,6 +255,7 @@
         },
         "image_UxKiWT": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/lQDPJwjcILVt82nNArzNB4CwJ3GhekhXvXYJwWdgKlBbAQ_1920_700.jpg",
             "image_mobile": "shopify://shop_images/lQLPJxU6FC3kg2nNBkDNBLCw1A1CY6fdFQAJwWdgKlBbAA_1200_1600.png",
