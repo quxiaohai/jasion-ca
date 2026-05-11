@@ -1214,9 +1214,32 @@
     "mc_kol_testimonials_Ba34yH": {
       "type": "mc_kol-testimonials",
       "blocks": {
+        "video_8xm3yh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "video_mobile": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_8263.jpg",
+            "mobile_image": "shopify://shop_images/IMG_8263.jpg",
+            "show_button1": true,
+            "button1": "Off-Road Beast",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#000000",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "Extreme Power",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#000000",
+            "button2_url": "shopify://products/patrol-52",
+            "content_color": "#000000",
+            "title": "First E-bike that fits me 😭",
+            "content": "<p>Powerful 4000W motor ⚡️<br/>52V battery with up to 50 miles of range<br/>Top speed 40 mph<br/>Adjustable suspension<br/>Horn + brake light for added safety</p>",
+            "author": "SsRides"
+          }
+        },
         "video_7xqwrk": {
           "type": "video",
-          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/Thunder pro 20260309.mp4",
             "video_mobile": "shopify://files/videos/Thunder pro 20260309.mp4",
@@ -1236,30 +1259,6 @@
             "content_color": "#000000",
             "title": "35 mph is crazy！",
             "content": "<p>Whether you're chasing sunsets or exploring new paths, Thunder Pro makes every ride effortless and unforgettable.<br/><br/></p>",
-            "author": "selenayazs"
-          }
-        },
-        "video_AN4NfQ": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Thunder pro 20260309.mov",
-            "video_mobile": "shopify://files/videos/Thunder pro 20260309.mov",
-            "description": "",
-            "desktop_image": "shopify://shop_images/IMG_1395.jpg",
-            "mobile_image": "shopify://shop_images/IMG_1395.jpg",
-            "show_button1": true,
-            "button1": "Outdoor Riding",
-            "button1_color": "#ffffff",
-            "button1_bg_color": "#000000",
-            "button1_url": "shopify://products/thunder-pro-st",
-            "show_button2": true,
-            "button2": "Hiking Trails",
-            "button2_color": "#ffffff",
-            "button2_bg_color": "#000000",
-            "button2_url": "shopify://products/thunder-pro-thunder-pro-st",
-            "content_color": "#000000",
-            "title": "Meet my next adventure buddy!",
-            "content": "<p>Whether you're chasing sunsets or exploring new paths, Thunder Pro makes every ride effortless and unforgettable.</p>",
             "author": "selenayazs"
           }
         },
@@ -1334,8 +1333,8 @@
         }
       },
       "block_order": [
+        "video_8xm3yh",
         "video_7xqwrk",
-        "video_AN4NfQ",
         "video_WYVHzn",
         "video_fcMMFA",
         "video_d8PLtx"
