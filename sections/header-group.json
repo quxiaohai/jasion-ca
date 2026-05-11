@@ -27,11 +27,23 @@
             "highlighted_scribble": "circle"
           }
         },
+        "announcement_7x9KUU": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "text": "🍁 Happy Victoria Day! Get an extra C$50 OFF on orders C$1500+ with code: MAYLONG50",
+            "link": "",
+            "hide_icon_mobile": true,
+            "text_mobile": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
         "announcement_8UQHDB": {
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "⏰ <strong>Limited Time:</strong> Get C$100 OFF the new Patrol. Claim your Early Bird offer today!",
+            "text": "⏰ Early Bird Deal: Get<strong> C$100 OFF</strong> the new Patrol. Spark your summer adventure today!",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -43,7 +55,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🎁Get the Thunder Pro for just C$1,809 with code <strong>MOM50</strong>!",
+            "text": "🎁Get the Thunder Pro for just C$1,809 with code <strong>MAYLONG50</strong>!",
             "link": "shopify://products/thunder-pro",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -63,23 +75,11 @@
             "highlighted_scribble": "circle"
           }
         },
-        "announcement_7x9KUU": {
-          "type": "announcement",
-          "settings": {
-            "icon": "none",
-            "text": "Welcome to our store",
-            "link": "",
-            "hide_icon_mobile": true,
-            "text_mobile": "",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
         "announcement_n8hBLb": {
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: MOM50</strong>",
+            "text": "RetroVolt Pro: -C$2374 OFF!😱 <strong>C$50 Off C$1500+ with code: MAYLONG50</strong>",
             "link": "shopify://products/retrovolt-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -102,10 +102,10 @@
       },
       "block_order": [
         "announcement_Lag3eQ",
+        "announcement_7x9KUU",
         "announcement_8UQHDB",
         "announcement-2",
         "announcement-1",
-        "announcement_7x9KUU",
         "announcement_n8hBLb",
         "announcement_MiyK6E"
       ],
