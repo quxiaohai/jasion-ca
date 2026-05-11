@@ -380,11 +380,11 @@
         "question_YhYd8Q",
         "question_zaYRat"
       ],
-      "disabled": true,
       "name": "t:sections.faq.presets.name",
       "settings": {
         "style": "with-border",
         "heading": "FAQs",
+        "font_name": "",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
         "heading_tag": "h2",
