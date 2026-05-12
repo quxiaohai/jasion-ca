@@ -28,7 +28,7 @@
         "inventory_qRGUEX": {
           "type": "inventory",
           "settings": {
-            "custom_text": "⏳ Pre-Order: Ships within 10 business days",
+            "custom_text": "In stock, ready to ship",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
