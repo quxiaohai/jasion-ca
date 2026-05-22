@@ -1,0 +1,918 @@
+{% assign ss = section.settings %}
+<style>
+    .mc_th-product-card {
+        padding: 40px 0;
+        background-color: #160a03;
+    }
+    .mc_th-product-card .card-content {
+        max-width: 1384px;
+        padding: 0 48px;
+        margin: 0 auto;
+        gap: 32px;
+    }
+    .mc_th-product-card .product-wrapper {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 16px;
+        border: 4px solid #ffd200;
+        aspect-ratio: 2.1658;
+    }
+    .mc_th-product-card .product-wrapper .product-cover,
+    .mc_th-product-card .product-wrapper .product-info {
+        width: 50%;
+    }
+    .mc_th-product-card .product-wrapper .product-cover {
+        height: 100%;
+    }
+    .mc_th-product-card .product-wrapper .product-cover .final-tag {
+        top: 39px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+    .mc_th-product-card .product-wrapper .product-cover .final-tag .image {
+        width: 168px;
+        height: 190px;
+        object-fit: contain;
+    }
+    .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text {
+        top: 82px;
+        font-size: 17px;
+        color: #ffebd9;
+    }
+    .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text strong {
+        font-size: 34px;
+        display: block;
+        font-weight: 900;
+    }
+    .mc_th-product-card .product-wrapper .item-icons {
+        gap: 60px;
+        padding-top: 13px;
+    }
+    .mc_th-product-card .product-wrapper .item-icons .item-icon .image {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+    .mc_th-product-card .product-wrapper .item-icons .item-icon .text {
+        padding-top: 8px;
+        font-size: 14px;
+        color: #000000;
+    }
+    .mc_th-product-card .product-wrapper .product-info {
+        padding: 0 27px;
+    }
+    .mc_th-product-card .product-wrapper .product-info .product-name {
+        font-size: 45px;
+        color: #000000;
+    }
+    .mc_th-product-card .product-wrapper .product-info .intro {
+        font-size: 24px;
+        color: #666666;
+        padding-top: 10px;
+    }
+    .mc_th-product-card .product-wrapper .product-info .price-box {
+        padding-top: 42px;
+    }
+    .mc_th-product-card .product-wrapper .product-info .price-box .price {
+        font-size: 48px;
+        color: #db1109;
+    }
+    .mc_th-product-card .product-wrapper .product-info .price-box .original-price {
+        font-size: 25px;
+        color: #6c6c6c;
+        text-decoration: line-through;
+        padding-left: 14px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box {
+        padding-top: 12px;
+        gap: 14px 0;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .plus {
+        font-size: 32px;
+        color: #ff981d;
+        padding: 0 10px;
+        transform: translateY(-2px);
+    }
+    .mc_th-product-card .product-wrapper .discount-box .discount {
+        width: 229px;
+        height: 61px;
+        border-radius: 10px;
+        background-color: #ff981d;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .discount.dark {
+        background-color: #000000;
+        width: 289px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .discount strong {
+        font-size: 32px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .discount:before, .mc_th-product-card .product-wrapper .discount-box .discount:after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    .mc_th-product-card .product-wrapper .discount-box .discount:after {
+        left: auto;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info {
+        width: 229px;
+        height: 67px;
+        border-radius: 2px;
+        background-color: #f9f7f6;
+        color: #ff981d;
+        font-size: 18px;
+        gap: 18px;
+        padding-left: 21px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text1 {
+        font-size: 16px;
+        color: #000000;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text2 {
+        font-size: 31px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text3 {
+        font-size: 21px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text4 {
+        font-size: 13px;
+        color: #545454;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text5 {
+        font-size: 20px;
+        gap: 10px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .text5 .through {
+        color: #000000;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .through {
+        text-decoration: line-through;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info.large, .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+        width: 291px;
+        padding-left: 0;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+        gap: 7px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl .image {
+        max-height: 40px;
+    }
+    .mc_th-product-card .product-wrapper .discount-box .free-info .image {
+        max-height: 60px;
+        object-fit: contain;
+        width: auto;
+        height: auto;
+    }
+    .mc_th-product-card .product-wrapper .btn-group {
+        padding-top: 32px;
+        gap: 20px;
+    }
+    .mc_th-product-card .product-wrapper .btn-group .button {
+        padding: 0;
+        width: 258px;
+        height: 55px;
+        font-size: 18px;
+        color: var(--button-color);
+        transition: background 0.5s ease-in-out;
+        transition-property: background, color;
+        --color-button-background: 219 17 9;
+    }
+    .mc_th-product-card .product-wrapper .btn-group .button:hover {
+        background: #000000;
+    }
+    .mc_th-product-card .product-wrapper .btn-group .button.more {
+        background: none;
+        box-shadow: inset 0 0 0 1px #000000;
+        color: var(--button-color);
+    }
+    .mc_th-product-card .product-wrapper .btn-group .button.more:hover {
+        background: #000000;
+        color: #FFFFFF;
+    }
+    @media screen and (max-width: 1384px) {
+        .mc_th-product-card {
+            padding: 34px 0;
+        }
+        .mc_th-product-card .card-content {
+            padding: 0 41px;
+            gap: 2.3121387283vw;
+        }
+        .mc_th-product-card .product-wrapper {
+            border-radius: 1.1560693642vw;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag {
+            top: 2.8179190751vw;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .image {
+            width: 12.1387283237vw;
+            height: 13.7283236994vw;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text {
+            top: 5.9248554913vw;
+            font-size: 1.2283236994vw;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text strong {
+            font-size: 2.4566473988vw;
+        }
+        .mc_th-product-card .product-wrapper .item-icons {
+            gap: 4.3352601156vw;
+            padding-top: 0.9393063584vw;
+        }
+        .mc_th-product-card .product-wrapper .item-icons .item-icon .image {
+            width: 2.6011560694vw;
+            height: 2.6011560694vw;
+        }
+        .mc_th-product-card .product-wrapper .item-icons .item-icon .text {
+            padding-top: 0.5780346821vw;
+            font-size: 12px;
+        }
+        .mc_th-product-card .product-wrapper .product-info {
+            padding: 0 1.950867052vw;
+        }
+        .mc_th-product-card .product-wrapper .product-info .product-name {
+            font-size: 3.2514450867vw;
+        }
+        .mc_th-product-card .product-wrapper .product-info .intro {
+            font-size: 1.7341040462vw;
+            padding-top: 0.7225433526vw;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box {
+            padding-top: 3.0346820809vw;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box .price {
+            font-size: 3.4682080925vw;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box .original-price {
+            font-size: 1.8063583815vw;
+            padding-left: 1.0115606936vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box {
+            padding-top: 0.8670520231vw;
+            gap: 1.0115606936vw 0;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .plus {
+            font-size: 2.3121387283vw;
+            padding: 0 0.7225433526vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount {
+            width: 16.5462427746vw;
+            height: 4.4075144509vw;
+            border-radius: 0.7225433526vw;
+            font-size: 1.3005780347vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount.dark {
+            width: 20.8815028902vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount strong {
+            font-size: 2.3121387283vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount:before, .mc_th-product-card .product-wrapper .discount-box .discount:after {
+            width: 1.5895953757vw;
+            height: 1.5895953757vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info {
+            width: 16.5462427746vw;
+            height: 4.8410404624vw;
+            font-size: 1.3005780347vw;
+            gap: 1.3005780347vw;
+            padding-left: 1.5173410405vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text1 {
+            font-size: 1.1560693642vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text2 {
+            font-size: 2.2398843931vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text3 {
+            font-size: 1.5173410405vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text4 {
+            font-size: 12px;
+            color: #545454;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text5 {
+            font-size: 1.4450867052vw;
+            gap: 0.7225433526vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large, .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+            width: 21.0260115607vw;
+            padding-left: 0;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+            gap: 0.5057803468vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl .image {
+            max-height: 2.8901734104vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .image {
+            max-height: 4.3352601156vw;
+        }
+        .mc_th-product-card .product-wrapper .btn-group {
+            padding-top: 2.3121387283vw;
+            gap: 1.4450867052vw;
+        }
+        .mc_th-product-card .product-wrapper .btn-group .button {
+            width: 18.6416184971vw;
+            height: 3.9739884393vw;
+            font-size: 1.3005780347vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_th-product-card {
+            padding: 1.5625rem 0;
+        }
+        .mc_th-product-card .card-content {
+            padding: 0 4.1666666667vw;
+            gap: 6vw;
+        }
+        .mc_th-product-card .product-wrapper {
+            border-radius: 0.3125rem;
+            border-width: 0.1171875rem;
+            aspect-ratio: auto;
+            flex-direction: column-reverse;
+        }
+        .mc_th-product-card .product-wrapper .product-cover,
+        .mc_th-product-card .product-wrapper .product-info {
+            width: 100%;
+        }
+        .mc_th-product-card .product-wrapper .product-cover {
+            aspect-ratio: 1.66667;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag {
+            top: auto;
+            left: auto;
+            bottom: 0;
+            right: 0.5078125rem;
+            transform: translateY(45%);
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .image {
+            width: 5.4296875rem;
+            height: 6.1328125rem;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text {
+            top: 2.65625rem;
+            font-size: 0.546875rem;
+        }
+        .mc_th-product-card .product-wrapper .product-cover .final-tag .tag-text strong {
+            font-size: 1.09375rem;
+        }
+        .mc_th-product-card .product-wrapper .item-icons {
+            gap: 10vw;
+            padding-top: 0.46875rem;
+        }
+        .mc_th-product-card .product-wrapper .item-icons .item-icon .image {
+            width: 1.484375rem;
+            height: 1.484375rem;
+        }
+        .mc_th-product-card .product-wrapper .item-icons .item-icon .text {
+            padding-top: 0.3125rem;
+            font-size: 0.52734375rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info {
+            padding: 0.7421875rem 1.2109375rem 1.0546875rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info .product-name {
+            font-size: 1.2109375rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info .intro {
+            font-size: 0.78125rem;
+            padding-top: 0.1953125rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box {
+            padding-top: 1.328125rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box .price {
+            font-size: 1.5234375rem;
+        }
+        .mc_th-product-card .product-wrapper .product-info .price-box .original-price {
+            font-size: 0.78125rem;
+            padding-left: 0.3515625rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box {
+            padding-top: 0.390625rem;
+            gap: 0.703125rem 0;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .plus {
+            font-size: 1.07421875rem;
+            padding: 0 0.390625rem;
+            transform: translateY(0);
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount {
+            width: 32.6666666667vw;
+            height: 2.01171875rem;
+            border-radius: 0.1953125rem;
+            font-size: 0.60546875rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount.dark {
+            width: 41.3333333333vw;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount strong {
+            font-size: 1.07421875rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .discount:before, .mc_th-product-card .product-wrapper .discount-box .discount:after {
+            width: 0.7421875rem;
+            height: 0.7421875rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info {
+            width: 32.6666666667vw;
+            height: 2.01171875rem;
+            border-radius: 0.0390625rem;
+            font-size: 0.68359375rem;
+            gap: 0.625rem;
+            padding-left: 0.625rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text1 {
+            font-size: 0.52734375rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text2 {
+            font-size: 1.03515625rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text3 {
+            font-size: 0.68359375rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text4 {
+            font-size: 0.46875rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .text5 {
+            line-height: normal;
+            font-size: 0.6640625rem;
+            gap: 0.3515625rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large, .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+            width: 41.5vw;
+            padding-left: 0;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl {
+            gap: 0.3125rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info.large-xl .image {
+            max-height: 1.2109375rem;
+        }
+        .mc_th-product-card .product-wrapper .discount-box .free-info .image {
+            max-height: 1.953125rem;
+        }
+        .mc_th-product-card .product-wrapper .btn-group {
+            padding-top: 1.73828125rem;
+            gap: 0.703125rem;
+        }
+        .mc_th-product-card .product-wrapper .btn-group .button {
+            width: 38.9166666667vw;
+            height: 1.9140625rem;
+            font-size: 0.703125rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<section class="mc_th-product-card w-full section--page">
+    {% render 'section-title', info: ss %}
+    <div class="card-content flex-column w-full">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            {%- assign variant = bs.product.selected_or_first_available_variant -%}
+            <div class="product-wrapper flex-between overflow-hidden">
+                <div class="product-info">
+                    <div class="product-name fw-900 lh-2">{{ bs.product.title }}</div>
+                    <div class="intro lh-2 tw-line-clamp-2">
+                        {{ bs.product.metafields.custom.short_text.value }}
+                    </div>
+                    {%- if bs.show_spec -%}
+                        {%- assign specs = bs.product.metafields.custom.specifications.value | default: false -%}
+                        {%- if specs -%}
+                            <ul class="item-icons w-full flex-top">
+                                {% for i in ( 0..specs.title_list.value.size) limit: 4 %}
+                                    {% if specs.title_list.value[i] != blank %}
+                                        <li class="item-icon {{ bs.spec_text_color }} text-center flex-center-col">
+                                            {% for url in specs.icon_list.value %}
+                                                {% assign i_2 = forloop.index | minus: 1 %}
+                                                {% if i_2 == i and url != blank %}
+                                                    {{- url | image_url: width: url.width | image_tag: loading: 'lazy', class: 'image' -}}
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="text lh-2 fw-600">
+                                                {{ specs.title_list.value[i] }}<br>
+                                                {{ specs.content_list.value[i] }}
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {%- endif -%}
+                    {%- endif -%}
+                    <div class="price-box flex-left">
+                        <div class="price fw-900"
+                             style="color: {{ bs.product_price_color }}">{{ variant.price | money }}</div>
+                        <div class="original-price">{{ variant.compare_at_price | money }}</div>
+                    </div>
+                    <div class="discount-box flex-column">
+                        {%- if bs.discount_text1 != blank or bs.discount_text2 != blank -%}
+                            <div class="discount-wrap flex-left">
+                                <div class="discount relative flex-center fw-900 lh-2">
+                                    {{ bs.discount_text1 }}
+                                </div>
+                                <span class="plus lh-1 fw-900">+</span>
+                                <div class="discount dark relative flex-center fw-900 lh-2">
+                                    {{ bs.discount_text2 }}
+                                </div>
+                            </div>
+                        {%- endif -%}
+                        <div class="free-wrap flex-left">
+                            <div class="free-info flex-left">
+                                {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
+                                {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
+                                <div class="price flex-column">
+                                    <span class="fw-600 text1 lh-2">{{ text_list | first }}</span>
+                                    <span class="fw-700 through text2 lh-1">{{ text_list | last }}</span>
+                                </div>
+                            </div>
+                            <span class="plus lh-1 fw-900">+</span>
+                            <div class="free-info large{% if bs.gift_image3 != blank %}-xl{% endif %} flex-center">
+                                {%- render 'global-image', image: bs.gift_image2, image_size: 200 -%}
+                                {%- liquid
+                                    assign text_list = bs.gift_content2 | newline_to_br | split: '<br />'
+                                    assign first_list = text_list | first | split: '|'
+                                -%}
+                                {%- if first_list.size > 1 -%}
+                                    <div class="price flex-column">
+                                        <div class="lh-2 flex-left text5">
+                                            <span class="through">{{ first_list | first }}</span>
+                                            <span class="fw-700">{{ first_list | last }}</span>
+                                        </div>
+                                        <span class="text4 lh-4">{{ text_list | last }}</span>
+                                    </div>
+                                {%- else -%}
+                                    <div class="price lh-2 fw-700 flex-column">
+                                        <span class="text3 through">{{ text_list | first }}</span>
+                                        <span>{{ text_list | last }}</span>
+                                    </div>
+                                {%- endif -%}
+                                {%- if bs.gift_image3 != blank -%}
+                                    {%- render 'global-image', image: bs.gift_image3, image_size: 200 -%}
+                                    {%- assign text_list = bs.gift_content3 | newline_to_br | split: '<br />' -%}
+                                    <div class="price lh-2 fw-700 flex-column">
+                                        <span class="text3 through">{{ text_list | first }}</span>
+                                        <span>{{ text_list | last }}</span>
+                                    </div>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group flex-left">
+                        <button class="button flex-center"
+                                style="--color-button-gradient: {{ bs.button1_gradient }}; --color-button-background: {{ bs.button1_bg_color.rgb }};--button-color: {{ bs.button1_text_color }};"
+                                onclick="$heybike.emit('{{ section.id }}-shop-popup', {{ forloop.index0 }})">{{ bs.button1 }}</button>
+                        <a href="{{ bs.button2_url }}"
+                           style="--button-color: {{ bs.button2_text_color }}; box-shadow: inset 0 0 0 1px {{ bs.button2_border_color }}"
+                           target="_blank"
+                           class="button more flex-center">{{ bs.button2 }}</a>
+                    </div>
+                </div>
+                <div class="product-cover relative">
+                    {%- if bs.show_final_tag -%}
+                        <div class="final-tag absolute">
+                            {%- render 'global-image', image: bs.final_tag_bg, image_size: 200 -%}
+                            <div class="tag-text text-center w-full fw-600 absolute lh-4" style="color: {{ bs.final_tag_color }};">
+                                {{ bs.final_tag }}
+                            </div>
+                        </div>
+                    {%- endif -%}
+                    {%- if bs.pc_product_image != blank -%}
+                        {% render 'global-image',
+                            desktop_img: bs.pc_product_image,
+                            desktop_size: 650,
+                            mobile_img: bs.mb_product_image,
+                            mobile_size: 650
+                        %}
+                    {%- else -%}
+                        {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</section>
+{% render 'product-buy-popup' %}
+{% schema %}
+{
+  "name": "MC Th Product Card",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Th Product Card"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_item",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Buy Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_final_tag",
+          "label": "Show product final tag",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "id": "final_tag",
+          "label": "Product final tag",
+          "default": "<p>Final Price <strong>$119</strong></p>"
+        },
+        {
+          "type": "color",
+          "id": "final_tag_color",
+          "label": "Product final tag color",
+          "default": "#ffebd9"
+        },
+        {
+          "type": "image_picker",
+          "id": "final_tag_bg",
+          "label": "Product final tag background"
+        },
+        {
+          "type": "color",
+          "id": "product_price_color",
+          "label": "Product price color",
+          "default": "#db1109"
+        },
+        {
+          "label": "Desktop product image",
+          "type": "image_picker",
+          "id": "pc_product_image"
+        },
+        {
+          "label": "Mobile product image",
+          "type": "image_picker",
+          "id": "mb_product_image"
+        },
+        {
+          "label": "Show specification",
+          "type": "checkbox",
+          "id": "show_spec",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Discount configuration"
+        },
+        {
+          "type": "richtext",
+          "id": "discount_text1",
+          "label": "Discount text #1",
+          "default": "<p><strong>$600 OFF</strong></p>"
+        },
+        {
+          "type": "richtext",
+          "id": "discount_text2",
+          "label": "Discount text #2",
+          "default": "<p>EXTRA <strong>$100 OFF</strong></p>"
+        },
+        {
+          "type": "header",
+          "content": "Gift configuration"
+        },
+        {
+          "label": "Gift image #1",
+          "type": "image_picker",
+          "id": "gift_image1"
+        },
+        {
+          "label": "Gift content #1",
+          "type": "textarea",
+          "id": "gift_content1",
+          "default": "WORTH\n$99"
+        },
+        {
+          "label": "Gift image #2",
+          "type": "image_picker",
+          "id": "gift_image2"
+        },
+        {
+          "label": "Gift content #2",
+          "type": "textarea",
+          "id": "gift_content2",
+          "default": "$89.00|FREE\nPet Bike Basket"
+        },
+        {
+          "label": "Gift image #3",
+          "type": "image_picker",
+          "id": "gift_image3"
+        },
+        {
+          "label": "Gift content #3",
+          "type": "textarea",
+          "id": "gift_content3",
+          "default": "$89\nFREE"
+        },
+        {
+          "type": "header",
+          "content": "Button configuration"
+        },
+        {
+          "type": "text",
+          "id": "button1",
+          "label": "Button1 Name",
+          "default": "Shop Now"
+        },
+        {
+          "type": "color",
+          "id": "button1_text_color",
+          "label": "Button1 text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button1_bg_color",
+          "label": "Button1 background color",
+          "default": "#db1109"
+        },
+        {
+          "type": "color_background",
+          "id": "button1_gradient",
+          "label": "Button1 gradient color"
+        },
+        {
+          "type": "text",
+          "id": "button2",
+          "label": "Button2 Name",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button2_url",
+          "label": "Button2 Url"
+        },
+        {
+          "type": "color",
+          "id": "button2_text_color",
+          "label": "Button2 text color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button2_border_color",
+          "label": "Button1 border color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

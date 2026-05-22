@@ -8,10 +8,18 @@
     if show_button != false
         assign show_button = true
     endif
+    assign is_dark = false
+    assign color = section.settings.page_color
+    if color.red < 100 and color.green < 100 and color.blue < 100
+        assign is_dark = true
+    endif
+    if class == blank
+        assign class = 'slideshow-control'
+    endif
 -%}
 <div
     data-lazy-import="{{ 'slider-button.css' | asset_url }}"
-    class="slider--button lazy-import slideshow-control w-full flex-{{ align }}">
+    class="slider--button{% if is_dark %} theme-dark{% endif %} lazy-import {{ class }} w-full flex-{{ align }}">
     <div class="tw-mobile--dots flex-center">
         {%- if show_dot -%}
             <slider-dots class="flickity-page-dots w-auto pointer-events-auto"

@@ -1,0 +1,242 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_th-trust {
+        background-color: #160a03;
+        padding: 32px 0 51px;
+    }
+    .mc_th-trust .backdrop-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .mc_th-trust .trust-content {
+        max-width: 1384px;
+        margin: 0 auto;
+        padding: 0 48px;
+    }
+    .mc_th-trust .trust-content .title {
+        font-size: 36px;
+        color: #ffffff;
+    }
+    .mc_th-trust .count-items {
+        padding-top: 60px;
+    }
+    .mc_th-trust .count-item {
+        max-width: 220px;
+    }
+    .mc_th-trust .count-item .count {
+        font-size: 37px;
+        color: #ff981d;
+    }
+    .mc_th-trust .count-item .count:before {
+        content: "";
+        width: 150px;
+        height: 1px;
+        background-color: #666666;
+        left: 50%;
+        bottom: 0;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+    .mc_th-trust .count-item .text {
+        padding-top: 8px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.8;
+    }
+    .mc_th-trust .service-items {
+        gap: 0 28px;
+        padding-top: 36px;
+    }
+    .mc_th-trust .service-item {
+        width: 249px;
+        height: 229px;
+        border: solid 2px #333333;
+        border-radius: 10px;
+    }
+    .mc_th-trust .service-item .icon-wrap {
+        width: 100%;
+        height: 132px;
+    }
+    .mc_th-trust .service-item .image {
+        width: auto;
+        max-height: 94px;
+        max-width: 132px;
+        height: var(--height);
+        object-fit: contain;
+    }
+    .mc_th-trust .service-item .name {
+        font-size: 24px;
+        color: #fff;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_th-trust {
+            padding: 0.625rem 0 1.5625rem;
+        }
+        .mc_th-trust .trust-content {
+            padding: 0 2.265625rem;
+        }
+        .mc_th-trust .trust-content .title {
+            font-size: 0.8203125rem;
+        }
+        .mc_th-trust .count-items {
+            padding-top: 1.40625rem;
+            flex-wrap: wrap;
+            gap: 0.546875rem 0;
+        }
+        .mc_th-trust .count-item {
+            max-width: 45%;
+        }
+        .mc_th-trust .count-item .count {
+            font-size: 1.38671875rem;
+        }
+        .mc_th-trust .count-item .count:before {
+            width: 5.60546875rem;
+        }
+        .mc_th-trust .count-item .text {
+            padding-top: 0.46875rem;
+            font-size: 0.546875rem;
+        }
+        .mc_th-trust .service-items {
+            gap: 3.5vw;
+            padding-top: 2.3046875rem;
+            flex-wrap: wrap;
+        }
+        .mc_th-trust .service-item {
+            width: 38.5vw;
+            height: 8.33984375rem;
+            border-radius: 0.1953125rem;
+            border-width: 0.0390625rem;
+        }
+        .mc_th-trust .service-item .icon-wrap {
+            height: 4.84375rem;
+        }
+        .mc_th-trust .service-item .image {
+            max-height: 3.41796875rem;
+            max-width: 4.765625rem;
+        }
+        .mc_th-trust .service-item .name {
+            font-size: 0.87890625rem;
+        }
+    }
+</style>
+<section class="mc_th-trust relative w-full">
+    {% render 'global-image',
+        desktop_img: ss.desktop_image,
+        desktop_size: 1920,
+        desktop_class: 'backdrop-image',
+        mobile_img: ss.mobile_image,
+        mobile_size: 750,
+        mobile_class: 'backdrop-image'
+    %}
+    <div class="trust-content w-full z-2 relative">
+        {%- if ss.show_heading -%}
+            <div class="title lh-2 fw-900 text-center">{{ ss.heading }}</div>
+        {%- endif -%}
+        {%- assign countList = section.blocks | where: 'type', 'count' -%}
+        <div class="count-items flex-between-top">
+            {%- for block in countList -%}
+                {%- assign bs = block.settings -%}
+                <div class="count-item flex-center-col">
+                    <div class="count relative lh-5 fw-900 text-center">{{ bs.title }}</div>
+                    <div class="text text-center">
+                        {{ bs.text }}
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+        {%- assign serviceList = section.blocks | where: 'type', 'service' -%}
+        <div class="service-items flex-center">
+            {%- for block in serviceList -%}
+                {%- assign bs = block.settings -%}
+                <div class="service-item">
+                    <div class="flex-center icon-wrap">
+                        {% render 'global-image', desktop_img: bs.image_icon, desktop_size: 200, media_type: 'icon', show_size: true %}
+                    </div>
+                    <div class="name fw-900 text-center lh-2">{{ bs.title }}</div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+{% schema %}
+{
+  "name": "MC Th Trust",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Th Trust"
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Backdrop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Backdrop Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "Why Thousands Trust Our Ride"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "count",
+      "name": "Count Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Num",
+          "default": "88888+"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Desc",
+          "default": "<p>Himi Riders<br/>Recognition from knights around the world</p>"
+        }
+      ]
+    },
+    {
+      "type": "service",
+      "name": "Service Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Service Name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

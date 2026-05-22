@@ -1,0 +1,375 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_th-discount-cards {
+        padding: 80px 0;
+        background-color: #160a03;
+    }
+    .mc_th-discount-cards .card-items {
+        gap: 20px;
+    }
+    .mc_th-discount-cards .card-item {
+        max-width: 304px;
+        aspect-ratio: 0.762;
+    }
+    .mc_th-discount-cards .image-backup {
+        position: absolute;
+        object-fit: fill;
+        left: 0;
+        top: 0;
+    }
+    .mc_th-discount-cards .card-content {
+        aspect-ratio: 0.916;
+        padding: 4px 20px;
+    }
+    .mc_th-discount-cards .card-content .image {
+        object-fit: contain;
+        max-height: 140px;
+        height: var(--height);
+    }
+    .mc_th-discount-cards .card-content .info {
+        text-align: center;
+        padding-top: 16px;
+    }
+    .mc_th-discount-cards .card-content .name {
+        color: {{ ss.card_title_color }};
+        font-size: 23px;
+    }
+    .mc_th-discount-cards .card-content .name strong {
+        background: linear-gradient(to bottom, #ffcb00, #f69d45, #ff8100);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 34px;
+        display: block;
+    }
+    .mc_th-discount-cards .card-content .desc {
+        padding-top: 10px;
+        font-size: 16px;
+        color: {{ ss.card_desc_color }};
+    }
+    @media screen and (max-width: 1340px) {
+        .mc_th-discount-cards {
+            padding: 68px 0;
+        }
+        .mc_th-discount-cards .card-items {
+            gap: 1.4925373134vw;
+        }
+        .mc_th-discount-cards .card-content {
+            padding: 0.2985074627vw 1.4925373134vw;
+        }
+        .mc_th-discount-cards .card-content .image {
+            max-height: 10.447761194vw;
+        }
+        .mc_th-discount-cards .card-content .info {
+            padding-top: 1.1940298507vw;
+        }
+        .mc_th-discount-cards .card-content .name {
+            font-size: 1.7164179104vw;
+        }
+        .mc_th-discount-cards .card-content .name strong {
+            font-size: 2.5373134328vw;
+        }
+        .mc_th-discount-cards .card-content .desc {
+            padding-top: 0.7462686567vw;
+            font-size: 1.1940298507vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_th-discount-cards {
+            padding: 1.5625rem 0;
+        }
+        .mc_th-discount-cards .card-items {
+            gap: 0.78125rem 0.703125rem;
+            flex-wrap: wrap;
+        }
+        .mc_th-discount-cards .card-item {
+            max-width: 9.0234375rem;
+            aspect-ratio: 0.7585;
+        }
+        .mc_th-discount-cards .card-item:nth-child(1) .card-content .image {
+            max-height: 3.75rem;
+        }
+        .mc_th-discount-cards .card-item:nth-child(1) .card-content .desc {
+            padding-top: 0.46875rem;
+        }
+        .mc_th-discount-cards .card-item:nth-child(2) .card-content .image {
+            max-height: 4.0234375rem;
+        }
+        .mc_th-discount-cards .card-item:nth-child(2) .card-content .desc {
+            padding-top: 0.46875rem;
+        }
+        .mc_th-discount-cards .card-item:nth-child(3) .card-content .image {
+            max-height: 3.61328125rem;
+        }
+        .mc_th-discount-cards .card-item:nth-child(3) .card-content .info {
+            padding-top: 0.703125rem;
+        }
+        .mc_th-discount-cards .card-content {
+            padding: 0.078125rem 0.78125rem;
+            aspect-ratio: 0.88;
+        }
+        .mc_th-discount-cards .card-content .image {
+            max-height: 4.296875rem;
+        }
+        .mc_th-discount-cards .card-content .info {
+            padding-top: 0.46875rem;
+        }
+        .mc_th-discount-cards .card-content .name {
+            font-size: 0.703125rem;
+        }
+        .mc_th-discount-cards .card-content .name strong {
+            font-size: 1.03515625rem;
+        }
+        .mc_th-discount-cards .card-content .desc {
+            padding-top: 0.1953125rem;
+            font-size: 0.5078125rem;
+        }
+        .mc_th-discount-cards .card-content .desc strong {
+            font-weight: 700;
+            font-size: 0.546875rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_th-discount-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="card-items flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item relative w-full">
+                {%- if ss.card_bg_image != blank -%}
+                    {%- render 'global-image',
+                        desktop_img: ss.card_bg_image,
+                        desktop_size: 400,
+                        desktop_class: 'image-backup',
+                        mobile_img: ss.mb_card_bg_image,
+                        mobile_size: 400,
+                        preload: ss.image_preload
+                    -%}
+                {%- endif -%}
+                <div class="card-content w-full flex-center-col relative z-2">
+                    {% render 'global-image', preload: ss.image_preload, media_type: 'icon', show_size: true, desktop_img: bs.image_icon, desktop_size: 200 %}
+                    <div class="info">
+                        <div class="name fw-700 lh-3">{{ bs.title }}</div>
+                        {%- if bs.text != blank -%}
+                            <div class="desc lh-4">
+                                {{ bs.text }}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Th Discount Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Th Discount Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>WHY BUY NOW?</p>"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_bg_image",
+      "label": "Desktop card background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_card_bg_image",
+      "label": "Mobile card background image"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#bab6b4"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#6b625f"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Card title",
+          "default": "<p>UP TO<strong>60% OFF</strong></p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

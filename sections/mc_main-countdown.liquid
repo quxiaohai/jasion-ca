@@ -1,0 +1,251 @@
+{% assign ss = section.settings %}
+<style>
+    .mc_main-countdown {
+        padding: 25px 0;
+    }
+
+    .mc_main-countdown .title {
+        color: {{ ss.heading_color }};
+        padding-bottom: 18px;
+    }
+
+    .mc_main-countdown .countdown {
+        gap: 43px;
+    }
+
+    .mc_main-countdown .countdown .countdown-item {
+        width: 84px;
+    }
+
+    .mc_main-countdown .countdown .countdown-item:last-of-type:before {
+        display: none;
+    }
+
+    .mc_main-countdown .countdown .countdown-item:before {
+        content: ":";
+        font-size: 48px;
+        font-weight: 900;
+        color: {{ ss.countdown_text_color }};
+        position: absolute;
+        right: -30px;
+        top: 36px;
+        transform: translateY(-50%);
+    }
+
+    .mc_main-countdown .countdown .num {
+        width: 100%;
+        height: 82px;
+        background-color: {{ ss.countdown_fill_color }};
+    {%- if ss.countdown_fill_gradient != blank -%}
+        background: {{ ss.countdown_fill_gradient }};
+    {%- endif -%}
+        border-radius: 16px;
+        color: {{ ss.countdown_num_color }};
+        font-size: 49px;
+        font-weight: 900;
+        text-align: center;
+        box-sizing: border-box;
+        line-height: 82px;
+        border: 0 none;
+    }
+
+    .mc_main-countdown .countdown .num:disabled {
+        background-color: {{ ss.countdown_fill_color }} !important;
+        color: {{ ss.countdown_num_color }} !important;
+        opacity: 1 !important;
+    }
+
+    .mc_main-countdown .countdown .name {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: {{ ss.countdown_text_color }};
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_main-countdown {
+            padding: 1.0416666667rem 0;
+        }
+
+        .mc_main-countdown .title {
+            font-size: 0.6944444444rem;
+            padding-bottom: 0.78125rem;
+        }
+
+        .mc_main-countdown .countdown {
+            gap: 1.4756944444rem;
+        }
+
+        .mc_main-countdown .countdown .countdown-item {
+            width: 2.9079861111rem;
+        }
+
+        .mc_main-countdown .countdown .countdown-item:before {
+            font-size: 1.6927083333rem;
+            right: -0.9982638889rem;
+            top: 1.2586805556rem;
+        }
+
+        .mc_main-countdown .countdown .num {
+            height: 2.8428819444rem;
+            border-radius: 0.2821180556rem;
+            font-size: 1.6927083333rem;
+            line-height: 2.8428819444rem;
+        }
+
+        .mc_main-countdown .countdown .name {
+            font-size: 0.5642361111rem;
+            padding-top: 0.3472222222rem;
+        }
+    }
+
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_main-countdown section--page w-full">
+    {%- if ss.show_heading -%}
+        <div class="title tw-text-center tw-text-base tw-font-bold">{{ ss.heading }}</div>
+    {%- endif -%}
+    <count-down
+        cycle-duration="{{ ss.duration }}"
+        data-store="{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}"
+        data-date="{{ ss.countdown_start_date }}"
+        class="countdown flex-center">
+        <label class="countdown-item tw-relative flex-center-col">
+            <input node-name="day" disabled type="text" class="num" value="00">
+            <span class="name">{{ ss.day }}</span>
+        </label>
+        <label class="countdown-item tw-relative flex-center-col">
+            <input node-name="hour" disabled type="text" class="num" value="00">
+            <span class="name">{{ ss.hour }}</span>
+        </label>
+        <label class="countdown-item tw-relative flex-center-col">
+            <input node-name="minute" disabled type="text" class="num" value="00">
+            <span class="name">{{ ss.minute }}</span>
+        </label>
+        <label class="countdown-item tw-relative flex-center-col">
+            <input node-name="second" disabled type="text" class="num" value="00">
+            <span class="name">{{ ss.second }}</span>
+        </label>
+    </count-down>
+</div>
+{% schema %}
+{
+  "name": "MC Main Countdown",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Main Countdown"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "SALE ENDS IN:"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Countdown Content"
+    },
+    {
+      "type": "text",
+      "id": "countdown_start_date",
+      "label": "Select start date for countdown",
+      "default": "2024-12-02T00:00:00",
+      "info": "2024-12-02T00:00:00"
+    },
+    {
+      "type": "range",
+      "id": "duration",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "unit": "Day",
+      "label": "Duration days",
+      "default": 7
+    },
+    {
+      "type": "text",
+      "id": "day",
+      "label": "Day",
+      "default": "Days"
+    },
+    {
+      "type": "text",
+      "id": "hour",
+      "label": "Hour",
+      "default": "Hours"
+    },
+    {
+      "type": "text",
+      "id": "minute",
+      "label": "Minute",
+      "default": "Mins"
+    },
+    {
+      "type": "text",
+      "id": "second",
+      "label": "Second",
+      "default": "Secs"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "label": "Countdown fill color",
+      "type": "color",
+      "id": "countdown_fill_color",
+      "default": "#000000"
+    },
+    {
+      "label": "Countdown fill gradient",
+      "type": "color_background",
+      "id": "countdown_fill_gradient"
+    },
+    {
+      "label": "countdown num color",
+      "type": "color",
+      "id": "countdown_num_color",
+      "default": "#ffffff"
+    },
+    {
+      "label": "Countdown text color",
+      "type": "color",
+      "id": "countdown_text_color",
+      "default": "#000000"
+    }
+  ]
+}
+{% endschema %}

@@ -38,6 +38,14 @@
         object-fit: contain;
     }
 
+    .autumn-sale-product-list ._product-card .product-cover .th-logo {
+        width: auto;
+        height: 83px;
+        left: 12px;
+        top: 14px;
+        position: absolute;
+    }
+
     .autumn-sale-product-list ._product-card .text-items {
         padding: 30px 0 26px;
         gap: 30px 0;
@@ -194,6 +202,10 @@
             height: 21.0755813953vw;
         }
 
+        .autumn-sale-product-list ._product-card .product-cover .th-logo {
+            height: 6vw;
+        }
+
         .autumn-sale-product-list ._product-card .text-items {
             padding: 25.5px 0 22.1px;
             gap: 25.5px 0;
@@ -310,6 +322,12 @@
             height: 52.962962963vw;
         }
 
+        .autumn-sale-product-list ._product-card .product-cover .th-logo {
+            height: 50px;
+            left: 8px;
+            top: 8px;
+        }
+
         .autumn-sale-product-list ._product-card .text-items {
             padding: 1.2152777778rem 0 1.0416666667rem;
             gap: 1.3020833333rem 0;
@@ -409,6 +427,9 @@
                 <div class="_product-card flex-col tw-overflow-hidden">
                     <div class="product-cover tw-relative">
                         {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
+                        {%- if bs.show_th_logo and bs.anniversary_logo != blank -%}
+                            {% render 'global-image', image: bs.anniversary_logo, image_size: 200, class: 'th-logo' %}
+                        {%- endif -%}
                     </div>
                     <div class="product-info">
                         <div class="product-name flex-left tw-font-bold">
@@ -494,6 +515,9 @@
                         <div class="_product-card flex-col tw-overflow-hidden">
                             <div class="product-cover tw-relative">
                                 {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
+                                {%- if bs.show_th_logo and bs.anniversary_logo != blank -%}
+                                    {% render 'global-image', image: bs.anniversary_logo, image_size: 200, class: 'th-logo' %}
+                                {%- endif -%}
                             </div>
                             <div class="product-info">
                                 <div class="product-name flex-left tw-font-bold">
@@ -732,7 +756,7 @@
       "id": "description_mb_margin_bottom",
       "label": "Mobile description margin bottom",
       "default": 30
-    }
+    },
   ],
   "blocks": [
     {
@@ -743,6 +767,17 @@
           "type": "product",
           "id": "product",
           "label": "Buy Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_th_logo",
+          "label": "Show anniversary logo",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "anniversary_logo",
+          "label": "Anniversary logo"
         },
         {
           "type": "header",

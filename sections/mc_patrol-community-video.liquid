@@ -2,6 +2,7 @@
     assign ss = section.settings
     assign youtubes = section.blocks | where: 'type', 'youtube'
     assign videos = section.blocks | where: 'type', 'video'
+    assign tiktoks = section.blocks | where: 'type', 'tiktok'
 -%}
 <style>
     .mc_patrol-community-video {
@@ -73,7 +74,8 @@
     }
 
     .mc_patrol-community-video .media-content > .slider-item ~ .slider-item,
-    .mc_patrol-community-video .media-content > .media-item ~ .media-item {
+    .mc_patrol-community-video .media-content > .media-item ~ .media-item,
+    .mc_patrol-community-video .media-content > .card-item ~ .card-item {
         display: none;
     }
 
@@ -237,25 +239,127 @@
         object-fit: cover;
     }
 
-    .custom-slide-button .flickity-enabled {
+    {%- if tiktoks.size > 0 -%}
+    .mc_patrol-community-video .card-item {
+        height: 519px;
+        width: 376px;
+        margin-right: 30px;
+        align-items: flex-end;
+    }
+    .mc_patrol-community-video .card-item .media {
+        width: 329px;
+        height: 100%;
+        border-radius: 3px;
+    }
+    .mc_patrol-community-video .card-item .media-info {
+        width: 329px;
+        padding: 24px;
+        left: 0;
+        bottom: 0;
+    }
+    .mc_patrol-community-video .card-item .media-info .intro,
+    .mc_patrol-community-video .card-item .media-info .name {
+        text-align: left;
+        color: #ffffff;
+    }
+    .mc_patrol-community-video .card-item .media-info .intro {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    .mc_patrol-community-video .card-item .media-info .name {
+        font-size: 16px;
+    }
+    .mc_patrol-community-video .action-wrap {
+        width: 35px;
+        gap: 8px 0;
+    }
+    .mc_patrol-community-video .action-wrap .avatar {
+        margin-bottom: 12px;
+    }
+    .mc_patrol-community-video .action-wrap .item {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .mc_patrol-community-video .action-wrap .item:hover .svg-icon {
+        transform: scale(1.2);
+    }
+    .mc_patrol-community-video .action-wrap .svg-icon {
+        width: 50%;
+        height: 50%;
+        transition: transform 0.3s;
+    }
+    .mc_patrol-community-video .action-wrap .num {
+        color: #ffffff;
+        font-size: 13px;
+        padding-top: 4px;
+    }
+    .mc_patrol-community-video .card-item .custom-play-button .play-button {
+        position: static;
+        background: none;
+        width: 4.53125vw;
+        height: 4.53125vw;
+    }
+    .mc_patrol-community-video .card-item video-media[playing] .custom-play-button {
+        opacity: 0;
+    }
+    @media screen and (max-width: 1696px) {
+        .mc_patrol-community-video .card-item {
+            height: 30.6014150943vw;
+            width: 22.1698113208vw;
+            margin-right: 1.5vw;
+        }
+        .mc_patrol-community-video .card-item .media {
+            width: 19.3985849057vw;
+        }
+        .mc_patrol-community-video .card-item .media-info {
+            width: 19.3985849057vw;
+            padding: 1.4150943396vw;
+        }
+        .mc_patrol-community-video .card-item .media-info .intro {
+            padding-top: 9px;
+            font-size: 14px;
+        }
+        .mc_patrol-community-video .card-item .media-info .name {
+            font-size: 14px;
+        }
+        .mc_patrol-community-videom .action-wrap {
+            width: 2.0636792453vw;
+        }
+        .mc_patrol-community-video .action-wrap .avatar {
+            margin-bottom: 0.7075471698vw;
+        }
+        .mc_patrol-community-video .action-wrap .item {
+            width: 2.0636792453vw;
+            height: 2.0636792453vw;
+        }
+        .mc_patrol-community-video .action-wrap .num {
+            font-size: 12px;
+        }
+    }
+    {%- endif -%}
+
+    .mc_patrol-community-video .custom-slide-button .flickity-enabled {
         padding-bottom: 68px;
         position: relative;
     }
 
-    .custom-slide-button .flickity-button {
+    .mc_patrol-community-video .custom-slide-button .flickity-button {
         transform: translateY(0);
         inset-block-start: 0;
         bottom: 0;
         width: 48px;
         height: 48px;
-        background-color: #fbe309;
+        background-color: {{ ss.slide_button_color }};
         top: auto;
         inset-inline-start: auto;
         right: var(--page-padding);
         display: flex;
     }
 
-    .custom-slide-button .flickity-button:before {
+    .mc_patrol-community-video .custom-slide-button .flickity-button:before {
         content: "";
         width: 17px;
         height: 33px;
@@ -267,27 +371,27 @@
         background-size: 100% 100%;
     }
 
-    .custom-slide-button .flickity-button.next:before {
+    .mc_patrol-community-video .custom-slide-button .flickity-button.next:before {
         transform: translate(-36%, -50%);
     }
 
-    .custom-slide-button .flickity-button.previous {
+    .mc_patrol-community-video .custom-slide-button .flickity-button.previous {
         transform: translateX(-58px);
     }
 
-    .custom-slide-button .flickity-button.previous:before {
+    .mc_patrol-community-video .custom-slide-button .flickity-button.previous:before {
         transform: rotate(180deg) translate(66%, 50%);
     }
 
-    .custom-slide-button .flickity-button svg {
+    .mc_patrol-community-video .custom-slide-button .flickity-button svg {
         display: none;
     }
 
-    .custom-slide-button .flickity-button:focus {
+    .mc_patrol-community-video .custom-slide-button .flickity-button:focus {
         box-shadow: none;
     }
 
-    .custom-slide-button .flickity-button:disabled {
+    .mc_patrol-community-video .custom-slide-button .flickity-button:disabled {
         background-color: #4d4d4b;
         opacity: 1;
     }
@@ -307,7 +411,7 @@
             margin-right: 1.8vw;
         }
 
-        .mc_patrol-community-video .flickity-button {
+        .mc_patrol-community-video .custom-slide-button .flickity-button {
             right: var(--page-padding);
         }
     }
@@ -320,11 +424,13 @@
         .mc_patrol-community-video .slide-tabs {
             gap: 0.21875rem;
             padding-bottom: 1.2rem;
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         .mc_patrol-community-video .button-fold {
             height: 1.875rem;
-            min-width: 5rem;
+            min-width: auto;
             padding: 0 0.9375rem;
             background: linear-gradient(45deg, transparent 9px, {{ ss.tab_bg_color }} 9px);
             font-size: 0.625rem;
@@ -334,6 +440,7 @@
         .mc_patrol-community-video .button-fold .icon {
             width: 1.125rem;
             height: 1.125rem;
+            min-width: 1.125rem;
         }
 
         .mc_patrol-community-video .button-fold.active {
@@ -454,44 +561,107 @@
             padding-left: 0.375rem;
         }
 
-        .custom-slide-button .flickity-button {
+        .mc_patrol-community-video .custom-slide-button .flickity-button {
             display: none;
         }
 
-        .custom-slide-button .flickity-enabled {
+        .mc_patrol-community-video .custom-slide-button .flickity-enabled {
             padding-bottom: 0;
         }
+
+    {%- if tiktoks.size > 0 -%}
+        .mc_patrol-community-video .card-item {
+            height: 20.8984375rem;
+            width: 15.078125rem;
+            margin-right: 0.5859375rem;
+        }
+        .mc_patrol-community-video .card-item .media {
+            width: 13.2421875rem;
+            border-radius: 0.390625rem;
+        }
+        .mc_patrol-community-video .card-item .media-info {
+            width: 13.2421875rem;
+            padding: 0.9765625rem;
+        }
+        .mc_patrol-community-video .card-item .media-info .intro {
+            padding-top: 0.4296875rem;
+            font-size: 0.6640625rem;
+        }
+        .mc_patrol-community-video .card-item .media-info .name {
+            font-size: 0.6640625rem;
+        }
+        .mc_patrol-community-video .action-wrap {
+            width: 1.40625rem;
+            gap: 0.390625rem;
+        }
+        .mc_patrol-community-video .action-wrap .avatar {
+            margin-bottom: 0.44921875rem;
+        }
+        .mc_patrol-community-video .action-wrap .item {
+            width: 1.40625rem;
+            height: 1.40625rem;
+        }
+        .mc_patrol-community-video .action-wrap .num {
+            font-size: 0.5078125rem;
+            padding-top: 0.17578125rem;
+        }
+    {%- endif -%}
     }
 
     {% render 'page-wrap-style' %}
 </style>
 <div class="mc_patrol-community-video section--page w-full" id="{{ section.id }}-video">
     {% render 'section-title', info: ss, font: 'rushblade' %}
-    {%- if youtubes.size > 0 and videos.size > 0 -%}
+    {%- capture slide_tabs -%}
+        {%- assign index = 0 -%}
+        {%- if youtubes.size > 0 -%}
+            <button is="magnet-button" data-proxy="tab" node-name="tab" data-index="{{ index }}"
+                    class="button-fold flex-center active relative">
+                <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                    <path
+                        d="M1003.2 265.6c-11.2-44.8-46.4-78.4-91.2-91.2-80-20.8-400-20.8-400-20.8s-320 0-400 20.8c-44.8 11.2-78.4 46.4-91.2 91.2C0 345.6 0 512 0 512s0 166.4 20.8 246.4c11.2 44.8 46.4 78.4 91.2 91.2 80 20.8 400 20.8 400 20.8s320 0 400-20.8c44.8-11.2 78.4-46.4 91.2-91.2C1024 678.4 1024 512 1024 512s0-166.4-20.8-246.4z m-593.6 400V358.4L675.2 512 409.6 665.6z"
+                        fill="currentColor"
+                    ></path>
+                </svg>
+                {{ ss.tab1 }}
+            </button>
+            {%- assign index = index | plus: 1 -%}
+        {%- endif -%}
+        {%- if videos.size > 0 -%}
+            <button is="magnet-button" data-proxy="tab" node-name="tab" data-index="{{ index }}"
+                    class="button-fold flex-center relative">
+                <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                    <path
+                        d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9z m0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zM725.5 250.7c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9c-0.1-26.6-21.4-47.9-47.9-47.9z"
+                        fill="currentColor"
+                    ></path>
+                    <path
+                        fill="currentColor"
+                        d="M911.8 512c0-55.2 0.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-0.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-0.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9 0.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165z m-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                    ></path>
+                </svg>
+                {{ ss.tab2 }}
+            </button>
+            {%- assign index = index | plus: 1 -%}
+        {%- endif -%}
+        {%- if tiktoks.size > 0 -%}
+            <button is="magnet-button" data-proxy="tab" node-name="tab" data-index="{{ index }}"
+                    class="button-fold flex-center relative">
+                <svg class="icon" viewBox="0 0 1024 1024"
+                     xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                    <path
+                        d="M899.982222 233.585778c0-60.512711-49.055289-109.568-109.568-109.568H233.585778c-60.512711 0-109.568 49.055289-109.568 109.568v556.828444c0 60.513849 49.055289 109.568 109.568 109.568h556.828444c60.512711 0 109.568-49.054151 109.568-109.568V233.585778zM766.862222 462.450916c-50.062222 0.559787-96.711111-14.576071-137.671111-42.607503v196.778667c0 87.457564-59.865316 162.583893-144.519395 182.204871-115.491271 26.348658-213.25824-57.183573-225.589476-156.973511-12.894436-99.792213 50.74944-187.250916 148.297956-206.873031 19.061191-3.923058 47.730916-3.923058 62.522026-0.559787v105.396907c-4.551111-1.118436-8.813227-2.241422-13.297209-2.801209-38.12352-6.728818-75.046684 12.332373-90.18368 47.091484-15.135858 34.761387-5.005084 75.124053 25.828694 98.67264 25.787733 20.181902 54.400569 22.983111 83.552711 9.527752 29.15328-12.89216 44.82048-36.438471 48.182613-68.394098 0.560924-4.482844 0.530204-9.530027 0.530205-14.576071v-378.424889c0-10.651876 0.083058-10.184249 10.734933-10.184249h83.533369c6.167893 0 8.411591 0.885191 8.972515 8.177209 4.481707 65.031964 53.856711 120.416711 117.20704 128.827164 6.72768 1.120711 13.93664 1.564444 21.901085 2.124231l-0.002276 102.593423z"
+                        fill="currentColor"></path>
+                </svg>
+                {{ ss.tab3 }}
+            </button>
+            {%- assign index = index | plus: 1 -%}
+        {%- endif -%}
+    {%- endcapture -%}
+    {%- if slide_tabs != blank -%}
         <div class="page-width">
-            <div class="slide-tabs flex-left">
-                <button is="magnet-button" data-proxy="tab" node-name="tab" data-index="0" class="button-fold flex-center active relative">
-                    <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-                        <path
-                            d="M1003.2 265.6c-11.2-44.8-46.4-78.4-91.2-91.2-80-20.8-400-20.8-400-20.8s-320 0-400 20.8c-44.8 11.2-78.4 46.4-91.2 91.2C0 345.6 0 512 0 512s0 166.4 20.8 246.4c11.2 44.8 46.4 78.4 91.2 91.2 80 20.8 400 20.8 400 20.8s320 0 400-20.8c44.8-11.2 78.4-46.4 91.2-91.2C1024 678.4 1024 512 1024 512s0-166.4-20.8-246.4z m-593.6 400V358.4L675.2 512 409.6 665.6z"
-                            fill="currentColor"
-                        ></path>
-                    </svg>
-                    {{ ss.tab1 }}
-                </button>
-                <button is="magnet-button" data-proxy="tab" node-name="tab" data-index="1" class="button-fold flex-center relative">
-                    <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-                        <path
-                            d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9z m0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zM725.5 250.7c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9c-0.1-26.6-21.4-47.9-47.9-47.9z"
-                            fill="currentColor"
-                        ></path>
-                        <path
-                            fill="currentColor"
-                            d="M911.8 512c0-55.2 0.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-0.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-0.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9 0.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165z m-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
-                        ></path>
-                    </svg>
-                    {{ ss.tab2 }}
-                </button>
+            <div class="slide-tabs hide-scroll-bar flex-left">
+                {{ slide_tabs }}
             </div>
         </div>
     {%- endif -%}
@@ -598,58 +768,132 @@
                 {%- endfor -%}
             </slide-element>
         {%- endif -%}
+        {%- if tiktoks.size > 0 -%}
+            <slide-element buttons class="media-content" node-name="panel">
+                {%- for block in tiktoks -%}
+                    {%- assign bs = block.settings -%}
+                    <div class="card-item flex-between relative">
+                        {%- render 'video',
+                            video: bs.video,
+                            muted: true,
+                            loop: bs.enable_video_looping,
+                            cover_image: bs.cover_image,
+                            show_play_button: false,
+                            play_icon: ss.play_button_icon,
+                            class: 'media block w-full h-full relative'
+                        -%}
+                        <div class="media-info absolute z-1">
+                            <div class="name fw-700 lh-2">{{ bs.title }}</div>
+                            <div class="intro lh-2">{{ bs.intro }}</div>
+                        </div>
+                        <div class="action-wrap flex-center-col">
+                            {%- if  bs.avatar != blank -%}
+                                <div class="item avatar overflow-hidden flex-center">
+                                    {%- render 'global-image', image: bs.avatar, image_size: 48, media_type: 'icon' -%}
+                                </div>
+                            {%- endif -%}
+                            <div class="flex-center-col">
+                                <a href="{{ bs.like_url }}" class="item flex-center">
+                                    <svg class="svg-icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                        <path
+                                            d="M1024.549 360.609c0-170.492-133.815-309.265-298.055-309.265-81.129 0-157.91 34.998-213.344 94.701-55.509-59.702-132.367-94.701-213.344-94.701C135.49 51.344 1.751 190.041 1.751 360.609c0 5.719 0.534 10.827 0.991 15.021-0.076 1.373-0.152 2.745-0.152 4.194 0 30.193 7.319 63.361 21.73 98.59 0.458 1.295 0.915 2.516 1.449 3.657 90.812 217.844 440.412 468.474 455.279 479.985 9.227 7.092 20.205 10.6 31.263 10.6 11.209 0 22.266-3.659 31.566-10.903 12.733-9.911 310.941-224.551 429.279-427.603 4.498-6.861 7.854-13.494 10.828-19.215 0.914-1.829 1.753-3.658 2.744-5.413l0.382-0.839c0.382-0.686 0.839-1.449 1.296-2.059 7.091-13.802 12.732-26.611 17.232-39.116 12.274-32.177 18.3-60.847 18.3-87.61 0-2.058-0.077-3.888-0.229-5.414C1024.093 370.979 1024.549 366.251 1024.549 360.609z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <span class="num lh-2">{% if bs.like > 999 %}999+{% else %}{{ bs.like }}{% endif %}</span>
+                            </div>
+                            <div class="flex-center-col">
+                                <a href="{{ bs.news_url }}" class="item flex-center">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                        <path
+                                            d="M512.56888889 23.552c-282.39644445 0-509.72444445 198.88355555-509.72444444 444.07466667 0 150.98311111 87.04 284.21688889 218.45333333 365.90933333v136.76088889c0 17.74933333 12.40177778 30.15111111 28.44444444 30.15111111 5.34755555 0 10.69511111-1.82044445 14.22222223-3.52711111L402.432 904.53333333c35.49866667 7.05422222 70.99733333 8.87466667 108.31644445 8.87466667C793.25866667 913.408 1020.58666667 714.52444445 1020.58666667 469.33333333c1.70666667-246.89777778-227.328-445.78133333-508.01777778-445.78133333zM283.42044445 540.44444445c-33.792 0-60.416-28.44444445-60.416-60.416 0-33.792 28.44444445-60.416 60.416-60.416 33.792 0 60.416 28.44444445 60.416 60.416 1.70666667 31.97155555-26.624 60.416-60.416 60.416z m232.67555555 0c-33.792 0-60.416-28.44444445-60.416-60.416 0-33.792 28.44444445-60.416 60.416-60.416 33.792 0 60.416 28.44444445 60.416 60.416s-28.44444445 60.416-60.416 60.416z m223.80088889 0c-33.792 0-60.416-28.44444445-60.416-60.416 0-33.792 28.44444445-60.416 60.416-60.416 33.792 0 60.416 28.44444445 60.416 60.416S773.68888889 540.44444445 739.89688889 540.44444445z m0 0"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <span class="num lh-2">{% if bs.news > 999 %}999+{% else %}{{ bs.news }}{% endif %}</span>
+                            </div>
+                            <div class="flex-center-col">
+                                <a href="{{ bs.favorite_url }}" class="item flex-center">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                        <path
+                                            d="M821.1 41.5H184.7c-34.9 1.8-62.9 30-64.4 65v843c0 0.7 0 1.3 0.1 2 0 0.3 0 0.6 0.1 1 0 0.3 0 0.7 0.1 1 0 0.4 0.1 0.8 0.1 1.2 0 0.3 0.1 0.5 0.1 0.8 0.1 0.4 0.1 0.9 0.2 1.3 0 0.2 0.1 0.4 0.1 0.7 0.1 0.4 0.2 0.9 0.3 1.3 0.1 0.2 0.1 0.4 0.1 0.6l0.3 1.2c0.1 0.2 0.1 0.5 0.2 0.7 0.1 0.4 0.2 0.8 0.4 1.1 0.1 0.3 0.2 0.5 0.3 0.8 0.1 0.3 0.3 0.7 0.4 1l0.3 0.9c0.1 0.3 0.3 0.6 0.4 0.9 0.1 0.3 0.3 0.7 0.4 1 0.1 0.2 0.2 0.5 0.4 0.7 0.2 0.4 0.4 0.7 0.5 1.1 0.1 0.2 0.2 0.4 0.4 0.6 0.2 0.4 0.4 0.7 0.6 1.1 0.1 0.2 0.2 0.4 0.4 0.6 0.2 0.4 0.5 0.7 0.7 1.1 0.1 0.2 0.3 0.4 0.4 0.6 0.2 0.4 0.5 0.7 0.8 1.1 0.2 0.2 0.3 0.4 0.5 0.6 0.2 0.3 0.5 0.6 0.7 0.9 0.2 0.3 0.5 0.5 0.7 0.8 0.2 0.2 0.4 0.5 0.6 0.7 0.5 0.5 0.9 1 1.4 1.5 0.5 0.5 1 0.9 1.5 1.4 0.2 0.2 0.5 0.4 0.7 0.6 0.3 0.2 0.5 0.5 0.8 0.7 0.3 0.3 0.6 0.5 0.9 0.7 0.2 0.2 0.4 0.3 0.6 0.5 0.4 0.3 0.7 0.5 1.1 0.8 0.2 0.1 0.4 0.3 0.6 0.4 0.4 0.2 0.7 0.5 1.1 0.7 0.2 0.1 0.4 0.2 0.6 0.4 0.4 0.2 0.7 0.4 1.1 0.6 0.2 0.1 0.4 0.2 0.6 0.4 0.4 0.2 0.7 0.4 1.1 0.5 0.2 0.1 0.5 0.2 0.7 0.4 0.3 0.2 0.7 0.3 1 0.4 0.3 0.1 0.6 0.3 0.9 0.4l0.9 0.3c0.3 0.1 0.7 0.3 1 0.4 0.3 0.1 0.5 0.2 0.8 0.3 0.4 0.1 0.8 0.3 1.1 0.4 0.2 0.1 0.5 0.1 0.7 0.2l1.2 0.3c0.2 0.1 0.4 0.1 0.7 0.2 0.4 0.1 0.9 0.2 1.3 0.3 0.2 0 0.4 0.1 0.7 0.1 0.4 0.1 0.9 0.2 1.3 0.2 0.3 0 0.5 0.1 0.8 0.1 0.4 0.1 0.8 0.1 1.2 0.1 0.3 0 0.7 0.1 1 0.1 0.3 0 0.6 0.1 1 0.1 0.7 0 1.3 0.1 2 0.1s1.4 0 2-0.1c0.3 0 0.6 0 1-0.1 0.3 0 0.7 0 1-0.1 0.4 0 0.8-0.1 1.2-0.1 0.3 0 0.5-0.1 0.8-0.1 0.4-0.1 0.9-0.1 1.3-0.2 0.2 0 0.4-0.1 0.7-0.1 0.4-0.1 0.9-0.2 1.3-0.3 0.2-0.1 0.4-0.1 0.7-0.2l1.2-0.3c0.2-0.1 0.5-0.1 0.7-0.2 0.4-0.1 0.8-0.2 1.1-0.4 0.3-0.1 0.5-0.2 0.8-0.3 0.3-0.1 0.7-0.3 1-0.4l0.9-0.3c0.3-0.1 0.6-0.3 0.9-0.4 0.3-0.1 0.7-0.3 1-0.4 0.2-0.1 0.5-0.2 0.7-0.4 0.4-0.2 0.7-0.4 1.1-0.5 0.2-0.1 0.4-0.2 0.6-0.4 0.4-0.2 0.7-0.4 1.1-0.6 0.2-0.1 0.4-0.2 0.6-0.4 0.4-0.2 0.8-0.5 1.1-0.7 0.2-0.1 0.4-0.3 0.6-0.4 0.4-0.2 0.7-0.5 1.1-0.8 0.2-0.2 0.4-0.3 0.6-0.5 0.3-0.2 0.6-0.5 1-0.7 0.3-0.2 0.5-0.4 0.8-0.7 0.2-0.2 0.5-0.4 0.7-0.6 0.5-0.4 1-0.9 1.4-1.4l312-312 312 312c8.1 8.1 18.8 12.1 29.5 12h0.5c22.6 0 41-18.3 41-41V107.3C884 72 856.1 43.5 821.1 41.5z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <span class="num lh-2">{% if bs.favorite > 999 %}999+{% else %}{{ bs.favorite }}{% endif %}</span>
+                            </div>
+                            <div class="flex-center-col">
+                                <a href="{{ bs.share_url }}" class="item flex-center">
+                                    <svg class="svg-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                        <path
+                                            d="M1014.89 411.786L650.477 10.932c-14.577-14.576-36.441-14.576-51.018 0-14.576 14.577-14.576 21.865-14.576 36.442v211.36c-298.819 0-583.06 247.8-583.06 546.618 0 80.171 36.44 182.207 72.882 218.648 43.73-225.936 269.665-400.854 510.178-400.854v218.648c0 7.288 0 14.576 7.288 29.153 14.576 14.576 43.73 7.288 51.018 0L1007.6 477.38c14.577-14.577 14.577-29.153 14.577-36.441 0-7.289 0-21.865-7.288-29.154z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <span class="num lh-2">{% if bs.share > 999 %}999+{% else %}{{ bs.share }}{% endif %}</span>
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </slide-element>
+        {%- endif -%}
     </div>
 </div>
 {%- if videos.size > 0 -%}
-<script>
-    $heybike.on('DOMContentLoaded', () => {
-        const node = document.getElementById('{{ section.id }}-video');
-        const nodeList = $heybike.getNodeList(node);
+    <script>
+        $heybike.on('DOMContentLoaded', () => {
+            const node = document.getElementById('{{ section.id }}-video');
+            const nodeList = $heybike.getNodeList(node);
 
-        $heybike.tabSwitch({
-            root: node,
-            nodeList
-        });
-        let current = 0;
-        const onResetTemp = (index, key) => {
-            const elem = nodeList[`${key}_kol_${index}`];
-            if (elem?.tagName.toLocaleUpperCase() !== 'video') {
-                const templateElement = elem.querySelector(`template`);
-                if (templateElement) {
-                    const media = templateElement.content.firstElementChild.cloneNode(true);
-                    elem.replaceWith(media);
-                    nodeList[`${key}_kol_${index}`] = media;
+            $heybike.tabSwitch({
+                root: node,
+                nodeList,
+                device: 'mobile'
+            });
+            let current = 0;
+            const onResetTemp = (index, key) => {
+                const elem = nodeList[`${key}_kol_${index}`];
+                if (elem?.tagName.toLocaleUpperCase() !== 'video') {
+                    const templateElement = elem.querySelector(`template`);
+                    if (templateElement) {
+                        const media = templateElement.content.firstElementChild.cloneNode(true);
+                        elem.replaceWith(media);
+                        nodeList[`${key}_kol_${index}`] = media;
+                    }
                 }
             }
-        }
 
-        const onPlay = (index) => {
-            const key = $heybike.isMobile ? 'mb' : 'pc';
-            onResetTemp(index, key);
-            nodeList[`${key}_kol_${index}`]?.play();
-        }
-        const onPause = (index) => {
-            const key = $heybike.isMobile ? 'mb' : 'pc';
-            onResetTemp(index, key);
-            nodeList[`${key}_kol_${index}`]?.pause();
-        }
-
-        $heybike.inView(nodeList.panel[1], () => {
-            onPlay(current);
-            return () => {
-                onPause(current);
+            const onPlay = (index) => {
+                const key = $heybike.isMobile ? 'mb' : 'pc';
+                onResetTemp(index, key);
+                nodeList[`${key}_kol_${index}`]?.play();
             }
-        });
+            const onPause = (index) => {
+                const key = $heybike.isMobile ? 'mb' : 'pc';
+                onResetTemp(index, key);
+                nodeList[`${key}_kol_${index}`]?.pause();
+            }
 
-        nodeList.panel[1].addEventListener('slider:change', (e) => {
-            $heybike.debounce(() => {
-                onPause(current);
-                current = e.detail.currentPage;
+            $heybike.inView(nodeList.panel[1], () => {
                 onPlay(current);
-            }, '{{ section.id }}');
+                return () => {
+                    onPause(current);
+                }
+            });
+
+            nodeList.panel[1].addEventListener('slider:change', (e) => {
+                $heybike.debounce(() => {
+                    onPause(current);
+                    current = e.detail.currentPage;
+                    onPlay(current);
+                }, '{{ section.id }}');
+            });
         });
-    });
-</script>
+    </script>
 {%- endif -%}
 {% schema %}
 {
@@ -866,6 +1110,12 @@
       "default": "Instagram videos"
     },
     {
+      "type": "text",
+      "id": "tab3",
+      "label": "Tiktok video text",
+      "default": "Tiktok videos"
+    },
+    {
       "type": "color",
       "id": "tab_color",
       "label": "Tab text color",
@@ -1003,6 +1253,12 @@
           "content": "Content settings"
         },
         {
+          "type": "color",
+          "id": "slide_button_color",
+          "label": "Slide button color",
+          "default": "#fbe309"
+        },
+        {
           "type": "image_picker",
           "id": "desktop_image",
           "label": "Desktop image"
@@ -1093,6 +1349,97 @@
           "id": "author",
           "label": "Author",
           "default": "Electric Revolution"
+        }
+      ]
+    },
+    {
+      "type": "tiktok",
+      "name": "TikTok",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Desktop video"
+        },
+        {
+          "type": "video",
+          "id": "video_mobile",
+          "label": "Mobile video"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "Desktop cover image"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image_mobile",
+          "label": "Mobile cover image"
+        },
+        {
+          "type": "header",
+          "content": "Content settings"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Magnetic Emergency Switch"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Intro",
+          "default": "Hit a view milestone? Here’s how"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "type": "number",
+          "id": "like",
+          "label": "Like",
+          "default": 99
+        },
+        {
+          "type": "url",
+          "id": "like_url",
+          "label": "Like url"
+        },
+        {
+          "type": "number",
+          "id": "news",
+          "label": "News",
+          "default": 99
+        },
+        {
+          "type": "url",
+          "id": "news_url",
+          "label": "News url"
+        },
+        {
+          "type": "number",
+          "id": "favorite",
+          "label": "Favorite",
+          "default": 99
+        },
+        {
+          "type": "url",
+          "id": "favorite_url",
+          "label": "Favorite url"
+        },
+        {
+          "type": "number",
+          "id": "share",
+          "label": "Share",
+          "default": 99
+        },
+        {
+          "type": "url",
+          "id": "share_url",
+          "label": "Share url"
         }
       ]
     }

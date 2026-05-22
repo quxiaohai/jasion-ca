@@ -9,6 +9,18 @@
 }
 .slider--button .tw-mobile--dots .button {
     --buttons-width: 46px;
+    transition: background-color 0.3s;
+}
+.theme-dark .tw-slider-pointers .button--secondary[disabled] {
+    background-color: #888b93;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.theme-dark .tw-slider-pointers .button--secondary:not([disabled]) {
+    background-color: #ff981d;
+}
+.theme-dark .tw-slider-pointers .button--secondary:not([disabled]):hover {
+    background-color: #b96600;
 }
 .slider--button .tw-mobile--dots .button .btn-text .icon {
     width: 32px;

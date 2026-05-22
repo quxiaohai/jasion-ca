@@ -1,0 +1,376 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_th-gift-cards {
+        padding: 80px 0;
+        background-color: #160a03;
+    }
+    .mc_th-gift-cards .head-box {
+        padding-bottom: 26px;
+    }
+    .mc_th-gift-cards .title {
+        height: 118px;
+        font-size: 56px;
+        color: #ffffff;
+        font-style: italic;
+        align-items: flex-end;
+    }
+    .mc_th-gift-cards .title .image {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        transform: translateY(-2px);
+    }
+    .mc_th-gift-cards .intro {
+        padding-top: 8px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .mc_th-gift-cards .intro:before, .mc_th-gift-cards .intro:after {
+        content: "";
+        width: 66px;
+        height: 3px;
+        position: absolute;
+        left: -77px;
+        border-radius: 100%;
+        background-image: radial-gradient(#fff, #c5a610);
+    }
+    .mc_th-gift-cards .intro:after {
+        left: auto;
+        right: -77px;
+    }
+    .mc_th-gift-cards .tag {
+        top: 0;
+        left: 18px;
+        width: 65px;
+        height: 68px;
+        font-size: 40px;
+        color: #000000;
+        background: linear-gradient(to bottom, #ffeba3 1%, #ff9818, #ff9818 10%, #f99f48, #e78b00);
+        transform: skewX(-15deg) scaleX(0.9);
+        border-radius: 12px 0 12px 12px;
+        border: 1px solid #c9a001;
+    }
+    .mc_th-gift-cards .card-items {
+        gap: 36px;
+    }
+    .mc_th-gift-cards .card-item {
+        max-width: 349px;
+        aspect-ratio: 0.67;
+    }
+    .mc_th-gift-cards .image-backup {
+        position: absolute;
+        object-fit: fill;
+        left: 0;
+        top: 0;
+    }
+    .mc_th-gift-cards .card-content {
+        aspect-ratio: 1.8;
+        padding: 4px 20px;
+    }
+    .mc_th-gift-cards .card-content .price, .mc_th-gift-cards .card-content .name:before {
+        background: {{ ss.card_title_color }};
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .mc_th-gift-cards .card-content .name {
+        display: block;
+        color: #000;
+        line-height: 1.7;
+        font-size: 24px;
+        text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+    }
+    .mc_th-gift-cards .card-content .name:before {
+        content: attr(data-value);
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 24px;
+        text-shadow: none;
+    }
+    .mc_th-gift-cards .card-content .desc {
+        color: {{ ss.card_desc_color }};
+        line-height: 1.7;
+        font-size: 15px;
+    }
+    .mc_th-gift-cards .card-content .price {
+        padding-top: 6px;
+        font-size: 55px;
+    }
+    @media screen and (max-width: 1340px) {
+        .mc_th-gift-cards {
+            padding: 68px 0;
+        }
+        .mc_th-gift-cards .card-items {
+            gap: 2.6865671642vw;
+        }
+        .mc_th-gift-cards .card-content {
+            padding: 0.2985074627vw 1.4925373134vw;
+        }
+        .mc_th-gift-cards .card-content .name {
+            font-size: 1.7910447761vw;
+        }
+        .mc_th-gift-cards .card-content .name:before {
+            font-size: 1.7910447761vw;
+        }
+        .mc_th-gift-cards .card-content .desc {
+            font-size: 1.1194029851vw;
+        }
+        .mc_th-gift-cards .card-content .price {
+            padding-top: 0.447761194vw;
+            font-size: 4.1044776119vw;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_th-gift-cards {
+            padding: 1.5625rem 0;
+        }
+        .mc_th-gift-cards .head-box {
+            padding-bottom: 0.5078125rem;
+        }
+        .mc_th-gift-cards .title {
+            height: 2.9296875rem;
+            font-size: 1.40625rem;
+        }
+        .mc_th-gift-cards .title .image {
+            transform: translateY(0);
+        }
+        .mc_th-gift-cards .intro {
+            padding-top: 0.29296875rem;
+            font-size: 0.546875rem;
+        }
+        .mc_th-gift-cards .intro:before, .mc_th-gift-cards .intro:after {
+            width: 1.66015625rem;
+            height: 0.09765625rem;
+            left: -2.34375rem;
+        }
+        .mc_th-gift-cards .intro:after {
+            left: auto;
+            right: -2.34375rem;
+        }
+        .mc_th-gift-cards .tag {
+            top: 0;
+            left: 0.546875rem;
+            width: 1.7578125rem;
+            height: 1.85546875rem;
+            font-size: 1.171875rem;
+            border-radius: 0.3515625rem 0 0.3515625rem 0.3515625rem;
+        }
+        .mc_th-gift-cards .card-items {
+            gap: 3.1666666667vw;
+            flex-wrap: wrap;
+        }
+        .mc_th-gift-cards .card-item {
+            max-width: none;
+            width: 40.5vw;
+            border-radius: 0.390625rem;
+            border: 0.0390625rem solid #c9a001;
+        }
+        .mc_th-gift-cards .card-item:last-of-type {
+            width: 83.5vw;
+            aspect-ratio: 2.524;
+            justify-content: flex-end;
+        }
+        .mc_th-gift-cards .card-item:last-of-type .card-content {
+            width: 50%;
+            aspect-ratio: 1.39;
+        }
+        .mc_th-gift-cards .card-content {
+            aspect-ratio: 1.846;
+            padding: 0.078125rem 0.390625rem;
+        }
+        .mc_th-gift-cards .card-content .name {
+            font-size: 0.78125rem;
+        }
+        .mc_th-gift-cards .card-content .name:before {
+            font-size: 0.78125rem;
+        }
+        .mc_th-gift-cards .card-content .desc {
+            font-size: 0.546875rem;
+        }
+        .mc_th-gift-cards .card-content .price {
+            padding-top: 0.1171875rem;
+            font-size: 1.40625rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_th-gift-cards section--page">
+    <div class="head-box flex-center-col">
+        {%- if ss.show_title -%}
+            <div class="title lh-2 fw-900 flex-center">
+                {%- if ss.title_icon != blank -%}
+                    {%- render 'global-image', image: ss.title_icon, image_size: 400 -%}
+                {%- endif -%}
+                <span style="color: {{ ss.title_color }};">{{ ss.title }}</span>
+            </div>
+        {%- endif -%}
+        {%- if ss.show_description -%}
+            <div class="intro relative flex-center" style="color: {{ ss.description_color }};">{{ ss.description }}</div>
+        {%- endif -%}
+    </div>
+    <div class="card-items flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item overflow-hidden flex-bottom relative w-full">
+                {%- if bs.card_bg_image != blank -%}
+                    {%- render 'global-image',
+                        desktop_img: bs.card_bg_image,
+                        desktop_size: 400,
+                        desktop_class: 'image-backup',
+                        mobile_img: bs.mb_card_bg_image,
+                        mobile_size: 400,
+                        preload: ss.image_preload
+                    -%}
+                {%- endif -%}
+                {%- if bs.tag_text != blank -%}
+                    <div class="tag flex-center lh-2 absolute fw-700">{{ bs.tag_text }}</div>
+                {%- endif -%}
+                <div class="card-content w-full flex-center-col relative z-2">
+                    <div class="name text-center relative fw-900" data-value="{{ bs.title }}">{{ bs.title }}</div>
+                    <div class="desc text-center fw-700">{{ bs.text }}</div>
+                    {%- if bs.price != blank -%}
+                        <div class="price fw-900 lh-2">{{ bs.price }}</div>
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Th Gift Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Th Gift Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "title_icon",
+      "label": "Title icon"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "ANNIVERSARY"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Don’t Miss These 3 Exclusive Perks!"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#c0bfbf"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+
+    {
+      "type": "color_background",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "linear-gradient(to bottom, #ffcb00, #f69d45, #ff8100)"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#b3b3b3"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_bg_image",
+          "label": "Desktop card background image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_card_bg_image",
+          "label": "Mobile card background image"
+        },
+        {
+          "type": "text",
+          "id": "tag_text",
+          "label": "Tag text",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "$19.9 Add-On"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc",
+          "default": "<p>Buy a selected ebike, get phone holder for just $19.9!</p>"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Card price",
+          "default": "$19.9"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

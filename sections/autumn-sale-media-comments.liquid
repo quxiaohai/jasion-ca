@@ -6,7 +6,7 @@
     }
     .autumn-sale-media-comments .title {
         font-size: 36px;
-        color: #000000;
+        color: {{ ss.heading_color }};
         padding-bottom: 45px;
     }
     .autumn-sale-media-comments .autumn-content {
@@ -241,6 +241,12 @@
       "id": "heading",
       "label": "Title",
       "default": "Comments"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#000000"
     }
   ],
   "blocks": [

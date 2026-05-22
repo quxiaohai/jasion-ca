@@ -1,7 +1,7 @@
 {%- assign ss = section.settings -%}
 <style>
     .autumn-sale-sign-up {
-        height: 659px;
+        padding: {{ ss.padding }};
     }
     .autumn-sale-sign-up .backdrop-image {
         width: 100%;
@@ -92,7 +92,7 @@
     }
     @media screen and (max-width: 1023px) {
         .autumn-sale-sign-up {
-            height: 79.9074074074vw;
+            padding: {{ ss.mb_padding }};
         }
         .autumn-sale-sign-up .autumn-content {
             max-width: 92.4074074074vw;
@@ -239,6 +239,24 @@
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Backdrop Image"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Desktop padding",
+      "default": "144px 0"
+    },
+    {
+      "type": "text",
+      "id": "mb_padding",
+      "label": "Mobile padding",
+      "default": "58px 0"
+    },
+    {
+      "type": "number",
+      "id": "mb_page_bottom",
+      "label": "Mobile padding bottom",
+      "default": 144
     }
   ],
   "blocks": [

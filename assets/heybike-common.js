@@ -37,7 +37,7 @@ class HeybikeCommon {
             elems.forEach(elem => elem.getAttribute('data-lazy-import').split(',').forEach(url => this.import(url.trim())));
             this.off('DOMContentLoaded', domCb);
         }
-        this.on("DOMContentLoaded", domCb);
+        this.ready(domCb);
         this.on('resize');
     }
 
@@ -47,6 +47,14 @@ class HeybikeCommon {
         this.isMobile = /android|iphone|ipad|ipod|micromessenger/gi.test(navigator.userAgent.toLocaleLowerCase()) || this.screenWidth <= 1023;
         this.mobile.value = this.isMobile;
         this.width.value = this.screenWidth;
+    }
+
+    catch(fn, arg) {
+        try {
+            fn && fn(arg)
+        } catch (e) {
+            console.error('listener => ', e);
+        }
     }
 
     on(event, fn, node) {
@@ -69,9 +77,7 @@ class HeybikeCommon {
                     info.listener = ev => {
                         this.debounce(() => {
                             this._winSize();
-                            info.fns.forEach(fn => {
-                                fn && fn(ev);
-                            });
+                            info.fns.forEach(fn => this.catch(fn, ev));
                         }, 100, info.key);
                     }
                     node.addEventListener("resize", info.listener);
@@ -97,20 +103,16 @@ class HeybikeCommon {
                     const isDoc = info.node === document;
                     const left = isDoc ? (window.scrollX || document.documentElement.scrollLeft) : info.node.scrollLeft;
                     const top = isDoc ? (window.scrollY || document.documentElement.scrollTop) : info.node.scrollTop;
-                    info.fns.forEach(fn => {
-                        fn && fn({
-                            left,
-                            top,
-                            event
-                        });
-                    });
+                    info.fns.forEach(fn => this.catch(fn, {
+                        left,
+                        top,
+                        event
+                    }));
                 }
                 node.addEventListener("scroll", info.listener);
             } else {
                 info.listener = ev => {
-                    info.fns.forEach(fn => {
-                        fn && fn(ev);
-                    });
+                    info.fns.forEach(fn => this.catch(fn, ev));
                 }
                 switch (event) {
                     case "resize:mobile":
@@ -127,7 +129,8 @@ class HeybikeCommon {
         }
 
         if ((this._domLoaded && event === "DOMContentLoaded") || (this._loaded && event === "load")) {
-            fn && fn();
+            this.catch(fn);
+            this.off(event, fn);
         }
     }
 
@@ -348,6 +351,29 @@ class HeybikeCommon {
         }
     }
 
+    across() {
+        let now = 0;
+        let offsetX = 0;
+        let startX = null;
+        const mousedown = ev => {
+            now = Date.now();
+            startX = ev.pageX;
+            offsetX = 0;
+        }
+        const mousemove = ev => {
+            offsetX = ev.pageX - startX;
+        }
+        this.on('mousedown', mousedown);
+        this.on('mousemove', mousemove);
+        return {
+            off: () => {
+                this.off('mousedown', mousedown);
+                this.off('mousemove', mousemove);
+            },
+            is: () => Date.now() - now > 300 || Math.abs(offsetX) > 20
+        }
+    }
+
     proxy(node, type, fn, nl = false) {
         const nodeList = nl ? this.getNodeList(node) : null;
         const types = [].concat(type);
@@ -373,7 +399,7 @@ class HeybikeCommon {
     inView(node, fn, {root, margin, amount = "any"} = {}) {
         if ("undefined" === typeof IntersectionObserver) {
             let offset = null;
-            this.on("DOMContentLoaded", () => (offset = this.getOffset(node)));
+            this.ready(() => (offset = this.getOffset(node)));
             const mt = parseInt(margin?.split(' ')?.[0] || 100);
             const onScroll = ({top, event}) => {
                 if (offset && top + mt >= offset.top - this.screenHeight) {
