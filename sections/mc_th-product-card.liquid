@@ -532,8 +532,8 @@
                                     {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
                                     {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
                                     <div class="price flex-column">
-                                        <span class="fw-600 text1 lh-2">{{ text_list | first }}</span>
-                                        <span class="fw-700 through text2 lh-1">{{ text_list | last }}</span>
+                                        <span class="text3 through">{{ text_list | first }}</span>
+                                        <span>{{ text_list | last }}</span>
                                     </div>
                                 </div>
                                 <span class="plus lh-1 fw-900">+</span>
