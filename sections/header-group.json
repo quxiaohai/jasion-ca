@@ -44,7 +44,7 @@
           "settings": {
             "icon": "none",
             "text": "Get an extra C$100 OFF on orders C$1499+ with code:<strong> BIG100</strong>",
-            "link": "shopify://pages/flash-sale",
+            "link": "shopify://collections/all-products",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",
@@ -55,8 +55,8 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🎁Get the Thunder Pro for just C$1,809 with code <strong>MAYLONG50</strong>!",
-            "link": "shopify://products/thunder-pro",
+            "text": "⚡ Patrol Hit Lowest Prices EVER! Only <strong>C$1899</strong>!💥",
+            "link": "shopify://products/patrol-52",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",
@@ -67,7 +67,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "Hunter Pro: Save C$3,299+C$50 Off, C<strong>$1,624.5</strong> Per Unit",
+            "text": "Hunter Pro: Save C$3,299+C$100 Off, C<strong>$1,599.5</strong> Per Unit",
             "link": "shopify://products/hunter-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
