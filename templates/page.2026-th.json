@@ -43,7 +43,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "🌞Hot Summer Deal",
+            "title": "🎂 6TH Anniversary Mega Deal",
             "position": 6
           }
         },
@@ -125,7 +125,7 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon1.jpg",
-            "title": "<p>UP TO<strong>60% OFF</strong></p>",
+            "title": "<p>UP TO <strong>50% OFF</strong></p>",
             "text": "<p>Lowest prices of the year. No repeat after the sale ends.</p>"
           }
         },
@@ -133,12 +133,13 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon2.jpg",
-            "title": "<p>EXTRA <strong>$100 OFF</strong></p>",
-            "text": "<p>$100 OFF $1049+ incl. new arrivals — ends in 12H. <br/>Code: 6TH100</p>"
+            "title": "<p>EXTRA <strong>C$100 OFF</strong></p>",
+            "text": "<p>C$100 OFF C$1499+incl. new arrivals— ends in 12H. <br/>Code: 6TH100</p>"
           }
         },
         "card_UHJi8H": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon3.jpg",
             "title": "<p><strong>FREE $99 </strong>Anniversary Gift Box</p>",
@@ -231,6 +232,7 @@
         "card_3CyQPc",
         "card_HiQRwB"
       ],
+      "disabled": true,
       "name": "MC Th Gift Cards",
       "settings": {
         "page_color": "",
@@ -298,19 +300,17 @@
           "settings": {
             "product": "hunter-pro",
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$119</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1599</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/product-th-Ranger.png",
             "mb_product_image": "shopify://shop_images/product-th-RangerM.png",
             "show_spec": true,
-            "discount_text1": "<p><strong>$900 OFF</strong></p>",
-            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
-            "gift_image1": "shopify://shop_images/anniversary-card-gift-icon1.png",
-            "gift_content1": "WORTH\n$99",
-            "gift_image2": "shopify://shop_images/anniversary-card-gift-icon2.png",
-            "gift_content2": "$89.00|FREE\nPet Bike Basket",
+            "discount_text1": "<p><strong>C$1013 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA <strong>C$100 OFF</strong></p>",
+            "gift_content1": "",
+            "gift_content2": "",
             "gift_content3": "$89\nFREE",
             "button1": "Shop Now",
             "button1_text_color": "#ffffff",
@@ -327,21 +327,20 @@
           "settings": {
             "product": "thunder-pro-st",
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$119</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1599</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/product-th-Ranger2.png",
             "mb_product_image": "shopify://shop_images/product-th-Ranger2M.png",
             "show_spec": true,
-            "discount_text1": "<p><strong>$600 OFF</strong></p>",
-            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
-            "gift_image1": "shopify://shop_images/anniversary-card-gift-icon1.png",
-            "gift_content1": "WORTH\n$99",
+            "discount_text1": "<p><strong>C$1000 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA <strong>C$100 OFF</strong></p>",
+            "gift_content1": "",
             "gift_image2": "shopify://shop_images/anniversary-card-gift-icon3.png",
-            "gift_content2": "$69\nFREE",
+            "gift_content2": "C$69\nFREE",
             "gift_image3": "shopify://shop_images/anniversary-card-gift-icon4.png",
-            "gift_content3": "$89\nFREE",
+            "gift_content3": "C$89\nFREE",
             "button1": "Shop Now",
             "button1_text_color": "#ffffff",
             "button1_bg_color": "#db1109",
@@ -1033,6 +1032,7 @@
         "pay_Bd33R8",
         "form_zGMMxf"
       ],
+      "disabled": true,
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
