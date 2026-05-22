@@ -155,7 +155,7 @@
         "liquid_epRzrJ": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 <strong>Early Bird: C$2,099</strong> | May 19 – May 22<br>\n🎁 Exclusive Patrol Gifts Included<br>\n💰 Order & Win a 100% Refund | May 19 – May 22<br>\n⏳ <strong>Price Goes Up After May 22</strong>"
+            "liquid": "⚡ Patrol 6th Anniversary Exclusive Perks<br>\n🔥Anniversary Price — <strong>C$1999</strong> (Save C$1860)<br>\n🎁Extra <strong>C$100 OFF</strong> with Code: <strong>BIG100</strong> (Final C$1899)<br>\n🎁<strong>FREE</strong> CAP & Patrol Sticker (Limited Gift)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry! 51% OFF Massive Anniversary Blowout!"
           }
         },
         "anchor_8VjwmL": {
@@ -394,6 +394,7 @@
             "video": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
             "video_mobile": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "show_button1": true,
             "button1": "Unstoppable Power",
             "button1_color": "#ffffff",
@@ -416,6 +417,7 @@
             "video": "shopify://files/videos/Patrol52--260309.mov",
             "video_mobile": "shopify://files/videos/Patrol52--260309.mov",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7172.jpg",
             "mobile_image": "shopify://shop_images/IMG_7172.jpg",
             "show_button1": true,
@@ -440,6 +442,7 @@
             "video": "shopify://files/videos/AQOu8lEdAAR_Oc_o5RAs-USr6u5-c5lk4hO6lFsWVKZaJSmPBgVHACp7IzSOajded_1PAx52UX_2eRFdqAiS3mga.mp4",
             "video_mobile": "shopify://files/videos/AQOu8lEdAAR_Oc_o5RAs-USr6u5-c5lk4hO6lFsWVKZaJSmPBgVHACp7IzSOajded_1PAx52UX_2eRFdqAiS3mga.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/photo-37.jpg",
             "mobile_image": "shopify://shop_images/photo-37.jpg",
             "show_button1": true,
@@ -464,6 +467,7 @@
             "video": "shopify://files/videos/AQNGKtDMrMmGcl8St47el0vNKMuDZaTuXJxpZrtfoBLop4VPYBg9TAFefBHtLhLIomKMPPdpW-HFz7LTyaSM8f2o.mp4",
             "video_mobile": "shopify://files/videos/AQNGKtDMrMmGcl8St47el0vNKMuDZaTuXJxpZrtfoBLop4VPYBg9TAFefBHtLhLIomKMPPdpW-HFz7LTyaSM8f2o.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7309.jpg",
             "mobile_image": "shopify://shop_images/IMG_7309.jpg",
             "show_button1": true,
@@ -488,6 +492,7 @@
             "video": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
             "video_mobile": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/Untitled_design_2.png",
             "mobile_image": "shopify://shop_images/Untitled_design_2.png",
             "show_button1": true,
@@ -512,6 +517,7 @@
             "video": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
             "video_mobile": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7174.jpg",
             "mobile_image": "shopify://shop_images/IMG_7174.jpg",
             "show_button1": true,
@@ -536,6 +542,7 @@
             "video": "shopify://files/videos/下载.mp4",
             "video_mobile": "shopify://files/videos/下载.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/photo-13.jpg",
             "mobile_image": "shopify://shop_images/photo-13.jpg",
             "show_button1": true,
@@ -599,6 +606,7 @@
         "description_mb_margin_bottom": 30,
         "tab1": "YouTube video",
         "tab2": "Instagram videos",
+        "tab3": "Tiktok videos",
         "tab_color": "#ffffff",
         "tab_active_color": "#ffffff",
         "tab_bg_color": "#313131",
@@ -735,9 +743,9 @@
             "position": "1",
             "gift_image": "shopify://shop_images/120_59071a4f-1c56-43b9-a958-43a97adb4e14.png",
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
-            "title": "<p>Early Bird<br/><strong>Price C$2,099&lcub;C$3,859&rcub;</strong></p>",
+            "title": "<p>Early Bird<br/><strong>Price C$1,999&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: May 19 - May 22 </p>",
+            "date": "<p>Date: May 22- June 2 </p>",
             "desc": "<p>Don't Miss Out-Super Early Bird Tickets End May 22.</p>"
           }
         },
@@ -761,7 +769,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: May 19 - May 22 </p>",
+            "date": "<p>Date: May 22- June 2 </p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         }
