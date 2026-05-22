@@ -155,7 +155,7 @@
         "liquid_epRzrJ": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 Early Bird: C$4,048 for combo</strong>|May 19  – May 22<br>\n🎁 Exclusive Patrol Gifts Included<br>\n💰 Order & Win a 100% Refund | May 19  – May 22 <br>\n⏳ <strong>Price Goes Up After May 22</strong>"
+            "liquid": "⚡ Happy 6th Anniversary Ultimate Bundle Perks\n<br>\n🔥Anniversary Price — <strong>C$3899</strong><br>\n🎁Extra <strong>C$100 OFF</strong> with Code: <strong>BIG100</strong> (Final C$3799)<br>\n🎁<strong>FREE</strong> Double Cap & Sticker Packs (Limited Offer)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n🔥Hurry! Craziest 51% Combined Discount Ends Soon!"
           }
         },
         "anchor_8VjwmL": {
@@ -394,6 +394,7 @@
             "video": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
             "video_mobile": "shopify://files/videos/SnapInsta.to_AQPKNDbT8PE9iVH_vKkPDPgxKE4OMymNKFFRuRqp7gnzU4urDdEegZxRby32-wa9siwzBQFz6ev0RtkEMJlRWoyL.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "show_button1": true,
             "button1": "Unstoppable Power",
             "button1_color": "#ffffff",
@@ -416,6 +417,7 @@
             "video": "shopify://files/videos/AQNnqercbAfXVQ_0nsTkuwsTHfqEhq3JdF52WYxmSzLxvvMXMksFkwyg-G2xofKzu4n5TdVXM5SYRax_Pl-Rj747.mp4",
             "video_mobile": "shopify://files/videos/AQNnqercbAfXVQ_0nsTkuwsTHfqEhq3JdF52WYxmSzLxvvMXMksFkwyg-G2xofKzu4n5TdVXM5SYRax_Pl-Rj747.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/1_9b070638-b8b6-4be8-8ad5-ace3d14f9740.png",
             "show_button1": true,
             "button1": "Smooth",
@@ -439,6 +441,7 @@
             "video": "shopify://files/videos/下载 (1).mp4",
             "video_mobile": "shopify://files/videos/下载 (1).mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7312.jpg",
             "mobile_image": "shopify://shop_images/IMG_7312.jpg",
             "show_button1": true,
@@ -463,6 +466,7 @@
             "video": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
             "video_mobile": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/Untitled_design_2.png",
             "mobile_image": "shopify://shop_images/Untitled_design_2.png",
             "show_button1": true,
@@ -487,6 +491,7 @@
             "video": "shopify://files/videos/Patrol52--260309.mov",
             "video_mobile": "shopify://files/videos/Patrol52--260309.mov",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7172.jpg",
             "mobile_image": "shopify://shop_images/IMG_7172.jpg",
             "show_button1": true,
@@ -511,6 +516,7 @@
             "video": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
             "video_mobile": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
             "description": "",
+            "slide_button_color": "#fbe309",
             "desktop_image": "shopify://shop_images/IMG_7174.jpg",
             "mobile_image": "shopify://shop_images/IMG_7174.jpg",
             "show_button1": true,
@@ -573,6 +579,7 @@
         "description_mb_margin_bottom": 30,
         "tab1": "YouTube video",
         "tab2": "Instagram videos",
+        "tab3": "Tiktok videos",
         "tab_color": "#ffffff",
         "tab_active_color": "#ffffff",
         "tab_bg_color": "#313131",
