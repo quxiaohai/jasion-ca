@@ -531,7 +531,7 @@
                                 <div class="free-info flex-left">
                                     {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
                                     {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
-                                    <div class="price flex-column">
+                                    <div class="price lh-2 fw-700 flex-column">
                                         <span class="text3 through">{{ text_list | first }}</span>
                                         <span>{{ text_list | last }}</span>
                                     </div>
