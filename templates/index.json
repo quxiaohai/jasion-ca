@@ -691,8 +691,8 @@
         "image_cx4dww": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2Patrol.jpg",
-            "image_mobile": "shopify://shop_images/2Patrol_M.jpg",
+            "image": "shopify://shop_images/5X-Hunter.jpg",
+            "image_mobile": "shopify://shop_images/5X-HunterM.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -700,7 +700,7 @@
             "subh_before": true,
             "text_size": "subtext-md",
             "button_label": "",
-            "button_link": "shopify://products/patrol-52",
+            "button_link": "shopify://products/jasion-x-hunter",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false,
