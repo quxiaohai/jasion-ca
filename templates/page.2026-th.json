@@ -24,8 +24,8 @@
         "pc_width": 1920,
         "mb_width": 750,
         "media_type": "image",
-        "pc_image_url": "shopify://shop_images/anniversary-banner.jpg",
-        "mb_image_url": "shopify://shop_images/anniversary-mb-banner.jpg",
+        "pc_image_url": "shopify://shop_images/a80feabc9847bb785e1fbd15840bd3bc.jpg",
+        "mb_image_url": "shopify://shop_images/M_0270d0fb-0ca1-4125-84ba-a70fa00c20c1.jpg",
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
@@ -125,7 +125,7 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon1.jpg",
-            "title": "<p>UP TO <strong>50% OFF</strong></p>",
+            "title": "<p>UP TO <strong>49% OFF</strong></p>",
             "text": "<p>Lowest prices of the year. No repeat after the sale ends.</p>"
           }
         },
