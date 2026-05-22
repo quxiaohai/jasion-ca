@@ -273,12 +273,12 @@
         "title_hidden": true,
         "title": "Electric Bikes",
         "title_color": "#ffffff",
-        "pc_image_url": "shopify://shop_images/1Thunder_Pro_ST_PC.jpg",
+        "pc_image_url": "shopify://shop_images/2_e67e5584-8d17-4f32-acc0-aaf1fbe41594.jpg",
         "image_ratio": "",
-        "mb_image_url": "shopify://shop_images/1Thunder_Pro_ST_527d225d-aa6a-4649-a096-c7368ee14715.jpg",
+        "mb_image_url": "shopify://shop_images/2_M.jpg",
         "mb_image_ratio": "",
         "image_preload": true,
-        "url": "shopify://products/thunder-pro",
+        "url": "shopify://products/hunter-pro",
         "service_display": "service-rows",
         "service_title_color": "#ffffff"
       }
