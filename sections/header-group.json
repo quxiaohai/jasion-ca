@@ -43,7 +43,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "⏰ Early Bird Deal: Get<strong> C$100 OFF</strong> the new Patrol. Spark your summer adventure today!",
+            "text": "Get an extra C$100 OFF on orders C$1499+ with code:<strong> BIG100</strong>",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
