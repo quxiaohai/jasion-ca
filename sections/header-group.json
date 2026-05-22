@@ -31,8 +31,8 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🍁 Happy Victoria Day! Get an extra C$50 OFF on orders C$1500+ with code: MAYLONG50",
-            "link": "",
+            "text": "🎉 Jasionbike 6th Anniversary Mega Sale: <strong>Up to 49% OFF + Free Gift Pack</strong>! 🎁",
+            "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",
