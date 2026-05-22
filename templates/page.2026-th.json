@@ -125,7 +125,7 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon1.jpg",
-            "title": "<p>UP TO<strong>60% OFF</strong></p>",
+            "title": "<p>UP TO <strong>49% OFF</strong></p>",
             "text": "<p>Lowest prices of the year. No repeat after the sale ends.</p>"
           }
         },
@@ -133,12 +133,13 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon2.jpg",
-            "title": "<p>EXTRA <strong>$100 OFF</strong></p>",
-            "text": "<p>$100 OFF $1049+ incl. new arrivals — ends in 12H. <br/>Code: 6TH100</p>"
+            "title": "<p>EXTRA <strong>C$100 OFF</strong></p>",
+            "text": "<p>C$100 OFF C$1499+ — ends in 12H. <br/>Code: 6TH100</p>"
           }
         },
         "card_UHJi8H": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image_icon": "shopify://shop_images/anniversary-card-icon3.jpg",
             "title": "<p><strong>FREE $99 </strong>Anniversary Gift Box</p>",
