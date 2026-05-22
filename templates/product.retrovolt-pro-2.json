@@ -28,7 +28,7 @@
         "inventory_pfgny7": {
           "type": "inventory",
           "settings": {
-            "custom_text": "⏳ Pre-Order: Ships within 15 business days",
+            "custom_text": "⏳ Pre-Order: Ships within 7 business days",
             "inventory_threshold": 12,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -82,13 +82,13 @@
             "heading": "Compatible Accessories",
             "gift_list": [
               "extra-one-year-warranty",
-              "fenders-for-jasion-eb7",
-              "anti-slip-rear-seat-copy"
+              "fenders-for-jasion-eb7"
             ],
             "product_list": [
               "bracketed-u-lock",
               "copy-of-jasion®bike-rack-pannier-bag",
-              "bag"
+              "bag",
+              "rear-seat"
             ]
           }
         },
@@ -174,7 +174,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "💐Double the Love this Mother's Day!<br>\n💖<strong>Get C$50 Off C$1500+ with code: MOM50</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n🎁 Hurry! Catch This Mother's Day Deal Before It’s Gone!<br>\n⚠️<span style=\"color: #e65100;\"><strong>Pre-sale Notice:</strong> Ships within 15 business days.</span><br>"
+            "liquid": "🍁Double the Ride, Double the Savings!<br>\n🎫<strong>Get C$50 Off C$1500+ with code: MAYLONG50</strong><br>\n✅Free Shipping + 2-Year Warranty<br>\n✅14-Day Easy Returns<br>\n⛺ Spark Your Summer Adventure Together Before This Deal Ends!<br>\n⚠️<span style=\"color: #e65100;\"><strong>Pre-sale Notice:</strong> Ships within 7 business days.</span><br>"
           }
         },
         "text_wt9CQN": {

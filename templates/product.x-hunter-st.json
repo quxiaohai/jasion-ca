@@ -28,7 +28,7 @@
         "inventory_mywmYW": {
           "type": "inventory",
           "settings": {
-            "custom_text": "Pre-Order, ship within 7 business days",
+            "custom_text": "In stock, ready to ship",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -82,15 +82,11 @@
             "heading": "Compatible Accessories",
             "gift_list": [
               "fenders-for-jasion-eb7",
-              "extra-one-year-warranty",
-              "copy-of-jasion®-bicycle-universal-mirrors"
+              "extra-one-year-warranty"
             ],
             "product_list": [
-              "jasion-ebike-rear-basket-copy",
-              "jasion-ebike®-front-basket-copy",
-              "jasion-ebike®-x-hunter-battery-pack",
-              "jasion-ebike®-super-bright-wide-range-front-ebike-light-with-usb",
-              "bracketed-u-lock"
+              "front-basket",
+              "rear-basket"
             ]
           }
         },
@@ -176,7 +172,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "👑Mother's Day Special<br>\n✅Free Shipping + 2 Years Warranty<br>\n✅14-Day Easy Returns<br>\n<span style=\"color: #FF6600;\"><strong>\n🎁 Hurry! Give Her The Best Gift Before This Deal Ends!<br>"
+            "liquid": "🍁Victoria Day Sale<br>\n✅Free Shipping + 2 Years Warranty<br>\n✅14-Day Easy Returns<br>\n⚡ Hurry! Lock in Your May Long Deal Before the Sale Ends!<br>"
           }
         },
         "text_wt9CQN": {

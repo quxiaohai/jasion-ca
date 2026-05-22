@@ -28,7 +28,7 @@
         "inventory_XD93jy": {
           "type": "inventory",
           "settings": {
-            "custom_text": "",
+            "custom_text": "In stock, ready to ship",
             "inventory_threshold": 10,
             "show_inventory_transfer": true,
             "show_inventory_quantity": "low",
@@ -155,7 +155,7 @@
         "liquid_epRzrJ": {
           "type": "liquid",
           "settings": {
-            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 <strong>Early Bird: C$2,099</strong> | May 8 – May 19<br>\n🎁 Exclusive Patrol Gifts Included<br>\n💰 Order & Win a 100% Refund | May 8 – May 19<br>\n⏳ <strong>Price Goes Up After May 19</strong>"
+            "liquid": "⚡ Patrol Launch Exclusive<br>\n🔥 <strong>Early Bird: C$2,099</strong> | May 19 – May 22<br>\n🎁 Exclusive Patrol Gifts Included<br>\n💰 Order & Win a 100% Refund | May 19 – May 22<br>\n⏳ <strong>Price Goes Up After May 22</strong>"
           }
         },
         "anchor_8VjwmL": {
@@ -737,8 +737,8 @@
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
             "title": "<p>Early Bird<br/><strong>Price C$2,099&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: May 8 - May 19 </p>",
-            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End May 19.</p>"
+            "date": "<p>Date: May 19 - May 22 </p>",
+            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End May 22.</p>"
           }
         },
         "card_2": {
@@ -761,7 +761,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: May 8 - May 19 </p>",
+            "date": "<p>Date: May 19 - May 22 </p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         }
