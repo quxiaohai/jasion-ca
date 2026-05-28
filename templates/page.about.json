@@ -771,12 +771,48 @@
         "content_CCe9GJ": {
           "type": "content",
           "settings": {
-            "image": "shopify://shop_images/2026.1.jpg",
-            "image_mobile": "shopify://shop_images/2026.3.jpg",
+            "image": "shopify://shop_images/3_62d1f58b-59f4-439d-92b9-9c43ad4cbb22.jpg",
+            "image_mobile": "shopify://shop_images/M3_c6eaae1e-b79c-4aac-ae4c-34e9dbd50328.jpg",
             "subheading": "2026.2",
             "heading": "Jasion Thunder Pro",
             "heading_tag": "h2",
-            "text": "<p>The result is Thunder Pro—a powerful, refined electric bike built to dominate streets and trails alike. With 1800W peak power, 35 MPH performance, dual suspension, hydraulic braking, and a 90-mile max range, it delivers an uncompromising ride that’s fast, capable, and comfortable. Designed to carry more, go farther, and ride harder—Thunder Pro is performance, perfected.</p>",
+            "text": "<p>Thunder Pro was born as the next evolution of Thunder, crafted for riders who demand more power, capability, and confidence. Driven by the same spirit of adventure and everyday practicality, it pushes the original vision further through refined engineering. From rugged trails and snowy paths to city streets, Thunder Pro delivers one seamless ride without compromise.</p>",
+            "button_label": "",
+            "button_link": "shopify://products/thunder-pro",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_VHbQdq": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/4_a4340956-8776-4b94-a6fd-7402d448813c.jpg",
+            "image_mobile": "shopify://shop_images/M4_236a08ef-563e-42c5-b115-b95bc7ac523d.jpg",
+            "subheading": "2026.2",
+            "heading": "Jasion Thunder Pro ST",
+            "heading_tag": "h2",
+            "text": "<p>Thunder Pro ST is the next evolution of Thunder, designed for riders seeking more power, capability, and confidence. Its low-step frame makes mounting easier and more comfortable, while still delivering seamless performance on trails, snowy paths, and city streets—adventure without compromise.</p>",
+            "button_label": "",
+            "button_link": "shopify://products/thunder-pro",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "content_9gK8ef": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/1_c68b1c81-024b-4e92-90f5-95914db1b2d2.jpg",
+            "image_mobile": "shopify://shop_images/M1_588871e3-708f-4dd5-bff7-949ad5cb461c.jpg",
+            "subheading": "2026.3",
+            "heading": "Jasion Patrol 52",
+            "heading_tag": "h2",
+            "text": "<p>Patrol represents a new category of riding—where regulation meets rebellion. Designed to comply with road standards while carrying the DNA of an off-road machine, it delivers a rare balance of control, capability, and freedom.</p>",
             "button_label": "",
             "button_link": "shopify://products/thunder-pro",
             "button_style": "primary",
@@ -798,7 +834,9 @@
         "content_yDWmM8",
         "content_ntik9a",
         "content_RjUngY",
-        "content_CCe9GJ"
+        "content_CCe9GJ",
+        "content_VHbQdq",
+        "content_9gK8ef"
       ],
       "settings": {
         "image_ratio": "adapt",
