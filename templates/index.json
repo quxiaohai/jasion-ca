@@ -586,12 +586,12 @@
         "collection": "",
         "products": [
           "hunter-pro",
-          "thunder-pro-st",
           "patrol-52",
-          "x-hunter-st",
           "retrovolt-pro",
-          "thunder-pro",
-          "patrol-52-2"
+          "thunder-pro-st",
+          "x-hunter-st",
+          "jasion-x-hunter",
+          "thunder-pro"
         ],
         "product_limit": 8,
         "columns": 4,
