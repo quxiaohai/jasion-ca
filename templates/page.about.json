@@ -255,6 +255,11 @@
       "settings": {
         "img_placeholder": false,
         "image": "shopify://shop_images/About_Us__2_720x350_f3ff080d-7b51-4176-be65-1da863d9fb2a.jpg",
+        "image1": "shopify://shop_images/1_c1844d1c-309d-489b-a667-dcd8256425b3.jpg",
+        "image2": "shopify://shop_images/2_6fc47336-630f-4a6a-8877-476701d3268e.jpg",
+        "image3": "shopify://shop_images/3_4282e7ec-9d6d-42c0-9cf0-17b6117c861f.jpg",
+        "image4": "shopify://shop_images/4_2a186eca-2216-4430-99ea-0ecb913bf5f5.jpg",
+        "image5": "shopify://shop_images/5_d0dc4f57-e171-4b39-97bc-befed09d18ba.jpg",
         "image_height": "adapt",
         "image_width": "medium",
         "layout": "image_first",
