@@ -1,3 +1,4 @@
+{%- assign ss = section.settings -%}
 <style>
   #shopify-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
@@ -6,6 +7,17 @@
     {%- if section.settings.image != blank and section.settings.image_height == 'adapt' %}
       --ratio-percent: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
     {% endif -%}
+  }
+
+  #shopify-section-{{ section.id }} .flickity-button {
+      z-index: 10;
+  }
+
+  #shopify-section-{{ section.id }} .flickity-page-dots {
+      position: absolute;
+      transform: translateY(-50px);
+      z-index: 10;
+      --color-foreground: 255 255 255;
   }
 
   {%- assign image_mobile = section.settings.image_mobile | default: section.settings.image -%}
@@ -31,8 +43,21 @@
     -%}
     <div class="image-with-text {% if with_background %} with-background{% endif %} lg:flex lg:gap-8{% if section.settings.layout == 'image_first' %} lg:flex-row{% else %} lg:flex-row-reverse{% endif %} overflow-hidden">
       <div class="image-with-text__item grow shrink-0{% if section.settings.image_width == 'small' %} lg:grow-0{% endif %} relative">
-        <div class="image-with-text__media h-full">
-          <media-element class="tw-rounded-2xl tw-overflow-hidden image-with-text__image block media--{{ section.settings.image_height }} mobile:media--{{ section.settings.image_height_mobile }} relative overflow-hidden"
+          {%- liquid
+              assign image_count = 0
+              for v in (1..6)
+                  assign image = 'image' | append: v
+                  if ss[image] != blank
+                      assign image_count = image_count | plus: 1
+                  endif
+              endfor
+              assign tag = 'div'
+              if image_count > 0
+                  assign tag = 'slide-element'
+              endif
+          -%}
+        <{{ tag }} autoplay dots buttons class="image-with-text__media h-full">
+          <media-element class="tw-rounded-2xl w-full tw-overflow-hidden image-with-text__image block media--{{ section.settings.image_height }} mobile:media--{{ section.settings.image_height_mobile }} relative overflow-hidden"
             {%- if section.settings.enable_parallax %} data-parallax="0.3" data-parallax-dir="{{ section.settings.parallax_direction }}"{% endif -%}
           >
             {% capture image_visible %}
@@ -56,8 +81,6 @@
             </video-media>
             {% else %}
             <picture class="media media--height block w-full h-full relative overflow-hidden {{ image_visible | strip  }}">
-              
-
               {%- if section.settings.image != blank -%}
                 {%- assign sizes = '(max-width: 767px) 100vw, 50vw' -%}
                 {%- if section.settings.image_mobile -%}
@@ -75,7 +98,19 @@
             </picture>
             {% endif %}
           </media-element>
-        </div>
+            {%- for v in (1..6) -%}
+                {%- assign image = 'image' | append: v -%}
+                {%- if ss[image] != blank -%}
+                    <media-element class="tw-rounded-2xl w-full tw-overflow-hidden image-with-text__image block media--{{ ss.image_height }} mobile:media--{{ ss.image_height_mobile }} relative overflow-hidden"
+                        {%- if ss.enable_parallax %} data-parallax="0.3" data-parallax-dir="{{ ss.parallax_direction }}"{% endif -%}>
+                        <picture class="media media--height block w-full h-full relative overflow-hidden {{ image_visible | strip  }}">
+                            {%- assign sizes = '(max-width: 767px) 100vw, 50vw' -%}
+                            {{- ss[image] | image_url: width: ss[image].width | image_tag: loading: 'lazy', sizes: sizes, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600', is: 'lazy-image' -}}
+                        </picture>
+                    </media-element>
+                {%- endif -%}
+            {%- endfor -%}
+        </{{ tag }}>
       </div>
 
       <div class="image-with-text__item grow shrink-0{% if section.settings.image_width == 'large' %} lg:grow-0{% endif %} {{ section.settings.content_position }}">
@@ -226,6 +261,36 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.global.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image #1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image #2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image #3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image #4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image5",
+      "label": "Image #5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image6",
+      "label": "Image #6"
     },
     {
       "type": "video",
