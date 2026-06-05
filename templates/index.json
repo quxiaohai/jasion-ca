@@ -585,12 +585,12 @@
         "pw-overflow-hidden": true,
         "collection": "",
         "products": [
-          "hunter-pro",
           "patrol-52",
+          "hunter-pro",
           "retrovolt-pro",
           "thunder-pro-st",
-          "x-hunter-st",
           "jasion-x-hunter",
+          "x-hunter-st",
           "thunder-pro"
         ],
         "product_limit": 8,
