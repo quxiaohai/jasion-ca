@@ -260,7 +260,7 @@
         "rounded": false,
         "show_title": true,
         "title": "Jasion Ebike Accessories",
-        "title_hidden": true,
+        "title_hidden": false,
         "title_tag": "h1"
       }
     },
