@@ -168,6 +168,7 @@
         "card_8NHhxC",
         "card_W3Gm4P"
       ],
+      "disabled": true,
       "name": "MC Fifa Discount Cards",
       "settings": {
         "page_color": "",
@@ -269,6 +270,7 @@
       "block_order": [
         "discount_popup"
       ],
+      "disabled": true,
       "name": "MC Fifa Spin",
       "settings": {
         "page_color": "",
@@ -305,16 +307,16 @@
           "settings": {
             "product": "hunter-pro",
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$999</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1649</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/fifa-hunter-pro.jpg",
             "mb_product_image": "shopify://shop_images/fifa-mb-hunter-pro.jpg",
             "show_spec": true,
-            "discount_text1": "<p><strong>$900 OFF</strong></p>",
+            "discount_text1": "<p><strong>C$1000 OFF</strong></p>",
             "discount_text1_bg_color": "#ff981d",
-            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA <strong>C$50 OFF</strong></p>",
             "discount_text2_bg_color": "#000000",
             "gift_content1": "WORTH\n$99",
             "gift_content2": "$89.00|FREE\nFree Pet Basket with Bundle Purchase",
@@ -334,16 +336,16 @@
           "settings": {
             "product": "thunder-pro-st",
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$1199</strong></p>",
+            "final_tag": "<p>Final Price <strong>$1649</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/fifa-thunder-pro.jpg",
             "mb_product_image": "shopify://shop_images/fifa-mb-thunder-pro.jpg",
             "show_spec": true,
-            "discount_text1": "<p><strong>$600 OFF</strong></p>",
+            "discount_text1": "<p><strong>C$1000 OFF</strong></p>",
             "discount_text1_bg_color": "#ff981d",
-            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA C<strong>$50 OFF</strong></p>",
             "discount_text2_bg_color": "#000000",
             "gift_image1": "shopify://shop_images/anniversary-card-gift-icon4.png",
             "gift_content1": "CS89\nFREEE",
@@ -443,19 +445,6 @@
             "button2_url": "shopify://products/retrovolt-pro"
           }
         },
-        "product_item_Y7Tb7d": {
-          "type": "product_item",
-          "settings": {
-            "product": "jasion-x-hunter",
-            "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/fifa-world-cup.png",
-            "logo_size": "small",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/jasion-x-hunter"
-          }
-        },
         "product_item_cwqA7b": {
           "type": "product_item",
           "settings": {
@@ -467,6 +456,19 @@
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/x-hunter-st"
+          }
+        },
+        "product_item_Y7Tb7d": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion-x-hunter",
+            "show_th_logo": true,
+            "anniversary_logo": "shopify://shop_images/fifa-world-cup.png",
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion-x-hunter"
           }
         },
         "product_item_qNkYPg": {
@@ -514,8 +516,8 @@
         "product_item_kLFM6J",
         "product_item_QRWTpM",
         "product_item_AK63Ad",
-        "product_item_Y7Tb7d",
         "product_item_cwqA7b",
+        "product_item_Y7Tb7d",
         "product_item_qNkYPg",
         "product_item_44gqyE",
         "product_item_dxWPHa"
