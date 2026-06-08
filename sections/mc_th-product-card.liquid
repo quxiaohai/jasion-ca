@@ -568,46 +568,48 @@
                                     </div>
                                 </div>
                             {%- endif -%}
-                            <div class="free-wrap flex-left">
-                                <div class="free-info flex-left">
-                                    {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
-                                    {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
-                                    <div class="price flex-column">
-                                        <span class="fw-600 text1 lh-2">{{ text_list | first }}</span>
-                                        <span class="fw-700 through text2 lh-1">{{ text_list | last }}</span>
+                            {%- if bs.gift_image1 != blank or bs.gift_image2 != blank or bs.gift_image3 != blank -%}
+                                <div class="free-wrap flex-left">
+                                    <div class="free-info flex-left">
+                                        {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
+                                        {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
+                                        <div class="price lh-2 fw-700 flex-column">
+                                            <span class="text3 through">{{ text_list | first }}</span>
+                                            <span>{{ text_list | last }}</span>
+                                        </div>
+                                    </div>
+                                    <span class="plus lh-1 fw-900">+</span>
+                                    <div class="free-info large{% if bs.gift_image3 != blank %}-xl{% endif %} flex-center">
+                                        {%- render 'global-image', image: bs.gift_image2, image_size: 200 -%}
+                                        {%- liquid
+                                            assign text_list = bs.gift_content2 | newline_to_br | split: '<br />'
+                                            assign first_list = text_list | first | split: '|'
+                                        -%}
+                                        {%- if first_list.size > 1 -%}
+                                            <div class="price flex-column">
+                                                <div class="lh-2 flex-left text5">
+                                                    <span class="through">{{ first_list | first }}</span>
+                                                    <span class="fw-700">{{ first_list | last }}</span>
+                                                </div>
+                                                <span class="text4 lh-4">{{ text_list | last }}</span>
+                                            </div>
+                                        {%- else -%}
+                                            <div class="price lh-2 fw-700 flex-column">
+                                                <span class="text3 through">{{ text_list | first }}</span>
+                                                <span>{{ text_list | last }}</span>
+                                            </div>
+                                        {%- endif -%}
+                                        {%- if bs.gift_image3 != blank -%}
+                                            {%- render 'global-image', image: bs.gift_image3, image_size: 200 -%}
+                                            {%- assign text_list = bs.gift_content3 | newline_to_br | split: '<br />' -%}
+                                            <div class="price lh-2 fw-700 flex-column">
+                                                <span class="text3 through">{{ text_list | first }}</span>
+                                                <span>{{ text_list | last }}</span>
+                                            </div>
+                                        {%- endif -%}
                                     </div>
                                 </div>
-                                <span class="plus lh-1 fw-900">+</span>
-                                <div class="free-info large{% if bs.gift_image3 != blank %}-xl{% endif %} flex-center">
-                                    {%- render 'global-image', image: bs.gift_image2, image_size: 200 -%}
-                                    {%- liquid
-                                        assign text_list = bs.gift_content2 | newline_to_br | split: '<br />'
-                                        assign first_list = text_list | first | split: '|'
-                                    -%}
-                                    {%- if first_list.size > 1 -%}
-                                        <div class="price flex-column">
-                                            <div class="lh-2 flex-left text5">
-                                                <span class="through">{{ first_list | first }}</span>
-                                                <span class="fw-700">{{ first_list | last }}</span>
-                                            </div>
-                                            <span class="text4 lh-4">{{ text_list | last }}</span>
-                                        </div>
-                                    {%- else -%}
-                                        <div class="price lh-2 fw-700 flex-column">
-                                            <span class="text3 through">{{ text_list | first }}</span>
-                                            <span>{{ text_list | last }}</span>
-                                        </div>
-                                    {%- endif -%}
-                                    {%- if bs.gift_image3 != blank -%}
-                                        {%- render 'global-image', image: bs.gift_image3, image_size: 200 -%}
-                                        {%- assign text_list = bs.gift_content3 | newline_to_br | split: '<br />' -%}
-                                        <div class="price lh-2 fw-700 flex-column">
-                                            <span class="text3 through">{{ text_list | first }}</span>
-                                            <span>{{ text_list | last }}</span>
-                                        </div>
-                                    {%- endif -%}
-                                </div>
-                            </div>
+                            {% endif %}
                         </div>
                         <div class="btn-group flex-left">
                             <button class="button flex-center"
