@@ -273,12 +273,12 @@
         "title_hidden": true,
         "title": "Electric Bikes",
         "title_color": "#ffffff",
-        "pc_image_url": "shopify://shop_images/2_e67e5584-8d17-4f32-acc0-aaf1fbe41594.jpg",
+        "pc_image_url": "shopify://shop_images/2Thunder_Pro_ST_f7d60a00-eb6b-41dd-843c-a18cc0a17197.jpg",
         "image_ratio": "",
-        "mb_image_url": "shopify://shop_images/2_M.jpg",
+        "mb_image_url": "shopify://shop_images/2Thunder_Pro_ST_M_9eef28b5-1bf2-47ec-a343-d530a74759e4.jpg",
         "mb_image_ratio": "",
         "image_preload": true,
-        "url": "shopify://products/hunter-pro",
+        "url": "shopify://products/retrovolt-pro",
         "service_display": "service-rows",
         "service_title_color": "#ffffff"
       }
