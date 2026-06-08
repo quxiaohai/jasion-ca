@@ -336,7 +336,7 @@
           "settings": {
             "product": "thunder-pro-st",
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$1649</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1649</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
@@ -345,7 +345,7 @@
             "show_spec": true,
             "discount_text1": "<p><strong>C$1000 OFF</strong></p>",
             "discount_text1_bg_color": "#ff981d",
-            "discount_text2": "<p>EXTRA C<strong>$50 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA <strong>C$50 OFF</strong></p>",
             "discount_text2_bg_color": "#000000",
             "gift_image1": "shopify://shop_images/anniversary-card-gift-icon4.png",
             "gift_content1": "CS89\nFREEE",
@@ -1050,6 +1050,7 @@
         "pay_Bd33R8",
         "form_zGMMxf"
       ],
+      "disabled": true,
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
