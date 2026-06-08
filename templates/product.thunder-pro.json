@@ -95,7 +95,7 @@
             "bg_color": "linear-gradient(180deg, rgba(255, 228, 134, 1), rgba(255, 199, 1, 1) 100%)",
             "show_image": true,
             "image": "shopify://shop_images/ab1d47899c80160ffccd36bac62e7b9c.png",
-            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Until June 7</p>",
+            "heading": "<p>Early Bird Gift   I  <strong>Limited Time </strong>Until June 15</p>",
             "gift_list": [
               "tail-bag",
               "ebike-mirrors"
@@ -204,7 +204,7 @@
         "liquid_Riat9U": {
           "type": "liquid",
           "settings": {
-            "liquid": "🎂Thunder Pro 6th Anniversary Exclusive Perks\n<br>\n🔥Anniversary Price — <strong>C$1699</strong> (Save C$1000)<br>\n🎁Extra <strong>C$100 OFF</strong> with Code: <strong>BIG100</strong> (Final C$1599)<br>\n🎁<strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Gift)<br>\n✅2-Year Warranty & 14-Day Easy Returns<br>\n⏰ Limited Time only, Price Goes Up After June 7!"
+            "liquid": "⚽ World Cup Matchday Specials<br>\n🔥 Matchday Price — <strong>C$1699</strong> (Save C$1000)<br>\n🏆 Extra <strong>C$50 OFF</strong> with Code: <strong>GOAL50</strong> (Final C$1649)<br>\n🎁 <strong>FREE</strong> Ebike Mirrors & Tail Bag (Limited Matchday Gift)<br>\n✅ 2-Year Warranty & 14-Day Easy Returns<br>\n⏰ Limited Time Only, Kickoff Your Next Adventure!"
           }
         },
         "text_wt9CQN": {
