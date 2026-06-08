@@ -1,0 +1,307 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_in-word-cards {
+        background-color: #f7f7f6;
+    }
+    .mc_in-word-cards .card-items {
+        gap: 80px;
+        align-items: stretch;
+    }
+    .mc_in-word-cards .card-item {
+        min-width: 226px;
+        height: 243px;
+    }
+    .mc_in-word-cards .card-item:before {
+        content: attr(data-order);
+        font-size: 346px;
+        font-weight: 900;
+        color: #efefee;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 1;
+        width: 226px;
+    }
+    .mc_in-word-cards .card-item .info {
+        text-align: center;
+        padding-top: 16px;
+    }
+    .mc_in-word-cards .card-item .name {
+        color: #dd8e1e;
+        font-size: 20px;
+    }
+    .mc_in-word-cards .card-item .desc {
+        padding-top: 10px;
+        font-size: 15px;
+        color: #959595;
+    }
+    .mc_in-word-cards .icon-wrap {
+        height: 90px;
+    }
+    .mc_in-word-cards .icon-wrap .image {
+        object-fit: contain;
+        max-height: 100%;
+        height: var(--height);
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_in-word-cards {
+            padding: 1.5625rem 0;
+        }
+        .mc_in-word-cards .card-items {
+            gap: 2.1875rem 0;
+            flex-wrap: wrap;
+            padding: 0 0.703125rem;
+        }
+        .mc_in-word-cards .card-item {
+            min-width: 50%;
+            width: 50%;
+            height: 8.515625rem;
+        }
+        .mc_in-word-cards .card-item:before {
+            font-size: 11.93359375rem;
+            width: 6.71875rem;
+            color: #ebebea;
+        }
+        .mc_in-word-cards .card-item .info {
+            padding-top: 0.78125rem;
+        }
+        .mc_in-word-cards .card-item .name {
+            font-size: 0.78125rem;
+            color: #000000;
+        }
+        .mc_in-word-cards .card-item .desc {
+            padding-top: 0.15625rem;
+            font-size: 0.625rem;
+            color: #585858;
+        }
+        .mc_in-word-cards .icon-wrap {
+            height: 3.125rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_in-word-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="card-items flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item relative flex-center-col" data-order="{{ forloop.index }}">
+                <div class="icon-wrap relative flex-center">
+                    {% render 'global-image', preload: ss.image_preload, media_type: 'icon', show_size: true, desktop_img: bs.image_icon, desktop_size: 200 %}
+                </div>
+                <div class="info relative">
+                    <div class="name fw-700 lh-3">{{ bs.title }}</div>
+                    {%- if bs.text != blank -%}
+                        <div class="desc lh-4">
+                            {{ bs.text }}
+                        </div>
+                    {%- endif -%}
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC In Word Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC In Word Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>How It Works</p>"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Desktop title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "title_mb_margin_bottom",
+      "label": "Mobile title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#dd8e1e"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#959595"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Card title",
+          "default": "<p>JOIN US</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc",
+          "default": "<p>Join Free</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

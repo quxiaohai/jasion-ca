@@ -1,0 +1,288 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_in-earn-cards {
+        padding: 80px 0;
+        background-color: #f7f7f6;
+    }
+    .mc_in-earn-cards .card-items {
+        gap: 27px 16px;
+        flex-wrap: wrap;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .mc_in-earn-cards .card-item {
+        width: 307px;
+        aspect-ratio: 1.3465;
+        background-image: linear-gradient(0deg, #1b1a1a 0%, #7b5826 0%, #db9531 0%, #ffd12e 100%), linear-gradient(#363636, #363636);
+        border-radius: 18px;
+        padding: 33px 34px 0;
+    }
+    .mc_in-earn-cards .card-item .info {
+        padding-top: 24px;
+    }
+    .mc_in-earn-cards .card-item .name {
+        color: #FFFFFF;
+        font-size: 30px;
+    }
+    .mc_in-earn-cards .card-item .desc {
+        padding-top: 8px;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .mc_in-earn-cards .icon-wrap {
+        width: 60px;
+        height: 60px;
+        background-color: #ffffff;
+    }
+    .mc_in-earn-cards .icon-wrap .image {
+        max-width: 56%;
+        max-height: 56%;
+        object-fit: contain;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_in-earn-cards {
+            padding: 1.5625rem 0;
+        }
+        .mc_in-earn-cards .card-items {
+            gap: 2.3333333333vw;
+        }
+        .mc_in-earn-cards .card-item {
+            width: 45.25vw;
+            border-radius: 0.3515625rem;
+            padding: 1.1328125rem 1.171875rem 0;
+        }
+        .mc_in-earn-cards .card-item .info {
+            padding-top: 0.9375rem;
+        }
+        .mc_in-earn-cards .card-item .name {
+            font-size: 1.03515625rem;
+        }
+        .mc_in-earn-cards .card-item .desc {
+            padding-top: 0.390625rem;
+            font-size: 0.6640625rem;
+        }
+        .mc_in-earn-cards .icon-wrap {
+            width: 2.08984375rem;
+            height: 2.08984375rem;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_in-earn-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="card-items flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item relative">
+                <div class="icon-wrap rounded-full flex-center">
+                    {% render 'global-image', preload: ss.image_preload, media_type: 'icon', show_size: true, desktop_img: bs.image_icon, desktop_size: 200 %}
+                </div>
+                <div class="info relative">
+                    <div class="name fw-900 lh-2">{{ bs.title }}</div>
+                    <div class=" fw-500 lh-2">{{ bs.text }}</div>
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC In Earn Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC In Earn Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>Ways to Earn</p>"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Desktop title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "title_mb_margin_bottom",
+      "label": "Mobile title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#dd8e1e"
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "Card desc color",
+      "default": "#959595"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Card title",
+          "default": "<p>+1000 PTS</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card desc",
+          "default": "<p>Signup</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

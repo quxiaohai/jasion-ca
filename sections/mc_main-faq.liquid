@@ -1,0 +1,619 @@
+{% assign ss = section.settings %}
+<style>
+    .mc_main-faq {
+        background-color: #ffffff;
+        padding: 80px 0;
+    }
+    .mc_main-faq .faq-content {
+        max-width: 1288px;
+        margin: 0 auto;
+        gap: 89px;
+    }
+    .mc_main-faq .nav-wrapper {
+        gap: 20px 0;
+        width: 300px;
+    }
+    .mc_main-faq .faq-wrapper {
+        flex: 1;
+        transform: translateY(-20px);
+        display: none;
+    }
+    .mc_main-faq .faq-wrapper.active {
+        display: block;
+    }
+    .mc_main-faq .faq-wrapper .accordion {
+        padding-bottom: 4px;
+    }
+    .mc_main-faq .faq-wrapper .accordion:last-of-type {
+        border-bottom: 1px solid rgb(var(--color-border));
+    }
+    .mc_main-faq .faq-wrapper .accordion[open] .plus-btn {
+        transform: rotate(45deg);
+    }
+    .mc_main-faq .faq-wrapper .answer {
+        padding-bottom: 20px;
+        font-size: 14px;
+        color: #434343;
+        line-height: 1.6;
+    }
+    .mc_main-faq .nav-item {
+        width: 100%;
+        height: 60px;
+        background-color: #e7e7e7;
+        color: #000000;
+        transition: background-color 0.3s linear;
+        transition-property: background-color, color;
+        font-size: 16px;
+    }
+    .mc_main-faq .nav-item.active {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .mc_main-faq .problem-box {
+        padding: 20px 0;
+    }
+    .mc_main-faq .problem-box .problem {
+        font-size: 16px;
+        color: #000000;
+    }
+    .mc_main-faq .problem-box .plus-btn {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s;
+    }
+    .mc_main-faq .problem-box .plus-btn:before, .mc_main-faq .problem-box .plus-btn:after {
+        content: "";
+        width: 16px;
+        height: 3px;
+        background: #000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mc_main-faq .problem-box .plus-btn:after {
+        width: 3px;
+        height: 16px;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_main-faq {
+            padding: 1.5625rem 0;
+        }
+        .mc_main-faq .faq-content {
+            gap: 1.953125rem;
+            flex-direction: column;
+        }
+        .mc_main-faq .nav-wrapper {
+            gap: 0.703125rem;
+            width: 100%;
+            overflow-x: auto;
+            white-space: wrap;
+            padding: 0 0.8984375rem;
+            flex-direction: row;
+        }
+        .mc_main-faq .faq-wrapper {
+            width: 100%;
+            transform: translateY(-1.171875rem);
+            padding: 0 0.8203125rem;
+        }
+        .mc_main-faq .faq-wrapper .accordion {
+            padding-bottom: 0.078125rem;
+        }
+        .mc_main-faq .faq-wrapper .accordion[open] .plus-btn {
+            transform: rotate(45deg);
+        }
+        .mc_main-faq .faq-wrapper .answer {
+            padding-bottom: 0.9765625rem;
+            font-size: 0.703125rem;
+        }
+        .mc_main-faq .nav-item {
+            width: auto;
+            height: 1.953125rem;
+            font-size: 0.703125rem;
+            padding: 0 1.1328125rem;
+            white-space: nowrap;
+        }
+        .mc_main-faq .problem-box {
+            padding: 1.171875rem 0 0.9765625rem;
+        }
+        .mc_main-faq .problem-box .problem {
+            font-size: 0.7421875rem;
+        }
+        .mc_main-faq .problem-box .plus-btn {
+            width: 10px;
+            height: 10px;
+        }
+        .mc_main-faq .problem-box .plus-btn:before, .mc_main-faq .problem-box .plus-btn:after {
+            width: 10px;
+            height: 2px;
+        }
+        .mc_main-faq .problem-box .plus-btn:after {
+            width: 2px;
+            height: 10px;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_main-faq section--page">
+    {%- render 'section-title', info: ss -%}
+    {%- assign faq_list = section.blocks | where: 'type', 'faq' -%}
+    <tab-panel class="faq-content w-full flex-between-top">
+        <ul class="nav-wrapper hide-scroll-bar flex-column">
+            {%- for block in faq_list -%}
+                {%- assign bs = block.settings -%}
+                <li class="nav-item cursor-pointer flex-center fw-700 lh-2 rounded-full{% if forloop.first %} active{% endif %}"
+                    data-index="{{ forloop.index0 }}"
+                    data-proxy="tab"
+                    node-name="tab">
+                    {{ bs.title }}
+                </li>
+            {%- endfor -%}
+        </ul>
+        {%- for block in faq_list -%}
+            {%- assign bs = block.settings -%}
+            <animate-element
+                node-name="panel"
+                data-repeat
+                class="faq-wrapper{% if forloop.first %} active{% endif %}">
+                {%- for j in (1..10) -%}
+                    {%- assign title = 'title_' | append: j -%}
+                    {%- assign title = bs[title] -%}
+                    {%- assign desc_html = 'answer_' | append: j -%}
+                    {% assign desc_html = bs[desc_html] %}
+                    {% assign default_active = false %}
+                    {%- assign default_open = 'default_open_' | append: j -%}
+                    {%- assign default_open = bs[default_open] -%}
+                    {% if default_open == "Yes" %}
+                        {% assign default_active = true %}
+                    {% endif %}
+                    {%- if title != blank -%}
+                        <details is="accordion-details" class="accordion"{% if default_active %} open{% endif %}>
+                            <summary class="problem-box cursor-pointer flex-between">
+                                <span class="problem lh-2 fw-700">{{ title }}</span>
+                                <span class="plus-btn rounded-full relative"> &nbsp; </span>
+                            </summary>
+                            <div class="answer">
+                                {{ desc_html }}
+                            </div>
+                        </details>
+                    {%- endif -%}
+                {%- endfor -%}
+            </animate-element>
+        {%- endfor -%}
+    </tab-panel>
+</div>
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>VIP Tiers and Benefits</p>"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Desktop title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "title_mb_margin_bottom",
+      "label": "Mobile title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Faq label"
+        },
+        {
+          "type": "header",
+          "content": "General FAQ"
+        },
+        {
+          "type": "select",
+          "id": "default_open_1",
+          "label": "Default Open #1",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_1",
+          "label": "Question #1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_1",
+          "label": "Answer #1"
+        },
+        {
+          "type": "select",
+          "id": "default_open_2",
+          "label": "Default Open #2",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_2",
+          "label": "Question #2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_2",
+          "label": "Answer #2"
+        },
+        {
+          "type": "select",
+          "id": "default_open_3",
+          "label": "Default Open #3",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_3",
+          "label": "Question #3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_3",
+          "label": "Answer #3"
+        },
+        {
+          "type": "select",
+          "id": "default_open_4",
+          "label": "Default Open #4",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_4",
+          "label": "Question #4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_4",
+          "label": "Answer #4"
+        },
+        {
+          "type": "select",
+          "id": "default_open_5",
+          "label": "Default Open #5",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_5",
+          "label": "Question #5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_5",
+          "label": "Answer #5"
+        },
+        {
+          "type": "select",
+          "id": "default_open_6",
+          "label": "Default Open #6",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_6",
+          "label": "Question #6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_6",
+          "label": "Answer #6"
+        },
+        {
+          "type": "select",
+          "id": "default_open_7",
+          "label": "Default Open #7",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_7",
+          "label": "Question #7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_7",
+          "label": "Answer #7"
+        },
+        {
+          "type": "select",
+          "id": "default_open_8",
+          "label": "Default Open #8",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_8",
+          "label": "Question #8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_8",
+          "label": "Answer #8"
+        },
+        {
+          "type": "select",
+          "id": "default_open_9",
+          "label": "Default Open #9",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_9",
+          "label": "Question #9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_9",
+          "label": "Answer #9"
+        },
+        {
+          "type": "select",
+          "id": "default_open_10",
+          "label": "Default Open #10",
+          "options": [
+            {
+              "value": "Yes",
+              "label": "Yes"
+            },
+            {
+              "value": "No",
+              "label": "No"
+            }
+          ],
+          "default": "No"
+        },
+        {
+          "type": "textarea",
+          "id": "title_10",
+          "label": "Question #10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer_10",
+          "label": "Answer #10"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "MC Main Faq"
+    }
+  ]
+}
+{% endschema %}

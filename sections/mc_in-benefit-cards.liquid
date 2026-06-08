@@ -1,0 +1,434 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_in-benefit-cards {
+        padding: 80px 0;
+        background-color: #f9f7fa;
+    }
+    .mc_in-benefit-cards .card-items {
+        gap: 31px;
+        padding-top: 110px;
+    }
+    .mc_in-benefit-cards .card-item {
+        width: 371px;
+        aspect-ratio: 0.5647;
+        background-image: linear-gradient(0deg, #1b1a1a 0%, #754828 0%, #ce7636 0%, #ffebdc 100%), linear-gradient(#363636, #363636);
+        border-radius: 20px;
+        padding-top: 138px;
+    }
+    .mc_in-benefit-cards .card-item .head {
+        font-size: 28px;
+        color: #ad5f26;
+        padding-bottom: 24px;
+    }
+    .mc_in-benefit-cards .card-item .head:before {
+        content: "";
+        width: 180px;
+        height: 1px;
+        background-color: #363636;
+        opacity: 0.32;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+    .mc_in-benefit-cards .logo {
+        position: absolute;
+        object-fit: fill;
+        height: auto;
+        left: 50%;
+        top: 0;
+        width: 221px;
+        transform: translate3d(-50%, -46%, 0);
+    }
+    .mc_in-benefit-cards .backdrop-img {
+        width: 86%;
+        bottom: 0;
+        left: 50%;
+        aspect-ratio: 1;
+        transform: translate3d(-50%, 0, 0);
+    }
+    .mc_in-benefit-cards .backdrop-img .image {
+        object-fit: contain;
+        transform: translateY(42%);
+    }
+    .mc_in-benefit-cards .items {
+        padding: 41px 29px 0;
+        gap: 20px 0;
+    }
+    .mc_in-benefit-cards .items .item {
+        gap: 15px;
+    }
+    .mc_in-benefit-cards .items .text {
+        font-size: 16px;
+        color: #000000;
+    }
+    .mc_in-benefit-cards .icon-wrap {
+        width: 40px;
+        height: 40px;
+        background-color: #FFFFFF;
+    }
+    .mc_in-benefit-cards .icon-wrap .image {
+        width: 56%;
+        height: 56%;
+        object-fit: contain;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_in-benefit-cards {
+            padding: 1.5625rem 0;
+        }
+        .mc_in-benefit-cards .card-items {
+            gap: 1.1328125rem;
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: 4.6875rem 0.83984375rem 0;
+        }
+        .mc_in-benefit-cards .card-item {
+            width: 14.19921875rem;
+            min-width: 14.19921875rem;
+            border-radius: 0.390625rem;
+            padding-top: 3.7109375rem;
+            aspect-ratio: 0.623;
+        }
+        .mc_in-benefit-cards .card-item .head {
+            font-size: 1.07421875rem;
+            color: #ad5f26;
+            padding-bottom: 0.625rem;
+        }
+        .mc_in-benefit-cards .card-item .head:before {
+            width: 7.03125rem;
+        }
+        .mc_in-benefit-cards .logo {
+            width: 6.875rem;
+            transform: translate3d(-50%, -54%, 0);
+        }
+        .mc_in-benefit-cards .items {
+            padding: 1.0546875rem 1.11328125rem 0;
+            gap: 0.76171875rem 0;
+        }
+        .mc_in-benefit-cards .items .item {
+            gap: 0.625rem;
+        }
+        .mc_in-benefit-cards .items .text {
+            font-size: 0.703125rem;
+        }
+        .mc_in-benefit-cards .icon-wrap {
+            width: 1.5234375rem;
+            height: 1.5234375rem;
+        }
+        .mc_in-benefit-cards .icon-wrap .image {
+            width: 56%;
+            height: 56%;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_in-benefit-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="card-items hide-scroll-bar flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item relative" style="background: {{ bs.card_bg_color }};">
+                {%- if bs.top_icon != blank -%}
+                    {%- render 'global-image',
+                        image: bs.top_icon,
+                        image_size: 400,
+                        class: 'logo'
+                    -%}
+                {%- endif -%}
+                {%- if bs.bottom_icon != blank -%}
+                    <div class="absolute backdrop-img overflow-hidden flex-center">
+                        {%- render 'global-image',
+                            image: bs.bottom_icon,
+                            image_size: 400
+                        -%}
+                    </div>
+                {%- endif -%}
+                <div class="head relative w-full lh-2 text-center fw-900" style="color: {{ bs.title_color }};">{{ bs.title }}</div>
+                <ul class="items flex-column">
+                    {%- for v in (1..6) -%}
+                        {%- liquid
+                            assign icon = 'item_icon' | append: v
+                            assign text = 'item_text' | append: v
+                        -%}
+                        {%- if bs[text] != blank -%}
+                            <li class="item flex-left">
+                                {%- if bs[icon] != blank -%}
+                                    <div class="icon-wrap rounded-full flex-center">
+                                        {%- render 'global-image', image: bs[icon], image_size: 60 -%}
+                                    </div>
+                                {%- endif -%}
+                                <span class="text" style="color: {{ bs.content_color }};">{{ bs[text] }}</span>
+                            </li>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC In Benefit Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC In Benefit Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>VIP Tiers and Benefits</p>"
+    },
+    {
+      "type": "text",
+      "id": "font_name",
+      "label": "Font name"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Desktop title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "title_mb_margin_bottom",
+      "label": "Mobile title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "color_background",
+          "id": "card_bg_color",
+          "label": "Card background Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "top_icon",
+          "label": "Top icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "bottom_icon",
+          "label": "Bottom icon"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title color",
+          "default": "#ad5f26"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>TRAILBLAZER</p>"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Content color",
+          "default": "#000000"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon1",
+          "label": "Item icon #1"
+        },
+        {
+          "type": "text",
+          "id": "item_text1",
+          "label": "Item text #1"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon2",
+          "label": "Item icon #2"
+        },
+        {
+          "type": "text",
+          "id": "item_text2",
+          "label": "Item text #2"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon3",
+          "label": "Item icon #3"
+        },
+        {
+          "type": "text",
+          "id": "item_text3",
+          "label": "Item text #3"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon4",
+          "label": "Item icon #4"
+        },
+        {
+          "type": "text",
+          "id": "item_text4",
+          "label": "Item text #4"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon5",
+          "label": "Item icon #5"
+        },
+        {
+          "type": "text",
+          "id": "item_text5",
+          "label": "Item text #5"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_icon6",
+          "label": "Item icon #6"
+        },
+        {
+          "type": "text",
+          "id": "item_text6",
+          "label": "Item text #6"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

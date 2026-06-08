@@ -103,7 +103,7 @@
     {% endif %}
     id="{{ cid }}"
     class="main-banner overflow-hidden {{ cid }}">
-    {% if ss.media_type == 'image' %}
+    {% if ss.media_type == 'image' and ss.pc_image_url != blank %}
         {% render 'global-image',
             desktop_img: ss.pc_image_url,
             desktop_size: 1920,
@@ -645,9 +645,14 @@
           "default": "#FFFFFF"
         },
         {
-          "label": "Button #1 border radius",
+          "label": "Desktop button #1 border radius",
           "type": "number",
           "id": "btn1_border_radius"
+        },
+        {
+          "label": "Mobile button #1 border radius",
+          "type": "number",
+          "id": "btn1_mb_border_radius"
         },
         {
           "type": "url",
@@ -682,7 +687,7 @@
           "max": 900,
           "step": 100,
           "unit": "w",
-          "default": 400
+          "default": 700
         },
         {
           "type": "range",
@@ -702,7 +707,7 @@
           "max": 100,
           "step": 1,
           "unit": "px",
-          "default": 1
+          "default": 14
         },
         {
           "type": "range",
@@ -742,7 +747,7 @@
           "max": 100,
           "step": 1,
           "unit": "px",
-          "default": 4
+          "default": 10
         },
         {
           "type": "header",
@@ -811,9 +816,14 @@
           "default": "#FFFFFF"
         },
         {
-          "label": "Button #2 border radius",
+          "label": "Desktop button #2 border radius",
           "type": "number",
           "id": "btn2_border_radius"
+        },
+         {
+          "label": "Mobile button #1 border radius",
+          "type": "number",
+          "id": "btn2_mb_border_radius"
         },
         {
           "type": "url",

@@ -1,0 +1,655 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mc_main_banner_dTBDRJ": {
+      "type": "mc_main-banner",
+      "name": "MC Main Banner",
+      "settings": {
+        "page_color": "",
+        "pc_width": 1920,
+        "mb_width": 750,
+        "media_type": "image",
+        "pc_image_url": "shopify://shop_images/integral-banner.jpg",
+        "mb_image_url": "shopify://shop_images/integral-mb-banner.jpg",
+        "content_pos": "center",
+        "mb_content_pos": "mb_top",
+        "video_play_show": false,
+        "backdrop_link": "https://www.jasionbike.com/account/login",
+        "width_follow_the_theme": true,
+        "pc_left": 145,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
+      }
+    },
+    "mc_in_word_cards_ryPb3e": {
+      "type": "mc_in-word-cards",
+      "blocks": {
+        "card_ViawTF": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-card-icon1.png",
+            "title": "<p>JOIN US</p>",
+            "text": "<p>Join Free</p>"
+          }
+        },
+        "card_zYchPj": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-card-icon2.png",
+            "title": "<p>EARN BUCKS</p>",
+            "text": "<p>Learn How to Earn</p>"
+          }
+        },
+        "card_hxWRy9": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-card-icon3.png",
+            "title": "<p>REDEEM REWARDS</p>",
+            "text": "<p>Browse Rewards</p>"
+          }
+        },
+        "card_wJ7JPn": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-card-icon4.png",
+            "title": "<p> UNLOCK MORE PERKS</p>",
+            "text": "<p>Explore Bebefits</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_ViawTF",
+        "card_zYchPj",
+        "card_hxWRy9",
+        "card_wJ7JPn"
+      ],
+      "name": "MC In Word Cards",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>How It Works</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 36,
+        "title_mb_size": 15,
+        "title_margin_bottom": 48,
+        "title_mb_margin_bottom": 27,
+        "title_color": "#040300",
+        "title_bold_color": "#040300",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "card_title_color": "#dd8e1e",
+        "card_desc_color": "#959595"
+      }
+    },
+    "mc_in_earn_cards_bFWkGX": {
+      "type": "mc_in-earn-cards",
+      "blocks": {
+        "card_XNHwfN": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon1.png",
+            "title": "<p>+1000 PTS</p>",
+            "text": "<p>Signup</p>"
+          }
+        },
+        "card_bcE6GU": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon3.png",
+            "title": "<p>100 Points = $1</p>",
+            "text": "<p>Place an Order</p>"
+          }
+        },
+        "card_yp69jm": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/lQLPKdVV7JXSdtc8PbCgsg_Amj67EQn3eOLc17kB_61_60.png",
+            "title": "<p>+200 PTS</p>",
+            "text": "<p>Like on Facebook</p>"
+          }
+        },
+        "card_Vf9hHN": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon4.png",
+            "title": "<p>+200 PTS</p>",
+            "text": "<p>Follow on Instagram</p>"
+          }
+        },
+        "card_WYWQaz": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon5.png",
+            "title": "<p>+200 PTS</p>",
+            "text": "<p>Follow on TikTok </p>"
+          }
+        },
+        "card_ryqebw": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon6.png",
+            "title": "<p>+200 PTS</p>",
+            "text": "<p>Share on Facebook</p>"
+          }
+        },
+        "card_mq8QkF": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon7.png",
+            "title": "<p>+200 PTS</p>",
+            "text": "<p>Leave a Review</p>"
+          }
+        },
+        "card_8bxtjz": {
+          "type": "card",
+          "settings": {
+            "image_icon": "shopify://shop_images/integral-icon8.png",
+            "title": "<p>+5000 PTS</p>",
+            "text": "<p>Golden VIP Leavel-Up</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_XNHwfN",
+        "card_bcE6GU",
+        "card_yp69jm",
+        "card_Vf9hHN",
+        "card_WYWQaz",
+        "card_ryqebw",
+        "card_mq8QkF",
+        "card_8bxtjz"
+      ],
+      "name": "MC In Earn Cards",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>Ways to Earn</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 36,
+        "title_mb_size": 15,
+        "title_margin_bottom": 48,
+        "title_mb_margin_bottom": 27,
+        "title_color": "#171717",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "card_title_color": "#ffffff",
+        "card_desc_color": "#ffffff"
+      }
+    },
+    "mc_in_reward_cards_AMbFia": {
+      "type": "mc_in-reward-cards",
+      "blocks": {
+        "card_KfJK3W": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/integral-reward-bg1.jpg",
+            "title": "<p>COUPONS</p>"
+          }
+        },
+        "card_qQMqye": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/integral-reward-bg2.jpg",
+            "title": "<p>FREE ACCESSORY REWARDS</p>"
+          }
+        },
+        "card_EwVDjm": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/integral-reward-bg3.jpg",
+            "title": "<p>VIP BENEFITS</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_KfJK3W",
+        "card_qQMqye",
+        "card_EwVDjm"
+      ],
+      "name": "MC In Reward Cards",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>Redeem Your Rewards</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 36,
+        "title_mb_size": 15,
+        "title_margin_bottom": 48,
+        "title_mb_margin_bottom": 27,
+        "title_color": "#171717",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "card_title_color": "#000000",
+        "image_preload": false
+      }
+    },
+    "mc_in_benefit_cards_jCxpfR": {
+      "type": "mc_in-benefit-cards",
+      "blocks": {
+        "card_3DnHp7": {
+          "type": "card",
+          "settings": {
+            "card_bg_color": "",
+            "top_icon": "shopify://shop_images/integral-benefit-icon1.png",
+            "bottom_icon": "shopify://shop_images/integral-benefit-icon4.png",
+            "title_color": "#ad5f26",
+            "title": "<p>TRAILBLAZER</p>",
+            "content_color": "#000000",
+            "item_icon1": "shopify://shop_images/integral-gold-icon1.png",
+            "item_text1": "Stay Informed",
+            "item_icon2": "shopify://shop_images/integral-gold-icon2.png",
+            "item_text2": "Free Shipping",
+            "item_icon3": "shopify://shop_images/integral-gold-icon3.png",
+            "item_text3": "Birthday Gift",
+            "item_text4": "",
+            "item_text5": "",
+            "item_text6": ""
+          }
+        },
+        "card_UyFAdQ": {
+          "type": "card",
+          "settings": {
+            "card_bg_color": "linear-gradient(0deg, #1b1a1a 0%, #505054 0%, #84868d 0%, #e9e9e9 100%)",
+            "top_icon": "shopify://shop_images/integral-benefit-icon2.png",
+            "bottom_icon": "shopify://shop_images/integral-benefit-icon5.png",
+            "title_color": "#ffffff",
+            "title": "<p>PATHFINDER</p>",
+            "content_color": "#000000",
+            "item_icon1": "shopify://shop_images/integral-silver-icon1.png",
+            "item_text1": "Stay Informed",
+            "item_icon2": "shopify://shop_images/integral-silver-icon2.png",
+            "item_text2": "Free Shipping",
+            "item_icon3": "shopify://shop_images/integral-silver-icon3.png",
+            "item_text3": "Birthday Gift",
+            "item_icon4": "shopify://shop_images/integral-silver-icon4.png",
+            "item_text4": "1000 Points",
+            "item_icon5": "shopify://shop_images/integral-silver-icon5.png",
+            "item_text5": "6% Off Your Next Ebike",
+            "item_icon6": "shopify://shop_images/integral-silver-icon6.png",
+            "item_text6": "Early Access to Flash Sale"
+          }
+        },
+        "card_CAQiL4": {
+          "type": "card",
+          "settings": {
+            "card_bg_color": "linear-gradient(0deg, #1b1a1a 0%, #815b1d 0%, #e79c1f 0%, #fffac4 100%)",
+            "top_icon": "shopify://shop_images/integral-benefit-icon3.png",
+            "bottom_icon": "shopify://shop_images/integral-benefit-icon6.png",
+            "title_color": "#ffae13",
+            "title": "<p>PEAK RIDER</p>",
+            "content_color": "#000000",
+            "item_icon1": "shopify://shop_images/integral-gold-icon1.png",
+            "item_text1": "Stay Informed",
+            "item_icon2": "shopify://shop_images/integral-gold-icon2.png",
+            "item_text2": "Free Shipping",
+            "item_icon3": "shopify://shop_images/integral-gold-icon3.png",
+            "item_text3": "Birthday Gift",
+            "item_icon4": "shopify://shop_images/integral-gold-icon4.png",
+            "item_text4": "2000 Points",
+            "item_icon5": "shopify://shop_images/integral-gold-icon5.png",
+            "item_text5": "Free Accessory Rewards",
+            "item_icon6": "shopify://shop_images/integral-gold-icon6.png",
+            "item_text6": "8% Off Your Next Ebike"
+          }
+        }
+      },
+      "block_order": [
+        "card_3DnHp7",
+        "card_UyFAdQ",
+        "card_CAQiL4"
+      ],
+      "name": "MC In Benefit Cards",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>VIP Tiers and Benefits</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 36,
+        "title_mb_size": 15,
+        "title_margin_bottom": 48,
+        "title_mb_margin_bottom": 2,
+        "title_color": "#000000",
+        "title_bold_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30
+      }
+    },
+    "mc_main_banner_HzW3BT": {
+      "type": "mc_main-banner",
+      "blocks": {
+        "text_mtxe4W": {
+          "type": "text",
+          "settings": {
+            "title": "Banner Text",
+            "font_name": "",
+            "text_show_type": "all",
+            "pc_text": "<p>Join the JASION Membership Now<br/>It's Free!</p>",
+            "pc_fade_up": true,
+            "pc_align": "center",
+            "pc_color": "#ffffff",
+            "pc_emphasize_color": "#ffffff",
+            "pc_weight": 700,
+            "pc_size": 36,
+            "pc_line": 180,
+            "pc_top": 0,
+            "pc_right": 0,
+            "pc_bottom": 0,
+            "pc_left": 0,
+            "mb_text": "<p>Join the JASION Membership Now<br/>It's Free!</p>",
+            "mb_fade_up": true,
+            "mb_align": "center",
+            "mb_color": "#ffffff",
+            "mb_emphasize_color": "#ffffff",
+            "mb_weight": 700,
+            "mb_size": 14,
+            "h5_line": 180,
+            "mb_top": 0,
+            "mb_right": 0,
+            "mb_bottom": 0,
+            "mb_left": 0
+          }
+        },
+        "button_BcV3RG": {
+          "type": "button",
+          "settings": {
+            "left": 0,
+            "top": 10,
+            "right": 0,
+            "bottom": 0,
+            "pc_gap": 12,
+            "mb_left": 0,
+            "mb_top": 14,
+            "mb_right": 0,
+            "mb_bottom": 0,
+            "mb_gap": 10,
+            "pc_align": "flex-center",
+            "mb_align": "flex-center",
+            "show_btn1": true,
+            "btn1_ability": "link",
+            "btn1_text": "Join Now",
+            "btn1_color": "#181623",
+            "btn1_bg_color": "linear-gradient(180deg, rgba(251, 192, 48, 1), rgba(251, 192, 48, 1) 100%)",
+            "btn1_show_border": false,
+            "btn1_border_color": "#ffffff",
+            "btn1_border_radius": 10,
+            "btn1_mb_border_radius": 4,
+            "btn1_link": "",
+            "btn1_position": 3,
+            "btn1_pc_size": 24,
+            "btn1_pc_weight": 700,
+            "btn1_pc_x": 72,
+            "btn1_pc_y": 14,
+            "btn1_mb_size": 13,
+            "btn1_mb_weight": 900,
+            "btn1_mb_x": 36,
+            "btn1_mb_y": 8,
+            "show_btn2": false,
+            "btn2_ability": "link",
+            "btn2_text": "Button",
+            "btn2_color": "#181623",
+            "btn2_bg_color": "linear-gradient(180deg, rgba(248, 205, 33, 1), rgba(248, 205, 33, 1) 100%)",
+            "btn2_show_border": false,
+            "btn2_border_color": "#ffffff",
+            "btn2_link": "",
+            "btn2_position": 3,
+            "btn2_pc_size": 28,
+            "btn2_pc_weight": 400,
+            "btn2_pc_x": 48,
+            "btn2_pc_y": 1,
+            "btn2_mb_size": 16,
+            "btn2_mb_weight": 400,
+            "btn2_mb_x": 28,
+            "btn2_mb_y": 4
+          }
+        }
+      },
+      "block_order": [
+        "text_mtxe4W",
+        "button_BcV3RG"
+      ],
+      "name": "MC Main Banner",
+      "settings": {
+        "page_color": "",
+        "pc_width": 1920,
+        "mb_width": 750,
+        "media_type": "image",
+        "pc_image_url": "shopify://shop_images/join-our-bg.jpg",
+        "mb_image_url": "shopify://shop_images/join-mb-our-bg.jpg",
+        "content_pos": "center",
+        "mb_content_pos": "mb_center",
+        "video_play_show": false,
+        "backdrop_link": "https://www.jasionbike.com/account/login",
+        "width_follow_the_theme": true,
+        "pc_left": 145,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
+      }
+    },
+    "mc_main_faq_Ykt3jq": {
+      "type": "mc_main-faq",
+      "blocks": {
+        "faq_YatDyD": {
+          "type": "faq",
+          "settings": {
+            "title": "Jasion Membership Program",
+            "default_open_1": "Yes",
+            "title_1": "1. What's the JASION Membership Program?",
+            "answer_1": "<p>It’s our rewards program designed for JASION riders. Earn points when you shop or complete simple activities, then redeem them for discounts, rewards, and exclusive member perks. As you level up, you’ll unlock even more benefits like special offers, early access, and VIP rewards.</p>",
+            "default_open_2": "No",
+            "title_2": "2. How to join?",
+            "answer_2": "<p>Simply create a JASION account, and you’ll automatically become a member and start earning rewards.</p>",
+            "default_open_3": "No",
+            "title_3": "3. Is the rewards program free?",
+            "answer_3": "<p>Absolutely — joining is completely free.</p>",
+            "default_open_4": "No",
+            "title_4": "4. What are the tiers of this program?",
+            "answer_4": "<p>There are 3 membership tiers: Trailblazer, Pathfinder, and Peak Rider. Your tier updates automatically 30 days after delivery of a qualifying order. See the Membership Program page for full details.</p>",
+            "default_open_5": "No",
+            "title_5": "5. How can I check my account details?",
+            "answer_5": "<p>Log into your JASION account to view your points balance, rewards, membership tier, and account activity anytime.</p>",
+            "default_open_6": "No",
+            "title_6": "",
+            "answer_6": "",
+            "default_open_7": "No",
+            "title_7": "",
+            "answer_7": "",
+            "default_open_8": "No",
+            "title_8": "",
+            "answer_8": "",
+            "default_open_9": "No",
+            "title_9": "",
+            "answer_9": "",
+            "default_open_10": "No",
+            "title_10": "",
+            "answer_10": ""
+          }
+        },
+        "faq_EAhfAB": {
+          "type": "faq",
+          "settings": {
+            "title": "Jasion Bucks",
+            "default_open_1": "Yes",
+            "title_1": "1. Do points expire?",
+            "answer_1": "<p>Yes. Points expire after 12 months of inactivity.</p>",
+            "default_open_2": "No",
+            "title_2": "2. How do I check my points balance?",
+            "answer_2": "<p>Log into your account to view your balance and rewards.</p>",
+            "default_open_3": "No",
+            "title_3": "3. When will I receive my points?",
+            "answer_3": "<p>Your points will be added automatically 30 days after your order is paid.</p>",
+            "default_open_4": "No",
+            "title_4": "4. Can I earn JASION Bucks if I purchase on other platforms?",
+            "answer_4": "<p>Currently, points can only be earned on purchases made through the official Jasion website. Orders placed through other platforms or marketplaces are not eligible for rewards points.</p>",
+            "default_open_5": "No",
+            "title_5": "5.  What happens to my JASION Bucks if I return the product or cancel my order?",
+            "answer_5": "<p>If an order is canceled or refunded, the points earned from that purchase will be automatically removed from your account balance.</p>",
+            "default_open_6": "No",
+            "title_6": "6. What doesn't qualify for Bucks?",
+            "answer_6": "<p>Points are not earned on canceled orders, refunded purchases, shipping fees, taxes, gift cards, or orders placed through third-party platforms.</p>",
+            "default_open_7": "No",
+            "title_7": "",
+            "answer_7": "",
+            "default_open_8": "No",
+            "title_8": "",
+            "answer_8": "",
+            "default_open_9": "No",
+            "title_9": "",
+            "answer_9": "",
+            "default_open_10": "No",
+            "title_10": "",
+            "answer_10": ""
+          }
+        },
+        "faq_KJBEr9": {
+          "type": "faq",
+          "settings": {
+            "title": "Rewards Redemption",
+            "default_open_1": "Yes",
+            "title_1": "1. What can I redeem?",
+            "answer_1": "<p>Redeem points for coupons, free accessories, exclusive perks, and more rewards.</p>",
+            "default_open_2": "No",
+            "title_2": "2. Can I cancel my redemption?",
+            "answer_2": "<p>Once redeemed, rewards cannot be canceled or refunded.</p>",
+            "default_open_3": "No",
+            "title_3": "3. How can I check redeemed rewards?",
+            "answer_3": "<p>Log into your account and visit the rewards section to view your redeemed rewards.</p>",
+            "default_open_4": "No",
+            "title_4": "4. Can I stack coupons with reward coupons/gift cards?",
+            "answer_4": "<p>No, only one coupon can be applied per order.</p>",
+            "default_open_5": "No",
+            "title_5": "",
+            "answer_5": "",
+            "default_open_6": "No",
+            "title_6": "",
+            "answer_6": "",
+            "default_open_7": "No",
+            "title_7": "",
+            "answer_7": "",
+            "default_open_8": "No",
+            "title_8": "",
+            "answer_8": "",
+            "default_open_9": "No",
+            "title_9": "",
+            "answer_9": "",
+            "default_open_10": "No",
+            "title_10": "",
+            "answer_10": ""
+          }
+        },
+        "faq_t6BTLY": {
+          "type": "faq",
+          "settings": {
+            "title": "Tiers and Benefits",
+            "default_open_1": "Yes",
+            "title_1": "1. How to level up?",
+            "answer_1": "<p>You can level up by earning more points and making qualifying purchases.<br/></p>",
+            "default_open_2": "No",
+            "title_2": "2. How to get JASION member benefits?",
+            "answer_2": "<p>Member benefits unlock automatically once you reach a new membership tier.</p>",
+            "default_open_3": "No",
+            "title_3": "3. What benefits do members get?",
+            "answer_3": "<p>Please check the Membership Program page or your account dashboard for full benefit details.</p>",
+            "default_open_4": "No",
+            "title_4": "",
+            "answer_4": "",
+            "default_open_5": "No",
+            "title_5": "",
+            "answer_5": "",
+            "default_open_6": "No",
+            "title_6": "",
+            "answer_6": "",
+            "default_open_7": "No",
+            "title_7": "",
+            "answer_7": "",
+            "default_open_8": "No",
+            "title_8": "",
+            "answer_8": "",
+            "default_open_9": "No",
+            "title_9": "",
+            "answer_9": "",
+            "default_open_10": "No",
+            "title_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_YatDyD",
+        "faq_EAhfAB",
+        "faq_KJBEr9",
+        "faq_t6BTLY"
+      ],
+      "name": "MC Main Faq",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "<p>Frequently asked questions.</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 36,
+        "title_mb_size": 15,
+        "title_margin_bottom": 80,
+        "title_mb_margin_bottom": 27,
+        "title_color": "#000000",
+        "title_bold_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "mc_main_banner_dTBDRJ",
+    "mc_in_word_cards_ryPb3e",
+    "mc_in_earn_cards_bFWkGX",
+    "mc_in_reward_cards_AMbFia",
+    "mc_in_benefit_cards_jCxpfR",
+    "mc_main_banner_HzW3BT",
+    "mc_main_faq_Ykt3jq"
+  ]
+}
