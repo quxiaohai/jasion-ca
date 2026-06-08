@@ -5,14 +5,12 @@
         background-color: #f9f7f6;
     }
 
-    {%- if ss.show_heading -%}
-    .autumn-sale-product-list .title {
+    .autumn-sale-product-list > .title {
         font-size: 36px;
         line-height: 1.2;
         color: #000000;
         padding-bottom: 45px;
     }
-    {%- endif -%}
     .autumn-sale-product-list .autumn-content {
         max-width: 1376px;
         box-sizing: border-box;
@@ -23,6 +21,23 @@
     .autumn-sale-product-list .autumn-content .card-grid {
         --card-grid-gap: 20px 19px;
         width: 100%;
+    }
+
+    .autumn-sale-product-list .autumn-content .decorate-image .image {
+        object-fit: contain;
+    }
+    .autumn-sale-product-list .autumn-content .decorate-image.top {
+        width: 170px;
+        height: 170px;
+        top: -90px;
+        right: -105px;
+    }
+
+    .autumn-sale-product-list .autumn-content .decorate-image.bottom {
+        width: 134px;
+        height: 134px;
+        bottom: -42px;
+        left: -84px;
     }
 
     .autumn-sale-product-list ._product-card {
@@ -44,6 +59,12 @@
         left: 12px;
         top: 14px;
         position: absolute;
+    }
+
+    .autumn-sale-product-list ._product-card .product-cover .th-logo.large {
+        height: 116px;
+        left: 2px;
+        top: 2px;
     }
 
     .autumn-sale-product-list ._product-card .text-items {
@@ -101,10 +122,10 @@
 
     .autumn-sale-product-list ._product-card .product-info .product-name .tag {
         font-size: 14px;
-        color: {{ ss.tag_color }};
+        color: var(--color);
         line-height: 1;
         padding: 4px 8px;
-        background: {% if ss.tag_bg_color != blank %}{{ ss.tag_bg_color }}{% else %}#ff981d{% endif %};
+        background: var(--background);
         border-radius: 6px;
         margin-left: 12px;
     }
@@ -184,12 +205,10 @@
         .autumn-sale-product-list {
             padding: 34px 0;
         }
-    {%- if ss.show_heading -%}
-        .autumn-sale-product-list .title {
+        .autumn-sale-product-list > .title {
             font-size: 30.6px;
             padding-bottom: 38.25px;
         }
-    {%- endif -%}
         .autumn-sale-product-list .autumn-content {
             padding: 0 30.6px;
         }
@@ -204,6 +223,10 @@
 
         .autumn-sale-product-list ._product-card .product-cover .th-logo {
             height: 6vw;
+        }
+
+        .autumn-sale-product-list ._product-card .product-cover .th-logo.large {
+            height: 8vw;
         }
 
         .autumn-sale-product-list ._product-card .text-items {
@@ -286,12 +309,10 @@
         .autumn-sale-product-list {
             padding: 0.8680555556rem 0;
         }
-    {%- if ss.show_heading -%}
-        .autumn-sale-product-list .title {
+        .autumn-sale-product-list > .title {
             font-size: 0.8680555556rem;
             padding-bottom: 1.0416666667rem;
         }
-    {%- endif -%}
         .autumn-sale-product-list .autumn-content {
             max-width: 100%;
             padding: 0;
@@ -411,24 +432,32 @@
             border-radius: 1.4814814815vw;
         }
     }
-
-    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-product-list' %}
 </style>
-<section class="autumn-sale-product-list w-full">
-    {%- if ss.show_heading -%}
+{% render 'page-wrap-style', load_style: true %}
+<section class="autumn-sale-product-list section--page w-full">
+    {%- if ss.show_heading and ss.heading != blank -%}
         <div class="title tw-text-center tw-font-bold">{{ ss.heading }}</div>
     {%- endif -%}
     {% render 'section-title', info: ss %}
     <div class="autumn-content w-full flex-center">
         <motion-list class="card-grid card-grid--3 desktop-done grid relative">
+            {%- if ss.decorate_image != blank -%}
+                <div class="decorate-image absolute top flex-center">
+                    {%- render 'global-image', image: ss.decorate_image, image_size: 300 -%}
+                </div>
+                <div class="decorate-image absolute bottom flex-center">
+                    {%- render 'global-image', image: ss.decorate_image, image_size: 300 -%}
+                </div>
+            {%- endif -%}
             {%- for block in section.blocks -%}
                 {%- assign bs = block.settings -%}
                 {%- assign variant = bs.product.selected_or_first_available_variant -%}
-                <div class="_product-card flex-col tw-overflow-hidden">
+                <div class="_product-card relative z-2 flex-col tw-overflow-hidden">
                     <div class="product-cover tw-relative">
                         {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
                         {%- if bs.show_th_logo and bs.anniversary_logo != blank -%}
-                            {% render 'global-image', image: bs.anniversary_logo, image_size: 200, class: 'th-logo' %}
+                            {%- assign class_text = 'th-logo ' | append: bs.logo_size -%}
+                            {% render 'global-image', image: bs.anniversary_logo, image_size: 200, class: class_text %}
                         {%- endif -%}
                     </div>
                     <div class="product-info">
@@ -436,7 +465,9 @@
                             <span>{{ bs.product.title }}</span>
                             {%- if variant.compare_at_price > variant.price -%}
                                 {%- assign diff = variant.compare_at_price | minus: variant.price -%}
-                                <div class="tag tw-font-bold">Save {{ diff | money_without_trailing_zeros }}</div>
+                                <div
+                                    style="--color: {{ ss.tag_color }};--background: {% if ss.tag_bg_color != blank %}{{ ss.tag_bg_color }}{% else %}#ff981d{% endif %}"
+                                    class="tag tw-font-bold">Save {{ diff | money_without_trailing_zeros }}</div>
                             {%- endif -%}
                         </div>
                         {%- if bs.product.metafields.reviews.rating.value != blank and bs.product.metafields.reviews.rating_count.value > 0 -%}
@@ -757,6 +788,15 @@
       "label": "Mobile description margin bottom",
       "default": 30
     },
+    {
+      "type": "header",
+      "content": "Decorate"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorate_image",
+      "label": "Decorate image"
+    }
   ],
   "blocks": [
     {
@@ -778,6 +818,22 @@
           "type": "image_picker",
           "id": "anniversary_logo",
           "label": "Anniversary logo"
+        },
+        {
+          "type": "select",
+          "id": "logo_size",
+          "label": "Logo size",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "small"
         },
         {
           "type": "header",

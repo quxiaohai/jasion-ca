@@ -35,9 +35,8 @@
     .mc_main-countdown .countdown .num {
         width: 100%;
         height: 82px;
-        background-color: {{ ss.countdown_fill_color }};
-    {%- if ss.countdown_fill_gradient != blank -%}
-        background: {{ ss.countdown_fill_gradient }};
+    {%- if ss.countdown_fill_gradient != blank or ss.countdown_fill_color != blank -%}
+        background: {% if ss.countdown_fill_gradient != blank %}{{ ss.countdown_fill_gradient }}{% else %}{{ ss.countdown_fill_color }}{% endif %};
     {%- endif -%}
         border-radius: 16px;
         color: {{ ss.countdown_num_color }};
@@ -46,11 +45,11 @@
         text-align: center;
         box-sizing: border-box;
         line-height: 82px;
-        border: 0 none;
+        border: {% if ss.show_border %}{{ ss.border_width }}px solid {{ ss.countdown_border_color }}{% else %}0 none{% endif %};
     }
 
     .mc_main-countdown .countdown .num:disabled {
-        background-color: {{ ss.countdown_fill_color }} !important;
+        background: {% if ss.countdown_fill_gradient != blank %}{{ ss.countdown_fill_gradient }}{% elsif ss.countdown_fill_color != blank %}{{ ss.countdown_fill_color }}{% else %}none{% endif %};
         color: {{ ss.countdown_num_color }} !important;
         opacity: 1 !important;
     }
@@ -220,14 +219,34 @@
       "default": "Secs"
     },
     {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Show border",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
       "type": "header",
       "content": "Color"
     },
     {
+      "label": "Countdown border color",
+      "type": "color",
+      "id": "countdown_border_color"
+    },
+    {
       "label": "Countdown fill color",
       "type": "color",
-      "id": "countdown_fill_color",
-      "default": "#000000"
+      "id": "countdown_fill_color"
     },
     {
       "label": "Countdown fill gradient",

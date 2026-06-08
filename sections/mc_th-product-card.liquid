@@ -17,6 +17,21 @@
         border: 4px solid #ffd200;
         aspect-ratio: 2.1658;
     }
+    .mc_th-product-card .product-left-wrapper .decorate-image {
+        top: -121px;
+        left: -123px;
+        width: 184px;
+        height: 184px;
+    }
+    .mc_th-product-card .product-right-wrapper .decorate-image {
+        top: -74px;
+        right: -73px;
+        width: 160px;
+        height: 160px;
+    }
+    .mc_th-product-card .product-wrapper .decorate-image .image {
+        object-fit: contain;
+    }
     .mc_th-product-card .product-wrapper .product-cover,
     .mc_th-product-card .product-wrapper .product-info {
         width: 50%;
@@ -97,12 +112,12 @@
         width: 229px;
         height: 61px;
         border-radius: 10px;
-        background-color: #ff981d;
+        background-color: var(--background, #ff981d);
         color: #FFFFFF;
         font-size: 18px;
     }
     .mc_th-product-card .product-wrapper .discount-box .discount.dark {
-        background-color: #000000;
+        background-color: var(--background, #000000);
         width: 289px;
     }
     .mc_th-product-card .product-wrapper .discount-box .discount strong {
@@ -332,6 +347,16 @@
         .mc_th-product-card {
             padding: 1.5625rem 0;
         }
+        .mc_th-product-card .product-wrapper-box .decorate-image {
+            display: none;
+        }
+        .mc_th-product-card .product-wrapper-box:first-of-type .decorate-image {
+            display: flex;
+            top: -28px;
+            right: -7px;
+            width: 56px;
+            height: 56px;
+        }
         .mc_th-product-card .card-content {
             padding: 0 4.1666666667vw;
             gap: 6vw;
@@ -472,68 +497,84 @@
             font-size: 0.703125rem;
         }
     }
-    {% render 'page-wrap-style' %}
 </style>
+{% render 'page-wrap-style', load_style: true %}
 <section class="mc_th-product-card w-full section--page">
     {% render 'section-title', info: ss %}
     <div class="card-content flex-column w-full">
         {%- for block in section.blocks -%}
-            {%- assign bs = block.settings -%}
-            {%- assign variant = bs.product.selected_or_first_available_variant -%}
-            <div class="product-wrapper flex-between overflow-hidden">
-                <div class="product-info">
-                    <div class="product-name fw-900 lh-2">{{ bs.product.title }}</div>
-                    <div class="intro lh-2 tw-line-clamp-2">
-                        {{ bs.product.metafields.custom.short_text.value }}
+            {%- liquid
+                assign bs = block.settings
+                assign variant = bs.product.selected_or_first_available_variant
+                assign index = forloop.index0 | modulo: 2
+                assign arrow = 'right'
+                if index == 1
+                    assign arrow = 'left'
+                endif
+            -%}
+            <div class="product-wrapper-box relative product-{{ arrow }}-wrapper w-full">
+                {%- if ss.decorate_image != blank -%}
+                    <div class="decorate-image absolute flex-center">
+                        {%- render 'global-image', image: ss.decorate_image, image_size: 300 -%}
                     </div>
-                    {%- if bs.show_spec -%}
-                        {%- assign specs = bs.product.metafields.custom.specifications.value | default: false -%}
-                        {%- if specs -%}
-                            <ul class="item-icons w-full flex-top">
-                                {% for i in ( 0..specs.title_list.value.size) limit: 4 %}
-                                    {% if specs.title_list.value[i] != blank %}
-                                        <li class="item-icon {{ bs.spec_text_color }} text-center flex-center-col">
-                                            {% for url in specs.icon_list.value %}
-                                                {% assign i_2 = forloop.index | minus: 1 %}
-                                                {% if i_2 == i and url != blank %}
-                                                    {{- url | image_url: width: url.width | image_tag: loading: 'lazy', class: 'image' -}}
-                                                {% endif %}
-                                            {% endfor %}
-                                            <div class="text lh-2 fw-600">
-                                                {{ specs.title_list.value[i] }}<br>
-                                                {{ specs.content_list.value[i] }}
-                                            </div>
-                                        </li>
-                                    {% endif %}
-                                {% endfor %}
-                            </ul>
+                {%- endif -%}
+                <div class="product-wrapper relative z-2 overflow-hidden flex-between">
+                    <div class="product-info">
+                        <div class="product-name fw-900 lh-2">{{ bs.product.title }}</div>
+                        <div class="intro lh-2 tw-line-clamp-2">
+                            {{ bs.product.metafields.custom.short_text.value }}
+                        </div>
+                        {%- if bs.show_spec -%}
+                            {%- assign specs = bs.product.metafields.custom.specifications.value | default: false -%}
+                            {%- if specs -%}
+                                <ul class="item-icons w-full flex-top">
+                                    {% for i in ( 0..specs.title_list.value.size) limit: 4 %}
+                                        {% if specs.title_list.value[i] != blank %}
+                                            <li class="item-icon {{ bs.spec_text_color }} text-center flex-center-col">
+                                                {% for url in specs.icon_list.value %}
+                                                    {% assign i_2 = forloop.index | minus: 1 %}
+                                                    {% if i_2 == i and url != blank %}
+                                                        {{- url | image_url: width: url.width | image_tag: loading: 'lazy', class: 'image' -}}
+                                                    {% endif %}
+                                                {% endfor %}
+                                                <div class="text lh-2 fw-600">
+                                                    {{ specs.title_list.value[i] }}<br>
+                                                    {{ specs.content_list.value[i] }}
+                                                </div>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            {%- endif -%}
                         {%- endif -%}
-                    {%- endif -%}
-                    <div class="price-box flex-left">
-                        <div class="price fw-900"
-                             style="color: {{ bs.product_price_color }}">{{ variant.price | money }}</div>
-                        <div class="original-price">{{ variant.compare_at_price | money }}</div>
-                    </div>
-                    <div class="discount-box flex-column">
-                        {%- if bs.discount_text1 != blank or bs.discount_text2 != blank -%}
-                            <div class="discount-wrap flex-left">
-                                <div class="discount relative flex-center fw-900 lh-2">
-                                    {{ bs.discount_text1 }}
+                        <div class="price-box flex-left">
+                            <div class="price fw-900"
+                                 style="color: {{ bs.product_price_color }}">{{ variant.price | money }}</div>
+                            <div class="original-price">{{ variant.compare_at_price | money }}</div>
+                        </div>
+                        <div class="discount-box flex-column">
+                            {%- if bs.discount_text1 != blank or bs.discount_text2 != blank -%}
+                                <div class="discount-wrap flex-left">
+                                    <div
+                                        style="--background: {{ bs.discount_text1_bg_color }}"
+                                        class="discount relative flex-center fw-900 lh-2">
+                                        {{ bs.discount_text1 }}
+                                    </div>
+                                    <span class="plus lh-1 fw-900">+</span>
+                                    <div
+                                        style="--background: {{ bs.discount_text2_bg_color }}"
+                                        class="discount dark relative flex-center fw-900 lh-2">
+                                        {{ bs.discount_text2 }}
+                                    </div>
                                 </div>
-                                <span class="plus lh-1 fw-900">+</span>
-                                <div class="discount dark relative flex-center fw-900 lh-2">
-                                    {{ bs.discount_text2 }}
-                                </div>
-                            </div>
-                        {%- endif -%}
-                        {%- if bs.gift_image1 != blank or bs.gift_image2 != blank or bs.gift_image3 != blank -%}
+                            {%- endif -%}
                             <div class="free-wrap flex-left">
                                 <div class="free-info flex-left">
                                     {%- render 'global-image', image: bs.gift_image1, image_size: 200 -%}
                                     {%- assign text_list = bs.gift_content1 | newline_to_br | split: '<br />' -%}
-                                    <div class="price lh-2 fw-700 flex-column">
-                                        <span class="text3 through">{{ text_list | first }}</span>
-                                        <span>{{ text_list | last }}</span>
+                                    <div class="price flex-column">
+                                        <span class="fw-600 text1 lh-2">{{ text_list | first }}</span>
+                                        <span class="fw-700 through text2 lh-1">{{ text_list | last }}</span>
                                     </div>
                                 </div>
                                 <span class="plus lh-1 fw-900">+</span>
@@ -567,37 +608,37 @@
                                     {%- endif -%}
                                 </div>
                             </div>
+                        </div>
+                        <div class="btn-group flex-left">
+                            <button class="button flex-center"
+                                    style="--color-button-gradient: {{ bs.button1_gradient }}; --color-button-background: {{ bs.button1_bg_color.rgb }};--button-color: {{ bs.button1_text_color }};"
+                                    onclick="$heybike.emit('{{ section.id }}-shop-popup', {{ forloop.index0 }})">{{ bs.button1 }}</button>
+                            <a href="{{ bs.button2_url }}"
+                               style="--button-color: {{ bs.button2_text_color }}; box-shadow: inset 0 0 0 1px {{ bs.button2_border_color }}"
+                               target="_blank"
+                               class="button more flex-center">{{ bs.button2 }}</a>
+                        </div>
+                    </div>
+                    <div class="product-cover relative">
+                        {%- if bs.show_final_tag -%}
+                            <div class="final-tag z-2 absolute">
+                                {%- render 'global-image', image: bs.final_tag_bg, image_size: 200 -%}
+                                <div class="tag-text text-center w-full fw-600 absolute lh-4" style="color: {{ bs.final_tag_color }};">
+                                    {{ bs.final_tag }}
+                                </div>
+                            </div>
+                        {%- endif -%}
+                        {%- if bs.pc_product_image != blank -%}
+                            {% render 'global-image',
+                                desktop_img: bs.pc_product_image,
+                                desktop_size: 650,
+                                mobile_img: bs.mb_product_image,
+                                mobile_size: 650
+                            %}
+                        {%- else -%}
+                            {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
                         {%- endif -%}
                     </div>
-                    <div class="btn-group flex-left">
-                        <button class="button flex-center"
-                                style="--color-button-gradient: {{ bs.button1_gradient }}; --color-button-background: {{ bs.button1_bg_color.rgb }};--button-color: {{ bs.button1_text_color }};"
-                                onclick="$heybike.emit('{{ section.id }}-shop-popup', {{ forloop.index0 }})">{{ bs.button1 }}</button>
-                        <a href="{{ bs.button2_url }}"
-                           style="--button-color: {{ bs.button2_text_color }}; box-shadow: inset 0 0 0 1px {{ bs.button2_border_color }}"
-                           target="_blank"
-                           class="button more flex-center">{{ bs.button2 }}</a>
-                    </div>
-                </div>
-                <div class="product-cover relative">
-                    {%- if bs.show_final_tag -%}
-                        <div class="final-tag absolute">
-                            {%- render 'global-image', image: bs.final_tag_bg, image_size: 200 -%}
-                            <div class="tag-text text-center w-full fw-600 absolute lh-4" style="color: {{ bs.final_tag_color }};">
-                                {{ bs.final_tag }}
-                            </div>
-                        </div>
-                    {%- endif -%}
-                    {%- if bs.pc_product_image != blank -%}
-                        {% render 'global-image',
-                            desktop_img: bs.pc_product_image,
-                            desktop_size: 650,
-                            mobile_img: bs.mb_product_image,
-                            mobile_size: 650
-                        %}
-                    {%- else -%}
-                        {% render 'global-image', desktop_img: bs.product.featured_image, desktop_size: 650 %}
-                    {%- endif -%}
                 </div>
             </div>
         {%- endfor -%}
@@ -618,7 +659,8 @@
     {
       "type": "color",
       "id": "page_color",
-      "label": "Background Color"
+      "label": "Background Color",
+      "default": "#160a03"
     },
     {
       "type": "number",
@@ -753,6 +795,15 @@
       "id": "description_mb_margin_bottom",
       "label": "Mobile description margin bottom",
       "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Decorate"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorate_image",
+      "label": "Decorate image"
     }
   ],
   "blocks": [
@@ -821,10 +872,22 @@
           "default": "<p><strong>$600 OFF</strong></p>"
         },
         {
+          "type": "color",
+          "id": "discount_text1_bg_color",
+          "label": "Discount text #1 background color",
+          "default": "#ff981d"
+        },
+        {
           "type": "richtext",
           "id": "discount_text2",
           "label": "Discount text #2",
           "default": "<p>EXTRA <strong>$100 OFF</strong></p>"
+        },
+        {
+          "type": "color",
+          "id": "discount_text2_bg_color",
+          "label": "Discount text #2 background color",
+          "default": "#000000"
         },
         {
           "type": "header",

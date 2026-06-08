@@ -1,0 +1,271 @@
+{%- assign ss = section.settings -%}
+<style>
+    .mc_fifa-discount-cards {
+        padding: 40px 0;
+    }
+    .mc_fifa-discount-cards .decorate-image .image {
+        object-fit: contain;
+    }
+    .mc_fifa-discount-cards .decorate-image.top {
+        width: 172px;
+        height: 172px;
+        top: -83px;
+        left: -78px;
+    }
+    .mc_fifa-discount-cards .card-items {
+        gap: 9px;
+    }
+    .mc_fifa-discount-cards .card-item .image {
+        aspect-ratio: 0.69;
+        width: 314px;
+        height: auto;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_fifa-discount-cards {
+            padding: 0.78125rem 0 1.171875rem;
+        }
+        .mc_fifa-discount-cards .decorate-image.top {
+            width: 60px;
+            height: 60px;
+            top: -32px;
+            left: -20px;
+        }
+        .mc_fifa-discount-cards .decorate-image.bottom {
+            width: 60px;
+            height: 60px;
+            right: -23px;
+            bottom: -29px;
+        }
+        .mc_fifa-discount-cards .card-items {
+            gap: 0.859375rem 0.703125rem;
+            flex-wrap: wrap;
+        }
+        .mc_fifa-discount-cards .card-item .image {
+            width: 39.8333333333vw;
+        }
+    }
+    {% render 'page-wrap-style' %}
+</style>
+<div class="mc_fifa-discount-cards section--page">
+    {%- render 'section-title', info: ss -%}
+    <div class="card-items flex-center">
+        {%- for block in section.blocks -%}
+            {%- assign bs = block.settings -%}
+            <div class="card-item relative">
+                {%- if forloop.first and ss.decorate_image != blank -%}
+                    <div class="decorate-image absolute top flex-center">
+                        {%- render 'global-image', image: ss.decorate_image, image_size: 300 -%}
+                    </div>
+                {%- endif -%}
+                {%- if forloop.last and ss.decorate_image != blank -%}
+                    <div class="decorate-image absolute bottom flex-center">
+                        {%- render 'global-image', image: ss.decorate_image, image_size: 300 -%}
+                    </div>
+                {%- endif -%}
+                {%- if bs.image != blank -%}
+                    {%- render 'global-image',
+                        desktop_img: bs.image,
+                        desktop_size: 400,
+                        desktop_class: 'image-backup relative z-2',
+                        mobile_img: bs.mb_image,
+                        mobile_size: 400,
+                        preload: ss.image_preload
+                    -%}
+                {%- endif -%}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Fifa Discount Cards",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Fifa Discount Cards"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<p>WHY BUY NOW?</p>"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title font style",
+      "options": [
+        {
+          "label": "Normal",
+          "value": "normal"
+        },
+        {
+          "label": "italic",
+          "value": "italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Desktop title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "title_mb_margin_bottom",
+      "label": "Mobile title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_bold_color",
+      "label": "Title Bold color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_preload",
+      "label": "Image preload",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Decorate"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorate_image",
+      "label": "Decorate image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop card image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mb_image",
+          "label": "Mobile card image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

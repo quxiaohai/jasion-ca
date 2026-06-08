@@ -1,11 +1,17 @@
-{% style %}
-#MainContent{
-    background: {{ section.settings.background_color }} !important;
-}
-[role="main"] .shopify-section:not(.shopify-section--apps) {
-    background: none;
-}
-{% endstyle %}
+<style>
+    #MainContent {
+    {%- if section.settings.background_image != blank -%}
+        background: url('{{ section.settings.background_image | image_url: width: 1920 }}') repeat-y {{ section.settings.background_color }};
+        background-size: 100% auto;
+    {%- else -%}
+        background: {{ section.settings.background_color }} !important;
+    {%- endif -%}
+    }
+
+    [role="main"] .shopify-section:not(.shopify-section--apps) {
+        background: none;
+    }
+</style>
 {% schema %}
 {
   "name": "MC Page Color",
@@ -22,6 +28,11 @@
       "label": "Background color",
       "id": "background_color",
       "default": "#790002"
+    },
+    {
+      "type": "image_picker",
+      "label": "Background image",
+      "id": "background_image"
     }
   ]
 }

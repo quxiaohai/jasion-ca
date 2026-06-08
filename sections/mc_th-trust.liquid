@@ -1,7 +1,7 @@
 {%- assign ss = section.settings -%}
 <style>
     .mc_th-trust {
-        background-color: #160a03;
+        background-color: var(--background);
         padding: 32px 0 51px;
     }
     .mc_th-trust .backdrop-image {
@@ -124,15 +124,17 @@
         }
     }
 </style>
-<section class="mc_th-trust relative w-full">
-    {% render 'global-image',
-        desktop_img: ss.desktop_image,
-        desktop_size: 1920,
-        desktop_class: 'backdrop-image',
-        mobile_img: ss.mobile_image,
-        mobile_size: 750,
-        mobile_class: 'backdrop-image'
-    %}
+<section class="mc_th-trust relative w-full" style="--background: {{ ss.page_color }};">
+    {%- if ss.desktop_image != blank -%}
+        {% render 'global-image',
+            desktop_img: ss.desktop_image,
+            desktop_size: 1920,
+            desktop_class: 'backdrop-image',
+            mobile_img: ss.mobile_image,
+            mobile_size: 750,
+            mobile_class: 'backdrop-image'
+        %}
+    {%- endif -%}
     <div class="trust-content w-full z-2 relative">
         {%- if ss.show_heading -%}
             <div class="title lh-2 fw-900 text-center">{{ ss.heading }}</div>
@@ -174,6 +176,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background color",
+      "default": "#160a03"
+    },
     {
       "type": "image_picker",
       "id": "desktop_image",
