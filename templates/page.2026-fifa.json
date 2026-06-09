@@ -17,7 +17,7 @@
         "background_image": "shopify://shop_images/fifa-background-image.jpg"
       }
     },
-    "mc_main_banner_9pwQYr": {
+    "mc_main_banner_9pwQYX": {
       "type": "mc_main-banner",
       "name": "MC Main Banner",
       "settings": {
@@ -1074,7 +1074,7 @@
   },
   "order": [
     "mc_page_color_zAVKgX",
-    "mc_main_banner_9pwQYr",
+    "mc_main_banner_9pwQYX",
     "main_navigation_CCCdMD",
     "mc_main_countdown_rjDi6e",
     "mc_fifa_discount_cards_xLFWeV",
