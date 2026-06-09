@@ -35,7 +35,9 @@
         "pc_left": 145,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 20,
+        "seo_text": "",
+        "seo_tag": "h1"
       }
     },
     "main_navigation_CCCdMD": {
@@ -256,7 +258,7 @@
             "mb_countdown_num_height": 1,
             "mb_countdown_num_size": 1,
             "mb_countdown_name_size": 1,
-            "countdown_time": "2026-06-9T00:00:00",
+            "countdown_time": "2026-06-09 00:00:00",
             "duration": 1,
             "day": "DAYS",
             "hour": "HOURS",
