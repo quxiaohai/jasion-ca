@@ -621,7 +621,9 @@
         "padding_bottom": 72,
         "divider": false,
         "full_width": false,
-        "rounded": false
+        "rounded": false,
+        "show_th_logo": true,
+        "anniversary_logo": "shopify://shop_images/fifa-world-cup.png"
       }
     },
     "slideshow_hb_dN9348": {

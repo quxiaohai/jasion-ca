@@ -9627,7 +9627,13 @@ html.touch .logo-list--right .logo-bar.animate {
   border-start-start-radius: var(--card-radius);
   border-start-end-radius: var(--card-radius);
 }
-
+.product-card__media .th-logo {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+    left: 8px;
+    top: 8px;
+}
 .product-card__media video-media .deferred-poster {
   display: flex;
   align-items: center;
