@@ -17,7 +17,7 @@
         "background_image": "shopify://shop_images/fifa-background-image.jpg"
       }
     },
-    "mc_main_banner_9pwQYX": {
+    "mc_main_banner_9pwQYr": {
       "type": "mc_main-banner",
       "name": "MC Main Banner",
       "settings": {
@@ -35,8 +35,7 @@
         "pc_left": 145,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 20,
-        "seo_text": "Electric Bike Flash Sale"
+        "overlay_opacity": 20
       }
     },
     "main_navigation_CCCdMD": {
@@ -46,28 +45,28 @@
           "type": "nav_tab",
           "settings": {
             "title": "FIFA World Cup 26 Deal",
-            "position": 6
+            "position": 5
           }
         },
         "nav_tab_eajRTe": {
           "type": "nav_tab",
           "settings": {
-            "title": "Top Picks",
-            "position": 8
+            "title": "Spin & Win",
+            "position": 6
           }
         },
         "nav_tab_jHdKMz": {
           "type": "nav_tab",
           "settings": {
             "title": "Hot Deals",
-            "position": 9
+            "position": 7
           }
         },
         "nav_tab_acFLDT": {
           "type": "nav_tab",
           "settings": {
-            "title": "Bundle & Save",
-            "position": 10
+            "title": "Top Picks",
+            "position": 8
           }
         }
       },
@@ -113,9 +112,9 @@
       "settings": {
         "page_color": "",
         "page_top": 50,
-        "show_heading": false,
-        "heading": "HOLIDAY SALES END IN",
-        "heading_color": "#171717",
+        "show_heading": true,
+        "heading": "⚽ WORLD CUP SPECIAL ENDS IN",
+        "heading_color": "#ffffff",
         "countdown_start_date": "2026-05-22T00:00:00",
         "duration": 1,
         "day": "Days",
@@ -192,7 +191,8 @@
         "description_mb_margin_bottom": 30,
         "image_preload": false,
         "decorate_image": "shopify://shop_images/fifa-ball.png",
-        "seo_text": "Limited-Time E-Bike Deals"
+        "seo_text": "Limited-Time E-Bike Deals",
+        "seo_tag": "h2"
       }
     },
     "mc_fifa_spin_pA8NhV": {
@@ -256,7 +256,7 @@
             "mb_countdown_num_height": 1,
             "mb_countdown_num_size": 1,
             "mb_countdown_name_size": 1,
-            "countdown_time": "2026-06-13 00:00:00",
+            "countdown_time": "2026-06-9T00:00:00",
             "duration": 1,
             "day": "DAYS",
             "hour": "HOURS",
@@ -299,7 +299,8 @@
         "privacy_link_color": "#ffffff",
         "privacy_link_hover_color": "#fdb404",
         "privacy_active_color": "#fdb404",
-        "seo_text": "Spin to Win Extra Savings"
+        "seo_text": "Spin to Win Extra Savings",
+        "seo_tag": "h2"
       }
     },
     "mc_th_product_card_HTabDa": {
@@ -392,7 +393,8 @@
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
         "decorate_image": "shopify://shop_images/fifa-ball.png",
-        "seo_text": "Hot E-Bike Deals"
+        "seo_text": "Hot E-Bike Deals",
+        "seo_tag": "h2"
       }
     },
     "autumn_sale_product_list_kb7cx4": {
@@ -536,10 +538,10 @@
         "heading": "",
         "tag_color": "#ffffff",
         "tag_bg_color": "",
-        "show_title": false,
+        "show_title": true,
         "title": "Top Picks",
-        "title_pc_size": 35,
-        "title_mb_size": 20,
+        "title_pc_size": 48,
+        "title_mb_size": 24,
         "title_margin_bottom": 16,
         "title_color": "#ffffff",
         "title_gradient_color": "",
@@ -551,7 +553,8 @@
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
         "decorate_image": "shopify://shop_images/fifa-ball.png",
-        "seo_text": "Top JasionBike E-Bike Picks"
+        "seo_text": "Top JasionBike E-Bike Picks",
+        "seo_tag": "h2"
       }
     },
     "mc_th_trust_aKbtc6": {
@@ -1074,7 +1077,7 @@
   },
   "order": [
     "mc_page_color_zAVKgX",
-    "mc_main_banner_9pwQYX",
+    "mc_main_banner_9pwQYr",
     "main_navigation_CCCdMD",
     "mc_main_countdown_rjDi6e",
     "mc_fifa_discount_cards_xLFWeV",
