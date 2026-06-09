@@ -374,7 +374,7 @@
                 </p>
             </div>
             {%- if ds.show_countdown -%}
-                <countdown-timer
+                <count-down
                     cycle-duration="{{ ds.duration }}"
                     data-store="{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}"
                     data-date="{{ ds.countdown_time }}"
@@ -395,7 +395,7 @@
                         <input name="second" node-name="second" disabled type="text" class="num" value="00"/>
                         <span class="name">{{ ds.second }}</span>
                     </label>
-                </countdown-timer>
+                </count-down>
             {%- endif -%}
             <div class="easter-prize-display">
                 <div class="easter-prize-name" node-name="prizeName"></div>
