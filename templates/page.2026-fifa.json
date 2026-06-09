@@ -9,7 +9,7 @@
  */
 {
   "sections": {
-    "mc_page_color_zAVKgD": {
+    "mc_page_color_zAVKgX": {
       "type": "mc_page-color",
       "name": " MC Page Color",
       "settings": {
@@ -1073,7 +1073,7 @@
     }
   },
   "order": [
-    "mc_page_color_zAVKgD",
+    "mc_page_color_zAVKgX",
     "mc_main_banner_9pwQYr",
     "main_navigation_CCCdMD",
     "mc_main_countdown_rjDi6e",
