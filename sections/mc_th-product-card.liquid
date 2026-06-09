@@ -1,5 +1,5 @@
 {% assign ss = section.settings %}
-<style>
+{% stylesheet %}
     .mc_th-product-card {
         padding: 40px 0;
         background-color: #160a03;
@@ -497,10 +497,13 @@
             font-size: 0.703125rem;
         }
     }
-</style>
+{% endstylesheet %}
 {% render 'page-wrap-style', load_style: true %}
 <section class="mc_th-product-card w-full section--page">
     {% render 'section-title', info: ss %}
+    {%- if ss.seo_text != blank -%}
+        <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
     <div class="card-content flex-column w-full">
         {%- for block in section.blocks -%}
             {%- liquid
@@ -520,7 +523,7 @@
                 {%- endif -%}
                 <div class="product-wrapper relative z-2 overflow-hidden flex-between">
                     <div class="product-info">
-                        <div class="product-name fw-900 lh-2">{{ bs.product.title }}</div>
+                        <h3 class="product-name fw-900 lh-2">{{ bs.product.title }}</h3>
                         <div class="intro lh-2 tw-line-clamp-2">
                             {{ bs.product.metafields.custom.short_text.value }}
                         </div>
@@ -806,6 +809,43 @@
       "type": "image_picker",
       "id": "decorate_image",
       "label": "Decorate image"
+    },
+    {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "text",
+      "label": "SEO text",
+      "id": "seo_text"
+    },
+    {
+      "type": "select",
+      "id": "seo_tag",
+      "label": "SEO tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2"
     }
   ],
   "blocks": [

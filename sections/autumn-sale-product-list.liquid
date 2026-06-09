@@ -1,6 +1,6 @@
 {% assign ss = section.settings %}
-<style>
-    .autumn-sale-product-list {
+{% stylesheet %}
+   .autumn-sale-product-list {
         padding: 40px 0;
         background-color: #f9f7f6;
     }
@@ -432,13 +432,16 @@
             border-radius: 1.4814814815vw;
         }
     }
-</style>
+{% endstylesheet %}
 {% render 'page-wrap-style', load_style: true %}
 <section class="autumn-sale-product-list section--page w-full">
     {%- if ss.show_heading and ss.heading != blank -%}
         <div class="title tw-text-center tw-font-bold">{{ ss.heading }}</div>
     {%- endif -%}
     {% render 'section-title', info: ss %}
+    {%- if ss.seo_text != blank -%}
+        <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
     <div class="autumn-content w-full flex-center">
         <motion-list class="card-grid card-grid--3 desktop-done grid relative">
             {%- if ss.decorate_image != blank -%}
@@ -462,7 +465,7 @@
                     </div>
                     <div class="product-info">
                         <div class="product-name flex-left tw-font-bold">
-                            <span>{{ bs.product.title }}</span>
+                            <h3>{{ bs.product.title }}</h3>
                             {%- if variant.compare_at_price > variant.price -%}
                                 {%- assign diff = variant.compare_at_price | minus: variant.price -%}
                                 <div
@@ -796,6 +799,43 @@
       "type": "image_picker",
       "id": "decorate_image",
       "label": "Decorate image"
+    },
+      {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "text",
+      "label": "SEO text",
+      "id": "seo_text"
+    },
+    {
+      "type": "select",
+      "id": "seo_tag",
+      "label": "SEO tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+      ],
+      "default": "h2"
     }
   ],
   "blocks": [

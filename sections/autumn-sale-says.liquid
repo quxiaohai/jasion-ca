@@ -98,7 +98,7 @@
 </style>
 <section class="autumn-sale-says w-full">
     {%- if ss.show_heading -%}
-        <div class="title tw-text-center tw-leading-[1.2] tw-font-bold">{{ ss.heading }}</div>
+        <{{ ss.title_tag }} class="title tw-text-center tw-leading-[1.2] tw-font-bold">{{ ss.heading }}</{{ ss.title_tag }}>
     {%- endif -%}
     <div class="autumn-content w-full tw-relative">
         <slider-element id="Slider-{{ section.id }}" class="grid slider slider--desktop slider--tablet"
@@ -166,6 +166,38 @@
       "id": "heading",
       "label": "Title",
       "default": "What They Say"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "div",
+          "label": "div"
+        }
+      ],
+      "default": "div"
     },
     {
       "type": "color",

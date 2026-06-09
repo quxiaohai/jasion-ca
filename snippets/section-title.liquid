@@ -171,83 +171,103 @@
       "default": 30
     }
 {% endcomment %}
+{% stylesheet %}
+.section--title {
+max-width: 1200px;
+margin: 0 auto;
+}
+.section--title .title {
+font-size: var(--font-size);
+margin-bottom: var(--margin-bottom);
+font-weight: var(--font-weight);
+line-height: var(--line-height);
+}
+.section--title .title strong {
+color: var(--bold-color);
+font-weight: var(--bold-weight);
+}
+.section--title .description {
+font-size: var(--font-size);
+margin-bottom: var(--margin-bottom);
+line-height: var(--line-height);
+}
+.section--title .description strong {
+color: var(--bold-color);
+}
+@media screen and (max-width: 1440px) {
+.section--title {
+max-width: 960px;
+margin: 0 auto;
+}
+.section--title .title {
+font-size:var(--ms-font-size);
+}
+.section--title .description {
+font-size: var(--ms-font-size);
+margin-bottom: var(--ms-margin-bottom);
+}
+}
+@media screen and (max-width: 1023px) {
+.section--title {
+max-width: 100%;
+margin: 0 auto;
+padding: 0 var(--page-padding);
+}
+.section--title .title {
+font-size: var(--mb-font-size);
+font-weight: var(--mb-font-weight);
+line-height: var(--mb-line-height);
+}
+.section--title .description {
+font-size: var(--mb-font-size);
+margin-bottom: var(--mb-margin-bottom);
+line-height: var(--mb-line-height);
+}
+}
+{% endstylesheet %}
 {%- if info.show_title or info.show_description -%}
     {%- assign mid = section.id | split: '__' | last -%}
-    <style>
-        .{{ mid }}-section--title {
-            max-width: 1200px;
-            margin: 0 auto !important;
-        }
-        .{{ mid }}-section--title .title {
-            font-size: {% if info.title_pc_size != blank %}{{ info.title_pc_size }}px{% else %}48px{% endif %};
-            margin-bottom: {% if info.title_margin_bottom != blank %}{{ info.title_margin_bottom }}px{% else %}16px{% endif %};var(--title-mb, 16px);
-            font-weight: {% if info.title_pc_weight != blank %}{{ info.title_pc_weight }}{% else %}700{% endif %};
-        {%- if info.title_style -%}
-            font-style: {{ info.title_style }};
-        {%- endif -%}
-            line-height: {% if info.title_pc_line != blank %}{{ info.title_pc_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
-        }
-        {%- if info.title_bold_color -%}
-        .{{ mid }}-section--title .title strong {
-            color: {{ info.title_bold_color }};
-        {%- if font != blank -%}font-weight: inherit;{%- endif -%}
-        }
-        {%- endif -%}
-        .{{ mid }}-section--title .description {
-            font-size: {% if info.description_pc_size != blank %}{{ info.description_pc_size }}px{% else %}18px{% endif %};
-            margin-bottom: {% if info.description_pc_margin_bottom != blank %}{{ info.description_pc_margin_bottom }}px{% else %}40px{% endif %};
-            line-height: {% if info.description_pc_line != blank %}{{ info.description_pc_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
-        }
-        {%- if info.description_bold_color -%}
-        .{{ mid }}-section--title .description strong {
-            color: {{ info.description_bold_color }};
-        }
-        {%- endif -%}
-        @media screen and (max-width: 1440px) {
-            .{{ mid }}-section--title {
-                max-width: 960px;
-                margin: 0 auto;
-            }
-            .{{ mid }}-section--title .title {
-                font-size: {% if info.title_pc_size != blank %}{{ info.title_pc_size | times: 0.8 }}px{% else %}38px{% endif %};;
-            }
-            .{{ mid }}-section--title .description {
-                font-size: {% if info.description_pc_size != blank %}{{ info.description_pc_size | times: 0.8 }}px{% else %}14px{% endif %};
-                margin-bottom: {% if info.description_pc_margin_bottom != blank %}{{ info.description_pc_margin_bottom | times: 0.8 }}px{% else %}32px{% endif %};
-            }
-        }
-        @media screen and (max-width: 1023px) {
-            .{{ mid }}-section--title {
-                max-width: 100%;
-                margin: 0 auto;
-                padding: 0 var(--page-padding);
-            }
-            .{{ mid }}-section--title .title {
-                font-size: {% if info.title_mb_size != blank %}{{ info.title_mb_size }}px{% else %}1.5rem{% endif %};
-                font-weight: {% if info.title_pc_weight != blank %}{{ info.title_pc_weight }}{% else %}700{% endif %};
-                line-height: {% if info.title_mb_line != blank %}{{ info.title_mb_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
-            }
-            .{{ mid }}-section--title .description {
-                font-size: {% if info.description_mb_size != blank %}{{ info.description_mb_size }}px{% else %}0.875rem{% endif %};
-                margin-bottom: {% if info.description_mb_margin_bottom != blank %}{{ info.description_mb_margin_bottom }}px{% else %}30px{% endif %};
-                line-height: {% if info.description_mb_line != blank %}{{ info.description_mb_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
-            }
-        }
-    </style>
     {%- liquid
         if tag == blank
-            assign tag = 'div'
+            assign tag = info.title_tag | default: 'div'
         endif
     -%}
-    <{{ tag }} class="{{ mid }}-section--title __st text-center">
+    <div class="{{ mid }}-section--title section--title __st text-center">
     {%- if info.show_title -%}
-        <div class="title{% if info.title_gradient_color != blank %} text-gradient{% endif %}"
-             style="{% if font != blank %}font-family: {{ font }}; {% endif %}{% if info.title_gradient_color != blank %}--background: {{ info.title_color.rgb }}; --gradient: {{ info.title_gradient_color }};{% else %}color: {{ info.title_color }};{% endif %}">{{ info.title }}</div>
+        {%- capture title_style -%}
+            --font-size: {% if info.title_pc_size != blank %}{{ info.title_pc_size }}px{% else %}48px{% endif %};
+            --ms-font-size: {% if info.title_pc_size != blank %}{{ info.title_pc_size | times: 0.8 | round }}px{% else %}38px{% endif %};
+            --mb-font-size: {% if info.title_mb_size != blank %}{{ info.title_mb_size | divided_by: 16.0 }}rem{% else %}1.5rem{% endif %};
+            --margin-bottom: {% if info.title_margin_bottom != blank %}{{ info.title_margin_bottom }}px{% else %}16px{% endif %};
+            --mb-margin-bottom: {% if info.title_mb_margin_bottom != blank %}{{ info.title_mb_margin_bottom }}px{% else %}var(--margin-bottom){% endif %};
+            --font-weight: {% if info.title_pc_weight != blank %}{{ info.title_pc_weight }}{% else %}700{% endif %};
+            --mb-font-weight: {% if info.title_pc_weight != blank %}{{ info.title_pc_weight }}{% else %}700{% endif %};
+            {%- if info.title_style -%}
+                font-style: {{ info.title_style }};
+            {%- endif -%}
+            --line-height: {% if info.title_pc_line != blank %}{{ info.title_pc_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
+            --mb-line-height: {% if info.title_mb_line != blank %}{{ info.title_mb_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
+            --bold-color: {{ info.title_bold_color | default: info.title_color }};
+            --bold-weight: {% if font != blank %}inherit{% else %}700{% endif %};
+        {%- endcapture -%}
+        <{{ tag }} class="title{% if info.title_gradient_color != blank %} text-gradient{% endif %}"
+        style="{{ title_style }}{% if font != blank %}font-family: {{ font }}; {% endif %}{% if info.title_gradient_color != blank %}--background: {{ info.title_color.rgb }}; --gradient: {{ info.title_gradient_color }};{% else %}color: {{ info.title_color }};{% endif %}">{{ info.title }}</{{ tag }}>
     {%- endif -%}
     {%- if info.show_description -%}
-        <div class="description" style="color: {{ info.description_color }};">
+        {%- capture desc_style -%}
+            --font-size: {% if info.description_pc_size != blank %}{{ info.description_pc_size }}px{% else %}18px{% endif %};
+            --ms-font-size: {% if info.description_pc_size != blank %}{{ info.description_pc_size | times: 0.8 | round }}px{% else %}14px{% endif %};
+            --mb-font-size: {% if info.description_mb_size != blank %}{{ info.description_mb_size | divided_by: 16.0 }}rem{% else %}0.875rem{% endif %};
+            --margin-bottom: {% if info.description_pc_margin_bottom != blank %}{{ info.description_pc_margin_bottom }}px{% else %}40px{% endif %};
+            --ms-margin-bottom: {% if info.description_pc_margin_bottom != blank %}{{ info.description_pc_margin_bottom | times: 0.8 | round }}px{% else %}32px{% endif %};
+            --mb-margin-bottom: {% if info.description_mb_margin_bottom != blank %}{{ info.description_mb_margin_bottom }}px{% else %}30px{% endif %};
+            --line-height: {% if info.description_pc_line != blank %}{{ info.description_pc_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
+            --mb-line-height: {% if info.description_mb_line != blank %}{{ info.description_mb_line | divided_by: 100.0 }}{% else %}1.2{% endif %};
+            --bold-color: {{ info.description_bold_color | default: info.description_color }};
+        {%- endcapture -%}
+        <div class="description" style="{{ desc_style }}color: {{ info.description_color }};">
             {{ info.description }}
         </div>
     {%- endif -%}
-    </{{ tag }}>
+    </div>
 {%- endif -%}

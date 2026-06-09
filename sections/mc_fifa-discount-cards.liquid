@@ -48,6 +48,9 @@
 </style>
 <div class="mc_fifa-discount-cards section--page">
     {%- render 'section-title', info: ss -%}
+    {%- if ss.seo_text != blank -%}
+        <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
     <div class="card-items flex-center">
         {%- for block in section.blocks -%}
             {%- assign bs = block.settings -%}
@@ -246,6 +249,43 @@
       "type": "image_picker",
       "id": "decorate_image",
       "label": "Decorate image"
+    },
+    {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "text",
+      "label": "SEO text",
+      "id": "seo_text"
+    },
+    {
+      "type": "select",
+      "id": "seo_tag",
+      "label": "SEO tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+      ],
+      "default": "h2"
     }
   ],
   "blocks": [

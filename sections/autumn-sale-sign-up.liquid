@@ -61,6 +61,7 @@
     }
     .autumn-sale-sign-up .autumn-content .form-content .title {
         font-size: 36px;
+        color: #ffffff;
     }
     .autumn-sale-sign-up .autumn-content .form-content .intro {
         padding-top: 18px;
@@ -188,7 +189,7 @@
         {%- if formInfo != blank -%}
             {%- assign bs = formInfo.settings -%}
             <div class="form-content tw-text-center">
-                <div class="title tw-leading-[1.2] tw-font-bold">{{ bs.title }}</div>
+                <h2 class="title tw-leading-[1.2] tw-font-bold">{{ bs.title }}</h2>
                 <div class="intro tw-leading-[1.2] tw-font-medium">
                     {{ bs.intro }}
                 </div>

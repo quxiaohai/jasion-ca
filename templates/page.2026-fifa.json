@@ -35,7 +35,8 @@
         "pc_left": 145,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 20,
+        "seo_text": "Electric Bike Flash Sale"
       }
     },
     "main_navigation_CCCdMD": {
@@ -190,7 +191,8 @@
         "description_pc_margin_bottom": 40,
         "description_mb_margin_bottom": 30,
         "image_preload": false,
-        "decorate_image": "shopify://shop_images/fifa-ball.png"
+        "decorate_image": "shopify://shop_images/fifa-ball.png",
+        "seo_text": "Limited-Time E-Bike Deals"
       }
     },
     "mc_fifa_spin_pA8NhV": {
@@ -296,7 +298,8 @@
         "privacy_color": "#ffffff",
         "privacy_link_color": "#ffffff",
         "privacy_link_hover_color": "#fdb404",
-        "privacy_active_color": "#fdb404"
+        "privacy_active_color": "#fdb404",
+        "seo_text": "Spin to Win Extra Savings"
       }
     },
     "mc_th_product_card_HTabDa": {
@@ -387,7 +390,9 @@
         "description_pc_size": 18,
         "description_mb_size": 14,
         "description_pc_margin_bottom": 40,
-        "description_mb_margin_bottom": 30
+        "description_mb_margin_bottom": 30,
+        "decorate_image": "shopify://shop_images/fifa-ball.png",
+        "seo_text": "Hot E-Bike Deals"
       }
     },
     "autumn_sale_product_list_kb7cx4": {
@@ -544,7 +549,9 @@
         "description_pc_size": 18,
         "description_mb_size": 12,
         "description_pc_margin_bottom": 40,
-        "description_mb_margin_bottom": 30
+        "description_mb_margin_bottom": 30,
+        "decorate_image": "shopify://shop_images/fifa-ball.png",
+        "seo_text": "Top JasionBike E-Bike Picks"
       }
     },
     "mc_th_trust_aKbtc6": {
@@ -621,7 +628,8 @@
       "settings": {
         "page_color": "rgba(0,0,0,0)",
         "show_heading": true,
-        "heading": "Why Thousands Trust Our Ride"
+        "heading": "Why Thousands Trust Our Ride",
+        "title_tag": "h2"
       }
     },
     "mc_patrol_community_video_y9RFFf": {
@@ -864,6 +872,7 @@
         "page_top": 50,
         "show_title": true,
         "title": "<p>Riders <strong>Reviews</strong></p>",
+        "title_tag": "h2",
         "title_pc_size": 75,
         "title_pc_weight": 700,
         "title_pc_line": 120,
@@ -931,13 +940,14 @@
         "say_zGMMxf",
         "say_p8cfKf"
       ],
-      "name": "autumn-sale-trust",
+      "name": "Autumn Sale Says",
       "settings": {
         "page_color": "rgba(0,0,0,0)",
         "page_top": 50,
         "page_bottom": 50,
         "show_heading": true,
         "heading": "What They Say",
+        "title_tag": "h2",
         "heading_color": "#ffffff",
         "content_color": "#aaafa5"
       }
@@ -1020,6 +1030,7 @@
         "page_top": 50,
         "show_heading": true,
         "heading": "Real Riders Speak",
+        "title_tag": "h2",
         "heading_color": "#ffffff"
       }
     },

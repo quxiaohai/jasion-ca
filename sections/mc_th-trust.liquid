@@ -1,5 +1,5 @@
 {%- assign ss = section.settings -%}
-<style>
+{% stylesheet %}
     .mc_th-trust {
         background-color: var(--background);
         padding: 32px 0 51px;
@@ -123,7 +123,7 @@
             font-size: 0.87890625rem;
         }
     }
-</style>
+{% endstylesheet %}
 <section class="mc_th-trust relative w-full" style="--background: {{ ss.page_color }};">
     {%- if ss.desktop_image != blank -%}
         {% render 'global-image',
@@ -137,7 +137,7 @@
     {%- endif -%}
     <div class="trust-content w-full z-2 relative">
         {%- if ss.show_heading -%}
-            <div class="title lh-2 fw-900 text-center">{{ ss.heading }}</div>
+            <{{ ss.title_tag }} class="title lh-2 fw-900 text-center">{{ ss.heading }}</{{ ss.title_tag }}>
         {%- endif -%}
         {%- assign countList = section.blocks | where: 'type', 'count' -%}
         <div class="count-items flex-between-top">
@@ -203,6 +203,38 @@
       "id": "heading",
       "label": "Title",
       "default": "Why Thousands Trust Our Ride"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Title tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "div",
+          "label": "div"
+        }
+      ],
+      "default": "div"
     }
   ],
   "blocks": [
