@@ -138,19 +138,20 @@
         "card_fFcQrx": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/fifa-card-image1.png",
-            "mb_image": "shopify://shop_images/fifa-mb-card-image1.png"
+            "image": "shopify://shop_images/1_16949f59-f1c2-49b6-b255-0d277ef7578f.png",
+            "mb_image": "shopify://shop_images/1_16949f59-f1c2-49b6-b255-0d277ef7578f.png"
           }
         },
         "card_TAqEj9": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/fifa-card-image2.png",
-            "mb_image": "shopify://shop_images/fifa-mb-card-image2.png"
+            "image": "shopify://shop_images/2_9b6a28f8-0903-4b36-894e-98b130ec7d3a.png",
+            "mb_image": "shopify://shop_images/2_9b6a28f8-0903-4b36-894e-98b130ec7d3a.png"
           }
         },
         "card_8NHhxC": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/fifa-card-image3.png",
             "mb_image": "shopify://shop_images/fifa-mb-card-image3.png"
@@ -158,6 +159,7 @@
         },
         "card_W3Gm4P": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/fifa-card-image4.png",
             "mb_image": "shopify://shop_images/fifa-mb-card-image4.png"
@@ -170,7 +172,6 @@
         "card_8NHhxC",
         "card_W3Gm4P"
       ],
-      "disabled": true,
       "name": "MC Fifa Discount Cards",
       "settings": {
         "page_color": "",
@@ -204,29 +205,29 @@
           "type": "discount_popup",
           "settings": {
             "gift_icon1": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code1": "RIDE100",
-            "prize_name1": "Coupon $100 OFF",
-            "prize_weight1": 0,
+            "discount_code1": "ASSIST100",
+            "prize_name1": "Coupon C$100 OFF",
+            "prize_weight1": 15,
             "gift_icon2": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code2": "RIDE200",
-            "prize_name2": "Coupon $200 OFF",
-            "prize_weight2": 10,
+            "discount_code2": "MVP200",
+            "prize_name2": "Coupon C$200 OFF",
+            "prize_weight2": 1,
             "gift_icon3": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code3": "Buy 1 Get 1 Free",
-            "prize_name3": "Coupon $20 OFF",
-            "prize_weight3": 50,
+            "discount_code3": "KICK50",
+            "prize_name3": "Coupon C$50 OFF",
+            "prize_weight3": 80,
             "gift_icon4": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code4": "FREEKEYCHAIN",
-            "prize_name4": "Free Keychain",
-            "prize_weight4": 10,
+            "discount_code4": "STRIKE150",
+            "prize_name4": "Coupon C$150 OFF",
+            "prize_weight4": 1,
             "gift_icon5": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code5": "POWERPACK",
+            "discount_code5": "FREE",
             "prize_name5": "100% Refund",
             "prize_weight5": 0,
             "gift_icon6": "shopify://shop_images/fifa-world-cup.png",
-            "discount_code6": "ANNI50",
-            "prize_name6": "Coupon $50 OFF",
-            "prize_weight6": 50,
+            "discount_code6": "BOGOWC",
+            "prize_name6": "BOGO Free",
+            "prize_weight6": 0,
             "model_gradient": "linear-gradient(180deg, rgba(224, 245, 205, 1), rgba(224, 245, 205, 1) 100%)",
             "model_title": "Celebrate & Win",
             "model_title_color": "#fdb404",
@@ -240,7 +241,7 @@
             "model_copy_color": "#fdb404",
             "model_copy_border_color": "#fdb404",
             "model_copy_bg_color": "rgba(0,0,0,0)",
-            "model_desc": "Valid until June 30, 2026 • One use per customer • Valid on eBike purchases only • Can be combined with free gift offers！",
+            "model_desc": "Valid until June 22, 2026 • One use per customer • Valid on eBike purchases only • Can be combined with free gift offers！",
             "model_desc_color": "#ffffff",
             "model_button": "Shop Now",
             "model_button_url": "shopify://products/hunter-pro-combo",
@@ -258,7 +259,7 @@
             "mb_countdown_num_height": 1,
             "mb_countdown_num_size": 1,
             "mb_countdown_name_size": 1,
-            "countdown_time": "2026-06-09 00:00:00",
+            "countdown_time": "2026-06-09T00:00:00",
             "duration": 1,
             "day": "DAYS",
             "hour": "HOURS",
@@ -274,20 +275,18 @@
       "block_order": [
         "discount_popup"
       ],
-      "disabled": true,
       "name": "MC Fifa Spin",
       "settings": {
         "page_color": "",
         "title": "SPIN TO WIN",
         "item_icon1": "shopify://shop_images/fifa-card-icon1.png",
-        "item_text1": "$20-$200 OFF",
+        "item_text1": "C$50-C$200 OFF",
         "item_icon2": "shopify://shop_images/fifa-card-icon2.png",
         "item_text2": "Free Accessories",
-        "item_icon3": "shopify://shop_images/fifa-card-icon3.png",
-        "item_text3": "VIP Points&More",
+        "item_text3": "",
         "item_text4": "",
         "spin_background_image": "shopify://shop_images/fifa-spin-bg.png",
-        "spin_turntable_image": "shopify://shop_images/fifa-spin.png",
+        "spin_turntable_image": "shopify://shop_images/9a86adf257b89735721f143fd11b9786.png",
         "klaviyo_api_key": "RbQnB3",
         "klaviyo_list_id": "SWN6CF",
         "form_remark": "Enter your email and spin the wheel!",
