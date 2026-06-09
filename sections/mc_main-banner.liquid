@@ -25,12 +25,9 @@
 <style>
     .{{ cid }} {
         width: 100%;
-    {%- if ss.pc_height > 0 -%}
-        height: {{ ss.pc_height | divided_by: pc_w }}vw;
-    {%- else -%}
-        aspect-ratio: {{ aspect_ratio }};
-    {%- endif -%}
-        position: relative;
+    {%- if ss.pc_height > 0 -%} height: {{ ss.pc_height | divided_by: pc_w }}vw;
+    {%- else -%} aspect-ratio: {{ aspect_ratio }};
+    {%- endif -%} position: relative;
         overflow-x: hidden;
     {%- if ss.page_color != blank -%} background-color: {{ ss.page_color }};
     {%- endif -%}
@@ -68,8 +65,7 @@
         transform: translateX(-50%);
         align-items: flex-start;
         justify-content: {% if ss.content_pos == 'top' %}flex-start{% elsif  ss.content_pos == 'center' %}center{% else %}flex-end{% endif %};
-    {%- unless ss.width_follow_the_theme -%}
-        padding-left: {{ ss.pc_left | divided_by: 19.2 }}vw;
+    {%- unless ss.width_follow_the_theme -%} padding-left: {{ ss.pc_left | divided_by: 19.2 }}vw;
     {%- endunless -%}
     }
 
@@ -79,18 +75,15 @@
 
     @media screen and (max-width: 1023px) {
         .{{ cid }} {
-        {%- if ss.mb_height > 0 -%}
-            height: {{ ss.mb_height | divided_by: mb_w }}vw;
-        {%- else -%}
-            aspect-ratio: {{ mb_aspect_ratio }};
+        {%- if ss.mb_height > 0 -%} height: {{ ss.mb_height | divided_by: mb_w }}vw;
+        {%- else -%} aspect-ratio: {{ mb_aspect_ratio }};
         {%- endif -%}
         }
+
         .{{ cid }} .banner-content {
             transform: translate3d(0, 0, 0);
-        {%- unless ss.width_follow_the_theme -%}
-            padding: 0;
-        {%- endunless -%}
-            align-items: center;
+        {%- unless ss.width_follow_the_theme -%} padding: 0;
+        {%- endunless -%} align-items: center;
             left: 0;
             justify-content: {% if ss.mb_content_pos == 'mb_top' %}flex-start{% elsif  ss.mb_content_pos == 'mb_center' %}center{% else %}flex-end{% endif %};
         }
@@ -102,7 +95,8 @@
         onclick="location.href='{{ ss.backdrop_link }}'"
     {% endif %}
     id="{{ cid }}"
-    class="main-banner overflow-hidden {{ cid }}">
+    class="main-banner overflow-hidden {{ cid }}"
+>
     {% if ss.media_type == 'image' and ss.pc_image_url != blank %}
         {% render 'global-image',
             desktop_img: ss.pc_image_url,
@@ -132,78 +126,97 @@
     <div
         node-name="content"
         class="banner-content w-full h-full absolute flex-column z-2 {% if ss.width_follow_the_theme %} page-width{% endif %}{% if ss.video_play_show %} hidden{% endif %}">
-        {%- for block in section.blocks -%}
-            {% assign bs = block.settings %}
-            {%- case block.type -%}
-                {%- when 'tag' -%}
+    {%- if ss.seo_text != blank -%}
+        <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
+    {%- for block in section.blocks -%}
+        {% assign bs = block.settings %}
+        {%- case block.type -%}
+            {%- when 'tag' -%}
+                <div
+                    style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;"
+                    class="date-name pc-done"
+                >
+            <span
+                style="
+                    border-radius: {{ bs.radius }}px;
+                {% if bs.bg_color != blank %}background: {{ bs.bg_color }};{% else %}border: 1px solid {{ bs.tag_color }};{% endif %}
+                    font-size: 0.9375vw;
+                    color: {{ bs.tag_color }}
+                    "
+                class="text fw-500 lh-2"
+            >
+              {{- bs.tag -}}
+            </span>
+                </div>
+                <div
+                    style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
+                    class="date-name mobile-done"
+                >
+            <span
+                style="border-radius: {{ bs.radius }}px;{% if bs.bg_color != blank %}background: {{ bs.bg_color }};border: 0 none;font-size: 16px;padding: 4px 12px;{% else %} border-color: {{ bs.tag_color }};{% endif %}color: {{ bs.tag_color }}"
+                class="text"
+            >
+              {{- bs.tag -}}
+            </span>
+                </div>
+            {%- when 'button' -%}
+                {% render 'banner-button', info: bs, order: forloop.index0 %}
+            {%- when 'text' -%}
+                {% render 'banner-text', info: bs, order: forloop.index0, font: bs.font_name %}
+            {%- when 'countdown' -%}
+                {% render 'banner-countdown', info: bs %}
+            {%- when 'subscribe' -%}
+                {% render 'banner-subscribe', info: bs %}
+            {%- when 'image_icon' -%}
+                {%- if bs.pc_img_w != blank -%}
                     <div
+                        class="w-full desktop-done {{ bs.pc_align }}"
                         style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;"
-                        class="date-name pc-done">
-                        <span
-                            style="border-radius: {{ bs.radius }}px;
-                            {% if bs.bg_color != blank %}background: {{ bs.bg_color }};{% else %}border: 1px solid {{ bs.tag_color }};{% endif %}
-                                font-size: 0.9375vw;
-                                color: {{ bs.tag_color }}"
-                            class="text fw-500 lh-2">{{ bs.tag }}</span>
+                    >
+                        <img
+                            style="width: {{ bs.pc_img_w | divided_by: 19.2 }}vw"
+                            class="image"
+                            alt=""
+                            loading="lazy"
+                            src="{{ bs.pc_img | image_url: width: bs.pc_img_w }}"
+                        >
                     </div>
+                {%- endif -%}
+                {%- if bs.mb_img != blank -%}
                     <div
                         style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
-                        class="date-name mobile-done">
-                        <span
-                            style="border-radius: {{ bs.radius }}px;{% if bs.bg_color != blank %}background: {{ bs.bg_color }};border: 0 none;font-size: 16px;padding: 4px 12px;{% else %} border-color: {{ bs.tag_color }};{% endif %}color: {{ bs.tag_color }}"
-                            class="text">{{ bs.tag }}</span>
+                        class="w-full mobile-done:flex {{ bs.mb_align }}"
+                    >
+                        <img
+                            class="image"
+                            alt=""
+                            loading="lazy"
+                            style="width: {{ bs.mb_img_w }}px"
+                            src="{{ bs.mb_img | image_url: width: bs.mb_img_w }}"
+                        >
                     </div>
-                {%- when 'button' -%}
-                    {% render 'banner-button', info: bs, order: forloop.index0 %}
-                {%- when 'text' -%}
-                    {% render 'banner-text', info: bs, order: forloop.index0, font: bs.font_name %}
-                {%- when 'countdown' -%}
-                    {% render 'banner-countdown', info: bs %}
-                {%- when 'subscribe' -%}
-                    {% render 'banner-subscribe', info: bs %}
-                {%- when 'image_icon' -%}
-                    {%- if bs.pc_img_w != blank -%}
-                        <div
-                            class="w-full desktop-done {{ bs.pc_align }}"
-                            style="padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;">
-                            <img
-                                style="width: {{ bs.pc_img_w | divided_by: 19.2 }}vw"
-                                class="image"
-                                alt=""
-                                loading="lazy"
-                                src="{{ bs.pc_img | image_url: width: bs.pc_img_w }}"/>
-                        </div>
-                    {%- endif -%}
-                    {%- if bs.mb_img != blank -%}
-                        <div
-                            style="padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
-                            class="w-full mobile-done:flex {{ bs.mb_align }}">
-                            <img
-                                class="image"
-                                alt=""
-                                loading="lazy"
-                                style="width: {{ bs.mb_img_w }}px"
-                                src="{{ bs.mb_img | image_url: width: bs.mb_img_w }}"/>
-                        </div>
-                    {%- endif -%}
-                {%- when 'image' -%}
-                    {%- if bs.pc_img != blank -%}
-                        <div
-                            class="w-full desktop-done"
-                            style="aspect-ratio: {{ bs.pc_img.aspect_ratio }}; padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;">
-                            {%- render 'global-image', image: bs.pc_img -%}
-                        </div>
-                    {%- endif -%}
-                    {%- if bs.mb_img != blank -%}
-                        <div
-                            class="w-full desktop-done"
-                            style="aspect-ratio: {{ bs.mb_img.aspect_ratio }}; padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;">
-                            {%- render 'global-image', image: bs.mb_img -%}
-                        </div>
-                    {%- endif -%}
-            {%- endcase -%}
-        {%- endfor -%}
-    </div>
+                {%- endif -%}
+            {%- when 'image' -%}
+                {%- if bs.pc_img != blank -%}
+                    <div
+                        class="w-full desktop-done"
+                        style="aspect-ratio: {{ bs.pc_img.aspect_ratio }}; padding: {{ bs.top | divided_by: 19.2 }}vw 0 {{ bs.bottom | divided_by: 19.2 }}vw 0;"
+                    >
+                        {%- render 'global-image', image: bs.pc_img -%}
+                    </div>
+                {%- endif -%}
+                {%- if bs.mb_img != blank -%}
+                    <div
+                        class="w-full desktop-done"
+                        style="aspect-ratio: {{ bs.mb_img.aspect_ratio }}; padding: {{ bs.mb_top }}px 0 {{ bs.mb_bottom }}px 0;"
+                    >
+                        {%- render 'global-image', image: bs.mb_img -%}
+                    </div>
+                {%- endif -%}
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
 </div>
 {%- if ss.media_type == 'video' -%}
     <script>
@@ -413,6 +426,43 @@
       "unit": "sec",
       "default": 20,
       "visible_if": "{{ section.settings.overlay_show }}"
+    },
+    {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "text",
+      "label": "SEO text",
+      "id": "seo_text"
+    },
+    {
+      "type": "select",
+      "id": "seo_tag",
+      "label": "SEO tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+      ],
+      "default": "h1"
     }
   ],
   "blocks": [
@@ -820,7 +870,7 @@
           "type": "number",
           "id": "btn2_border_radius"
         },
-         {
+        {
           "label": "Mobile button #1 border radius",
           "type": "number",
           "id": "btn2_mb_border_radius"
