@@ -100,6 +100,7 @@
     }
 </style>
 <animate-element data-animate="zoom-out" class="mc_collection-banner block relative">
+    {%- render 'meta-seo-tag', tag: 'h1' -%}
 {%- if ss.url != blank -%}
     <a href="{{ ss.url }}" class="block w-full">
         {%- endif -%}

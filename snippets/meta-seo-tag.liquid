@@ -1,0 +1,14 @@
+{%- liquid
+    assign seo_list = collection.metafields.custom.seo_title.value
+    if seo_list != blank
+        for value in seo_list
+            assign cur = collection.metafields.custom.seo_title_tag.value[forloop.index0] | default: 'h2'
+            assign code = '<' | append: cur | append: ' class="seo-tag-hidden">' | append: value | append: '</' | append: cur | append: '>'
+            if tag == cur
+                echo code
+            elsif untag != blank and cur != untag
+                echo code
+            endif
+        endfor
+    endif
+-%}
