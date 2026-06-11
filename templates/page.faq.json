@@ -162,7 +162,7 @@
           "settings": {
             "title": "What payment methods do you accept?",
             "title_tag": "h3",
-            "text": "<p>Currently, we are able to securely process payments from American Express, Discover, Diner’s Club, JCB, Visa, Venmo, MasterCard, PayPal, Apple Pay thanks to secure payment processing from Stripe. Additionally, we have a financing partnership with Klarna. Be sure to choose Klarna at checkout to apply for financing options for your e-bike to pay over installments.</p>",
+            "text": "<p>Currently, we are able to securely process payments from American Express, Discover, Diner’s Club, JCB, Visa, Venmo, MasterCard, PayPal, Apple Pay thanks to secure payment processing from Stripe. </p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -172,7 +172,7 @@
           "settings": {
             "title": "Do you offer financing?",
             "title_tag": "h3",
-            "text": "<p>We are offering financing.You can have direct access to Klarna financing through our partnership with Klarna. Now, you can pay for your next e-bike with installment payments after being approved for financing. Be sure to select Klarna at checkout and you will be taken to their secure payment process. For more details please click <a href=\"/pages/payment\" title=\"Payment & Checkout & Coupons Guide\">HERE</a></p>",
+            "text": "<p>We have a financing partnership with Affirm(Shop Pay Installments). Be sure to choose Affirm(Shop Pay Installments) at checkout to apply for financing options for your e-bike to pay over installments.</p>",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
@@ -412,6 +412,7 @@
       "settings": {
         "style": "with-border",
         "heading": "",
+        "font_name": "",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
