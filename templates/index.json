@@ -988,6 +988,24 @@
     "multicolumn_slide_hb_9xwaqy": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_QiDGUU": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=-blAk7TOt5s&t=177s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2026/5/30",
+            "title": "I’m 65… and This E-Bike Changed How Far I Can Go | Jasion Thunder Pro ST",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/0fbnwnNMtea8iJkW8_QXD8SQNZCOmjzPuVc5pbbe06Vw-BjwlvnDao3hNV5Orf5GAahGTiJ6_s192-c-k-c0x00ffffff-no-rj.jpg",
+            "author": "HomeGrown Passion"
+          }
+        },
         "video_VUkmtL": {
           "type": "video",
           "settings": {
@@ -1189,6 +1207,7 @@
         }
       },
       "block_order": [
+        "video_QiDGUU",
         "video_VUkmtL",
         "video_RXnxwF",
         "video_DbqL9Y",
