@@ -584,6 +584,7 @@
         "page_color": "#000000",
         "show_title": true,
         "title": "<p>Riders <strong>Reviews</strong></p>",
+        "title_tag": "div",
         "title_pc_size": 75,
         "title_pc_weight": 700,
         "title_pc_line": 120,
@@ -731,7 +732,9 @@
         "pc_left": 145,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 1
+        "overlay_opacity": 1,
+        "seo_text": "",
+        "seo_tag": "h1"
       }
     },
     "mc_patrol_gift_card": {
@@ -745,8 +748,8 @@
             "mb_gift_image": "shopify://shop_images/3-yd_7ef6eda8-eb50-42dc-a083-046c25daadd6.png",
             "title": "<p>Early Bird<br/><strong>Price C$1,999&lcub;C$3,859&rcub;</strong></p>",
             "show_date": true,
-            "date": "<p>Date: June 8- June 15</p>",
-            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End June 15.</p>"
+            "date": "<p>Date: June 15- June 21</p>",
+            "desc": "<p>Don't Miss Out-Super Early Bird Tickets End June 21.</p>"
           }
         },
         "card_2": {
@@ -769,7 +772,7 @@
             "mb_gift_image": "shopify://shop_images/mb-card-image-3.jpg",
             "title": "<p><strong>100%</strong> REFUND</p>",
             "show_date": true,
-            "date": "<p>Date: June 8- June 15</p>",
+            "date": "<p>Date: June 15- June 21</p>",
             "desc": "<p>One lucky rider will get a full refund on their Patrol order.</p>"
           }
         }
@@ -1253,7 +1256,9 @@
         "pc_left": 259,
         "overlay_show": false,
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 20,
+        "seo_text": "",
+        "seo_tag": "h1"
       }
     },
     "mc_patrol_card_slide": {
