@@ -798,6 +798,17 @@
     "mc_patrol_community_video_y9RFFf": {
       "type": "mc_patrol-community-video",
       "blocks": {
+        "youtube_ratdJt": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=gXTeGmTNiWI",
+            "video_url_mobile": "",
+            "date": "",
+            "content": "Jasion Thunder PRO/ST E-Bike \"Walkthrough/Review\"",
+            "avatar": "shopify://shop_images/channels4_profile_1_fce49b87-eb0d-43d6-9cd3-9d049b14384a.jpg",
+            "author": "Stern Stalled"
+          }
+        },
         "youtube_hHpdeU": {
           "type": "youtube",
           "settings": {
@@ -1050,6 +1061,7 @@
         }
       },
       "block_order": [
+        "youtube_ratdJt",
         "youtube_hHpdeU",
         "youtube_iYJYkX",
         "youtube_Wjg9pr",
