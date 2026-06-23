@@ -194,10 +194,9 @@
         },
         "image_xV4atH": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/4Thunder_Pro_ST.jpg",
-            "image_mobile": "shopify://shop_images/4Thunder_Pro_ST_M.jpg",
+            "image": "shopify://shop_images/4Thunder_Pro_ST_95e66f31-947a-4de2-b7de-813575b31ba1.jpg",
+            "image_mobile": "shopify://shop_images/4Thunder_Pro_ST_M_300d13e1-8e2e-4367-966a-c38f69168fa3.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -255,10 +254,9 @@
         },
         "image_UxKiWT": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/3Hunter_Pro.jpg",
-            "image_mobile": "shopify://shop_images/3Hunter_Pro_M.jpg",
+            "image": "shopify://shop_images/3Hunter_Pro_8bb72fe0-0dea-42d9-a5b5-dcd89825bb44.jpg",
+            "image_mobile": "shopify://shop_images/3Hunter_Pro_M_46faf901-ae55-43c7-97d2-77b58f928630.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -695,8 +693,8 @@
         "image_cx4dww": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1baf74f8a3dd0df67ceeeaaa8cfc652d.jpg",
-            "image_mobile": "shopify://shop_images/200e8059de7563070e0e2c4ee3fed30a.jpg",
+            "image": "shopify://shop_images/6X-Hunter.jpg",
+            "image_mobile": "shopify://shop_images/6X-Hunter_M.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
