@@ -56,6 +56,13 @@
             "position": 7
           }
         },
+        "nav_tab_jFa6bx": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "Why Buy Direct?",
+            "position": 8
+          }
+        },
         "nav_tab_jHdKMz": {
           "type": "nav_tab",
           "settings": {
@@ -74,6 +81,7 @@
       "block_order": [
         "nav_tab_EjHwNt",
         "nav_tab_eajRTe",
+        "nav_tab_jFa6bx",
         "nav_tab_jHdKMz",
         "nav_tab_acFLDT"
       ],
