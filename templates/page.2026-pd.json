@@ -797,8 +797,8 @@
         "heading_color": "#000000",
         "title_tag": "h2",
         "num_color": "#ff981d",
-        "text_color": "#33302b",
-        "service_color": "#1d1d1d",
+        "text_color": "#323030",
+        "service_color": "#000000",
         "service_border_color": "#333333"
       }
     },
