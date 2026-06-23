@@ -14,6 +14,10 @@
         aspect-ratio: 1.777;
     }
 
+    #shopify-section-{{ section.id }} .article a {
+        color: #ff9500;
+    }
+
     .reading-progress {
         position: sticky;
         top: 0;
@@ -51,7 +55,7 @@
 <div
     class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
     <div class="grid gap-5" {{ block.shopify_attributes }}>
-        <div class="page-width page-width--narrow tw-grid tw-gap-7 article-wrapper">
+        <div class="page-width w-full page-width--narrow tw-grid tw-gap-7 article-wrapper">
 
             <animate-element class="inline-flex flex-wrap items-center md:hidden gap-6" data-animate="fade-up"
                              data-animate-delay="{{ delay | times: 250 }}">
@@ -81,7 +85,7 @@
                 </div>
                 <div class="inline-flex items-center gap-2 relative tw-capitalize">
                     {%- render 'icon', icon: 'account', size: 'xs', class: 'stroke-1' -%}
-                    {%- capture author -%}<span itemprop="name">{{ article.author }}</span>{%- endcapture -%}
+                    {%- capture author -%}<a class="reversed-link" href="/blogs/blog-author/{{ article.author | handleize }}" itemprop="name">{{ article.author }}</a>{%- endcapture -%}
                     {{- 'blogs.article.written_by_html' | t: author: author -}}
                 </div>
             </div>
@@ -99,6 +103,7 @@
                     <div class="menu-title">Contents</div>
                     <ul>
                         {% assign h2_matches = article_content | split: '<h2' %}
+                        {%- assign order = 0 -%}
                         {% for match in h2_matches %}
                             {% if forloop.first == false %}
                                 {%- liquid
@@ -107,11 +112,13 @@
                                     assign h2_content = texts | first
                                     assign h2_text = h2_content | strip_html | split: '>' | last | strip
                                     assign h2_id = h2_text | handleize
+                                    assign order = order | plus: 1
                                 -%}
                                 <li class="menu-text">
                                     <a href="#{{ h2_id }}"
                                        data-proxy="menu"
                                        node-name="menu"
+                                       data-index="{{ order }}."
                                        class="menu-link">
                                         {{ h2_text }}
                                     </a>
@@ -202,12 +209,20 @@
                                 assign o_text = '<blockquote data-type="application/ld+json">' | append: json | append: '</blockquote>'
                                 assign n_text = '<script type="application/ld+json">' | append: json | append: '</script>'
                                 assign article_content = article_content | replace: o_text, n_text
+                            elsif forloop.first == false and match contains '"@tag"' and match contains 'ld+json'
+                                assign json = match | split: '</blockquote>' | first | split: '>' | last
+                                assign text = json | split: 'ld+json",' | last
+                                assign text = '{' | append: text
+                                assign o_text = '<blockquote>' | append: json | append: '</blockquote>'
+                                assign n_text = '<script type="application/ld+json">' | append: text | append: '</script>'
+                                assign article_content = article_content | replace: o_text, n_text
                             endif
                         endfor
                         if article_content contains 'data-type="application/ld+json"'
                             assign article_content = article_content | replace: 'data-type="application/ld+json"', 'style="display: none !important;" data-type="application/ld+json"'
                         endif
 
+                        assign article_content = article_content | replace: '\\u0026', '&'
                         assign article_content = article_content | replace: '&lt;blog-product-card', '<blog-product-card' | replace: '&gt;&lt;/blog-product-card&gt;', '></blog-product-card>'
                     -%}
                     {{- article_content -}}
@@ -589,6 +604,9 @@
                 return false;
             }
             let data = await (await response.text());
+            if (!data.includes('blog-product-card')) {
+                return false;
+            }
             if (this.cart) {
                 data = data.replace('#cart#', this.cart).replace('@cart', '');
             } else {
@@ -611,7 +629,7 @@
         }
 
         get handle() {
-            return this.getAttribute('handle');
+            return this.getAttribute('handle')?.replace(/<[^>]+>/g, "");
         }
 
         get cart() {
