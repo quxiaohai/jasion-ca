@@ -798,6 +798,17 @@
     "mc_patrol_community_video_y9RFFf": {
       "type": "mc_patrol-community-video",
       "blocks": {
+        "youtube_hHpdeU": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=7IngFWTm1DU&t=1552s",
+            "video_url_mobile": "",
+            "date": "",
+            "content": "Jasion X-Hunter 1400 Watt E-Bike Ride and Review",
+            "avatar": "shopify://shop_images/channels4_profile_5e83a0e6-dc33-4eb5-9c48-e38134bf6262.jpg",
+            "author": "bryansbikes"
+          }
+        },
         "youtube_iYJYkX": {
           "type": "youtube",
           "settings": {
@@ -1039,6 +1050,7 @@
         }
       },
       "block_order": [
+        "youtube_hHpdeU",
         "youtube_iYJYkX",
         "youtube_Wjg9pr",
         "youtube_UbF3Gk",
