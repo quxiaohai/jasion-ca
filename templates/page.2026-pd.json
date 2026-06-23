@@ -24,8 +24,8 @@
         "pc_width": 1920,
         "mb_width": 750,
         "media_type": "image",
-        "pc_image_url": "shopify://shop_images/pd-banner.jpg",
-        "mb_image_url": "shopify://shop_images/pd-mb-banner.jpg",
+        "pc_image_url": "shopify://shop_images/1_30b000df-bc0d-4cf6-8137-778ea65a4bc3.jpg",
+        "mb_image_url": "shopify://shop_images/1_M_03c96565-eebf-4680-b8e2-5cca50a84886.jpg",
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
@@ -198,7 +198,7 @@
         "card_fFcQrx": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pd-card-image1.jpg"
+            "image": "shopify://shop_images/6_7d644445-a860-4569-b9c1-493ba787abd8.png"
           }
         },
         "card_TAqEj9": {
@@ -210,13 +210,13 @@
         "card_8NHhxC": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pd-card-image3.jpg"
+            "image": "shopify://shop_images/8_bdf8e1be-6118-493a-b8b8-09f6f489d9ab.png"
           }
         },
         "card_W3Gm4P": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pd-card-image4.jpg"
+            "image": "shopify://shop_images/9_b7a7821e-39fe-4af4-8da3-bc558ef4d15c.png"
           }
         }
       },
@@ -269,11 +269,11 @@
             "gift_icon3": "shopify://shop_images/pd-product-logo.png",
             "discount_code3": "PRIME50",
             "prize_name3": "Coupon C$50 OFF",
-            "prize_weight3": 99,
+            "prize_weight3": 98,
             "gift_icon4": "shopify://shop_images/pd-product-logo.png",
             "discount_code4": "STRIKE150",
             "prize_name4": "Coupon C$150 OFF",
-            "prize_weight4": 0,
+            "prize_weight4": 1,
             "gift_icon5": "shopify://shop_images/pd-product-logo.png",
             "discount_code5": "FULLREFUND",
             "prize_name5": "100% Refund",
@@ -342,7 +342,7 @@
         "item_icon3": "shopify://shop_images/pd-bike-icon.png",
         "item_text3": "<p>FREE<br/>Patrol eBike</p>",
         "spin_background_image": "shopify://shop_images/pd-spin-bg.png",
-        "spin_turntable_image": "shopify://shop_images/pd-spin.png",
+        "spin_turntable_image": "shopify://shop_images/6_b0b085a2-bebe-4822-b760-9fdcb454a111.png",
         "klaviyo_api_key": "RbQnB3",
         "klaviyo_list_id": "XpetWs",
         "form_remark": "<p>Subscribe For A Chance To Win A<br/><strong>Free Patrol eBike</strong> And Exclusive Rewards!</p>",
@@ -896,12 +896,12 @@
             "show_button1": true,
             "button1": "Off-Road Adventure",
             "button1_color": "#ffffff",
-            "button1_bg_color": "#FF2501",
+            "button1_bg_color": "#ff2501",
             "button1_url": "shopify://products/patrol-52",
             "show_button2": true,
             "button2": "145 Nm of Torque",
             "button2_color": "#ffffff",
-            "button2_bg_color": "#FF2501",
+            "button2_bg_color": "#ff2501",
             "button2_url": "shopify://products/patrol-52",
             "content_color": "#ffffff",
             "title": "⚡ The Ride Everyone Stops To Look At",
