@@ -864,6 +864,29 @@
             "author": "RazorDriftz"
           }
         },
+        "video_BWjXbh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/SaveClip.App_AQOHqJMW2szuVfm6hZW2jtooBgP7NOWfbXan22x5kObaNtcs6S1uDG8BIRvGdIkWbuBMrXZRYjMKTCxB2_fVB9WYlFcATJOI2ptSIbI.mp4",
+            "video_mobile": "shopify://files/videos/SaveClip.App_AQOHqJMW2szuVfm6hZW2jtooBgP7NOWfbXan22x5kObaNtcs6S1uDG8BIRvGdIkWbuBMrXZRYjMKTCxB2_fVB9WYlFcATJOI2ptSIbI.mp4",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "show_button1": true,
+            "button1": "Off-Road Adventure",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#FF2501",
+            "button1_url": "",
+            "show_button2": true,
+            "button2": "145 Nm of Torque",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#FF2501",
+            "button2_url": "",
+            "content_color": "#ffffff",
+            "title": "⚡ The Ride Everyone Stops To Look At",
+            "content": "<p>More than an eBike — it's an experience.<br/><br/>Built for adventure, designed to turn heads, and ready for wherever the road takes you.</p>",
+            "author": ""
+          }
+        },
         "video_6R9LWh": {
           "type": "video",
           "settings": {
@@ -1022,6 +1045,7 @@
         "video_HnB7wB",
         "video_KMnAdR",
         "video_XwNjh8",
+        "video_BWjXbh",
         "video_6R9LWh",
         "video_UjcjFg",
         "video_nYiGtD",
