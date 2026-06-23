@@ -1040,7 +1040,7 @@
       "settings": {
         "page_color": "rgba(0,0,0,0)",
         "page_top": 50,
-        "show_title": true,
+        "show_title": false,
         "title": "<p>Riders <strong>Reviews</strong></p>",
         "title_tag": "h2",
         "title_pc_size": 75,
