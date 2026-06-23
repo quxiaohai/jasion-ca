@@ -20,7 +20,7 @@
     }
     .mc_th-trust .trust-content .title {
         font-size: 36px;
-        color: #ffffff;
+        color: var(--heading-color);
     }
     .mc_th-trust .count-items {
         padding-top: 60px;
@@ -30,7 +30,7 @@
     }
     .mc_th-trust .count-item .count {
         font-size: 37px;
-        color: #ff981d;
+        color: var(--num-color);
     }
     .mc_th-trust .count-item .count:before {
         content: "";
@@ -45,7 +45,7 @@
     .mc_th-trust .count-item .text {
         padding-top: 8px;
         font-size: 13px;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--text-color);
         line-height: 1.8;
     }
     .mc_th-trust .service-items {
@@ -55,7 +55,7 @@
     .mc_th-trust .service-item {
         width: 249px;
         height: 229px;
-        border: solid 2px #333333;
+        border: solid 2px var(--border-color);
         border-radius: 10px;
     }
     .mc_th-trust .service-item .icon-wrap {
@@ -71,7 +71,7 @@
     }
     .mc_th-trust .service-item .name {
         font-size: 24px;
-        color: #fff;
+        color: var(--title-color);
     }
     @media screen and (max-width: 1023px) {
         .mc_th-trust {
@@ -135,7 +135,14 @@
             mobile_class: 'backdrop-image'
         %}
     {%- endif -%}
-    <div class="trust-content w-full z-2 relative">
+    {%- capture variable_style -%}
+        --heading-color: {{ ss.heading_color }};
+        --num-color: {{ ss.num_color }};
+        --text-color: {{ ss.text_color }};
+        --title-color: {{ ss.service_color }};
+        --border-color: {{ ss.service_border_color }};
+    {%- endcapture -%}
+    <div class="trust-content w-full z-2 relative" style="{{ variable_style }}">
         {%- if ss.show_heading -%}
             <{{ ss.title_tag }} class="title lh-2 fw-900 text-center">{{ ss.heading }}</{{ ss.title_tag }}>
         {%- endif -%}
@@ -205,6 +212,12 @@
       "default": "Why Thousands Trust Our Ride"
     },
     {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
       "type": "select",
       "id": "title_tag",
       "label": "Title tag",
@@ -235,6 +248,38 @@
         }
       ],
       "default": "div"
+    },
+    {
+      "type": "header",
+      "content": "Count color"
+    },
+    {
+      "type": "color",
+      "id": "num_color",
+      "label": "Num color",
+      "default": "#ff981d"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "rgba(255, 255, 255, 0.6)"
+    },
+    {
+      "type": "header",
+      "content": "Service color"
+    },
+    {
+      "type": "text",
+      "id": "service_color",
+      "label": "Title color",
+      "default": "#FFFFF"
+    },
+    {
+      "type": "text",
+      "id": "service_border_color",
+      "label": "Border color",
+      "default": "#333333"
     }
   ],
   "blocks": [

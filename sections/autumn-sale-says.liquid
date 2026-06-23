@@ -1,5 +1,5 @@
 {%- assign ss = section.settings -%}
-<style>
+{% stylesheet %}
     .autumn-sale-says {
         padding: 58px 0 40px;
         background-color: #f9f7f6;
@@ -7,7 +7,6 @@
 
     .autumn-sale-says .title {
         font-size: 36px;
-        color: {{ ss.heading_color }};
         padding-bottom: 45px;
     }
 
@@ -16,7 +15,6 @@
     }
 
     .autumn-sale-says .autumn-content .say-text {
-        color: {{ ss.content_color }};
         font-size: 18px;
         text-align: center;
         word-break: break-word;
@@ -93,13 +91,15 @@
             max-height: 3.5373263889rem;
         }
     }
-
-    {% render 'ndev-page-wrap-style', info: ss, class: '.autumn-sale-says' %}
-</style>
-<section class="autumn-sale-says w-full">
+{% endstylesheet %}
+{% render 'page-wrap-style', load_style: true %}
+<section class="autumn-sale-says section--page w-full">
     {%- if ss.show_heading -%}
-        <{{ ss.title_tag }} class="title tw-text-center tw-leading-[1.2] tw-font-bold">{{ ss.heading }}</{{ ss.title_tag }}>
+        <{{ ss.title_tag }} style="color: {{ ss.heading_color }}" class="title tw-text-center tw-leading-[1.2] tw-font-bold">{{ ss.heading }}</{{ ss.title_tag }}>
     {%- endif -%}
+    {%- capture variable -%}
+        --content-color: {{ ss.content_color }};
+    {%- endcapture -%}
     <div class="autumn-content w-full tw-relative">
         <slider-element id="Slider-{{ section.id }}" class="grid slider slider--desktop slider--tablet"
                         selector=".card-grid>.slider-item">
@@ -107,7 +107,7 @@
                 {%- for block in section.blocks -%}
                     {%- assign bs = block.settings -%}
                     <div class="slider-item card">
-                        <div class="say-text tw-leading-normal">
+                        <div style="color: {{ ss.content_color }};" class="say-text tw-leading-normal">
                             {{ bs.intro }}
                         </div>
                     </div>

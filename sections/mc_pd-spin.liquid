@@ -1,0 +1,1287 @@
+{%- assign ss = section.settings -%}
+{% stylesheet %}
+    .mc_pd-spin {
+        padding: 36px 0;
+    }
+    .mc_pd-spin .spin-content {
+        width: 1280px;
+        aspect-ratio: 2.05;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding-left: 42px;
+    }
+    .mc_pd-spin .spin-content .backdrop-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: fill;
+    }
+    .mc_pd-spin .spin-content .title {
+        font-size: 50px;
+        color: #fd7a08;
+    }
+    .mc_pd-spin .spin-content .items {
+        gap: 18px;
+        padding-top: 26px;
+    }
+    .mc_pd-spin .spin-content .item {
+        gap: 12px;
+    }
+    .mc_pd-spin .spin-content .item .icon-wrap {
+        width: 74px;
+        height: 74px;
+        border: 2px solid #ffffff;
+        background: #fc6305;
+    }
+    .mc_pd-spin .spin-content .item .image {
+        width: auto;
+        max-width: 50px;
+        max-height: 40px;
+        object-fit: contain;
+    }
+    .mc_pd-spin .spin-content .item .text {
+        font-size: 14px;
+        color: #fff;
+    }
+    .mc_pd-spin .spin-wrap {
+        width: 587px;
+        height: 616px;
+    }
+    .mc_pd-spin .spin-wrap .image {
+        object-fit: fill;
+    }
+    .mc_pd-spin .spin-wrap .spin-image {
+        left: 51px;
+        top: 64px;
+        width: 486px;
+        height: auto;
+    }
+    .mc_pd-spin .form-wrap {
+        flex: 1;
+    }
+    .mc_pd-spin .form-wrap .remark {
+        padding-top: 32px;
+        font-size: 17px;
+        color: #ffffff;
+    }
+    .mc_pd-spin .form-wrap .remark strong {
+        font-size: 23px;
+        font-weight: 700;
+        color: #fd7906;
+    }
+    .mc_pd-spin .form-wrap .field {
+        width: 344px;
+        margin: 19px auto 0;
+        gap: 12px;
+    }
+    .mc_pd-spin .form-wrap .field .input-wrap {
+        width: 313px;
+        margin: 0 auto;
+        height: 52px;
+        background-color: #ffffff;
+        box-shadow: inset 0 0 0 2px #fc6305;
+        border-radius: 8px;
+        padding-left: 23px;
+    }
+    .mc_pd-spin .form-wrap .field .icon {
+        width: 36px;
+        height: 36px;
+    }
+    .mc_pd-spin .form-wrap .field input {
+        background: none;
+        line-height: 46px;
+        font-size: 16px;
+        color: #000000;
+        border: 0 none;
+        padding: 0 20px;
+    }
+    .mc_pd-spin .form-wrap .field .button {
+        transform: translateX(10px);
+        height: 128px;
+        max-height: none;
+        font-size: 27px;
+        color: #ffffff;
+        background: none;
+        transition-property: opacity, color;
+        padding-bottom: 50px;
+    }
+    .mc_pd-spin .form-wrap .field .button:hover {
+        opacity: 0.8;
+        color: #341301;
+    }
+    .mc_pd-spin .form-wrap .field .button > .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: fill;
+    }
+    .mc_pd-spin .privacy-info {
+        line-height: 1.2;
+        cursor: pointer;
+        justify-content: center;
+    }
+    .mc_pd-spin .privacy-info.checked .checkbox {
+        background-color: #fdb404;
+        border-color: #fdb404;
+    }
+    .mc_pd-spin .privacy-info.checked .checkbox .svg-icon {
+        opacity: 1;
+    }
+    .mc_pd-spin .privacy-info .checkbox {
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        position: static;
+        box-sizing: border-box;
+        border: 1.5px solid #ffffff;
+        transition: all 0.5s;
+    }
+    .mc_pd-spin .privacy-info .checkbox .svg-icon {
+        width: 10px;
+        opacity: 0;
+    }
+    .mc_pd-spin .privacy-info .text {
+        line-height: 1.3;
+        padding-left: 7px;
+        font-size: 14px;
+        color: #a8a8a8;
+        word-break: break-all;
+        text-align: left;
+    }
+    .mc_pd-spin .privacy-info .text a {
+        color: #ffffff;
+        font-weight: 500;
+    }
+    .mc_pd-spin .privacy-info .text a:hover {
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 1023px) {
+        .mc_pd-spin {
+            padding: 0.48828125rem 0 0.87890625rem;
+        }
+        .mc_pd-spin .spin-content {
+            width: 93.3333333333vw;
+            min-height: 148.75vw;
+            height: auto;
+            aspect-ratio: auto;
+            border-radius: 0.390625rem;
+            padding-left: 0;
+            flex-direction: column;
+        }
+        .mc_pd-spin .spin-content .backdrop-image {
+            width: 100%;
+            object-fit: contain;
+        }
+        .mc_pd-spin .spin-content .title {
+            font-size: 1.30859375rem;
+        }
+        .mc_pd-spin .spin-content .items {
+            gap: 1.5625rem;
+            padding-top: 0.9375rem;
+        }
+        .mc_pd-spin .spin-content .item {
+            gap: 0.390625rem;
+        }
+        .mc_pd-spin .spin-content .item .icon-wrap {
+            width: 2.5390625rem;
+            height: 2.5390625rem;
+        }
+        .mc_pd-spin .spin-content .item .image {
+            max-width: 1.7578125rem;
+            max-height: 1.3671875rem;
+        }
+        .mc_pd-spin .spin-content .item .text {
+            font-size: 0.5859375rem;
+        }
+        .mc_pd-spin .spin-wrap {
+            margin-top: 3.3333333333vw;
+            width: 66.6666666667vw;
+            height: 70vw;
+            transform: translate3d(-0.8333333333vw, 0, 0);
+        }
+        .mc_pd-spin .spin-wrap .spin-image {
+            left: 4.1666666667vw;
+            top: 5.6666666667vw;
+            width: 57.6666666667vw;
+            height: 57.6666666667vw;
+        }
+        .mc_pd-spin .form-wrap {
+            flex: auto;
+            width: 100%;
+            padding: 0.625rem 1.40625rem 0;
+        }
+        .mc_pd-spin .form-wrap .remark {
+            padding-top: 0.703125rem;
+            font-size: 0.5859375rem;
+        }
+        .mc_pd-spin .form-wrap .remark strong {
+            font-size: 0.76171875rem;
+        }
+        .mc_pd-spin .form-wrap .field {
+            width: 13.671875rem;
+            margin: 0.703125rem auto 0;
+            gap: 0.46875rem;
+        }
+        .mc_pd-spin .form-wrap .field .input-wrap {
+            width: 100%;
+            height: 1.953125rem;
+            padding-left: 0.625rem;
+            box-shadow: inset 0 0 0 1px #fc6305;
+            border-radius: 0.15625rem;
+        }
+        .mc_pd-spin .form-wrap .field .icon {
+            width: 1.0546875rem;
+            height: 1.0546875rem;
+        }
+        .mc_pd-spin .form-wrap .field input {
+            line-height: 1.328125rem;
+            font-size: 0.703125rem;
+            padding: 0 0.625rem;
+        }
+        .mc_pd-spin .form-wrap .field .button {
+            width: 9.6484375rem;
+            margin: 0 auto;
+            transform: translateX(0);
+            height: 3.30078125rem;
+            font-size: 0.78125rem;
+            padding-bottom: 1.796875rem;
+        }
+        .mc_pd-spin .form-wrap .field .button:hover {
+            opacity: 1;
+            color: #fff;
+        }
+        .mc_pd-spin .privacy-info {
+            padding-top: 0.234375rem;
+        }
+        .mc_pd-spin .privacy-info .checkbox {
+            width: 14px;
+            min-width: 14px;
+            height: 14px;
+        }
+        .mc_pd-spin .privacy-info .checkbox .svg-icon {
+            width: 9px;
+        }
+        .mc_pd-spin .privacy-info .text {
+            padding-left: 0.3515625rem;
+            font-size: 10px;
+        }
+    }
+{% endstylesheet %}
+{% render 'page-wrap-style', load_style: true %}
+<div class="mc_pd-spin section--page" id="{{ section.id }}-spin">
+    {%- render 'section-title', info: ss -%}
+    {%- if ss.seo_text != blank -%}
+        <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
+    {%- capture item_code -%}
+        {%- for v in (1..3) -%}
+            {%- assign text = 'item_text' | append: v -%}
+            {%- assign icon = 'item_icon' | append: v -%}
+            {%- if ss[text] != blank -%}
+                <li class="item flex-center-col">
+                    {%- if ss[icon] != blank -%}
+                    <div class="icon-wrap rounded-full flex-center">
+                        {%- render 'global-image', image: ss[icon], image_size: 100 -%}
+                    </div>
+                    {%- endif -%}
+                    <span class="text text-center fw-700 lh-2">{{ ss[text] }}</span>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endcapture -%}
+    <div class="spin-content overflow-hidden relative flex-between">
+        {%- if ss.background_image != blank -%}
+            {%- render 'global-image', desktop_img: ss.background_image, desktop_size: 1400, desktop_class: 'backdrop-image', mobile_img: ss.mb_background_image, mobile_size: 750 -%}
+        {%- endif -%}
+        <div class="spin-wrap relative">
+            {%- render 'global-image', image: ss.spin_background_image, image_size: 800, class: 'backdrop-image relative z-2' -%}
+            {%- render 'global-image', image: ss.spin_turntable_image, image_size: 600, class: 'spin-image absolute z-1' -%}
+        </div>
+        {%- assign form_id = 'form-' | append: section.id -%}
+        {%- form 'customer', id: form_id, class: 'form-wrap flex-column relative' -%}
+            <div class="title text-center fw-700 lh-2">{{ ss.title }}</div>
+            {%- if item_code != blank -%}
+                <ul class="items flex-center">
+                    {{ item_code }}
+                </ul>
+            {%- endif -%}
+            {%- if ss.form_remark != blank -%}
+                <div class="remark text-center lh-4">{{ ss.form_remark }}</div>
+            {%- endif -%}
+            <div class="form-info" node-name="formInfo">
+                <div class="field flex-column">
+                    <label class="input-wrap flex-left w-full">
+                        <svg class="icon" viewBox="0 0 1383 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                            <path
+                                d="M1299.857594 0H84.041684A84.017541 84.017541 0 0 0 0 83.969255v855.989061a84.041684 84.041684 0 0 0 84.041684 84.041684H1299.857594a84.065827 84.065827 0 0 0 84.041685-84.041684V83.969255A84.041684 84.041684 0 0 0 1299.857594 0z m-91.743292 105.04607L844.183147 470.111944c-45.606073 45.726788-97.923893 69.893903-151.424718 69.893903h-0.362145c-53.766398 0-106.229075-24.601688-151.955863-70.907908l-359.730278-364.051869zM105.04607 177.981987l345.510067 349.638516-345.510067 328.344414z m86.335266 740.971943l339.667469-322.791531c49.903522 32.01358 104.659782 48.696374 161.226764 48.817089h0.72429c57.170557 0 112.385533-16.90008 162.844343-49.541378l340.415901 323.51582z m1087.568445-66.489744l-342.830198-325.664544 342.830198-344.06149z"
+                                fill="#cdcdcd"
+                            ></path>
+                        </svg>
+                        <input class="default-input w-full"
+                               node-name="email"
+                               type="email"
+                               name="contact[email]"
+                               value="" autocorrect="off"
+                               autocapitalize="off"
+                               autocomplete="email"
+                               placeholder="{{ ss.placeholder }}"
+                               required=""/>
+                    </label>
+                    <button type="submit"
+                            node-name="submit"
+                            class="button relative button--primary fw-600 flex-center w-full"
+                            is="hover-button"
+                            aria-label="{{ ss.button }}">
+                        {%- render 'global-image', image: ss.button_bg_image, image_size: 600 -%}
+                        <span class="btn-text fw-700">{{ ss.button }}</span>
+                    </button>
+                </div>
+                {%- if ss.show_privacy -%}
+                    <div node-name="privacy"
+                         class="privacy-info{% if ss.privacy_checked %} checked{% endif %} flex-top">
+                        <div class="checkbox flex-center">
+                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="10.707" height="7.511"
+                                 viewBox="0 0 10.707 7.511">
+                                <path d="M-11467.566,874.83l3.55,3.55,6.45-6.451"
+                                      transform="translate(11467.92 -871.575)" fill="none" stroke="#fff"
+                                      stroke-width="1"></path>
+                            </svg>
+                        </div>
+                        <div class="text flex-bottom">
+                            {{ ss.privacy_text }}
+                        </div>
+                    </div>
+                {%- endif -%}
+            </div>
+        {%- endform -%}
+    </div>
+    {%- liquid
+        assign discount = section.blocks | first
+        assign ds = discount.settings
+        render 'spin-popup', ds: ds
+    -%}
+</div>
+{%- if discount != blank -%}
+    <script>
+        $heybike.ready(() => {
+            const node = document.getElementById('{{ section.id }}-spin');
+            const nodeList = $heybike.getNodeList(node);
+            const form = document.getElementById('{{ form_id }}');
+            const spinElem = node.querySelector('.spin-image');
+            let currentRotation = 0.0;
+            let animating = false;
+            let animStartTime = 0;
+            let startRotation = 0;
+            let targetRotation = 0;
+            let animationId = null;
+            let currentPrize = null;
+            let isOpen = false;
+            let scrollPos = 0;
+
+            const prizes = [
+                {%- liquid
+                    assign angle = 0
+                -%}
+                {%- for v in (1..6) -%}
+                {%- liquid
+                    assign icon = 'gift_icon' | append: v
+                    assign code = 'discount_code' | append: v
+                    assign name = 'prize_name' | append: v
+                    assign weight = 'prize_weight' | append: v
+                -%}
+                {
+                    icon: '{{ ds[icon] | image_url: width: 300 }}',
+                    code: '{{ ds[code] }}',
+                    angle: {{ 360 | minus: angle }},
+                    title: `{{ ds[name] }}`,
+                    weight: {{ ds[weight] }}}{% if forloop.last == false %},{% endif %}
+                {%- liquid
+                    assign angle = angle | plus: 60
+                -%}
+                {%- endfor -%}
+            ];
+
+            const getSelectPrize = () => {
+                const list = prizes.filter(item => item.weight > 0);
+                const len = list.length;
+                const totalWeight = list.reduce((prev, cur) => cur.weight + prev, 0);
+                const r = Math.random() * totalWeight;
+                let cumulative = 0;
+                for (let k = 0; k < len; k++) {
+                    cumulative += list[k].weight;
+                    if (r <= cumulative) return list[k];
+                }
+                return list[len - 1];
+            };
+
+            function startWheel(rotateRad) {
+                spinElem.style.transform = `rotate(${rotateRad}deg)`;
+            }
+
+            function easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            function animateSpin(now) {
+                const elapsed = now - animStartTime;
+                let progress = Math.min(1, elapsed / 1800);
+                const easeProgress = easeOutCubic(progress);
+                currentRotation = startRotation + (targetRotation - startRotation) * easeProgress;
+                startWheel(currentRotation);
+                if (progress < 1) {
+                    animationId = requestAnimationFrame(animateSpin);
+                } else {
+                    if (animationId) cancelAnimationFrame(animationId);
+                    animationId = null;
+                    openModal();
+                }
+            }
+
+            function startSpin() {
+                if (animating) return;
+                const minRounds = 6;
+                const maxRounds = 14;
+                const rounds = Math.round(minRounds + Math.random() * (maxRounds - minRounds));
+                currentPrize = getSelectPrize();
+                const extraRad = currentPrize.angle;
+                const deltaRad = rounds * 360 + extraRad;
+                startRotation = currentRotation;
+                targetRotation = startRotation + deltaRad;
+                animating = true;
+                animStartTime = performance.now();
+                if (animationId) cancelAnimationFrame(animationId);
+                animationId = requestAnimationFrame(animateSpin);
+            }
+
+            const successText = () => {
+                nodeList.formInfo.innerHTML = `<div class="form-success flex-left">
+                    <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                        <path
+                            d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024z m-49.590857-377.197714L315.977143 498.614857 219.428571 590.848c70.217143 37.814857 168.594286 106.788571 252.854858 213.723429C531.821714 692.662857 715.337143 463.725714 804.571429 443.245714c-14.409143-57.709714-22.528-166.034286 0-223.817143-183.003429 120.685714-342.162286 427.373714-342.162286 427.373715z"
+                            fill="#1afa29"></path>
+                    </svg>
+                    <span>{{ ss.success }}</span>
+                </div>`;
+            }
+
+            const klaviyoSubscribe = async (email) => {
+                const createSubscriptionResponse = await fetch(`https://a.klaviyo.com/client/subscriptions/?company_id={{ ss.klaviyo_api_key }}`, {
+                    method: "POST",
+                    headers: {
+                        accept: "application/json",
+                        revision: "2026-04-15",
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        data: {
+                            type: "subscription",
+                            relationships: {
+                                list: {
+                                    data: {
+                                        type: "list",
+                                        id: '{{ ss.klaviyo_list_id }}'
+                                    }
+                                }
+                            },
+                            attributes: {
+                                profile: {
+                                    data: {
+                                        type: "profile",
+                                        attributes: {
+                                            email: email
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    })
+                });
+                if (!createSubscriptionResponse.ok) {
+                    return alert(` HTTP ${createSubscriptionResponse.status}`);
+                }
+                successText();
+                startSpin();
+            };
+
+            form.addEventListener('submit', ev => {
+                ev.stopImmediatePropagation();
+                ev.preventDefault();
+                klaviyoSubscribe(nodeList.email.value);
+            });
+
+            nodeList.privacy?.addEventListener('click', (ev) => {
+                if (ev.target.tagName.toLocaleLowerCase() === 'a') {
+                    return false;
+                }
+                ev.preventDefault();
+                ev.stopPropagation();
+                nodeList.privacy.classList.toggle('checked');
+                if (nodeList.privacy.classList.contains('checked')) {
+                    nodeList.submit.removeAttribute('disabled');
+                } else {
+                    nodeList.submit.setAttribute('disabled', true);
+                }
+            });
+
+            function openModal() {
+                if (isOpen) return;
+                isOpen = true;
+                nodeList.prizeName.textContent = currentPrize.title;
+                nodeList.code.textContent = currentPrize.code;
+                nodeList.cover.innerHTML = `<img src="${currentPrize.icon}" class="image" alt="${currentPrize.code}"/>`
+                nodeList.btn.href = '/discount/' + currentPrize.code + '?redirect=' + encodeURIComponent('{{ ss.model_button_url }}');
+                nodeList.modal.style.setProperty('--background', `url("{{ ds.model_bg_image | image_url: width: 500 }}")`);
+                scrollPos = window.scrollY;
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.top = '-' + scrollPos + 'px';
+                document.body.style.width = '100%';
+                nodeList.overlay.style.display = 'flex';
+                history.pushState({easter: true}, '');
+                spawnConfetti();
+            }
+
+            function closeModal() {
+                if (!isOpen) return;
+                isOpen = false;
+                nodeList.overlay.style.display = 'none';
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                window.scrollTo(0, scrollPos);
+                if (eggElement && eggElement.parentNode) {
+                    eggElement.parentNode.removeChild(eggElement);
+                    eggElement = null;
+                }
+            }
+
+            nodeList.close.addEventListener('click', closeModal);
+            nodeList.overlay.addEventListener('click', function (e) {
+                if (e.target === nodeList.overlay) closeModal();
+            });
+
+            window.addEventListener('popstate', function () {
+                if (isOpen) closeModal();
+            });
+
+            function spawnConfetti() {
+                // Clear existing confetti
+                while (nodeList.confetti.firstChild) {
+                    nodeList.confetti.removeChild(nodeList.confetti.firstChild);
+                }
+                const emojis = ['\uD83E\uDD5A', '\uD83D\uDC23', '\uD83D\uDC30', '\uD83C\uDF38', '\uD83C\uDF37', '\u2728'];
+                const pieces = 24;
+                for (let i = 0; i < pieces; i++) {
+                    let el = document.createElement('div');
+                    el.className = 'easter-confetti-piece';
+                    el.textContent = emojis[i % emojis.length];
+                    el.style.left = Math.random() * 100 + '%';
+                    el.style.fontSize = (14 + Math.random() * 14) + 'px';
+                    el.style.animationDelay = (Math.random() * 0.8) + 's';
+                    el.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+                    nodeList.confetti.appendChild(el);
+                }
+            }
+
+            nodeList.copy.addEventListener('click', function () {
+                const code = nodeList.code.textContent;
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(code).then(function () {
+                        nodeList.copy.classList.add('active');
+                        setTimeout(function () {
+                            nodeList.copy.classList.remove('active');
+                        }, 2000);
+                    });
+                } else {
+                    const ta = document.createElement('textarea');
+                    ta.value = code;
+                    ta.style.position = 'fixed';
+                    ta.style.left = '-9999px';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    nodeList.copy.classList.add('active');
+                    setTimeout(function () {
+                        nodeList.copy.classList.remove('active');
+                    }, 2000);
+                }
+            });
+
+            function init() {
+                {%- if request.design_mode -%}
+                currentPrize = prizes[0];
+                openModal();
+                {%- endif -%}
+            }
+
+            // init();
+        });
+    </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "MC Fifa Spin",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Fifa Spin"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "TRY YOUR LUCK!"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_background_image",
+      "label": "Mobile background image"
+    },
+    {
+      "type": "header",
+      "content": "Item content"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_icon1",
+      "label": "Item icon #1"
+    },
+    {
+      "type": "richtext",
+      "id": "item_text1",
+      "label": "Item text #1",
+      "default": "<p>$50<br />-$200 OFF</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_icon2",
+      "label": "Item icon #2"
+    },
+    {
+      "type": "richtext",
+      "id": "item_text2",
+      "label": "Item text #2",
+      "default": "<p>FREE<br />Accessories</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_icon3",
+      "label": "Item icon #3"
+    },
+    {
+      "type": "richtext",
+      "id": "item_text3",
+      "label": "Item text #3",
+      "default": "<p>FREE<br />Patrol eBike</p>"
+    },
+    {
+      "type": "header",
+      "content": "Spin"
+    },
+    {
+      "type": "image_picker",
+      "id": "spin_background_image",
+      "label": "Spin background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "spin_turntable_image",
+      "label": "Spin turntable image"
+    },
+    {
+      "type": "header",
+      "content": "Form"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_api_key",
+      "label": "Klaviyo API Key",
+      "default": "RbQnB3"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id",
+      "label": "Klaviyo List ID",
+      "default": "XpetWs"
+    },
+    {
+      "type": "richtext",
+      "id": "form_remark",
+      "label": "Form remark",
+      "default": "<p>Subscribe For A Chance To Win A<br /><strong>Free Patrol eBike</strong> And Exclusive Rewards!</p>"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button Text",
+      "default": "SPIN TO WIN"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_bg_image",
+      "label": "Button background image"
+    },
+    {
+      "type": "text",
+      "id": "success",
+      "label": "Form success text",
+      "default": "Submit successfully"
+    },
+    {
+      "type": "textarea",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_privacy",
+      "label": "Show privacy",
+      "default": true
+    },
+    {
+      "label": "Privacy text",
+      "type": "richtext",
+      "id": "privacy_text",
+      "default": "<p>I agree to receive emails and updates One spin per email New customers only.</p>"
+    },
+    {
+      "label": "Is subscription automatically checked?",
+      "type": "checkbox",
+      "id": "privacy_checked",
+      "default": true
+    },
+    {
+      "label": "Privacy text color",
+      "type": "color",
+      "id": "privacy_color",
+      "default": "#ffffff"
+    },
+    {
+      "label": "Privacy text link color",
+      "type": "color",
+      "id": "privacy_link_color",
+      "default": "#ffffff"
+    },
+    {
+      "label": "Privacy text hover color",
+      "type": "color",
+      "id": "privacy_link_hover_color",
+      "default": "#fdb404"
+    },
+    {
+      "label": "Privacy text active color",
+      "type": "color",
+      "id": "privacy_active_color",
+      "default": "#fdb404"
+    },
+    {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "text",
+      "label": "SEO text",
+      "id": "seo_text"
+    },
+    {
+      "type": "select",
+      "id": "seo_tag",
+      "label": "SEO tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "discount_popup",
+      "name": "Discount popup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Gift discount code"
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon1",
+          "label": "Gift icon #1"
+        },
+        {
+          "type": "text",
+          "id": "discount_code1",
+          "label": "Discount code #1",
+          "default": "EASTER-001"
+        },
+        {
+          "type": "text",
+          "id": "prize_name1",
+          "label": "Prize name #1",
+          "default": "Free Screen Protector Installation"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight1",
+          "label": "Prize weight #1",
+          "default": 35
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon2",
+          "label": "Gift icon #2"
+        },
+        {
+          "type": "text",
+          "id": "discount_code2",
+          "label": "Discount code #2",
+          "default": "EASTER-002"
+        },
+        {
+          "type": "text",
+          "id": "prize_name2",
+          "label": "Prize name #2",
+          "default": "50% Off Extended Warranty"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight2",
+          "label": "Prize weight #2",
+          "default": 25
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon3",
+          "label": "Gift icon #3"
+        },
+        {
+          "type": "text",
+          "id": "discount_code3",
+          "label": "Discount code #3",
+          "default": "EASTER-003"
+        },
+        {
+          "type": "text",
+          "id": "prize_name3",
+          "label": "Prize name #3",
+          "default": "50% Off New Battery Installation"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight3",
+          "label": "Prize weight #3",
+          "default": 20
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon4",
+          "label": "Gift icon #4"
+        },
+        {
+          "type": "text",
+          "id": "discount_code4",
+          "label": "Discount code #4",
+          "default": "EASTER-004"
+        },
+        {
+          "type": "text",
+          "id": "prize_name4",
+          "label": "Prize name #4",
+          "default": "Free Extended Warranty"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight4",
+          "label": "Prize weight #4",
+          "default": 12
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon5",
+          "label": "Gift icon #5"
+        },
+        {
+          "type": "text",
+          "id": "discount_code5",
+          "label": "Discount code #5",
+          "default": "EASTER-005"
+        },
+        {
+          "type": "text",
+          "id": "prize_name5",
+          "label": "Prize name #5",
+          "default": "Free New Battery Installation"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight5",
+          "label": "Prize weight #5",
+          "default": 8
+        },
+        {
+          "type": "image_picker",
+          "id": "gift_icon6",
+          "label": "Gift icon #6"
+        },
+        {
+          "type": "text",
+          "id": "discount_code6",
+          "label": "Discount code #6",
+          "default": "EASTER-005"
+        },
+        {
+          "type": "text",
+          "id": "prize_name6",
+          "label": "Prize name #6",
+          "default": "Free New Battery Installation"
+        },
+        {
+          "type": "number",
+          "id": "prize_weight6",
+          "label": "Prize weight #6",
+          "default": 8
+        },
+        {
+          "type": "header",
+          "content": "Gift model"
+        },
+        {
+          "type": "color_background",
+          "id": "model_gradient",
+          "label": "Model background color"
+        },
+        {
+          "type": "image_picker",
+          "id": "model_bg_image",
+          "label": "Model background image"
+        },
+        {
+          "type": "text",
+          "id": "model_title",
+          "label": "Model title",
+          "default": "You Found It!"
+        },
+        {
+          "type": "color",
+          "id": "model_title_color",
+          "label": "Model title color",
+          "default": "#ffd700"
+        },
+        {
+          "type": "text",
+          "id": "model_subtitle",
+          "label": "Model subtitle",
+          "default": "Nice find! Here's your reward:"
+        },
+        {
+          "type": "text",
+          "id": "model_design_mode_subtitle",
+          "label": "Model design mode subtitle",
+          "default": "Welcome back! Here's your reward:"
+        },
+        {
+          "type": "color",
+          "id": "model_subtitle_color",
+          "label": "Model subtitle color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "model_prize_name_color",
+          "label": "Model prize name color",
+          "default": "#ffd700"
+        },
+        {
+          "type": "color",
+          "id": "model_code_color",
+          "label": "Model code color",
+          "default": "#ffd700"
+        },
+        {
+          "type": "color",
+          "id": "model_code_border_color",
+          "label": "Model code border color"
+        },
+        {
+          "type": "color",
+          "id": "model_code_bg_color",
+          "label": "Model code background color"
+        },
+        {
+          "type": "color",
+          "id": "model_copy_color",
+          "label": "Model copy color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "model_copy_border_color",
+          "label": "Model copy border color"
+        },
+        {
+          "type": "color",
+          "id": "model_copy_bg_color",
+          "label": "Model copy background color"
+        },
+        {
+          "type": "textarea",
+          "id": "model_desc",
+          "label": "Model desc",
+          "default": "Valid until 6 April 2026 • One use per customer. Must be used with a device purchase. • Cannot be combined with other offers."
+        },
+        {
+          "type": "color",
+          "id": "model_desc_color",
+          "label": "Model desc color",
+          "default": "#c1b4d3"
+        },
+        {
+          "type": "text",
+          "id": "model_button",
+          "label": "Model button",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "model_button_url",
+          "label": "Model button url"
+        },
+        {
+          "type": "color",
+          "id": "model_button_color",
+          "label": "Model button color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "model_button_bg_color",
+          "label": "Model button background color",
+          "default": "#77cd28"
+        },
+        {
+          "type": "color",
+          "id": "model_button_bg_hover_color",
+          "label": "Model button background hover color",
+          "default": "#85d838"
+        },
+        {
+          "type": "header",
+          "content": "Countdown"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_countdown",
+          "default": false,
+          "label": "Show countdown"
+        },
+        {
+          "type": "text",
+          "id": "padding",
+          "default": "0px 0px 0px 0px",
+          "label": "Desktop padding"
+        },
+        {
+          "type": "text",
+          "id": "mb_padding",
+          "default": "0px 0px 0px 0px",
+          "label": "Mobile padding"
+        },
+        {
+          "type": "range",
+          "id": "countdown_num_width",
+          "label": "Desktop countdown num width scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "countdown_num_height",
+          "label": "Desktop countdown num height scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "countdown_num_size",
+          "label": "Desktop countdown num size scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "countdown_name_size",
+          "label": "Desktop countdown name size scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "mb_countdown_num_width",
+          "label": "Mobile countdown num width scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "mb_countdown_num_height",
+          "label": "Mobile countdown num height scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "mb_countdown_num_size",
+          "label": "Mobile countdown num size scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "mb_countdown_name_size",
+          "label": "Mobile countdown name size scale",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "unit": "m",
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "countdown_time",
+          "label": "Countdown date",
+          "default": "2026-04-28 12:01:01",
+          "info": "Format: yyyy-MM-dd HH:mm:ss"
+        },
+        {
+          "type": "range",
+          "id": "duration",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "Day",
+          "label": "Duration days",
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "day",
+          "label": "Day",
+          "default": "DAYS"
+        },
+        {
+          "type": "text",
+          "id": "hour",
+          "label": "Hour",
+          "default": "HOURS"
+        },
+        {
+          "type": "text",
+          "id": "minute",
+          "label": "Minute",
+          "default": "MINS"
+        },
+        {
+          "type": "text",
+          "id": "second",
+          "label": "Second",
+          "default": "SECS"
+        },
+        {
+          "type": "header",
+          "content": "Countdown Color"
+        },
+        {
+          "label": "Countdown fill color",
+          "type": "color",
+          "id": "countdown_fill_color",
+          "default": "#ffd700"
+        },
+        {
+          "label": "countdown num color",
+          "type": "color",
+          "id": "countdown_num_color",
+          "default": "#2f2900"
+        },
+        {
+          "label": "Countdown text color",
+          "type": "color",
+          "id": "countdown_text_color",
+          "default": "#ffffff"
+        },
+        {
+          "label": "Countdown dot color",
+          "type": "color",
+          "id": "countdown_dot_color",
+          "default": "#ffd700"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

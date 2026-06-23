@@ -1,5 +1,5 @@
 {%- assign ss = section.settings -%}
-<style>
+{% stylesheet %}
     .mc_fifa-discount-cards {
         padding: 40px 0;
     }
@@ -19,6 +19,7 @@
         aspect-ratio: 0.69;
         width: 314px;
         height: auto;
+        object-fit: fill;
     }
     @media screen and (max-width: 1023px) {
         .mc_fifa-discount-cards {
@@ -44,8 +45,8 @@
             width: 39.8333333333vw;
         }
     }
-    {% render 'page-wrap-style' %}
-</style>
+{% endstylesheet %}
+{% render 'page-wrap-style', load_style: true %}
 <div class="mc_fifa-discount-cards section--page">
     {%- render 'section-title', info: ss -%}
     {%- if ss.seo_text != blank -%}

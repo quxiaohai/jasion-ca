@@ -1,0 +1,769 @@
+{%- liquid
+    assign cid = section.id | split: '__' | last
+    assign ss = section.settings
+    assign is_row = false
+    if ss.layout == 'row'
+        assign is_row = true
+    endif
+    assign is_mb_row = false
+    if ss.mb_layout == 'row'
+        assign is_mb_row = true
+    endif
+-%}
+{% stylesheet %}
+    .section--text {
+        justify-content: var(--justify);
+        align-items: var(--items);
+        flex-direction: var(--direct);
+        flex-wrap: wrap;
+    }
+
+    .section--text .sec-text {
+        font-size: var(--size);
+        padding: var(--padding);
+        font-weight: var(--weight);
+        font-style: var(--style);
+        text-align: var(--align);
+        width: var(--width);
+        max-width: var(--max-width);
+        line-height: var(--line-height);
+        margin: 0 auto;
+    }
+
+    .section--text .sec-text .image {
+        height: calc(var(--size) + 4px);
+        width: auto;
+        object-fit: contain;
+        margin-right: 8px;
+        display: inline-block;
+        transform: translate3d(0px, -2px, 0px);
+    }
+
+    .section--text .sec-text .image + p {
+        display: inline-block;
+    }
+
+    .section--text .sec-text strong {
+        color: var(--bold-color);
+    }
+
+    @media screen and (max-width: 1440px) {
+        .section--text .sec-text {
+            font-size: var(--ms-size);
+        }
+
+        .section--text .sec-text .image {
+            height: calc(var(--ms-size) + 4px);
+            margin-right: 6px;
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        .section--text {
+            justify-content: var(--mb-justify);
+            align-items: var(--mb-items);
+            flex-direction: var(--mb-direct);
+        }
+        .section--text .sec-text {
+            font-size: var(--mb-size);
+            padding: var(--mb-padding);
+            width: var(--mb-width);
+            text-align: var(--mb-align);
+            max-width: none;
+        }
+        .section--text .sec-text .image {
+            height: calc(var(--mb-size) + 4px);
+        }
+    }
+{% endstylesheet %}
+{% render 'page-wrap-style', load_style: true %}
+{%- capture style_top -%}
+    --justify: {% if is_row %}space-between{% else %}flex-start{% endif %};--items: {% if is_row %}center{% else %}flex-start{% endif %};--direct: {% if is_row %}row{% else %}column{% endif %};
+    --mb-justify: {% if is_mb_row %}space-between{% else %}flex-start{% endif %};--mb-items: {% if is_mb_row %}center{% else %}flex-start{% endif %};--mb-direct: {% if is_mb_row %}row{% else %}column{% endif %};
+{%- endcapture -%}
+<div
+    style="{{ style_top }}"
+    class="section--text flex section--page{% unless ss.full_width %} page-width{% endunless %}">
+    {%- for block in section.blocks -%}
+        {%- assign bs = block.settings -%}
+        {%- case block.type -%}
+            {%- when 'text' -%}
+                {%- capture style_text -%}
+                    --size:{{ bs.pc_size }}px;--ms-size:{{ bs.pc_size | times: 0.85 }}px;--padding:{{ bs.padding }};--style:{{ bs.style }};--align:{{ bs.alignment }};--width:{{ bs.width }}%;--max-width:{{ bs.max_width }}px;--line-height:{{ bs.line_height | divided_by: 100.0 }};
+                    --mb-size:{{ bs.mb_size }}px;--mb-padding:{{ bs.mb_padding }};--mb-width:{{ bs.mb_width }}%;--mb-align:{{ bs.mb_alignment }};--bold-color:{{ bs.bold_color }};--weight:{{ bs.weight }};
+                {%- endcapture -%}
+                {%- capture prefix_url -%}
+                    {%- if bs.prefix_url != blank -%}
+                        {%- render 'global-image', image: bs.prefix_url, image_size: 50 -%}
+                    {%- endif -%}
+                {%- endcapture -%}
+                <{{ bs.text_tag }} class="sec-text{% if bs.gradient_color != blank %} text-gradient{% endif %}"
+                     style="{{ style_text }}{% if info.title_gradient_color != blank %}--background:{{ info.title_color.rgb }};--gradient:{{ bs.gradient_color }};{% else %}color:{{ bs.color }};{% endif %}">
+                    {{ prefix_url }}{{ bs.text }}
+                </{{ bs.text_tag }}>
+            {%- when 'button' -%}
+                {% render 'banner-button', info: bs %}
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
+{% schema %}
+{
+  "name": "MC Section Text",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Section Text"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Desktop layout show",
+      "options": [
+        {
+          "label": "Column",
+          "value": "column"
+        },
+        {
+          "label": "Row",
+          "value": "row"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "mb_layout",
+      "label": "Mobile layout show",
+      "options": [
+        {
+          "label": "Column",
+          "value": "column"
+        },
+        {
+          "label": "Row",
+          "value": "row"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "padding",
+          "label": "Desktop padding",
+          "default": "0px 0px 0px 0px",
+          "info": "Up, Right, Down, Left -> (10px 0px 10px 0px)"
+        },
+        {
+          "type": "text",
+          "id": "mb_padding",
+          "label": "Mobile padding",
+          "default": "0px 0px 0px 0px",
+          "info": "Up, Right, Down, Left -> (10px 0px 10px 0px)"
+        },
+        {
+          "label": "Text prefix icon",
+          "type": "image_picker",
+          "id": "prefix_url"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            },
+            {
+              "value": "div",
+              "label": "div"
+            },
+            {
+              "value": "span",
+              "label": "span"
+            },
+            {
+              "value": "p",
+              "label": "p"
+            }
+          ],
+          "default": "div",
+          "label": "Text tag",
+          "info": "Specify text code types for SEO and search engines for crawling purposes."
+        },
+        {
+          "type": "text_alignment",
+          "id": "alignment",
+          "label": "Desktop text alignment",
+          "default": "center"
+        },
+        {
+          "type": "text_alignment",
+          "id": "mb_alignment",
+          "label": "Mobile text alignment",
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Font style",
+          "options": [
+            {
+              "label": "Normal",
+              "value": "normal"
+            },
+            {
+              "label": "italic",
+              "value": "italic"
+            }
+          ],
+          "default": "normal"
+        },
+        {
+          "type": "range",
+          "id": "weight",
+          "label": "Text weight",
+          "min": 200,
+          "max": 900,
+          "step": 100,
+          "unit": "w",
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "line_height",
+          "label": "Text line weight",
+          "min": 100,
+          "max": 500,
+          "step": 10,
+          "unit": "%",
+          "default": 120
+        },
+        {
+          "type": "range",
+          "id": "pc_size",
+          "label": "Desktop text size",
+          "min": 12,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "mb_size",
+          "label": "Mobile text size",
+          "min": 6,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Desktop width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "number",
+          "id": "max_width",
+          "label": "Desktop max width",
+          "default": 1920
+        },
+        {
+          "type": "range",
+          "id": "mb_width",
+          "label": "Mobile width",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "bold_color",
+          "label": "Bold color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color_background",
+          "id": "gradient_color",
+          "label": "Gradient color"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "padding",
+          "label": "Desktop padding",
+          "default": "0px 0px 0px 0px",
+          "info": "Up, Right, Down, Left -> (10px 0px 10px 0px)"
+        },
+        {
+          "type": "text",
+          "id": "mb_padding",
+          "label": "Mobile padding",
+          "default": "0px 0px 0px 0px",
+          "info": "Up, Right, Down, Left -> (10px 0px 10px 0px)"
+        },
+        {
+          "label": "Desktop button gap",
+          "type": "number",
+          "id": "pc_gap",
+          "default": 12
+        },
+        {
+          "label": "Mobile button gap",
+          "type": "number",
+          "id": "mb_gap",
+          "default": 10
+        },
+        {
+          "type": "select",
+          "id": "pc_align",
+          "label": "Desktop display position",
+          "options": [
+            {
+              "value": "flex-left",
+              "label": "Left"
+            },
+            {
+              "value": "flex-center",
+              "label": "Center"
+            },
+            {
+              "value": "flex-right",
+              "label": "Right"
+            }
+          ],
+          "default": "flex-left"
+        },
+        {
+          "type": "select",
+          "id": "mb_align",
+          "label": "Mobile display position",
+          "options": [
+            {
+              "value": "flex-left",
+              "label": "Left"
+            },
+            {
+              "value": "flex-center",
+              "label": "Center"
+            },
+            {
+              "value": "flex-right",
+              "label": "Right"
+            }
+          ],
+          "default": "flex-center"
+        },
+        {
+          "type": "header",
+          "content": "Button #1"
+        },
+        {
+          "label": "Show button #1",
+          "type": "checkbox",
+          "id": "show_btn1",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "btn1_ability",
+          "label": "Button #1 function",
+          "options": [
+            {
+              "value": "link",
+              "label": "Link"
+            },
+            {
+              "value": "pos",
+              "label": "Position"
+            }
+          ],
+          "default": "link"
+        },
+        {
+          "label": "Button #1 text",
+          "type": "text",
+          "id": "btn1_text",
+          "default": "Button"
+        },
+        {
+          "label": "Button #1 prefix icon",
+          "type": "image_picker",
+          "id": "btn1_prefix_url"
+        },
+        {
+          "label": "Button #1 suffix icon",
+          "type": "image_picker",
+          "id": "btn1_suffix_url"
+        },
+        {
+          "label": "Button #1 text color",
+          "type": "color",
+          "id": "btn1_color",
+          "default": "#181623"
+        },
+        {
+          "label": "Button #1 background color",
+          "type": "color_background",
+          "id": "btn1_bg_color",
+          "default": "linear-gradient(#F8CD21, #F8CD21)"
+        },
+        {
+          "label": "Button #1 show border",
+          "type": "checkbox",
+          "id": "btn1_show_border",
+          "default": false
+        },
+        {
+          "label": "Button #1 border color",
+          "type": "color",
+          "id": "btn1_border_color",
+          "default": "#FFFFFF"
+        },
+        {
+          "label": "Button #1 border radius",
+          "type": "number",
+          "id": "btn1_border_radius"
+        },
+        {
+          "type": "url",
+          "id": "btn1_link",
+          "label": "Button #1 link"
+        },
+        {
+          "type": "range",
+          "id": "btn1_position",
+          "label": "Button #1 position section",
+          "min": 1,
+          "max": 25,
+          "step": 1,
+          "unit": "sec",
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "btn1_pc_size",
+          "label": "Desktop Button #1 font size",
+          "min": 12,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "btn1_pc_weight",
+          "label": "Desktop Button #1 font weight",
+          "min": 200,
+          "max": 900,
+          "step": 100,
+          "unit": "w",
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "btn1_pc_x",
+          "label": "Desktop Button #1 left and right padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "btn1_pc_y",
+          "label": "Desktop Button #1 top and bottom padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "btn1_mb_size",
+          "label": "Mobile Button #1 font size",
+          "min": 6,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "btn1_mb_weight",
+          "label": "Mobile Button #1 font weight",
+          "min": 200,
+          "max": 900,
+          "step": 100,
+          "unit": "w",
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "btn1_mb_x",
+          "label": "Mobile Button #1 left and right padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "btn1_mb_y",
+          "label": "Mobile Button #1 top and bottom padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 4
+        },
+        {
+          "type": "header",
+          "content": "Button #2"
+        },
+        {
+          "label": "Show button #2",
+          "type": "checkbox",
+          "id": "show_btn2",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "btn2_ability",
+          "label": "Button #2 function",
+          "options": [
+            {
+              "value": "link",
+              "label": "Link"
+            },
+            {
+              "value": "pos",
+              "label": "Position"
+            }
+          ],
+          "default": "link"
+        },
+        {
+          "label": "Button #2 text",
+          "type": "text",
+          "id": "btn2_text",
+          "default": "Button"
+        },
+        {
+          "label": "Button #2 prefix icon",
+          "type": "image_picker",
+          "id": "btn2_prefix_url"
+        },
+        {
+          "label": "Button #2 suffix icon",
+          "type": "image_picker",
+          "id": "btn2_suffix_url"
+        },
+        {
+          "label": "Button #2 text color",
+          "type": "color",
+          "id": "btn2_color",
+          "default": "#181623"
+        },
+        {
+          "label": "Button #2 background color",
+          "type": "color_background",
+          "id": "btn2_bg_color",
+          "default": "linear-gradient(#F8CD21, #F8CD21)"
+        },
+        {
+          "label": "Button #2 show border",
+          "type": "checkbox",
+          "id": "btn2_show_border",
+          "default": false
+        },
+        {
+          "label": "Button #2 border color",
+          "type": "color",
+          "id": "btn2_border_color",
+          "default": "#FFFFFF"
+        },
+        {
+          "label": "Button #2 border radius",
+          "type": "number",
+          "id": "btn2_border_radius"
+        },
+        {
+          "type": "url",
+          "id": "btn2_link",
+          "label": "Button #2 link"
+        },
+        {
+          "type": "range",
+          "id": "btn2_position",
+          "label": "Button #2 position section",
+          "min": 1,
+          "max": 25,
+          "step": 1,
+          "unit": "sec",
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "btn2_pc_size",
+          "label": "Desktop Button #2 font size",
+          "min": 12,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "btn2_pc_weight",
+          "label": "Desktop Button #2 font weight",
+          "min": 200,
+          "max": 900,
+          "step": 100,
+          "unit": "w",
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "btn2_pc_x",
+          "label": "Desktop Button #2 left and right padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "btn2_pc_y",
+          "label": "Desktop Button #2 top and bottom padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "btn2_mb_size",
+          "label": "Mobile Button #2 font size",
+          "min": 6,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "btn2_mb_weight",
+          "label": "Mobile Button #2 font weight",
+          "min": 200,
+          "max": 900,
+          "step": 100,
+          "unit": "w",
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "btn2_mb_x",
+          "label": "Mobile Button #2 left and right padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "btn2_mb_y",
+          "label": "Mobile Button #2 top and bottom padding",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 4
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
