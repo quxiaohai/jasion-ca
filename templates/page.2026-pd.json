@@ -53,21 +53,21 @@
           "type": "nav_tab",
           "settings": {
             "title": "Spin & Win",
-            "position": 6
+            "position": 4
           }
         },
         "nav_tab_jHdKMz": {
           "type": "nav_tab",
           "settings": {
             "title": "Hot Deals",
-            "position": 7
+            "position": 9
           }
         },
         "nav_tab_acFLDT": {
           "type": "nav_tab",
           "settings": {
             "title": "Top Picks",
-            "position": 8
+            "position": 10
           }
         }
       },
@@ -79,7 +79,7 @@
       ],
       "name": "ndev-main-navigation",
       "settings": {
-        "page_color": "linear-gradient(180deg, #000000, #000000 100%)",
+        "page_color": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%)",
         "padding": 12,
         "mb_padding": 7,
         "gap": 24,
@@ -336,7 +336,7 @@
         "background_image": "shopify://shop_images/pd-spin-module-bg.jpg",
         "mb_background_image": "shopify://shop_images/pd-mb-spin-module-bg.jpg",
         "item_icon1": "shopify://shop_images/pd-coupon-icon.png",
-        "item_text1": "<p>$50<br/>-$200 OFF</p>",
+        "item_text1": "<p>C$50<br/>-C$200 OFF</p>",
         "item_icon2": "shopify://shop_images/pd-gift-icon.png",
         "item_text2": "<p>FREE<br/>Accessories</p>",
         "item_icon3": "shopify://shop_images/pd-bike-icon.png",
@@ -393,6 +393,7 @@
         },
         "grid_LQBARq": {
           "type": "grid",
+          "disabled": true,
           "settings": {
             "icon1": "shopify://shop_images/pd-icon4.png",
             "text": "Double Points",
@@ -420,6 +421,7 @@
         },
         "grid_PGrReD": {
           "type": "grid",
+          "disabled": true,
           "settings": {
             "icon1": "shopify://shop_images/pd-icon7.png",
             "text": "$9.9 Flash Deal",
@@ -568,7 +570,6 @@
           "settings": {
             "product": "hunter-pro",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -581,7 +582,6 @@
           "settings": {
             "product": "thunder-pro-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -594,7 +594,6 @@
           "settings": {
             "product": "patrol-52",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -607,7 +606,6 @@
           "settings": {
             "product": "retrovolt-pro",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -620,7 +618,6 @@
           "settings": {
             "product": "jasion-x-hunter",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -633,7 +630,6 @@
           "settings": {
             "product": "x-hunter-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -646,7 +642,6 @@
           "settings": {
             "product": "hunter-pro-combo",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -659,7 +654,6 @@
           "settings": {
             "product": "jasion®-combo-sale-x-hunter-2",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -672,7 +666,6 @@
           "settings": {
             "product": "thunder-pro-thunder-pro-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -1231,6 +1224,7 @@
         "pay_Bd33R8",
         "form_zGMMxf"
       ],
+      "disabled": true,
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
