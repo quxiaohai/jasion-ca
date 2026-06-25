@@ -91,7 +91,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "⏰ Prime Day Ends Soon — Shop Before Prices Go Back Up",
+            "text": "🚨 FINAL CALL: Prime Day Ends Tonight! Lock in Your Price Now.",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
