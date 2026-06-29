@@ -15,8 +15,8 @@
         "image_AJgPLH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3Hunter_Pro_0e978b11-3bbd-49a5-8e27-d64f4f262c8d.jpg",
-            "image_mobile": "shopify://shop_images/3Hunter_Pro_M_654b6c87-5fa3-41fe-9b9b-c282248ae060.jpg",
+            "image": "shopify://shop_images/RetroVolt_Pro_PC.jpg",
+            "image_mobile": "shopify://shop_images/RetroVolt_Pro_mo.jpg",
             "heading": "",
             "heading_size": "title-sm",
             "heading_tag": "h2",
@@ -24,7 +24,7 @@
             "subh_before": false,
             "text_size": "subtext-sm",
             "button_label": "",
-            "button_link": "shopify://products/hunter-pro-combo",
+            "button_link": "shopify://products/retrovolt-pro-combo",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false,
