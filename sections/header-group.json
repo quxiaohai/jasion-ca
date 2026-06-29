@@ -31,7 +31,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "⚡ <strong>Prime Day Deal:</strong> Extra C$100 OFF with code: <strong>PD100</strong>,<strong> </strong>4 Days Only!",
+            "text": "🍁<strong> Happy Canada Day: </strong>Save Extra<strong> C$50 </strong>with Code<strong>: MAPLE50!</strong>",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -43,7 +43,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "😍Get an extra C$100 OFF on orders C$1599+ with code:<strong> PD100</strong>",
+            "text": "🎟️ Orders <strong>C$1600 </strong>+<strong> </strong>Save an Extra C$50 with Code: <strong>MAPLE50</strong>",
             "link": "shopify://collections/all-products",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -55,7 +55,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "⚡ Ride Patrol for Less! Get C$100 OFF with PATROL100 + FREE Exclusive Gifts.",
+            "text": "⚡ <strong>Patrol Exclusive: Get C$100 OFF with PATROL100 + FREE Gifts!</strong>",
             "link": "shopify://products/patrol-52",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -67,7 +67,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "😱Hunter Pro: Save C$3,299+C$100 Off, C<strong>$1,599.5</strong> Per Unit",
+            "text": "😱Hunter Pro: Save C$3,299+C$0 Off, C<strong>$1,649.5</strong> Per Unit",
             "link": "shopify://products/hunter-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -79,7 +79,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🚴🚴 Double the Ride, Double the Chance! Buy 2 Bikes to <strong>Win a Full Refund</strong>.",
+            "text": "🚴🚴 Double the Ride, Double the Chance! Buy 2 Bikes to <strong>Win a 100% Refund</strong>.",
             "link": "shopify://products/retrovolt-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -91,7 +91,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🚨 FINAL CALL: Prime Day Ends Tonight! Lock in Your Price Now.",
+            "text": "🔒 Shop Early! Lock in Today's Price Before Canada Day Ends.",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
