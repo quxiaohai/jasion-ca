@@ -510,8 +510,7 @@
             "button2": "Learn More",
             "button2_url": "shopify://products/hunter-pro",
             "button2_text_color": "#000000",
-            "button2_border_color": "#000000",
-            "show_border": false
+            "button2_border_color": "#000000"
           }
         },
         "product_item_teM7Ub": {
@@ -532,7 +531,6 @@
             "discount_text2_bg_color": "#012662",
             "gift_image1": "shopify://shop_images/id-points-icon.png",
             "gift_content1": "CS89\nFREEE",
-            "gift_style1": "style3",
             "gift_image2": "shopify://shop_images/anniversary-card-gift-icon3.png",
             "gift_content2": "C$69\nFREE",
             "gift_content3": "$89\nFREE",
@@ -543,8 +541,7 @@
             "button2": "Learn More",
             "button2_url": "",
             "button2_text_color": "#000000",
-            "button2_border_color": "#000000",
-            "show_border": false
+            "button2_border_color": "#000000"
           }
         }
       },
