@@ -622,6 +622,18 @@
             "button2_url": "shopify://products/jasion-x-hunter"
           }
         },
+        "product_item_di9LJG": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-thunder-pro-st",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": ""
+          }
+        },
         "product_item_dxWPHa": {
           "type": "product_item",
           "settings": {
@@ -665,6 +677,7 @@
         "product_item_AK63Ad",
         "product_item_xPtqMB",
         "product_item_Y7Tb7d",
+        "product_item_di9LJG",
         "product_item_dxWPHa",
         "product_item_qNkYPg",
         "product_item_44gqyE"
