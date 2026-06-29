@@ -21,8 +21,8 @@
         "image_VeqLKj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1Thunder_Pro_ST_PC.jpg",
-            "image_mobile": "shopify://shop_images/1Thunder_Pro_ST_527d225d-aa6a-4649-a096-c7368ee14715.jpg",
+            "image": "shopify://shop_images/Thunder_PRO_ST_1920X400_58bc7c47-b50e-4810-9624-81778ea25d3b.jpg",
+            "image_mobile": "shopify://shop_images/Thunder_PRO_STPC.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -115,7 +115,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "Victoria‘s Day Sale",
+            "title": "🍁Canada Day Sale",
             "position": 6
           }
         },
@@ -159,6 +159,11 @@
       "name": "ndev-main-navigation",
       "settings": {
         "page_color": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%)",
+        "padding": 12,
+        "mb_padding": 7,
+        "gap": 24,
+        "mb_gap": 20,
+        "custom_style": "",
         "tab_align": "center",
         "tab_color": "#ffffff",
         "tab_bg_color": "#000000",
@@ -175,7 +180,10 @@
         "desktop_tab_size": 14,
         "mobile_tab_size": 12,
         "desktop_tab_padding": 25,
-        "mobile_tab_padding": 20
+        "mobile_tab_padding": 20,
+        "show_progress": false,
+        "progress_bg_color": "#e5dccf",
+        "progress_bar_color": "#ff7900"
       }
     },
     "autumn_sale_countdown_rjDi6e": {
@@ -257,7 +265,7 @@
           "type": "card",
           "settings": {
             "image_icon": "shopify://shop_images/autumn-sale-rules-icon1.png",
-            "title": "Up to C$2126 Off",
+            "title": "Up to C$3819 Off",
             "text": "<p>Save big on your favorite eBikes<br/>this Events.</p>"
           }
         },
@@ -266,16 +274,15 @@
           "settings": {
             "image_icon": "shopify://shop_images/c3f7a87073b4d4dea19de386241912e5_e18ef362-a38d-4b3a-898c-ca5c86da0d6f.png",
             "title": "Lucky Draw",
-            "text": "<p>Win up to C$200 off!</p>"
+            "text": "<p>Try your luck. Win up to <strong>C$200</strong> off!</p>"
           }
         },
         "card_xtxcfQ": {
           "type": "card",
-          "disabled": true,
           "settings": {
             "image_icon": "shopify://shop_images/autumn-sale-rules-icon2.png",
             "title": "Free Gifts",
-            "text": "<p>Worth Up to $515</p>"
+            "text": "<p>Unlock More Savings.</p>"
           }
         },
         "card_zt93dr": {
@@ -283,7 +290,7 @@
           "settings": {
             "image_icon": "shopify://shop_images/autumn-sale-rules-icon3.png",
             "title": "Double the Deal",
-            "text": "<p>Extra C$50 Off Orders Over C$1500</p>"
+            "text": "<p>Extra C$50 Off Orders Over C$1600 with code <strong>MAPLE50</strong>.</p>"
           }
         }
       },
@@ -432,9 +439,14 @@
         "form_cnXJCe": {
           "type": "form",
           "settings": {
+            "width": 871,
+            "mb_width": 346,
             "button": "Sign Up",
             "button_bg_color": "linear-gradient(188deg, rgba(255, 210, 123, 1), rgba(255, 120, 0, 1) 100%)",
             "buton_text_color": "#fdf0e2",
+            "button_font_weight": 500,
+            "button_width": 221,
+            "mb_button_width": 142,
             "tag": "Sub",
             "content": "Sub",
             "placeholder": "Enter your email address",
@@ -549,11 +561,25 @@
     "autumn_sale_product_list_kb7cx4": {
       "type": "autumn-sale-product-list",
       "blocks": {
+        "product_item_terBgk": {
+          "type": "product_item",
+          "settings": {
+            "product": "patrol-52",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": ""
+          }
+        },
         "product_item_MQwcXa": {
           "type": "product_item",
           "settings": {
-            "product": "thunder-pro",
-            "payment_text": "Pay over time with 0% interes",
+            "product": "thunder-pro-st",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/thunder-pro"
@@ -563,28 +589,58 @@
           "type": "product_item",
           "settings": {
             "product": "retrovolt-pro",
-            "payment_text": "Pay over time with 0% interes",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/retrovolt-pro"
           }
         },
+        "product_item_xPtqMB": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
+            "payment_icon1": "shopify://shop_images/autumn-shop-pay.png",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro"
+          }
+        },
         "product_item_Y7Tb7d": {
           "type": "product_item",
-          "disabled": true,
           "settings": {
             "product": "jasion-x-hunter",
-            "payment_text": "Pay over time with 0% interes",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/jasion-x-hunter"
+          }
+        },
+        "product_item_dxWPHa": {
+          "type": "product_item",
+          "settings": {
+            "product": "retrovolt-pro-combo",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion®eb5-roamer-ebike"
           }
         },
         "product_item_qNkYPg": {
           "type": "product_item",
           "settings": {
             "product": "hunter-pro-combo",
-            "payment_text": "Pay over time with 0% interes",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/hunter-pro-combo"
@@ -592,46 +648,26 @@
         },
         "product_item_44gqyE": {
           "type": "product_item",
-          "disabled": true,
           "settings": {
             "product": "jasion®-combo-sale-x-hunter-2",
-            "payment_text": "Pay over time with 0% interes",
+            "show_th_logo": false,
+            "logo_size": "small",
+            "payment_text": "",
             "button1": "Shop Now",
             "button2": "Learn More",
             "button2_url": "shopify://products/jasion®-combo-sale-x-hunter-2"
           }
-        },
-        "product_item_xPtqMB": {
-          "type": "product_item",
-          "settings": {
-            "product": "hunter-pro",
-            "payment_text": "Pay over time with 0% interes",
-            "payment_icon1": "shopify://shop_images/autumn-shop-pay.png",
-            "payment_icon2": "shopify://shop_images/autumn-klarna.png",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/hunter-pro"
-          }
-        },
-        "product_item_dxWPHa": {
-          "type": "product_item",
-          "settings": {
-            "product": "retrovolt-pro-combo",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/jasion®eb5-roamer-ebike"
-          }
         }
       },
       "block_order": [
+        "product_item_terBgk",
         "product_item_MQwcXa",
         "product_item_AK63Ad",
-        "product_item_Y7Tb7d",
-        "product_item_qNkYPg",
-        "product_item_44gqyE",
         "product_item_xPtqMB",
-        "product_item_dxWPHa"
+        "product_item_Y7Tb7d",
+        "product_item_dxWPHa",
+        "product_item_qNkYPg",
+        "product_item_44gqyE"
       ],
       "name": "autumn-sale-product-list",
       "settings": {
@@ -655,7 +691,9 @@
         "description_pc_size": 18,
         "description_mb_size": 12,
         "description_pc_margin_bottom": 40,
-        "description_mb_margin_bottom": 30
+        "description_mb_margin_bottom": 30,
+        "seo_text": "",
+        "seo_tag": "h2"
       }
     },
     "autumn_sale_product_bundle_x89AMR": {
@@ -737,7 +775,7 @@
         "page_color": "rgba(0,0,0,0)",
         "pc_discount_url": "shopify://shop_images/autumn-sale-product-bundle-back.png",
         "discount_title": "Bundle & Save – Stack Your Discounts!",
-        "discount_text": "<p>Extra C<strong>$50</strong> OFF on C$1500!</p>",
+        "discount_text": "<p>Extra C<strong>$50</strong> OFF on C$1600+!</p>",
         "pc_checkout_url": "shopify://shop_images/product-image1.png",
         "checkout_text": "Proceed to Checkout"
       }
@@ -950,7 +988,9 @@
       "settings": {
         "page_color": "#ffffff",
         "show_heading": true,
-        "heading": "Real Riders Speak"
+        "heading": "Real Riders Speak",
+        "title_tag": "div",
+        "heading_color": "#000000"
       }
     },
     "autumn_sale_says_9RUVcG": {
@@ -995,7 +1035,10 @@
       "settings": {
         "page_color": "#ffffff",
         "show_heading": true,
-        "heading": "What They Say"
+        "heading": "What They Say",
+        "title_tag": "div",
+        "heading_color": "#000000",
+        "content_color": "#666666"
       }
     },
     "autumn_sale_sign_up": {
@@ -1029,7 +1072,10 @@
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/autumn-sale-sign-up-back-img.jpg",
-        "mobile_image": "shopify://shop_images/autumn-sale-sign-up-back-img.jpg"
+        "mobile_image": "shopify://shop_images/autumn-sale-sign-up-back-img.jpg",
+        "padding": "144px 0",
+        "mb_padding": "58px 0",
+        "mb_page_bottom": 144
       }
     }
   },
