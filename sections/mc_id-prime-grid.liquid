@@ -1,0 +1,427 @@
+{%- liquid
+    assign ss = section.settings
+-%}
+<style>
+    .mc_id-prime-grid {
+        padding: 40px 0;
+    }
+
+    .mc_id-prime-grid .backdrop-image {
+        height: 149px;
+        width: auto;
+        object-fit: contain;
+        left: 44px;
+        top: 0;
+        transform: translateY(-99%);
+    }
+
+    .mc_id-prime-grid .backdrop-image.right {
+        left: auto;
+        right: 44px;
+    }
+
+    .mc_id-prime-grid .grid-wrapper {
+        margin: 0 auto;
+        max-width: 1086px;
+    }
+
+    .mc_id-prime-grid .grid-content {
+        background-color: #ffffff;
+        box-shadow: 0 19px 24px rgba(131, 178, 255, 0.3);
+        border-radius: 20px;
+        border: solid 2px #012662;
+    }
+
+    .mc_id-prime-grid .grid-content .image {
+        max-height: 31px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .mc_id-prime-grid .grid-content .item {
+        height: 48px;
+    }
+
+    .mc_id-prime-grid .grid-content .item:last-of-type {
+        height: 52px;
+    }
+
+    .mc_id-prime-grid .grid-content .item:last-of-type:before {
+        display: none;
+    }
+
+    .mc_id-prime-grid .grid-content .title {
+        height: 68px;
+        font-size: 26px;
+        color: #012662;
+    }
+
+    .mc_id-prime-grid .grid-items .item {
+        padding: 0 324px 0 459px;
+    }
+
+    .mc_id-prime-grid .grid-items .item:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #b2aea6;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .mc_id-prime-grid .left-items {
+        width: 459px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .mc_id-prime-grid .left-items .item {
+        gap: 22px;
+        padding-left: 61px;
+        border-right: 2px solid #012662;
+    }
+
+    .mc_id-prime-grid .left-items .image {
+        width: 39px;
+    }
+
+    .mc_id-prime-grid .left-items .text {
+        font-size: 22px;
+        color: #012662;
+    }
+
+    .mc_id-prime-grid .left-items .title {
+        background: #012662;
+        border-radius: 0 20px 0 0;
+        color: #ffffff;
+        padding-left: 122px;
+    }
+
+    .mc_id-prime-grid .right-items {
+        width: 317px;
+        background: #ffcaca;
+        border-radius: 20px 0 0 20px;
+        right: 0;
+        top: 0;
+    }
+
+    .mc_id-prime-grid .right-items .title {
+        background: #b70e1b;
+        color: #ffffff;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .mc_id-prime-grid {
+            padding: 0.87890625rem 0;
+        }
+
+        .mc_id-prime-grid .backdrop-image {
+            height: 2.91015625rem;
+            left: 0.44921875rem;
+        }
+
+        .mc_id-prime-grid .backdrop-image.right {
+            left: auto;
+            right: 0.44921875rem;
+        }
+
+        .mc_id-prime-grid .grid-wrapper {
+            max-width: 93.3333333333vw;
+        }
+
+        .mc_id-prime-grid .grid-content {
+            box-shadow: 0 0.37109375rem 0.46875rem rgba(1, 38, 98, 0.15);
+            border-radius: 1.6666666667vw;
+            border-width: 0.0390625rem;
+        }
+
+        .mc_id-prime-grid .grid-content .image {
+            max-height: 0.8203125rem;
+        }
+
+        .mc_id-prime-grid .grid-content .item {
+            height: 1.328125rem;
+        }
+
+        .mc_id-prime-grid .grid-content .item:last-of-type {
+            height: 1.71875rem;
+        }
+
+        .mc_id-prime-grid .grid-content .title {
+            height: 1.640625rem;
+            font-size: 0.703125rem;
+        }
+
+        .mc_id-prime-grid .grid-items .item {
+            padding: 0 29.1666666667vw 0 39.4166666667vw;
+        }
+
+        .mc_id-prime-grid .left-items {
+            width: 39.4166666667vw;
+        }
+
+        .mc_id-prime-grid .left-items .item {
+            gap: 0.234375rem;
+            padding-left: 1.23046875rem;
+            border-right-width: 1px;
+        }
+
+        .mc_id-prime-grid .left-items .image {
+            width: 0.99609375rem;
+        }
+
+        .mc_id-prime-grid .left-items .text {
+            font-size: 0.5859375rem;
+        }
+
+        .mc_id-prime-grid .left-items .title {
+            border-radius: 0 0.390625rem 0 0;
+            padding-left: 2.4609375rem;
+        }
+
+        .mc_id-prime-grid .right-items {
+            width: 27.3333333333vw;
+            border-radius: 0.390625rem 0 0 0.390625rem;
+        }
+    }
+</style>
+{% render 'page-wrap-style', load_style: true %}
+<div class="mc_id-prime-grid section--page">
+    {% render 'section-title', info: ss %}
+    <div class="relative grid-wrapper">
+        {%- if ss.left_image != blank -%}
+            {%- render 'global-image', image: ss.left_image, image_size: 1600, class: 'backdrop-image absolute left' -%}
+        {%- endif -%}
+        {%- if ss.right_image != blank -%}
+            {%- render 'global-image', image: ss.right_image, image_size: 1600, class: 'backdrop-image absolute right' -%}
+        {%- endif -%}
+        <div class="grid-content overflow-hidden relative w-full">
+            {%- assign title_list = ss.grid_title | newline_to_br | split: '<br />' -%}
+            <ul class="grid-items relative z-2">
+                <li class="item flex-center relative fw-900 lh-2 title">{{ title_list[1] }}</li>
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <li class="item flex-center relative lh-2">
+                        {%- render 'global-image', image: bs.icon2, image_size: 100, show_size: true -%}
+                    </li>
+                {%- endfor -%}
+            </ul>
+            <ul class="left-items z-1 h-full absolute">
+                <li class="item flex-left title fw-900 lh-2">{{ title_list[0] }}</li>
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <li class="item flex-left relative lh-2">
+                        {%- render 'global-image', image: bs.icon1, image_size: 100, show_size: true -%}
+                        <span class="text fw-600 lh-2">{{ bs.text }}</span>
+                    </li>
+                {%- endfor -%}
+            </ul>
+            <ul class="right-items overflow-hidden z-1 h-full absolute">
+                <li class="item flex-center title fw-900 lh-2">{{ title_list[2] }}</li>
+                {%- for block in section.blocks -%}
+                    {%- assign bs = block.settings -%}
+                    <li class="item flex-center relative lh-2">
+                        {%- render 'global-image', image: bs.icon3, image_size: 100, show_size: true -%}
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MC Pd Prime Grid",
+  "class": "mc--main",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "MC Pd Prime Grid"
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "page_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "page_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "page_bottom",
+      "label": "padding Bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_pc_size",
+      "label": "Desktop title size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_mb_size",
+      "label": "Mobile title size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "title_margin_bottom",
+      "label": "Title margin bottom",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "title_gradient_color",
+      "label": "Title gradient color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_pc_size",
+      "label": "Desktop description size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_mb_size",
+      "label": "Mobile description size",
+      "min": 6,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "number",
+      "id": "description_pc_margin_bottom",
+      "label": "Desktop description margin bottom",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "description_mb_margin_bottom",
+      "label": "Mobile description margin bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Grid title"
+    },
+    {
+      "type": "textarea",
+      "id": "grid_title",
+      "label": "Grid title",
+      "default": "Amazon\nBenefits\nJasion"
+    },
+    {
+      "type": "header",
+      "content": "Background decoration"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Desktop left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Desktop right image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "grid",
+      "name": "Grid item",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Grid column #1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon1",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "PD Discount"
+        },
+        {
+          "type": "header",
+          "content": "Grid column #2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon2",
+          "label": "Icon"
+        },
+        {
+          "type": "header",
+          "content": "Grid column #3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon3",
+          "label": "Icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

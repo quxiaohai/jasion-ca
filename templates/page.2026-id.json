@@ -1,0 +1,1285 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "mc_page_color_zAVKgD": {
+      "type": "mc_page-color",
+      "name": " MC Page Color",
+      "settings": {
+        "background_color": "#eeecee"
+      }
+    },
+    "mc_main_banner_9pwQYr": {
+      "type": "mc_main-banner",
+      "name": "MC Main Banner",
+      "settings": {
+        "page_color": "",
+        "pc_width": 1920,
+        "mb_width": 750,
+        "media_type": "image",
+        "pc_image_url": "shopify://shop_images/id-banner.jpg",
+        "mb_image_url": "shopify://shop_images/id-mb-banner.jpg",
+        "content_pos": "center",
+        "mb_content_pos": "mb_top",
+        "video_play_show": false,
+        "backdrop_link": "",
+        "width_follow_the_theme": true,
+        "pc_left": 145,
+        "overlay_show": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 20,
+        "seo_text": "Electric Bike Flash Sale",
+        "seo_tag": "h1"
+      }
+    },
+    "main_navigation_CCCdMD": {
+      "type": "main-navigation",
+      "blocks": {
+        "nav_tab_EjHwNt": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "🏷️ Prime day",
+            "position": 5
+          }
+        },
+        "nav_tab_eajRTe": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "Spin & Win",
+            "position": 7
+          }
+        },
+        "nav_tab_xYiJYA": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "✨Why Buy Direct?",
+            "position": 8
+          }
+        },
+        "nav_tab_jHdKMz": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "Hot Deals",
+            "position": 9
+          }
+        },
+        "nav_tab_acFLDT": {
+          "type": "nav_tab",
+          "settings": {
+            "title": "Top Picks",
+            "position": 10
+          }
+        }
+      },
+      "block_order": [
+        "nav_tab_EjHwNt",
+        "nav_tab_eajRTe",
+        "nav_tab_xYiJYA",
+        "nav_tab_jHdKMz",
+        "nav_tab_acFLDT"
+      ],
+      "name": "ndev-main-navigation",
+      "settings": {
+        "page_color": "linear-gradient(180deg, rgba(1, 38, 98, 1), rgba(1, 38, 98, 1) 100%)",
+        "padding": 12,
+        "mb_padding": 7,
+        "gap": 24,
+        "mb_gap": 20,
+        "custom_style": "",
+        "tab_align": "center",
+        "tab_color": "#ffffff",
+        "tab_bg_color": "rgba(0,0,0,0)",
+        "tab_active_color": "#f96214",
+        "tab_bg_active_color": "rgba(0,0,0,0)",
+        "tab_radius": 100,
+        "show_tab_border": false,
+        "tab_border_color": "#000000",
+        "tab_border_active_color": "#000000",
+        "tab_border_width": 1,
+        "tab_weight": 500,
+        "desktop_tab_height": 36,
+        "mobile_tab_height": 28,
+        "desktop_tab_size": 14,
+        "mobile_tab_size": 12,
+        "desktop_tab_padding": 25,
+        "mobile_tab_padding": 20,
+        "show_progress": false,
+        "progress_bg_color": "#e5dccf",
+        "progress_bar_color": "#ff7900"
+      }
+    },
+    "mc_main_countdown_rjDi6e": {
+      "type": "mc_main-countdown",
+      "name": "MC Main Countdown",
+      "settings": {
+        "page_color": "",
+        "page_top": 50,
+        "show_heading": true,
+        "heading": "BREAKOUT ENDS IN:",
+        "heading_color": "#012662",
+        "countdown_start_date": "2026-05-22T00:00:00",
+        "duration": 1,
+        "day": "Days",
+        "hour": "Hours",
+        "minute": "Mins",
+        "second": "Secs",
+        "show_border": false,
+        "border_width": 3,
+        "countdown_border_color": "#012662",
+        "countdown_fill_color": "#012662",
+        "countdown_fill_gradient": "",
+        "countdown_num_color": "#ffffff",
+        "countdown_text_color": "#000000"
+      }
+    },
+    "mc_section_text_n8V6Cg": {
+      "type": "mc_section-text",
+      "blocks": {
+        "text_7XRCwz": {
+          "type": "text",
+          "settings": {
+            "padding": "0px 0px 0px 0px",
+            "mb_padding": "0px 0px 0px 0px",
+            "prefix_url": "shopify://shop_images/id-lightning-icon.png",
+            "text": "<p>Stock Moves Fast - Prices Return Soon</p>",
+            "text_tag": "div",
+            "alignment": "center",
+            "mb_alignment": "center",
+            "style": "normal",
+            "weight": 600,
+            "line_height": 120,
+            "pc_size": 18,
+            "mb_size": 12,
+            "width": 100,
+            "max_width": 1920,
+            "mb_width": 100,
+            "color": "#012662",
+            "bold_color": "#ffffff",
+            "gradient_color": ""
+          }
+        },
+        "text_gneyqG": {
+          "type": "text",
+          "settings": {
+            "padding": "80px 0px 0px 0px",
+            "mb_padding": "33px 0px 0px 0px",
+            "text": "<p>PRIME DAY BENEFITS</p>",
+            "text_tag": "div",
+            "alignment": "center",
+            "mb_alignment": "center",
+            "style": "normal",
+            "weight": 700,
+            "line_height": 120,
+            "pc_size": 22,
+            "mb_size": 10,
+            "width": 100,
+            "max_width": 1920,
+            "mb_width": 100,
+            "color": "#012662",
+            "bold_color": "#ffffff",
+            "gradient_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_7XRCwz",
+        "text_gneyqG"
+      ],
+      "name": "MC Section Text",
+      "settings": {
+        "page_color": "#eeecee",
+        "page_top": 0,
+        "page_bottom": 0,
+        "layout": "column",
+        "mb_layout": "column",
+        "full_width": false
+      }
+    },
+    "mc_fifa_discount_cards_xLFWeV": {
+      "type": "mc_fifa-discount-cards",
+      "blocks": {
+        "card_fFcQrx": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/id-card-image1.jpg"
+          }
+        },
+        "card_TAqEj9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/id-card-image2.jpg"
+          }
+        },
+        "card_8NHhxC": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/id-card-image3.jpg"
+          }
+        },
+        "card_W3Gm4P": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/id-card-image4.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "card_fFcQrx",
+        "card_TAqEj9",
+        "card_8NHhxC",
+        "card_W3Gm4P"
+      ],
+      "name": "MC Fifa Discount Cards",
+      "settings": {
+        "page_color": "",
+        "page_top": 15,
+        "show_title": true,
+        "title": "<p>WHY BUY NOW?</p>",
+        "title_style": "normal",
+        "title_pc_size": 40,
+        "title_mb_size": 18,
+        "title_margin_bottom": 46,
+        "title_mb_margin_bottom": 20,
+        "title_color": "#b70e1b",
+        "title_bold_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "image_preload": false,
+        "seo_text": "WHY BUY NOW?",
+        "seo_tag": "h2",
+        "left_image": "shopify://shop_images/id-us-national.png",
+        "right_image": "shopify://shop_images/id-us-national.png"
+      }
+    },
+    "mc_pd_spin_pA8NhV": {
+      "type": "mc_id-spin",
+      "blocks": {
+        "discount_popup": {
+          "type": "discount_popup",
+          "settings": {
+            "gift_icon1": "shopify://shop_images/pd-product-logo.png",
+            "discount_code1": "PD5",
+            "prize_name1": "5% OFF Coupon",
+            "prize_weight1": 1,
+            "gift_icon2": "shopify://shop_images/pd-product-logo.png",
+            "discount_code2": "PD2026",
+            "prize_name2": "Coupon $200 OFF",
+            "prize_weight2": 1,
+            "gift_icon3": "shopify://shop_images/pd-product-logo.png",
+            "discount_code3": "PD50",
+            "prize_name3": "Coupon $50 OFF",
+            "prize_weight3": 97,
+            "gift_icon4": "shopify://shop_images/pd-product-logo.png",
+            "discount_code4": "SAVECUP",
+            "prize_name4": "Free Cup Holder",
+            "prize_weight4": 0,
+            "gift_icon5": "shopify://shop_images/pd-product-logo.png",
+            "discount_code5": "PATROLFREE",
+            "prize_name5": "FREE Patrol eBike",
+            "prize_weight5": 0,
+            "gift_icon6": "shopify://shop_images/pd-product-logo.png",
+            "discount_code6": "PDFREE",
+            "prize_name6": "100% Refund",
+            "prize_weight6": 0,
+            "model_gradient": "linear-gradient(180deg, rgba(224, 245, 205, 1), rgba(224, 245, 205, 1) 100%)",
+            "model_title": "Celebrate & Win",
+            "model_title_color": "#fdb404",
+            "model_subtitle": "Nice find! Here's your reward:",
+            "model_design_mode_subtitle": "Congratulation! Here's your reward:",
+            "model_subtitle_color": "#ffffff",
+            "model_prize_name_color": "#fdb404",
+            "model_code_color": "#fdb404",
+            "model_code_border_color": "#fdb404",
+            "model_code_bg_color": "rgba(0,0,0,0)",
+            "model_copy_color": "#fdb404",
+            "model_copy_border_color": "#fdb404",
+            "model_copy_bg_color": "rgba(0,0,0,0)",
+            "model_desc": "Valid until June 26 2026 • One use per customer • Valid on eBike purchases only • Can be combined with free gift offers！",
+            "model_desc_color": "#ffffff",
+            "model_button": "Shop Now",
+            "model_button_url": "shopify://collections/electric-bike",
+            "model_button_color": "#ffffff",
+            "model_button_bg_color": "#fdb404",
+            "model_button_bg_hover_color": "#fdb404",
+            "show_countdown": true,
+            "padding": "0px 0px 0px 0px",
+            "mb_padding": "0px 0px 0px 0px",
+            "countdown_num_width": 1,
+            "countdown_num_height": 1,
+            "countdown_num_size": 1,
+            "countdown_name_size": 1,
+            "mb_countdown_num_width": 1,
+            "mb_countdown_num_height": 1,
+            "mb_countdown_num_size": 1,
+            "mb_countdown_name_size": 1,
+            "countdown_time": "2026-06-22T00:00:00",
+            "duration": 1,
+            "day": "DAYS",
+            "hour": "HOURS",
+            "minute": "MINS",
+            "second": "SECS",
+            "countdown_fill_color": "#fdb404",
+            "countdown_num_color": "#ffffff",
+            "countdown_text_color": "#fdb404",
+            "countdown_dot_color": "#fdb404"
+          }
+        }
+      },
+      "block_order": [
+        "discount_popup"
+      ],
+      "name": "MC Pd Spin",
+      "settings": {
+        "page_color": "",
+        "page_top": 0,
+        "title": "TRY YOUR LUCK!",
+        "background_image": "shopify://shop_images/id-spin-module-bg.jpg",
+        "mb_background_image": "shopify://shop_images/id-mb-spin-module-bg.jpg",
+        "item_icon1": "shopify://shop_images/pd-coupon-icon.png",
+        "item_text1": "<p>$50-$200 OFF</p>",
+        "item_icon2": "shopify://shop_images/id-gift-icon.png",
+        "item_text2": "<p>FREE Accessories</p>",
+        "item_icon3": "shopify://shop_images/pd-bike-icon.png",
+        "item_text3": "<p>FREE Patrol eBike</p>",
+        "spin_background_image": "shopify://shop_images/id-spin-bg.png",
+        "spin_turntable_image": "shopify://shop_images/id-spin.png",
+        "klaviyo_api_key": "RbQnB3",
+        "klaviyo_list_id": "WG6e6n",
+        "form_remark": "<p>Subscribe For A Chance To Win A<br/><strong>Free Patrol eBike</strong> And Exclusive Rewards!</p>",
+        "button": "SPIN TO WIN",
+        "success": "Submit successfully",
+        "placeholder": "Enter your email address",
+        "show_privacy": true,
+        "privacy_text": "<p>I agree to receive emails and updates. One spin per email. New customers only.</p>",
+        "privacy_checked": true,
+        "privacy_color": "#ffffff",
+        "privacy_link_color": "#ffffff",
+        "privacy_link_hover_color": "#fdb404",
+        "privacy_active_color": "#fdb404",
+        "seo_text": "Spin to Win Extra Savings",
+        "seo_tag": "h2"
+      }
+    },
+    "mc_pd_prime_grid_riUDmE": {
+      "type": "mc_id-prime-grid",
+      "blocks": {
+        "grid_yfPgMj": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon1_SVG.svg",
+            "text": "PD Discount",
+            "icon2": "shopify://shop_images/pd-icon9_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_aVCbKA": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon2_SVG.svg",
+            "text": "Extra Coupon",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_btLPpa": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon3_SVG.svg",
+            "text": "Free Gifts",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_LQBARq": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon4_SVG.svg",
+            "text": "Double Points",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_RWgQBK": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon5_SVG.svg",
+            "text": "VIP Rewards",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_B9QUBH": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon6_SVG.svg",
+            "text": "Free Shipping",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_PGrReD": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon7_SVG.svg",
+            "text": "$9.9 Flash Deal",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        },
+        "grid_KqXkTc": {
+          "type": "grid",
+          "settings": {
+            "icon1": "shopify://shop_images/pd-icon8_SVG.svg",
+            "text": "Subscribe & Win",
+            "icon2": "shopify://shop_images/pd-icon10_SVG.svg",
+            "icon3": "shopify://shop_images/pd-icon9_SVG.svg"
+          }
+        }
+      },
+      "block_order": [
+        "grid_yfPgMj",
+        "grid_aVCbKA",
+        "grid_btLPpa",
+        "grid_LQBARq",
+        "grid_RWgQBK",
+        "grid_B9QUBH",
+        "grid_PGrReD",
+        "grid_KqXkTc"
+      ],
+      "name": "MC Id Prime Grid",
+      "settings": {
+        "page_color": "",
+        "show_title": true,
+        "title": "YOU GET MORE HERE",
+        "title_pc_size": 40,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#b70e1b",
+        "title_gradient_color": "",
+        "show_description": true,
+        "description": "UNLOCK EXCLUSIVE SAVINGS, REWARDS, GIFTS & PERKSS<br/>Celebrate Freedom. Ride Further.",
+        "description_color": "#012662",
+        "description_pc_size": 14,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "grid_title": "Benefits\nAmazon\nJasion",
+        "left_image": "shopify://shop_images/statue-of-liberty.png",
+        "right_image": "shopify://shop_images/statue-of-liberty-right.png"
+      }
+    },
+    "mc_th_product_card_HTabDa": {
+      "type": "mc_th-product-card",
+      "blocks": {
+        "product_item_ijyyXH": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "show_final_tag": true,
+            "final_tag": "<p>Final Price <strong>$999</strong></p>",
+            "final_tag_color": "#ffebd9",
+            "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
+            "product_price_color": "#db1109",
+            "pc_product_image": "shopify://shop_images/pd-hunter-pro-new.jpg",
+            "mb_product_image": "shopify://shop_images/fifa-mb-hunter-pro.jpg",
+            "show_spec": true,
+            "discount_text1": "<p><strong>$1000 OFF</strong></p>",
+            "discount_text1_bg_color": "#b70e1b",
+            "discount_text2": "<p><strong>$9.9 </strong>FLASH SALE</p>",
+            "discount_text2_bg_color": "#012662",
+            "gift_image1": "shopify://shop_images/id-points-icon.png",
+            "gift_content1": "$199.00|FREE\nExtra One Year Warranty",
+            "gift_style1": "style3",
+            "gift_image2": "shopify://shop_images/anniversary-card-gift-icon2_3506d138-d0a2-490c-a080-061c8b5ff4b3.png",
+            "gift_content2": "$89.00|FREE\nFree Pet Basket with Bundle Purchase",
+            "gift_content3": "$89\nFREE",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#db1109",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000",
+            "show_border": false
+          }
+        },
+        "product_item_teM7Ub": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-st",
+            "show_final_tag": true,
+            "final_tag": "<p>Final Price <strong>$1199</strong></p>",
+            "final_tag_color": "#ffebd9",
+            "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
+            "product_price_color": "#db1109",
+            "pc_product_image": "shopify://shop_images/pd-thunder-pro-st.jpg",
+            "mb_product_image": "shopify://shop_images/fifa-mb-thunder-pro.jpg",
+            "show_spec": true,
+            "discount_text1": "<p><strong>$600 OFF</strong></p>",
+            "discount_text1_bg_color": "#b70e1b",
+            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
+            "discount_text2_bg_color": "#012662",
+            "gift_image1": "shopify://shop_images/id-points-icon.png",
+            "gift_content1": "$199.00|FREE\nExtra One Year Warranty",
+            "gift_style1": "style3",
+            "gift_image2": "shopify://shop_images/anniversary-card-gift-icon3.png",
+            "gift_content2": "$69\nFREE",
+            "gift_image3": "shopify://shop_images/anniversary-card-gift-icon4.png",
+            "gift_content3": "$89\nFREE",
+            "button1": "Shop Now",
+            "button1_text_color": "#ffffff",
+            "button1_bg_color": "#db1109",
+            "button1_gradient": "",
+            "button2": "Learn More",
+            "button2_url": "",
+            "button2_text_color": "#000000",
+            "button2_border_color": "#000000",
+            "show_border": false
+          }
+        }
+      },
+      "block_order": [
+        "product_item_ijyyXH",
+        "product_item_teM7Ub"
+      ],
+      "name": "MC Th Product Card",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "page_bottom": 10,
+        "show_title": true,
+        "title": "<p>Hot Deals</p>",
+        "font_name": "",
+        "title_style": "normal",
+        "title_pc_size": 48,
+        "title_mb_size": 24,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_bold_color": "#ffffff",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_mb_size": 14,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "seo_text": "",
+        "seo_tag": "h2"
+      }
+    },
+    "autumn_sale_product_list_kb7cx4": {
+      "type": "autumn-sale-product-list",
+      "blocks": {
+        "product_item_PqGAQQ": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro"
+          }
+        },
+        "product_item_kLFM6J": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-st",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder-pro-st"
+          }
+        },
+        "product_item_QRWTpM": {
+          "type": "product_item",
+          "settings": {
+            "product": "patrol-52",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/patrol-52"
+          }
+        },
+        "product_item_AK63Ad": {
+          "type": "product_item",
+          "settings": {
+            "product": "retrovolt-pro",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/retrovolt-pro"
+          }
+        },
+        "product_item_Y7Tb7d": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion-x-hunter",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion-x-hunter"
+          }
+        },
+        "product_item_cwqA7b": {
+          "type": "product_item",
+          "settings": {
+            "product": "x-hunter-st",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/x-hunter-st"
+          }
+        },
+        "product_item_qNkYPg": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro-combo",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro-combo"
+          }
+        },
+        "product_item_44gqyE": {
+          "type": "product_item",
+          "settings": {
+            "product": "jasion®-combo-sale-x-hunter-2",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/jasion®-combo-sale-x-hunter-2"
+          }
+        },
+        "product_item_dxWPHa": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-thunder-pro-st",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder-pro-thunder-pro-st"
+          }
+        }
+      },
+      "block_order": [
+        "product_item_PqGAQQ",
+        "product_item_kLFM6J",
+        "product_item_QRWTpM",
+        "product_item_AK63Ad",
+        "product_item_Y7Tb7d",
+        "product_item_cwqA7b",
+        "product_item_qNkYPg",
+        "product_item_44gqyE",
+        "product_item_dxWPHa"
+      ],
+      "name": "autumn-sale-product-list",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "page_top": 32,
+        "page_bottom": 80,
+        "show_heading": false,
+        "heading": "",
+        "tag_color": "#ffffff",
+        "tag_bg_color": "",
+        "show_title": true,
+        "title": "Hot Picks That Riders Can’t Resist",
+        "title_pc_size": 35,
+        "title_mb_size": 20,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "",
+        "description_color": "#171717",
+        "description_pc_size": 18,
+        "description_mb_size": 12,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "seo_text": "Hot Picks That Riders Can’t Resist",
+        "seo_tag": "h2"
+      }
+    },
+    "mc_th_trust_aKbtc6": {
+      "type": "mc_th-trust",
+      "blocks": {
+        "count_9PLYXf": {
+          "type": "count",
+          "settings": {
+            "title": "160000+",
+            "text": "<p>Followers<br/>Trusted by Riders Around the Globe</p>"
+          }
+        },
+        "count_H6HBXH": {
+          "type": "count",
+          "settings": {
+            "title": "98888+",
+            "text": "<p>Jasion Riders<br/>Recognition from knights around the world</p>"
+          }
+        },
+        "count_WjBaPE": {
+          "type": "count",
+          "settings": {
+            "title": "13000+",
+            "text": "<p>5-Star Reviews<br/>The knights give an honest opinion</p>"
+          }
+        },
+        "count_RNnnBD": {
+          "type": "count",
+          "settings": {
+            "title": "1000+",
+            "text": "<p>Experts Reviews<br/>What the professional media really thinks of us</p>"
+          }
+        },
+        "service_fjhCi8": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/anniversary-service-icon1.png",
+            "title": "<p>FAST<br/>SHIPPING</p>"
+          }
+        },
+        "service_7Fr8Ct": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/anniversary-service-icon2.png",
+            "title": "<p>14-DAY<br/>TRIAL</p>"
+          }
+        },
+        "service_HhX8RE": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/anniversary-service-icon3.png",
+            "title": "<p>2-YEAR<br/>WARRANTY</p>"
+          }
+        },
+        "service_wWjka7": {
+          "type": "service",
+          "settings": {
+            "image_icon": "shopify://shop_images/anniversary-service-icon4.png",
+            "title": "<p>A+ CUSTOMER<br/>SERVICE</p>"
+          }
+        }
+      },
+      "block_order": [
+        "count_9PLYXf",
+        "count_H6HBXH",
+        "count_WjBaPE",
+        "count_RNnnBD",
+        "service_fjhCi8",
+        "service_7Fr8Ct",
+        "service_HhX8RE",
+        "service_wWjka7"
+      ],
+      "name": "MC Th Trust",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "show_heading": true,
+        "heading": "Why Thousands Trust Our Ride",
+        "heading_color": "#000000",
+        "title_tag": "h2",
+        "num_color": "#ff981d",
+        "text_color": "#33302b",
+        "service_color": "#1d1d1d",
+        "service_border_color": "#333333"
+      }
+    },
+    "mc_patrol_community_video_y9RFFf": {
+      "type": "mc_patrol-community-video",
+      "blocks": {
+        "youtube_iYJYkX": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=xh_8cVaieGc",
+            "video_url_mobile": "https://www.youtube.com/watch?v=xh_8cVaieGc",
+            "date": "",
+            "content": "Jasion Patrol Battery Upgrade (170% Range)",
+            "avatar": "shopify://shop_images/unnamed_12.jpg",
+            "author": "Calthecool"
+          }
+        },
+        "youtube_Wjg9pr": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=vfqp2BZX_Qw",
+            "video_url_mobile": "https://www.youtube.com/watch?v=vfqp2BZX_Qw",
+            "date": "",
+            "content": "MIAMI RIDEOUT ON MY NEW E BIKE! (Jasion Thunder Pro)",
+            "avatar": "shopify://shop_images/channels4_profile_56.jpg",
+            "author": "Steeezy Filmz"
+          }
+        },
+        "youtube_UbF3Gk": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=6d1vqKuNYHY",
+            "video_url_mobile": "https://www.youtube.com/watch?v=6d1vqKuNYHY",
+            "date": "",
+            "content": "Fishing for South Florida Exotics on E-Bike!",
+            "avatar": "shopify://shop_images/channels4_profile_55.jpg",
+            "author": "ChaCha Fishing"
+          }
+        },
+        "video_HnB7wB": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
+            "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
+            "date": "",
+            "content": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
+            "avatar": "shopify://shop_images/channels4_profile_57.jpg",
+            "author": "IMBruceECLECTIC"
+          }
+        },
+        "video_KMnAdR": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=YAdiv1RgjZ4",
+            "video_url_mobile": "https://www.youtube.com/watch?v=YAdiv1RgjZ4",
+            "date": "",
+            "content": "The Jasion Patrol 52. My Honest review… ( Surron killer)???",
+            "avatar": "shopify://shop_images/channels4_profile_58.jpg",
+            "author": "onewheel_logann"
+          }
+        },
+        "video_XwNjh8": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=-blAk7TOt5s",
+            "video_url_mobile": "https://www.youtube.com/watch?v=-blAk7TOt5s",
+            "date": "",
+            "content": "I’m 65… and This E-Bike Changed How Far I Can Go | Jasion Thunder Pro ST",
+            "avatar": "shopify://shop_images/channels4_profile_59.jpg",
+            "author": "HomeGrown Passion"
+          }
+        },
+        "youtube_7GdBWY": {
+          "type": "youtube",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=h2AKx-m-N04&t=614s",
+            "video_url_mobile": "https://www.youtube.com/watch?v=h2AKx-m-N04&t=614s",
+            "date": "",
+            "content": "$999 Full Suspension E-Bike… Too Good to Be True? (Jasion Hunter Pro Review)",
+            "avatar": "shopify://shop_images/unnamed_13.jpg",
+            "author": "Electric Bike Report"
+          }
+        },
+        "video_6R9LWh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Patrol52--260309.mov",
+            "video_mobile": "shopify://files/videos/Patrol52--260309.mov",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/IMG_7172.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7172.jpg",
+            "show_button1": true,
+            "button1": "1560WH",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://pages/patrol",
+            "show_button2": true,
+            "button2": "Smart NFC Access",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://pages/patrol",
+            "content_color": "#ffffff",
+            "title": "The new Patrol 52 ebike🔥🔥",
+            "content": "<p>Huge S/O TO <a href=\"https://www.instagram.com/jasionbike/\">@jasionbike</a> for letting me test out the new patrol 52! <br/>52v 30Ah <br/>4000w motor <br/>Dual suspension <br/>Up to 50 miles<br/><br/></p>",
+            "author": ""
+          }
+        },
+        "video_UjcjFg": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/AQOu8lEdAAR_Oc_o5RAs-USr6u5-c5lk4hO6lFsWVKZaJSmPBgVHACp7IzSOajded_1PAx52UX_2eRFdqAiS3mga.mp4",
+            "video_mobile": "shopify://files/videos/AQOu8lEdAAR_Oc_o5RAs-USr6u5-c5lk4hO6lFsWVKZaJSmPBgVHACp7IzSOajded_1PAx52UX_2eRFdqAiS3mga.mp4",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/photo-37.jpg",
+            "mobile_image": "shopify://shop_images/photo-37.jpg",
+            "show_button1": true,
+            "button1": "Ride Patrol",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "4000W power",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52",
+            "content_color": "#ffffff",
+            "title": "Worth every penny🙌",
+            "content": "<p>Didn’t expect it to be this fast… Patrol delivers 💯</p>",
+            "author": ""
+          }
+        },
+        "video_nYiGtD": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/AQNGKtDMrMmGcl8St47el0vNKMuDZaTuXJxpZrtfoBLop4VPYBg9TAFefBHtLhLIomKMPPdpW-HFz7LTyaSM8f2o.mp4",
+            "video_mobile": "shopify://files/videos/AQNGKtDMrMmGcl8St47el0vNKMuDZaTuXJxpZrtfoBLop4VPYBg9TAFefBHtLhLIomKMPPdpW-HFz7LTyaSM8f2o.mp4",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/IMG_7309.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7309.jpg",
+            "show_button1": true,
+            "button1": "Off-road eBike",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "Fat tire eBike",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-combo",
+            "content_color": "#ffffff",
+            "title": "Can’t stop riding this🔥",
+            "content": "<p>That torque is no joke 😳 Patrol goes hard.</p>",
+            "author": ""
+          }
+        },
+        "video_tE84R8": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
+            "video_mobile": "shopify://files/videos/AQMnKcvAtVlKls_mkEGkY_YGRzQgh6naHzUTC3Einy_h9VjTHdwmfWJugniRNeDlzZ-MZFZ0tGZCcWPmNJj9alx6.mp4",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/Untitled_design_2.png",
+            "mobile_image": "shopify://shop_images/Untitled_design_2.png",
+            "show_button1": true,
+            "button1": "Tame the Terrain",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "",
+            "show_button2": true,
+            "button2": "Full-Terrain Suspension",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "",
+            "content_color": "#ffffff",
+            "title": "Absolutely impressed with the Patrol👊🔥",
+            "content": "<p>The Patrol is a beast. Incredible torque, fast acceleration, and the suspension makes off-road riding feel effortless.</p>",
+            "author": ""
+          }
+        },
+        "video_zYYzrr": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
+            "video_mobile": "shopify://files/videos/6c79ace672f9461ebb2f0560f5e7849f.mov",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/IMG_7174.jpg",
+            "mobile_image": "shopify://shop_images/IMG_7174.jpg",
+            "show_button1": true,
+            "button1": "Built for the wild",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://pages/patrol",
+            "show_button2": true,
+            "button2": "Trail-Ready",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://pages/patrol",
+            "content_color": "#ffffff",
+            "title": "Nothing but a SMILE on my face....",
+            "content": "<p>OMG, this bike is insane. Patrol is pushing eBike performance into all-new territory.<br/><br/>Launching March 20 — unlock the early bird deal now.</p>",
+            "author": ""
+          }
+        },
+        "video_fQ9LxA": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/下载.mp4",
+            "video_mobile": "shopify://files/videos/下载.mp4",
+            "description": "",
+            "slide_button_color": "#fbe309",
+            "desktop_image": "shopify://shop_images/photo-13.jpg",
+            "mobile_image": "shopify://shop_images/photo-13.jpg",
+            "show_button1": true,
+            "button1": "Dirt Bike Beast",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#ff2501",
+            "button1_url": "shopify://products/patrol-52",
+            "show_button2": true,
+            "button2": "40 MPH",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#ff2501",
+            "button2_url": "shopify://products/patrol-52-combo",
+            "content_color": "#ffffff",
+            "title": "Gas up or level up?",
+            "content": "<p><strong>Patrol</strong> is the smarter way to ride. 🔥<br/></p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "youtube_iYJYkX",
+        "youtube_Wjg9pr",
+        "youtube_UbF3Gk",
+        "video_HnB7wB",
+        "video_KMnAdR",
+        "video_XwNjh8",
+        "youtube_7GdBWY",
+        "video_6R9LWh",
+        "video_UjcjFg",
+        "video_nYiGtD",
+        "video_tE84R8",
+        "video_zYYzrr",
+        "video_fQ9LxA"
+      ],
+      "name": "MC Patrol Community Video",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "page_top": 50,
+        "show_title": true,
+        "title": "<p>Riders <strong>Reviews</strong></p>",
+        "title_tag": "h2",
+        "title_pc_size": 75,
+        "title_pc_weight": 700,
+        "title_pc_line": 120,
+        "title_mb_size": 24,
+        "title_mb_weight": 700,
+        "title_mb_line": 120,
+        "title_margin_bottom": 16,
+        "title_color": "#000000",
+        "title_bold_color": "#000000",
+        "title_gradient_color": "",
+        "show_description": false,
+        "description": "<p>description</p>",
+        "description_color": "#ffffff",
+        "description_bold_color": "#ffffff",
+        "description_pc_size": 18,
+        "description_pc_line": 120,
+        "description_mb_size": 14,
+        "description_mb_line": 120,
+        "description_pc_margin_bottom": 40,
+        "description_mb_margin_bottom": 30,
+        "tab1": "YouTube video",
+        "tab2": "Instagram videos",
+        "tab3": "Tiktok videos",
+        "tab_color": "#ffffff",
+        "tab_active_color": "#ffffff",
+        "tab_bg_color": "#313131",
+        "tab_active_bg_color": "#ff2501"
+      }
+    },
+    "autumn_sale_says_9RUVcG": {
+      "type": "autumn-sale-says",
+      "blocks": {
+        "say_Bd33R8": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>If you're more concerned about safety than commute distance, you'll enjoy the front fork suspension, front and rear mechanical disc brakes, and more.</p>",
+            "image_icon": "shopify://shop_images/17_c7a32e0e-d33f-406e-a52e-077060f12ea3.jpg"
+          }
+        },
+        "say_nbxpaR": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>Users enjoy the long battery life and smooth ride. They also like the compact design, which works well for city commuting. The user-friendly controls make day-to-day operations simple and efficient.</p>",
+            "image_icon": "shopify://shop_images/1_2a200d81-f781-46f2-8779-b9ddb93f59b8.jpg"
+          }
+        },
+        "say_zGMMxf": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>Don't worry about riding at night as this bike has bright LED headlights, rear reflectors and reflective strips on the tires so you'll be seen even in the dark.</p>",
+            "image_icon": "shopify://shop_images/10_02caecc6-8216-4f34-8d7c-2a448a000a7c.jpg"
+          }
+        },
+        "say_p8cfKf": {
+          "type": "say",
+          "settings": {
+            "intro": "<p>This fat tire bike has everything you need to take on your next adventure: integrated lights, shock-absorption fat tires, and a lightning-quick twist throttle for a boost.</p>",
+            "image_icon": "shopify://shop_images/9_d78ce27d-5d1a-430e-80be-2f00617dc1e6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "say_Bd33R8",
+        "say_nbxpaR",
+        "say_zGMMxf",
+        "say_p8cfKf"
+      ],
+      "name": "Autumn Sale Says",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "page_top": 50,
+        "page_bottom": 50,
+        "show_heading": true,
+        "heading": "What They Say",
+        "title_tag": "h2",
+        "heading_color": "#000000",
+        "content_color": "#4a4742"
+      }
+    },
+    "autumn_sale_media_comments_6dhjFb": {
+      "type": "autumn-sale-media-comments",
+      "blocks": {
+        "media_wbbaeK": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/2_acb06d4f-6c1f-4583-a76d-8c2d9c48c354.png",
+            "mobile_image": "shopify://shop_images/2_acb06d4f-6c1f-4583-a76d-8c2d9c48c354.png",
+            "score": 5,
+            "intro": "<p>Great product. Excellent communication and fast shipping. Bike was exactly as described and did not disappoint from the unpacking to my last ride! Jasionbike is our brand Only fault was mine, should have ordered one for my wife!!</p>",
+            "title": "Michael R."
+          }
+        },
+        "media_6Fq4TE": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/7_162f3256-a6b0-41a7-bb56-55c01b642e94.png",
+            "mobile_image": "shopify://shop_images/7_162f3256-a6b0-41a7-bb56-55c01b642e94.png",
+            "score": 5,
+            "intro": "<p>These bikes are the bomb!!!!!! Completely satisfied with our purchase of two Hunter Pro bikes. Easy to assemble, a very short learning curve - and an intuitive app.</p>",
+            "title": "Hazer"
+          }
+        },
+        "media_EQqnDg": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5_cca13ef3-16b4-4122-bcc8-34f8328b75e2.png",
+            "mobile_image": "shopify://shop_images/5_cca13ef3-16b4-4122-bcc8-34f8328b75e2.png",
+            "score": 5,
+            "intro": "<p>The retro revolt pro bike is the greatest bike I’ve ever ridden I like it so much I’m thinking about becoming a dealer or buying a couple dozen and reselling them!</p>",
+            "title": "Raspy Rides"
+          }
+        },
+        "media_8aA4gV": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
+            "mobile_image": "shopify://shop_images/8_c99749df-7588-4579-bb96-237fa925160e.png",
+            "score": 5,
+            "intro": "<p>My new bike was shipped very promptly. Received in excellent condition. Assembly was very easy and intuitive. Riding the Thunder is so much fun. I'm 55 and feel like a kid again. Thank you Jasion!</p>",
+            "title": "Scot R.A."
+          }
+        },
+        "media_aDaPiY": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_fbd9bec1-285d-418d-bf15-f117161676c3.png",
+            "mobile_image": "shopify://shop_images/product-image2.png",
+            "score": 5,
+            "intro": "<p>My husband has enjoyed this e-bike! It’s great for the price point. He likes that it has gears. The seat is very comfortable. The bike came within 2 weeks.</p>",
+            "title": "Annette S. "
+          }
+        },
+        "media_aX9Kyq": {
+          "type": "media",
+          "settings": {
+            "desktop_image": "shopify://shop_images/3_5c036d94-8611-471f-980c-652507a75acb.png",
+            "mobile_image": "shopify://shop_images/3_5c036d94-8611-471f-980c-652507a75acb.png",
+            "score": 5,
+            "intro": "<p>This was a gift bought for my husband. He takes it hunting and to pull deer out of the woods. He said it rides very smooth even on rough terrain.</p>",
+            "title": "Papa"
+          }
+        }
+      },
+      "block_order": [
+        "media_wbbaeK",
+        "media_6Fq4TE",
+        "media_EQqnDg",
+        "media_8aA4gV",
+        "media_aDaPiY",
+        "media_aX9Kyq"
+      ],
+      "name": "autumn-sale-comments",
+      "settings": {
+        "page_color": "rgba(0,0,0,0)",
+        "page_top": 50,
+        "show_heading": true,
+        "heading": "Real Riders Speak",
+        "title_tag": "h2",
+        "heading_color": "#000000"
+      }
+    },
+    "autumn_sale_sign_up": {
+      "type": "autumn-sale-sign-up",
+      "blocks": {
+        "pay_Bd33R8": {
+          "type": "pay",
+          "settings": {
+            "image_icon1": "shopify://shop_images/autumn-shop-pay.png",
+            "image_icon2": "shopify://shop_images/autumn-klarna.png",
+            "tag": "Ride Now, Pay Later",
+            "text": "<p>Limited-Time <strong>0% APR</strong> for 4 Months</p>",
+            "remark": "A $1,599 purchase costs $66.62/month for 24 months at 0% APR."
+          }
+        },
+        "form_zGMMxf": {
+          "type": "form",
+          "settings": {
+            "title": "Sign up forthe latest and greatest",
+            "intro": "Subscribe to stay up-to-date with ourlatestnews, promotions, ande-bike tips. Everything you need for happy e-biking!",
+            "button": "Join Us",
+            "placeholder": "Your email"
+          }
+        }
+      },
+      "block_order": [
+        "pay_Bd33R8",
+        "form_zGMMxf"
+      ],
+      "name": "autumn-sale-sign-up",
+      "settings": {
+        "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
+        "mobile_image": "shopify://shop_images/anniversary-mb-sign-up-bg.jpg",
+        "padding": "144px 0",
+        "mb_padding": "58px 0",
+        "mb_page_bottom": 144
+      }
+    }
+  },
+  "order": [
+    "mc_page_color_zAVKgD",
+    "mc_main_banner_9pwQYr",
+    "main_navigation_CCCdMD",
+    "mc_main_countdown_rjDi6e",
+    "mc_section_text_n8V6Cg",
+    "mc_fifa_discount_cards_xLFWeV",
+    "mc_pd_spin_pA8NhV",
+    "mc_pd_prime_grid_riUDmE",
+    "mc_th_product_card_HTabDa",
+    "autumn_sale_product_list_kb7cx4",
+    "mc_th_trust_aKbtc6",
+    "mc_patrol_community_video_y9RFFf",
+    "autumn_sale_says_9RUVcG",
+    "autumn_sale_media_comments_6dhjFb",
+    "autumn_sale_sign_up"
+  ]
+}

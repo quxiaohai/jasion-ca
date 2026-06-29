@@ -1,10 +1,23 @@
 {%- assign ss = section.settings -%}
 {% stylesheet %}
     .mc_fifa-discount-cards {
-        padding: 40px 0;
+        padding: 40px 0 64px;
     }
     .mc_fifa-discount-cards .decorate-image .image {
         object-fit: contain;
+    }
+    .mc_fifa-discount-cards .backdrop-image {
+        height: 516px;
+        width: auto;
+        left: 0;
+        bottom: 0;
+        object-fit: contain;
+    }
+    .mc_fifa-discount-cards .backdrop-image.right {
+        left: auto;
+        height: 446px;
+        bottom: -40px;
+        right: -180px;
     }
     .mc_fifa-discount-cards .decorate-image.top {
         width: 172px;
@@ -24,6 +37,9 @@
     @media screen and (max-width: 1023px) {
         .mc_fifa-discount-cards {
             padding: 0.78125rem 0 1.171875rem;
+        }
+        .mc_fifa-discount-cards .backdrop-image {
+            display: none;
         }
         .mc_fifa-discount-cards .decorate-image.top {
             width: 60px;
@@ -51,6 +67,12 @@
     {%- render 'section-title', info: ss -%}
     {%- if ss.seo_text != blank -%}
         <{{ ss.seo_tag }} class="seo-tag-hidden">{{ ss.seo_text }}</{{ ss.seo_tag }}>
+    {%- endif -%}
+    {%- if ss.left_image != blank -%}
+        {%- render 'global-image', image: ss.left_image, image_size: 1600, class: 'backdrop-image absolute left' -%}
+    {%- endif -%}
+    {%- if ss.right_image != blank -%}
+        {%- render 'global-image', image: ss.right_image, image_size: 1600, class: 'backdrop-image absolute right' -%}
     {%- endif -%}
     <div class="card-items flex-center">
         {%- for block in section.blocks -%}
@@ -284,9 +306,23 @@
         {
           "value": "h5",
           "label": "H5"
-        },
+        }
       ],
       "default": "h2"
+    },
+    {
+      "type": "header",
+      "content": "Background decoration"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Desktop left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Desktop right image"
     }
   ],
   "blocks": [
