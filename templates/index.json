@@ -1272,6 +1272,30 @@
     "mc_kol_testimonials_Ba34yH": {
       "type": "mc_kol-testimonials",
       "blocks": {
+        "video_L68AFa": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Thunder pro 20260309_136256b2-8331-452d-9c53-fd3d0cca8339.mov",
+            "video_mobile": "shopify://files/videos/Thunder pro 20260309_136256b2-8331-452d-9c53-fd3d0cca8339.mov",
+            "description": "",
+            "desktop_image": "shopify://shop_images/IMG_0607_-_Edited.jpg",
+            "mobile_image": "shopify://shop_images/IMG_0607.jpg",
+            "show_button1": true,
+            "button1": "Power & Comfort",
+            "button1_color": "#ffffff",
+            "button1_bg_color": "#000000",
+            "button1_url": "shopify://products/thunder-pro-st",
+            "show_button2": true,
+            "button2": "Fat Tire Ride",
+            "button2_color": "#ffffff",
+            "button2_bg_color": "#000000",
+            "button2_url": "shopify://products/thunder-pro",
+            "content_color": "#000000",
+            "title": "Power Every Adventure. ⚡",
+            "content": "<p>Smooth, powerful, and built for everyday rides. From daily commutes to weekend escapes, Thunder Pro is ready for every journey.</p>",
+            "author": "selenayazs"
+          }
+        },
         "video_8xm3yh": {
           "type": "video",
           "settings": {
@@ -1391,6 +1415,7 @@
         }
       },
       "block_order": [
+        "video_L68AFa",
         "video_8xm3yh",
         "video_7xqwrk",
         "video_WYVHzn",
