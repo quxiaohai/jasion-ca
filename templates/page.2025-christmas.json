@@ -866,6 +866,20 @@
     "autumn_sale_community_video_y9RFFf": {
       "type": "autumn-sale-community-video",
       "blocks": {
+        "video_J7eHUV": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=epLBGSwkYHM&t=155s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "video_url_mobile": "https://www.youtube.com/watch?v=epLBGSwkYHM&t=155s",
+            "date": "",
+            "content": "JASION…THUNDER PRO…a New Model with Full Suspension and 52 Volt Power at a BARGAIN Price!",
+            "avatar": "shopify://shop_images/channels4_profile_3eff8968-1d9f-4b30-b195-22c697c4d45a.jpg",
+            "author": "IMBruceECLECTIC"
+          }
+        },
         "video_LAPFPL": {
           "type": "video",
           "settings": {
@@ -883,15 +897,15 @@
         "video_KMnAdR": {
           "type": "video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "video_url": "https://www.youtube.com/watch?v=GfV9s65f1Ns&t=531s",
             "description": "",
             "enable_video_autoplay": false,
             "enable_video_looping": true,
-            "video_url_mobile": "https://www.youtube.com/watch?v=QoEAwFFhoPw",
+            "video_url_mobile": "https://www.youtube.com/watch?v=GfV9s65f1Ns&t=531s",
             "date": "",
-            "content": "Like A Super73.. But a THIRD of The Price?! | Jasion Retrovolt Pro Review",
-            "avatar": "shopify://shop_images/channels4_profile_c3e4fbd8-eb7e-4beb-9ab1-493a62b0fcf7.jpg",
-            "author": "Raspy Rides"
+            "content": "Jasion Patrol Review: 52V Power in a Dirt Bike Style eBike!",
+            "avatar": "shopify://shop_images/channels4_profile_1_9a97fd32-c8df-4d57-9f37-0669551d5e73.jpg",
+            "author": "RunPlayBack"
           }
         },
         "video_F9ApfL": {
@@ -924,6 +938,7 @@
         }
       },
       "block_order": [
+        "video_J7eHUV",
         "video_LAPFPL",
         "video_KMnAdR",
         "video_F9ApfL",
