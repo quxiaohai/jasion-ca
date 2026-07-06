@@ -16,10 +16,9 @@
       "blocks": {
         "announcement_Lag3eQ": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "icon": "none",
-            "text": "⏰Order before the 19th for guaranteed holiday delivery.",
+            "text": "⏰ Summer deals are ending soon — lock in today’s price now!",
             "link": "",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -92,7 +91,7 @@
           "settings": {
             "icon": "none",
             "text": "🚚 Order now to lock in your summer ride before the deal ends!",
-            "link": "shopify://pages/flash-sale",
+            "link": "shopify://products/thunder-pro-thunder-pro-st",
             "hide_icon_mobile": true,
             "text_mobile": "",
             "highlighted_text": "none",
