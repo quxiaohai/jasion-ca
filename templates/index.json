@@ -693,8 +693,8 @@
         "image_cx4dww": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_ProPC.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Promo.jpg",
+            "image": "shopify://shop_images/5X-Hunter_ST.jpg",
+            "image_mobile": "shopify://shop_images/5X-Hunter_ST_M.jpg",
             "heading": "",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
@@ -702,7 +702,7 @@
             "subh_before": true,
             "text_size": "subtext-md",
             "button_label": "",
-            "button_link": "shopify://products/retrovolt-pro",
+            "button_link": "shopify://products/x-hunter-st",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false,
