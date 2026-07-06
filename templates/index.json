@@ -15,8 +15,8 @@
         "image_36t3mW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1920x700_6f785d87-9bb8-4837-a6bf-e75076f686fd.jpg",
-            "image_mobile": "shopify://shop_images/1200x1600_7aac6e33-2696-43cf-9dfd-c29aedaecb9d.jpg",
+            "image": "shopify://shop_images/2Thunder_Pro_ST_181998f1-f0e0-46f0-bf19-9efbef1aaba0.jpg",
+            "image_mobile": "shopify://shop_images/2Thunder_Pro_ST_M_6f6cc617-dfdb-4e43-aa87-2872e49d7e36.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -75,8 +75,8 @@
         "image_gimiFf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Thunder_PRO_STPC.jpg",
-            "image_mobile": "shopify://shop_images/Thunder_PRO_STmo.jpg",
+            "image": "shopify://shop_images/4Patrol.jpg",
+            "image_mobile": "shopify://shop_images/4Patrol_M.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -135,8 +135,8 @@
         "image_F7kDtH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/RetroVolt_ProPC.jpg",
-            "image_mobile": "shopify://shop_images/RetroVolt_Promo.jpg",
+            "image": "shopify://shop_images/1RetroVolt_Pro.jpg",
+            "image_mobile": "shopify://shop_images/1RetroVolt_Pro_M.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -196,8 +196,8 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/4Thunder_Pro_ST_95e66f31-947a-4de2-b7de-813575b31ba1.jpg",
-            "image_mobile": "shopify://shop_images/4Thunder_Pro_ST_M_300d13e1-8e2e-4367-966a-c38f69168fa3.jpg",
+            "image": "shopify://shop_images/5X-Hunter_ST.jpg",
+            "image_mobile": "shopify://shop_images/5X-Hunter_ST_M.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -255,10 +255,9 @@
         },
         "image_UxKiWT": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/3Hunter_Pro_8bb72fe0-0dea-42d9-a5b5-dcd89825bb44.jpg",
-            "image_mobile": "shopify://shop_images/3Hunter_Pro_M_46faf901-ae55-43c7-97d2-77b58f928630.jpg",
+            "image": "shopify://shop_images/3Hunter_Pro_27f3b245-463c-48df-9f59-7e9d6f4104c3.jpg",
+            "image_mobile": "shopify://shop_images/3Hunter_Pro_M_d1d6512a-0828-44ba-a683-8e53dfaa997a.jpg",
             "heading": "",
             "heading_size": "title-md",
             "heading_tag": "h2",
@@ -355,7 +354,7 @@
           "type": "collection",
           "settings": {
             "collection": "folding-ebike",
-            "image": "shopify://shop_images/11_c9fabba2-10a0-4b61-8e33-fe70439927bd.jpg",
+            "image": "shopify://shop_images/11_352d2cda-fc62-4439-819a-e71030795ee8.jpg",
             "title": "Folding Ebike",
             "description": "",
             "overlay_content": true,
@@ -376,7 +375,7 @@
           "type": "collection",
           "settings": {
             "collection": "fat-tire-ebike",
-            "image": "shopify://shop_images/12_821904d6-fafa-44ab-9559-79524cc5d4e3.jpg",
+            "image": "shopify://shop_images/12_0c9057f7-ab69-4a97-a91f-d40080b86264.jpg",
             "title": "Fat Tire Ebike",
             "description": "",
             "overlay_content": true,
@@ -397,7 +396,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-arrivals",
-            "image": "shopify://shop_images/13_fd24d70a-64f5-48e5-9b62-863239818dfd.jpg",
+            "image": "shopify://shop_images/13_bf384210-d57b-4f30-a543-a28ca6ad92a9.jpg",
             "title": "New Arrival",
             "description": "",
             "overlay_content": true,
