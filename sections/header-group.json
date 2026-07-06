@@ -31,7 +31,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🍁<strong> Happy Canada Day: </strong>Save Extra<strong> C$50 </strong>with Code<strong>: MAPLE50!</strong>",
+            "text": "☀️ Summer Ride Deal: Save Extra <strong>C$50</strong> with Code: <strong>HOT50</strong>!",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -43,7 +43,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🎟️ Orders <strong>C$1600 </strong>+<strong> </strong>Save an Extra C$50 with Code: <strong>MAPLE50</strong>",
+            "text": "🎟️ Orders <strong>C$1600 </strong>+<strong> </strong>Save an Extra C$50 with Code: <strong>HOT50</strong>",
             "link": "shopify://collections/all-products",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -67,7 +67,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "😱Hunter Pro: Save C$3,299+C$0 Off, C<strong>$1,649.5</strong> Per Unit",
+            "text": "😱Hunter Pro: Save C$3,299+C$50 Off, C<strong>$1,649.5</strong> Per Unit",
             "link": "shopify://products/hunter-pro-combo",
             "hide_icon_mobile": true,
             "text_mobile": "",
@@ -91,7 +91,7 @@
           "type": "announcement",
           "settings": {
             "icon": "none",
-            "text": "🔒 Shop Early! Lock in Today's Price Before Canada Day Ends.",
+            "text": "🚚 Order now to lock in your summer ride before the deal ends!",
             "link": "shopify://pages/flash-sale",
             "hide_icon_mobile": true,
             "text_mobile": "",
