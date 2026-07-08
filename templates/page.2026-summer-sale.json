@@ -1249,6 +1249,7 @@
         "pay_Bd33R8",
         "form_zGMMxf"
       ],
+      "disabled": true,
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
