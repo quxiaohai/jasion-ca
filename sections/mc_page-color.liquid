@@ -1,16 +1,46 @@
+{%- liquid
+    assign ss = section.settings
+    assign bg_image = ss.background_image
+    assign mb_bg_image = ss.mb_background_image | default: bg_image
+-%}
 <style>
+    {%- if bg_image == blank -%}
     #MainContent {
-    {%- if section.settings.background_image != blank -%}
-        background: url('{{ section.settings.background_image | image_url: width: 1920 }}') repeat-y {{ section.settings.background_color }};
-        background-size: 100% auto;
-    {%- else -%}
-        background: {{ section.settings.background_color }} !important;
-    {%- endif -%}
+        background-color: {{ ss.background_color }} !important;
     }
-
+    {%- endif -%}
     [role="main"] .shopify-section:not(.shopify-section--apps) {
         background: none;
     }
+
+    {%- if bg_image != blank -%}
+    @media screen and (min-width: 1024px) {
+        #MainContent {
+            background: url('{{ bg_image | image_url: width: 1800 }}') repeat-y{{ ss.background_color }};
+            background-size: 100% auto;
+        }
+        {%- if ss.show_suspend_background and ss.suspend_background_image != blank -%}
+        #MainContent:before {
+            content: '';
+            position: absolute;
+            top: {{ ss.suspend_background_top | divided_by: 19.2 }}vw;
+            left: 0;
+            width: 100%;
+            height: auto;
+            aspect-ratio: {{ ss.suspend_background_image.aspect_ratio }};
+            background: url('{{ ss.suspend_background_image | image_url: width: 1800 }}') no-repeat;
+            background-size: cover;
+        }
+        {%- endif -%}
+    }
+
+    @media screen and (max-width: 1023px){
+        #MainContent {
+            background: url('{{ mb_bg_image | image_url: width: 600 }}') repeat-y{{ ss.background_color }};
+            background-size: 100% auto;
+        }
+    }
+    {%- endif -%}
 </style>
 {% schema %}
 {
@@ -33,6 +63,30 @@
       "type": "image_picker",
       "label": "Background image",
       "id": "background_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile background image",
+      "id": "mb_background_image"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Suspend background image",
+      "id": "show_suspend_background",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "label": "Suspend background image",
+      "id": "suspend_background_image",
+      "visible_if": "{{ section.settings.show_suspend_background }}"
+    },
+    {
+      "type": "number",
+      "label": "Suspend background image margin top",
+      "id": "suspend_background_top",
+      "default": 0,
+      "visible_if": "{{ section.settings.show_suspend_background }}"
     }
   ]
 }
