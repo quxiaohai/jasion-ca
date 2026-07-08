@@ -585,38 +585,11 @@
     "autumn_sale_product_list_kb7cx4": {
       "type": "autumn-sale-product-list",
       "blocks": {
-        "product_item_PqGAQQ": {
-          "type": "product_item",
-          "settings": {
-            "product": "hunter-pro",
-            "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
-            "logo_size": "small",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/hunter-pro"
-          }
-        },
-        "product_item_kLFM6J": {
-          "type": "product_item",
-          "settings": {
-            "product": "thunder-pro-st",
-            "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
-            "logo_size": "small",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/thunder-pro-st"
-          }
-        },
         "product_item_QRWTpM": {
           "type": "product_item",
           "settings": {
             "product": "patrol-52",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -624,12 +597,35 @@
             "button2_url": "shopify://products/patrol-52"
           }
         },
+        "product_item_kLFM6J": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-st",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder-pro-st"
+          }
+        },
+        "product_item_PqGAQQ": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro"
+          }
+        },
         "product_item_AK63Ad": {
           "type": "product_item",
           "settings": {
             "product": "retrovolt-pro",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -642,7 +638,6 @@
           "settings": {
             "product": "jasion-x-hunter",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -655,7 +650,6 @@
           "settings": {
             "product": "x-hunter-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -668,7 +662,6 @@
           "settings": {
             "product": "hunter-pro-combo",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -681,7 +674,6 @@
           "settings": {
             "product": "jasion®-combo-sale-x-hunter-2",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -694,7 +686,6 @@
           "settings": {
             "product": "thunder-pro-thunder-pro-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -704,9 +695,9 @@
         }
       },
       "block_order": [
-        "product_item_PqGAQQ",
-        "product_item_kLFM6J",
         "product_item_QRWTpM",
+        "product_item_kLFM6J",
+        "product_item_PqGAQQ",
         "product_item_AK63Ad",
         "product_item_Y7Tb7d",
         "product_item_cwqA7b",
