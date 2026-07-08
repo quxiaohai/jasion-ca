@@ -373,12 +373,6 @@
     "mc_pd_prime_grid_riUDmE": {
       "type": "mc_summer-prime-grid",
       "blocks": {
-        "grid_UWfY3c": {
-          "type": "grid",
-          "settings": {
-            "text": "PD Discount"
-          }
-        },
         "grid_yfPgMj": {
           "type": "grid",
           "settings": {
@@ -462,7 +456,6 @@
         }
       },
       "block_order": [
-        "grid_UWfY3c",
         "grid_yfPgMj",
         "grid_cyDwMp",
         "grid_aVCbKA",
@@ -500,7 +493,6 @@
           "type": "product_item",
           "settings": {
             "product": "hunter-pro",
-            "show_border": false,
             "show_final_tag": true,
             "final_tag": "<p>Final Price <strong>$999</strong></p>",
             "final_tag_color": "#ffebd9",
@@ -515,7 +507,6 @@
             "discount_text2_bg_color": "#329efa",
             "gift_image1": "shopify://shop_images/anniversary-card-gift-icon4.png",
             "gift_content1": "CS89\nFREEE",
-            "gift_image2": "shopify://shop_images/anniversary-card-gift-icon2_3506d138-d0a2-490c-a080-061c8b5ff4b3.png",
             "gift_content2": "$89.00|FREE\nBuy 2 Get Free Pet Bike Basket",
             "gift_content3": "$89\nFREE",
             "button1": "Shop Now",
@@ -532,7 +523,6 @@
           "type": "product_item",
           "settings": {
             "product": "thunder-pro-st",
-            "show_border": false,
             "show_final_tag": true,
             "final_tag": "<p>Final Price <strong>$1199</strong></p>",
             "final_tag_color": "#ffebd9",
@@ -843,7 +833,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=xh_8cVaieGc",
             "date": "",
             "content": "Jasion Patrol Battery Upgrade (170% Range)",
-            "avatar": "shopify://shop_images/unnamed_12.jpg",
             "author": "Calthecool"
           }
         },
@@ -854,7 +843,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=vfqp2BZX_Qw",
             "date": "",
             "content": "MIAMI RIDEOUT ON MY NEW E BIKE! (Jasion Thunder Pro)",
-            "avatar": "shopify://shop_images/channels4_profile_56.jpg",
             "author": "Steeezy Filmz"
           }
         },
@@ -865,7 +853,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=6d1vqKuNYHY",
             "date": "",
             "content": "Fishing for South Florida Exotics on E-Bike!",
-            "avatar": "shopify://shop_images/channels4_profile_55.jpg",
             "author": "ChaCha Fishing"
           }
         },
@@ -876,7 +863,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
             "date": "",
             "content": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
-            "avatar": "shopify://shop_images/channels4_profile_57.jpg",
             "author": "IMBruceECLECTIC"
           }
         },
@@ -887,7 +873,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=YAdiv1RgjZ4",
             "date": "",
             "content": "The Jasion Patrol 52. My Honest review… ( Surron killer)???",
-            "avatar": "shopify://shop_images/channels4_profile_58.jpg",
             "author": "onewheel_logann"
           }
         },
@@ -898,7 +883,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=-blAk7TOt5s",
             "date": "",
             "content": "I’m 65… and This E-Bike Changed How Far I Can Go | Jasion Thunder Pro ST",
-            "avatar": "shopify://shop_images/channels4_profile_59.jpg",
             "author": "HomeGrown Passion"
           }
         },
@@ -909,7 +893,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=h2AKx-m-N04&t=614s",
             "date": "",
             "content": "$999 Full Suspension E-Bike… Too Good to Be True? (Jasion Hunter Pro Review)",
-            "avatar": "shopify://shop_images/unnamed_13.jpg",
             "author": "Electric Bike Report"
           }
         },
