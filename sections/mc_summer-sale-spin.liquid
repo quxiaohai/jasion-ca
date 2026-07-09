@@ -571,7 +571,7 @@
                 isOpen = true;
                 nodeList.prizeName.textContent = currentPrize.title;
                 nodeList.code.textContent = currentPrize.code;
-                nodeList.cover.innerHTML = `<img src="${currentPrize.icon}" class="image" alt="${currentPrize.code}"/>`
+                nodeList.cover.innerHTML = currentPrize.icon ? `<img src="${currentPrize.icon}" class="image" alt="${currentPrize.code}"/>` : '';
                 nodeList.btn.href = '/discount/' + currentPrize.code + '?redirect=' + encodeURIComponent('{{ ss.model_button_url }}');
                 nodeList.modal.style.setProperty('--background', `url("{{ ds.model_bg_image | image_url: width: 500 }}")`);
                 scrollPos = window.scrollY;
