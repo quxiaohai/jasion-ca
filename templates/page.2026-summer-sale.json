@@ -29,7 +29,7 @@
         "pc_width": 1920,
         "mb_width": 750,
         "media_type": "image",
-        "pc_image_url": "shopify://shop_images/summer-sale-banner.jpg",
+        "pc_image_url": "shopify://shop_images/2Thunder_Pro_ST_dc96b667-4de7-49c7-8760-d2e2a33e1c62.jpg",
         "content_pos": "center",
         "mb_content_pos": "mb_top",
         "video_play_show": false,
@@ -49,7 +49,7 @@
         "nav_tab_EjHwNt": {
           "type": "nav_tab",
           "settings": {
-            "title": "🏖️Summer Flash Sale",
+            "title": "🌞Summer Ride Deal",
             "position": 5
           }
         },
@@ -346,7 +346,7 @@
         "background_image": "shopify://shop_images/summer-sale-spin-bg.jpg",
         "mb_background_image": "shopify://shop_images/mb-summer-sale-spin-bg.jpg",
         "item_icon1": "shopify://shop_images/pd-coupon-icon.png",
-        "item_text1": "<p>$50-$200 OFF</p>",
+        "item_text1": "<p>C$50-C$200 OFF</p>",
         "item_icon2": "shopify://shop_images/id-gift-icon.png",
         "item_text2": "<p>FREE Accessories</p>",
         "item_icon3": "shopify://shop_images/pd-bike-icon.png",
@@ -373,12 +373,6 @@
     "mc_pd_prime_grid_riUDmE": {
       "type": "mc_summer-prime-grid",
       "blocks": {
-        "grid_UWfY3c": {
-          "type": "grid",
-          "settings": {
-            "text": "PD Discount"
-          }
-        },
         "grid_yfPgMj": {
           "type": "grid",
           "settings": {
@@ -392,7 +386,7 @@
           "type": "grid",
           "settings": {
             "icon1": "shopify://shop_images/summer-icon3_SVG.svg",
-            "text": "Win Steam Controller",
+            "text": "Win 100% Refund",
             "icon2": "shopify://shop_images/summer-icon10_SVG.svg",
             "icon3": "shopify://shop_images/summer-icon11_SVG.svg"
           }
@@ -417,6 +411,7 @@
         },
         "grid_LQBARq": {
           "type": "grid",
+          "disabled": true,
           "settings": {
             "icon1": "shopify://shop_images/summer-icon4_SVG.svg",
             "text": "2 X Points",
@@ -426,9 +421,10 @@
         },
         "grid_RWgQBK": {
           "type": "grid",
+          "disabled": true,
           "settings": {
             "icon1": "shopify://shop_images/summer-icon5_SVG.svg",
-            "text": "VIP Rewards",
+            "text": "Subscriber Rewards",
             "icon2": "shopify://shop_images/summer-icon10_SVG.svg",
             "icon3": "shopify://shop_images/summer-icon9_SVG.svg"
           }
@@ -444,6 +440,7 @@
         },
         "grid_PGrReD": {
           "type": "grid",
+          "disabled": true,
           "settings": {
             "icon1": "shopify://shop_images/summer-icon7_SVG.svg",
             "text": "$9.9 Flash Deal",
@@ -462,7 +459,6 @@
         }
       },
       "block_order": [
-        "grid_UWfY3c",
         "grid_yfPgMj",
         "grid_cyDwMp",
         "grid_aVCbKA",
@@ -500,22 +496,19 @@
           "type": "product_item",
           "settings": {
             "product": "hunter-pro",
-            "show_border": false,
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$999</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1649</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/pd-hunter-pro-new.jpg",
             "mb_product_image": "shopify://shop_images/fifa-mb-hunter-pro.jpg",
             "show_spec": true,
-            "discount_text1": "<p><strong>$1000 OFF</strong></p>",
+            "discount_text1": "<p><strong>$1013 OFF</strong></p>",
             "discount_text1_bg_color": "#b70e1b",
-            "discount_text2": "<p><strong>$9.9 </strong>FLASH SALE</p>",
+            "discount_text2": "<p><strong>Extra C$50 OFF</strong></p>",
             "discount_text2_bg_color": "#329efa",
-            "gift_image1": "shopify://shop_images/anniversary-card-gift-icon4.png",
             "gift_content1": "CS89\nFREEE",
-            "gift_image2": "shopify://shop_images/anniversary-card-gift-icon2_3506d138-d0a2-490c-a080-061c8b5ff4b3.png",
             "gift_content2": "$89.00|FREE\nBuy 2 Get Free Pet Bike Basket",
             "gift_content3": "$89\nFREE",
             "button1": "Shop Now",
@@ -532,24 +525,22 @@
           "type": "product_item",
           "settings": {
             "product": "thunder-pro-st",
-            "show_border": false,
             "show_final_tag": true,
-            "final_tag": "<p>Final Price <strong>$1199</strong></p>",
+            "final_tag": "<p>Final Price <strong>C$1649</strong></p>",
             "final_tag_color": "#ffebd9",
             "final_tag_bg": "shopify://shop_images/anniversary-final-price.png",
             "product_price_color": "#db1109",
             "pc_product_image": "shopify://shop_images/pd-thunder-pro-st.jpg",
             "mb_product_image": "shopify://shop_images/fifa-mb-thunder-pro.jpg",
             "show_spec": true,
-            "discount_text1": "<p><strong>$600 OFF</strong></p>",
+            "discount_text1": "<p><strong>C$1000 OFF</strong></p>",
             "discount_text1_bg_color": "#b70e1b",
-            "discount_text2": "<p>EXTRA <strong>$100 OFF</strong></p>",
+            "discount_text2": "<p>EXTRA <strong>C$50 OFF</strong></p>",
             "discount_text2_bg_color": "#329efa",
             "gift_image1": "shopify://shop_images/anniversary-card-gift-icon4.png",
-            "gift_content1": "CS89\nFREEE",
+            "gift_content1": "C$89\nFREE",
             "gift_image2": "shopify://shop_images/anniversary-card-gift-icon3.png",
-            "gift_content2": "$69\nFREE",
-            "gift_image3": "shopify://shop_images/anniversary-card-gift-icon4.png",
+            "gift_content2": "C$69\nFREE",
             "gift_content3": "$89\nFREE",
             "button1": "Shop Now",
             "button1_text_color": "#ffffff",
@@ -594,38 +585,11 @@
     "autumn_sale_product_list_kb7cx4": {
       "type": "autumn-sale-product-list",
       "blocks": {
-        "product_item_PqGAQQ": {
-          "type": "product_item",
-          "settings": {
-            "product": "hunter-pro",
-            "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
-            "logo_size": "small",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/hunter-pro"
-          }
-        },
-        "product_item_kLFM6J": {
-          "type": "product_item",
-          "settings": {
-            "product": "thunder-pro-st",
-            "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
-            "logo_size": "small",
-            "payment_text": "Pay over time with 0% interes",
-            "button1": "Shop Now",
-            "button2": "Learn More",
-            "button2_url": "shopify://products/thunder-pro-st"
-          }
-        },
         "product_item_QRWTpM": {
           "type": "product_item",
           "settings": {
             "product": "patrol-52",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -633,12 +597,35 @@
             "button2_url": "shopify://products/patrol-52"
           }
         },
+        "product_item_kLFM6J": {
+          "type": "product_item",
+          "settings": {
+            "product": "thunder-pro-st",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/thunder-pro-st"
+          }
+        },
+        "product_item_PqGAQQ": {
+          "type": "product_item",
+          "settings": {
+            "product": "hunter-pro",
+            "show_th_logo": true,
+            "logo_size": "small",
+            "payment_text": "Pay over time with 0% interes",
+            "button1": "Shop Now",
+            "button2": "Learn More",
+            "button2_url": "shopify://products/hunter-pro"
+          }
+        },
         "product_item_AK63Ad": {
           "type": "product_item",
           "settings": {
             "product": "retrovolt-pro",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -651,7 +638,6 @@
           "settings": {
             "product": "jasion-x-hunter",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -664,7 +650,6 @@
           "settings": {
             "product": "x-hunter-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -677,7 +662,6 @@
           "settings": {
             "product": "hunter-pro-combo",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -690,7 +674,6 @@
           "settings": {
             "product": "jasion®-combo-sale-x-hunter-2",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -703,7 +686,6 @@
           "settings": {
             "product": "thunder-pro-thunder-pro-st",
             "show_th_logo": true,
-            "anniversary_logo": "shopify://shop_images/pd-product-logo.png",
             "logo_size": "small",
             "payment_text": "Pay over time with 0% interes",
             "button1": "Shop Now",
@@ -713,9 +695,9 @@
         }
       },
       "block_order": [
-        "product_item_PqGAQQ",
-        "product_item_kLFM6J",
         "product_item_QRWTpM",
+        "product_item_kLFM6J",
+        "product_item_PqGAQQ",
         "product_item_AK63Ad",
         "product_item_Y7Tb7d",
         "product_item_cwqA7b",
@@ -843,7 +825,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=xh_8cVaieGc",
             "date": "",
             "content": "Jasion Patrol Battery Upgrade (170% Range)",
-            "avatar": "shopify://shop_images/unnamed_12.jpg",
             "author": "Calthecool"
           }
         },
@@ -854,7 +835,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=vfqp2BZX_Qw",
             "date": "",
             "content": "MIAMI RIDEOUT ON MY NEW E BIKE! (Jasion Thunder Pro)",
-            "avatar": "shopify://shop_images/channels4_profile_56.jpg",
             "author": "Steeezy Filmz"
           }
         },
@@ -865,7 +845,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=6d1vqKuNYHY",
             "date": "",
             "content": "Fishing for South Florida Exotics on E-Bike!",
-            "avatar": "shopify://shop_images/channels4_profile_55.jpg",
             "author": "ChaCha Fishing"
           }
         },
@@ -876,7 +855,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=NPTUhfRDBzY&t=130s",
             "date": "",
             "content": "The JASION BIKE...New model RETROVOLT PRO…a 52 Volt Full Suspension Budget Scrambler UNDER $1,000!",
-            "avatar": "shopify://shop_images/channels4_profile_57.jpg",
             "author": "IMBruceECLECTIC"
           }
         },
@@ -887,7 +865,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=YAdiv1RgjZ4",
             "date": "",
             "content": "The Jasion Patrol 52. My Honest review… ( Surron killer)???",
-            "avatar": "shopify://shop_images/channels4_profile_58.jpg",
             "author": "onewheel_logann"
           }
         },
@@ -898,7 +875,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=-blAk7TOt5s",
             "date": "",
             "content": "I’m 65… and This E-Bike Changed How Far I Can Go | Jasion Thunder Pro ST",
-            "avatar": "shopify://shop_images/channels4_profile_59.jpg",
             "author": "HomeGrown Passion"
           }
         },
@@ -909,7 +885,6 @@
             "video_url_mobile": "https://www.youtube.com/watch?v=h2AKx-m-N04&t=614s",
             "date": "",
             "content": "$999 Full Suspension E-Bike… Too Good to Be True? (Jasion Hunter Pro Review)",
-            "avatar": "shopify://shop_images/unnamed_13.jpg",
             "author": "Electric Bike Report"
           }
         },
@@ -1274,6 +1249,7 @@
         "pay_Bd33R8",
         "form_zGMMxf"
       ],
+      "disabled": true,
       "name": "autumn-sale-sign-up",
       "settings": {
         "desktop_image": "shopify://shop_images/anniversary-sign-up-bg.jpg",
