@@ -213,25 +213,29 @@
         "card_fFcQrx": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/summer-sale-card-image1.png"
+            "image": "shopify://shop_images/1_af1af059-1e7d-4cf7-892a-85dbfacf01f5.png",
+            "mb_image": "shopify://shop_images/1_af1af059-1e7d-4cf7-892a-85dbfacf01f5.png"
           }
         },
         "card_TAqEj9": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/summer-sale-card-image2.png"
+            "image": "shopify://shop_images/2_b7a60cf2-663b-47dc-abc7-e9c04734ca0b.png",
+            "mb_image": "shopify://shop_images/2_b7a60cf2-663b-47dc-abc7-e9c04734ca0b.png"
           }
         },
         "card_8NHhxC": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/summer-sale-card-image3.png"
+            "image": "shopify://shop_images/3_6a80a09b-2338-4676-be47-92a030dd3be9.png",
+            "mb_image": "shopify://shop_images/3_6a80a09b-2338-4676-be47-92a030dd3be9.png"
           }
         },
         "card_W3Gm4P": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/summer-sale-card-image4.png"
+            "image": "shopify://shop_images/4_c94864bd-5684-4b4d-a7b0-23b68626534b.png",
+            "mb_image": "shopify://shop_images/4_c94864bd-5684-4b4d-a7b0-23b68626534b.png"
           }
         }
       },
@@ -273,24 +277,24 @@
         "discount_popup": {
           "type": "discount_popup",
           "settings": {
-            "discount_code1": "SUN50",
-            "prize_name1": "$50 OFF Coupon",
-            "prize_weight1": 80,
+            "discount_code1": "HOT50",
+            "prize_name1": "C$50 OFF Coupon",
+            "prize_weight1": 95,
             "discount_code2": "HOT5",
             "prize_name2": "5% OFF Coupon",
-            "prize_weight2": 10,
-            "discount_code3": "RIDE200",
-            "prize_name3": "$200 OFF",
+            "prize_weight2": 0,
+            "discount_code3": "MEGA200",
+            "prize_name3": "C$200 OFF",
             "prize_weight3": 2,
             "discount_code4": "PATROLFREE",
             "prize_name4": "Free Patrol ebike",
             "prize_weight4": 0,
             "discount_code5": "BYF",
             "prize_name5": "FREE Cup Holder",
-            "prize_weight5": 8,
-            "discount_code6": "RF100",
-            "prize_name6": "100% Refund",
-            "prize_weight6": -2,
+            "prize_weight5": 0,
+            "discount_code6": "GOOD100",
+            "prize_name6": "C$100 OFF",
+            "prize_weight6": 3,
             "model_gradient": "linear-gradient(180deg, rgba(224, 245, 205, 1), rgba(224, 245, 205, 1) 100%)",
             "model_title": "Celebrate & Win",
             "model_title_color": "#fdb404",
@@ -344,7 +348,6 @@
         "page_top": 0,
         "title": "TRY YOUR LUCK!",
         "background_image": "shopify://shop_images/summer-sale-spin-bg.jpg",
-        "mb_background_image": "shopify://shop_images/mb-summer-sale-spin-bg.jpg",
         "item_icon1": "shopify://shop_images/pd-coupon-icon.png",
         "item_text1": "<p>C$50-C$200 OFF</p>",
         "item_icon2": "shopify://shop_images/id-gift-icon.png",
@@ -352,7 +355,7 @@
         "item_icon3": "shopify://shop_images/pd-bike-icon.png",
         "item_text3": "<p>FREE Patrol eBike</p>",
         "spin_pointer_image": "shopify://shop_images/summer-sale-spin-arrow.png",
-        "spin_turntable_image": "shopify://shop_images/summer-sale-spin.png",
+        "spin_turntable_image": "shopify://shop_images/13b8744fbb05a7bf6df6fb405f0e3c7a.png",
         "klaviyo_api_key": "RbQnB3",
         "klaviyo_list_id": "WG6e6n",
         "form_remark": "<p>Subscribe For A Chance To Win A<br/><strong>Free Patrol eBike</strong> And Exclusive Rewards!</p>",
