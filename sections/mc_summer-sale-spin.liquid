@@ -433,7 +433,7 @@
                     assign weight = 'prize_weight' | append: v
                 -%}
                 {
-                    icon: '{{ ds[icon] | image_url: width: 300 }}',
+                    icon: '{% if ds[icon] != blank %}{{ ds[icon] | image_url: width: 300 }}{% endif %}',
                     code: '{{ ds[code] }}',
                     angle: {{ 360 | minus: angle }},
                     title: `{{ ds[name] }}`,
