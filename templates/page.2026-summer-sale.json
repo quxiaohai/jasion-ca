@@ -348,6 +348,7 @@
         "page_top": 0,
         "title": "TRY YOUR LUCK!",
         "background_image": "shopify://shop_images/summer-sale-spin-bg.jpg",
+        "mb_background_image": "shopify://shop_images/mb-summer-sale-spin-bg.jpg",
         "item_icon1": "shopify://shop_images/pd-coupon-icon.png",
         "item_text1": "<p>C$50-C$200 OFF</p>",
         "item_icon2": "shopify://shop_images/id-gift-icon.png",
