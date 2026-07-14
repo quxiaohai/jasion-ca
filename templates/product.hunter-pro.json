@@ -274,6 +274,24 @@
     "multicolumn_slide_hb_QEk8x8": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_3BVRPQ": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=h2AKx-m-N04&t=4s",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2026/04/28",
+            "title": "Full Suspension E-Bike… Too Good to Be True? (Jasion Hunter Pro Review)",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/unnamed_d1f2bd03-edaf-4ebb-9c60-b46e609b7e04.jpg",
+            "author": "Electric Bike Report"
+          }
+        },
         "video_wArtpJ": {
           "type": "video",
           "settings": {
@@ -474,6 +492,7 @@
         }
       },
       "block_order": [
+        "video_3BVRPQ",
         "video_wArtpJ",
         "video_CdhUFd",
         "video_ddPNFB",
