@@ -87,7 +87,8 @@
             ],
             "product_list": [
               "rear-basket",
-              "jasion-universal-phone-holder"
+              "jasion-universal-phone-holder",
+              "universal-bicycle-combination-lock"
             ]
           }
         },
@@ -605,7 +606,7 @@
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Product featured",
+        "heading": "Riders‘ Reviews",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
