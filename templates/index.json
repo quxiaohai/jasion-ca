@@ -988,6 +988,24 @@
     "multicolumn_slide_hb_9xwaqy": {
       "type": "multicolumn-slide-hb",
       "blocks": {
+        "video_fFE647": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=kKKyKKfdhcc",
+            "description": "",
+            "enable_video_autoplay": false,
+            "enable_video_looping": false,
+            "image_height": "adapt",
+            "video_url_mobile": "",
+            "image_height_mobile": "auto",
+            "date": "2026/7/11",
+            "title": "I Tested Walmart's \"Surron\"... // Jasion Patrol 52",
+            "title_sz": "h5",
+            "content": "",
+            "avatar": "shopify://shop_images/channels4_profile_fd2fb912-6c35-4184-8965-30bb4c85a8ab.jpg",
+            "author": "HDuke Rides"
+          }
+        },
         "video_QiDGUU": {
           "type": "video",
           "settings": {
@@ -1225,6 +1243,7 @@
         }
       },
       "block_order": [
+        "video_fFE647",
         "video_QiDGUU",
         "video_VUkmtL",
         "video_qPhBph",
