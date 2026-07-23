@@ -1664,7 +1664,7 @@
           "settings": {
             "order_title": "Specifications",
             "img_w": 50,
-            "list": "|Motor|1400W Brushless Hub Motor\n|Throttle |Twist Throttle\n|Charger US |Standard 2.0 A\n|Range |Up To 71 Miles\n|Battery |48V 13Ah\n|Controller |48V / 13A\n|Tires|20'' x 4'' Fat Tire\n|Rider Height|5'2'' - 6'3''\n|Pedal Assist|0-5 Level\n|Weight|71 Lbs\n|Max Payload|480 Lbs\n|Display|Color Display\n|Lights |Turning Lights & Brake Lights\n|Frame|Aluminum Alloy with Internal Battery",
+            "list": "|Motor|1400W Brushless Hub Motor\n|Throttle |Twist Throttle\n|Charger US |Standard 2.0 A\n|Range |Up To 71 Miles\n|Battery |48V 13Ah\n|Controller |48V / 13A\n|Tires|20'' x 4'' Fat Tire\n|Rider Height|5'2'' - 6'3''\n|Pedal Assist|0-5 Level\n|Weight|71 Lbs\n|Max Payload|480 Lbs\n|Display|Color Display\n|Lights |Headlight&Taillight\n|Frame|Aluminum Alloy with Internal Battery",
             "item_justify": "tw-justify-left",
             "list_border": false,
             "list_col": "2"
